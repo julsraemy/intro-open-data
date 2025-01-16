@@ -1,0 +1,93 @@
+/*-- scss:defaults --*/
+// Custom color definitions
+$dark-background: #121212;
+$dark-text: #ffffff;
+$light-background: #ffffff;
+$light-text: #000000;
+
+$primary-dark: #3498db;
+$primary-light: #2980b9;
+
+// Theme-specific variables
+[data-bs-theme="dark"] {
+  --bs-body-bg: #{$dark-background};
+  --bs-body-color: #{$dark-text};
+  --bs-primary: #{$primary-dark};
+}
+
+[data-bs-theme="light"] {
+  --bs-body-bg: #{$light-background};
+  --bs-body-color: #{$light-text};
+  --bs-primary: #{$primary-light};
+}
+
+/*-- scss:rules --*/
+// Transition and general styling
+body {
+  transition: background-color 0.3s, color 0.3s;
+}
+
+// Theme toggle button styling
+.theme-toggle {
+  cursor: pointer;
+  padding: 0.5rem;
+  background: none;
+  border: none;
+  color: var(--bs-body-color);
+  
+  &:hover {
+    opacity: 0.8;
+  }
+}
+
+// Dark mode specific adjustments
+[data-bs-theme="dark"] {
+  // Add any specific dark mode styling
+  a {
+    color: lighten($primary-dark, 10%);
+    
+    &:hover {
+      color: lighten($primary-dark, 20%);
+    }
+  }
+  
+  code {
+    background-color: darken($dark-background, 5%);
+    color: lighten($dark-text, 20%);
+  }
+}
+
+[data-bs-theme="light"] {
+  // Add any specific light mode styling
+  a {
+    color: darken($primary-light, 10%);
+    
+    &:hover {
+      color: darken($primary-light, 20%);
+    }
+  }
+  
+  code {
+    background-color: lighten($light-background, 5%);
+    color: darken($light-text, 20%);
+  }
+}
+
+// Additional custom styling
+.course-header {
+  background-color: var(--bs-primary);
+  color: white;
+  padding: 2rem 0;
+}
+
+.chapter-section {
+  margin-bottom: 2rem;
+  padding: 1rem;
+  border-left: 4px solid var(--bs-primary);
+}
+
+/*-- scss:mixins --*/
+// Any custom mixins can be defined here
+
+/*-- scss:functions --*/
+// Any custom functions can be defined here

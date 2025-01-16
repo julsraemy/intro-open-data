@@ -1,0 +1,31 @@
+---
+title: "7C2-CT-4A Introduction to Open Data"
+subtitle: "HEG-GE Bachelor Information Science | Spring Semester 2024-2025"
+author: "Julien A. Raemy"
+date: "Last updated: 2025-01-16"
+---
+
+## Introduction to Open Data
+
+This course provides a comprehensive introduction to Open Data, covering key aspects such as:
+
+- Characteristics of Open Data
+- Associated Movements and Principles
+- Platforms and Organisations
+- Assessment, Data Quality, and Best Practices
+- Techniques, Software, and Tools
+
+The course is designed for undergraduate students in Information Science at the HES-SO University of Applied Sciences of Western Switzerland, Haute école de gestion de Genève (HEG-GE).
+
+### Course Objectives
+
+1. Gain an understanding of Open Data, its essential aspects, and principles
+2. Learn how to find, analyze, and reuse open datasets
+3. Understand the processes involved in preparing and publishing open datasets
+
+
+### About the Instructor
+
+[Julien A. Raemy](https://julsraemy.ch) is an Information Specialist and Digital Humanities Practitioner. He currently works as a Data Scientst at the Swiss Federal Archives.
+
+[![ORCID](https://img.shields.io/static/v1?label=ORCID&message=0000-0002-4711-5759&color=A6CE39&logo=orcid)](https://orcid.org/0000-0002-4711-5759)

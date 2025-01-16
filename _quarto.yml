@@ -1,0 +1,72 @@
+project:
+  type: website
+  output-dir: docs
+
+website:
+  title: "Introduction to Open Data"
+  site-url: "https://julsraemy.ch/intro-open-data"
+  repo-url: "https://github.com/julsraemy/intro-open-data"
+  repo-actions: [edit, issue]
+  
+  navbar:
+    background: primary
+    search: true
+    left:
+      - href: index.qmd
+        text: Home
+      - text: "Course Sections"
+        menu:
+          - text: "Characteristics of Open Data"
+            file: sections/characteristics.qmd
+          - text: "Associated Movements and Principles"
+            file: sections/movements.qmd
+          - text: "Platforms and Organisations"
+            file: sections/platforms.qmd
+          - text: "Assessment, Data Quality, and Best Practices"
+            file: sections/assessment.qmd
+          - text: "Techniques, Software, and Tools"
+            file: sections/techniques.qmd
+          - text: "Assignment Workshop"
+            file: sections/assignment.qmd
+          - text: "Showcases"
+            file: sections/showcases.qmd
+      - href: about.qmd
+        text: About
+      - href: syllabus.qmd
+        text: Syllabus
+      - href: references.qmd
+        text: References
+  
+  sidebar:
+    - title: "Course Navigation"
+      contents:
+        - sections/characteristics.qmd
+        - sections/movements.qmd
+        - sections/platforms.qmd
+        - sections/assessment.qmd
+        - sections/techniques.qmd
+        - sections/assignment.qmd
+        - sections/showcases.qmd
+  
+  page-footer:
+    left: "© 2025 Julien A. Raemy | Introduction to Open Data | Content licensed under CC BY 4.0"
+    right: 
+      - icon: creative-commons
+        href: https://creativecommons.org/licenses/by/4.0/
+      - icon: github
+        href: https://github.com/julsraemy
+      - icon: mastodon
+        href: https://hcommons.social/@julsraemy
+      - icon: universal-access
+        href: https://orcid.org/0000-0002-4711-5759
+
+format:
+  html:
+    theme: 
+      - cosmo
+      - styles/custom.scss
+    css: styles/custom.scss
+    code-link: true
+    code-fold: true
+    highlight-style: github
+    toc: true
