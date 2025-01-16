@@ -1,0 +1,44 @@
+# Quarto output directory
+docs/
+
+# R and RStudio files
+.Rproj.user/
+*.Rproj
+.Rhistory
+.RData
+.Ruserdata
+
+# Python files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# macOS system files
+.DS_Store
+
+# VS Code settings
+.vscode/
+
+# Temporary files
+*.swp
+*~
+
+# Environment files
+.env
+.venv
+venv/
+ENV/
+
+# Compilation and package files
+*.log
+*.pot
+*.pyc
+local_settings.py
+db.sqlite3
+db.sqlite3-journal
+
+# Backup files
+*.bak
