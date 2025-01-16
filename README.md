@@ -1,6 +1,6 @@
 # Introduction to Open Data
 
-[![Deploy Quarto Website](https://github.com/julsraemy/intro-open-data/actions/workflows/deploy.yml/badge.svg)](https://github.com/julsraemy/intro-open-data/actions/workflows/deploy.yml)
+_Work in progress_
 
 ## Prerequisites
 
@@ -55,7 +55,7 @@ The [website](https://julsraemy.ch/intro-open-data) is structured with the follo
 - Assignment Workshop
 - Showcases
 
-The course is designed for undergraduate students in Information Science at the HES-SO University of Applied Sciences of Western Switzerland, Haute école de gestion de Genève (HEG-GE).
+The course is designed for undergraduate students in Information Science at the HES-SO University of Applied Sciences and Arts of Western Switzerland, [Haute école de gestion de Genève (HEG-GE)](https://hesge.ch/heg/).
 
 ## Customization
 
