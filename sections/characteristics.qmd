@@ -1,7 +1,8 @@
 ## Characteristics of Open Data
 ### Definitions
 
-Open(ness)
+#### Open(ness)
+
 > Open means anyone can freely access, use, modify, and share for any purpose (subject, at most, to requirements that preserve provenance and openness)
 
 The Open Definition according to the Open Knowledge Network: https://opendefinition.org/
