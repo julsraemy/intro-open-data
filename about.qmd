@@ -1,1 +1,5 @@
-# About page
+# About this website
+
+This website represents the second iteration of the *Introduction to Open Data* course, evolving from its initial form as a Markdown-based presentation, which you can still view here: [Introduction to Open Data 2024](https://julsraemy.ch/prezi/intro-open-data-2024.html).
+
+While the original presentation provided a solid foundation, a website proved to be a more suitable medium for this topic. This Quarto-based site builds on the original content while leveraging the strengths of a web format to provide an enriched and more accessible experience for readers as well as allowing for continuous updates.
