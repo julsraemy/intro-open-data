@@ -1,5 +1,10 @@
-# Quarto output directory
-docs/
+# Ignore everything in docs except for the generated files
+docs/*
+!docs/.nojekyll
+!docs/**
+
+# Quarto cache
+.quarto/
 
 # R and RStudio files
 .Rproj.user/
