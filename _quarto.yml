@@ -1,6 +1,8 @@
 project:
   type: website
   output-dir: docs
+  resources:
+    - js/site-scripts.js 
 
 website:
   title: "Introduction to Open Data"
