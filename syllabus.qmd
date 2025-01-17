@@ -49,11 +49,11 @@ This assignment is weighted at 20% of the 7C2-CT module.
 ### Criteria
 
 |         Assessment Criteria        | Points |
-|:----------------------------------:|:------:|
+|:---                                |:------:|
 | Introduction and Contextualisation | 5      |
 | Analysis and Argumentation         | 20     |
 | Structure and Writing              | 10     |
 | Presentation and Referencing       | 5      |
-| Total                              | 40     |
+| **Total**                              | **40**     |
 
 *Additional details will be discussed during the course.*
