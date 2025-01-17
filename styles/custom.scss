@@ -4,27 +4,39 @@ $dark-background: #121212;
 $dark-text: #ffffff;
 $light-background: #ffffff;
 $light-text: #000000;
-
 $primary-dark: #3498db;
 $primary-light: #2980b9;
+
+// Accent and secondary colors for more depth
+$accent-dark: #2ecc71;
+$accent-light: #27ae60;
+$secondary-dark: #34495e;
+$secondary-light: #2c3e50;
 
 // Theme-specific variables
 [data-bs-theme="dark"] {
   --bs-body-bg: #{$dark-background};
   --bs-body-color: #{$dark-text};
   --bs-primary: #{$primary-dark};
+  --bs-secondary: #{$secondary-dark};
+  --bs-accent: #{$accent-dark};
 }
 
 [data-bs-theme="light"] {
   --bs-body-bg: #{$light-background};
   --bs-body-color: #{$light-text};
   --bs-primary: #{$primary-light};
+  --bs-secondary: #{$secondary-light};
+  --bs-accent: #{$accent-light};
 }
 
 /*-- scss:rules --*/
-// Transition and general styling
+// Enhanced transition and general styling
 body {
-  transition: background-color 0.3s, color 0.3s;
+  transition: background-color 0.3s, color 0.3s, fill 0.3s, stroke 0.3s;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 // Theme toggle button styling
@@ -34,42 +46,68 @@ body {
   background: none;
   border: none;
   color: var(--bs-body-color);
+  transition: transform 0.2s, opacity 0.3s;
   
   &:hover {
     opacity: 0.8;
+    transform: scale(1.1);
+  }
+
+  &:active {
+    transform: scale(0.95);
   }
 }
 
 // Dark mode specific adjustments
 [data-bs-theme="dark"] {
-  // Add any specific dark mode styling
+  // Enhanced link styling
   a {
     color: lighten($primary-dark, 10%);
+    text-decoration-color: lighten($primary-dark, 20%);
+    transition: color 0.3s, text-decoration-color 0.3s;
     
     &:hover {
       color: lighten($primary-dark, 20%);
+      text-decoration-color: lighten($primary-dark, 30%);
     }
   }
   
   code {
     background-color: darken($dark-background, 5%);
     color: lighten($dark-text, 20%);
+    border-radius: 0.3rem;
+    padding: 0.2rem 0.4rem;
+  }
+
+  // Slightly muted border and separator colors
+  hr {
+    border-color: rgba(255,255,255,0.2);
   }
 }
 
 [data-bs-theme="light"] {
-  // Add any specific light mode styling
+  // Enhanced link styling
   a {
     color: darken($primary-light, 10%);
+    text-decoration-color: darken($primary-light, 20%);
+    transition: color 0.3s, text-decoration-color 0.3s;
     
     &:hover {
       color: darken($primary-light, 20%);
+      text-decoration-color: darken($primary-light, 30%);
     }
   }
   
   code {
     background-color: lighten($light-background, 5%);
     color: darken($light-text, 20%);
+    border-radius: 0.3rem;
+    padding: 0.2rem 0.4rem;
+  }
+
+  // Slightly muted border and separator colors
+  hr {
+    border-color: rgba(0,0,0,0.2);
   }
 }
 
@@ -78,16 +116,26 @@ body {
   background-color: var(--bs-primary);
   color: white;
   padding: 2rem 0;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
 .chapter-section {
   margin-bottom: 2rem;
   padding: 1rem;
   border-left: 4px solid var(--bs-primary);
+  background-color: var(--bs-body-bg);
+  transition: background-color 0.3s, border-color 0.3s;
 }
 
 /*-- scss:mixins --*/
-// Any custom mixins can be defined here
+// Mixin for smooth transitions
+@mixin smooth-transition($properties...) {
+  transition: #{$properties} 0.3s ease;
+}
 
 /*-- scss:functions --*/
-// Any custom functions can be defined here
+// Function to calculate contrasting text color
+@function contrasting-text-color($color) {
+  $luminance: (red($color) * 0.299 + green($color) * 0.587 + blue($color) * 0.114) / 255;
+  @return if($luminance > 0.5, black, white);
+}
