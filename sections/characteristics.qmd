@@ -49,8 +49,99 @@ Derived from the Open Knowledge Foundation's principles and scholarly interpreta
 The Open Definition according to the [Open Knowledge Network](https://opendefinition.org/).
 
 ## History
+
+### Robert K. Merton (1910–2003)
+
+American sociologist, considered a founding father of modern sociology, said in 1942:
+
+> Each researcher must contribute to the 'common pot' and give up intellectual property rights to allow knowledge to move forward.
+
+Source: [Wikipedia](https://en.wikipedia.org/wiki/Timeline_of_the_open-access_movement)
+
+> While the term “open data” isn’t even 20 years old, the author puts the concept in a historical context; the idea that scientific research should be free to all was popularized by Robert King Merton in the early 1940s. Research (which produces data) should be shared freely for the common good.
+
+Source: <https://data.gov/blog/open-data-history>
+
+### Timeline
+
+- **1942**: The concept starts with Robert K. Merton.
+- **1995**: The term 'Open Data' first appeared, related to the sharing of geophysical and environmental data.
+- **November 2005**: Open Knowledge Foundation creates the Open Definition.
+- **December 2007**: The concept of open public data was discussed and defined in Sebastopol, CA, USA at a meeting of Internet activists. They identified 8 principles.
+- **February 2009**: Tim Berners-Lee presents [The Next Web](https://www.ted.com/talks/tim_berners_lee_the_next_web) at TED2009. He famously asked for "raw data now".
+
+Sources:
+- <https://devopedia.org/open-data>
+- <https://www.opendatasoft.com/en/what-is-open-data-practical-guide/>)
+
+### The Sebastopol Meeting
+
+In December 2007, thirty thinkers and activists of the Internet held a meeting in Sebastopol, north of San Francisco. Their aim was to define the concept of open public data and have it adopted by the US presidential candidates.
+
+Among them were:
+- **Tim O’Reilly**: An American author and editor who defined and popularized concepts such as open source and Web 2.0.
+- **Lawrence Lessig**: Professor of Law at Stanford University and founder of Creative Commons licenses.
+- **Adrian Holovaty**: Founder of EveryBlock, a localized information service.
+- **Tom Steinberg**: Founder of the FixMyStreet site.
+- **Aaron Swartz**: Inventor of RSS and free knowledge activist.
+
+Together, they created principles to define and evaluate open public data.
+
+Source: <https://www.paristechreview.com/2013/03/29/brief-history-open-data/>
+
 ## The Impact of Open Data on Disciplines
+
+### Catalysing Interdisciplinary Progress
+
+- **A foundation for collaboration and innovation**: Open data drives interdisciplinary research by providing universally accessible datasets, fostering collaboration across diverse fields such as information science, digital humanities, and data science.
+- **Enabling data-driven research**: Facilitates advanced analysis and research in disciplines that rely heavily on data, increasing the accuracy and depth of insights and discoveries.
+
+### Open Data in Information Science, Digital Humanities, and Data Science
+
+- **Information Science**: Improves data management and accessibility, enabling more efficient data retrieval, archiving, and dissemination practices.
+- **Digital Humanities**: Enables new digital approaches to humanities research, providing new insights into historical, cultural, and linguistic studies through data analysis.
+- **Data Science**: Leverages open data for predictive modeling, machine learning, and big data analytics, enabling comprehensive analysis and informed decision-making in diverse fields such as health, finance, and social sciences.
+
 ## Typology
+
+### Main Sources
+
+- **Research**: Open Research Data (ORD) / Open Scientific Data
+- **Government**: Open Government Data (OGD)
+- **Non-profit Organisations**
+- **Private Organisations**
+
+### Disciplines
+
+- Cultural Heritage
+- Healthcare
+- Education
+- Transportation
+- Meteorology
+- Geospatial Information
+- Economic and Finance
+- Legal and Criminal Justice
+- Etc.
+
+## Open Research Data (ORD)
+
+### Definition
+
+> Research data are the evidence that underpins the answer to the research question, and can be used to validate findings regardless of its form (e.g. print, digital, or physical). These might be quantitative information or qualitative statements collected by researchers in the course of their work by experimentation, observation, modeling, interview, or other methods, or information derived from existing evidence.
+
+[Concordat Working Group 2016]
+
+### For Funding Agencies (and Institutions)
+
+3. For the purposes of research assessment, consider the value and impact of all research outputs (**including datasets** and software) in addition to research publications, and consider a broad range of impact measures including qualitative indicators of research impact, such as influence on policy and practice.
+
+### For Organizations that Supply Metrics
+
+11. Be open and transparent by providing data and methods used to calculate all metrics.  
+12. Provide the data under a licence that allows unrestricted reuse, and provide computational access to data, where possible.
+
+Source: [San Francisco Declaration on Research Assessment (DORA)](https://sfdora.org/read/)
+
 ## Purposes
 ## Requirements
 ## Licences
