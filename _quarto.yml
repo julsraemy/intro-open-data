@@ -26,8 +26,6 @@ website:
             file: sections/assessment.qmd
           - text: "Techniques, Software, and Tools"
             file: sections/techniques.qmd
-          - text: "Assignment Workshop"
-            file: sections/assignment.qmd
           - text: "Showcases"
             file: sections/showcases.qmd
       - href: about.qmd
