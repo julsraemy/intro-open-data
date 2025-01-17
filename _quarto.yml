@@ -71,4 +71,5 @@ format:
     highlight-style: github
     toc: true
     include-in-header:
-      - js/site-scripts.js
+      - text: |
+          <script src="js/site-scripts.js"></script>
