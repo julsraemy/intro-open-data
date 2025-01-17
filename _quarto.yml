@@ -69,5 +69,11 @@ format:
     toc: true
     include-after-body:
       - text: |
-        <script src="./js/site-scripts.js"></script>
-
+          <script>
+            (function() {
+              var script = document.createElement('script');
+              script.src = '/js/site-scripts.js';
+              script.async = true;
+              document.head.appendChild(script);
+            })();
+          </script>
