@@ -1,0 +1,13 @@
+# Assessment, Data Quality, and Best Practices
+
+## Open Data Maturity (ODM)
+
+(...)
+
+## Impact Monitoring Framework
+
+(...)
+
+## Periodic Table of Open Data Elements
+
+(...)
