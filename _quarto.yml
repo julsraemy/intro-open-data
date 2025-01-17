@@ -69,4 +69,24 @@ format:
     toc: true
     include-after-body:
       - text: |
-          <script src="js/site-scripts.js"></script>
+        <script src="js/site-scripts.js"></script>
+          <script>
+            console.log("Quarto configuration script tag added");
+            // Fallback method if separate JS fails
+            (function() {
+              var themeToggle = document.createElement('button');
+              themeToggle.textContent = '🌙/☀️';
+              themeToggle.classList.add('theme-toggle', 'btn');
+              
+              var navbar = document.querySelector('.navbar-nav');
+              if (navbar) {
+                var navItem = document.createElement('li');
+                navItem.classList.add('nav-item', 'ms-auto');
+                navItem.appendChild(themeToggle);
+                navbar.appendChild(navItem);
+                console.log("Fallback theme toggle added");
+              } else {
+                console.error("No navbar found in fallback method");
+              }
+            })();
+        </script>
