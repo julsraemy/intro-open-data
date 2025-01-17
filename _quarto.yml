@@ -71,5 +71,4 @@ format:
     highlight-style: github
     toc: true
     include-in-header:
-      - js/external-links.js
-      - js/theme-toggle.js
+      - js/site-scripts.js
