@@ -8,9 +8,45 @@ date: "Last updated: 2025-01-17"
 
 ### Open(ness)
 
-> Open means anyone can freely access, use, modify, and share for any purpose (subject, at most, to requirements that preserve provenance and openness)
+The term **Open(ness)** can be defined in the following complementary ways:
 
-The Open Definition according to the [Open Knowledge Network](https://opendefinition.org/)
+1. **General Definition**:
+
+> Open means anyone can freely access, use, modify, and share for any purpose (subject, at most, to requirements that preserve provenance and openness).
+
+The Open Definition according to the [Open Knowledge Network](https://opendefinition.org/).
+
+2. **Principles of Openness**:
+    - **No limitations on access**: Accessibility must not depend on cost, authentication, or privileges (national, institutional, or otherwise).
+    - **Free and open**: Open knowledge should be shared freely, without cost or barriers.
+
+Derived from the Open Knowledge Foundation's principles and scholarly interpretations.
+
+&rarr; **Key takeaway**: Knowledge funded by public mandates must benefit the public without restrictions. [Scholger 2023]
+
+### Data
+
+> Data at its most basic level as the absence of uniformity, whether in the real world or in some symbolic system. Only once such data have some recognisable structure and are given some meaning can they be considered information.
+
+[Floridi 2010]
+
+![center width:650px](https://www.researchgate.net/profile/Luciano-Floridi/publication/257666827/figure/fig2/AS:392780774952979@1470657642732/Floridis-original-information-map-redrawn-based-on-Floridi-2011.png)
+
+[Chen & Floridi 2013]
+
+### Metadata
+
+> Data whose purpose is to describe and give information about other data.
+
+[Oxford English Dictionary 2023b]
+
+> (...) there is no fixed boundary between “data” and “metadata”, and that information viewed as data in one discipline may be metadata in another.  [Alter et al. 2023]
+
+### Open Data
+
+> Open data and content can be freely used, modified, and shared by anyone for any purpose.
+
+The Open Definition according to the [Open Knowledge Network](https://opendefinition.org/).
 
 ## History
 ## The Impact of Open Data on Disciplines

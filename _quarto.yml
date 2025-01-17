@@ -2,7 +2,7 @@ project:
   type: website
   output-dir: docs
   resources:
-    - js/site-scripts.js 
+    - js/external-links.js 
 
 website:
   title: "Introduction to Open Data"
