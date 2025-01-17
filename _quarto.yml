@@ -14,6 +14,8 @@ website:
     left:
       - href: index.qmd
         text: Home
+      - href: syllabus.qmd
+        text: Syllabus
       - text: "Course Sections"
         menu:
           - text: "Characteristics of Open Data"
@@ -28,12 +30,10 @@ website:
             file: sections/techniques.qmd
           - text: "Showcases"
             file: sections/showcases.qmd
-      - href: about.qmd
-        text: About
-      - href: syllabus.qmd
-        text: Syllabus
       - href: references.qmd
         text: References
+      - href: about.qmd
+        text: About
   
   sidebar:
     - title: "Course Navigation"
@@ -68,5 +68,8 @@ format:
     highlight-style: github
     toc: true
     include-after-body:
+      - text: |
+          <script src="js/site-scripts.js"></script>
+    include-in-header:
       - text: |
           <script src="js/site-scripts.js"></script>

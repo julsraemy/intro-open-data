@@ -1,16 +1,24 @@
-## Characteristics of Open Data
-### Definitions
+---
+title: "7C2-CT-4A Introduction to Open Data"
+subtitle: "HEG-GE Bachelor Information Science | Spring Semester 2024-2025"
+author: "Julien A. Raemy"
+date: "Last updated: 2025-01-17"
+---
 
-#### Open(ness)
+
+# Characteristics of Open Data
+## Definitions
+
+### Open(ness)
 
 > Open means anyone can freely access, use, modify, and share for any purpose (subject, at most, to requirements that preserve provenance and openness)
 
 The Open Definition according to the [Open Knowledge Network](https://opendefinition.org/)
 
-### History
-### The Impact of Open Data on Disciplines
-### Typology
-### Purposes
-### Requirements
-### Licences
-### Technical means
+## History
+## The Impact of Open Data on Disciplines
+## Typology
+## Purposes
+## Requirements
+## Licences
+## Technical means
