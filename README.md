@@ -52,7 +52,6 @@ The [website](https://julsraemy.ch/intro-open-data) is structured with the follo
 - Platforms and Organisations
 - Assessment, Data Quality, and Best Practices
 - Techniques, Software, and Tools
-- Assignment Workshop
 - Showcases
 
 The course is designed for undergraduate students in Information Science at the HES-SO University of Applied Sciences and Arts of Western Switzerland, [Haute école de gestion de Genève (HEG-GE)](https://hesge.ch/heg/).

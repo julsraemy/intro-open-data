@@ -1,12 +1,9 @@
 ---
-title: "7C2-CT-4A Introduction to Open Data"
-subtitle: "HEG-GE Bachelor Information Science | Spring Semester 2024-2025"
+title: "Characteristics of Open Data"
 author: "Julien A. Raemy"
 date: "Last updated: 2025-01-17"
 ---
 
-
-# Characteristics of Open Data
 ## Definitions
 
 ### Open(ness)

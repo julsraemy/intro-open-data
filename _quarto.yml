@@ -70,6 +70,3 @@ format:
     include-after-body:
       - text: |
           <script src="js/site-scripts.js"></script>
-    include-in-header:
-      - text: |
-          <script src="js/site-scripts.js"></script>

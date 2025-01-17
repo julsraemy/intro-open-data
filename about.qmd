@@ -6,7 +6,7 @@ date: "Last updated: 2025-01-17"
 ---
 
 
-## About this website
+# About this website
 
 This website represents the second iteration of the *Introduction to Open Data* course, evolving from its initial form as a Markdown-based presentation, which you can still view here: [Introduction to Open Data 2024](https://julsraemy.ch/prezi/intro-open-data-2024.html).
 
