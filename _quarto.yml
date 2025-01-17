@@ -62,8 +62,8 @@ website:
 format:
   html:
     theme: 
-      - cosmo
-      - styles/custom.scss
+      light: flatly
+      dark: darkly
     css: styles/custom.scss
     code-link: true
     code-fold: true
