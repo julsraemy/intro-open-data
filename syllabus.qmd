@@ -6,3 +6,54 @@ date: "Last updated: 2025-01-17"
 ---
 
 # Syllabus
+
+This course introduces the foundational principles of Open Data, equipping students with the knowledge and skills to find, analyse, and effectively reuse open datasets. Through a combination of lectures, practical activities, and assignments, students will explore the benefits and challenges of Open Data and develop a deeper understanding of its potential applications and implications.
+
+## Learning Objectives 
+
+The course is designed with the following objectives:
+
+1. To gain an understanding of Open Data, its essential aspects, and the principles of opening data;
+2. to learn how to find, analyse, and reuse open datasets;
+3. to learn the processes involved in preparing and publishing open datasets.
+
+These objectives provide the foundation for the course and guide the learning outcomes.
+
+## Content 
+
+The topics covered in this course include:
+
+- Background on open data;
+- benefits and risks of opening data;
+- models related to using and publishing open data.
+
+## Methods
+
+The course employs the following methods to support learning:
+
+- Course presentations;
+- practical examination and exploration of online services;
+- assignments
+
+These methods are intended to foster both theoretical understanding and practical application of the course material.
+
+## Assessment
+
+- Select one or more datasets from one or several platforms discussed during the course (if several datasets are selected, there must be a common thread)
+- Analyse, describe and identify the potential uses of the dataset(s)
+- Between 900 and 1,100 words (without references)
+- Short paper to be uploaded onto Cyberlearn by Friday 14 March, 7pm
+
+This assignment is weighted at 20% of the 7C2-CT module.
+
+### Criteria
+
+|         Assessment Criteria        | Points |
+|:----------------------------------:|:------:|
+| Introduction and Contextualisation | 5      |
+| Analysis and Argumentation         | 20     |
+| Structure and Writing              | 10     |
+| Presentation and Referencing       | 5      |
+| Total                              | 40     |
+
+*Additional details will be discussed during the course.*

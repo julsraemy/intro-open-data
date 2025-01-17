@@ -71,4 +71,4 @@ format:
     toc: true
     include-after-body:
       - text: |
-          <script src="https://julsraemy.ch/intro-open-data/js/site-scripts.js"></script>
+          <script src="https://julsraemy.ch/intro-open-data/js/external-links.js"></script>
