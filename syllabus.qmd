@@ -42,7 +42,7 @@ These methods are intended to foster both theoretical understanding and practica
 - Select one or more datasets from one or several platforms discussed during the course (if several datasets are selected, there must be a common thread)
 - Analyse, describe and identify the potential uses of the dataset(s)
 - Between 900 and 1,100 words (without references)
-- Short paper to be uploaded onto Cyberlearn by Friday 14 March, 7pm
+- Short paper to be uploaded onto Cyberlearn by **Friday 14 March, 7pm**
 
 This assignment is weighted at 20% of the 7C2-CT module.
 
