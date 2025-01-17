@@ -69,22 +69,4 @@ format:
     toc: true
     include-after-body:
       - text: |
-          <script>
-            (function() {
-              console.log('Dynamic script loading script is running');
-              try {
-                var script = document.createElement('script');
-                script.src = '/js/site-scripts.js';
-                script.async = true;
-                script.onerror = function() {
-                  console.error('Failed to load script from: ' + script.src);
-                };
-                script.onload = function() {
-                  console.log('Script loaded successfully');
-                };
-                document.head.appendChild(script);
-              } catch (error) {
-                console.error('Error in script loading:', error);
-              }
-            })();
-          </script>
+          <script src="https://julsraemy.ch/intro-open-data/js/site-scripts.js"></script>
