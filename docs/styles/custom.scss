@@ -1,0 +1,77 @@
+/*-- scss:defaults --*/
+$light-theme: flatly !default;
+$dark-theme: darkly !default;
+
+// Color variables
+$primary-dark: #3498db;
+$primary-light: #2980b9;
+$accent-dark: #2ecc71; 
+$accent-light: #27ae60;
+$secondary-dark: #34495e;
+$secondary-light: #2c3e50;
+
+/*-- scss:functions --*/
+@function themed($variable) {
+  @return map-get($variables, $variable);
+}
+
+/*-- scss:rules --*/
+[data-bs-theme="light"] {
+  $theme: $light-theme !global;
+  $variables: $theme-colors-light !global;
+  
+  --#{$prefix}body-color: #{themed("body-color")};
+  --#{$prefix}body-bg: #{themed("body-bg")};
+  --#{$prefix}primary: #{$primary-light};
+  --#{$prefix}secondary: #{$secondary-light};  
+  --#{$prefix}accent: #{$accent-light};
+}
+
+[data-bs-theme="dark"] {
+  $theme: $dark-theme !global;
+  $variables: $theme-colors-dark !global;
+  
+  --#{$prefix}body-color: #{themed("body-color")};
+  --#{$prefix}body-bg: #{themed("body-bg")};
+  --#{$prefix}primary: #{$primary-dark};
+  --#{$prefix}secondary: #{$secondary-dark};
+  --#{$prefix}accent: #{$accent-dark};
+}
+
+// Additional customizations
+body {
+  transition: color 0.3s, background-color 0.3s;
+}
+
+a {
+  text-decoration-color: var(--#{$prefix}link-hover-color); 
+  transition: color 0.2s, text-decoration-color 0.2s;
+  
+  &:hover {
+    text-decoration-color: var(--#{$prefix}link-color);
+  }
+}
+
+code {
+  border-radius: 0.3rem;
+  padding: 0.2rem 0.4rem;
+}
+
+.course-header {
+  background-color: var(--#{$prefix}primary);
+  color: var(--#{$prefix}white);
+  padding: 2rem 0;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.chapter-section {
+  margin-bottom: 2rem;
+  padding: 1rem;
+  border-left: 4px solid var(--#{$prefix}primary);
+  @include smooth-transition(background-color, border-color);
+}
+
+/*-- scss:mixins --*/
+@mixin smooth-transition($properties...) {
+  transition: $properties 0.3s ease;
+}

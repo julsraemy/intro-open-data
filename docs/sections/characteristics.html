@@ -1,0 +1,1715 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.5.55">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Julien A. Raemy">
+<meta name="dcterms.date" content="2025-01-17">
+
+<title>Characteristics of Open Data – Introduction to Open Data</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<script src="../site_libs/quarto-html/quarto.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+
+<link rel="stylesheet" href="../styles/custom.scss">
+</head>
+
+<body class="nav-sidebar floating nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="../index.html">
+    <span class="navbar-title">Introduction to Open Data</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../index.html"> 
+<span class="menu-text">Home</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../syllabus.html"> 
+<span class="menu-text">Syllabus</span></a>
+  </li>  
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-course-sections" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Course Sections</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-course-sections">    
+        <li>
+    <a class="dropdown-item" href="../sections/characteristics.html">
+ <span class="dropdown-text">Characteristics of Open Data</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../sections/movements.html">
+ <span class="dropdown-text">Associated Movements and Principles</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../sections/platforms.html">
+ <span class="dropdown-text">Platforms and Organisations</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../sections/assessment.html">
+ <span class="dropdown-text">Assessment, Data Quality, and Best Practices</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../sections/techniques.html">
+ <span class="dropdown-text">Techniques, Software, and Tools</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../sections/showcases.html">
+ <span class="dropdown-text">Showcases</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="../references.html"> 
+<span class="menu-text">References</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../about.html"> 
+<span class="menu-text">About</span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../sections/characteristics.html">Characteristics of Open Data</a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../sections/characteristics.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">Characteristics of Open Data</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../sections/movements.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Associated Movements and Principles</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../sections/platforms.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Platforms and Organisations</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../sections/assessment.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Assessment, Data Quality, and Best Practices</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../sections/techniques.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Techniques, Software, and Tools</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../sections/showcases.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Showcases</span></a>
+  </div>
+</li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#definitions" id="toc-definitions" class="nav-link active" data-scroll-target="#definitions">Definitions</a>
+  <ul class="collapse">
+  <li><a href="#openness" id="toc-openness" class="nav-link" data-scroll-target="#openness">Open(ness)</a></li>
+  <li><a href="#data" id="toc-data" class="nav-link" data-scroll-target="#data">Data</a></li>
+  <li><a href="#metadata" id="toc-metadata" class="nav-link" data-scroll-target="#metadata">Metadata</a></li>
+  <li><a href="#open-data" id="toc-open-data" class="nav-link" data-scroll-target="#open-data">Open Data</a></li>
+  </ul></li>
+  <li><a href="#history" id="toc-history" class="nav-link" data-scroll-target="#history">History</a>
+  <ul class="collapse">
+  <li><a href="#robert-k.-merton-19102003" id="toc-robert-k.-merton-19102003" class="nav-link" data-scroll-target="#robert-k.-merton-19102003">Robert K. Merton (1910–2003)</a></li>
+  <li><a href="#timeline" id="toc-timeline" class="nav-link" data-scroll-target="#timeline">Timeline</a></li>
+  <li><a href="#the-sebastopol-meeting" id="toc-the-sebastopol-meeting" class="nav-link" data-scroll-target="#the-sebastopol-meeting">The Sebastopol Meeting</a></li>
+  </ul></li>
+  <li><a href="#the-impact-of-open-data-on-disciplines" id="toc-the-impact-of-open-data-on-disciplines" class="nav-link" data-scroll-target="#the-impact-of-open-data-on-disciplines">The Impact of Open Data on Disciplines</a>
+  <ul class="collapse">
+  <li><a href="#catalysing-interdisciplinary-progress" id="toc-catalysing-interdisciplinary-progress" class="nav-link" data-scroll-target="#catalysing-interdisciplinary-progress">Catalysing Interdisciplinary Progress</a></li>
+  <li><a href="#open-data-in-information-science-digital-humanities-and-data-science" id="toc-open-data-in-information-science-digital-humanities-and-data-science" class="nav-link" data-scroll-target="#open-data-in-information-science-digital-humanities-and-data-science">Open Data in Information Science, Digital Humanities, and Data Science</a></li>
+  </ul></li>
+  <li><a href="#typology" id="toc-typology" class="nav-link" data-scroll-target="#typology">Typology</a>
+  <ul class="collapse">
+  <li><a href="#main-sources" id="toc-main-sources" class="nav-link" data-scroll-target="#main-sources">Main Sources</a></li>
+  <li><a href="#disciplines" id="toc-disciplines" class="nav-link" data-scroll-target="#disciplines">Disciplines</a></li>
+  </ul></li>
+  <li><a href="#open-research-data-ord" id="toc-open-research-data-ord" class="nav-link" data-scroll-target="#open-research-data-ord">Open Research Data (ORD)</a>
+  <ul class="collapse">
+  <li><a href="#definition" id="toc-definition" class="nav-link" data-scroll-target="#definition">Definition</a></li>
+  <li><a href="#for-funding-agencies-and-institutions" id="toc-for-funding-agencies-and-institutions" class="nav-link" data-scroll-target="#for-funding-agencies-and-institutions">For Funding Agencies (and Institutions)</a></li>
+  <li><a href="#for-organizations-that-supply-metrics" id="toc-for-organizations-that-supply-metrics" class="nav-link" data-scroll-target="#for-organizations-that-supply-metrics">For Organizations that Supply Metrics</a></li>
+  <li><a href="#ord-in-switzerland" id="toc-ord-in-switzerland" class="nav-link" data-scroll-target="#ord-in-switzerland">ORD in Switzerland</a></li>
+  <li><a href="#research-data-management-rdm" id="toc-research-data-management-rdm" class="nav-link" data-scroll-target="#research-data-management-rdm">Research Data Management (RDM)</a></li>
+  <li><a href="#data-management-plan-dmp" id="toc-data-management-plan-dmp" class="nav-link" data-scroll-target="#data-management-plan-dmp">Data Management Plan (DMP)</a></li>
+  <li><a href="#rdm-and-dmp" id="toc-rdm-and-dmp" class="nav-link" data-scroll-target="#rdm-and-dmp">RDM and DMP</a></li>
+  <li><a href="#open-governement-data-ogd" id="toc-open-governement-data-ogd" class="nav-link" data-scroll-target="#open-governement-data-ogd">Open Governement Data (OGD)</a></li>
+  <li><a href="#ogd-in-switzerland" id="toc-ogd-in-switzerland" class="nav-link" data-scroll-target="#ogd-in-switzerland">OGD in Switzerland</a></li>
+  </ul></li>
+  <li><a href="#purposes-of-open-data" id="toc-purposes-of-open-data" class="nav-link" data-scroll-target="#purposes-of-open-data">Purposes of Open Data</a>
+  <ul class="collapse">
+  <li><a href="#open-government-data-principles" id="toc-open-government-data-principles" class="nav-link" data-scroll-target="#open-government-data-principles">Open Government Data Principles</a></li>
+  </ul></li>
+  <li><a href="#requirements" id="toc-requirements" class="nav-link" data-scroll-target="#requirements">Requirements</a></li>
+  <li><a href="#licences" id="toc-licences" class="nav-link" data-scroll-target="#licences">Licences</a>
+  <ul class="collapse">
+  <li><a href="#copyright-and-copyleft" id="toc-copyright-and-copyleft" class="nav-link" data-scroll-target="#copyright-and-copyleft">Copyright and Copyleft</a></li>
+  <li><a href="#anglo-saxon-copyright-vs.-european-authors-rights" id="toc-anglo-saxon-copyright-vs.-european-authors-rights" class="nav-link" data-scroll-target="#anglo-saxon-copyright-vs.-european-authors-rights">Anglo-Saxon Copyright vs.&nbsp;European Author’s Rights</a></li>
+  <li><a href="#creative-commons-cc" id="toc-creative-commons-cc" class="nav-link" data-scroll-target="#creative-commons-cc">Creative Commons (CC)</a></li>
+  <li><a href="#rights-statements" id="toc-rights-statements" class="nav-link" data-scroll-target="#rights-statements">Rights Statements</a></li>
+  <li><a href="#open-data-commons-open-database-license-odbl" id="toc-open-data-commons-open-database-license-odbl" class="nav-link" data-scroll-target="#open-data-commons-open-database-license-odbl">Open Data Commons Open Database License (ODbL)</a></li>
+  <li><a href="#public-domain-dedication-and-license-pddl" id="toc-public-domain-dedication-and-license-pddl" class="nav-link" data-scroll-target="#public-domain-dedication-and-license-pddl">Public Domain Dedication and License (PDDL)</a></li>
+  <li><a href="#licences-for-software" id="toc-licences-for-software" class="nav-link" data-scroll-target="#licences-for-software">Licences for software</a></li>
+  <li><a href="#responsable-ai-licenses-rail" id="toc-responsable-ai-licenses-rail" class="nav-link" data-scroll-target="#responsable-ai-licenses-rail">Responsable AI Licenses (RAIL)</a></li>
+  <li><a href="#i-hate-ai-license-ihail" id="toc-i-hate-ai-license-ihail" class="nav-link" data-scroll-target="#i-hate-ai-license-ihail">I Hate AI License (IHAIL)</a></li>
+  <li><a href="#recommendations-for-open-research-data" id="toc-recommendations-for-open-research-data" class="nav-link" data-scroll-target="#recommendations-for-open-research-data">Recommendations for Open (Research) Data</a></li>
+  </ul></li>
+  <li><a href="#technical-means" id="toc-technical-means" class="nav-link" data-scroll-target="#technical-means">Technical means</a>
+  <ul class="collapse">
+  <li><a href="#important-factors-in-providing-structured-data-for-machines" id="toc-important-factors-in-providing-structured-data-for-machines" class="nav-link" data-scroll-target="#important-factors-in-providing-structured-data-for-machines">Important factors in providing structured data for machines</a></li>
+  <li><a href="#infrastructure" id="toc-infrastructure" class="nav-link" data-scroll-target="#infrastructure">Infrastructure</a></li>
+  <li><a href="#text-based-formats" id="toc-text-based-formats" class="nav-link" data-scroll-target="#text-based-formats">Text-based formats</a></li>
+  <li><a href="#binary-encoded-formats" id="toc-binary-encoded-formats" class="nav-link" data-scroll-target="#binary-encoded-formats">Binary-encoded Formats</a></li>
+  <li><a href="#metadata-standards-schemas" id="toc-metadata-standards-schemas" class="nav-link" data-scroll-target="#metadata-standards-schemas">Metadata standards / schemas</a></li>
+  <li><a href="#data-catalog-vocabulary-application-profiles" id="toc-data-catalog-vocabulary-application-profiles" class="nav-link" data-scroll-target="#data-catalog-vocabulary-application-profiles">Data Catalog Vocabulary (Application Profiles)</a></li>
+  <li><a href="#documentation" id="toc-documentation" class="nav-link" data-scroll-target="#documentation">Documentation</a></li>
+  <li><a href="#protocols" id="toc-protocols" class="nav-link" data-scroll-target="#protocols">Protocols</a></li>
+  </ul></li>
+  </ul>
+<div class="toc-actions"><ul><li><a href="https://github.com/julsraemy/intro-open-data/edit/main/sections/characteristics.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/julsraemy/intro-open-data/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Characteristics of Open Data</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Julien A. Raemy </p>
+          </div>
+  </div>
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">January 17, 2025</p>
+    </div>
+  </div>
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="definitions" class="level2">
+<h2 class="anchored" data-anchor-id="definitions">Definitions</h2>
+<section id="openness" class="level3">
+<h3 class="anchored" data-anchor-id="openness">Open(ness)</h3>
+<p>The term <strong>Open(ness)</strong> can be defined in the following complementary ways:</p>
+<ol type="1">
+<li><strong>General Definition</strong>:</li>
+</ol>
+<blockquote class="blockquote">
+<p>Open means anyone can freely access, use, modify, and share for any purpose (subject, at most, to requirements that preserve provenance and openness).</p>
+</blockquote>
+<p>The Open Definition according to the <a href="https://opendefinition.org/">Open Knowledge Network</a>.</p>
+<ol start="2" type="1">
+<li><strong>Principles of Openness</strong>:
+<ul>
+<li><strong>No limitations on access</strong>: Accessibility must not depend on cost, authentication, or privileges (national, institutional, or otherwise).</li>
+<li><strong>Free and open</strong>: Open knowledge should be shared freely, without cost or barriers.</li>
+</ul></li>
+</ol>
+<p>Derived from the Open Knowledge Foundation’s principles and scholarly interpretations.</p>
+<p>→ <strong>Key takeaway</strong>: Knowledge funded by public mandates must benefit the public without restrictions. [Scholger 2023]</p>
+</section>
+<section id="data" class="level3">
+<h3 class="anchored" data-anchor-id="data">Data</h3>
+<blockquote class="blockquote">
+<p>Data at its most basic level as the absence of uniformity, whether in the real world or in some symbolic system. Only once such data have some recognisable structure and are given some meaning can they be considered information.</p>
+</blockquote>
+<p>[Floridi 2010]</p>
+<p><img src="https://www.researchgate.net/profile/Luciano-Floridi/publication/257666827/figure/fig2/AS:392780774952979@1470657642732/Floridis-original-information-map-redrawn-based-on-Floridi-2011.png" class="img-fluid"></p>
+<p>[Chen &amp; Floridi 2013]</p>
+</section>
+<section id="metadata" class="level3">
+<h3 class="anchored" data-anchor-id="metadata">Metadata</h3>
+<blockquote class="blockquote">
+<p>Data whose purpose is to describe and give information about other data.</p>
+</blockquote>
+<p>[Oxford English Dictionary 2023b]</p>
+<blockquote class="blockquote">
+<p>(…) there is no fixed boundary between “data” and “metadata”, and that information viewed as data in one discipline may be metadata in another. [Alter et al.&nbsp;2023]</p>
+</blockquote>
+</section>
+<section id="open-data" class="level3">
+<h3 class="anchored" data-anchor-id="open-data">Open Data</h3>
+<blockquote class="blockquote">
+<p>Open data and content can be freely used, modified, and shared by anyone for any purpose.</p>
+</blockquote>
+<p>The Open Definition according to the <a href="https://opendefinition.org/">Open Knowledge Network</a>.</p>
+</section>
+</section>
+<section id="history" class="level2">
+<h2 class="anchored" data-anchor-id="history">History</h2>
+<section id="robert-k.-merton-19102003" class="level3">
+<h3 class="anchored" data-anchor-id="robert-k.-merton-19102003">Robert K. Merton (1910–2003)</h3>
+<p>American sociologist, considered a founding father of modern sociology, said in 1942:</p>
+<blockquote class="blockquote">
+<p>Each researcher must contribute to the ‘common pot’ and give up intellectual property rights to allow knowledge to move forward.</p>
+</blockquote>
+<p>Source: <a href="https://en.wikipedia.org/wiki/Timeline_of_the_open-access_movement">Wikipedia</a></p>
+<blockquote class="blockquote">
+<p>While the term “open data” isn’t even 20 years old, the author puts the concept in a historical context; the idea that scientific research should be free to all was popularized by Robert King Merton in the early 1940s. Research (which produces data) should be shared freely for the common good.</p>
+</blockquote>
+<p>Source: <a href="https://data.gov/blog/open-data-history" class="uri">https://data.gov/blog/open-data-history</a></p>
+</section>
+<section id="timeline" class="level3">
+<h3 class="anchored" data-anchor-id="timeline">Timeline</h3>
+<ul>
+<li><strong>1942</strong>: The concept starts with Robert K. Merton.</li>
+<li><strong>1995</strong>: The term ‘Open Data’ first appeared, related to the sharing of geophysical and environmental data.</li>
+<li><strong>November 2005</strong>: Open Knowledge Foundation creates the Open Definition.</li>
+<li><strong>December 2007</strong>: The concept of open public data was discussed and defined in Sebastopol, CA, USA at a meeting of Internet activists. They identified 8 principles.</li>
+<li><strong>February 2009</strong>: Tim Berners-Lee presents <a href="https://www.ted.com/talks/tim_berners_lee_the_next_web">The Next Web</a> at TED2009. He famously asked for “raw data now”.</li>
+</ul>
+<p>Sources: - <a href="https://devopedia.org/open-data" class="uri">https://devopedia.org/open-data</a> - <a href="https://www.opendatasoft.com/en/what-is-open-data-practical-guide/" class="uri">https://www.opendatasoft.com/en/what-is-open-data-practical-guide/</a></p>
+</section>
+<section id="the-sebastopol-meeting" class="level3">
+<h3 class="anchored" data-anchor-id="the-sebastopol-meeting">The Sebastopol Meeting</h3>
+<p>In December 2007, thirty thinkers and activists of the Internet held a meeting in Sebastopol, north of San Francisco. Their aim was to define the concept of open public data and have it adopted by the US presidential candidates.</p>
+<p>Among them were:</p>
+<ul>
+<li>Tim O’Reilly: An American author and editor who defined and popularized concepts such as open source and Web 2.0.</li>
+<li>Lawrence Lessig: Professor of Law at Stanford University and founder of Creative Commons licenses.</li>
+<li>Adrian Holovaty: Founder of EveryBlock, a localized information service.</li>
+<li>Tom Steinberg: Founder of the FixMyStreet site.</li>
+<li>Aaron Swartz: Inventor of RSS and free knowledge activist.</li>
+</ul>
+<p>Together, they created principles to define and evaluate open public data.</p>
+<p><a href="https://www.paristechreview.com/2013/03/29/brief-history-open-data/" class="uri">https://www.paristechreview.com/2013/03/29/brief-history-open-data/</a></p>
+</section>
+</section>
+<section id="the-impact-of-open-data-on-disciplines" class="level2">
+<h2 class="anchored" data-anchor-id="the-impact-of-open-data-on-disciplines">The Impact of Open Data on Disciplines</h2>
+<section id="catalysing-interdisciplinary-progress" class="level3">
+<h3 class="anchored" data-anchor-id="catalysing-interdisciplinary-progress">Catalysing Interdisciplinary Progress</h3>
+<ul>
+<li><strong>A foundation for collaboration and innovation</strong>: Open data drives interdisciplinary research by providing universally accessible datasets, fostering collaboration across diverse fields such as information science, digital humanities, and data science.</li>
+<li><strong>Enabling data-driven research</strong>: Facilitates advanced analysis and research in disciplines that rely heavily on data, increasing the accuracy and depth of insights and discoveries.</li>
+</ul>
+</section>
+<section id="open-data-in-information-science-digital-humanities-and-data-science" class="level3">
+<h3 class="anchored" data-anchor-id="open-data-in-information-science-digital-humanities-and-data-science">Open Data in Information Science, Digital Humanities, and Data Science</h3>
+<ul>
+<li><strong>Information Science</strong>: Improves data management and accessibility, enabling more efficient data retrieval, archiving, and dissemination practices.</li>
+<li><strong>Digital Humanities</strong>: Enables new digital approaches to humanities research, providing new insights into historical, cultural, and linguistic studies through data analysis.</li>
+<li><strong>Data Science</strong>: Leverages open data for predictive modeling, machine learning, and big data analytics, enabling comprehensive analysis and informed decision-making in diverse fields such as health, finance, and social sciences.</li>
+</ul>
+</section>
+</section>
+<section id="typology" class="level2">
+<h2 class="anchored" data-anchor-id="typology">Typology</h2>
+<section id="main-sources" class="level3">
+<h3 class="anchored" data-anchor-id="main-sources">Main Sources</h3>
+<ul>
+<li><strong>Research</strong>: Open Research Data (ORD) / Open Scientific Data</li>
+<li><strong>Government</strong>: Open Government Data (OGD)</li>
+<li><strong>Non-profit Organisations</strong></li>
+<li><strong>Private Organisations</strong></li>
+</ul>
+</section>
+<section id="disciplines" class="level3">
+<h3 class="anchored" data-anchor-id="disciplines">Disciplines</h3>
+<ul>
+<li>Cultural Heritage</li>
+<li>Healthcare</li>
+<li>Education</li>
+<li>Transportation</li>
+<li>Meteorology</li>
+<li>Geospatial Information</li>
+<li>Economic and Finance</li>
+<li>Legal and Criminal Justice</li>
+<li>Etc.</li>
+</ul>
+</section>
+</section>
+<section id="open-research-data-ord" class="level2">
+<h2 class="anchored" data-anchor-id="open-research-data-ord">Open Research Data (ORD)</h2>
+<section id="definition" class="level3">
+<h3 class="anchored" data-anchor-id="definition">Definition</h3>
+<blockquote class="blockquote">
+<p>Research data are the evidence that underpins the answer to the research question, and can be used to validate findings regardless of its form (e.g.&nbsp;print, digital, or physical). These might be quantitative information or qualitative statements collected by researchers in the course of their work by experimentation, observation, modeling, interview, or other methods, or information derived from existing evidence.</p>
+</blockquote>
+<p>[Concordat Working Group 2016]</p>
+</section>
+<section id="for-funding-agencies-and-institutions" class="level3">
+<h3 class="anchored" data-anchor-id="for-funding-agencies-and-institutions">For Funding Agencies (and Institutions)</h3>
+<ol start="3" type="1">
+<li>For the purposes of research assessment, consider the value and impact of all research outputs (<strong>including datasets</strong> and software) in addition to research publications, and consider a broad range of impact measures including qualitative indicators of research impact, such as influence on policy and practice.</li>
+</ol>
+</section>
+<section id="for-organizations-that-supply-metrics" class="level3">
+<h3 class="anchored" data-anchor-id="for-organizations-that-supply-metrics">For Organizations that Supply Metrics</h3>
+<ol start="11" type="1">
+<li>Be open and transparent by providing data and methods used to calculate all metrics.<br>
+</li>
+<li>Provide the data under a licence that allows unrestricted reuse, and provide computational access to data, where possible.</li>
+</ol>
+<p><a href="https://sfdora.org/read/">San Francisco Declaration on Research Assessment (DORA)</a></p>
+</section>
+<section id="ord-in-switzerland" class="level3">
+<h3 class="anchored" data-anchor-id="ord-in-switzerland">ORD in Switzerland</h3>
+<section id="snsf-policy" class="level4">
+<h4 class="anchored" data-anchor-id="snsf-policy">SNSF Policy</h4>
+<p>The Swiss National Science Foundation (SNSF) expects all its funded researchers:</p>
+<ul>
+<li>to store the research data they have worked on and produced during the course of their research work,</li>
+<li>to share these data with other researchers, unless they are bound by legal, ethical, copyright, confidentiality or other clauses, and</li>
+<li>to deposit their data and metadata onto existing public repositories in formats that anyone can find, access and reuse without restriction.</li>
+</ul>
+<p><a href="https://www.snf.ch/en/dMILj9t4LNk8NwyR/topic/open-research-data" class="uri">https://www.snf.ch/en/dMILj9t4LNk8NwyR/topic/open-research-data</a></p>
+</section>
+<section id="vision" class="level4">
+<h4 class="anchored" data-anchor-id="vision">Vision</h4>
+<blockquote class="blockquote">
+<p>By facilitating access to and reuse of research data, ORD promotes better, more effective, and more impactful research for the benefit of society as a whole. Through the principles of open access and reusability of research data, ORD practices support transparent and reproducible research findings. Moreover, ORD fosters collaboration by promoting exchange among researchers across disciplines, legal systems and national borders, thus enabling creativity and innovation to thrive.</p>
+</blockquote>
+<p>[Open Science Delegation 2021a]</p>
+</section>
+<section id="action-areas" class="level4">
+<h4 class="anchored" data-anchor-id="action-areas">Action Areas</h4>
+<ul>
+<li>Support researchers and research communities in imagining and adopting ORD practices</li>
+<li>Development, promotion, and maintenance of financially sustainable basic infrastructures and services for all researchers</li>
+<li>Equipping researchers for ORD skills development and exchange of best practices</li>
+<li>Building up systemic und supportive conditions for institutions and research communities</li>
+</ul>
+<p>[Open Science Delegation 2021b]</p>
+</section>
+</section>
+<section id="research-data-management-rdm" class="level3">
+<h3 class="anchored" data-anchor-id="research-data-management-rdm">Research Data Management (RDM)</h3>
+<section id="definition-1" class="level4">
+<h4 class="anchored" data-anchor-id="definition-1">Definition</h4>
+<p>RDM refers to the organisation, storage and preservation of data created during a research project.</p>
+</section>
+<section id="purpose" class="level4">
+<h4 class="anchored" data-anchor-id="purpose">Purpose</h4>
+<p>RDM ensures that research data are well-organised, maintained and accessible for current and future research, thereby improving their reliability, validity and reproducibility.</p>
+</section>
+</section>
+<section id="data-management-plan-dmp" class="level3">
+<h3 class="anchored" data-anchor-id="data-management-plan-dmp">Data Management Plan (DMP)</h3>
+<section id="definition-2" class="level4">
+<h4 class="anchored" data-anchor-id="definition-2">Definition</h4>
+<p>A DMP is a formal document that outlines how data will be handled during and after a research project, covering aspects from collection to sharing and preservation.</p>
+</section>
+<section id="purpose-1" class="level4">
+<h4 class="anchored" data-anchor-id="purpose-1">Purpose</h4>
+<p>It serves as a guide for managing data efficiently and meets funding agency requirements for data stewardship. It is now mandatory for most funding agencies to require a DMP as part of the grant application process to secure funding. University libraries often have services and resources to assist researchers in creating these documents, providing expert guidance on best practices in data management.</p>
+</section>
+</section>
+<section id="rdm-and-dmp" class="level3">
+<h3 class="anchored" data-anchor-id="rdm-and-dmp">RDM and DMP</h3>
+<section id="interconnected-roles" class="level4">
+<h4 class="anchored" data-anchor-id="interconnected-roles">Interconnected Roles</h4>
+<p>RDM encompasses the day-to-day management of research data, while a DMP provides a structured plan for how to manage, share, and preserve data throughout the research project.</p>
+</section>
+<section id="planning-and-execution" class="level4">
+<h4 class="anchored" data-anchor-id="planning-and-execution">Planning and Execution</h4>
+<p>A DMP is essentially a blueprint for RDM. It outlines the policies and standards to be applied to the data, ensuring that data management practices are thought through from the outset of the project.</p>
+</section>
+</section>
+<section id="open-governement-data-ogd" class="level3">
+<h3 class="anchored" data-anchor-id="open-governement-data-ogd">Open Governement Data (OGD)</h3>
+<section id="definition-3" class="level4">
+<h4 class="anchored" data-anchor-id="definition-3">Definition</h4>
+<blockquote class="blockquote">
+<p>The work of government involves collecting huge amounts of data, much of which is not confidential (economic data, demographic data, spending data, crime data, transport data, etc). The value of much of this data can be greatly enhanced by releasing it as open data, freeing it for re-use by business, research, civil society, data journalists, etc.</p>
+</blockquote>
+<p>Open Data Handbook [Open Knowledge 2016]: <a href="https://opendatahandbook.org/glossary/en/terms/government-data/" class="uri">https://opendatahandbook.org/glossary/en/terms/government-data/</a></p>
+</section>
+</section>
+<section id="ogd-in-switzerland" class="level3">
+<h3 class="anchored" data-anchor-id="ogd-in-switzerland">OGD in Switzerland</h3>
+<p><img src="https://julsraemy.ch/prezi/assets/ogd-masterplan.png" class="img-fluid"></p>
+<p><a href="https://www.bfs.admin.ch/bfs/fr/home/services/ogd/masterplan.html" class="uri">https://www.bfs.admin.ch/bfs/fr/home/services/ogd/masterplan.html</a></p>
+<section id="lmeta.-art.-10-al.-4" class="level4">
+<h4 class="anchored" data-anchor-id="lmeta.-art.-10-al.-4">LMETA. Art. 10, al.&nbsp;4</h4>
+<blockquote class="blockquote">
+<p>Les données sont mises en ligne gratuitement, en temps utile, sous une forme lisible par machine et dans un format ouvert. Elles peuvent être librement réutilisées, sous réserve d’obligations légales spéciales de mentionner la source des données.</p>
+</blockquote>
+<p>[Loi fédérale sur l’utilisation des moyens électroniques pour l’exécution des tâches des autorités (LMETA) 2023]</p>
+</section>
+<section id="related-efforts" class="level4">
+<h4 class="anchored" data-anchor-id="related-efforts">Related efforts</h4>
+<ul>
+<li>National data management (NaDB): <a href="https://www.bfs.admin.ch/bfs/en/home/nadb/nadb.html" class="uri">https://www.bfs.admin.ch/bfs/en/home/nadb/nadb.html</a></li>
+<li>i14y Interoperability platform: <a href="https://www.i14y.admin.ch/" class="uri">https://www.i14y.admin.ch/</a></li>
+<li>Digital Switzerland Strategy: <a href="https://digital.swiss/" class="uri">https://digital.swiss/</a></li>
+</ul>
+</section>
+</section>
+</section>
+<section id="purposes-of-open-data" class="level2">
+<h2 class="anchored" data-anchor-id="purposes-of-open-data">Purposes of Open Data</h2>
+<ul>
+<li>Transparency and democratic control</li>
+<li>Participation</li>
+<li>Self-empowerment</li>
+<li>Improved or new private products and services</li>
+<li>Innovation</li>
+<li>Improved efficiency and effectiveness of government services</li>
+<li>Impact measurement of policies</li>
+<li>New knowledge from combined data sources and patterns in large data volumes</li>
+</ul>
+<p>Open Data Handbook [Open Knowledge 2016] <a href="https://opendatahandbook.org/guide/en/why-open-data/" class="uri">https://opendatahandbook.org/guide/en/why-open-data/</a></p>
+<section id="open-government-data-principles" class="level3">
+<h3 class="anchored" data-anchor-id="open-government-data-principles">Open Government Data Principles</h3>
+<ol type="1">
+<li><strong>Complete</strong>: All public data is made available. Public data is data that is not subject to valid privacy, security or privilege limitations.</li>
+<li><strong>Primary</strong>: Data is as collected at the source, with the highest possible level of granularity, not in aggregate or modified forms.</li>
+<li><strong>Timely</strong>: Data is made available as quickly as necessary to preserve the value of the data.</li>
+<li><strong>Accessible</strong>: Data is available to the widest range of users for the widest range of purposes.</li>
+<li><strong>Machine processable</strong>: Data is reasonably structured to allow automated processing.</li>
+<li><strong>Non-discriminatory</strong>: Data is available to anyone, with no requirement of registration.</li>
+<li><strong>Non-proprietary</strong>: Data is available in a format over which no entity has exclusive control.</li>
+<li><strong>License-free</strong>: Data is not subject to any copyright, patent, trademark or trade secret regulation. Reasonable privacy, security and privilege restrictions may be allowed.</li>
+</ol>
+<p><a href="https://public.resource.org/8_principles.html" class="uri">https://public.resource.org/8_principles.html</a></p>
+</section>
+</section>
+<section id="requirements" class="level2">
+<h2 class="anchored" data-anchor-id="requirements">Requirements</h2>
+<ol type="1">
+<li><strong>Legally open</strong>: available under an open (data) licence that permits anyone freely to access, reuse and redistribute</li>
+<li><strong>Technically open</strong>: data is available for no more than the cost of reproduction and in machine-readable and bulk form.</li>
+</ol>
+<p>Open Data Handbook [Open Knowledge 2016]: <a href="https://opendatahandbook.org/glossary/en/terms/open-data/" class="uri">https://opendatahandbook.org/glossary/en/terms/open-data/</a></p>
+</section>
+<section id="licences" class="level2">
+<h2 class="anchored" data-anchor-id="licences">Licences</h2>
+<section id="copyright-and-copyleft" class="level3">
+<h3 class="anchored" data-anchor-id="copyright-and-copyleft">Copyright and Copyleft</h3>
+<section id="copyright" class="level4">
+<h4 class="anchored" data-anchor-id="copyright">Copyright</h4>
+<ul>
+<li>Grants creators exclusive rights to control use, reproduction, and distribution.</li>
+<li>Designed to protect creators’ economic interests; allows monetization of work.</li>
+</ul>
+</section>
+<section id="copyleft" class="level4">
+<h4 class="anchored" data-anchor-id="copyleft">Copyleft</h4>
+<ul>
+<li>Allows use, modification, and distribution with the condition of keeping works and derivatives open.</li>
+<li>Promotes freedom, sharing of knowledge, and collaborative improvement.</li>
+</ul>
+<p>For further information about licences → Competence Center in Digital Law: https://www.ccdigitallaw.ch/</p>
+</section>
+</section>
+<section id="anglo-saxon-copyright-vs.-european-authors-rights" class="level3">
+<h3 class="anchored" data-anchor-id="anglo-saxon-copyright-vs.-european-authors-rights">Anglo-Saxon Copyright vs.&nbsp;European Author’s Rights</h3>
+<section id="anglo-saxon-copyright" class="level4">
+<h4 class="anchored" data-anchor-id="anglo-saxon-copyright">Anglo-Saxon Copyright</h4>
+<ul>
+<li>Focuses on economic rights; treats copyright as transferable property.</li>
+<li>Duration based on set years post-creation or author’s life plus years.</li>
+</ul>
+</section>
+<section id="european-authors-rights-droit-dauteur-urheberrecht" class="level4">
+<h4 class="anchored" data-anchor-id="european-authors-rights-droit-dauteur-urheberrecht">European Author’s Rights (<em>droit d’auteur / Urheberrecht</em>)</h4>
+<ul>
+<li>Emphasises moral rights alongside economic rights.</li>
+<li>Grants inalienable moral rights to creators; duration includes lifetime plus post-death period (commonly 70 years).</li>
+</ul>
+</section>
+</section>
+<section id="creative-commons-cc" class="level3">
+<h3 class="anchored" data-anchor-id="creative-commons-cc">Creative Commons (CC)</h3>
+<ul>
+<li><a href="https://creativecommons.org/licenses/by/4.0/"><img src="https://julsraemy.ch/prezi/assets/cc-by.svg" class="img-fluid"></a> CC BY 4.0: Attribution</li>
+<li><a href="https://creativecommons.org/licenses/by-sa/4.0/"><img src="https://julsraemy.ch/prezi/assets/cc-by-sa.svg" class="img-fluid"></a> CC BY-SA 4.0: Attribution, Share Alike</li>
+<li><a href="https://creativecommons.org/licenses/by-nd/4.0/"><img src="https://julsraemy.ch/prezi/assets/cc-by-nd.svg" class="img-fluid"></a> CC BY-ND 4.0: Attribution, No Deritave Works</li>
+<li><a href="https://creativecommons.org/licenses/by-nc/4.0/"><img src="https://julsraemy.ch/prezi/assets/cc-by-nc.svg" class="img-fluid"></a> CC BY-NC 4.0: Attribution, No Commercial Use</li>
+<li><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/"><img src="https://julsraemy.ch/prezi/assets/cc-by-nc-sa.svg" class="img-fluid"></a> CC BY-NC-SA 4.0: Attribution, No Commercial Use, Share Alike</li>
+<li><a href="https://creativecommons.org/licenses/by-nc-nd/4.0/"><img src="https://julsraemy.ch/prezi/assets/cc-by-nc-nd.svg" class="img-fluid"></a> CC BY-NC-ND 4.0: Attribution, No Commercial Use, No Derivative Works</li>
+<li><a href="https://creativecommons.org/public-domain/cc0/"><img src="https://julsraemy.ch/prezi/assets/cc0.svg" class="img-fluid"></a> Public Domain Dedication (CC0): No Rights Reserved</li>
+<li><a href="https://creativecommons.org/public-domain/pdm/"><img src="https://julsraemy.ch/prezi/assets/cc-pdm.svg" class="img-fluid"></a> Public Domain Mark: No Known Copyright</li>
+</ul>
+<p><a href="https://creativecommons.org/" class="uri">https://creativecommons.org/</a></p>
+<section id="spectrum" class="level4">
+<h4 class="anchored" data-anchor-id="spectrum">Spectrum</h4>
+<p><img src="https://upload.wikimedia.org/wikipedia/commons/e/e1/Creative_commons_license_spectrum.svg" class="img-fluid"></p>
+<p>Creative commons license spectrum [MJL 2020]</p>
+</section>
+</section>
+<section id="rights-statements" class="level3">
+<h3 class="anchored" data-anchor-id="rights-statements">Rights Statements</h3>
+<ul>
+<li>12 different rights statements that can be used by cultural heritage institutions</li>
+<li>Three categories
+<ul>
+<li><strong>In Copyright</strong>: statements for works that are in copyright</li>
+<li><strong>No Copyright</strong>: statements for works that are not in copyright</li>
+<li><strong>Other</strong>: statements for works where the copyright status is unclear</li>
+</ul></li>
+</ul>
+<p><a href="https://rightsstatements.org/" class="uri">https://rightsstatements.org/</a></p>
+</section>
+<section id="open-data-commons-open-database-license-odbl" class="level3">
+<h3 class="anchored" data-anchor-id="open-data-commons-open-database-license-odbl">Open Data Commons Open Database License (ODbL)</h3>
+<ul>
+<li>Copyleft licence</li>
+<li>Attribution and Share-Alike for Data/Databases</li>
+</ul>
+<p><a href="https://opendatacommons.org/licenses/odbl/" class="uri">https://opendatacommons.org/licenses/odbl/</a></p>
+<p>ODbL is somewhat equivalent to CC BY-SA [Santos 2020].</p>
+</section>
+<section id="public-domain-dedication-and-license-pddl" class="level3">
+<h3 class="anchored" data-anchor-id="public-domain-dedication-and-license-pddl">Public Domain Dedication and License (PDDL)</h3>
+<ul>
+<li>The PDDL places the data(base) in the public domain (waiving all rights)</li>
+</ul>
+<p><a href="https://opendatacommons.org/licenses/pddl/" class="uri">https://opendatacommons.org/licenses/pddl/</a></p>
+</section>
+<section id="licences-for-software" class="level3">
+<h3 class="anchored" data-anchor-id="licences-for-software">Licences for software</h3>
+<ul>
+<li>GNU General Public License (GPL)</li>
+<li>GNU Affero General Public License (AGPL)</li>
+<li>Mozilla Public License (MPL)</li>
+<li>MIT License</li>
+<li>Apache License</li>
+</ul>
+<p>And others… → see for instance <a href="https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/licensing-a-repository" class="uri">https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/licensing-a-repository</a></p>
+</section>
+<section id="responsable-ai-licenses-rail" class="level3">
+<h3 class="anchored" data-anchor-id="responsable-ai-licenses-rail">Responsable AI Licenses (RAIL)</h3>
+<p>Responsible AI Licenses (RAIL) are a class of licenses designed to encourage the responsible use of an AI artifact being licensed by including a set of use restrictions applied to AI artifact. RAILs can be more or less restrictive depending on the aims of the licensor. For instance, a license can be RAIL while being a proprietary license, or a license just allowing the use of the AI feature for research purposes and without allowing distribution of derivative versions.</p>
+<p>In contrast, Open &amp; Responsible AI Licenses (OpenRAIL) are a subclass of RAIL licenses that permit free-of-charge open access and re-use of AI artifacts for commercial purposes, while including usage restrictions. Note that usage restrictions in RAIL Licenses also apply to any derivatives of AI artifact.</p>
+<p>RAILs can be used to license data (D), Apps (A), models (M), and source code (S). depending on the AI feature(s) you are licensing, you will add suffix D, A, M, or S</p>
+<p><img src="https://images.squarespace-cdn.com/content/v1/5c2a6d5c45776e85d1482a7e/75c3197e-0305-4b25-9290-24691ed073b3/AIPubsLicense.png?format=2500w" class="img-fluid"></p>
+<ul>
+<li>Responsible AI Pubs Licenses
+<ul>
+<li>AIPubs Open RAIL-S</li>
+<li>AIPubs Open RAIL-M</li>
+<li>AIPubs Research-Use RAIL-S</li>
+<li>AIPubs Research-Use RAIL-M</li>
+</ul></li>
+<li>Responsible AI End-User License (RAIL-A License)</li>
+<li>Responsible AI Source Code License (Open RAIL-S License)</li>
+<li>BigScience Open RAIL-M License (Open RAIL-M License)</li>
+</ul>
+<p><a href="https://www.licenses.ai/" class="uri">https://www.licenses.ai/</a></p>
+</section>
+<section id="i-hate-ai-license-ihail" class="level3">
+<h3 class="anchored" data-anchor-id="i-hate-ai-license-ihail">I Hate AI License (IHAIL)</h3>
+<ul>
+<li>Based on CC BY 4.0</li>
+<li>It prohibits the use of the material with Artifical Intelligence (AI) technologies while allowing sharing, adaptation, and commercial use under certain terms.</li>
+</ul>
+<p><a href="https://ihateailicense.eu/" class="uri">https://ihateailicense.eu/</a></p>
+</section>
+<section id="recommendations-for-open-research-data" class="level3">
+<h3 class="anchored" data-anchor-id="recommendations-for-open-research-data">Recommendations for Open (Research) Data</h3>
+<ol type="1">
+<li><a href="https://creativecommons.org/public-domain/cc0/"><img src="https://julsraemy.ch/prezi/assets/cc0.svg" class="img-fluid"></a> <strong>CC0</strong> (to the fullest extent allowed by law, as a complete waiver is not feasible under Swiss regulations)</li>
+<li><a href="https://creativecommons.org/licenses/by/4.0/"><img src="https://julsraemy.ch/prezi/assets/cc-by.svg" class="img-fluid"></a> CC BY 4.0</li>
+<li><a href="https://creativecommons.org/licenses/by-sa/4.0/"><img src="https://julsraemy.ch/prezi/assets/cc-by-sa.svg" class="img-fluid"></a> CC BY-SA 4.0</li>
+</ol>
+<p>[Santos 2020]</p>
+<p><img src="https://julsraemy.ch/prezi/assets/santos-arbre.svg" class="img-fluid"></p>
+</section>
+</section>
+<section id="technical-means" class="level2">
+<h2 class="anchored" data-anchor-id="technical-means">Technical means</h2>
+<section id="important-factors-in-providing-structured-data-for-machines" class="level3">
+<h3 class="anchored" data-anchor-id="important-factors-in-providing-structured-data-for-machines">Important factors in providing structured data for machines</h3>
+<ul>
+<li>Data(set) formats
+<ul>
+<li>Text-based formats</li>
+<li>Binary-encoded formats</li>
+</ul></li>
+<li>Metadata standards / schemas (to describe the dataset)</li>
+<li>Documentation</li>
+<li>Protocols</li>
+</ul>
+<p>And of course the underlying infrastructure…</p>
+</section>
+<section id="infrastructure" class="level3">
+<h3 class="anchored" data-anchor-id="infrastructure">Infrastructure</h3>
+<section id="definitions-1" class="level4">
+<h4 class="anchored" data-anchor-id="definitions-1">Definitions</h4>
+<blockquote class="blockquote">
+<p>A collective term for the subordinate parts of an undertaking; substructure, foundation.</p>
+</blockquote>
+<p>[Oxford English Dictionary 2023a]</p>
+<blockquote class="blockquote">
+<p>People commonly envision infrastructure as a system of substrates – railroad, lines, pipes and plumbing, electrical power plants, and wires. <strong>It is by definition invisible, part of the background for other kinds of work</strong>. It is ready-to-hand. This image holds up well enough for many purposes – turn on the faucet for a drink of water and you use a vast infrastructure of plumbing and water regulation without usually thinking much about it.</p>
+</blockquote>
+<p>[Star 1999]</p>
+</section>
+<section id="dimensions" class="level4">
+<h4 class="anchored" data-anchor-id="dimensions">Dimensions</h4>
+<ul>
+<li><strong>Embeddedness</strong>: Infrastructure is sunk into and inside of other structures, social arrangements, and technologies. People do not necessarily distinguish the several coordinated aspects of infrastructure.</li>
+<li><strong>Transparency</strong>: Infrastructure is transparent to use, in the sense that it does not have to be reinvented each time or assembled for each task, but invisibly supports those tasks.</li>
+<li><strong>Reach or scope</strong>: This may be either spatial or temporal – infrastructure has reach beyond a single event or one-site practice.</li>
+<li><strong>Learned as part of membership</strong>: Strangers and outsiders encounter infrastructure as a target object to be learned about. New participants acquire a naturalised familiarity with its objects, as they become members.</li>
+<li><strong>Links with conventions of practice</strong>: Infrastructure both shapes and is shaped by the conventions of a community of practice.</li>
+<li><strong>Embodiment of standards</strong>: Modified by scope and often by conflicting conventions, infrastructure takes on transparency by plugging into other infrastructures and tools in a standardised fashion.</li>
+<li><strong>Built on an installed base</strong>: Infrastructure does not grow <em>de novo</em>; it wrestles with the inertia of the installed base and inherits strengths and limitations from that base.</li>
+<li><strong>Becomes visible upon breakdown</strong>: The normally invisible quality of working infrastructure becomes visible when it breaks: the server is down, the bridge washes out, there is a power blackout.</li>
+<li><strong>Is fixed in modular increments, not all at once or globally</strong>: Because infrastructure is big, layered, and complex, and because it means different things locally, it is never changed from above. Changes take time and negotiations, and adjustment with other aspects of the systems are involved.</li>
+</ul>
+<p>[Star 1999]</p>
+</section>
+</section>
+<section id="text-based-formats" class="level3">
+<h3 class="anchored" data-anchor-id="text-based-formats">Text-based formats</h3>
+<section id="plain-text-txt" class="level4">
+<h4 class="anchored" data-anchor-id="plain-text-txt">Plain Text (TXT)</h4>
+<pre><code>WSe2            WS2         MoS2    
+
+dk  Intensity   dk  Intensity   dk  Intensity   
+
+855.87628   63  848.96433   -39 855.87628   372
+855.25787   72.25   848.34546   2   855.25787   424
+854.63942   64.25   847.72654   -39 854.63942   460
+854.02093   58  847.10759   -37 854.02093   362
+853.40239   66  846.4886    -28 853.40239   440</code></pre>
+<p>Sohier, T., Ponomarev, E., Gibertini, M., Berger, H., Marzari, N., Ubrig, N., &amp; Morpurgo, A. F. (2019). <em>Enhanced Electron-Phonon Interaction in Multivalley Materials</em> [Data set]. Université de Genève, Yareta. <a href="https://doi.org/10.26037/yareta:jlzyhiwj6vfjrnbza4bkvobjai" class="uri">https://doi.org/10.26037/yareta:jlzyhiwj6vfjrnbza4bkvobjai</a></p>
+<p>File (extract): f1b.txt</p>
+</section>
+<section id="markdown-md" class="level4">
+<h4 class="anchored" data-anchor-id="markdown-md">Markdown (MD)</h4>
+<div class="sourceCode" id="cb2"><pre class="sourceCode md code-with-copy"><code class="sourceCode markdown"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu"># e-periodica OAI-PMH - Ethnology and Folklore</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>This script was done to download the metadata of <span class="co">[</span><span class="ot">e-periodica</span><span class="co">](https://www.e-periodica.ch/)</span> through </span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>their OAI-PMH endpoint (<span class="in">`https://www.e-periodica.ch/oai`</span>) that could be interesting to the PIA research </span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>project as we want to link our image-based collections to the e-periodica articles. </span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>There are more than 16k metadata articles which have </span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>the 390 <span class="in">`setSpec`</span> (Ethnology, folklore) on e-periodica. Probably, the more relevant articles </span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>come from the <span class="in">`Korrespondenzblättern der SGV`</span> (more than 2k articles), divided into these three sources: </span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>https://www.e-periodica.ch/digbib/volumes?UID=sgv-001 </span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>https://www.e-periodica.ch/digbib/volumes?UID=sgv-002</span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>https://www.e-periodica.ch/digbib/volumes?UID=sgv-003 </span>
+<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a><span class="fu">## Records in CSV</span></span>
+<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="co">[</span><span class="ot">All records</span><span class="co">](data/records.csv)</span></span>
+<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="co">[</span><span class="ot">Extract (SGV)</span><span class="co">](data/sgv.csv)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Raemy, J. A. (2023). e-periodica OAI-PMH - Ethnology and Folklore (Version 1.0.0) [Computer software]. <a href="https://doi.org/10.5281/zenodo.7777797" class="uri">https://doi.org/10.5281/zenodo.7777797</a> File: README.MD</p>
+</section>
+<section id="comma-separated-values-csv" class="level4">
+<h4 class="anchored" data-anchor-id="comma-separated-values-csv">Comma-separated values (CSV)</h4>
+<pre class="csv"><code>"TRANSPORT_TYPE";"TRANSPORT_MEAN";"TRAVEL_REASON";"SOCIO_DEMO_VARIABLE_TYPE";"SOCIO_DEMO_VARIABLE";"PERIOD_REF";"UNIT_MEAS";"VALUE";"OBS_CONFIDENCE";"OBS_STATUS"
+"TOT";"TOT";"ALL_REAS";"GEO";"CH";2015;"KM";36.8318;0.4602;"A"
+"TOT";"TOT";"WORK";"GEO";"CH";2015;"KM";8.8512;0.1995;"A"
+"TOT";"TOT";"SCHOOL";"GEO";"CH";2015;"KM";1.9104;0.1026;"A"
+"TOT";"TOT";"SHOP";"GEO";"CH";2015;"KM";4.7651;0.1346;"A"
+"TOT";"TOT";"LEISU";"GEO";"CH";2015;"KM";16.2548;0.3385;"A"
+"TOT";"TOT";"SERV_ACC";"GEO";"CH";2015;"KM";1.8462;0.0982;"A"
+"TOT";"TOT";"BUSIN";"GEO";"CH";2015;"KM";2.5514;0.1587;"A"
+"TOT";"TOT";"OTH_REAS";"GEO";"CH";2015;"KM";0.6527;0.0759;"A"
+"SOFT_MOB";"TOT";"ALL_REAS";"GEO";"CH";2015;"KM";2.8031;0.0440;"A"</code></pre>
+<p>Federal Statistical Office. <em>Comportement de la population en matière de transports, tableaux de synthèse</em>. <a href="https://opendata.swiss/fr/perma/18084205@bundesamt-fur-statistik-bfs" class="uri">https://opendata.swiss/fr/perma/18084205@bundesamt-fur-statistik-bfs</a></p>
+</section>
+<section id="extensible-markup-language-xml" class="level4">
+<h4 class="anchored" data-anchor-id="extensible-markup-language-xml">Extensible Markup Language (XML)</h4>
+<div class="sourceCode" id="cb4"><pre class="sourceCode xml code-with-copy"><code class="sourceCode xml"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">&lt;?xml</span><span class="ot"> version=</span><span class="st">"1.0"</span><span class="ot"> encoding=</span><span class="st">"utf-8"</span><span class="fu">?&gt;</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>&lt;<span class="kw">rdf:RDF</span></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="ot">  xmlns:foaf=</span><span class="st">"http://xmlns.com/foaf/0.1/"</span></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a><span class="ot">  xmlns:rdfs=</span><span class="st">"http://www.w3.org/2000/01/rdf-schema#"</span></span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a><span class="ot">  xmlns:rdf=</span><span class="st">"http://www.w3.org/1999/02/22-rdf-syntax-ns#"</span></span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a><span class="ot">  xmlns:dcat=</span><span class="st">"http://www.w3.org/ns/dcat#"</span></span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a><span class="ot">  xmlns:dct=</span><span class="st">"http://purl.org/dc/terms/"</span></span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a><span class="ot">  xmlns:vcard=</span><span class="st">"http://www.w3.org/2006/vcard/ns#"</span>&gt;</span>
+<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a>  &lt;<span class="kw">dcat:Dataset</span><span class="ot"> rdf:about=</span><span class="st">"https://ckan.opendata.swiss/perma/121911@bundesamt-fur-statistik-bfs"</span>&gt;</span>
+<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a>    &lt;<span class="kw">dcat:keyword</span><span class="ot"> xml:lang=</span><span class="st">"it"</span>&gt;lavoro-e-reddito&lt;/<span class="kw">dcat:keyword</span>&gt;</span>
+<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a>    &lt;<span class="kw">dct:language</span>&gt;fr&lt;/<span class="kw">dct:language</span>&gt;</span>
+<span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a>    &lt;<span class="kw">dcat:distribution</span>&gt;</span>
+<span id="cb4-13"><a href="#cb4-13" aria-hidden="true" tabindex="-1"></a>      &lt;<span class="kw">dcat:Distribution</span><span class="ot"> rdf:about=</span><span class="st">"https://ckan.opendata.swiss/dataset/90beaddf-4f48-4211-9e34-ff68d4308f98/resource/f9eb3fb4-0a11-4a40-a995-0aa13f377011"</span>&gt;</span>
+<span id="cb4-14"><a href="#cb4-14" aria-hidden="true" tabindex="-1"></a>        &lt;<span class="kw">dct:rights</span><span class="ot"> rdf:resource=</span><span class="st">"http://dcat-ap.ch/vocabulary/licenses/terms_by_ask"</span>/&gt;</span>
+<span id="cb4-15"><a href="#cb4-15" aria-hidden="true" tabindex="-1"></a>        &lt;<span class="kw">dcat:downloadURL</span><span class="ot"> rdf:resource=</span><span class="st">"https://dam-api.bfs.admin.ch/hub/api/dam/assets/121910/master"</span>/&gt;</span>
+<span id="cb4-16"><a href="#cb4-16" aria-hidden="true" tabindex="-1"></a>        &lt;<span class="kw">dcat:accessURL</span><span class="ot"> rdf:resource=</span><span class="st">"https://dam-api.bfs.admin.ch/hub/api/dam/assets/121910/master"</span>/&gt;</span>
+<span id="cb4-17"><a href="#cb4-17" aria-hidden="true" tabindex="-1"></a>        &lt;<span class="kw">dct:format</span><span class="ot"> rdf:resource=</span><span class="st">"http://publications.europa.eu/resource/authority/file-type/XLS"</span>/&gt;</span>
+<span id="cb4-18"><a href="#cb4-18" aria-hidden="true" tabindex="-1"></a>        &lt;<span class="kw">dct:title</span><span class="ot"> xml:lang=</span><span class="st">"de"</span>&gt;Kanton Genf: Erwerbsleben und Ausbildung&lt;/<span class="kw">dct:title</span>&gt;</span>
+<span id="cb4-19"><a href="#cb4-19" aria-hidden="true" tabindex="-1"></a>        &lt;<span class="kw">dct:identifier</span>&gt;121910-master@bundesamt-fur-statistik-bfs&lt;/<span class="kw">dct:identifier</span>&gt;</span>
+<span id="cb4-20"><a href="#cb4-20" aria-hidden="true" tabindex="-1"></a>        &lt;<span class="kw">dct:language</span>&gt;de&lt;/<span class="kw">dct:language</span>&gt;</span>
+<span id="cb4-21"><a href="#cb4-21" aria-hidden="true" tabindex="-1"></a>        &lt;<span class="kw">dcat:mediaType</span><span class="ot"> rdf:resource=</span><span class="st">"http://www.iana.org/assignments/application/vnd.ms-excel"</span>/&gt;</span>
+<span id="cb4-22"><a href="#cb4-22" aria-hidden="true" tabindex="-1"></a>        &lt;<span class="kw">dct:description</span><span class="ot"> xml:lang=</span><span class="st">"de"</span>&gt;Dieser Dataset präsentiert die Zahlen zu Erwerbsleben und Ausbildung (Eidgenössische Volkszählung 2000)&lt;/<span class="kw">dct:description</span>&gt;</span>
+<span id="cb4-23"><a href="#cb4-23" aria-hidden="true" tabindex="-1"></a>        &lt;<span class="kw">dct:license</span><span class="ot"> rdf:resource=</span><span class="st">"http://dcat-ap.ch/vocabulary/licenses/terms_by_ask"</span>/&gt;</span>
+<span id="cb4-24"><a href="#cb4-24" aria-hidden="true" tabindex="-1"></a>      &lt;/<span class="kw">dcat:Distribution</span>&gt;</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Federal Statistical Office. <em>Canton de Genève: Vie active et formation</em> <a href="https://opendata.swiss/fr/perma/121911@bundesamt-fur-statistik-bfs" class="uri">https://opendata.swiss/fr/perma/121911@bundesamt-fur-statistik-bfs</a></p>
+</section>
+<section id="terse-rdf-triple-language-turtle" class="level4">
+<h4 class="anchored" data-anchor-id="terse-rdf-triple-language-turtle">Terse RDF Triple Language (Turtle)</h4>
+<pre><code>@prefix ns1: &lt;https://data.tg.ch/ld/ontologies/div-energie-6/&gt; .
+@prefix xsd: &lt;http://www.w3.org/2001/XMLSchema#&gt; .
+
+&lt;https://data.tg.ch/ld/resources/div-energie-6/div-energie-6-record/1740b190a1beca6edcd04e0b143c380b885ee1de/&gt; 
+    a ns1:div-energie-6-record ;
+    ns1:andere "2690"^^xsd:int ;
+    ns1:einwohner "266510"^^xsd:int ;
+    ns1:energiebezugsflaeche "25055573"^^xsd:int ;
+    ns1:erdgas "308728"^^xsd:int ;
+    ns1:erdoelbrennstoffe "307734"^^xsd:int ;
+    ns1:jahr "2015-01-01"^^xsd:date ;
+    ns1:kehricht "78654"^^xsd:int ;
+    ns1:total "1291573"^^xsd:int ;
+    ns1:treibstoffe "593764"^^xsd:int .</code></pre>
+<p>Kanton Thurgau. <em>CO2-Gesamtemissionen nach Energieträgern (Ebene Kanton)</em> - <a href="https://opendata.swiss/de/perma/div-energie-6@kanton-thurgau" class="uri">https://opendata.swiss/de/perma/div-energie-6@kanton-thurgau</a> - <a href="https://data.tg.ch/ld/resources/div-energie-6/div-energie-6-record/1740b190a1beca6edcd04e0b143c380b885ee1de/" class="uri">https://data.tg.ch/ld/resources/div-energie-6/div-energie-6-record/1740b190a1beca6edcd04e0b143c380b885ee1de/</a></p>
+</section>
+<section id="javascript-object-notation-json" class="level4">
+<h4 class="anchored" data-anchor-id="javascript-object-notation-json">JavaScript Object Notation (JSON)</h4>
+<div class="sourceCode" id="cb6"><pre class="sourceCode json code-with-copy"><code class="sourceCode json"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="ot">[</span><span class="fu">{</span></span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>        <span class="dt">"author"</span><span class="fu">:</span> <span class="st">"Hemingway, Ernest"</span><span class="fu">,</span></span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>        <span class="dt">"available_at"</span><span class="fu">:</span> <span class="ot">[</span></span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>            <span class="fu">{</span></span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>                <span class="dt">"isil"</span><span class="fu">:</span> <span class="st">"AG0066"</span></span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a>            <span class="fu">}</span></span>
+<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a>        <span class="ot">]</span><span class="fu">,</span></span>
+<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a>        <span class="dt">"bid"</span><span class="fu">:</span> <span class="st">"AGR0005487"</span><span class="fu">,</span></span>
+<span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a>        <span class="dt">"cited"</span><span class="fu">:</span> <span class="ot">[</span></span>
+<span id="cb6-10"><a href="#cb6-10" aria-hidden="true" tabindex="-1"></a>            <span class="st">"VEA1112819"</span></span>
+<span id="cb6-11"><a href="#cb6-11" aria-hidden="true" tabindex="-1"></a>        <span class="ot">]</span><span class="fu">,</span></span>
+<span id="cb6-12"><a href="#cb6-12" aria-hidden="true" tabindex="-1"></a>        <span class="dt">"citing"</span><span class="fu">:</span> <span class="ot">[]</span><span class="fu">,</span></span>
+<span id="cb6-13"><a href="#cb6-13" aria-hidden="true" tabindex="-1"></a>        <span class="dt">"dewey_classifications"</span><span class="fu">:</span> <span class="kw">null</span><span class="fu">,</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>EPFL. Citations extracted from monographs about the history of Venice. <a href="https://opendata.swiss/de/perma/EPFL-LinkedBooksMonographs@openglam" class="uri">https://opendata.swiss/de/perma/EPFL-LinkedBooksMonographs@openglam</a></p>
+</section>
+<section id="javascript-object-notation-for-linked-data-json-ld" class="level4">
+<h4 class="anchored" data-anchor-id="javascript-object-notation-for-linked-data-json-ld">JavaScript Object Notation for Linked Data (JSON-LD)</h4>
+<div class="sourceCode" id="cb7"><pre class="sourceCode json code-with-copy"><code class="sourceCode json"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">{</span></span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"id"</span><span class="fu">:</span> <span class="st">"https://lux.collections.yale.edu/data/group/8b757ad2-f853-425e-a30d-19686aa779ee"</span><span class="fu">,</span></span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"type"</span><span class="fu">:</span> <span class="st">"Group"</span><span class="fu">,</span></span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"_label"</span><span class="fu">:</span> <span class="st">"American Academy of Arts and Sciences"</span><span class="fu">,</span></span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"@context"</span><span class="fu">:</span> <span class="st">"https://linked.art/ns/v1/linked-art.json"</span><span class="fu">,</span></span>
+<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"formed_by"</span><span class="fu">:</span> <span class="fu">{</span></span>
+<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a>    <span class="dt">"type"</span><span class="fu">:</span> <span class="st">"Formation"</span><span class="fu">,</span></span>
+<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a>    <span class="dt">"timespan"</span><span class="fu">:</span> <span class="fu">{</span></span>
+<span id="cb7-9"><a href="#cb7-9" aria-hidden="true" tabindex="-1"></a>      <span class="dt">"type"</span><span class="fu">:</span> <span class="st">"TimeSpan"</span><span class="fu">,</span></span>
+<span id="cb7-10"><a href="#cb7-10" aria-hidden="true" tabindex="-1"></a>      <span class="dt">"identified_by"</span><span class="fu">:</span> <span class="ot">[</span></span>
+<span id="cb7-11"><a href="#cb7-11" aria-hidden="true" tabindex="-1"></a>        <span class="fu">{</span></span>
+<span id="cb7-12"><a href="#cb7-12" aria-hidden="true" tabindex="-1"></a>          <span class="dt">"type"</span><span class="fu">:</span> <span class="st">"Name"</span><span class="fu">,</span></span>
+<span id="cb7-13"><a href="#cb7-13" aria-hidden="true" tabindex="-1"></a>          <span class="dt">"content"</span><span class="fu">:</span> <span class="st">"1780-05-04"</span><span class="fu">,</span></span>
+<span id="cb7-14"><a href="#cb7-14" aria-hidden="true" tabindex="-1"></a>          <span class="dt">"classified_as"</span><span class="fu">:</span> <span class="ot">[</span></span>
+<span id="cb7-15"><a href="#cb7-15" aria-hidden="true" tabindex="-1"></a>            <span class="fu">{</span></span>
+<span id="cb7-16"><a href="#cb7-16" aria-hidden="true" tabindex="-1"></a>              <span class="dt">"id"</span><span class="fu">:</span> <span class="st">"https://lux.collections.yale.edu/data/concept/5088ec29-065b-4c66-b49e-e61d3c8f3717"</span><span class="fu">,</span></span>
+<span id="cb7-17"><a href="#cb7-17" aria-hidden="true" tabindex="-1"></a>              <span class="dt">"type"</span><span class="fu">:</span> <span class="st">"Type"</span><span class="fu">,</span></span>
+<span id="cb7-18"><a href="#cb7-18" aria-hidden="true" tabindex="-1"></a>              <span class="dt">"_label"</span><span class="fu">:</span> <span class="st">"Display Title"</span><span class="fu">,</span></span>
+<span id="cb7-19"><a href="#cb7-19" aria-hidden="true" tabindex="-1"></a>              <span class="dt">"equivalent"</span><span class="fu">:</span> <span class="ot">[</span></span>
+<span id="cb7-20"><a href="#cb7-20" aria-hidden="true" tabindex="-1"></a>                <span class="fu">{</span></span>
+<span id="cb7-21"><a href="#cb7-21" aria-hidden="true" tabindex="-1"></a>                  <span class="dt">"id"</span><span class="fu">:</span> <span class="st">"http://vocab.getty.edu/aat/300404669"</span><span class="fu">,</span></span>
+<span id="cb7-22"><a href="#cb7-22" aria-hidden="true" tabindex="-1"></a>                  <span class="dt">"type"</span><span class="fu">:</span> <span class="st">"Type"</span><span class="fu">,</span></span>
+<span id="cb7-23"><a href="#cb7-23" aria-hidden="true" tabindex="-1"></a>                  <span class="dt">"_label"</span><span class="fu">:</span> <span class="st">"Display Title"</span></span>
+<span id="cb7-24"><a href="#cb7-24" aria-hidden="true" tabindex="-1"></a>                <span class="fu">}</span></span>
+<span id="cb7-25"><a href="#cb7-25" aria-hidden="true" tabindex="-1"></a>              <span class="ot">]</span></span>
+<span id="cb7-26"><a href="#cb7-26" aria-hidden="true" tabindex="-1"></a>            <span class="fu">}</span></span>
+<span id="cb7-27"><a href="#cb7-27" aria-hidden="true" tabindex="-1"></a>          <span class="ot">]</span></span>
+<span id="cb7-28"><a href="#cb7-28" aria-hidden="true" tabindex="-1"></a>        <span class="fu">}</span></span>
+<span id="cb7-29"><a href="#cb7-29" aria-hidden="true" tabindex="-1"></a>      <span class="ot">]</span><span class="fu">,</span></span>
+<span id="cb7-30"><a href="#cb7-30" aria-hidden="true" tabindex="-1"></a>      <span class="dt">"end_of_the_end"</span><span class="fu">:</span> <span class="st">"1780-05-04T23:59:59"</span><span class="fu">,</span></span>
+<span id="cb7-31"><a href="#cb7-31" aria-hidden="true" tabindex="-1"></a>      <span class="dt">"begin_of_the_begin"</span><span class="fu">:</span> <span class="st">"1780-05-04T00:00:00"</span><span class="fu">,</span></span>
+<span id="cb7-32"><a href="#cb7-32" aria-hidden="true" tabindex="-1"></a>      <span class="dt">"_seconds_since_epoch_begin_of_the_begin"</span><span class="fu">:</span> <span class="dv">-5985100800</span><span class="fu">,</span></span>
+<span id="cb7-33"><a href="#cb7-33" aria-hidden="true" tabindex="-1"></a>      <span class="dt">"_seconds_since_epoch_end_of_the_end"</span><span class="fu">:</span> <span class="dv">-5985014401</span></span>
+<span id="cb7-34"><a href="#cb7-34" aria-hidden="true" tabindex="-1"></a>    <span class="fu">},</span></span>
+<span id="cb7-35"><a href="#cb7-35" aria-hidden="true" tabindex="-1"></a>    <span class="dt">"carried_out_by"</span><span class="fu">:</span> <span class="ot">[</span></span>
+<span id="cb7-36"><a href="#cb7-36" aria-hidden="true" tabindex="-1"></a>      <span class="fu">{</span></span>
+<span id="cb7-37"><a href="#cb7-37" aria-hidden="true" tabindex="-1"></a>        <span class="dt">"id"</span><span class="fu">:</span> <span class="st">"https://lux.collections.yale.edu/data/person/977a4f7a-5d26-4965-8dd9-3fb0eaa4267e"</span><span class="fu">,</span></span>
+<span id="cb7-38"><a href="#cb7-38" aria-hidden="true" tabindex="-1"></a>        <span class="dt">"type"</span><span class="fu">:</span> <span class="st">"Person"</span><span class="fu">,</span></span>
+<span id="cb7-39"><a href="#cb7-39" aria-hidden="true" tabindex="-1"></a>        <span class="dt">"_label"</span><span class="fu">:</span> <span class="st">"John Adams"</span></span>
+<span id="cb7-40"><a href="#cb7-40" aria-hidden="true" tabindex="-1"></a>      <span class="fu">}</span><span class="ot">,</span></span>
+<span id="cb7-41"><a href="#cb7-41" aria-hidden="true" tabindex="-1"></a>      <span class="fu">{</span></span>
+<span id="cb7-42"><a href="#cb7-42" aria-hidden="true" tabindex="-1"></a>        <span class="dt">"id"</span><span class="fu">:</span> <span class="st">"https://lux.collections.yale.edu/data/person/73e7af34-fe41-4771-93df-e74b073d82fb"</span><span class="fu">,</span></span>
+<span id="cb7-43"><a href="#cb7-43" aria-hidden="true" tabindex="-1"></a>        <span class="dt">"type"</span><span class="fu">:</span> <span class="st">"Person"</span><span class="fu">,</span></span>
+<span id="cb7-44"><a href="#cb7-44" aria-hidden="true" tabindex="-1"></a>        <span class="dt">"_label"</span><span class="fu">:</span> <span class="st">"James Bowdoin"</span></span>
+<span id="cb7-45"><a href="#cb7-45" aria-hidden="true" tabindex="-1"></a>      <span class="fu">}</span></span>
+<span id="cb7-46"><a href="#cb7-46" aria-hidden="true" tabindex="-1"></a>    <span class="ot">]</span></span>
+<span id="cb7-47"><a href="#cb7-47" aria-hidden="true" tabindex="-1"></a>  <span class="fu">},</span></span>
+<span id="cb7-48"><a href="#cb7-48" aria-hidden="true" tabindex="-1"></a><span class="er">(...)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>LUX (Yale University). American Academy of Arts and Sciences. <a href="https://lux.collections.yale.edu/data/group/8b757ad2-f853-425e-a30d-19686aa779ee" class="uri">https://lux.collections.yale.edu/data/group/8b757ad2-f853-425e-a30d-19686aa779ee</a></p>
+</section>
+</section>
+<section id="binary-encoded-formats" class="level3">
+<h3 class="anchored" data-anchor-id="binary-encoded-formats">Binary-encoded Formats</h3>
+<p>Binary files are used to store non-text data, such as images, audio, or executable programs. These files do not contain human-readable text and are encoded in binary format.</p>
+<ul>
+<li>Image Formats: BMP, GIF, JPEG, <strong>JPEG2000</strong>, PNG, <strong>TIFF</strong></li>
+<li>Vector Graphics Formats: EPS, PSD, <strong>SVG</strong></li>
+<li>3D Formats: 3MF, GLB, GLTF, OBJ, STL</li>
+<li>Audio Formats: AAC, <strong>FLAC</strong>, MP3, OGG, <strong>WAV</strong></li>
+<li>Video Formats: AVI, <strong>FFV1/MKV</strong>, MOV, MP4, WEBM</li>
+<li>Documents: DOCX, ODT, PDF, <strong>PDF/A</strong></li>
+<li>Scientific Data Formats: CDF, DICOM, FITS</li>
+<li>Archive File Formats: 7-ZIP, GZIP, <strong>TAR</strong>, <strong>ZIP</strong></li>
+</ul>
+<p><img src="https://iiif.dasch.swiss/0801/4VjgCwiTn8p-CTaooIqSZBO.jpx/full/500,/0/default.jpg" class="img-fluid"></p>
+<p>1706-11-30_Verzaglia_Giuseppe-Bernoulli_Johann_I. <a href="https://iiif.dasch.swiss/0801/4VjgCwiTn8p-CTaooIqSZBO.jpx/full/max/0/default.jpg" class="uri">https://iiif.dasch.swiss/0801/4VjgCwiTn8p-CTaooIqSZBO.jpx/full/max/0/default.jpg</a></p>
+</section>
+<section id="metadata-standards-schemas" class="level3">
+<h3 class="anchored" data-anchor-id="metadata-standards-schemas">Metadata standards / schemas</h3>
+<ul>
+<li><strong>Metadata standards</strong> are sets of rules and guidelines that dictate how metadata should be formatted and used. They ensure consistency and interoperability across different systems and platforms.
+<ul>
+<li>CIDOC Conceptual Reference Model (CIDOC-CRM), Dublin Core, Machine-Readable Cataloging (MARC), Preservation Metadata: Implementation Strategies (PREMIS)</li>
+</ul></li>
+<li><strong>Metadata schemas</strong> are specific implementations of metadata standards. They outline the structure, elements, and attributes of metadata for a specific purpose.
+<ul>
+<li>Encoded Archival Description (EAD), Lightweight Information Describing Object (LIDO), Metadata Object Description Schema (MODS)</li>
+</ul>
+<em>While standards provide the “what” and “why” of metadata, schemas offer the “how” for specific data types or field needs.</em></li>
+</ul>
+</section>
+<section id="data-catalog-vocabulary-application-profiles" class="level3">
+<h3 class="anchored" data-anchor-id="data-catalog-vocabulary-application-profiles">Data Catalog Vocabulary (Application Profiles)</h3>
+<ul>
+<li>Resource Description Framework (RDF) vocabulary to facilitate interoperability between data catalogues published on the Web.</li>
+<li>Current version: <a href="https://www.w3.org/TR/vocab-dcat-3/">DCAT 3</a></li>
+</ul>
+<section id="data-catalog-vocabulary-application-profile-dcat-ap" class="level4">
+<h4 class="anchored" data-anchor-id="data-catalog-vocabulary-application-profile-dcat-ap">Data Catalog Vocabulary Application Profile (DCAT-AP)</h4>
+<p>Specifications based on DCAT for describing public sector datasets</p>
+<ul>
+<li>DCAT Application Profile for data portals in Europe: <a href="https://semiceu.github.io/DCAT-AP/releases/3.0.0/">DCAT-AP 3.0</a></li>
+<li>DCAT Application Profile for the United States of America: <a href="https://doi-do.github.io/dcat-us/">DCAT-US - Version 3</a></li>
+<li>DCAT Application Profile for Data Portals in Switzerland (DCAT-AP CH): <a href="https://ech.ch/fr/ech/ech-0200/2.0.0">eCH-0200</a></li>
+</ul>
+<p><em>DCAT-AP CH is a subprofile of DCAT-AP</em></p>
+</section>
+<section id="dcat" class="level4">
+<h4 class="anchored" data-anchor-id="dcat">DCAT</h4>
+<p>Seven classes/entities:</p>
+<ol type="1">
+<li><code>dcat:Catalog</code> represents a catalogue, which is a dataset in which each individual item is a metadata record describing some resource</li>
+<li><code>dcat:Resource</code> represents a dataset, a data service or any other resource that may be described by a metadata record in a catalogue.</li>
+<li><code>dcat:Dataset</code> represents a collection of data, published or curated by a single agent or identifiable community.</li>
+<li><code>dcat:Distribution</code> represents an accessible form of a dataset such as a downloadable file.</li>
+<li><code>dcat:DataService</code> represents a collection of operations accessible through an interface (API) that provide access to one or more datasets or data processing functions.</li>
+<li><code>dcat:DatasetSeries</code> is a dataset that represents a collection of datasets that are published separately, but share some characteristics that group them.</li>
+<li><code>dcat:CatalogRecord</code> represents a metadata record in the catalogue, primarily concerning the registration information, such as who added the record and when.</li>
+</ol>
+<p><img src="https://www.w3.org/TR/vocab-dcat-3/images/dcat-all-attributes.svg" class="img-fluid"></p>
+<p><a href="https://www.w3.org/TR/vocab-dcat-3/#dcat-scope" class="uri">https://www.w3.org/TR/vocab-dcat-3/#dcat-scope</a></p>
+<pre><code>ex:catalog
+  a dcat:Catalog ;
+  dcterms:title "Imaginary Catalog"@en ;
+  dcterms:title "Catálogo imaginario"@es ;
+  rdfs:label "Imaginary Catalog"@en ;
+  rdfs:label "Catálogo imaginario"@es ;
+  foaf:homepage &lt;http://dcat.example.org/catalog&gt; ;
+  dcterms:publisher ex:transparency-office ;
+  dcterms:language &lt;http://id.loc.gov/vocabulary/iso639-1/en&gt;  ;
+  dcat:dataset ex:dataset-001 , ex:dataset-002 , ex:dataset-003 ;
+  .</code></pre>
+<p><a href="https://www.w3.org/TR/vocab-dcat-3/#basic-example" class="uri">https://www.w3.org/TR/vocab-dcat-3/#basic-example</a></p>
+</section>
+<section id="dcat-ap-ch" class="level4">
+<h4 class="anchored" data-anchor-id="dcat-ap-ch">DCAT-AP CH</h4>
+<pre><code>@prefix dcat: &lt;http://www.w3.org/ns/dcat#&gt; .
+@prefix dct: &lt;http://purl.org/dc/terms/&gt; .
+@prefix foaf: &lt;http://xmlns.com/foaf/0.1/&gt; .
+@prefix xsd: &lt;http://www.w3.org/2001/XMLSchema#&gt; .
+
+# ---------- class Catalog --------------------------------------------------
+&lt;https://swisstopo/opendata/catalog&gt;
+  a dcat:Catalog ;
+
+  # mandatory properties
+  dct:description "Datenkatalog der Stadt Zurich"@de ;
+  dct:publisher &lt;https://publishers/swisstopo&gt; ;
+  dct:title "Open Data City of Zurich"@en ,
+            "Offene Daten der Stadt Zurich"@de .</code></pre>
+<p><a href="https://www.dcat-ap.ch/releases/2.0/dcat-ap-ch.html#Class:Catalog" class="uri">https://www.dcat-ap.ch/releases/2.0/dcat-ap-ch.html#Class:Catalog</a></p>
+</section>
+</section>
+<section id="documentation" class="level3">
+<h3 class="anchored" data-anchor-id="documentation">Documentation</h3>
+<p>Comprehensive and understandable information about the data, including its source, structure, context, and how to use it effectively.</p>
+<section id="types-of-documentation" class="level4">
+<h4 class="anchored" data-anchor-id="types-of-documentation">Types of Documentation</h4>
+<p>Clear and comprehensive documentation plays a vital role in maximizing the value of data and systems. It enhances usability by making data more accessible and understandable to a wide range of users, including non-experts and developers. Well-documented data fosters trust by providing transparency about sources, methodologies, and underlying code, while also supporting data integration and application development by enabling seamless combination of data from diverse sources. Below are key types of documentation that contribute to these goals:</p>
+<ul>
+<li>Data field descriptions/data models</li>
+<li>User guides</li>
+<li>Metadata</li>
+<li>Developer documentation</li>
+<li>Source code documentation</li>
+</ul>
+</section>
+</section>
+<section id="protocols" class="level3">
+<h3 class="anchored" data-anchor-id="protocols">Protocols</h3>
+<p>A robust set of rules and standards governs the exchange and accessibility of open data over the internet. These protocols and mechanisms enable accessibility by facilitating standardised and straightforward access to data, which is essential for promoting innovation and transparency. Additionally, they support interoperability, ensuring that data from diverse sources can be efficiently integrated and used together. Below are key technologies and protocols that achieve these goals:</p>
+<ul>
+<li><strong>Application Programming Interface (API)</strong>: mechanism that enable two software components to communicate with each other
+<ul>
+<li><strong>Representational State Transfer (REST)</strong>: a style of API that uses HTTP requests for communication. REST is stateless, <em>i.e.&nbsp;each request from a client to the server is treated as new. There is no stored memory of previous interactions. This means the server does not store any state about the client session on the server side</em>.</li>
+<li><strong>Simple Object Access Protocol (SOAP)</strong>: a protocol used for exchanging structured information in web services, offering high security and transactional reliability. SOAP can support both stateless and stateful operations.</li>
+</ul></li>
+<li><strong>File Transfer Protocol (FTP)</strong>: used for the transfer of data files, particularly large datasets, from one host to another.</li>
+<li><strong>Open Archives Initiative Protocol for Metadata Harvesting (OAI-PMH)</strong>: a protocol for harvesting metadata descriptions of records in an archive, particularly used in digital libraries.</li>
+<li><strong>Really Simple Syndication or Rich Site Summary (RSS) / Atom Feeds</strong>: used for regularly updating or publishing data that changes frequently. Feeds enable publishers to syndicate data automatically.</li>
+<li><strong>SPARQL Protocol and RDF Query Language (SPARQL)</strong>: used for querying and manipulating RDF</li>
+</ul>
+
+
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const disableStylesheet = (stylesheets) => {
+    for (let i=0; i < stylesheets.length; i++) {
+      const stylesheet = stylesheets[i];
+      stylesheet.rel = 'prefetch';
+    }
+  }
+  const enableStylesheet = (stylesheets) => {
+    for (let i=0; i < stylesheets.length; i++) {
+      const stylesheet = stylesheets[i];
+      stylesheet.rel = 'stylesheet';
+    }
+  }
+  const manageTransitions = (selector, allowTransitions) => {
+    const els = window.document.querySelectorAll(selector);
+    for (let i=0; i < els.length; i++) {
+      const el = els[i];
+      if (allowTransitions) {
+        el.classList.remove('notransition');
+      } else {
+        el.classList.add('notransition');
+      }
+    }
+  }
+  const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
+    const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
+    const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
+    let newTheme = '';
+    if(darkModeDefault) {
+      newTheme = isAlternate ? baseTheme : alternateTheme;
+    } else {
+      newTheme = isAlternate ? alternateTheme : baseTheme;
+    }
+    const changeGiscusTheme = () => {
+      // From: https://github.com/giscus/giscus/issues/336
+      const sendMessage = (message) => {
+        const iframe = document.querySelector('iframe.giscus-frame');
+        if (!iframe) return;
+        iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+      }
+      sendMessage({
+        setConfig: {
+          theme: newTheme
+        }
+      });
+    }
+    const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
+    if (isGiscussLoaded) {
+      changeGiscusTheme();
+    }
+  }
+  const toggleColorMode = (alternate) => {
+    // Switch the stylesheets
+    const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+    manageTransitions('#quarto-margin-sidebar .nav-link', false);
+    if (alternate) {
+      enableStylesheet(alternateStylesheets);
+      for (const sheetNode of alternateStylesheets) {
+        if (sheetNode.id === "quarto-bootstrap") {
+          toggleBodyColorMode(sheetNode);
+        }
+      }
+    } else {
+      disableStylesheet(alternateStylesheets);
+      toggleBodyColorPrimary();
+    }
+    manageTransitions('#quarto-margin-sidebar .nav-link', true);
+    // Switch the toggles
+    const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+    for (let i=0; i < toggles.length; i++) {
+      const toggle = toggles[i];
+      if (toggle) {
+        if (alternate) {
+          toggle.classList.add("alternate");     
+        } else {
+          toggle.classList.remove("alternate");
+        }
+      }
+    }
+    // Hack to workaround the fact that safari doesn't
+    // properly recolor the scrollbar when toggling (#1455)
+    if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+      manageTransitions("body", false);
+      window.scrollTo(0, 1);
+      setTimeout(() => {
+        window.scrollTo(0, 0);
+        manageTransitions("body", true);
+      }, 40);  
+    }
+  }
+  const isFileUrl = () => { 
+    return window.location.protocol === 'file:';
+  }
+  const hasAlternateSentinel = () => {  
+    let styleSentinel = getColorSchemeSentinel();
+    if (styleSentinel !== null) {
+      return styleSentinel === "alternate";
+    } else {
+      return false;
+    }
+  }
+  const setStyleSentinel = (alternate) => {
+    const value = alternate ? "alternate" : "default";
+    if (!isFileUrl()) {
+      window.localStorage.setItem("quarto-color-scheme", value);
+    } else {
+      localAlternateSentinel = value;
+    }
+  }
+  const getColorSchemeSentinel = () => {
+    if (!isFileUrl()) {
+      const storageValue = window.localStorage.getItem("quarto-color-scheme");
+      return storageValue != null ? storageValue : localAlternateSentinel;
+    } else {
+      return localAlternateSentinel;
+    }
+  }
+  const darkModeDefault = false;
+  let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
+  // Dark / light mode switch
+  window.quartoToggleColorScheme = () => {
+    // Read the current dark / light value 
+    let toAlternate = !hasAlternateSentinel();
+    toggleColorMode(toAlternate);
+    setStyleSentinel(toAlternate);
+    toggleGiscusIfUsed(toAlternate, darkModeDefault);
+  };
+  // Ensure there is a toggle, if there isn't float one in the top right
+  if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+    const a = window.document.createElement('a');
+    a.classList.add('top-right');
+    a.classList.add('quarto-color-scheme-toggle');
+    a.href = "";
+    a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+    const i = window.document.createElement("i");
+    i.classList.add('bi');
+    a.appendChild(i);
+    window.document.body.appendChild(a);
+  }
+  // Switch to dark mode if need be
+  if (hasAlternateSentinel()) {
+    toggleColorMode(true);
+  } else {
+    toggleColorMode(false);
+  }
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const onCopySuccess = function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
+  });
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    // For code content inside modals, clipBoardJS needs to be initialized with a container option
+    // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp("https:\/\/julsraemy\.ch\/intro-open-data");
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+<p>© 2025 Julien A. Raemy | Introduction to Open Data | Content licensed under CC BY 4.0</p>
+</div>   
+    <div class="nav-footer-center">
+      &nbsp;
+    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/julsraemy/intro-open-data/edit/main/sections/characteristics.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/julsraemy/intro-open-data/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
+    <div class="nav-footer-right">
+      <ul class="footer-items list-unstyled">
+    <li class="nav-item compact">
+    <a class="nav-link" href="https://creativecommons.org/licenses/by/4.0/">
+      <i class="bi bi-creative-commons" role="img">
+</i> 
+    </a>
+  </li>  
+    <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/julsraemy">
+      <i class="bi bi-github" role="img">
+</i> 
+    </a>
+  </li>  
+    <li class="nav-item compact">
+    <a class="nav-link" href="https://hcommons.social/@julsraemy">
+      <i class="bi bi-mastodon" role="img">
+</i> 
+    </a>
+  </li>  
+    <li class="nav-item compact">
+    <a class="nav-link" href="https://orcid.org/0000-0002-4711-5759">
+      <i class="bi bi-universal-access" role="img">
+</i> 
+    </a>
+  </li>  
+</ul>
+    </div>
+  </div>
+</footer>
+<script src="https://julsraemy.ch/intro-open-data/js/external-links.js"></script>
+
+
+
+
+</body></html>

@@ -47,3 +47,5 @@ db.sqlite3-journal
 
 # Backup files
 *.bak
+
+/.quarto/
