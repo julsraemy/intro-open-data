@@ -4,6 +4,8 @@ project:
   resources:
     - js/external-links.js 
 
+bibliography: references/open-data.bib    
+
 website:
   title: "Introduction to Open Data"
   site-url: "https://julsraemy.ch/intro-open-data"
@@ -69,6 +71,9 @@ format:
     code-fold: true
     highlight-style: github
     toc: true
+    csl: https://www.zotero.org/styles/apa
+    bibliography-location: document
     include-after-body:
       - text: |
           <script src="https://julsraemy.ch/intro-open-data/js/external-links.js"></script>
+  

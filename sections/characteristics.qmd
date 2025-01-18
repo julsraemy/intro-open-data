@@ -22,25 +22,25 @@ The Open Definition according to the [Open Knowledge Network](https://opendefini
 
 Derived from the Open Knowledge Foundation's principles and scholarly interpretations.
 
-&rarr; **Key takeaway**: Knowledge funded by public mandates must benefit the public without restrictions. [Scholger 2023]
+&rarr; **Key takeaway**: Knowledge funded by public mandates must benefit the public without restrictions. [@scholgerLegalAspectsArts2023]
 
 ### Data
 
 > Data at its most basic level as the absence of uniformity, whether in the real world or in some symbolic system. Only once such data have some recognisable structure and are given some meaning can they be considered information.
 
-[Floridi 2010]
+[@floridiInformationVeryShort2010]
 
 ![](https://www.researchgate.net/profile/Luciano-Floridi/publication/257666827/figure/fig2/AS:392780774952979@1470657642732/Floridis-original-information-map-redrawn-based-on-Floridi-2011.png)
 
-[Chen & Floridi 2013]
+[@chenAnalysisInformationVisualisation2013]
 
 ### Metadata
 
 > Data whose purpose is to describe and give information about other data.
 
-[Oxford English Dictionary 2023b]
+[@oxfordenglishdictionaryMetadata2023]
 
-> (...) there is no fixed boundary between “data” and “metadata”, and that information viewed as data in one discipline may be metadata in another.  [Alter et al. 2023]
+> (...) there is no fixed boundary between “data” and “metadata”, and that information viewed as data in one discipline may be metadata in another.  [@alterViewPointsData2023]
 
 ### Open Data
 
@@ -70,9 +70,7 @@ Source: <https://data.gov/blog/open-data-history>
 - **December 2007**: The concept of open public data was discussed and defined in Sebastopol, CA, USA at a meeting of Internet activists. They identified 8 principles.
 - **February 2009**: Tim Berners-Lee presents [The Next Web](https://www.ted.com/talks/tim_berners_lee_the_next_web) at TED2009. He famously asked for "raw data now".
 
-Sources:
-- <https://devopedia.org/open-data>
-- <https://www.opendatasoft.com/en/what-is-open-data-practical-guide/>
+Based on <https://devopedia.org/open-data> and <https://www.opendatasoft.com/en/what-is-open-data-practical-guide/>
 
 ### The Sebastopol Meeting
 
@@ -130,7 +128,7 @@ Together, they created principles to define and evaluate open public data.
 
 > Research data are the evidence that underpins the answer to the research question, and can be used to validate findings regardless of its form (e.g. print, digital, or physical). These might be quantitative information or qualitative statements collected by researchers in the course of their work by experimentation, observation, modeling, interview, or other methods, or information derived from existing evidence.
 
-[Concordat Working Group 2016]
+[@concordatworkinggroupConcordatOpenResearch2016]
 
 ### For Funding Agencies (and Institutions)
 
@@ -159,7 +157,7 @@ The Swiss National Science Foundation (SNSF) expects all its funded researchers:
 
 > By facilitating access to and reuse of research data, ORD promotes better, more effective, and more impactful research for the benefit of society as a whole. Through the principles of open access and reusability of research data, ORD practices support transparent and reproducible research findings. Moreover, ORD fosters collaboration by promoting exchange among researchers across disciplines, legal systems and national borders, thus enabling creativity and innovation to thrive.  
 
-[Open Science Delegation 2021a]
+[@opensciencedelegationSwissNationalOpen2021]
 
 #### Action Areas
 
@@ -168,7 +166,7 @@ The Swiss National Science Foundation (SNSF) expects all its funded researchers:
 - Equipping researchers for ORD skills development and exchange of best practices
 - Building up systemic und supportive conditions for institutions and research communities 
 
-[Open Science Delegation 2021b]
+[@opensciencedelegationSwissNationalStrategy2021]
 
 ### Research Data Management (RDM)
 
@@ -206,7 +204,7 @@ A DMP is essentially a blueprint for RDM. It outlines the policies and standards
 
 > The work of government involves collecting huge amounts of data, much of which is not confidential (economic data, demographic data, spending data, crime data, transport data, etc). The value of much of this data can be greatly enhanced by releasing it as open data, freeing it for re-use by business, research, civil society, data journalists, etc.
 
-Open Data Handbook [Open Knowledge 2016]: <https://opendatahandbook.org/glossary/en/terms/government-data/>
+Open Data Handbook [@openknowledgeOpenDataHandbook2016]: <https://opendatahandbook.org/glossary/en/terms/government-data/>
 
 ### OGD in Switzerland
 
@@ -218,7 +216,7 @@ Open Data Handbook [Open Knowledge 2016]: <https://opendatahandbook.org/glossary
 
 > Les données sont mises en ligne gratuitement, en temps utile, sous une forme lisible par machine et dans un format ouvert. Elles peuvent être librement réutilisées, sous réserve d’obligations légales spéciales de mentionner la source des données.
 
-[Loi fédérale sur l’utilisation des moyens électroniques pour l’exécution des tâches des autorités (LMETA) 2023]
+[@confederationsuisseLoiFederaleUtilisation2023]
 
 #### Related efforts
 
@@ -238,7 +236,7 @@ Open Data Handbook [Open Knowledge 2016]: <https://opendatahandbook.org/glossary
 - Impact measurement of policies
 - New knowledge from combined data sources and patterns in large data volumes
 
-Open Data Handbook [Open Knowledge 2016] <https://opendatahandbook.org/guide/en/why-open-data/>
+Open Data Handbook [@openknowledgeOpenDataHandbook2016] <https://opendatahandbook.org/guide/en/why-open-data/>
 
 ### Open Government Data Principles
 
@@ -258,7 +256,7 @@ Open Data Handbook [Open Knowledge 2016] <https://opendatahandbook.org/guide/en/
 1. **Legally open**: available under an open (data) licence that permits anyone freely to access, reuse and redistribute
 2. **Technically open**: data is available for no more than the cost of reproduction and in machine-readable and bulk form.
 
-Open Data Handbook [Open Knowledge 2016]: <https://opendatahandbook.org/glossary/en/terms/open-data/>
+Open Data Handbook [@openknowledgeOpenDataHandbook2016]: <https://opendatahandbook.org/glossary/en/terms/open-data/>
 
 ## Licences
 
@@ -301,7 +299,7 @@ For further information about licences &rarr; Competence Center in Digital Law: 
 
 ![](https://upload.wikimedia.org/wikipedia/commons/e/e1/Creative_commons_license_spectrum.svg)
 
-Creative commons license spectrum [MJL 2020]
+Creative commons license spectrum [@mjlCreativeCommonsLicense2020]
 
 ### Rights Statements
 
@@ -320,7 +318,7 @@ Creative commons license spectrum [MJL 2020]
 
 <https://opendatacommons.org/licenses/odbl/>
 
-ODbL is somewhat equivalent to CC BY-SA [Santos 2020]. 
+ODbL is somewhat equivalent to CC BY-SA [@santosDonneesRechercheCadre2020]. 
 
 ### Public Domain Dedication and License (PDDL)
 
@@ -372,7 +370,7 @@ RAILs can be used to license data (D), Apps (A), models (M), and source code (S)
 2. [![](https://julsraemy.ch/prezi/assets/cc-by.svg)](https://creativecommons.org/licenses/by/4.0/) CC BY 4.0
 3. [![](https://julsraemy.ch/prezi/assets/cc-by-sa.svg)](https://creativecommons.org/licenses/by-sa/4.0/) CC BY-SA 4.0
 
-[Santos 2020]
+[@santosDonneesRechercheCadre2020]
 
 ![](https://julsraemy.ch/prezi/assets/santos-arbre.svg)
 
@@ -399,7 +397,7 @@ And of course the underlying infrastructure...
 
 > People commonly envision infrastructure as a system of substrates – railroad, lines, pipes and plumbing, electrical power plants, and wires. **It is by definition invisible, part of the background for other kinds of work**. It is ready-to-hand. This image holds up well enough for many purposes – turn on the faucet for a drink of water and you use a vast infrastructure of plumbing and water regulation without usually thinking much about it.
 
-[Star 1999]
+[@starEthnographyInfrastructure1999]
 
 #### Dimensions
 
@@ -413,7 +411,7 @@ And of course the underlying infrastructure...
 - **Becomes visible upon breakdown**: The normally invisible quality of working infrastructure becomes visible when it breaks: the server is down, the bridge washes out, there is a power blackout.
 - **Is fixed in modular increments, not all at once or globally**: Because infrastructure is big, layered, and complex, and because it means different things locally, it is never changed from above. Changes take time and negotiations, and adjustment with other aspects of the systems are involved.
 
-[Star 1999]
+[@starEthnographyInfrastructure1999]
 
 ### Text-based formats
 
@@ -649,7 +647,7 @@ _DCAT-AP CH is a subprofile of DCAT-AP_
 
 #### DCAT
 
-Seven classes/entities:
+Seven main classes/entities:
 
 1. `dcat:Catalog` represents a catalogue, which is a dataset in which each individual item is a metadata record describing some resource
 2. `dcat:Resource` represents a dataset, a data service or any other resource that may be described by a metadata record in a catalogue.
@@ -726,5 +724,7 @@ A robust set of rules and standards governs the exchange and accessibility of op
 - **Really Simple Syndication or Rich Site Summary (RSS) / Atom Feeds**: used for regularly updating or publishing data that changes frequently. Feeds enable publishers to syndicate data automatically.
 - **SPARQL Protocol and RDF Query Language (SPARQL)**: used for querying and manipulating RDF
 
+
+## References
 
 

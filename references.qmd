@@ -2,7 +2,15 @@
 title: "7C2-CT-4A Introduction to Open Data"
 subtitle: "HEG-GE Bachelor Information Science | Spring Semester 2024-2025"
 author: "Julien A. Raemy"
-date: "Last updated: 2025-01-17"
+date: "Last updated: 2025-01-18"
+bibliography: references/open-data.bib
+nocite: |
+  @*
 ---
 
 # References
+
+This is a comprehensive list of references used in the course materials and additional recommended reading.
+
+::: {#refs}
+:::

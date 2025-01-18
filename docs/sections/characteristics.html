@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Julien A. Raemy">
-<meta name="dcterms.date" content="2025-01-17">
+<meta name="dcterms.date" content="2025-01-18">
 
 <title>Characteristics of Open Data – Introduction to Open Data</title>
 <style>
@@ -56,7 +56,27 @@ div.sourceCode
 @media screen {
 pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="../site_libs/quarto-nav/quarto-nav.js"></script>
@@ -307,6 +327,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#documentation" id="toc-documentation" class="nav-link" data-scroll-target="#documentation">Documentation</a></li>
   <li><a href="#protocols" id="toc-protocols" class="nav-link" data-scroll-target="#protocols">Protocols</a></li>
   </ul></li>
+  <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references">References</a></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/julsraemy/intro-open-data/edit/main/sections/characteristics.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/julsraemy/intro-open-data/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
@@ -332,7 +353,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">January 17, 2025</p>
+      <p class="date">January 18, 2025</p>
     </div>
   </div>
   
@@ -364,25 +385,25 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </ul></li>
 </ol>
 <p>Derived from the Open Knowledge Foundation’s principles and scholarly interpretations.</p>
-<p>→ <strong>Key takeaway</strong>: Knowledge funded by public mandates must benefit the public without restrictions. [Scholger 2023]</p>
+<p>→ <strong>Key takeaway</strong>: Knowledge funded by public mandates must benefit the public without restrictions. <span class="citation" data-cites="scholgerLegalAspectsArts2023">(<a href="#ref-scholgerLegalAspectsArts2023" role="doc-biblioref">Scholger, 2023</a>)</span></p>
 </section>
 <section id="data" class="level3">
 <h3 class="anchored" data-anchor-id="data">Data</h3>
 <blockquote class="blockquote">
 <p>Data at its most basic level as the absence of uniformity, whether in the real world or in some symbolic system. Only once such data have some recognisable structure and are given some meaning can they be considered information.</p>
 </blockquote>
-<p>[Floridi 2010]</p>
+<p><span class="citation" data-cites="floridiInformationVeryShort2010">(<a href="#ref-floridiInformationVeryShort2010" role="doc-biblioref">Floridi, 2010</a>)</span></p>
 <p><img src="https://www.researchgate.net/profile/Luciano-Floridi/publication/257666827/figure/fig2/AS:392780774952979@1470657642732/Floridis-original-information-map-redrawn-based-on-Floridi-2011.png" class="img-fluid"></p>
-<p>[Chen &amp; Floridi 2013]</p>
+<p><span class="citation" data-cites="chenAnalysisInformationVisualisation2013">(<a href="#ref-chenAnalysisInformationVisualisation2013" role="doc-biblioref">Chen &amp; Floridi, 2013</a>)</span></p>
 </section>
 <section id="metadata" class="level3">
 <h3 class="anchored" data-anchor-id="metadata">Metadata</h3>
 <blockquote class="blockquote">
 <p>Data whose purpose is to describe and give information about other data.</p>
 </blockquote>
-<p>[Oxford English Dictionary 2023b]</p>
+<p><span class="citation" data-cites="oxfordenglishdictionaryMetadata2023">(<a href="#ref-oxfordenglishdictionaryMetadata2023" role="doc-biblioref">Oxford English Dictionary, 2023</a>)</span></p>
 <blockquote class="blockquote">
-<p>(…) there is no fixed boundary between “data” and “metadata”, and that information viewed as data in one discipline may be metadata in another. [Alter et al.&nbsp;2023]</p>
+<p>(…) there is no fixed boundary between “data” and “metadata”, and that information viewed as data in one discipline may be metadata in another. <span class="citation" data-cites="alterViewPointsData2023">(<a href="#ref-alterViewPointsData2023" role="doc-biblioref">Alter et al., 2023</a>)</span></p>
 </blockquote>
 </section>
 <section id="open-data" class="level3">
@@ -416,7 +437,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li><strong>December 2007</strong>: The concept of open public data was discussed and defined in Sebastopol, CA, USA at a meeting of Internet activists. They identified 8 principles.</li>
 <li><strong>February 2009</strong>: Tim Berners-Lee presents <a href="https://www.ted.com/talks/tim_berners_lee_the_next_web">The Next Web</a> at TED2009. He famously asked for “raw data now”.</li>
 </ul>
-<p>Sources: - <a href="https://devopedia.org/open-data" class="uri">https://devopedia.org/open-data</a> - <a href="https://www.opendatasoft.com/en/what-is-open-data-practical-guide/" class="uri">https://www.opendatasoft.com/en/what-is-open-data-practical-guide/</a></p>
+<p>Based on <a href="https://devopedia.org/open-data" class="uri">https://devopedia.org/open-data</a> and <a href="https://www.opendatasoft.com/en/what-is-open-data-practical-guide/" class="uri">https://www.opendatasoft.com/en/what-is-open-data-practical-guide/</a></p>
 </section>
 <section id="the-sebastopol-meeting" class="level3">
 <h3 class="anchored" data-anchor-id="the-sebastopol-meeting">The Sebastopol Meeting</h3>
@@ -484,7 +505,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <blockquote class="blockquote">
 <p>Research data are the evidence that underpins the answer to the research question, and can be used to validate findings regardless of its form (e.g.&nbsp;print, digital, or physical). These might be quantitative information or qualitative statements collected by researchers in the course of their work by experimentation, observation, modeling, interview, or other methods, or information derived from existing evidence.</p>
 </blockquote>
-<p>[Concordat Working Group 2016]</p>
+<p><span class="citation" data-cites="concordatworkinggroupConcordatOpenResearch2016">(<a href="#ref-concordatworkinggroupConcordatOpenResearch2016" role="doc-biblioref">Concordat Working Group, 2016</a>)</span></p>
 </section>
 <section id="for-funding-agencies-and-institutions" class="level3">
 <h3 class="anchored" data-anchor-id="for-funding-agencies-and-institutions">For Funding Agencies (and Institutions)</h3>
@@ -518,7 +539,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <blockquote class="blockquote">
 <p>By facilitating access to and reuse of research data, ORD promotes better, more effective, and more impactful research for the benefit of society as a whole. Through the principles of open access and reusability of research data, ORD practices support transparent and reproducible research findings. Moreover, ORD fosters collaboration by promoting exchange among researchers across disciplines, legal systems and national borders, thus enabling creativity and innovation to thrive.</p>
 </blockquote>
-<p>[Open Science Delegation 2021a]</p>
+<p><span class="citation" data-cites="opensciencedelegationSwissNationalOpen2021">(<a href="#ref-opensciencedelegationSwissNationalOpen2021" role="doc-biblioref">Open Science Delegation, 2021a</a>)</span></p>
 </section>
 <section id="action-areas" class="level4">
 <h4 class="anchored" data-anchor-id="action-areas">Action Areas</h4>
@@ -528,7 +549,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li>Equipping researchers for ORD skills development and exchange of best practices</li>
 <li>Building up systemic und supportive conditions for institutions and research communities</li>
 </ul>
-<p>[Open Science Delegation 2021b]</p>
+<p><span class="citation" data-cites="opensciencedelegationSwissNationalStrategy2021">(<a href="#ref-opensciencedelegationSwissNationalStrategy2021" role="doc-biblioref">Open Science Delegation, 2021b</a>)</span></p>
 </section>
 </section>
 <section id="research-data-management-rdm" class="level3">
@@ -571,7 +592,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <blockquote class="blockquote">
 <p>The work of government involves collecting huge amounts of data, much of which is not confidential (economic data, demographic data, spending data, crime data, transport data, etc). The value of much of this data can be greatly enhanced by releasing it as open data, freeing it for re-use by business, research, civil society, data journalists, etc.</p>
 </blockquote>
-<p>Open Data Handbook [Open Knowledge 2016]: <a href="https://opendatahandbook.org/glossary/en/terms/government-data/" class="uri">https://opendatahandbook.org/glossary/en/terms/government-data/</a></p>
+<p>Open Data Handbook <span class="citation" data-cites="openknowledgeOpenDataHandbook2016">(<a href="#ref-openknowledgeOpenDataHandbook2016" role="doc-biblioref">Open Knowledge, 2016</a>)</span>: <a href="https://opendatahandbook.org/glossary/en/terms/government-data/" class="uri">https://opendatahandbook.org/glossary/en/terms/government-data/</a></p>
 </section>
 </section>
 <section id="ogd-in-switzerland" class="level3">
@@ -583,7 +604,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <blockquote class="blockquote">
 <p>Les données sont mises en ligne gratuitement, en temps utile, sous une forme lisible par machine et dans un format ouvert. Elles peuvent être librement réutilisées, sous réserve d’obligations légales spéciales de mentionner la source des données.</p>
 </blockquote>
-<p>[Loi fédérale sur l’utilisation des moyens électroniques pour l’exécution des tâches des autorités (LMETA) 2023]</p>
+<p><span class="citation" data-cites="confederationsuisseLoiFederaleUtilisation2023">(<a href="#ref-confederationsuisseLoiFederaleUtilisation2023" role="doc-biblioref">Loi fédérale sur l’utilisation des moyens électroniques pour l’exécution des tâches des autorités (LMETA), 2023</a>)</span></p>
 </section>
 <section id="related-efforts" class="level4">
 <h4 class="anchored" data-anchor-id="related-efforts">Related efforts</h4>
@@ -607,7 +628,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li>Impact measurement of policies</li>
 <li>New knowledge from combined data sources and patterns in large data volumes</li>
 </ul>
-<p>Open Data Handbook [Open Knowledge 2016] <a href="https://opendatahandbook.org/guide/en/why-open-data/" class="uri">https://opendatahandbook.org/guide/en/why-open-data/</a></p>
+<p>Open Data Handbook <span class="citation" data-cites="openknowledgeOpenDataHandbook2016">(<a href="#ref-openknowledgeOpenDataHandbook2016" role="doc-biblioref">Open Knowledge, 2016</a>)</span> <a href="https://opendatahandbook.org/guide/en/why-open-data/" class="uri">https://opendatahandbook.org/guide/en/why-open-data/</a></p>
 <section id="open-government-data-principles" class="level3">
 <h3 class="anchored" data-anchor-id="open-government-data-principles">Open Government Data Principles</h3>
 <ol type="1">
@@ -629,7 +650,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li><strong>Legally open</strong>: available under an open (data) licence that permits anyone freely to access, reuse and redistribute</li>
 <li><strong>Technically open</strong>: data is available for no more than the cost of reproduction and in machine-readable and bulk form.</li>
 </ol>
-<p>Open Data Handbook [Open Knowledge 2016]: <a href="https://opendatahandbook.org/glossary/en/terms/open-data/" class="uri">https://opendatahandbook.org/glossary/en/terms/open-data/</a></p>
+<p>Open Data Handbook <span class="citation" data-cites="openknowledgeOpenDataHandbook2016">(<a href="#ref-openknowledgeOpenDataHandbook2016" role="doc-biblioref">Open Knowledge, 2016</a>)</span>: <a href="https://opendatahandbook.org/glossary/en/terms/open-data/" class="uri">https://opendatahandbook.org/glossary/en/terms/open-data/</a></p>
 </section>
 <section id="licences" class="level2">
 <h2 class="anchored" data-anchor-id="licences">Licences</h2>
@@ -684,7 +705,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="spectrum" class="level4">
 <h4 class="anchored" data-anchor-id="spectrum">Spectrum</h4>
 <p><img src="https://upload.wikimedia.org/wikipedia/commons/e/e1/Creative_commons_license_spectrum.svg" class="img-fluid"></p>
-<p>Creative commons license spectrum [MJL 2020]</p>
+<p>Creative commons license spectrum <span class="citation" data-cites="mjlCreativeCommonsLicense2020">(<a href="#ref-mjlCreativeCommonsLicense2020" role="doc-biblioref">MJL, 2020</a>)</span></p>
 </section>
 </section>
 <section id="rights-statements" class="level3">
@@ -707,7 +728,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li>Attribution and Share-Alike for Data/Databases</li>
 </ul>
 <p><a href="https://opendatacommons.org/licenses/odbl/" class="uri">https://opendatacommons.org/licenses/odbl/</a></p>
-<p>ODbL is somewhat equivalent to CC BY-SA [Santos 2020].</p>
+<p>ODbL is somewhat equivalent to CC BY-SA <span class="citation" data-cites="santosDonneesRechercheCadre2020">(<a href="#ref-santosDonneesRechercheCadre2020" role="doc-biblioref">Santos, 2020</a>)</span>.</p>
 </section>
 <section id="public-domain-dedication-and-license-pddl" class="level3">
 <h3 class="anchored" data-anchor-id="public-domain-dedication-and-license-pddl">Public Domain Dedication and License (PDDL)</h3>
@@ -762,7 +783,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li><a href="https://creativecommons.org/licenses/by/4.0/"><img src="https://julsraemy.ch/prezi/assets/cc-by.svg" class="img-fluid"></a> CC BY 4.0</li>
 <li><a href="https://creativecommons.org/licenses/by-sa/4.0/"><img src="https://julsraemy.ch/prezi/assets/cc-by-sa.svg" class="img-fluid"></a> CC BY-SA 4.0</li>
 </ol>
-<p>[Santos 2020]</p>
+<p><span class="citation" data-cites="santosDonneesRechercheCadre2020">(<a href="#ref-santosDonneesRechercheCadre2020" role="doc-biblioref">Santos, 2020</a>)</span></p>
 <p><img src="https://julsraemy.ch/prezi/assets/santos-arbre.svg" class="img-fluid"></p>
 </section>
 </section>
@@ -793,7 +814,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <blockquote class="blockquote">
 <p>People commonly envision infrastructure as a system of substrates – railroad, lines, pipes and plumbing, electrical power plants, and wires. <strong>It is by definition invisible, part of the background for other kinds of work</strong>. It is ready-to-hand. This image holds up well enough for many purposes – turn on the faucet for a drink of water and you use a vast infrastructure of plumbing and water regulation without usually thinking much about it.</p>
 </blockquote>
-<p>[Star 1999]</p>
+<p><span class="citation" data-cites="starEthnographyInfrastructure1999">(<a href="#ref-starEthnographyInfrastructure1999" role="doc-biblioref">Star, 1999</a>)</span></p>
 </section>
 <section id="dimensions" class="level4">
 <h4 class="anchored" data-anchor-id="dimensions">Dimensions</h4>
@@ -808,7 +829,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li><strong>Becomes visible upon breakdown</strong>: The normally invisible quality of working infrastructure becomes visible when it breaks: the server is down, the bridge washes out, there is a power blackout.</li>
 <li><strong>Is fixed in modular increments, not all at once or globally</strong>: Because infrastructure is big, layered, and complex, and because it means different things locally, it is never changed from above. Changes take time and negotiations, and adjustment with other aspects of the systems are involved.</li>
 </ul>
-<p>[Star 1999]</p>
+<p><span class="citation" data-cites="starEthnographyInfrastructure1999">(<a href="#ref-starEthnographyInfrastructure1999" role="doc-biblioref">Star, 1999</a>)</span></p>
 </section>
 </section>
 <section id="text-based-formats" class="level3">
@@ -1025,7 +1046,7 @@ dk  Intensity   dk  Intensity   dk  Intensity
 </section>
 <section id="dcat" class="level4">
 <h4 class="anchored" data-anchor-id="dcat">DCAT</h4>
-<p>Seven classes/entities:</p>
+<p>Seven main classes/entities:</p>
 <ol type="1">
 <li><code>dcat:Catalog</code> represents a catalogue, which is a dataset in which each individual item is a metadata record describing some resource</li>
 <li><code>dcat:Resource</code> represents a dataset, a data service or any other resource that may be described by a metadata record in a catalogue.</li>
@@ -1098,12 +1119,56 @@ dk  Intensity   dk  Intensity   dk  Intensity
 <li><strong>Really Simple Syndication or Rich Site Summary (RSS) / Atom Feeds</strong>: used for regularly updating or publishing data that changes frequently. Feeds enable publishers to syndicate data automatically.</li>
 <li><strong>SPARQL Protocol and RDF Query Language (SPARQL)</strong>: used for querying and manipulating RDF</li>
 </ul>
+</section>
+</section>
+<section id="references" class="level2">
+
+
 
 
 </section>
-</section>
 
-</main> <!-- /main -->
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography" id="quarto-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" data-line-spacing="2" role="list">
+<div id="ref-alterViewPointsData2023" class="csl-entry" role="listitem">
+Alter, G., Rizzolo, F., &amp; Schleidt, K. (2023). View points on data points: <span>A</span> shared vocabulary for cross-domain conversations on data and metadata. <em>IASSIST Quarterly</em>, <em>47</em>(1), 1–39. <a href="https://doi.org/10.29173/iq1051">https://doi.org/10.29173/iq1051</a>
+</div>
+<div id="ref-chenAnalysisInformationVisualisation2013" class="csl-entry" role="listitem">
+Chen, M., &amp; Floridi, L. (2013). An analysis of information visualisation. <em>Synthese</em>, <em>190</em>(16), 3421–3438. <a href="https://doi.org/10.1007/s11229-012-0183-y">https://doi.org/10.1007/s11229-012-0183-y</a>
+</div>
+<div id="ref-concordatworkinggroupConcordatOpenResearch2016" class="csl-entry" role="listitem">
+Concordat Working Group. (2016). <em>Concordat on <span>Open Research Data</span></em>. <span>UK Research and Innovation</span>. <a href="https://www.ukri.org/wp-content/uploads/2020/10/UKRI-020920-ConcordatonOpenResearchData.pdf">https://www.ukri.org/wp-content/uploads/2020/10/UKRI-020920-ConcordatonOpenResearchData.pdf</a>
+</div>
+<div id="ref-floridiInformationVeryShort2010" class="csl-entry" role="listitem">
+Floridi, L. (2010). <em>Information: A very short introduction</em>. Oxford University Press.
+</div>
+<div id="ref-confederationsuisseLoiFederaleUtilisation2023" class="csl-entry" role="listitem">
+Loi fédérale sur l’utilisation des moyens électroniques pour l’exécution des tâches des autorités (LMETA), Pub. L. No. FF 2023 787, Confédération suisse. Secrétariat général DFF (2023). <a href="https://fedlex.data.admin.ch/eli/fga/2023/787">https://fedlex.data.admin.ch/eli/fga/2023/787</a>
+</div>
+<div id="ref-mjlCreativeCommonsLicense2020" class="csl-entry" role="listitem">
+MJL. (2020). <em>Creative commons license spectrum</em> [Graphic]. <a href="https://commons.wikimedia.org/wiki/File:Creative_commons_license_spectrum.svg">https://commons.wikimedia.org/wiki/File:Creative_commons_license_spectrum.svg</a>
+</div>
+<div id="ref-openknowledgeOpenDataHandbook2016" class="csl-entry" role="listitem">
+Open Knowledge. (2016). <em>The <span>Open Data Handbook</span></em>. Open Data Handbook. <a href="https://opendatahandbook.org/">https://opendatahandbook.org/</a>
+</div>
+<div id="ref-opensciencedelegationSwissNationalOpen2021" class="csl-entry" role="listitem">
+Open Science Delegation. (2021a). <em>Swiss <span>National Open Research Data Strategy</span></em> (p. 11). swissuniversities. <a href="https://www.swissuniversities.ch/fileadmin/swissuniversities/Dokumente/Hochschulpolitik/ORD/Swiss_National_ORD_Strategy_en.pdf">https://www.swissuniversities.ch/fileadmin/swissuniversities/Dokumente/Hochschulpolitik/ORD/Swiss_National_ORD_Strategy_en.pdf</a>
+</div>
+<div id="ref-opensciencedelegationSwissNationalStrategy2021" class="csl-entry" role="listitem">
+Open Science Delegation. (2021b). <em>Swiss <span>National Strategy Open Research Data</span>: <span>Action Plan</span></em> (p. 11). swissuniversities. <a href="https://www.swissuniversities.ch/fileadmin/swissuniversities/Dokumente/Hochschulpolitik/ORD/ActionPlanV1.0_December_2021_def.pdf">https://www.swissuniversities.ch/fileadmin/swissuniversities/Dokumente/Hochschulpolitik/ORD/ActionPlanV1.0_December_2021_def.pdf</a>
+</div>
+<div id="ref-oxfordenglishdictionaryMetadata2023" class="csl-entry" role="listitem">
+Oxford English Dictionary. (2023). Metadata. In <em>Oxford <span>English Dictionary</span> (<span>OED</span>)</em>. Oxford University Press. <a href="https://doi.org/10.1093/OED/7968104326">https://doi.org/10.1093/OED/7968104326</a>
+</div>
+<div id="ref-santosDonneesRechercheCadre2020" class="csl-entry" role="listitem">
+Santos, A. (2020). <em>Données de la recherche : cadre juridique et licences</em> [Mémoire de master, <span>HES-SO University of Applied Sciences and Arts, Haute école de gestion de Genève</span>]. <a href="https://doi.org/10.5281/zenodo.3967402">https://doi.org/10.5281/zenodo.3967402</a>
+</div>
+<div id="ref-scholgerLegalAspectsArts2023" class="csl-entry" role="listitem">
+Scholger, W. (2023, October 20). <em>Legal <span>Aspects</span> of <span>Arts</span> and <span>Humanities Data</span></em>. <span>DARIAH-CH Study Day</span> 2023, Bern, Switzerland. <a href="https://www.dariah.ch/_files/ugd/8756fc_af72e01542284294ac0b7cf5c6064160.pdf">https://www.dariah.ch/_files/ugd/8756fc_af72e01542284294ac0b7cf5c6064160.pdf</a>
+</div>
+<div id="ref-starEthnographyInfrastructure1999" class="csl-entry" role="listitem">
+Star, S. L. (1999). The <span>Ethnography</span> of <span>Infrastructure</span>. <em>American Behavioral Scientist</em>, <em>43</em>(3), 377–391. <a href="https://doi.org/10.1177/00027649921955326">https://doi.org/10.1177/00027649921955326</a>
+</div>
+</div></section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
