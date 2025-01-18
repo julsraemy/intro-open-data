@@ -1,13 +1,80 @@
 ---
 title: "Associated Movements and Principles"
 author: "Julien A. Raemy"
-date: "Last updated: 2025-01-17"
+date: "Last updated: 2025-01-19"
 ---
 
 ## Open Access
+
+### Berlin Declaration on Open Access to Knowledge in the Sciences and Humanities
+
+1. Authors and right holders must grant all users **a free, irrevocable, worldwide, right of access to, and a license to copy, use, distribute, transmit and display the work publicly** and to make and distribute derivative works, in any digital medium for any responsible purpose, subject to proper attribution of authorship as well as the right to make small numbers of printed copies for their personal use.
+2. A complete version of the work and all supplemental materials, including a copy of the permission as stated above, in **an appropriate standard electronic format is deposited in at least one online repository** using suitable technical standards.
+
+@maxplancksocietyBerlinDeclarationOpen2003
+
+### Definitions
+
+> **Open access (OA) is a broad international movement that seeks to grant free and open online access to academic information**, such as publications and data. A publication is defined 'open access' when there are no financial, legal or technical barriers to accessing it - that is to say when anyone can read, download, copy, distribute, print, search for and search within the information, or use it in education or in any other way within the legal agreements. 
+
+<https://www.openaccess.nl/en/what-is-open-access>
+
+> OA is a publishing model for scholarly communication that makes research information available to readers at no cost, as opposed to the traditional subscription model in which readers have access to scholarly information by paying a subscription (usually via libraries). 
+
+<https://www.openaccess.nl/en/what-is-open-access>
+
+### Gold Open Access
+
+Publications are made freely accessible by the publisher immediately upon publication. It often involves Article Processing Charges (APCs) paid by the author, their institution, or a funder.
+
+&rarr; Immediate OA via publisher
+
+### Green Open Access (Self-Archiving)
+
+Authors publish their work in any journal and then self-archive an earlier version of the article (pre-print) for free public use in a repository (sometimes after an embargo period).
+
+&rarr; Immediate or delayed OA via self-archiving method/repository
+
+### Hybrid Open Access
+
+Subscription-based journals allow authors to make their individual articles OA upon payment of an APC.
+
+&rarr; Immediate OA via publisher
+
+### Diamond/Platinum Open Access
+
+Journals do not charge authors APCs and provide immediate OA to all their articles. It operates without direct cost to the authors; funding often comes from institutions, societies, or donations.
+
+&rarr; Immediate OA via publisher
+
+### Bronze Open Access
+
+Articles made freely accessible on the publisher's website without an explicit OA licence.
+
+### Blue Open Access
+
+Through blue OA, authors can archive the post-print or the publisher’s final version.
+
+### Black Open Access
+
+It refers to the unauthorised distribution of published content through various channels, such as pirate sites or peer-to-peer networks.
+
 ## Open Science / Open Scholarship
+
+### Definition
+
+> Open Science is the practice of science in such a way that others can collaborate and contribute, where research data, lab notes and other research processes are freely available, under terms that enable reuse, redistribution and reproduction of the research and its underlying data and methods.
+
+@fosterOpenScience2019
+
+![](https://upload.wikimedia.org/wikipedia/commons/2/28/Osc2021-unesco-open-science-no-gray.png)
+
+[@morrisonRedrawnSlidePresentation2021; @persicBuildingGlobalConsensus2021]
+
 ## Open Source / Free Software / F(L)OSS
 ## FAIR Data Principles
 ## CARE Principles for Indigenous Data Governance
 ## Collections as Data
 ## Linked (Open) (Usable) Data
+
+## References

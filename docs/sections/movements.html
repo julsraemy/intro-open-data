@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Julien A. Raemy">
-<meta name="dcterms.date" content="2025-01-17">
+<meta name="dcterms.date" content="2025-01-19">
 
 <title>Associated Movements and Principles – Introduction to Open Data</title>
 <style>
@@ -22,7 +22,27 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="../site_libs/quarto-nav/quarto-nav.js"></script>
@@ -209,13 +229,28 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#open-access" id="toc-open-access" class="nav-link active" data-scroll-target="#open-access">Open Access</a></li>
-  <li><a href="#open-science-open-scholarship" id="toc-open-science-open-scholarship" class="nav-link" data-scroll-target="#open-science-open-scholarship">Open Science / Open Scholarship</a></li>
+  <li><a href="#open-access" id="toc-open-access" class="nav-link active" data-scroll-target="#open-access">Open Access</a>
+  <ul class="collapse">
+  <li><a href="#berlin-declaration-on-open-access-to-knowledge-in-the-sciences-and-humanities" id="toc-berlin-declaration-on-open-access-to-knowledge-in-the-sciences-and-humanities" class="nav-link" data-scroll-target="#berlin-declaration-on-open-access-to-knowledge-in-the-sciences-and-humanities">Berlin Declaration on Open Access to Knowledge in the Sciences and Humanities</a></li>
+  <li><a href="#definitions" id="toc-definitions" class="nav-link" data-scroll-target="#definitions">Definitions</a></li>
+  <li><a href="#gold-open-access" id="toc-gold-open-access" class="nav-link" data-scroll-target="#gold-open-access">Gold Open Access</a></li>
+  <li><a href="#green-open-access-self-archiving" id="toc-green-open-access-self-archiving" class="nav-link" data-scroll-target="#green-open-access-self-archiving">Green Open Access (Self-Archiving)</a></li>
+  <li><a href="#hybrid-open-access" id="toc-hybrid-open-access" class="nav-link" data-scroll-target="#hybrid-open-access">Hybrid Open Access</a></li>
+  <li><a href="#diamondplatinum-open-access" id="toc-diamondplatinum-open-access" class="nav-link" data-scroll-target="#diamondplatinum-open-access">Diamond/Platinum Open Access</a></li>
+  <li><a href="#bronze-open-access" id="toc-bronze-open-access" class="nav-link" data-scroll-target="#bronze-open-access">Bronze Open Access</a></li>
+  <li><a href="#blue-open-access" id="toc-blue-open-access" class="nav-link" data-scroll-target="#blue-open-access">Blue Open Access</a></li>
+  <li><a href="#black-open-access" id="toc-black-open-access" class="nav-link" data-scroll-target="#black-open-access">Black Open Access</a></li>
+  </ul></li>
+  <li><a href="#open-science-open-scholarship" id="toc-open-science-open-scholarship" class="nav-link" data-scroll-target="#open-science-open-scholarship">Open Science / Open Scholarship</a>
+  <ul class="collapse">
+  <li><a href="#definition" id="toc-definition" class="nav-link" data-scroll-target="#definition">Definition</a></li>
+  </ul></li>
   <li><a href="#open-source-free-software-floss" id="toc-open-source-free-software-floss" class="nav-link" data-scroll-target="#open-source-free-software-floss">Open Source / Free Software / F(L)OSS</a></li>
   <li><a href="#fair-data-principles" id="toc-fair-data-principles" class="nav-link" data-scroll-target="#fair-data-principles">FAIR Data Principles</a></li>
   <li><a href="#care-principles-for-indigenous-data-governance" id="toc-care-principles-for-indigenous-data-governance" class="nav-link" data-scroll-target="#care-principles-for-indigenous-data-governance">CARE Principles for Indigenous Data Governance</a></li>
   <li><a href="#collections-as-data" id="toc-collections-as-data" class="nav-link" data-scroll-target="#collections-as-data">Collections as Data</a></li>
   <li><a href="#linked-open-usable-data" id="toc-linked-open-usable-data" class="nav-link" data-scroll-target="#linked-open-usable-data">Linked (Open) (Usable) Data</a></li>
+  <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references">References</a></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/julsraemy/intro-open-data/edit/main/sections/movements.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/julsraemy/intro-open-data/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
@@ -241,7 +276,7 @@ ul.task-list li input[type="checkbox"] {
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">January 17, 2025</p>
+      <p class="date">January 19, 2025</p>
     </div>
   </div>
   
@@ -255,9 +290,69 @@ ul.task-list li input[type="checkbox"] {
 
 <section id="open-access" class="level2">
 <h2 class="anchored" data-anchor-id="open-access">Open Access</h2>
+<section id="berlin-declaration-on-open-access-to-knowledge-in-the-sciences-and-humanities" class="level3">
+<h3 class="anchored" data-anchor-id="berlin-declaration-on-open-access-to-knowledge-in-the-sciences-and-humanities">Berlin Declaration on Open Access to Knowledge in the Sciences and Humanities</h3>
+<ol type="1">
+<li>Authors and right holders must grant all users <strong>a free, irrevocable, worldwide, right of access to, and a license to copy, use, distribute, transmit and display the work publicly</strong> and to make and distribute derivative works, in any digital medium for any responsible purpose, subject to proper attribution of authorship as well as the right to make small numbers of printed copies for their personal use.</li>
+<li>A complete version of the work and all supplemental materials, including a copy of the permission as stated above, in <strong>an appropriate standard electronic format is deposited in at least one online repository</strong> using suitable technical standards.</li>
+</ol>
+<p><span class="citation" data-cites="maxplancksocietyBerlinDeclarationOpen2003">Max Planck Society &amp; European Cultural Heritage Online (<a href="#ref-maxplancksocietyBerlinDeclarationOpen2003" role="doc-biblioref">2003</a>)</span></p>
+</section>
+<section id="definitions" class="level3">
+<h3 class="anchored" data-anchor-id="definitions">Definitions</h3>
+<blockquote class="blockquote">
+<p><strong>Open access (OA) is a broad international movement that seeks to grant free and open online access to academic information</strong>, such as publications and data. A publication is defined ‘open access’ when there are no financial, legal or technical barriers to accessing it - that is to say when anyone can read, download, copy, distribute, print, search for and search within the information, or use it in education or in any other way within the legal agreements.</p>
+</blockquote>
+<p><a href="https://www.openaccess.nl/en/what-is-open-access" class="uri">https://www.openaccess.nl/en/what-is-open-access</a></p>
+<blockquote class="blockquote">
+<p>OA is a publishing model for scholarly communication that makes research information available to readers at no cost, as opposed to the traditional subscription model in which readers have access to scholarly information by paying a subscription (usually via libraries).</p>
+</blockquote>
+<p><a href="https://www.openaccess.nl/en/what-is-open-access" class="uri">https://www.openaccess.nl/en/what-is-open-access</a></p>
+</section>
+<section id="gold-open-access" class="level3">
+<h3 class="anchored" data-anchor-id="gold-open-access">Gold Open Access</h3>
+<p>Publications are made freely accessible by the publisher immediately upon publication. It often involves Article Processing Charges (APCs) paid by the author, their institution, or a funder.</p>
+<p>→ Immediate OA via publisher</p>
+</section>
+<section id="green-open-access-self-archiving" class="level3">
+<h3 class="anchored" data-anchor-id="green-open-access-self-archiving">Green Open Access (Self-Archiving)</h3>
+<p>Authors publish their work in any journal and then self-archive an earlier version of the article (pre-print) for free public use in a repository (sometimes after an embargo period).</p>
+<p>→ Immediate or delayed OA via self-archiving method/repository</p>
+</section>
+<section id="hybrid-open-access" class="level3">
+<h3 class="anchored" data-anchor-id="hybrid-open-access">Hybrid Open Access</h3>
+<p>Subscription-based journals allow authors to make their individual articles OA upon payment of an APC.</p>
+<p>→ Immediate OA via publisher</p>
+</section>
+<section id="diamondplatinum-open-access" class="level3">
+<h3 class="anchored" data-anchor-id="diamondplatinum-open-access">Diamond/Platinum Open Access</h3>
+<p>Journals do not charge authors APCs and provide immediate OA to all their articles. It operates without direct cost to the authors; funding often comes from institutions, societies, or donations.</p>
+<p>→ Immediate OA via publisher</p>
+</section>
+<section id="bronze-open-access" class="level3">
+<h3 class="anchored" data-anchor-id="bronze-open-access">Bronze Open Access</h3>
+<p>Articles made freely accessible on the publisher’s website without an explicit OA licence.</p>
+</section>
+<section id="blue-open-access" class="level3">
+<h3 class="anchored" data-anchor-id="blue-open-access">Blue Open Access</h3>
+<p>Through blue OA, authors can archive the post-print or the publisher’s final version.</p>
+</section>
+<section id="black-open-access" class="level3">
+<h3 class="anchored" data-anchor-id="black-open-access">Black Open Access</h3>
+<p>It refers to the unauthorised distribution of published content through various channels, such as pirate sites or peer-to-peer networks.</p>
+</section>
 </section>
 <section id="open-science-open-scholarship" class="level2">
 <h2 class="anchored" data-anchor-id="open-science-open-scholarship">Open Science / Open Scholarship</h2>
+<section id="definition" class="level3">
+<h3 class="anchored" data-anchor-id="definition">Definition</h3>
+<blockquote class="blockquote">
+<p>Open Science is the practice of science in such a way that others can collaborate and contribute, where research data, lab notes and other research processes are freely available, under terms that enable reuse, redistribution and reproduction of the research and its underlying data and methods.</p>
+</blockquote>
+<p><span class="citation" data-cites="fosterOpenScience2019">FOSTER (<a href="#ref-fosterOpenScience2019" role="doc-biblioref">2019</a>)</span></p>
+<p><img src="https://upload.wikimedia.org/wikipedia/commons/2/28/Osc2021-unesco-open-science-no-gray.png" class="img-fluid"></p>
+<p><span class="citation" data-cites="morrisonRedrawnSlidePresentation2021">Persic (<a href="#ref-persicBuildingGlobalConsensus2021" role="doc-biblioref">2021</a>)</span></p>
+</section>
 </section>
 <section id="open-source-free-software-floss" class="level2">
 <h2 class="anchored" data-anchor-id="open-source-free-software-floss">Open Source / Free Software / F(L)OSS</h2>
@@ -273,11 +368,28 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="linked-open-usable-data" class="level2">
 <h2 class="anchored" data-anchor-id="linked-open-usable-data">Linked (Open) (Usable) Data</h2>
+</section>
+<section id="references" class="level2">
+
+
 
 
 </section>
 
-</main> <!-- /main -->
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography" id="quarto-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" data-line-spacing="2" role="list">
+<div id="ref-fosterOpenScience2019" class="csl-entry" role="listitem">
+FOSTER. (2019). Open <span>Science</span>. In <em>Foster <span>Taxonomy</span></em>. FACILITATE OPEN SCIENCE TRAINING FOR EUROPEAN RESEARCH. <a href="https://www.fosteropenscience.eu/taxonomy/term/100">https://www.fosteropenscience.eu/taxonomy/term/100</a>
+</div>
+<div id="ref-maxplancksocietyBerlinDeclarationOpen2003" class="csl-entry" role="listitem">
+Max Planck Society, &amp; European Cultural Heritage Online. (2003). <em>Berlin <span>Declaration</span> on <span>Open Access</span> to <span>Knowledge</span> in the <span>Sciences</span> and <span>Humanities</span></em>. Max Planck Society. <a href="https://openaccess.mpg.de/Berlin-Declaration">https://openaccess.mpg.de/Berlin-Declaration</a>
+</div>
+<div id="ref-morrisonRedrawnSlidePresentation2021" class="csl-entry" role="listitem">
+Morrison, R. (2021). <em>Redrawn slide from presentation of <span>Ana Persic</span>, <span>Division</span> of <span>Science Policy</span> and <span>Capacity-Building</span> (<span>SC</span>/<span>PCB</span>), <span>UNESCO</span> (<span>France</span>) presentation to <span>Open Science Conference</span> 2021, <span>ZBW</span> — <span>Leibniz Information Centre</span> for <span>Economics</span>, <span>Germany</span>.</em> [Graphic]. <a href="https://commons.wikimedia.org/wiki/File:Osc2021-unesco-open-science-no-gray.png">https://commons.wikimedia.org/wiki/File:Osc2021-unesco-open-science-no-gray.png</a>
+</div>
+<div id="ref-persicBuildingGlobalConsensus2021" class="csl-entry" role="listitem">
+Persic, A. (Director). (2021, February). <em>Building a <span>Global Consensus</span> on <span>Open Science</span> – the future <span>UNESCO Recommendation</span> on <span>Open Science</span></em> [Video recording]. <a href="https://doi.org/10.5446/53434">https://doi.org/10.5446/53434</a>
+</div>
+</div></section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {

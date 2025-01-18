@@ -204,7 +204,7 @@ A DMP is essentially a blueprint for RDM. It outlines the policies and standards
 
 > The work of government involves collecting huge amounts of data, much of which is not confidential (economic data, demographic data, spending data, crime data, transport data, etc). The value of much of this data can be greatly enhanced by releasing it as open data, freeing it for re-use by business, research, civil society, data journalists, etc.
 
-Open Data Handbook [@openknowledgeOpenDataHandbook2016]: <https://opendatahandbook.org/glossary/en/terms/government-data/>
+[@openknowledgeOpenDataHandbook2016]: <https://opendatahandbook.org/glossary/en/terms/government-data/>
 
 ### OGD in Switzerland
 
@@ -236,7 +236,7 @@ Open Data Handbook [@openknowledgeOpenDataHandbook2016]: <https://opendatahandbo
 - Impact measurement of policies
 - New knowledge from combined data sources and patterns in large data volumes
 
-Open Data Handbook [@openknowledgeOpenDataHandbook2016] <https://opendatahandbook.org/guide/en/why-open-data/>
+[@openknowledgeOpenDataHandbook2016] <https://opendatahandbook.org/guide/en/why-open-data/>
 
 ### Open Government Data Principles
 
@@ -256,7 +256,7 @@ Open Data Handbook [@openknowledgeOpenDataHandbook2016] <https://opendatahandboo
 1. **Legally open**: available under an open (data) licence that permits anyone freely to access, reuse and redistribute
 2. **Technically open**: data is available for no more than the cost of reproduction and in machine-readable and bulk form.
 
-Open Data Handbook [@openknowledgeOpenDataHandbook2016]: <https://opendatahandbook.org/glossary/en/terms/open-data/>
+[@openknowledgeOpenDataHandbook2016]: <https://opendatahandbook.org/glossary/en/terms/open-data/>
 
 ## Licences
 
@@ -270,7 +270,7 @@ Open Data Handbook [@openknowledgeOpenDataHandbook2016]: <https://opendatahandbo
 - Allows use, modification, and distribution with the condition of keeping works and derivatives open.
 - Promotes freedom, sharing of knowledge, and collaborative improvement.
 
-For further information about licences &rarr; Competence Center in Digital Law: https://www.ccdigitallaw.ch/ 
+For further information about licences &rarr; Competence Center in Digital Law: <https://www.ccdigitallaw.ch/> 
 
 ### Anglo-Saxon Copyright vs. European Author's Rights
 
