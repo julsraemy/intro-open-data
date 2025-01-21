@@ -11,11 +11,9 @@ date-modified: last-modified
 license: "CC BY"
 ---
 
-This course introduces the foundational principles of Open Data, equipping undergraduate students in Information Science with the knowledge and skills to find, analyse, and effectively reuse open datasets. Through a combination of lectures, practical activities, and assignments, students will explore the benefits and challenges of Open Data and develop a deeper understanding of its potential applications and implications.
-
 ## Learning Objectives 
 
-The course is designed with the following objectives:
+This course introduces the foundational principles of Open Data, equipping undergraduate students in Information Science with the knowledge and skills to find, analyse, and effectively reuse open datasets. Through a combination of lectures, practical activities, and assignments, students will explore the benefits and challenges of Open Data and develop a deeper understanding of its potential applications and implications. It is designed with the following objectives:
 
 1. To gain an understanding of Open Data, its essential aspects, and the principles of opening data;
 2. to learn how to find, analyse, and reuse open datasets;
@@ -58,6 +56,6 @@ This assignment is weighted at 20% of the 7C2-CT module.
 | Analysis and Argumentation         | 20     |
 | Structure and Writing              | 10     |
 | Presentation and Referencing       | 5      |
-| **Total**                              | **40**     |
+| **Total**                          | **40** |
 
 *Additional details will be discussed during the course.*
