@@ -12,7 +12,7 @@ date-modified: last-modified
 license: "CC BY"
 ---
 
-## Introduction to Open Data
+# Introduction to Open Data
 
 This course provides a comprehensive introduction to Open Data, covering key aspects such as:
 
@@ -25,12 +25,9 @@ This course provides a comprehensive introduction to Open Data, covering key asp
 
 The course is designed for undergraduate students in Information Science at the HES-SO University of Applied Sciences and Arts of Western Switzerland, [Haute école de gestion de Genève (HEG-GE)](https://hesge.ch/heg/).
 
-### Course Objectives
+## Course Objectives
 
 1. Gain an understanding of Open Data, its essential aspects, and principles
 2. Learn how to find, analyze, and reuse open datasets
 3. Understand the processes involved in preparing and publishing open datasets
 
-### About the Instructor
-
-[Julien A. Raemy](https://julsraemy.ch) is an Information Specialist and Digital Humanities Practitioner. He currently works as a Data Scientist at the Swiss Federal Archives.
