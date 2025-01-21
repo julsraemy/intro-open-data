@@ -33,7 +33,7 @@ Derived from the Open Knowledge Foundation's principles and scholarly interpreta
 
 ### Data
 
-> Data at its most basic level as the absence of uniformity, whether in the real world or in some symbolic system. Only once such data have some recognisable structure and are given some meaning can they be considered information. @floridiInformationVeryShort2010
+> Data at its most basic level as the absence of uniformity, whether in the real world or in some symbolic system. Only once such data have some recognisable structure and are given some meaning can they be considered information [@floridiInformationVeryShort2010].
 
 ![](https://www.researchgate.net/profile/Luciano-Floridi/publication/257666827/figure/fig2/AS:392780774952979@1470657642732/Floridis-original-information-map-redrawn-based-on-Floridi-2011.png)
 
@@ -156,16 +156,16 @@ The Swiss National Science Foundation (SNSF) expects all its funded researchers:
 
 #### Vision
 
-> By facilitating access to and reuse of research data, ORD promotes better, more effective, and more impactful research for the benefit of society as a whole. Through the principles of open access and reusability of research data, ORD practices support transparent and reproducible research findings. Moreover, ORD fosters collaboration by promoting exchange among researchers across disciplines, legal systems and national borders, thus enabling creativity and innovation to thrive @opensciencedelegationSwissNationalOpen2021.
+> By facilitating access to and reuse of research data, ORD promotes better, more effective, and more impactful research for the benefit of society as a whole. Through the principles of open access and reusability of research data, ORD practices support transparent and reproducible research findings. Moreover, ORD fosters collaboration by promoting exchange among researchers across disciplines, legal systems and national borders, thus enabling creativity and innovation to thrive [@opensciencedelegationSwissNationalOpen2021].
 
 #### Action Areas
 
-- Support researchers and research communities in imagining and adopting ORD practices
-- Development, promotion, and maintenance of financially sustainable basic infrastructures and services for all researchers 
-- Equipping researchers for ORD skills development and exchange of best practices
-- Building up systemic und supportive conditions for institutions and research communities 
+The SNSF has identified four criteria in the action plan [@opensciencedelegationSwissNationalStrategy2021]:
 
-@opensciencedelegationSwissNationalStrategy2021
+1. Support researchers and research communities in imagining and adopting ORD practices
+2. Development, promotion, and maintenance of financially sustainable basic infrastructures and services for all researchers 
+3. Equipping researchers for ORD skills development and exchange of best practices
+4. Building up systemic und supportive conditions for institutions and research communities 
 
 ### Research Data Management (RDM)
 
@@ -213,16 +213,13 @@ A DMP is essentially a blueprint for RDM. It outlines the policies and standards
 
 #### LMETA. Art. 10, al. 4
 
-> Les données sont mises en ligne gratuitement, en temps utile, sous une forme lisible par machine et dans un format ouvert. Elles peuvent être librement réutilisées, sous réserve d’obligations légales spéciales de mentionner la source des données.
-
-[@confederationsuisseLoiFederaleUtilisation2023]
+> Les données sont mises en ligne gratuitement, en temps utile, sous une forme lisible par machine et dans un format ouvert. Elles peuvent être librement réutilisées, sous réserve d’obligations légales spéciales de mentionner la source des données [@confederationsuisseLoiFederaleUtilisation2023].
 
 #### Related efforts
 
 - National data management (NaDB): <https://www.bfs.admin.ch/bfs/en/home/nadb/nadb.html>
 - i14y Interoperability platform: <https://www.i14y.admin.ch/>
 - Digital Switzerland Strategy: <https://digital.swiss/>
-
 
 ## Purposes of Open Data
 
@@ -298,7 +295,7 @@ For further information about licences &rarr; Competence Center in Digital Law: 
 
 ![](https://upload.wikimedia.org/wikipedia/commons/e/e1/Creative_commons_license_spectrum.svg)
 
-Creative commons license spectrum @mjlCreativeCommonsLicense2020
+Creative commons license spectrum [@mjlCreativeCommonsLicense2020]
 
 ### Rights Statements
 
@@ -390,11 +387,13 @@ And of course the underlying infrastructure...
 
 #### Definitions
 
-> A collective term for the subordinate parts of an undertaking; substructure, foundation Oxford English Dictionary 2023a.
+> A collective term for the subordinate parts of an undertaking; substructure, foundation [@oxfordenglishdictionaryInfrastructure2023].
 
-> People commonly envision infrastructure as a system of substrates – railroad, lines, pipes and plumbing, electrical power plants, and wires. **It is by definition invisible, part of the background for other kinds of work**. It is ready-to-hand. This image holds up well enough for many purposes – turn on the faucet for a drink of water and you use a vast infrastructure of plumbing and water regulation without usually thinking much about it @starEthnographyInfrastructure1999].
+> People commonly envision infrastructure as a system of substrates – railroad, lines, pipes and plumbing, electrical power plants, and wires. **It is by definition invisible, part of the background for other kinds of work**. It is ready-to-hand. This image holds up well enough for many purposes – turn on the faucet for a drink of water and you use a vast infrastructure of plumbing and water regulation without usually thinking much about it [@starEthnographyInfrastructure1999].
 
 #### Dimensions
+
+According to @starEthnographyInfrastructure1999, infrastructure can be understood through nine interconnected dimensions:
 
 - **Embeddedness**: Infrastructure is sunk into and inside of other structures, social arrangements, and technologies. People do not necessarily distinguish the several coordinated aspects of infrastructure.
 - **Transparency**: Infrastructure is transparent to use, in the sense that it does not have to be reinvented each time or assembled for each task, but invisibly supports those tasks.
@@ -405,8 +404,6 @@ And of course the underlying infrastructure...
 - **Built on an installed base**: Infrastructure does not grow *de novo*; it wrestles with the inertia of the installed base and inherits strengths and limitations from that base.
 - **Becomes visible upon breakdown**: The normally invisible quality of working infrastructure becomes visible when it breaks: the server is down, the bridge washes out, there is a power blackout.
 - **Is fixed in modular increments, not all at once or globally**: Because infrastructure is big, layered, and complex, and because it means different things locally, it is never changed from above. Changes take time and negotiations, and adjustment with other aspects of the systems are involved.
-
-@starEthnographyInfrastructure1999
 
 ### Text-based formats
 
