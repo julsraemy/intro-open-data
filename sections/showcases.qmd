@@ -11,7 +11,6 @@ date-modified: last-modified
 license: "CC BY"
 ---
 
-
 ## Our World in Data
 
 (...)

@@ -14,9 +14,9 @@ nocite: |
   @*
 ---
 
-## References
-
 This is a comprehensive list of references used in the course materials and additional recommended reading.
+
+# References
 
 ::: {#refs}
 :::

@@ -1,6 +1,5 @@
 ---
-title: "7C2-CT-4A Introduction to Open Data"
-subtitle: "HEG-GE Bachelor Information Science | Spring Semester 2024-2025"
+title: "Syllabus"
 authors: 
   - name: Julien A. Raemy
     orcid: 0000-0002-4711-5759
@@ -12,9 +11,7 @@ date-modified: last-modified
 license: "CC BY"
 ---
 
-# Syllabus
-
-This course introduces the foundational principles of Open Data, equipping students with the knowledge and skills to find, analyse, and effectively reuse open datasets. Through a combination of lectures, practical activities, and assignments, students will explore the benefits and challenges of Open Data and develop a deeper understanding of its potential applications and implications.
+This course introduces the foundational principles of Open Data, equipping undergraduate students in Information Science with the knowledge and skills to find, analyse, and effectively reuse open datasets. Through a combination of lectures, practical activities, and assignments, students will explore the benefits and challenges of Open Data and develop a deeper understanding of its potential applications and implications.
 
 ## Learning Objectives 
 
