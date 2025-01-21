@@ -41,7 +41,7 @@ Derived from the Open Knowledge Foundation's principles and scholarly interpreta
 
 ### Metadata
 
-> Data whose purpose is to describe and give information about other data @oxfordenglishdictionaryMetadata2023.
+> Data whose purpose is to describe and give information about other data. [@oxfordenglishdictionaryMetadata2023]
 
 > (...) there is no fixed boundary between “data” and “metadata”, and that information viewed as data in one discipline may be metadata in another.  [@alterViewPointsData2023]
 
