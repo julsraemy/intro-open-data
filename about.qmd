@@ -33,10 +33,10 @@ Julien A. RAemy has worked extensively in academia and in or for the cultural he
 
 This course is held at:
 
-Haute école de gestion de Genève (HEG-GE)
-Campus Battelle
-Rue de la Tambourine 17
-CH-1227 Carouge
+Haute école de gestion de Genève (HEG-GE) <br />
+Campus Battelle <br />
+Rue de la Tambourine 17 <br />
+CH-1227 Carouge <br />
 Switzerland
 
 ## References
