@@ -1,7 +1,14 @@
 ---
 title: "Techniques, Software, and Tools"
-author: "Julien A. Raemy"
-date: "Last updated: 2025-01-17"
+authors: 
+  - name: Julien A. Raemy
+    orcid: 0000-0002-4711-5759
+    email: julien.raemy@bar.admin.ch
+    affiliations:
+      - Swiss Federal Archives
+date: "2025-01-19"
+date-modified: last-modified
+license: "CC BY"
 ---
 
 ## Techniques
