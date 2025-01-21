@@ -73,7 +73,8 @@ Source: <https://data.gov/blog/open-data-history>
 - **December 2007**: The concept of open public data was discussed and defined in Sebastopol, CA, USA at a meeting of Internet activists. They identified 8 principles.
 - **February 2009**: Tim Berners-Lee presents [The Next Web](https://www.ted.com/talks/tim_berners_lee_the_next_web) at TED2009. He famously asked for "raw data now".
 
-Based on <https://devopedia.org/open-data> and <https://www.opendatasoft.com/en/what-is-open-data-practical-guide/>
+<https://devopedia.org/open-data> <br />
+<https://www.opendatasoft.com/en/what-is-open-data-practical-guide/>
 
 ### The Sebastopol Meeting
 

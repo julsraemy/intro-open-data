@@ -14,3 +14,12 @@ license: "CC BY"
 ## Techniques
 
 ## Sofware/Tools
+
+### CKAN
+
+<https://ckan.org/> <br />
+<https://github.com/ckan/ckan>
+
+### Piveau
+
+<https://www.piveau.de/>
