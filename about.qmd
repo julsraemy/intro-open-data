@@ -1,6 +1,5 @@
 ---
-title: "7C2-CT-4A Introduction to Open Data"
-subtitle: "HEG-GE Bachelor Information Science | Spring Semester 2024-2025"
+title: "About"
 authors: 
   - name: Julien A. Raemy
     orcid: 0000-0002-4711-5759
@@ -11,9 +10,6 @@ date: "2025-01-19"
 date-modified: last-modified
 license: "CC BY"
 ---
-
-
-# About 
 
 ## About this Website
 

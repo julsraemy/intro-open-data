@@ -1,6 +1,5 @@
 ---
-title: "7C2-CT-4A Introduction to Open Data"
-subtitle: "HEG-GE Bachelor Information Science | Spring Semester 2024-2025"
+title: "References"
 authors: 
   - name: Julien A. Raemy
     orcid: 0000-0002-4711-5759
@@ -15,7 +14,7 @@ nocite: |
   @*
 ---
 
-# References
+## References
 
 This is a comprehensive list of references used in the course materials and additional recommended reading.
 
