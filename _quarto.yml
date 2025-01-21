@@ -50,7 +50,7 @@ website:
         - sections/showcases.qmd
   
   page-footer:
-    left: "© 2025 Julien A. Raemy | Introduction to Open Data | Content licensed under a Creative Commons Attribution 4.0 International license (CC BY 4.0)" 
+    left: "Introduction to Open Data | Content licensed under a Creative Commons Attribution 4.0 International license" 
     right: 
       - icon: github
         href: https://github.com/julsraemy
