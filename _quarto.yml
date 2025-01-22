@@ -1,8 +1,6 @@
 project:
   type: website
   output-dir: docs
-  resources:
-    - js/external-links.js 
 
 bibliography: references/open-data.bib    
 
@@ -66,11 +64,10 @@ format:
     code-line-numbers: true
     code-link: true
     code-fold: true
+    link-external-icon: true
+    link-external-newwindow: true
     highlight-style: github
     toc: true
     csl: https://www.zotero.org/styles/apa
     bibliography-location: document
-    include-after-body:
-      - text: |
-          <script src="https://julsraemy.ch/intro-open-data/js/external-links.js"></script>
   

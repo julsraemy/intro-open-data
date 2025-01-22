@@ -19,7 +19,7 @@ While the original presentation provided a solid foundation, a website proved to
 
 ## About the Instructor
 
-[Dr. Julien A. Raemy](https://julsraemy.ch) is an Information Specialist and Digital Humanities Practitioner. He currently works as a Data Scientist at the Swiss Federal Archives. 
+[Dr. Julien A. Raemy](https://julsraemy.ch){.external target="_blank"} is an Information Specialist and Digital Humanities Practitioner. He currently works as a Data Scientist at the Swiss Federal Archives. 
 
 He holds a Bachelor's and Master’s degree in Information Science from the HES-SO University of Applied Sciences and Arts of Western Switzerland. He completed his PhD in Digital Humanities at the University of Basel in 2024, with a dissertation titled "Linked Open Usable Data for Cultural Heritage: Perspectives on Community Practices and Semantic Interoperability". His research examines how cultural heritage institutions can better share their digital collections through LOUD standards, particularly focusing on the International Image Interoperability Framework (IIIF) and Linked Art specifications. Through analysis of the PIA research project and Yale's Collections Discovery platform, his work investigates both the social dynamics of communities developing these standards and the technical challenges of making cultural data more interoperable.
 
