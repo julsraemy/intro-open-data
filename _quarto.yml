@@ -6,9 +6,15 @@ bibliography: references/open-data.bib
 
 website:
   title: "Introduction to Open Data"
+  open-graph: true
+  twitter-card: true
   site-url: "https://julsraemy.ch/intro-open-data"
   repo-url: "https://github.com/julsraemy/intro-open-data"
+  issue-url: "https://github.com/julsraemy/intro-open-data/issues/new/choose"
   repo-actions: [edit, issue]
+  page-navigation: true
+  bread-crumbs: true
+  back-to-top-navigation: true
   
   navbar:
     background: primary
@@ -66,6 +72,7 @@ format:
     code-fold: true
     link-external-icon: true
     link-external-newwindow: true
+    page-layout: full
     highlight-style: github
     toc: true
     csl: https://www.zotero.org/styles/apa
