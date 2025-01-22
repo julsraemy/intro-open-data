@@ -22,9 +22,21 @@ license: "CC BY"
 
 ### Piveau
 
+@harthpiveau2020
+
 <https://www.piveau.de/> <br />
 <https://gitlab.com/piveau/>
 
 ### EntryScape
 
-<https://entryscape.com/>
+@ebnerinformation2014
+
+<https://entryscape.com/> <br />
+<https://bitbucket.org/metasolutions/>
+
+### uData
+
+<https://udata.readthedocs.io/> <br />
+<https://github.com/opendatateam/udata>
+
+## References
