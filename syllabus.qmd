@@ -59,3 +59,7 @@ This assignment is weighted at 20% of the 7C2-CT module.
 | **Total**                          | **40** |
 
 *Additional details will be discussed during the course.*
+
+<!---
+Maybe, description of the dataset in DCAT-AP CH. Could also be an exercise. 
+-->
