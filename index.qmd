@@ -16,9 +16,9 @@ license: "CC BY"
 
 The course is designed for undergraduate students in Information Science at the HES-SO University of Applied Sciences and Arts of Western Switzerland, [Haute école de gestion de Genève (HEG-GE)](https://hesge.ch/heg/). It provides a comprehensive introduction to Open Data, covering key aspects such as:
 
-- Characteristics of Open Data
-- Associated Movements and Principles
-- Platforms and Organisations
-- Assessment, Data Quality, and Best Practices
-- Techniques, Software, and Tools
-- Showcases
+- [Characteristics of Open Data](sections/characteristics.html)
+- [Associated Movements and Principles](sections/movements.html)
+- [Platforms and Organisations](sections/platforms.html)
+- [Assessment, Data Quality, and Best Practices](sections/assessment.html)
+- [Techniques, Software, and Tools](sections/techniques.html)
+- [Showcases](sections/showcases.html)
