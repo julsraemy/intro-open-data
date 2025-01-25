@@ -168,6 +168,8 @@ The SNSF has identified four criteria in the action plan [@opensciencedelegation
 3. Equipping researchers for ORD skills development and exchange of best practices
 4. Building up systemic und supportive conditions for institutions and research communities 
 
+_For more information, see @wielStakeholderEngagementSustainable2024_
+
 ### Research Data Management (RDM)
 
 #### Definition

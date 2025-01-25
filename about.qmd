@@ -13,7 +13,7 @@ license: "CC BY"
 
 ## About this Website
 
-This website represents the second iteration of the *Introduction to Open Data* course, evolving from its initial form as a Markdown-based presentation [@raemyintroduction2024].
+This website represents the second iteration of the *Introduction to Open Data* course, evolving from its initial form as a Markdown-based presentation [@raemyIntroductionOpenData2024].
 
 While the original presentation provided a solid foundation, a website proved to be a more suitable medium for this topic. This Quarto-based site builds on the original content while leveraging the strengths of a web format to provide an enriched and more accessible experience for readers as well as allowing for continuous updates.
 

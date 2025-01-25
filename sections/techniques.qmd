@@ -22,14 +22,14 @@ license: "CC BY"
 
 ### Piveau
 
-@harthpiveau2020
+@kirsteinPiveauLargeScaleOpen2020
 
 <https://www.piveau.de/> <br />
 <https://gitlab.com/piveau/>
 
 ### EntryScape
 
-@ebnerinformation2014
+@ebnerInformationModelManaging2014
 
 <https://entryscape.com/> <br />
 <https://bitbucket.org/metasolutions/>
