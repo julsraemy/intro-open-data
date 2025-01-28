@@ -21,7 +21,7 @@ website:
     search: true
     tools:
       - icon: github
-      url: https://github.com/julsraemy/intro-open-data
+        url: https://github.com/julsraemy/intro-open-data
     left:
       - href: index.qmd
         text: Home
