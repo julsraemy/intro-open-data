@@ -19,6 +19,9 @@ website:
   navbar:
     background: primary
     search: true
+    tools:
+      - icon: github
+      url: https://github.com/julsraemy/intro-open-data
     left:
       - href: index.qmd
         text: Home
@@ -54,7 +57,7 @@ website:
         - sections/showcases.qmd
   
   page-footer:
-    left: "Introduction to Open Data | Content licensed under a Creative Commons Attribution 4.0 International license" 
+    left: "Julien A. Raemy | Introduction to Open Data | Content licensed under a Creative Commons Attribution 4.0 International license" 
     right: 
       - icon: github
         href: https://github.com/julsraemy
