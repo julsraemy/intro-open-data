@@ -78,9 +78,133 @@ It refers to the unauthorised distribution of published content through various 
 
 [@morrisonRedrawnSlidePresentation2021; @persicBuildingGlobalConsensus2021]
 
+### Open Scholarship: Expanding the Reach of Open Science
+
+- Broader Approach
+  - Extends beyond traditional scientific disciplines to include arts and humanities.
+  - Engages not just the research community but also the wider public, including non-experts, educators, and policymakers.
+- Supporting Collaboration and Innovation
+  - Facilitates interdisciplinary collaboration across arts, humanities, and other fields.
+  - Encourages the use of open educational resources for collaborative teaching and learning.
+  - Advances open data practices for the sharing and reuse of cultural heritage resources.
+
+@tennantTaleTwoOpens2020
+
 ## Open Source / Free Software / F(L)OSS
+
+### Definition and Philosophy 
+
+Open Source refers to software with source code that can be inspected, modified, and enhanced by anyone. It emphasises collaboration and community-oriented development.
+
+### Key Characteristics
+
+It includes free redistribution, access to source code, and allowance for derived works.
+
+### Criteria
+
+1. Free redistribution
+2. Source code must be included
+3. Derived works must be allowed
+4. Integrity of the author's source code
+5. No discrimation against persons or groups
+6. No discrimation against fields of endeavour
+7. Distribution of licence
+8. Licence must not be specific to a product
+9. Licence must not restrict other software
+10. Licence must be technology-neutral
+
+<https://opensource.org/osd/>
+
+### Free Software
+
+Free Software is centred around the idea of user freedom – the freedom to run, study, change, and distribute the software. "Free" refers to freedom, not price.
+
+It has **four essential freedoms**:
+1. The freedom to run the program as you wish, for any purpose (freedom 0).
+2. The freedom to study how the program works, and change it so it does your computing as you wish (freedom 1). Access to the source code is a precondition for this.
+3. The freedom to redistribute copies so you can help others (freedom 2).
+4. The freedom to distribute copies of your modified versions to others (freedom 3). By doing this you can give the whole community a chance to benefit from your changes. Access to the source code is a precondition for this.
+
+> “Free software” means software that respects users' freedom and community. Roughly, it means that the users have the freedom to run, copy, distribute, study, change and improve the software. Thus, “free software” is a matter of liberty, not price. To understand the concept, you should think of “free” as in “free speech,” not as in “free beer.” We sometimes call it “libre software,” borrowing the French or Spanish word for “free” as in freedom, to show we do not mean the software is gratis.
+
+<https://www.gnu.org/philosophy/free-sw.en.html>
+
+### Free/Libre and Open Source Software
+
+> This is software for which the licensee can get the source code, and is allowed to modify this code and to redistribute the software and the modifications. Many terms are used: free, referring to the freedom to use (not to “free of charge”), libre, which is the French translation of Free/freedom, and which is preferred by some writers to avoid the ambiguous reference to free of charge, and open source, which focuses more on the access to the sources than on the freedom to redistribute. In practice, the differences are not great, and more and more scholars are choosing the term FLOSS to name this whole movement.
+
+@jullienHistoricalAnalysisEmergence2009
+
+"Neutral stance": See <https://www.gnu.org/philosophy/floss-and-foss.en.html>
+
 ## FAIR Data Principles
+
+![](https://upload.wikimedia.org/wikipedia/commons/a/aa/FAIR_data_principles.jpg)
+
+<https://www.go-fair.org/fair-principles/> [@wilkinsonFAIRGuidingPrinciples2016]
+
+### Findable
+
+- F1. (Meta)data are assigned a globally unique and persistent identifier
+- F2. Data are described with rich metadata (defined by R1)
+- F3. Metadata clearly and explicitly include the identifier of the data they describe
+- F4. (Meta)data are registered or indexed in a searchable resource
+
+### Accessible
+
+- A1. (Meta)data are retrievable by their identifier using a standardised communications protocol
+  - A1.1 The protocol is open, free, and universally implementable
+  - A1.2 The protocol allows for an authentication and authorisation procedure, where necessary
+- A2. Metadata are accessible, even when the data are no longer available
+
+### Interoperable
+
+- I1. (Meta)data use a formal, accessible, shared, and broadly applicable language for knowledge representation.
+- I2. (Meta)data use vocabularies that follow FAIR principles
+- I3. (Meta)data include qualified references to other (meta)data
+
+### Reusable
+
+- R1. (Meta)data are richly described with a plurality of accurate and relevant attributes
+  - R1.1. (Meta)data are released with a clear and accessible data usage license
+  - R1.2. (Meta)data are associated with detailed provenance
+  - R1.3. (Meta)data meet domain-relevant community standards
+
 ## CARE Principles for Indigenous Data Governance
+
+![](https://images.squarespace-cdn.com/content/v1/5d3799de845604000199cd24/1567592451970-2R8XFL670QNMAGDRV7ED/Be+FAIR+and+CARE.png)
+
+@carrollCAREPrinciplesIndigenous2020
+
+### Collective Benefit
+- C1. For inclusive development and innovation
+- C2. For improved governance and citizen engagement
+- C3. For equitable outcomes
+
+### Authority to Control
+
+- A1. Recognizing rights and interests 
+- A2. Data for governance
+- A3. Governance of data
+
+### Responsibility
+
+- R1. For positive relationships
+- R2. For expanding capability and capacity
+- R3. For Indigenous languages and worldviews
+
+### Ethics
+
+- E1. For minimizing harm and maximizing benefit
+- E2. For justice
+- E3. For future use
+
+### CARE and FAIR
+
+![](https://media.springernature.com/full/springer-static/image/art%3A10.1038%2Fs41597-021-00892-0/MediaObjects/41597_2021_892_Fig2_HTML.png)
+
+@carrollOperationalizingCAREFAIR2021
+
 ## Collections as Data
 ## Linked (Open) (Usable) Data
 
