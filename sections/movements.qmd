@@ -206,6 +206,82 @@ It has **four essential freedoms**:
 @carrollOperationalizingCAREFAIR2021
 
 ## Collections as Data
+
+![](https://raw.githubusercontent.com/collectionsasdata/part2whole/master/_posts/cad_logo_matte.png)
+
+### Summits
+
+- 2017: Santa Barbara Statement [@padillaAlwaysAlreadyComputational2017]
+- 2023: Vancouver Statement [@padillaVancouverStatementCollections2023]
+
+### Main outputs
+
+- 10 principles
+- 'Part to Whole' Report
+- Related checklist and initiatives
+
+<https://collectionsasdata.github.io/statement/>
+
+### 10 Principles
+
+1. Collections as Data development aims to encourage computational use of digitised and born digital collections.
+2. Collections as Data stewards are guided by ongoing ethical commitments.
+3. Collections as Data stewards aim to lower barriers to use.
+4. Collections as Data designed for everyone serve no one.
+5. Shared documentation helps others find a path to doing the work. 
+6. Collections as Data should be made openly accessible by default, except in cases where ethical or legal obligations preclude it.
+7. Collections as Data development values interoperability.
+8. Collections as Data stewards work transparently in order to develop trustworthy, long-lived collections.
+9. Data as well as the data that describe those data are considered in scope. 
+10. The development of collections as data is an ongoing process and does not necessarily conclude with a final version. 
+
+### Part to Whole
+
+- **Boundary Object Concept**: Collections-as-data serve as flexible tools adaptable to various needs while maintaining a common identity [see @starInstitutionalEcologyTranslations1989].
+- **Ethical Considerations**: Emphasis on ethical development and use of collections, especially concerning marginalized communities.
+- **Community Engagement**: Essential for respecting and understanding the context of collections.
+- **Organisational Structure Support**: Effective initiatives require collaboration across various organisational departments.
+- **Documentation Importance**: Crucial for understanding and maintaining collections in the future.
+- **Community of Practice**: Emphasises the need for skill sharing and collaborative environments.
+- **Future Challenges and Opportunities**
+  - Integration of AI and computational tools in collections.
+  - Navigating the balance between global collaboration and local cultural sensitivities.
+  - Addressing financial and resource limitations for global community growth.
+  - Potential and risks of using collections as data for AI training.
+
+@padillaCollectionsDataPart2023
+
+### Checklist to publish Collections as Data in GLAM institutions
+
+1. Provide a clear license allowing reuse of the dataset without restrictions 
+2. Provide a suggestion of how to cite your dataset 
+3. Include documentation about the dataset 
+4. Use a public platform to publish the dataset 
+5. Share examples of use as additional documentation 
+6. Give structure to the dataset 
+7. Provide machine-readable metadata (about the dataset itself) 
+8. Include your dataset in collaborative edition platforms
+9. Offer an API to access your repository 
+10. Develop a portal page 
+11. Add a terms of use
+
+@candelaChecklistPublishCollections2023a
+
+### Workflow
+
+![](https://julsraemy.ch/prezi/assets/cad-workflow.jpg)
+
+<https://marketplace.sshopencloud.eu/workflow/I3JvP6>
+
+### Implementation at the Royal Library of Belgium
+
+- Data-level access to collections
+- Digital Humanities Research
+
+![](https://www.kbr.be/wp-content/uploads/2020/11/data-level-access-to-collections.png)
+
+<https://www.kbr.be/en/projects/data-kbr-be/>
+
 ## Linked (Open) (Usable) Data
 
 ## References
