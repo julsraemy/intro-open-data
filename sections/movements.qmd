@@ -303,4 +303,74 @@ Linked Data refers to a method of publishing structured data so that it can be i
 
 @berners-leeLinkedData2006
 
+### Linked Open Data (LOD)
+
+Linked Open Data is a subset of Linked Data that is open, meaning it is freely accessible and reusable by anyone. It adheres to the principles of being accessible under an open license, available in a machine-readable format, using open standards from the W3C (such as RDF and SPARQL), and linked to other datasets to increase its utility.
+
+![](https://5stardata.info/images/5-star-steps.png)
+
+5-star deployment scheme for Open Data: <https://5stardata.info/>
+
+### The Semantic Web or _the Web of Data_
+
+The Semantic Web is an extension of the World Wide Web, through standards, to make it machine-readable.
+
+![](https://julsraemy.ch/prezi/assets/tweaked-semweb-layer-cake.webp)
+
+@idehenSemanticWebLayer2017
+
+### Resource Description Framework (RDF)
+
+With RDF, everything goes in threes. Most of the triples' components have Uniform Resource Identifiers (URIs). <br/>
+Syntax: **subject, predicate, object** $(s \ \vec{p} \ o)$ 
+
+![](https://julsraemy.ch/prezi/assets/rdf-graph.svg)
+
+With RDF, everything goes in threes, the data model contains so-called triples: that is *subject*, *predicate*, *object* that form graphs.
+Most of the components of these triples use Uniform Resource Identifiers (URIs) and are generally web-addressable, whether for naming subjects and objects (which may themselves also be objects of other triples) or relationships 
+
+### Linked Open Usable Data (LOUD)
+
+The concept of LOUD extends LOD by emphasising not just the openness and interlinking of data but also its usability.
+
+- The term was coined by Robert Sanderson [-@sandersonShoutItOut2018;-@sandersonKeynoteStandardsCommunities2019] who has been involved in the conception and maintenance of web standards, mainly in the cultural heritage field. 
+- LOUD's goal is to achieve the Semantic Web's intent on a global scale in a usable fashion by leveraging community-driven and JSON-LD-based specifications.
+- It has five main design principles to make the data more easily accessible to software developers, who play a key role in interacting with the data and building software and services on top of it, and to some extent to academics. 
+
+#### LOUD Design Principles
+
+- The right Abstraction for the audience
+- Few Barriers to entry
+- Comprehensible by introspection
+- Documentation with working examples
+- Few Exceptions, instead many consistent patterns
+
+<https://linked.art/loud/>
+
+#### LOUD Standards/Communities
+
+- [International Image Interoperability Framework](https://iiif.io) (IIIF)
+- [W3C Web Annotation Data Model](https://www.w3.org/TR/annotation-model/)
+- [Linked Art](https://linked.art)
+
+The IIIF and Linked Art communities are built on a synergy of social and technical integration, with a strong focus on usability. They are unified by shared expertise and leadership, fostering collaboration across technical boundaries. These communities prioritise inclusivity and diversity of participation, ensuring that a wide range of perspectives contribute to their work. Openness and friendliness are core values, along with a strong commitment to transparency in processes and decision-making. To facilitate engagement and knowledge sharing, they organise both online and face-to-face meetings to strengthen connections across the community.
+
+[see @newburyLOUDLinkedOpen2018; @raemyCharacterisingIIIFLinked2023]
+
+
+##### IIIF
+
+- A model for presenting and annotating content
+- A global community that develops shared application programming interfaces (APIs), implements them in software, and exposes interoperable content
+
+<iframe src="https://www.google.com/maps/d/embed?mid=1faJRKJpj2Vau__RDwt8af040x0GTVozp&ehbc=2E312F" width="500" height="auto"></iframe>
+
+<https://bit.ly/iiifmap>
+
+- **State and National Libraries**: Bavarian State Library, French National Library (BnF), British Library, National Library of Estonia, New York Public Library, Vatican Library, Zentralbibliothek Zürich, etc.
+- **Archives**: Blavatnik Foundation Archive, Indigenous Digital Archive, Internet Archive, Swedish National Archives, Swiss Federal Archives, etc.
+- **Museums & Galleries**: Art Institute Chicago, J. Paul Getty Trust, Smithsonian, Victoria & Albert Museum, MIT Museum, National Gallery of Art, Van Gogh Worldwide, etc.
+- **Universities & Research Institutions**: Cambridge, Cornell University, Ghent University, Swiss National Data and Service Center for the Humanities (DaSCH), Kyoto University, Oxford, Stanford, University of Toronto, Yale University, etc.
+- **Aggregators/Facilitators**: Europeana, Cuba-IIIF, Cultural Japan, OCLC ContentDM, etc.
+
 ## References

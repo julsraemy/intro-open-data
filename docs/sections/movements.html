@@ -92,6 +92,35 @@ div.csl-indent {
   }
 }</script>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 <link rel="stylesheet" href="../styles/custom.scss">
 <meta property="og:title" content="Associated Movements and Principles – Introduction to Open Data">
@@ -294,6 +323,10 @@ div.csl-indent {
   <li><a href="#an-open-vision-of-the-web" id="toc-an-open-vision-of-the-web" class="nav-link" data-scroll-target="#an-open-vision-of-the-web">An Open Vision of the Web</a></li>
   <li><a href="#linked-data" id="toc-linked-data" class="nav-link" data-scroll-target="#linked-data">Linked Data</a></li>
   <li><a href="#linked-data-principles" id="toc-linked-data-principles" class="nav-link" data-scroll-target="#linked-data-principles">Linked Data Principles</a></li>
+  <li><a href="#linked-open-data-lod" id="toc-linked-open-data-lod" class="nav-link" data-scroll-target="#linked-open-data-lod">Linked Open Data (LOD)</a></li>
+  <li><a href="#the-semantic-web-or-the-web-of-data" id="toc-the-semantic-web-or-the-web-of-data" class="nav-link" data-scroll-target="#the-semantic-web-or-the-web-of-data">The Semantic Web or <em>the Web of Data</em></a></li>
+  <li><a href="#resource-description-framework-rdf" id="toc-resource-description-framework-rdf" class="nav-link" data-scroll-target="#resource-description-framework-rdf">Resource Description Framework (RDF)</a></li>
+  <li><a href="#linked-open-usable-data-loud" id="toc-linked-open-usable-data-loud" class="nav-link" data-scroll-target="#linked-open-usable-data-loud">Linked Open Usable Data (LOUD)</a></li>
   </ul></li>
   <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references">References</a></li>
   </ul>
@@ -667,6 +700,71 @@ div.csl-indent {
 </ul>
 <p><span class="citation" data-cites="berners-leeLinkedData2006">Berners-Lee (<a href="#ref-berners-leeLinkedData2006" role="doc-biblioref">2006</a>)</span></p>
 </section>
+<section id="linked-open-data-lod" class="level3">
+<h3 class="anchored" data-anchor-id="linked-open-data-lod">Linked Open Data (LOD)</h3>
+<p>Linked Open Data is a subset of Linked Data that is open, meaning it is freely accessible and reusable by anyone. It adheres to the principles of being accessible under an open license, available in a machine-readable format, using open standards from the W3C (such as RDF and SPARQL), and linked to other datasets to increase its utility.</p>
+<p><img src="https://5stardata.info/images/5-star-steps.png" class="img-fluid"></p>
+<p>5-star deployment scheme for Open Data: <a href="https://5stardata.info/" class="uri">https://5stardata.info/</a></p>
+</section>
+<section id="the-semantic-web-or-the-web-of-data" class="level3">
+<h3 class="anchored" data-anchor-id="the-semantic-web-or-the-web-of-data">The Semantic Web or <em>the Web of Data</em></h3>
+<p>The Semantic Web is an extension of the World Wide Web, through standards, to make it machine-readable.</p>
+<p><img src="https://julsraemy.ch/prezi/assets/tweaked-semweb-layer-cake.webp" class="img-fluid"></p>
+<p><span class="citation" data-cites="idehenSemanticWebLayer2017">Idehen (<a href="#ref-idehenSemanticWebLayer2017" role="doc-biblioref">2017</a>)</span></p>
+</section>
+<section id="resource-description-framework-rdf" class="level3">
+<h3 class="anchored" data-anchor-id="resource-description-framework-rdf">Resource Description Framework (RDF)</h3>
+<p>With RDF, everything goes in threes. Most of the triples’ components have Uniform Resource Identifiers (URIs). <br> Syntax: <strong>subject, predicate, object</strong> <span class="math inline">\((s \ \vec{p} \ o)\)</span></p>
+<p><img src="https://julsraemy.ch/prezi/assets/rdf-graph.svg" class="img-fluid"></p>
+<p>With RDF, everything goes in threes, the data model contains so-called triples: that is <em>subject</em>, <em>predicate</em>, <em>object</em> that form graphs. Most of the components of these triples use Uniform Resource Identifiers (URIs) and are generally web-addressable, whether for naming subjects and objects (which may themselves also be objects of other triples) or relationships</p>
+</section>
+<section id="linked-open-usable-data-loud" class="level3">
+<h3 class="anchored" data-anchor-id="linked-open-usable-data-loud">Linked Open Usable Data (LOUD)</h3>
+<p>The concept of LOUD extends LOD by emphasising not just the openness and interlinking of data but also its usability.</p>
+<ul>
+<li>The term was coined by Robert Sanderson <span class="citation" data-cites="sandersonShoutItOut2018 sandersonKeynoteStandardsCommunities2019">(<a href="#ref-sandersonShoutItOut2018" role="doc-biblioref">2018</a>, <a href="#ref-sandersonKeynoteStandardsCommunities2019" role="doc-biblioref">2019</a>)</span> who has been involved in the conception and maintenance of web standards, mainly in the cultural heritage field.</li>
+<li>LOUD’s goal is to achieve the Semantic Web’s intent on a global scale in a usable fashion by leveraging community-driven and JSON-LD-based specifications.</li>
+<li>It has five main design principles to make the data more easily accessible to software developers, who play a key role in interacting with the data and building software and services on top of it, and to some extent to academics.</li>
+</ul>
+<section id="loud-design-principles" class="level4">
+<h4 class="anchored" data-anchor-id="loud-design-principles">LOUD Design Principles</h4>
+<ul>
+<li>The right Abstraction for the audience</li>
+<li>Few Barriers to entry</li>
+<li>Comprehensible by introspection</li>
+<li>Documentation with working examples</li>
+<li>Few Exceptions, instead many consistent patterns</li>
+</ul>
+<p><a href="https://linked.art/loud/" class="uri">https://linked.art/loud/</a></p>
+</section>
+<section id="loud-standardscommunities" class="level4">
+<h4 class="anchored" data-anchor-id="loud-standardscommunities">LOUD Standards/Communities</h4>
+<ul>
+<li><a href="https://iiif.io">International Image Interoperability Framework</a> (IIIF)</li>
+<li><a href="https://www.w3.org/TR/annotation-model/">W3C Web Annotation Data Model</a></li>
+<li><a href="https://linked.art">Linked Art</a></li>
+</ul>
+<p>The IIIF and Linked Art communities are built on a synergy of social and technical integration, with a strong focus on usability. They are unified by shared expertise and leadership, fostering collaboration across technical boundaries. These communities prioritise inclusivity and diversity of participation, ensuring that a wide range of perspectives contribute to their work. Openness and friendliness are core values, along with a strong commitment to transparency in processes and decision-making. To facilitate engagement and knowledge sharing, they organise both online and face-to-face meetings to strengthen connections across the community.</p>
+<p><span class="citation" data-cites="newburyLOUDLinkedOpen2018 raemyCharacterisingIIIFLinked2023">(see <a href="#ref-newburyLOUDLinkedOpen2018" role="doc-biblioref">Newbury, 2018</a>; <a href="#ref-raemyCharacterisingIIIFLinked2023" role="doc-biblioref">Raemy, 2023</a>)</span></p>
+<section id="iiif" class="level5">
+<h5 class="anchored" data-anchor-id="iiif">IIIF</h5>
+<ul>
+<li>A model for presenting and annotating content</li>
+<li>A global community that develops shared application programming interfaces (APIs), implements them in software, and exposes interoperable content</li>
+</ul>
+<iframe src="https://www.google.com/maps/d/embed?mid=1faJRKJpj2Vau__RDwt8af040x0GTVozp&amp;ehbc=2E312F" width="500" height="auto">
+</iframe>
+<p><a href="https://bit.ly/iiifmap" class="uri">https://bit.ly/iiifmap</a></p>
+<ul>
+<li><strong>State and National Libraries</strong>: Bavarian State Library, French National Library (BnF), British Library, National Library of Estonia, New York Public Library, Vatican Library, Zentralbibliothek Zürich, etc.</li>
+<li><strong>Archives</strong>: Blavatnik Foundation Archive, Indigenous Digital Archive, Internet Archive, Swedish National Archives, Swiss Federal Archives, etc.</li>
+<li><strong>Museums &amp; Galleries</strong>: Art Institute Chicago, J. Paul Getty Trust, Smithsonian, Victoria &amp; Albert Museum, MIT Museum, National Gallery of Art, Van Gogh Worldwide, etc.</li>
+<li><strong>Universities &amp; Research Institutions</strong>: Cambridge, Cornell University, Ghent University, Swiss National Data and Service Center for the Humanities (DaSCH), Kyoto University, Oxford, Stanford, University of Toronto, Yale University, etc.</li>
+<li><strong>Aggregators/Facilitators</strong>: Europeana, Cuba-IIIF, Cultural Japan, OCLC ContentDM, etc.</li>
+</ul>
+</section>
+</section>
+</section>
 </section>
 <section id="references" class="level2">
 
@@ -694,6 +792,9 @@ Carroll, S. R., Herczog, E., Hudson, M., Russell, K., &amp; Stall, S. (2021). Op
 <div id="ref-fosterOpenScience2019" class="csl-entry" role="listitem">
 FOSTER. (2019). Open <span>Science</span>. In <em>Foster <span>Taxonomy</span></em>. FACILITATE OPEN SCIENCE TRAINING FOR EUROPEAN RESEARCH. <a href="https://www.fosteropenscience.eu/taxonomy/term/100">https://www.fosteropenscience.eu/taxonomy/term/100</a>
 </div>
+<div id="ref-idehenSemanticWebLayer2017" class="csl-entry" role="listitem">
+Idehen, K. U. (2017, July 24). <em>Semantic <span>Web Layer Cake Tweak</span>, <span>Explained</span></em>. OpenLink Software Blog. <a href="https://medium.com/openlink-software-blog/semantic-web-layer-cake-tweak-explained-6ba5c6ac3fab">https://medium.com/openlink-software-blog/semantic-web-layer-cake-tweak-explained-6ba5c6ac3fab</a>
+</div>
 <div id="ref-jullienHistoricalAnalysisEmergence2009" class="csl-entry" role="listitem">
 Jullien, N. (2009). A <span>Historical Analysis</span> of the <span>Emergence</span> of <span>Free Cooperative Software Production</span>: In M. Pagani (Ed.), <em>Encyclopedia of <span>Multimedia Technology</span> and <span>Networking</span>, <span>Second Edition</span></em> (pp. 605–612). IGI Global. <a href="https://doi.org/10.4018/978-1-60566-014-1.ch081">https://doi.org/10.4018/978-1-60566-014-1.ch081</a>
 </div>
@@ -702,6 +803,9 @@ Max Planck Society, &amp; European Cultural Heritage Online. (2003). <em>Berlin 
 </div>
 <div id="ref-morrisonRedrawnSlidePresentation2021" class="csl-entry" role="listitem">
 Morrison, R. (2021). <em>Redrawn slide from presentation of <span>Ana Persic</span>, <span>Division</span> of <span>Science Policy</span> and <span>Capacity-Building</span> (<span>SC</span>/<span>PCB</span>), <span>UNESCO</span> (<span>France</span>) presentation to <span>Open Science Conference</span> 2021, <span>ZBW</span> — <span>Leibniz Information Centre</span> for <span>Economics</span>, <span>Germany</span>.</em> [Graphic]. <a href="https://commons.wikimedia.org/wiki/File:Osc2021-unesco-open-science-no-gray.png">https://commons.wikimedia.org/wiki/File:Osc2021-unesco-open-science-no-gray.png</a>
+</div>
+<div id="ref-newburyLOUDLinkedOpen2018" class="csl-entry" role="listitem">
+Newbury, D. (2018). <span>LOUD</span>: <span>Linked Open Usable Data</span> and linked.art. <em>2018 <span>CIDOC Conference</span></em>, 1–11. <a href="https://cidoc.mini.icom.museum/wp-content/uploads/sites/6/2021/03/CIDOC2018_paper_153.pdf">https://cidoc.mini.icom.museum/wp-content/uploads/sites/6/2021/03/CIDOC2018_paper_153.pdf</a>
 </div>
 <div id="ref-padillaAlwaysAlreadyComputational2017" class="csl-entry" role="listitem">
 Padilla, T., Allen, L., Frost, H., Potvin, S., Russey Roke, E., &amp; Varner, S. (2017). Always <span>Already Computational</span>: <span>Collections</span> as <span>Data</span>. <em>Collections as Data</em>. <a href="https://doi.org/10.17605/OSF.IO/MX6UK">https://doi.org/10.17605/OSF.IO/MX6UK</a>
@@ -714,6 +818,15 @@ Padilla, T., Scates Kettler, H., Varner, S., &amp; Shorish, Y. (2023). <em>Vanco
 </div>
 <div id="ref-persicBuildingGlobalConsensus2021" class="csl-entry" role="listitem">
 Persic, A. (Director). (2021, February). <em>Building a <span>Global Consensus</span> on <span>Open Science</span> – the future <span>UNESCO Recommendation</span> on <span>Open Science</span></em> [Video recording]. <a href="https://doi.org/10.5446/53434">https://doi.org/10.5446/53434</a>
+</div>
+<div id="ref-raemyCharacterisingIIIFLinked2023" class="csl-entry" role="listitem">
+Raemy, J. A. (2023). <em>Characterising the <span>IIIF</span> and <span>Linked Art Communities</span>: Survey report</em> (p. 29) [Report]. University of Basel. <a href="https://doi.org/10.5451/unibas-ep95340">https://doi.org/10.5451/unibas-ep95340</a>
+</div>
+<div id="ref-sandersonShoutItOut2018" class="csl-entry" role="listitem">
+Sanderson, R. (2018, May 15). <em>Shout it <span>Out</span>: <span>LOUD</span></em>. <span>EuropeanaTech Conference</span> 2018, Rotterdam, the Netherlands. <a href="https://www.slideshare.net/Europeana/shout-it-out-loud-by-rob-sanderson-europeanatech-conference-2018">https://www.slideshare.net/Europeana/shout-it-out-loud-by-rob-sanderson-europeanatech-conference-2018</a>
+</div>
+<div id="ref-sandersonKeynoteStandardsCommunities2019" class="csl-entry" role="listitem">
+Sanderson, R. (2019). Keynote: <span>Standards</span> and <span>Communities</span>: <span>Connected People</span>, <span>Consistent Data</span>, <span>Usable Applications</span>. <em>2019 <span>ACM</span>/<span>IEEE Joint Conference</span> on <span>Digital Libraries</span> (<span>JCDL</span>)</em>, 28. <a href="https://doi.org/10.1109/JCDL.2019.00009">https://doi.org/10.1109/JCDL.2019.00009</a>
 </div>
 <div id="ref-starInstitutionalEcologyTranslations1989" class="csl-entry" role="listitem">
 Star, S. L., &amp; Griesemer, J. R. (1989). Institutional <span>Ecology</span>, ’<span>Translations</span>’ and <span>Boundary Objects</span>: <span>Amateurs</span> and <span>Professionals</span> in <span>Berkeley</span>’s <span>Museum</span> of <span>Vertebrate Zoology</span>, 1907-39. <em>Social Studies of Science</em>, <em>19</em>(3), 387–420. <a href="https://www.jstor.org/stable/285080">https://www.jstor.org/stable/285080</a>
