@@ -284,4 +284,23 @@ It has **four essential freedoms**:
 
 ## Linked (Open) (Usable) Data
 
+### An Open Vision of the Web
+
+> The [World Wide Web] project merges the techniques of information retrieval and hypertext to make an easy but powerful global information system. The project started with **the philosophy that much academic information should be freely available to anyone**.
+
+@berners-leeWorldWideWebExecutiveSummary1991
+
+### Linked Data
+
+Linked Data refers to a method of publishing structured data so that it can be interlinked and become more useful through semantic queries. It builds upon standard Web technologies such as HTTP, RDF, and URIs, but rather than using them to serve web pages for human readers, it extends them to share information in a way that can be read automatically by computers. This enables data from different sources to be connected and queried.
+
+### Linked Data Principles
+
+- Use Uniform Resource Identifiers (URIs) as names for things
+- Use HTTP URIs so that people can look up those names.
+- When someone looks up a URI, provide useful information, using the standards (e.g. RDF, RDFS, SPARQL, etc.)
+- Include links to other URIs so that they can discover more things.
+
+@berners-leeLinkedData2006
+
 ## References
