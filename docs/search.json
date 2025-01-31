@@ -212,7 +212,7 @@
     "href": "sections/movements.html#linked-open-usable-data",
     "title": "Associated Movements and Principles",
     "section": "Linked (Open) (Usable) Data",
-    "text": "Linked (Open) (Usable) Data",
+    "text": "Linked (Open) (Usable) Data\n\nAn Open Vision of the Web\n\nThe [World Wide Web] project merges the techniques of information retrieval and hypertext to make an easy but powerful global information system. The project started with the philosophy that much academic information should be freely available to anyone.\n\nBerners-Lee (1991)\n\n\nLinked Data\nLinked Data refers to a method of publishing structured data so that it can be interlinked and become more useful through semantic queries. It builds upon standard Web technologies such as HTTP, RDF, and URIs, but rather than using them to serve web pages for human readers, it extends them to share information in a way that can be read automatically by computers. This enables data from different sources to be connected and queried.\n\n\nLinked Data Principles\n\nUse Uniform Resource Identifiers (URIs) as names for things\nUse HTTP URIs so that people can look up those names.\nWhen someone looks up a URI, provide useful information, using the standards (e.g. RDF, RDFS, SPARQL, etc.)\nInclude links to other URIs so that they can discover more things.\n\nBerners-Lee (2006)",
     "crumbs": [
       "Associated Movements and Principles"
     ]
