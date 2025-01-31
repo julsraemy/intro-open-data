@@ -9,17 +9,29 @@
 
 ## Setup
 1. Clone the repository
+
+```bash
 git clone https://github.com/julsraemy/intro-open-data.git
 cd intro-open-data
+```
 
 2. Install Quarto dependencies
+
+```bash
 quarto install
+```
 
 3. Preview the website
+
+```bash
 quarto preview
+```
 
 4. Build the website
+
+```bash
 quarto render
+```
 
 ## Deployment
 The website is deployed directly from the `gh-pages` branch:
