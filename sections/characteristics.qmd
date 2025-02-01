@@ -708,7 +708,7 @@ Clear and comprehensive documentation plays a vital role in maximizing the value
 - Source code documentation
 
 ### Protocols
-
+ 
 A robust set of rules and standards governs the exchange and accessibility of open data over the internet. These protocols and mechanisms enable accessibility by facilitating standardised and straightforward access to data, which is essential for promoting innovation and transparency. Additionally, they support interoperability, ensuring that data from diverse sources can be efficiently integrated and used together. Below are key technologies and protocols that achieve these goals:
 
 - **Application Programming Interface (API)**: mechanism that enable two software components to communicate with each other

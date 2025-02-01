@@ -8,7 +8,7 @@ authors:
       - Swiss Federal Archives
 date: "2025-01-19"
 date-modified: last-modified
-license: "CC BY"
+license: "CC BY" 
 ---
 
 ## Open Access 

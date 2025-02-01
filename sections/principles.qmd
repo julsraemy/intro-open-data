@@ -123,7 +123,7 @@ format:
 8. Collections as Data stewards work transparently in order to develop trustworthy, long-lived collections.
 9. Data as well as the data that describe those data are considered in scope. 
 10. The development of collections as data is an ongoing process and does not necessarily conclude with a final version. 
-
+ 
 ### Part to Whole
 
 - **Boundary Object Concept**: Collections-as-data serve as flexible tools adaptable to various needs while maintaining a common identity [see @starInstitutionalEcologyTranslations1989].

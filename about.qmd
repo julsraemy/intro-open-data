@@ -18,7 +18,7 @@ format:
         href: https://hesge.ch/heg/is
 ---
 
-## About this Website
+## About this Website 
 
 This website represents the second iteration of the *Introduction to Open Data* course, evolving from its initial form as a Markdown-based presentation [@raemyIntroductionOpenData2024].
 

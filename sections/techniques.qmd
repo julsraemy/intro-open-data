@@ -40,6 +40,6 @@ license: "CC BY"
 <https://github.com/opendatateam/udata>
 
 
-<!-- Sensitive data? LOMAS: https://doi.org/10.48550/arXiv.2406.17087 https://dscc-admin-ch.github.io/lomas-docs/ -->
+<!-- Sensitive data? LOMAS: https://doi.org/10.48550/arXiv.2406.17087 https://dscc-admin-ch.github.io/lomas-docs/  -->
 
 ## References

@@ -57,7 +57,5 @@ This Quarto-based website supersedes the initial Marp presentation from the 2023
 - **Software**: MIT License
 - **Content**: [Creative Commons Attribution 4.0 International (CC BY 4.0)](https://creativecommons.org/licenses/by/4.0/)
 
-## Contact
-Julien Antoine Raemy
-- Mastodon: [@julsraemy@hcommons.social](https://hcommons.social/@julsraemy)
-- ORCID: [0000-0002-4711-5759](https://orcid.org/0000-0002-4711-5759)
+## Cite this repository
+Raemy, J. A. Introduction to Open Data [Course]. https://github.com/julsraemy/intro-open-data

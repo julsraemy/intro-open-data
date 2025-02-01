@@ -52,6 +52,8 @@ These methods are intended to foster both theoretical understanding and practica
 
 (...)
 
+
+
 ## Course Assessment
 
 - Select one or more datasets from one or several platforms discussed during the course (if several datasets are selected, there must be a common thread)

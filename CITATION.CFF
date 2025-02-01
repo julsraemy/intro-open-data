@@ -4,7 +4,7 @@
 cff-version: 1.2.0
 title: Introduction to Open Data
 message: 'If you use this course, please cite it using the metadata'
-type: dataset
+type: course
 authors:
   - given-names: Julien Antoine
     family-names: Raemy
