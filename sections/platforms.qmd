@@ -9,6 +9,13 @@ authors:
 date: "2025-01-19"
 date-modified: last-modified
 license: "CC BY"
+format:
+  html:
+    other-links:
+      - text: Registry of Research Data Repositories
+        href: https://www.re3data.org/
+      - text: Swiss public administration’s central portal for Open Government Data
+        href: https://opendata.swiss/
 ---
 
 ## ORD Platforms

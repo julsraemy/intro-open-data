@@ -43,10 +43,10 @@ These methods are intended to foster both theoretical understanding and practica
 
 | Date 	| Content 	|
 |------------	|----------------------------	|
-| 17.02.2025 	| Course Overview, [Characteristics of Open Data](sections/characteristics.qmd)	| [Associated Movements](sections/movements.qmd)
+| 17.02.2025 	| Course Overview, [Characteristics of Open Data](sections/characteristics.qmd), [Associated Movements](sections/movements.qmd)	| 
 | 24.02.2025 	| [Associated Principles](sections/principles.qmd), [Open Data Platforms](sections/platforms.qmd), [Open Data Organisations](sections/organisations.qmd)                  	|
 | 03.03.2025 	| [Assessment, Data Quality, and Best Practices](sections/assessment.qmd), [Techniques, Software, and Tools](sections/techniques.qmd)                  	|
-| 10.03.2025 	| [Showcases](sections/showcases.qmd), Assignment Workshop                	|
+| 10.03.2025 	| [Showcases](sections/showcases.qmd), Assignment Workshop                	| 
 
 ## Exercises
 

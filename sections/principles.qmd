@@ -9,6 +9,21 @@ authors:
 date: "2025-01-30"
 date-modified: last-modified
 license: "CC BY"
+format:
+  html:
+    other-links:
+      - text: FAIR Data Principles
+        href: https://www.go-fair.org/fair-principles/
+      - text: CARE Principles for Indigenous Data Governance
+        href: https://www.gida-global.org/care
+      - text: Collections as Data
+        href: https://collectionsasdata.github.io/
+      - text: Linked Data
+        href: https://www.w3.org/DesignIssues/LinkedData.html
+      - text: 5-star Deployment Scheme for Open Data
+        href: https://5stardata.info/
+      - text: Linked Open Usable Data (LOUD)
+        href: https://linked.art/loud
 ---
 
 ## FAIR Data Principles 
