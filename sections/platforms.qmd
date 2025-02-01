@@ -9,20 +9,34 @@ authors:
 date: "2025-01-19"
 date-modified: last-modified
 license: "CC BY"
-format:
-  html:
-    other-links:
-      - text: Registry of Research Data Repositories
-        href: https://www.re3data.org/
-      - text: Swiss public administration’s central portal for Open Government Data
-        href: https://opendata.swiss/
+listing:
+  id: platforms
+  contents:
+    -   title: "Registry of Research Data Repositories"
+        path: https://www.re3data.org/
+        description: "International registry that includes data repositories from various academic disciplines "
+        image: https://upload.wikimedia.org/wikipedia/commons/f/fe/Re3data_Logo_RGB_72dpi.png
+        categories: [ord]
+    -   title: "SwissUbase"
+        path: https://www.swissubase.ch/
+        description: "National cross-disciplinary solution operated by [FORS](https://forscenter.ch/)"
+        image: https://www.swissubase.ch/swissubase-logo.webp
+        categories: [ord]
+    -   title: "DaSCH Service Platform (DSP)"
+        path: https://app.dasch.swiss/
+        description: "National research infrastructure for preserving long-term Humanities Data"
+        image: https://app.dasch.swiss/assets/images/dasch-mosaic-icon-color.svg
+        categories: [ord]
+  sort-ui: [title, coverage, categories]
+  filter-ui: [description]
+  type: grid
+  page-size: 36
 ---
 
-## ORD Platforms
+## Platforms
 
-## OGD Platforms
-
-## Open Data Organisations
+::: {#platforms}
+:::
 
 
 

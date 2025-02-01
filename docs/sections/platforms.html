@@ -34,6 +34,8 @@ ul.task-list li input[type="checkbox"] {
 <link href="../sections/organisations.html" rel="next">
 <link href="../sections/principles.html" rel="prev">
 <link href="../android-chrome-512x512.png" rel="icon" type="image/png">
+<script src="../site_libs/quarto-listing/list.min.js"></script>
+<script src="../site_libs/quarto-listing/quarto-listing.js"></script>
 <script src="../site_libs/quarto-html/quarto.js"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -72,7 +74,65 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
+<script>
 
+  window.document.addEventListener("DOMContentLoaded", function (_event) {
+    const listingTargetEl = window.document.querySelector('#listing-platforms .list');
+    if (!listingTargetEl) {
+      // No listing discovered, do not attach.
+      return; 
+    }
+
+    const options = {
+      valueNames: ['listing-title','listing-description','listing-image','listing-categories',{ data: ['index'] },{ data: ['categories'] }],
+      
+      searchColumns: ["listing-description"],
+    };
+
+    window['quarto-listings'] = window['quarto-listings'] || {};
+    window['quarto-listings']['listing-platforms'] = new List('listing-platforms', options);
+
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  });
+
+  window.addEventListener('hashchange',() => {
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  })
+  </script>
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 <link rel="stylesheet" href="../styles/custom.scss">
 <meta property="og:title" content="Open Data Platforms – Introduction to Open Data">
@@ -241,11 +301,9 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#ord-platforms" id="toc-ord-platforms" class="nav-link active" data-scroll-target="#ord-platforms">ORD Platforms</a></li>
-  <li><a href="#ogd-platforms" id="toc-ogd-platforms" class="nav-link" data-scroll-target="#ogd-platforms">OGD Platforms</a></li>
-  <li><a href="#open-data-organisations" id="toc-open-data-organisations" class="nav-link" data-scroll-target="#open-data-organisations">Open Data Organisations</a></li>
+  <li><a href="#platforms" id="toc-platforms" class="nav-link active" data-scroll-target="#platforms">Platforms</a></li>
   </ul>
-<div class="toc-actions"><ul><li><a href="https://github.com/julsraemy/intro-open-data/edit/main/sections/platforms.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/julsraemy/intro-open-data/issues/new/choose" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div><div class="quarto-other-links"><h2>Other Links</h2><ul><li><a href="https://www.re3data.org/"><i class="bi bi-link-45deg"></i>Registry of Research Data Repositories</a></li><li><a href="https://opendata.swiss/"><i class="bi bi-link-45deg"></i>Swiss public administration’s central portal for Open Government Data</a></li></ul></div></nav>
+<div class="toc-actions"><ul><li><a href="https://github.com/julsraemy/intro-open-data/edit/main/sections/platforms.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/julsraemy/intro-open-data/issues/new/choose" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content column-body" id="quarto-document-content">
@@ -294,14 +352,101 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="ord-platforms" class="level2">
-<h2 class="anchored" data-anchor-id="ord-platforms">ORD Platforms</h2>
-</section>
-<section id="ogd-platforms" class="level2">
-<h2 class="anchored" data-anchor-id="ogd-platforms">OGD Platforms</h2>
-</section>
-<section id="open-data-organisations" class="level2">
-<h2 class="anchored" data-anchor-id="open-data-organisations">Open Data Organisations</h2>
+<section id="platforms" class="level2">
+<h2 class="anchored" data-anchor-id="platforms">Platforms</h2>
+<div id="listing-platforms" class="quarto-listing quarto-listing-container-grid">
+<div class="listing-actions-group">
+   <div class="input-group input-group-sm quarto-listing-sort">
+     <span class="input-group-text"><i class="bi bi-sort-down"></i></span>
+     <select id="listing-platforms-sort" class="form-select" aria-label="Order By" onchange="window['quarto-listings']['listing-platforms'].sort(this.options[this.selectedIndex].value, { order: this.options[this.selectedIndex].getAttribute('data-direction')})">
+       <option value="" disabled="" selected="" hidden="">Order By</option>
+       <option value="index" data-direction="asc">Default</option>
+         <option value="listing-title" data-direction="asc">
+          Title
+        </option>
+         <option value="listing-categories" data-direction="asc">
+          Categories
+        </option>
+     </select>
+  </div>
+    <div class="input-group input-group-sm quarto-listing-filter">
+      <span class="input-group-text"><i class="bi bi-search"></i></span>
+      <input type="text" class="search form-control" placeholder="Filter">
+    </div>
+</div>
+<div class="list grid quarto-listing-cols-3">
+<div class="g-col-1" data-index="0" data-categories="ord">
+<a href="https://www.re3data.org/" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top">
+<img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/f/fe/Re3data_Logo_RGB_72dpi.png" class="thumbnail-image card-img" style="height: 150px;">
+</p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+Registry of Research Data Repositories
+</h5>
+<div class="listing-categories">
+<div class="listing-category" onclick="window.quartoListingCategory('ord'); return false;">
+ord
+</div>
+</div>
+<div class="card-text listing-description">
+International registry that includes data repositories from various academic disciplines
+</div>
+</div>
+</div>
+</a>
+</div>
+<div class="g-col-1" data-index="1" data-categories="ord">
+<a href="https://www.swissubase.ch/" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top">
+<img loading="lazy" src="https://www.swissubase.ch/swissubase-logo.webp" class="thumbnail-image card-img" style="height: 150px;">
+</p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+SwissUbase
+</h5>
+<div class="listing-categories">
+<div class="listing-category" onclick="window.quartoListingCategory('ord'); return false;">
+ord
+</div>
+</div>
+<div class="card-text listing-description">
+National cross-disciplinary solution operated by <span>FORS</span>
+</div>
+</div>
+</div>
+</a>
+</div>
+<div class="g-col-1" data-index="2" data-categories="ord">
+<a href="https://app.dasch.swiss/" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top">
+<img loading="lazy" src="https://app.dasch.swiss/assets/images/dasch-mosaic-icon-color.svg" class="thumbnail-image card-img" style="height: 150px;">
+</p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+DaSCH Service Platform (DSP)
+</h5>
+<div class="listing-categories">
+<div class="listing-category" onclick="window.quartoListingCategory('ord'); return false;">
+ord
+</div>
+</div>
+<div class="card-text listing-description">
+National research infrastructure for preserving long-term Humanities Data
+</div>
+</div>
+</div>
+</a>
+</div>
+</div>
+<div class="listing-no-matching d-none">
+No matching items
+</div>
+</div>
+
 
 
 </section>
