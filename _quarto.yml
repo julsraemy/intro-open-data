@@ -63,13 +63,8 @@ website:
         - sections/showcases.qmd
   
   page-footer:
-    left: "Julien A. Raemy | Introduction to Open Data | Content licensed under a Creative Commons Attribution 4.0 International license" 
-    right: 
-      - icon: github
-        href: https://github.com/julsraemy
-      - icon: mastodon
-        href: https://hcommons.social/@julsraemy
-
+    left: "Julien A. Raemy | Introduction to Open Data" 
+    right: "Content licensed under a Creative Commons Attribution 4.0 International license (CC BY 4.0)"
 format:
   html:
     theme: 
