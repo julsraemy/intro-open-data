@@ -9,11 +9,25 @@ authors:
 date: "2025-02-01"
 date-modified: last-modified
 license: "CC BY"
+listing:
+  id: orgs
+  contents:
+    -   title: "Open Knowledge Network"
+        path: https://okfn.org/
+        description: "Foundation launched in 2011 whose mission is to create a fair, sustainable and open digital future, advancing open knowledge as a design principle beyond just data."
+        image: https://okfn.org/assets/images/lg-okfn.svg
+        categories: [foundation]
+  sort-ui: [title, categories]
+  filter-ui: [description]
+  type: grid
+  page-size: 36
 ---
 
-## Open Knowledge Network
+## Organisations
 
-...
+::: {#orgs}
+:::
+
 
 
 

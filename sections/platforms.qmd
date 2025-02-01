@@ -27,7 +27,7 @@ listing:
         description: "National research infrastructure for preserving long-term Humanities Data"
         image: https://app.dasch.swiss/assets/images/dasch-mosaic-icon-color.svg
         categories: [ord]
-  sort-ui: [title, coverage, categories]
+  sort-ui: [title, categories]
   filter-ui: [description]
   type: grid
   page-size: 36
@@ -37,6 +37,7 @@ listing:
 
 ::: {#platforms}
 :::
+
 
 
 
