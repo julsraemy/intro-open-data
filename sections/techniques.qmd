@@ -34,7 +34,7 @@ license: "CC BY"
 <https://entryscape.com/> <br />
 <https://bitbucket.org/metasolutions/>
 
-### uData
+### uData 
 
 <https://udata.readthedocs.io/> <br />
 <https://github.com/opendatateam/udata>

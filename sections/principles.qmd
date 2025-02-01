@@ -11,7 +11,7 @@ date-modified: last-modified
 license: "CC BY"
 ---
 
-## FAIR Data Principles
+## FAIR Data Principles 
 
 ![](https://upload.wikimedia.org/wikipedia/commons/a/aa/FAIR_data_principles.jpg)
 

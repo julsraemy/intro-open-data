@@ -39,7 +39,20 @@ The course employs the following methods to support learning:
 
 These methods are intended to foster both theoretical understanding and practical application of the course material.
 
-## Assessment
+## Course Outline (2024-2025)
+
+| Date 	| Content 	|
+|------------	|----------------------------	|
+| 17.02.2025 	| Course Overview, [Characteristics of Open Data](sections/characteristics.qmd)	| [Associated Movements](sections/movements.qmd)
+| 24.02.2025 	| [Associated Principles](sections/principles.qmd), [Open Data Platforms](sections/platforms.qmd), [Open Data Organisations](sections/organisations.qmd)                  	|
+| 03.03.2025 	| [Assessment, Data Quality, and Best Practices](sections/assessment.qmd), [Techniques, Software, and Tools](sections/techniques.qmd)                  	|
+| 10.03.2025 	| [Showcases](sections/showcases.qmd), Assignment Workshop                	|
+
+## Exercises
+
+(...)
+
+## Course Assessment
 
 - Select one or more datasets from one or several platforms discussed during the course (if several datasets are selected, there must be a common thread)
 - Analyse, describe and identify the potential uses of the dataset(s)

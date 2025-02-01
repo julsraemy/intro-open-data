@@ -11,7 +11,7 @@ date-modified: last-modified
 license: "CC BY"
 ---
 
-## Open Access
+## Open Access 
 
 ### Berlin Declaration on Open Access to Knowledge in the Sciences and Humanities
 
