@@ -9,6 +9,11 @@ authors:
 date: "2025-01-19"
 date-modified: last-modified
 license: "CC BY"
+format:
+  html:
+    other-links:
+      - text: HEG-GE Bachelor Information Science
+        href: https://hesge.ch/heg/is
 ---
 
 ## About this Website

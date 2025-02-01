@@ -1,0 +1,16 @@
+---
+title: "Open Data Organisations"
+authors: 
+  - name: Julien A. Raemy
+    orcid: 0000-0002-4711-5759
+    email: julien.raemy@bar.admin.ch
+    affiliations:
+      - Swiss Federal Archives
+date: "2025-02-01"
+date-modified: last-modified
+license: "CC BY"
+---
+
+## Open Knowledge Network
+
+...

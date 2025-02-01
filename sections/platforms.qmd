@@ -1,5 +1,5 @@
 ---
-title: "Platforms and Organisations"
+title: "Open Data Platforms"
 authors: 
   - name: Julien A. Raemy
     orcid: 0000-0002-4711-5759

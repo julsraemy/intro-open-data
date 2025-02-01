@@ -8,7 +8,7 @@
 
 <meta name="dcterms.date" content="2025-01-19">
 
-<title>Associated Movements and Principles – Introduction to Open Data</title>
+<title>Associated Movements – Introduction to Open Data</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,40 +20,6 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
-}
-/* CSS for syntax highlighting */
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-div.sourceCode { margin: 1em 0; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
-}
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-  }
-pre.numberSource { margin-left: 3em;  padding-left: 4px; }
-div.sourceCode
-  {   }
-@media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 /* CSS for citations */
 div.csl-bib-body { }
@@ -85,7 +51,7 @@ div.csl-indent {
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
-<link href="../sections/platforms.html" rel="next">
+<link href="../sections/principles.html" rel="next">
 <link href="../sections/characteristics.html" rel="prev">
 <script src="../site_libs/quarto-html/quarto.js"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
@@ -126,43 +92,12 @@ div.csl-indent {
   }
 }</script>
 
-  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
-
-<script type="text/javascript">
-const typesetMath = (el) => {
-  if (window.MathJax) {
-    // MathJax Typeset
-    window.MathJax.typeset([el]);
-  } else if (window.katex) {
-    // KaTeX Render
-    var mathElements = el.getElementsByClassName("math");
-    var macros = [];
-    for (var i = 0; i < mathElements.length; i++) {
-      var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN") {
-        window.katex.render(texText.data, mathElements[i], {
-          displayMode: mathElements[i].classList.contains('display'),
-          throwOnError: false,
-          macros: macros,
-          fleqn: false
-        });
-      }
-    }
-  }
-}
-window.Quarto = {
-  typesetMath
-};
-</script>
 
 <link rel="stylesheet" href="../styles/custom.scss">
-<meta property="og:title" content="Associated Movements and Principles – Introduction to Open Data">
-<meta property="og:description" content="">
+<meta property="og:title" content="Associated Movements – Introduction to Open Data">
 <meta property="og:image" content="https://julsraemy.ch/intro-open-data/sections/data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA2ZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDo1N0NEMjA4MDI1MjA2ODExOTk0QzkzNTEzRjZEQTg1NyIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDozM0NDOEJGNEZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDozM0NDOEJGM0ZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ1M1IE1hY2ludG9zaCI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOkZDN0YxMTc0MDcyMDY4MTE5NUZFRDc5MUM2MUUwNEREIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjU3Q0QyMDgwMjUyMDY4MTE5OTRDOTM1MTNGNkRBODU3Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+84NovQAAAR1JREFUeNpiZEADy85ZJgCpeCB2QJM6AMQLo4yOL0AWZETSqACk1gOxAQN+cAGIA4EGPQBxmJA0nwdpjjQ8xqArmczw5tMHXAaALDgP1QMxAGqzAAPxQACqh4ER6uf5MBlkm0X4EGayMfMw/Pr7Bd2gRBZogMFBrv01hisv5jLsv9nLAPIOMnjy8RDDyYctyAbFM2EJbRQw+aAWw/LzVgx7b+cwCHKqMhjJFCBLOzAR6+lXX84xnHjYyqAo5IUizkRCwIENQQckGSDGY4TVgAPEaraQr2a4/24bSuoExcJCfAEJihXkWDj3ZAKy9EJGaEo8T0QSxkjSwORsCAuDQCD+QILmD1A9kECEZgxDaEZhICIzGcIyEyOl2RkgwAAhkmC+eAm0TAAAAABJRU5ErkJggg==">
 <meta property="og:site_name" content="Introduction to Open Data">
-<meta name="twitter:title" content="Associated Movements and Principles – Introduction to Open Data">
-<meta name="twitter:description" content="">
+<meta name="twitter:title" content="Associated Movements – Introduction to Open Data">
 <meta name="twitter:image" content="https://julsraemy.ch/intro-open-data/sections/data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA2ZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDo1N0NEMjA4MDI1MjA2ODExOTk0QzkzNTEzRjZEQTg1NyIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDozM0NDOEJGNEZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDozM0NDOEJGM0ZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ1M1IE1hY2ludG9zaCI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOkZDN0YxMTc0MDcyMDY4MTE5NUZFRDc5MUM2MUUwNEREIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjU3Q0QyMDgwMjUyMDY4MTE5OTRDOTM1MTNGNkRBODU3Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+84NovQAAAR1JREFUeNpiZEADy85ZJgCpeCB2QJM6AMQLo4yOL0AWZETSqACk1gOxAQN+cAGIA4EGPQBxmJA0nwdpjjQ8xqArmczw5tMHXAaALDgP1QMxAGqzAAPxQACqh4ER6uf5MBlkm0X4EGayMfMw/Pr7Bd2gRBZogMFBrv01hisv5jLsv9nLAPIOMnjy8RDDyYctyAbFM2EJbRQw+aAWw/LzVgx7b+cwCHKqMhjJFCBLOzAR6+lXX84xnHjYyqAo5IUizkRCwIENQQckGSDGY4TVgAPEaraQr2a4/24bSuoExcJCfAEJihXkWDj3ZAKy9EJGaEo8T0QSxkjSwORsCAuDQCD+QILmD1A9kECEZgxDaEZhICIzGcIyEyOl2RkgwAAhkmC+eAm0TAAAAABJRU5ErkJggg==">
 <meta name="twitter:card" content="summary_large_image">
 </head>
@@ -203,11 +138,19 @@ window.Quarto = {
   </li>  
         <li>
     <a class="dropdown-item" href="../sections/movements.html">
- <span class="dropdown-text">Associated Movements and Principles</span></a>
+ <span class="dropdown-text">Associated Movements</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../sections/principles.html">
+ <span class="dropdown-text">Associated Principles</span></a>
   </li>  
         <li>
     <a class="dropdown-item" href="../sections/platforms.html">
- <span class="dropdown-text">Platforms and Organisations</span></a>
+ <span class="dropdown-text">Open Data Platforms</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../sections/organisations.html">
+ <span class="dropdown-text">Open Data Organisations</span></a>
   </li>  
         <li>
     <a class="dropdown-item" href="../sections/assessment.html">
@@ -244,7 +187,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../sections/movements.html">Associated Movements and Principles</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../sections/movements.html">Associated Movements</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
@@ -265,13 +208,25 @@ window.Quarto = {
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../sections/movements.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text">Associated Movements and Principles</span></a>
+ <span class="menu-text">Associated Movements</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../sections/principles.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Associated Principles</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../sections/platforms.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Platforms and Organisations</span></a>
+ <span class="menu-text">Open Data Platforms</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../sections/organisations.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Open Data Organisations</span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -303,7 +258,7 @@ window.Quarto = {
    
   <ul>
   <li><a href="#open-access" id="toc-open-access" class="nav-link active" data-scroll-target="#open-access">Open Access</a>
-  <ul class="collapse">
+  <ul>
   <li><a href="#berlin-declaration-on-open-access-to-knowledge-in-the-sciences-and-humanities" id="toc-berlin-declaration-on-open-access-to-knowledge-in-the-sciences-and-humanities" class="nav-link" data-scroll-target="#berlin-declaration-on-open-access-to-knowledge-in-the-sciences-and-humanities">Berlin Declaration on Open Access to Knowledge in the Sciences and Humanities</a></li>
   <li><a href="#definitions" id="toc-definitions" class="nav-link" data-scroll-target="#definitions">Definitions</a></li>
   <li><a href="#gold-open-access" id="toc-gold-open-access" class="nav-link" data-scroll-target="#gold-open-access">Gold Open Access</a></li>
@@ -315,52 +270,17 @@ window.Quarto = {
   <li><a href="#black-open-access" id="toc-black-open-access" class="nav-link" data-scroll-target="#black-open-access">Black Open Access</a></li>
   </ul></li>
   <li><a href="#open-science-open-scholarship" id="toc-open-science-open-scholarship" class="nav-link" data-scroll-target="#open-science-open-scholarship">Open Science / Open Scholarship</a>
-  <ul class="collapse">
+  <ul>
   <li><a href="#definition" id="toc-definition" class="nav-link" data-scroll-target="#definition">Definition</a></li>
   <li><a href="#open-scholarship-expanding-the-reach-of-open-science" id="toc-open-scholarship-expanding-the-reach-of-open-science" class="nav-link" data-scroll-target="#open-scholarship-expanding-the-reach-of-open-science">Open Scholarship: Expanding the Reach of Open Science</a></li>
   </ul></li>
   <li><a href="#open-source-free-software-floss" id="toc-open-source-free-software-floss" class="nav-link" data-scroll-target="#open-source-free-software-floss">Open Source / Free Software / F(L)OSS</a>
-  <ul class="collapse">
+  <ul>
   <li><a href="#definition-and-philosophy" id="toc-definition-and-philosophy" class="nav-link" data-scroll-target="#definition-and-philosophy">Definition and Philosophy</a></li>
   <li><a href="#key-characteristics" id="toc-key-characteristics" class="nav-link" data-scroll-target="#key-characteristics">Key Characteristics</a></li>
   <li><a href="#criteria" id="toc-criteria" class="nav-link" data-scroll-target="#criteria">Criteria</a></li>
   <li><a href="#free-software" id="toc-free-software" class="nav-link" data-scroll-target="#free-software">Free Software</a></li>
   <li><a href="#freelibre-and-open-source-software" id="toc-freelibre-and-open-source-software" class="nav-link" data-scroll-target="#freelibre-and-open-source-software">Free/Libre and Open Source Software</a></li>
-  </ul></li>
-  <li><a href="#fair-data-principles" id="toc-fair-data-principles" class="nav-link" data-scroll-target="#fair-data-principles">FAIR Data Principles</a>
-  <ul class="collapse">
-  <li><a href="#findable" id="toc-findable" class="nav-link" data-scroll-target="#findable">Findable</a></li>
-  <li><a href="#accessible" id="toc-accessible" class="nav-link" data-scroll-target="#accessible">Accessible</a></li>
-  <li><a href="#interoperable" id="toc-interoperable" class="nav-link" data-scroll-target="#interoperable">Interoperable</a></li>
-  <li><a href="#reusable" id="toc-reusable" class="nav-link" data-scroll-target="#reusable">Reusable</a></li>
-  </ul></li>
-  <li><a href="#care-principles-for-indigenous-data-governance" id="toc-care-principles-for-indigenous-data-governance" class="nav-link" data-scroll-target="#care-principles-for-indigenous-data-governance">CARE Principles for Indigenous Data Governance</a>
-  <ul class="collapse">
-  <li><a href="#collective-benefit" id="toc-collective-benefit" class="nav-link" data-scroll-target="#collective-benefit">Collective Benefit</a></li>
-  <li><a href="#authority-to-control" id="toc-authority-to-control" class="nav-link" data-scroll-target="#authority-to-control">Authority to Control</a></li>
-  <li><a href="#responsibility" id="toc-responsibility" class="nav-link" data-scroll-target="#responsibility">Responsibility</a></li>
-  <li><a href="#ethics" id="toc-ethics" class="nav-link" data-scroll-target="#ethics">Ethics</a></li>
-  <li><a href="#care-and-fair" id="toc-care-and-fair" class="nav-link" data-scroll-target="#care-and-fair">CARE and FAIR</a></li>
-  </ul></li>
-  <li><a href="#collections-as-data" id="toc-collections-as-data" class="nav-link" data-scroll-target="#collections-as-data">Collections as Data</a>
-  <ul class="collapse">
-  <li><a href="#summits" id="toc-summits" class="nav-link" data-scroll-target="#summits">Summits</a></li>
-  <li><a href="#main-outputs" id="toc-main-outputs" class="nav-link" data-scroll-target="#main-outputs">Main outputs</a></li>
-  <li><a href="#principles" id="toc-principles" class="nav-link" data-scroll-target="#principles">10 Principles</a></li>
-  <li><a href="#part-to-whole" id="toc-part-to-whole" class="nav-link" data-scroll-target="#part-to-whole">Part to Whole</a></li>
-  <li><a href="#checklist-to-publish-collections-as-data-in-glam-institutions" id="toc-checklist-to-publish-collections-as-data-in-glam-institutions" class="nav-link" data-scroll-target="#checklist-to-publish-collections-as-data-in-glam-institutions">Checklist to publish Collections as Data in GLAM institutions</a></li>
-  <li><a href="#workflow" id="toc-workflow" class="nav-link" data-scroll-target="#workflow">Workflow</a></li>
-  <li><a href="#implementation-at-the-royal-library-of-belgium" id="toc-implementation-at-the-royal-library-of-belgium" class="nav-link" data-scroll-target="#implementation-at-the-royal-library-of-belgium">Implementation at the Royal Library of Belgium</a></li>
-  </ul></li>
-  <li><a href="#linked-open-usable-data" id="toc-linked-open-usable-data" class="nav-link" data-scroll-target="#linked-open-usable-data">Linked (Open) (Usable) Data</a>
-  <ul class="collapse">
-  <li><a href="#an-open-vision-of-the-web" id="toc-an-open-vision-of-the-web" class="nav-link" data-scroll-target="#an-open-vision-of-the-web">An Open Vision of the Web</a></li>
-  <li><a href="#linked-data" id="toc-linked-data" class="nav-link" data-scroll-target="#linked-data">Linked Data</a></li>
-  <li><a href="#linked-data-principles" id="toc-linked-data-principles" class="nav-link" data-scroll-target="#linked-data-principles">Linked Data Principles</a></li>
-  <li><a href="#linked-open-data-lod" id="toc-linked-open-data-lod" class="nav-link" data-scroll-target="#linked-open-data-lod">Linked Open Data (LOD)</a></li>
-  <li><a href="#the-semantic-web-or-the-web-of-data" id="toc-the-semantic-web-or-the-web-of-data" class="nav-link" data-scroll-target="#the-semantic-web-or-the-web-of-data">The Semantic Web or <em>the Web of Data</em></a></li>
-  <li><a href="#resource-description-framework-rdf" id="toc-resource-description-framework-rdf" class="nav-link" data-scroll-target="#resource-description-framework-rdf">Resource Description Framework (RDF)</a></li>
-  <li><a href="#linked-open-usable-data-loud" id="toc-linked-open-usable-data-loud" class="nav-link" data-scroll-target="#linked-open-usable-data-loud">Linked Open Usable Data (LOUD)</a></li>
   </ul></li>
   <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references">References</a></li>
   </ul>
@@ -371,7 +291,7 @@ window.Quarto = {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Associated Movements and Principles</h1>
+<h1 class="title">Associated Movements</h1>
 </div>
 
 
@@ -402,7 +322,7 @@ window.Quarto = {
     <div>
     <div class="quarto-title-meta-heading">Modified</div>
     <div class="quarto-title-meta-contents">
-      <p class="date-modified">January 31, 2025</p>
+      <p class="date-modified">February 1, 2025</p>
     </div>
   </div>
     
@@ -540,878 +460,6 @@ window.Quarto = {
 <p>“Neutral stance”: See <a href="https://www.gnu.org/philosophy/floss-and-foss.en.html" class="uri">https://www.gnu.org/philosophy/floss-and-foss.en.html</a></p>
 </section>
 </section>
-<section id="fair-data-principles" class="level2">
-<h2 class="anchored" data-anchor-id="fair-data-principles">FAIR Data Principles</h2>
-<p><img src="https://upload.wikimedia.org/wikipedia/commons/a/aa/FAIR_data_principles.jpg" class="img-fluid"></p>
-<p><a href="https://www.go-fair.org/fair-principles/" class="uri">https://www.go-fair.org/fair-principles/</a> <span class="citation" data-cites="wilkinsonFAIRGuidingPrinciples2016">(<a href="#ref-wilkinsonFAIRGuidingPrinciples2016" role="doc-biblioref">Wilkinson et al., 2016</a>)</span></p>
-<section id="findable" class="level3">
-<h3 class="anchored" data-anchor-id="findable">Findable</h3>
-<ul>
-<li>F1. (Meta)data are assigned a globally unique and persistent identifier</li>
-<li>F2. Data are described with rich metadata (defined by R1)</li>
-<li>F3. Metadata clearly and explicitly include the identifier of the data they describe</li>
-<li>F4. (Meta)data are registered or indexed in a searchable resource</li>
-</ul>
-</section>
-<section id="accessible" class="level3">
-<h3 class="anchored" data-anchor-id="accessible">Accessible</h3>
-<ul>
-<li>A1. (Meta)data are retrievable by their identifier using a standardised communications protocol
-<ul>
-<li>A1.1 The protocol is open, free, and universally implementable</li>
-<li>A1.2 The protocol allows for an authentication and authorisation procedure, where necessary</li>
-</ul></li>
-<li>A2. Metadata are accessible, even when the data are no longer available</li>
-</ul>
-</section>
-<section id="interoperable" class="level3">
-<h3 class="anchored" data-anchor-id="interoperable">Interoperable</h3>
-<ul>
-<li>I1. (Meta)data use a formal, accessible, shared, and broadly applicable language for knowledge representation.</li>
-<li>I2. (Meta)data use vocabularies that follow FAIR principles</li>
-<li>I3. (Meta)data include qualified references to other (meta)data</li>
-</ul>
-</section>
-<section id="reusable" class="level3">
-<h3 class="anchored" data-anchor-id="reusable">Reusable</h3>
-<ul>
-<li>R1. (Meta)data are richly described with a plurality of accurate and relevant attributes
-<ul>
-<li>R1.1. (Meta)data are released with a clear and accessible data usage license</li>
-<li>R1.2. (Meta)data are associated with detailed provenance</li>
-<li>R1.3. (Meta)data meet domain-relevant community standards</li>
-</ul></li>
-</ul>
-</section>
-</section>
-<section id="care-principles-for-indigenous-data-governance" class="level2">
-<h2 class="anchored" data-anchor-id="care-principles-for-indigenous-data-governance">CARE Principles for Indigenous Data Governance</h2>
-<p><img src="https://images.squarespace-cdn.com/content/v1/5d3799de845604000199cd24/1567592451970-2R8XFL670QNMAGDRV7ED/Be+FAIR+and+CARE.png" class="img-fluid"></p>
-<p><span class="citation" data-cites="carrollCAREPrinciplesIndigenous2020">Carroll et al. (<a href="#ref-carrollCAREPrinciplesIndigenous2020" role="doc-biblioref">2020</a>)</span></p>
-<section id="collective-benefit" class="level3">
-<h3 class="anchored" data-anchor-id="collective-benefit">Collective Benefit</h3>
-<ul>
-<li>C1. For inclusive development and innovation</li>
-<li>C2. For improved governance and citizen engagement</li>
-<li>C3. For equitable outcomes</li>
-</ul>
-</section>
-<section id="authority-to-control" class="level3">
-<h3 class="anchored" data-anchor-id="authority-to-control">Authority to Control</h3>
-<ul>
-<li>A1. Recognizing rights and interests</li>
-<li>A2. Data for governance</li>
-<li>A3. Governance of data</li>
-</ul>
-</section>
-<section id="responsibility" class="level3">
-<h3 class="anchored" data-anchor-id="responsibility">Responsibility</h3>
-<ul>
-<li>R1. For positive relationships</li>
-<li>R2. For expanding capability and capacity</li>
-<li>R3. For Indigenous languages and worldviews</li>
-</ul>
-</section>
-<section id="ethics" class="level3">
-<h3 class="anchored" data-anchor-id="ethics">Ethics</h3>
-<ul>
-<li>E1. For minimizing harm and maximizing benefit</li>
-<li>E2. For justice</li>
-<li>E3. For future use</li>
-</ul>
-</section>
-<section id="care-and-fair" class="level3">
-<h3 class="anchored" data-anchor-id="care-and-fair">CARE and FAIR</h3>
-<p><img src="https://media.springernature.com/full/springer-static/image/art%3A10.1038%2Fs41597-021-00892-0/MediaObjects/41597_2021_892_Fig2_HTML.png" class="img-fluid"></p>
-<p><span class="citation" data-cites="carrollOperationalizingCAREFAIR2021">Carroll et al. (<a href="#ref-carrollOperationalizingCAREFAIR2021" role="doc-biblioref">2021</a>)</span></p>
-</section>
-</section>
-<section id="collections-as-data" class="level2">
-<h2 class="anchored" data-anchor-id="collections-as-data">Collections as Data</h2>
-<p><img src="https://raw.githubusercontent.com/collectionsasdata/part2whole/master/_posts/cad_logo_matte.png" class="img-fluid"></p>
-<section id="summits" class="level3">
-<h3 class="anchored" data-anchor-id="summits">Summits</h3>
-<ul>
-<li>2017: Santa Barbara Statement <span class="citation" data-cites="padillaAlwaysAlreadyComputational2017">(<a href="#ref-padillaAlwaysAlreadyComputational2017" role="doc-biblioref">Padilla et al., 2017</a>)</span></li>
-<li>2023: Vancouver Statement <span class="citation" data-cites="padillaVancouverStatementCollections2023">(<a href="#ref-padillaVancouverStatementCollections2023" role="doc-biblioref">Padilla, Scates Kettler, Varner, et al., 2023</a>)</span></li>
-</ul>
-</section>
-<section id="main-outputs" class="level3">
-<h3 class="anchored" data-anchor-id="main-outputs">Main outputs</h3>
-<ul>
-<li>10 principles</li>
-<li>‘Part to Whole’ Report</li>
-<li>Related checklist and initiatives</li>
-</ul>
-<p><a href="https://collectionsasdata.github.io/statement/" class="uri">https://collectionsasdata.github.io/statement/</a></p>
-</section>
-<section id="principles" class="level3">
-<h3 class="anchored" data-anchor-id="principles">10 Principles</h3>
-<ol type="1">
-<li>Collections as Data development aims to encourage computational use of digitised and born digital collections.</li>
-<li>Collections as Data stewards are guided by ongoing ethical commitments.</li>
-<li>Collections as Data stewards aim to lower barriers to use.</li>
-<li>Collections as Data designed for everyone serve no one.</li>
-<li>Shared documentation helps others find a path to doing the work.</li>
-<li>Collections as Data should be made openly accessible by default, except in cases where ethical or legal obligations preclude it.</li>
-<li>Collections as Data development values interoperability.</li>
-<li>Collections as Data stewards work transparently in order to develop trustworthy, long-lived collections.</li>
-<li>Data as well as the data that describe those data are considered in scope.</li>
-<li>The development of collections as data is an ongoing process and does not necessarily conclude with a final version.</li>
-</ol>
-</section>
-<section id="part-to-whole" class="level3">
-<h3 class="anchored" data-anchor-id="part-to-whole">Part to Whole</h3>
-<ul>
-<li><strong>Boundary Object Concept</strong>: Collections-as-data serve as flexible tools adaptable to various needs while maintaining a common identity <span class="citation" data-cites="starInstitutionalEcologyTranslations1989">(see <a href="#ref-starInstitutionalEcologyTranslations1989" role="doc-biblioref">Star &amp; Griesemer, 1989</a>)</span>.</li>
-<li><strong>Ethical Considerations</strong>: Emphasis on ethical development and use of collections, especially concerning marginalized communities.</li>
-<li><strong>Community Engagement</strong>: Essential for respecting and understanding the context of collections.</li>
-<li><strong>Organisational Structure Support</strong>: Effective initiatives require collaboration across various organisational departments.</li>
-<li><strong>Documentation Importance</strong>: Crucial for understanding and maintaining collections in the future.</li>
-<li><strong>Community of Practice</strong>: Emphasises the need for skill sharing and collaborative environments.</li>
-<li><strong>Future Challenges and Opportunities</strong>
-<ul>
-<li>Integration of AI and computational tools in collections.</li>
-<li>Navigating the balance between global collaboration and local cultural sensitivities.</li>
-<li>Addressing financial and resource limitations for global community growth.</li>
-<li>Potential and risks of using collections as data for AI training.</li>
-</ul></li>
-</ul>
-<p><span class="citation" data-cites="padillaCollectionsDataPart2023">Padilla, Scates Kettler, &amp; Shorish (<a href="#ref-padillaCollectionsDataPart2023" role="doc-biblioref">2023</a>)</span></p>
-</section>
-<section id="checklist-to-publish-collections-as-data-in-glam-institutions" class="level3">
-<h3 class="anchored" data-anchor-id="checklist-to-publish-collections-as-data-in-glam-institutions">Checklist to publish Collections as Data in GLAM institutions</h3>
-<ol type="1">
-<li>Provide a clear license allowing reuse of the dataset without restrictions</li>
-<li>Provide a suggestion of how to cite your dataset</li>
-<li>Include documentation about the dataset</li>
-<li>Use a public platform to publish the dataset</li>
-<li>Share examples of use as additional documentation</li>
-<li>Give structure to the dataset</li>
-<li>Provide machine-readable metadata (about the dataset itself)</li>
-<li>Include your dataset in collaborative edition platforms</li>
-<li>Offer an API to access your repository</li>
-<li>Develop a portal page</li>
-<li>Add a terms of use</li>
-</ol>
-<p><span class="citation" data-cites="candelaChecklistPublishCollections2023a">Candela et al. (<a href="#ref-candelaChecklistPublishCollections2023a" role="doc-biblioref">2023</a>)</span></p>
-</section>
-<section id="workflow" class="level3">
-<h3 class="anchored" data-anchor-id="workflow">Workflow</h3>
-<p><img src="https://julsraemy.ch/prezi/assets/cad-workflow.jpg" class="img-fluid"></p>
-<p><a href="https://marketplace.sshopencloud.eu/workflow/I3JvP6" class="uri">https://marketplace.sshopencloud.eu/workflow/I3JvP6</a></p>
-</section>
-<section id="implementation-at-the-royal-library-of-belgium" class="level3">
-<h3 class="anchored" data-anchor-id="implementation-at-the-royal-library-of-belgium">Implementation at the Royal Library of Belgium</h3>
-<ul>
-<li>Data-level access to collections</li>
-<li>Digital Humanities Research</li>
-</ul>
-<p><img src="https://www.kbr.be/wp-content/uploads/2020/11/data-level-access-to-collections.png" class="img-fluid"></p>
-<p><a href="https://www.kbr.be/en/projects/data-kbr-be/" class="uri">https://www.kbr.be/en/projects/data-kbr-be/</a></p>
-</section>
-</section>
-<section id="linked-open-usable-data" class="level2">
-<h2 class="anchored" data-anchor-id="linked-open-usable-data">Linked (Open) (Usable) Data</h2>
-<section id="an-open-vision-of-the-web" class="level3">
-<h3 class="anchored" data-anchor-id="an-open-vision-of-the-web">An Open Vision of the Web</h3>
-<blockquote class="blockquote">
-<p>The [World Wide Web] project merges the techniques of information retrieval and hypertext to make an easy but powerful global information system. The project started with <strong>the philosophy that much academic information should be freely available to anyone</strong>.</p>
-</blockquote>
-<p><span class="citation" data-cites="berners-leeWorldWideWebExecutiveSummary1991">Berners-Lee (<a href="#ref-berners-leeWorldWideWebExecutiveSummary1991" role="doc-biblioref">1991</a>)</span></p>
-</section>
-<section id="linked-data" class="level3">
-<h3 class="anchored" data-anchor-id="linked-data">Linked Data</h3>
-<p>Linked Data refers to a method of publishing structured data so that it can be interlinked and become more useful through semantic queries. It builds upon standard Web technologies such as HTTP, RDF, and URIs, but rather than using them to serve web pages for human readers, it extends them to share information in a way that can be read automatically by computers. This enables data from different sources to be connected and queried.</p>
-</section>
-<section id="linked-data-principles" class="level3">
-<h3 class="anchored" data-anchor-id="linked-data-principles">Linked Data Principles</h3>
-<ul>
-<li>Use Uniform Resource Identifiers (URIs) as names for things</li>
-<li>Use HTTP URIs so that people can look up those names.</li>
-<li>When someone looks up a URI, provide useful information, using the standards (e.g.&nbsp;RDF, RDFS, SPARQL, etc.)</li>
-<li>Include links to other URIs so that they can discover more things.</li>
-</ul>
-<p><span class="citation" data-cites="berners-leeLinkedData2006">Berners-Lee (<a href="#ref-berners-leeLinkedData2006" role="doc-biblioref">2006</a>)</span></p>
-</section>
-<section id="linked-open-data-lod" class="level3">
-<h3 class="anchored" data-anchor-id="linked-open-data-lod">Linked Open Data (LOD)</h3>
-<p>Linked Open Data is a subset of Linked Data that is open, meaning it is freely accessible and reusable by anyone. It adheres to the principles of being accessible under an open license, available in a machine-readable format, using open standards from the W3C (such as RDF and SPARQL), and linked to other datasets to increase its utility.</p>
-<p><img src="https://5stardata.info/images/5-star-steps.png" class="img-fluid"></p>
-<p>5-star deployment scheme for Open Data: <a href="https://5stardata.info/" class="uri">https://5stardata.info/</a></p>
-</section>
-<section id="the-semantic-web-or-the-web-of-data" class="level3">
-<h3 class="anchored" data-anchor-id="the-semantic-web-or-the-web-of-data">The Semantic Web or <em>the Web of Data</em></h3>
-<p>The Semantic Web is an extension of the World Wide Web, through standards, to make it machine-readable.</p>
-<p><img src="https://julsraemy.ch/prezi/assets/tweaked-semweb-layer-cake.webp" class="img-fluid"></p>
-<p><span class="citation" data-cites="idehenSemanticWebLayer2017">Idehen (<a href="#ref-idehenSemanticWebLayer2017" role="doc-biblioref">2017</a>)</span></p>
-</section>
-<section id="resource-description-framework-rdf" class="level3">
-<h3 class="anchored" data-anchor-id="resource-description-framework-rdf">Resource Description Framework (RDF)</h3>
-<p>With RDF, everything goes in threes. Most of the triples’ components have Uniform Resource Identifiers (URIs). <br> Syntax: <strong>subject, predicate, object</strong> <span class="math inline">\((s \ \vec{p} \ o)\)</span></p>
-<p><img src="https://julsraemy.ch/prezi/assets/rdf-graph.svg" class="img-fluid"></p>
-<p>With RDF, everything goes in threes, the data model contains so-called triples: that is <em>subject</em>, <em>predicate</em>, <em>object</em> that form graphs. Most of the components of these triples use Uniform Resource Identifiers (URIs) and are generally web-addressable, whether for naming subjects and objects (which may themselves also be objects of other triples) or relationships</p>
-</section>
-<section id="linked-open-usable-data-loud" class="level3">
-<h3 class="anchored" data-anchor-id="linked-open-usable-data-loud">Linked Open Usable Data (LOUD)</h3>
-<p>The concept of LOUD extends LOD by emphasising not just the openness and interlinking of data but also its usability.</p>
-<ul>
-<li>The term was coined by Robert Sanderson <span class="citation" data-cites="sandersonShoutItOut2018 sandersonKeynoteStandardsCommunities2019">(<a href="#ref-sandersonShoutItOut2018" role="doc-biblioref">2018</a>, <a href="#ref-sandersonKeynoteStandardsCommunities2019" role="doc-biblioref">2019</a>)</span> who has been involved in the conception and maintenance of web standards, mainly in the cultural heritage field.</li>
-<li>LOUD’s goal is to achieve the Semantic Web’s intent on a global scale in a usable fashion by leveraging community-driven and JSON-LD-based specifications.</li>
-<li>It has five main design principles to make the data more easily accessible to software developers, who play a key role in interacting with the data and building software and services on top of it, and to some extent to academics.</li>
-</ul>
-<section id="loud-design-principles" class="level4">
-<h4 class="anchored" data-anchor-id="loud-design-principles">LOUD Design Principles</h4>
-<ul>
-<li>The right Abstraction for the audience</li>
-<li>Few Barriers to entry</li>
-<li>Comprehensible by introspection</li>
-<li>Documentation with working examples</li>
-<li>Few Exceptions, instead many consistent patterns</li>
-</ul>
-<p><a href="https://linked.art/loud/" class="uri">https://linked.art/loud/</a></p>
-</section>
-<section id="loud-standardscommunities" class="level4">
-<h4 class="anchored" data-anchor-id="loud-standardscommunities">LOUD Standards/Communities</h4>
-<ul>
-<li><a href="https://iiif.io">International Image Interoperability Framework</a> (IIIF)</li>
-<li><a href="https://www.w3.org/TR/annotation-model/">W3C Web Annotation Data Model</a></li>
-<li><a href="https://linked.art">Linked Art</a></li>
-</ul>
-<p>The IIIF and Linked Art communities are built on a synergy of social and technical integration, with a strong focus on usability. They are unified by shared expertise and leadership, fostering collaboration across technical boundaries. These communities prioritise inclusivity and diversity of participation, ensuring that a wide range of perspectives contribute to their work. Openness and friendliness are core values, along with a strong commitment to transparency in processes and decision-making. To facilitate engagement and knowledge sharing, they organise both online and face-to-face meetings to strengthen connections across the community.</p>
-<p><span class="citation" data-cites="newburyLOUDLinkedOpen2018 raemyCharacterisingIIIFLinked2023">(see <a href="#ref-newburyLOUDLinkedOpen2018" role="doc-biblioref">Newbury, 2018</a>; <a href="#ref-raemyCharacterisingIIIFLinked2023" role="doc-biblioref">Raemy, 2023</a>)</span></p>
-<section id="international-image-interoperability-framework-iiif" class="level5">
-<h5 class="anchored" data-anchor-id="international-image-interoperability-framework-iiif">International Image Interoperability Framework (IIIF)</h5>
-<ul>
-<li>A model for presenting and annotating content</li>
-<li>A global community that develops shared application programming interfaces (APIs), implements them in software, and exposes interoperable content</li>
-</ul>
-<p><span class="citation" data-cites="snydmanInternationalImageInteroperability2015">Snydman et al. (<a href="#ref-snydmanInternationalImageInteroperability2015" role="doc-biblioref">2015</a>)</span></p>
-<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%;">
-<p><iframe src="https://www.google.com/maps/d/embed?mid=1faJRKJpj2Vau__RDwt8af040x0GTVozp&amp;ehbc=2E312F" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" frameborder="0"> </iframe></p>
-</div>
-<section id="iiif-community" class="level6">
-<h6 class="anchored" data-anchor-id="iiif-community">IIIF Community</h6>
-<p><a href="https://bit.ly/iiifmap" class="uri">https://bit.ly/iiifmap</a></p>
-<ul>
-<li><strong>State and National Libraries</strong>: Bavarian State Library, French National Library (BnF), British Library, National Library of Estonia, New York Public Library, Vatican Library, Zentralbibliothek Zürich, etc.</li>
-<li><strong>Archives</strong>: Blavatnik Foundation Archive, Indigenous Digital Archive, Internet Archive, Swedish National Archives, Swiss Federal Archives, etc.</li>
-<li><strong>Museums &amp; Galleries</strong>: Art Institute Chicago, J. Paul Getty Trust, Smithsonian, Victoria &amp; Albert Museum, MIT Museum, National Gallery of Art, Van Gogh Worldwide, etc.</li>
-<li><strong>Universities &amp; Research Institutions</strong>: Cambridge, Cornell University, Ghent University, Swiss National Data and Service Center for the Humanities (DaSCH), Kyoto University, Oxford, Stanford, University of Toronto, Yale University, etc.</li>
-<li><strong>Aggregators/Facilitators</strong>: Europeana, Cuba-IIIF, Cultural Japan, OCLC ContentDM, etc.</li>
-</ul>
-</section>
-<section id="practices" class="level6">
-<h6 class="anchored" data-anchor-id="practices">Practices</h6>
-<p><img src="https://julsraemy.ch/prezi/assets/use_cases-specifications-1.svg" class="img-fluid"></p>
-<p><span class="citation" data-cites="raemyLinkedOpenUsable2024a">Raemy (<a href="#ref-raemyLinkedOpenUsable2024a" role="doc-biblioref">2024</a>)</span></p>
-</section>
-<section id="capabilities" class="level6">
-<h6 class="anchored" data-anchor-id="capabilities">Capabilities</h6>
-<p><strong>Deep zoom with large images</strong></p>
-<p><img src="https://julsraemy.ch/prezi/assets/iiif_deepzoom.gif" class="img-fluid"></p>
-<p>Ōmi Kuni-ezu – 近江國絵圖 <a href="https://purl.stanford.edu/hs631zg4177" class="uri">https://purl.stanford.edu/hs631zg4177</a></p>
-<p><strong>Compare images</strong></p>
-<p><img src="https://julsraemy.ch/prezi/assets/compare.gif" class="img-fluid"></p>
-<p>Letter from Alexander Hamilton Papers (September 6, 1780), Library of Congress. <a href="https://prtd.app/#72f604db-6869-4c08-91ce-7c79502a7f35" class="uri">https://prtd.app/#72f604db-6869-4c08-91ce-7c79502a7f35</a>. IIIF Manifest: <a href="https://dvp.prtd.app/hamilton/manifest.json" class="uri">https://dvp.prtd.app/hamilton/manifest.json</a></p>
-<p><strong>Reunify</strong></p>
-<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%;">
-<p><iframe id="mirador" title="BnF missing illustrations" src="https://demos.biblissima.fr/chateauroux/demo/" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" frameborder="0"> </iframe></p>
-</div>
-<p>Manuscrit reconstitué : Châteauroux, Bibliothèque municipale, ms. 5 (Grandes Chroniques de France). <a href="https://demos.biblissima.fr/chateauroux/demo/" class="uri">https://demos.biblissima.fr/chateauroux/demo/</a></p>
-<p><strong>Search within</strong></p>
-<p><img src="https://julsraemy.ch/prezi/assets/content-search.gif" class="img-fluid"></p>
-<p>Franks, Kendal; Royal College of Surgeons of England. <em>The Germ Theory</em>. via Wellcome Library.</p>
-<p><strong>Storytelling</strong></p>
-<p><img src="https://julsraemy.ch/prezi/assets/storiiies.gif" class="img-fluid"></p>
-<p>Storiiies. <a href="https://www.cogapp.com/r-d/storiiies" class="uri">https://www.cogapp.com/r-d/storiiies</a></p>
-<p><strong>Crowdsource</strong></p>
-<p><img src="https://julsraemy.ch/prezi/assets/crowdsourcing-nlw.gif" class="img-fluid"></p>
-<p>Crowdsourcing initiative from the National Library of Wales</p>
-<p><strong>Machine-generated annotations</strong></p>
-<p><img src="https://julsraemy.ch/prezi/assets/pia_iiif_mirador.png" class="img-fluid"></p>
-<p><span class="citation" data-cites="cornutAnnotationsKnowledgePractices2023">(see <a href="#ref-cornutAnnotationsKnowledgePractices2023" role="doc-biblioref">Cornut et al., 2023</a>)</span></p>
-<p><strong>IIIF – Beyond Images</strong></p>
-<p><img src="https://iiif.io/assets/uploads/ddmal_section.gif" class="img-fluid"></p>
-<p><a href="https://ddmal.music.mcgill.ca/IIIF-AV-player/" class="uri">https://ddmal.music.mcgill.ca/IIIF-AV-player/</a></p>
-<p><strong>Layers of digitisation</strong></p>
-<p><img src="https://julsraemy.ch/prezi/assets/Leiden_curtain_viewer.gif" class="img-fluid"></p>
-<p>Leiden Collection’s Curtain Viewer. <a href="https://www.theleidencollection.com/viewer/david-and-uriah/" class="uri">https://www.theleidencollection.com/viewer/david-and-uriah/</a></p>
-</section>
-<section id="iiif-specifications" class="level6">
-<h6 class="anchored" data-anchor-id="iiif-specifications">IIIF Specifications</h6>
-<table class="caption-top table">
-<colgroup>
-<col style="width: 17%">
-<col style="width: 82%">
-</colgroup>
-<thead>
-<tr class="header">
-<th><strong>Application programming interface (API)</strong></th>
-<th><strong>Description</strong></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Image API</td>
-<td>The IIIF Image API specifies a web service that returns an image in response to a standard HTTP(S) request. The URI can specify the region, size, rotation, quality characteristics and format of the requested image.</td>
-</tr>
-<tr class="even">
-<td>Presentation API</td>
-<td>The IIIF Presentation API provides the information necessary to allow a rich, online viewing environment for compound digital objects to be presented to a human user, often in conjunction with the IIIF Image API.</td>
-</tr>
-<tr class="odd">
-<td>Authorization Flow API</td>
-<td>The IIIF Authorization Flow specification describes a set of workflows for guiding the user through an existing access control system.</td>
-</tr>
-<tr class="even">
-<td>Change Discovery API</td>
-<td>The IIIF Change Discovery API provides the information needed to discover and make use of IIIF resources.</td>
-</tr>
-<tr class="odd">
-<td>Content Search API</td>
-<td>The IIIF Content Search API specification lays out the interoperability mechanism for performing searches of text annotations associated with an object within the IIIF context.</td>
-</tr>
-<tr class="even">
-<td>Content State API</td>
-<td>The IIIF Content State API provides a way to refer to a IIIF Presentation API resource, or a part of a resource, in a compact format that can be used to initialize the view of that resource in any client.</td>
-</tr>
-</tbody>
-</table>
-<p><a href="https://iiif.io/api" class="uri">https://iiif.io/api</a></p>
-<p><em>The Image and Presentation APIs are referred to as the core IIIF APIs</em></p>
-<p><img src="https://julsraemy.ch/prezi/assets/mirador-coreapis.png" class="img-fluid"></p>
-<p><strong>IIIF Image API</strong></p>
-<p><img src="https://iiif.io/api/image/3.0/img/transformation.png" class="img-fluid"></p>
-<table class="caption-top table">
-<thead>
-<tr class="header">
-<th>Type</th>
-<th>Syntax</th>
-<th>Example</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Base URI</td>
-<td><code>{scheme}://{server}{/prefix}/{identifier}</code></td>
-<td><a href="https://iiif.dasch.swiss/0812/276uIbjSulF-k5RrtYZ3LUA.jpx" class="uri">https://iiif.dasch.swiss/0812/276uIbjSulF-k5RrtYZ3LUA.jpx</a></td>
-</tr>
-<tr class="even">
-<td>Image Request</td>
-<td><code>{$BASE}/{region}/{size}/{rotation}/{quality}.{format}</code></td>
-<td><a href="https://iiif.dasch.swiss/0812/276uIbjSulF-k5RrtYZ3LUA.jpx/full/1000,/0/default.jpg" class="uri">https://iiif.dasch.swiss/0812/276uIbjSulF-k5RrtYZ3LUA.jpx/full/1000,/0/default.jpg</a></td>
-</tr>
-<tr class="odd">
-<td>Image Information (Metadata)</td>
-<td><code>{$BASE}/info.json</code></td>
-<td><a href="https://iiif.dasch.swiss/0812/276uIbjSulF-k5RrtYZ3LUA.jpx/info.json" class="uri">https://iiif.dasch.swiss/0812/276uIbjSulF-k5RrtYZ3LUA.jpx/info.json</a></td>
-</tr>
-</tbody>
-</table>
-<p><strong>IIIF Presentation API</strong></p>
-<p><strong>Presentation API Data Model</strong></p>
-<p><img src="https://iiif.io/api/assets/images/data-model.png" class="img-fluid"></p>
-<p><strong>Main types</strong></p>
-<p><img src="https://julsraemy.ch/prezi/assets/presentationapi-resources.png" class="img-fluid"></p>
-<p><strong>Manifest</strong></p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode numberSource json number-lines code-with-copy"><code class="sourceCode json"><span id="cb1-1"><a href="#cb1-1"></a><span class="fu">{</span></span>
-<span id="cb1-2"><a href="#cb1-2"></a>  <span class="dt">"@context"</span><span class="fu">:</span> <span class="st">"http://iiif.io/api/presentation/3/context.json"</span><span class="fu">,</span></span>
-<span id="cb1-3"><a href="#cb1-3"></a>  <span class="dt">"id"</span><span class="fu">:</span> <span class="st">"https://manifests.collections.yale.edu/yuag/obj/293797"</span><span class="fu">,</span></span>
-<span id="cb1-4"><a href="#cb1-4"></a>  <span class="dt">"type"</span><span class="fu">:</span> <span class="st">"Manifest"</span><span class="fu">,</span></span>
-<span id="cb1-5"><a href="#cb1-5"></a>  <span class="dt">"label"</span><span class="fu">:</span> <span class="fu">{</span></span>
-<span id="cb1-6"><a href="#cb1-6"></a>    <span class="dt">"en"</span><span class="fu">:</span> <span class="ot">[</span></span>
-<span id="cb1-7"><a href="#cb1-7"></a>      <span class="st">"Simon de Vlieger, Fisherfolk and Other Figures on a Beach, 1642"</span></span>
-<span id="cb1-8"><a href="#cb1-8"></a>    <span class="ot">]</span></span>
-<span id="cb1-9"><a href="#cb1-9"></a>  <span class="fu">},</span></span>
-<span id="cb1-10"><a href="#cb1-10"></a>  <span class="dt">"metadata"</span><span class="fu">:</span> <span class="ot">[</span></span>
-<span id="cb1-11"><a href="#cb1-11"></a>    <span class="fu">{</span></span>
-<span id="cb1-12"><a href="#cb1-12"></a>      <span class="dt">"label"</span><span class="fu">:</span> <span class="fu">{</span></span>
-<span id="cb1-13"><a href="#cb1-13"></a>        <span class="dt">"en"</span><span class="fu">:</span> <span class="ot">[</span></span>
-<span id="cb1-14"><a href="#cb1-14"></a>          <span class="st">"Copyright Statement"</span></span>
-<span id="cb1-15"><a href="#cb1-15"></a>        <span class="ot">]</span></span>
-<span id="cb1-16"><a href="#cb1-16"></a>      <span class="fu">},</span></span>
-<span id="cb1-17"><a href="#cb1-17"></a>      <span class="dt">"value"</span><span class="fu">:</span> <span class="fu">{</span></span>
-<span id="cb1-18"><a href="#cb1-18"></a>        <span class="dt">"en"</span><span class="fu">:</span> <span class="ot">[</span></span>
-<span id="cb1-19"><a href="#cb1-19"></a>          <span class="st">"Public Domain"</span></span>
-<span id="cb1-20"><a href="#cb1-20"></a>        <span class="ot">]</span></span>
-<span id="cb1-21"><a href="#cb1-21"></a>      <span class="fu">}</span></span>
-<span id="cb1-22"><a href="#cb1-22"></a>    <span class="fu">}</span><span class="ot">,</span></span>
-<span id="cb1-23"><a href="#cb1-23"></a>    <span class="fu">{</span></span>
-<span id="cb1-24"><a href="#cb1-24"></a>      <span class="dt">"label"</span><span class="fu">:</span> <span class="fu">{</span></span>
-<span id="cb1-25"><a href="#cb1-25"></a>        <span class="dt">"en"</span><span class="fu">:</span> <span class="ot">[</span></span>
-<span id="cb1-26"><a href="#cb1-26"></a>          <span class="st">"Title"</span></span>
-<span id="cb1-27"><a href="#cb1-27"></a>        <span class="ot">]</span></span>
-<span id="cb1-28"><a href="#cb1-28"></a>      <span class="fu">},</span></span>
-<span id="cb1-29"><a href="#cb1-29"></a>      <span class="dt">"value"</span><span class="fu">:</span> <span class="fu">{</span></span>
-<span id="cb1-30"><a href="#cb1-30"></a>        <span class="dt">"en"</span><span class="fu">:</span> <span class="ot">[</span></span>
-<span id="cb1-31"><a href="#cb1-31"></a>          <span class="st">"Fisherfolk and Other Figures on a Beach"</span></span>
-<span id="cb1-32"><a href="#cb1-32"></a>        <span class="ot">]</span></span>
-<span id="cb1-33"><a href="#cb1-33"></a>      <span class="fu">}</span></span>
-<span id="cb1-34"><a href="#cb1-34"></a>    <span class="fu">}</span><span class="ot">,</span></span>
-<span id="cb1-35"><a href="#cb1-35"></a>    <span class="fu">{</span></span>
-<span id="cb1-36"><a href="#cb1-36"></a>      <span class="dt">"label"</span><span class="fu">:</span> <span class="fu">{</span></span>
-<span id="cb1-37"><a href="#cb1-37"></a>        <span class="dt">"en"</span><span class="fu">:</span> <span class="ot">[</span></span>
-<span id="cb1-38"><a href="#cb1-38"></a>          <span class="st">"Creator(s)"</span></span>
-<span id="cb1-39"><a href="#cb1-39"></a>        <span class="ot">]</span></span>
-<span id="cb1-40"><a href="#cb1-40"></a>      <span class="fu">},</span></span>
-<span id="cb1-41"><a href="#cb1-41"></a>      <span class="dt">"value"</span><span class="fu">:</span> <span class="fu">{</span></span>
-<span id="cb1-42"><a href="#cb1-42"></a>        <span class="dt">"en"</span><span class="fu">:</span> <span class="ot">[</span></span>
-<span id="cb1-43"><a href="#cb1-43"></a>          <span class="st">"Artist: Simon de Vlieger (Dutch, 1601–1653)"</span></span>
-<span id="cb1-44"><a href="#cb1-44"></a>        <span class="ot">]</span></span>
-<span id="cb1-45"><a href="#cb1-45"></a>      <span class="fu">}</span></span>
-<span id="cb1-46"><a href="#cb1-46"></a>    <span class="fu">}</span><span class="ot">,</span></span>
-<span id="cb1-47"><a href="#cb1-47"></a>    <span class="fu">{</span></span>
-<span id="cb1-48"><a href="#cb1-48"></a>      <span class="dt">"label"</span><span class="fu">:</span> <span class="fu">{</span></span>
-<span id="cb1-49"><a href="#cb1-49"></a>        <span class="dt">"en"</span><span class="fu">:</span> <span class="ot">[</span></span>
-<span id="cb1-50"><a href="#cb1-50"></a>          <span class="st">"Culture"</span></span>
-<span id="cb1-51"><a href="#cb1-51"></a>        <span class="ot">]</span></span>
-<span id="cb1-52"><a href="#cb1-52"></a>      <span class="fu">},</span></span>
-<span id="cb1-53"><a href="#cb1-53"></a>      <span class="dt">"value"</span><span class="fu">:</span> <span class="fu">{</span></span>
-<span id="cb1-54"><a href="#cb1-54"></a>        <span class="dt">"en"</span><span class="fu">:</span> <span class="ot">[</span></span>
-<span id="cb1-55"><a href="#cb1-55"></a>          <span class="st">"Dutch"</span></span>
-<span id="cb1-56"><a href="#cb1-56"></a>        <span class="ot">]</span></span>
-<span id="cb1-57"><a href="#cb1-57"></a>      <span class="fu">}</span></span>
-<span id="cb1-58"><a href="#cb1-58"></a>    <span class="fu">}</span><span class="ot">,</span></span>
-<span id="cb1-59"><a href="#cb1-59"></a>    <span class="fu">{</span></span>
-<span id="cb1-60"><a href="#cb1-60"></a>      <span class="dt">"label"</span><span class="fu">:</span> <span class="fu">{</span></span>
-<span id="cb1-61"><a href="#cb1-61"></a>        <span class="dt">"en"</span><span class="fu">:</span> <span class="ot">[</span></span>
-<span id="cb1-62"><a href="#cb1-62"></a>          <span class="st">"Date"</span></span>
-<span id="cb1-63"><a href="#cb1-63"></a>        <span class="ot">]</span></span>
-<span id="cb1-64"><a href="#cb1-64"></a>      <span class="fu">},</span></span>
-<span id="cb1-65"><a href="#cb1-65"></a>      <span class="dt">"value"</span><span class="fu">:</span> <span class="fu">{</span></span>
-<span id="cb1-66"><a href="#cb1-66"></a>        <span class="dt">"en"</span><span class="fu">:</span> <span class="ot">[</span></span>
-<span id="cb1-67"><a href="#cb1-67"></a>          <span class="st">"1642"</span></span>
-<span id="cb1-68"><a href="#cb1-68"></a>        <span class="ot">]</span></span>
-<span id="cb1-69"><a href="#cb1-69"></a>      <span class="fu">}</span></span>
-<span id="cb1-70"><a href="#cb1-70"></a>    <span class="fu">}</span><span class="ot">,</span></span>
-<span id="cb1-71"><a href="#cb1-71"></a>    <span class="fu">{</span></span>
-<span id="cb1-72"><a href="#cb1-72"></a>      <span class="dt">"label"</span><span class="fu">:</span> <span class="fu">{</span></span>
-<span id="cb1-73"><a href="#cb1-73"></a>        <span class="dt">"en"</span><span class="fu">:</span> <span class="ot">[</span></span>
-<span id="cb1-74"><a href="#cb1-74"></a>          <span class="st">"Medium"</span></span>
-<span id="cb1-75"><a href="#cb1-75"></a>        <span class="ot">]</span></span>
-<span id="cb1-76"><a href="#cb1-76"></a>      <span class="fu">},</span></span>
-<span id="cb1-77"><a href="#cb1-77"></a>      <span class="dt">"value"</span><span class="fu">:</span> <span class="fu">{</span></span>
-<span id="cb1-78"><a href="#cb1-78"></a>        <span class="dt">"en"</span><span class="fu">:</span> <span class="ot">[</span></span>
-<span id="cb1-79"><a href="#cb1-79"></a>          <span class="st">"Oil on panel"</span></span>
-<span id="cb1-80"><a href="#cb1-80"></a>        <span class="ot">]</span></span>
-<span id="cb1-81"><a href="#cb1-81"></a>      <span class="fu">}</span></span>
-<span id="cb1-82"><a href="#cb1-82"></a>    <span class="fu">}</span><span class="ot">,</span></span>
-<span id="cb1-83"><a href="#cb1-83"></a>    <span class="fu">{</span></span>
-<span id="cb1-84"><a href="#cb1-84"></a>      <span class="dt">"label"</span><span class="fu">:</span> <span class="fu">{</span></span>
-<span id="cb1-85"><a href="#cb1-85"></a>        <span class="dt">"en"</span><span class="fu">:</span> <span class="ot">[</span></span>
-<span id="cb1-86"><a href="#cb1-86"></a>          <span class="st">"Dimensions"</span></span>
-<span id="cb1-87"><a href="#cb1-87"></a>        <span class="ot">]</span></span>
-<span id="cb1-88"><a href="#cb1-88"></a>      <span class="fu">},</span></span>
-<span id="cb1-89"><a href="#cb1-89"></a>      <span class="dt">"value"</span><span class="fu">:</span> <span class="fu">{</span></span>
-<span id="cb1-90"><a href="#cb1-90"></a>        <span class="dt">"en"</span><span class="fu">:</span> <span class="ot">[</span></span>
-<span id="cb1-91"><a href="#cb1-91"></a>          <span class="st">"32 1/8 × 52 13/16 in. (81.6 × 134.2 cm)"</span></span>
-<span id="cb1-92"><a href="#cb1-92"></a>        <span class="ot">]</span></span>
-<span id="cb1-93"><a href="#cb1-93"></a>      <span class="fu">}</span></span>
-<span id="cb1-94"><a href="#cb1-94"></a>    <span class="fu">}</span><span class="ot">,</span></span>
-<span id="cb1-95"><a href="#cb1-95"></a>    <span class="fu">{</span></span>
-<span id="cb1-96"><a href="#cb1-96"></a>      <span class="dt">"label"</span><span class="fu">:</span> <span class="fu">{</span></span>
-<span id="cb1-97"><a href="#cb1-97"></a>        <span class="dt">"en"</span><span class="fu">:</span> <span class="ot">[</span></span>
-<span id="cb1-98"><a href="#cb1-98"></a>          <span class="st">"Creditline"</span></span>
-<span id="cb1-99"><a href="#cb1-99"></a>        <span class="ot">]</span></span>
-<span id="cb1-100"><a href="#cb1-100"></a>      <span class="fu">},</span></span>
-<span id="cb1-101"><a href="#cb1-101"></a>      <span class="dt">"value"</span><span class="fu">:</span> <span class="fu">{</span></span>
-<span id="cb1-102"><a href="#cb1-102"></a>        <span class="dt">"en"</span><span class="fu">:</span> <span class="ot">[</span></span>
-<span id="cb1-103"><a href="#cb1-103"></a>          <span class="st">"Dr. Herbert and Monika Schaefer Fund"</span></span>
-<span id="cb1-104"><a href="#cb1-104"></a>        <span class="ot">]</span></span>
-<span id="cb1-105"><a href="#cb1-105"></a>      <span class="fu">}</span></span>
-<span id="cb1-106"><a href="#cb1-106"></a>    <span class="fu">}</span><span class="ot">,</span></span>
-<span id="cb1-107"><a href="#cb1-107"></a>    <span class="fu">{</span></span>
-<span id="cb1-108"><a href="#cb1-108"></a>      <span class="dt">"label"</span><span class="fu">:</span> <span class="fu">{</span></span>
-<span id="cb1-109"><a href="#cb1-109"></a>        <span class="dt">"en"</span><span class="fu">:</span> <span class="ot">[</span></span>
-<span id="cb1-110"><a href="#cb1-110"></a>          <span class="st">"Classification"</span></span>
-<span id="cb1-111"><a href="#cb1-111"></a>        <span class="ot">]</span></span>
-<span id="cb1-112"><a href="#cb1-112"></a>      <span class="fu">},</span></span>
-<span id="cb1-113"><a href="#cb1-113"></a>      <span class="dt">"value"</span><span class="fu">:</span> <span class="fu">{</span></span>
-<span id="cb1-114"><a href="#cb1-114"></a>        <span class="dt">"en"</span><span class="fu">:</span> <span class="ot">[</span></span>
-<span id="cb1-115"><a href="#cb1-115"></a>          <span class="st">"Paintings"</span></span>
-<span id="cb1-116"><a href="#cb1-116"></a>        <span class="ot">]</span></span>
-<span id="cb1-117"><a href="#cb1-117"></a>      <span class="fu">}</span></span>
-<span id="cb1-118"><a href="#cb1-118"></a>    <span class="fu">}</span><span class="ot">,</span></span>
-<span id="cb1-119"><a href="#cb1-119"></a>    <span class="fu">{</span></span>
-<span id="cb1-120"><a href="#cb1-120"></a>      <span class="dt">"label"</span><span class="fu">:</span> <span class="fu">{</span></span>
-<span id="cb1-121"><a href="#cb1-121"></a>        <span class="dt">"en"</span><span class="fu">:</span> <span class="ot">[</span></span>
-<span id="cb1-122"><a href="#cb1-122"></a>          <span class="st">"Department"</span></span>
-<span id="cb1-123"><a href="#cb1-123"></a>        <span class="ot">]</span></span>
-<span id="cb1-124"><a href="#cb1-124"></a>      <span class="fu">},</span></span>
-<span id="cb1-125"><a href="#cb1-125"></a>      <span class="dt">"value"</span><span class="fu">:</span> <span class="fu">{</span></span>
-<span id="cb1-126"><a href="#cb1-126"></a>        <span class="dt">"en"</span><span class="fu">:</span> <span class="ot">[</span></span>
-<span id="cb1-127"><a href="#cb1-127"></a>          <span class="st">"European Art"</span></span>
-<span id="cb1-128"><a href="#cb1-128"></a>        <span class="ot">]</span></span>
-<span id="cb1-129"><a href="#cb1-129"></a>      <span class="fu">}</span></span>
-<span id="cb1-130"><a href="#cb1-130"></a>    <span class="fu">}</span><span class="ot">,</span></span>
-<span id="cb1-131"><a href="#cb1-131"></a>    <span class="fu">{</span></span>
-<span id="cb1-132"><a href="#cb1-132"></a>      <span class="dt">"label"</span><span class="fu">:</span> <span class="fu">{</span></span>
-<span id="cb1-133"><a href="#cb1-133"></a>        <span class="dt">"en"</span><span class="fu">:</span> <span class="ot">[</span></span>
-<span id="cb1-134"><a href="#cb1-134"></a>          <span class="st">"Institution"</span></span>
-<span id="cb1-135"><a href="#cb1-135"></a>        <span class="ot">]</span></span>
-<span id="cb1-136"><a href="#cb1-136"></a>      <span class="fu">},</span></span>
-<span id="cb1-137"><a href="#cb1-137"></a>      <span class="dt">"value"</span><span class="fu">:</span> <span class="fu">{</span></span>
-<span id="cb1-138"><a href="#cb1-138"></a>        <span class="dt">"en"</span><span class="fu">:</span> <span class="ot">[</span></span>
-<span id="cb1-139"><a href="#cb1-139"></a>          <span class="st">"Yale University Art Gallery"</span></span>
-<span id="cb1-140"><a href="#cb1-140"></a>        <span class="ot">]</span></span>
-<span id="cb1-141"><a href="#cb1-141"></a>      <span class="fu">}</span></span>
-<span id="cb1-142"><a href="#cb1-142"></a>    <span class="fu">}</span><span class="ot">,</span></span>
-<span id="cb1-143"><a href="#cb1-143"></a>    <span class="fu">{</span></span>
-<span id="cb1-144"><a href="#cb1-144"></a>      <span class="dt">"label"</span><span class="fu">:</span> <span class="fu">{</span></span>
-<span id="cb1-145"><a href="#cb1-145"></a>        <span class="dt">"en"</span><span class="fu">:</span> <span class="ot">[</span></span>
-<span id="cb1-146"><a href="#cb1-146"></a>          <span class="st">"Object Number"</span></span>
-<span id="cb1-147"><a href="#cb1-147"></a>        <span class="ot">]</span></span>
-<span id="cb1-148"><a href="#cb1-148"></a>      <span class="fu">},</span></span>
-<span id="cb1-149"><a href="#cb1-149"></a>      <span class="dt">"value"</span><span class="fu">:</span> <span class="fu">{</span></span>
-<span id="cb1-150"><a href="#cb1-150"></a>        <span class="dt">"en"</span><span class="fu">:</span> <span class="ot">[</span></span>
-<span id="cb1-151"><a href="#cb1-151"></a>          <span class="st">"2021.16.1"</span></span>
-<span id="cb1-152"><a href="#cb1-152"></a>        <span class="ot">]</span></span>
-<span id="cb1-153"><a href="#cb1-153"></a>      <span class="fu">}</span></span>
-<span id="cb1-154"><a href="#cb1-154"></a>    <span class="fu">}</span></span>
-<span id="cb1-155"><a href="#cb1-155"></a>  <span class="ot">]</span><span class="fu">,</span></span>
-<span id="cb1-156"><a href="#cb1-156"></a>  <span class="dt">"rights"</span><span class="fu">:</span> <span class="st">"https://creativecommons.org/publicdomain/zero/1.0/"</span><span class="fu">,</span></span>
-<span id="cb1-157"><a href="#cb1-157"></a>  <span class="dt">"requiredStatement"</span><span class="fu">:</span> <span class="fu">{</span></span>
-<span id="cb1-158"><a href="#cb1-158"></a>    <span class="dt">"label"</span><span class="fu">:</span> <span class="fu">{</span></span>
-<span id="cb1-159"><a href="#cb1-159"></a>      <span class="dt">"en"</span><span class="fu">:</span> <span class="ot">[</span></span>
-<span id="cb1-160"><a href="#cb1-160"></a>        <span class="st">"Rights Description"</span></span>
-<span id="cb1-161"><a href="#cb1-161"></a>      <span class="ot">]</span></span>
-<span id="cb1-162"><a href="#cb1-162"></a>    <span class="fu">},</span></span>
-<span id="cb1-163"><a href="#cb1-163"></a>    <span class="dt">"value"</span><span class="fu">:</span> <span class="fu">{</span></span>
-<span id="cb1-164"><a href="#cb1-164"></a>      <span class="dt">"en"</span><span class="fu">:</span> <span class="ot">[</span></span>
-<span id="cb1-165"><a href="#cb1-165"></a>        <span class="st">"Data Provided about Yale University Art Gallery collections are public domain. Rights restrictions may apply to cultural works or images of those works."</span></span>
-<span id="cb1-166"><a href="#cb1-166"></a>      <span class="ot">]</span></span>
-<span id="cb1-167"><a href="#cb1-167"></a>    <span class="fu">}</span></span>
-<span id="cb1-168"><a href="#cb1-168"></a>  <span class="fu">},</span></span>
-<span id="cb1-169"><a href="#cb1-169"></a>  <span class="dt">"logo"</span><span class="fu">:</span> <span class="ot">[</span></span>
-<span id="cb1-170"><a href="#cb1-170"></a>    <span class="fu">{</span></span>
-<span id="cb1-171"><a href="#cb1-171"></a>      <span class="dt">"id"</span><span class="fu">:</span> <span class="st">"https://artgallery.yale.edu/sites/default/files/2023-03/LUX_YUAG_logo.png"</span><span class="fu">,</span></span>
-<span id="cb1-172"><a href="#cb1-172"></a>      <span class="dt">"type"</span><span class="fu">:</span> <span class="st">"Image"</span></span>
-<span id="cb1-173"><a href="#cb1-173"></a>    <span class="fu">}</span></span>
-<span id="cb1-174"><a href="#cb1-174"></a>  <span class="ot">]</span><span class="fu">,</span></span>
-<span id="cb1-175"><a href="#cb1-175"></a>  <span class="dt">"homepage"</span><span class="fu">:</span> <span class="ot">[</span></span>
-<span id="cb1-176"><a href="#cb1-176"></a>    <span class="fu">{</span></span>
-<span id="cb1-177"><a href="#cb1-177"></a>      <span class="dt">"format"</span><span class="fu">:</span> <span class="st">"text/html"</span><span class="fu">,</span></span>
-<span id="cb1-178"><a href="#cb1-178"></a>      <span class="dt">"id"</span><span class="fu">:</span> <span class="st">"https://artgallery.yale.edu/collections/objects/293797"</span><span class="fu">,</span></span>
-<span id="cb1-179"><a href="#cb1-179"></a>      <span class="dt">"label"</span><span class="fu">:</span> <span class="fu">{</span></span>
-<span id="cb1-180"><a href="#cb1-180"></a>        <span class="dt">"en"</span><span class="fu">:</span> <span class="ot">[</span></span>
-<span id="cb1-181"><a href="#cb1-181"></a>          <span class="st">"catalog entry at the Yale University Art Gallery"</span></span>
-<span id="cb1-182"><a href="#cb1-182"></a>        <span class="ot">]</span></span>
-<span id="cb1-183"><a href="#cb1-183"></a>      <span class="fu">},</span></span>
-<span id="cb1-184"><a href="#cb1-184"></a>      <span class="dt">"language"</span><span class="fu">:</span> <span class="st">"en"</span><span class="fu">,</span></span>
-<span id="cb1-185"><a href="#cb1-185"></a>      <span class="dt">"type"</span><span class="fu">:</span> <span class="st">"Text"</span></span>
-<span id="cb1-186"><a href="#cb1-186"></a>    <span class="fu">}</span></span>
-<span id="cb1-187"><a href="#cb1-187"></a>  <span class="ot">]</span><span class="fu">,</span></span>
-<span id="cb1-188"><a href="#cb1-188"></a>  <span class="dt">"items"</span><span class="fu">:</span> <span class="ot">[</span></span>
-<span id="cb1-189"><a href="#cb1-189"></a>    <span class="fu">{</span></span>
-<span id="cb1-190"><a href="#cb1-190"></a>      <span class="dt">"id"</span><span class="fu">:</span> <span class="st">"https://manifests.collections.yale.edu/canvas/yuag/ca7804d1-5fbc-4bce-9343-007bcb018c32"</span><span class="fu">,</span></span>
-<span id="cb1-191"><a href="#cb1-191"></a>      <span class="dt">"type"</span><span class="fu">:</span> <span class="st">"Canvas"</span><span class="fu">,</span></span>
-<span id="cb1-192"><a href="#cb1-192"></a>      <span class="dt">"label"</span><span class="fu">:</span> <span class="fu">{</span></span>
-<span id="cb1-193"><a href="#cb1-193"></a>        <span class="dt">"en"</span><span class="fu">:</span> <span class="ot">[</span></span>
-<span id="cb1-194"><a href="#cb1-194"></a>          <span class="st">"Image from Yale University"</span></span>
-<span id="cb1-195"><a href="#cb1-195"></a>        <span class="ot">]</span></span>
-<span id="cb1-196"><a href="#cb1-196"></a>      <span class="fu">},</span></span>
-<span id="cb1-197"><a href="#cb1-197"></a>      <span class="dt">"height"</span><span class="fu">:</span> <span class="dv">5940</span><span class="fu">,</span></span>
-<span id="cb1-198"><a href="#cb1-198"></a>      <span class="dt">"width"</span><span class="fu">:</span> <span class="dv">9833</span><span class="fu">,</span></span>
-<span id="cb1-199"><a href="#cb1-199"></a>      <span class="dt">"items"</span><span class="fu">:</span> <span class="ot">[</span></span>
-<span id="cb1-200"><a href="#cb1-200"></a>        <span class="fu">{</span></span>
-<span id="cb1-201"><a href="#cb1-201"></a>          <span class="dt">"id"</span><span class="fu">:</span> <span class="st">"https://manifests.collections.yale.edu/annopage/yuag/ca7804d1-5fbc-4bce-9343-007bcb018c32"</span><span class="fu">,</span></span>
-<span id="cb1-202"><a href="#cb1-202"></a>          <span class="dt">"type"</span><span class="fu">:</span> <span class="st">"AnnotationPage"</span><span class="fu">,</span></span>
-<span id="cb1-203"><a href="#cb1-203"></a>          <span class="dt">"items"</span><span class="fu">:</span> <span class="ot">[</span></span>
-<span id="cb1-204"><a href="#cb1-204"></a>            <span class="fu">{</span></span>
-<span id="cb1-205"><a href="#cb1-205"></a>              <span class="dt">"id"</span><span class="fu">:</span> <span class="st">"https://manifests.collections.yale.edu/annotation/yuag/ca7804d1-5fbc-4bce-9343-007bcb018c32"</span><span class="fu">,</span></span>
-<span id="cb1-206"><a href="#cb1-206"></a>              <span class="dt">"type"</span><span class="fu">:</span> <span class="st">"Annotation"</span><span class="fu">,</span></span>
-<span id="cb1-207"><a href="#cb1-207"></a>              <span class="dt">"motivation"</span><span class="fu">:</span> <span class="st">"painting"</span><span class="fu">,</span></span>
-<span id="cb1-208"><a href="#cb1-208"></a>              <span class="dt">"body"</span><span class="fu">:</span> <span class="fu">{</span></span>
-<span id="cb1-209"><a href="#cb1-209"></a>                <span class="dt">"id"</span><span class="fu">:</span> <span class="st">"https://images.collections.yale.edu/iiif/2/yuag:ca7804d1-5fbc-4bce-9343-007bcb018c32/full/full/0/default.jpg"</span><span class="fu">,</span></span>
-<span id="cb1-210"><a href="#cb1-210"></a>                <span class="dt">"type"</span><span class="fu">:</span> <span class="st">"Image"</span><span class="fu">,</span></span>
-<span id="cb1-211"><a href="#cb1-211"></a>                <span class="dt">"format"</span><span class="fu">:</span> <span class="st">"image/jpeg"</span><span class="fu">,</span></span>
-<span id="cb1-212"><a href="#cb1-212"></a>                <span class="dt">"service"</span><span class="fu">:</span> <span class="ot">[</span></span>
-<span id="cb1-213"><a href="#cb1-213"></a>                  <span class="fu">{</span></span>
-<span id="cb1-214"><a href="#cb1-214"></a>                    <span class="dt">"@id"</span><span class="fu">:</span> <span class="st">"https://images.collections.yale.edu/iiif/2/yuag:ca7804d1-5fbc-4bce-9343-007bcb018c32"</span><span class="fu">,</span></span>
-<span id="cb1-215"><a href="#cb1-215"></a>                    <span class="dt">"@type"</span><span class="fu">:</span> <span class="st">"ImageService2"</span><span class="fu">,</span></span>
-<span id="cb1-216"><a href="#cb1-216"></a>                    <span class="dt">"profile"</span><span class="fu">:</span> <span class="st">"http://iiif.io/api/image/2/level2.json"</span></span>
-<span id="cb1-217"><a href="#cb1-217"></a>                  <span class="fu">}</span></span>
-<span id="cb1-218"><a href="#cb1-218"></a>                <span class="ot">]</span><span class="fu">,</span></span>
-<span id="cb1-219"><a href="#cb1-219"></a>                <span class="dt">"height"</span><span class="fu">:</span> <span class="dv">5940</span><span class="fu">,</span></span>
-<span id="cb1-220"><a href="#cb1-220"></a>                <span class="dt">"width"</span><span class="fu">:</span> <span class="dv">9833</span></span>
-<span id="cb1-221"><a href="#cb1-221"></a>              <span class="fu">},</span></span>
-<span id="cb1-222"><a href="#cb1-222"></a>              <span class="dt">"target"</span><span class="fu">:</span> <span class="st">"https://manifests.collections.yale.edu/canvas/yuag/ca7804d1-5fbc-4bce-9343-007bcb018c32"</span></span>
-<span id="cb1-223"><a href="#cb1-223"></a>            <span class="fu">}</span></span>
-<span id="cb1-224"><a href="#cb1-224"></a>          <span class="ot">]</span></span>
-<span id="cb1-225"><a href="#cb1-225"></a>        <span class="fu">}</span></span>
-<span id="cb1-226"><a href="#cb1-226"></a>      <span class="ot">]</span><span class="fu">,</span></span>
-<span id="cb1-227"><a href="#cb1-227"></a>      <span class="dt">"rendering"</span><span class="fu">:</span> <span class="ot">[</span></span>
-<span id="cb1-228"><a href="#cb1-228"></a>        <span class="fu">{</span></span>
-<span id="cb1-229"><a href="#cb1-229"></a>          <span class="dt">"id"</span><span class="fu">:</span> <span class="st">"https://media.collections.yale.edu/tiff/yuag/ca7804d1-5fbc-4bce-9343-007bcb018c32.tif"</span><span class="fu">,</span></span>
-<span id="cb1-230"><a href="#cb1-230"></a>          <span class="dt">"type"</span><span class="fu">:</span> <span class="st">"Image"</span><span class="fu">,</span></span>
-<span id="cb1-231"><a href="#cb1-231"></a>          <span class="dt">"label"</span><span class="fu">:</span> <span class="fu">{</span></span>
-<span id="cb1-232"><a href="#cb1-232"></a>            <span class="dt">"en"</span><span class="fu">:</span> <span class="ot">[</span></span>
-<span id="cb1-233"><a href="#cb1-233"></a>              <span class="st">"TIFF for download"</span></span>
-<span id="cb1-234"><a href="#cb1-234"></a>            <span class="ot">]</span></span>
-<span id="cb1-235"><a href="#cb1-235"></a>          <span class="fu">},</span></span>
-<span id="cb1-236"><a href="#cb1-236"></a>          <span class="dt">"format"</span><span class="fu">:</span> <span class="st">"image/tiff"</span></span>
-<span id="cb1-237"><a href="#cb1-237"></a>        <span class="fu">}</span></span>
-<span id="cb1-238"><a href="#cb1-238"></a>      <span class="ot">]</span><span class="fu">,</span></span>
-<span id="cb1-239"><a href="#cb1-239"></a>      <span class="dt">"thumbnail"</span><span class="fu">:</span> <span class="ot">[</span></span>
-<span id="cb1-240"><a href="#cb1-240"></a>        <span class="fu">{</span></span>
-<span id="cb1-241"><a href="#cb1-241"></a>          <span class="dt">"id"</span><span class="fu">:</span> <span class="st">"https://media.collections.yale.edu/thumbnail/yuag/ca7804d1-5fbc-4bce-9343-007bcb018c32"</span><span class="fu">,</span></span>
-<span id="cb1-242"><a href="#cb1-242"></a>          <span class="dt">"type"</span><span class="fu">:</span> <span class="st">"Image"</span><span class="fu">,</span></span>
-<span id="cb1-243"><a href="#cb1-243"></a>          <span class="dt">"format"</span><span class="fu">:</span> <span class="st">"image/jpeg"</span><span class="fu">,</span></span>
-<span id="cb1-244"><a href="#cb1-244"></a>          <span class="dt">"width"</span><span class="fu">:</span> <span class="dv">480</span><span class="fu">,</span></span>
-<span id="cb1-245"><a href="#cb1-245"></a>          <span class="dt">"height"</span><span class="fu">:</span> <span class="dv">290</span></span>
-<span id="cb1-246"><a href="#cb1-246"></a>        <span class="fu">}</span></span>
-<span id="cb1-247"><a href="#cb1-247"></a>      <span class="ot">]</span><span class="fu">,</span></span>
-<span id="cb1-248"><a href="#cb1-248"></a>      <span class="dt">"metadata"</span><span class="fu">:</span> <span class="ot">[</span></span>
-<span id="cb1-249"><a href="#cb1-249"></a>        <span class="fu">{</span></span>
-<span id="cb1-250"><a href="#cb1-250"></a>          <span class="dt">"label"</span><span class="fu">:</span> <span class="fu">{</span></span>
-<span id="cb1-251"><a href="#cb1-251"></a>            <span class="dt">"en"</span><span class="fu">:</span> <span class="ot">[</span></span>
-<span id="cb1-252"><a href="#cb1-252"></a>              <span class="st">"Image Use Rights"</span></span>
-<span id="cb1-253"><a href="#cb1-253"></a>            <span class="ot">]</span></span>
-<span id="cb1-254"><a href="#cb1-254"></a>          <span class="fu">},</span></span>
-<span id="cb1-255"><a href="#cb1-255"></a>          <span class="dt">"value"</span><span class="fu">:</span> <span class="fu">{</span></span>
-<span id="cb1-256"><a href="#cb1-256"></a>            <span class="dt">"en"</span><span class="fu">:</span> <span class="ot">[</span></span>
-<span id="cb1-257"><a href="#cb1-257"></a>              <span class="st">"No Copyright - United States"</span></span>
-<span id="cb1-258"><a href="#cb1-258"></a>            <span class="ot">]</span></span>
-<span id="cb1-259"><a href="#cb1-259"></a>          <span class="fu">}</span></span>
-<span id="cb1-260"><a href="#cb1-260"></a>        <span class="fu">}</span></span>
-<span id="cb1-261"><a href="#cb1-261"></a>      <span class="ot">]</span></span>
-<span id="cb1-262"><a href="#cb1-262"></a>    <span class="fu">}</span></span>
-<span id="cb1-263"><a href="#cb1-263"></a>  <span class="ot">]</span></span>
-<span id="cb1-264"><a href="#cb1-264"></a><span class="fu">}</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p><a href="https://manifests.collections.yale.edu/yuag/obj/293797" class="uri">https://manifests.collections.yale.edu/yuag/obj/293797</a></p>
-</section>
-<section id="ecosytem" class="level6">
-<h6 class="anchored" data-anchor-id="ecosytem">Ecosytem</h6>
-<p><img src="https://julsraemy.ch/assets/images/silos_to_iiif.gif" class="img-fluid"></p>
-</section>
-</section>
-<section id="web-annotation-data-model" class="level5">
-<h5 class="anchored" data-anchor-id="web-annotation-data-model">Web Annotation Data Model</h5>
-<p>The Web Annotation Data Model, standardized by the World Wide Web Consortium (W3C) in 2017, provides an extensible and interoperable framework for creating and sharing annotations across different platforms. It supports a wide range of use cases, from simple annotations to linking content with multimedia data points. It leverages JSON-LD for serialization, enabling integration with the web’s structured data ecosystem while following Linked Data principles <span class="citation" data-cites="haslhoferOpenAnnotationCollaboration2011 sandersonDesigningW3COpen2013">(see <a href="#ref-haslhoferOpenAnnotationCollaboration2011" role="doc-biblioref">Haslhofer et al., 2011</a>; <a href="#ref-sandersonDesigningW3COpen2013" role="doc-biblioref">Sanderson et al., 2013</a>)</span>.</p>
-<p>The model follows a three-part structure: - <strong>Target</strong>: The resource being annotated. - <strong>Body</strong>: The annotation content (text, image, media, etc.). - <strong>Annotation</strong>: The entity linking the body and target.</p>
-<p>This model ensures compatibility with web architecture and facilitates cross-platform sharing of annotations.</p>
-<p><img src="https://julsraemy.ch/prezi/assets/anno-model.png" class="img-fluid"></p>
-<p><strong>The Web Annotation Data Model in a IIIF setting</strong></p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode numberSource json number-lines code-with-copy"><code class="sourceCode json"><span id="cb2-1"><a href="#cb2-1"></a><span class="fu">{</span></span>
-<span id="cb2-2"><a href="#cb2-2"></a>  <span class="dt">"@context"</span><span class="fu">:</span> <span class="st">"http://iiif.io/api/presentation/3/context.json"</span><span class="fu">,</span></span>
-<span id="cb2-3"><a href="#cb2-3"></a>  <span class="dt">"id"</span><span class="fu">:</span> <span class="st">"https://iiif.participatory-archives.ch/annotations/SGV_12N_08589-p1-list.json"</span><span class="fu">,</span></span>
-<span id="cb2-4"><a href="#cb2-4"></a>  <span class="dt">"type"</span><span class="fu">:</span> <span class="st">"AnnotationPage"</span><span class="fu">,</span></span>
-<span id="cb2-5"><a href="#cb2-5"></a>  <span class="dt">"items"</span><span class="fu">:</span> <span class="ot">[</span></span>
-<span id="cb2-6"><a href="#cb2-6"></a>    <span class="fu">{</span></span>
-<span id="cb2-7"><a href="#cb2-7"></a>      <span class="dt">"@context"</span><span class="fu">:</span> <span class="st">"http://www.w3.org/ns/anno.jsonld"</span><span class="fu">,</span></span>
-<span id="cb2-8"><a href="#cb2-8"></a>      <span class="dt">"id"</span><span class="fu">:</span> <span class="st">"https://iiif.participatory-archives.ch/annotations/SGV_12N_08589-p1-list/annotation-436121.json"</span><span class="fu">,</span></span>
-<span id="cb2-9"><a href="#cb2-9"></a>      <span class="dt">"motivation"</span><span class="fu">:</span> <span class="st">"commenting"</span><span class="fu">,</span></span>
-<span id="cb2-10"><a href="#cb2-10"></a>      <span class="dt">"type"</span><span class="fu">:</span> <span class="st">"Annotation"</span><span class="fu">,</span></span>
-<span id="cb2-11"><a href="#cb2-11"></a>      <span class="dt">"body"</span><span class="fu">:</span> <span class="ot">[</span></span>
-<span id="cb2-12"><a href="#cb2-12"></a>        <span class="fu">{</span></span>
-<span id="cb2-13"><a href="#cb2-13"></a>          <span class="dt">"type"</span><span class="fu">:</span> <span class="st">"TextualBody"</span><span class="fu">,</span></span>
-<span id="cb2-14"><a href="#cb2-14"></a>          <span class="dt">"value"</span><span class="fu">:</span> <span class="st">"person"</span><span class="fu">,</span></span>
-<span id="cb2-15"><a href="#cb2-15"></a>          <span class="dt">"purpose"</span><span class="fu">:</span> <span class="st">"commenting"</span></span>
-<span id="cb2-16"><a href="#cb2-16"></a>        <span class="fu">}</span><span class="ot">,</span></span>
-<span id="cb2-17"><a href="#cb2-17"></a>        <span class="fu">{</span></span>
-<span id="cb2-18"><a href="#cb2-18"></a>          <span class="dt">"type"</span><span class="fu">:</span> <span class="st">"TextualBody"</span><span class="fu">,</span></span>
-<span id="cb2-19"><a href="#cb2-19"></a>          <span class="dt">"value"</span><span class="fu">:</span> <span class="st">"Object Detection (vitrivr)"</span><span class="fu">,</span></span>
-<span id="cb2-20"><a href="#cb2-20"></a>          <span class="dt">"purpose"</span><span class="fu">:</span> <span class="st">"tagging"</span></span>
-<span id="cb2-21"><a href="#cb2-21"></a>        <span class="fu">}</span><span class="ot">,</span></span>
-<span id="cb2-22"><a href="#cb2-22"></a>        <span class="fu">{</span></span>
-<span id="cb2-23"><a href="#cb2-23"></a>          <span class="dt">"type"</span><span class="fu">:</span> <span class="st">"TextualBody"</span><span class="fu">,</span></span>
-<span id="cb2-24"><a href="#cb2-24"></a>          <span class="dt">"value"</span><span class="fu">:</span> <span class="st">"&lt;br&gt;&lt;small&gt;Detection score: 0.9574&lt;/small&gt;"</span><span class="fu">,</span></span>
-<span id="cb2-25"><a href="#cb2-25"></a>          <span class="dt">"purpose"</span><span class="fu">:</span> <span class="st">"commenting"</span></span>
-<span id="cb2-26"><a href="#cb2-26"></a>        <span class="fu">}</span></span>
-<span id="cb2-27"><a href="#cb2-27"></a>      <span class="ot">]</span><span class="fu">,</span></span>
-<span id="cb2-28"><a href="#cb2-28"></a>      <span class="dt">"target"</span><span class="fu">:</span> <span class="fu">{</span></span>
-<span id="cb2-29"><a href="#cb2-29"></a>        <span class="dt">"source"</span><span class="fu">:</span> <span class="st">"https://iiif.participatory-archives.ch/SGV_12N_08589/canvas/p1"</span><span class="fu">,</span></span>
-<span id="cb2-30"><a href="#cb2-30"></a>        <span class="dt">"selector"</span><span class="fu">:</span> <span class="fu">{</span></span>
-<span id="cb2-31"><a href="#cb2-31"></a>          <span class="dt">"type"</span><span class="fu">:</span> <span class="st">"FragmentSelector"</span><span class="fu">,</span></span>
-<span id="cb2-32"><a href="#cb2-32"></a>          <span class="dt">"conformsTo"</span><span class="fu">:</span> <span class="st">"http://www.w3.org/TR/media-frags/"</span><span class="fu">,</span></span>
-<span id="cb2-33"><a href="#cb2-33"></a>          <span class="dt">"value"</span><span class="fu">:</span> <span class="st">"xywh=319,2942,463,523"</span></span>
-<span id="cb2-34"><a href="#cb2-34"></a>        <span class="fu">},</span></span>
-<span id="cb2-35"><a href="#cb2-35"></a>        <span class="dt">"dcterms:isPartOf"</span><span class="fu">:</span> <span class="fu">{</span></span>
-<span id="cb2-36"><a href="#cb2-36"></a>          <span class="dt">"type"</span><span class="fu">:</span> <span class="st">"Manifest"</span><span class="fu">,</span></span>
-<span id="cb2-37"><a href="#cb2-37"></a>          <span class="dt">"id"</span><span class="fu">:</span> <span class="st">"https://iiif.participatory-archives.ch/SGV_12N_08589/manifest.json"</span></span>
-<span id="cb2-38"><a href="#cb2-38"></a>        <span class="fu">}}}</span><span class="ot">,</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</section>
-<section id="linked-art" class="level5">
-<h5 class="anchored" data-anchor-id="linked-art">Linked Art</h5>
-<p>Linked Art is a community and a CIDOC (<em>ICOM International Committee for Documentation</em>) Working Group collaborating to define a metadata application profile for describing cultural heritage, and the technical means for conveniently interacting with it (the API).</p>
-<p><a href="https://linked.art" class="uri">https://linked.art</a></p>
-<section id="community" class="level6">
-<h6 class="anchored" data-anchor-id="community">Community</h6>
-<p>Linked Art is an open community initiative where participants collaborate under a shared code of conduct. Ways to engage include attending events, joining the <a href="https://groups.google.com/forum/#!forum/linked-art">discussion group</a>, participating in the Slack workspace, or contributing to discussions on <a href="https://github.com/linked-art/linked.art/issues">GitHub</a>.</p>
-<p>A wide range of institutions contribute to Linked Art, including <strong>The Metropolitan Museum of Art</strong>, <strong>J. Paul Getty Trust</strong>, <strong>Yale University</strong>, <strong>Smithsonian Institution</strong>, <strong>Europeana</strong>, <strong>Canadian Heritage Information Network (CHIN)</strong>, <strong>Oxford University</strong>, <strong>Victoria and Albert Museum</strong>, <strong>Rijksmuseum</strong>, <strong>The Frick Collection</strong>, <strong>Museum of Modern Art (MoMA)</strong>, and many more. Since 2019, an editorial board has overseen Linked Art, ensuring diverse representation across institutions and disciplines.</p>
-</section>
-<section id="data-model" class="level6">
-<h6 class="anchored" data-anchor-id="data-model">Data Model</h6>
-<p><img src="https://julsraemy.ch/prezi/assets/la-overview.svg" class="img-fluid"></p>
-<table class="caption-top table">
-<thead>
-<tr class="header">
-<th>Level</th>
-<th>Linked Art</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><strong>Conceptual Model</strong></td>
-<td><a href="https://www.cidoc-crm.org/">CIDOC Conceptual Reference Model</a> (CRM)</td>
-</tr>
-<tr class="even">
-<td><strong>Ontology</strong></td>
-<td><a href="https://www.cidoc-crm.org/html/cidoc_crm_v7.1.2.html">RDF encoding of CRM 7.1</a>, plus extensions</td>
-</tr>
-<tr class="odd">
-<td><strong>Vocabulary</strong></td>
-<td><a href="https://www.getty.edu/research/tools/vocabularies/">Getty Vocabularies</a>, mainly the Art &amp; Architecture Thesaurus (AAT), as well as the Thesaurus of Geographic Names (TGN) and the Union List of Artist Names (ULAN)</td>
-</tr>
-<tr class="even">
-<td><strong>Profile</strong></td>
-<td>Object-based cultural heritage (mainly art museum oriented)</td>
-</tr>
-<tr class="odd">
-<td><strong>API</strong></td>
-<td><a href="https://www.w3.org/TR/json-ld11/">JSON-LD 1.1</a>, following REST (representational state transfer) and web patterns</td>
-</tr>
-</tbody>
-</table>
-<p><strong>Linked Art from 50k feet</strong></p>
-<p><img src="https://julsraemy.ch/prezi/assets/linkedart_50k_feet.svg" class="img-fluid"></p>
-<p><span class="citation" data-cites="raemyEnablingParticipatoryData2023Poster">Raemy et al. (<a href="#ref-raemyEnablingParticipatoryData2023Poster" role="doc-biblioref">2023</a>)</span></p>
-<p><strong>Digital Object</strong></p>
-<div class="sourceCode" id="cb3"><pre class="sourceCode numberSource json number-lines code-with-copy"><code class="sourceCode json"><span id="cb3-1"><a href="#cb3-1"></a><span class="fu">{</span></span>
-<span id="cb3-2"><a href="#cb3-2"></a><span class="er">{</span></span>
-<span id="cb3-3"><a href="#cb3-3"></a>  <span class="dt">"@context"</span><span class="fu">:</span> <span class="st">"https://linked.art/ns/v1/linked-art.json"</span><span class="fu">,</span></span>
-<span id="cb3-4"><a href="#cb3-4"></a>  <span class="dt">"id"</span><span class="fu">:</span> <span class="st">"https://linked.art/example/digital/0"</span><span class="fu">,</span></span>
-<span id="cb3-5"><a href="#cb3-5"></a>  <span class="dt">"type"</span><span class="fu">:</span> <span class="st">"DigitalObject"</span><span class="fu">,</span></span>
-<span id="cb3-6"><a href="#cb3-6"></a>  <span class="dt">"_label"</span><span class="fu">:</span> <span class="st">"Digital Image of Self-Portrait of Van Gogh"</span><span class="fu">,</span></span>
-<span id="cb3-7"><a href="#cb3-7"></a>  <span class="dt">"classified_as"</span><span class="fu">:</span> <span class="ot">[</span></span>
-<span id="cb3-8"><a href="#cb3-8"></a>    <span class="fu">{</span></span>
-<span id="cb3-9"><a href="#cb3-9"></a>      <span class="dt">"id"</span><span class="fu">:</span> <span class="st">"http://vocab.getty.edu/aat/300215302"</span><span class="fu">,</span></span>
-<span id="cb3-10"><a href="#cb3-10"></a>      <span class="dt">"type"</span><span class="fu">:</span> <span class="st">"Type"</span><span class="fu">,</span></span>
-<span id="cb3-11"><a href="#cb3-11"></a>      <span class="dt">"_label"</span><span class="fu">:</span> <span class="st">"Digital Image"</span></span>
-<span id="cb3-12"><a href="#cb3-12"></a>    <span class="fu">}</span></span>
-<span id="cb3-13"><a href="#cb3-13"></a>  <span class="ot">]</span><span class="fu">,</span></span>
-<span id="cb3-14"><a href="#cb3-14"></a>  <span class="dt">"identified_by"</span><span class="fu">:</span> <span class="ot">[</span></span>
-<span id="cb3-15"><a href="#cb3-15"></a>    <span class="fu">{</span></span>
-<span id="cb3-16"><a href="#cb3-16"></a>      <span class="dt">"type"</span><span class="fu">:</span> <span class="st">"Name"</span><span class="fu">,</span></span>
-<span id="cb3-17"><a href="#cb3-17"></a>      <span class="dt">"content"</span><span class="fu">:</span> <span class="st">"Self-Portrait Dedicated to Paul Gauguin"</span></span>
-<span id="cb3-18"><a href="#cb3-18"></a>    <span class="fu">}</span><span class="ot">,</span></span>
-<span id="cb3-19"><a href="#cb3-19"></a>    <span class="fu">{</span></span>
-<span id="cb3-20"><a href="#cb3-20"></a>      <span class="dt">"type"</span><span class="fu">:</span> <span class="st">"Identifier"</span><span class="fu">,</span></span>
-<span id="cb3-21"><a href="#cb3-21"></a>      <span class="dt">"classified_as"</span><span class="fu">:</span> <span class="ot">[</span></span>
-<span id="cb3-22"><a href="#cb3-22"></a>        <span class="fu">{</span></span>
-<span id="cb3-23"><a href="#cb3-23"></a>          <span class="dt">"id"</span><span class="fu">:</span> <span class="st">"http://vocab.getty.edu/aat/300404621"</span><span class="fu">,</span></span>
-<span id="cb3-24"><a href="#cb3-24"></a>          <span class="dt">"type"</span><span class="fu">:</span> <span class="st">"Type"</span><span class="fu">,</span></span>
-<span id="cb3-25"><a href="#cb3-25"></a>          <span class="dt">"_label"</span><span class="fu">:</span> <span class="st">"Owner-Assigned Number"</span></span>
-<span id="cb3-26"><a href="#cb3-26"></a>        <span class="fu">}</span></span>
-<span id="cb3-27"><a href="#cb3-27"></a>      <span class="ot">]</span><span class="fu">,</span></span>
-<span id="cb3-28"><a href="#cb3-28"></a>      <span class="dt">"content"</span><span class="fu">:</span> <span class="st">"47174896"</span></span>
-<span id="cb3-29"><a href="#cb3-29"></a>    <span class="fu">}</span></span>
-<span id="cb3-30"><a href="#cb3-30"></a>  <span class="ot">]</span><span class="fu">,</span></span>
-<span id="cb3-31"><a href="#cb3-31"></a>  <span class="dt">"dimension"</span><span class="fu">:</span> <span class="ot">[</span></span>
-<span id="cb3-32"><a href="#cb3-32"></a>    <span class="fu">{</span></span>
-<span id="cb3-33"><a href="#cb3-33"></a>      <span class="dt">"type"</span><span class="fu">:</span> <span class="st">"Dimension"</span><span class="fu">,</span></span>
-<span id="cb3-34"><a href="#cb3-34"></a>      <span class="dt">"classified_as"</span><span class="fu">:</span> <span class="ot">[</span></span>
-<span id="cb3-35"><a href="#cb3-35"></a>        <span class="fu">{</span></span>
-<span id="cb3-36"><a href="#cb3-36"></a>          <span class="dt">"id"</span><span class="fu">:</span> <span class="st">"http://vocab.getty.edu/aat/300055644"</span><span class="fu">,</span></span>
-<span id="cb3-37"><a href="#cb3-37"></a>          <span class="dt">"type"</span><span class="fu">:</span> <span class="st">"Type"</span><span class="fu">,</span></span>
-<span id="cb3-38"><a href="#cb3-38"></a>          <span class="dt">"_label"</span><span class="fu">:</span> <span class="st">"Height"</span></span>
-<span id="cb3-39"><a href="#cb3-39"></a>        <span class="fu">}</span></span>
-<span id="cb3-40"><a href="#cb3-40"></a>      <span class="ot">]</span><span class="fu">,</span></span>
-<span id="cb3-41"><a href="#cb3-41"></a>      <span class="dt">"value"</span><span class="fu">:</span> <span class="dv">2550</span><span class="fu">,</span></span>
-<span id="cb3-42"><a href="#cb3-42"></a>      <span class="dt">"unit"</span><span class="fu">:</span> <span class="fu">{</span></span>
-<span id="cb3-43"><a href="#cb3-43"></a>        <span class="dt">"id"</span><span class="fu">:</span> <span class="st">"http://vocab.getty.edu/aat/300266190"</span><span class="fu">,</span></span>
-<span id="cb3-44"><a href="#cb3-44"></a>        <span class="dt">"type"</span><span class="fu">:</span> <span class="st">"MeasurementUnit"</span><span class="fu">,</span></span>
-<span id="cb3-45"><a href="#cb3-45"></a>        <span class="dt">"_label"</span><span class="fu">:</span> <span class="st">"pixels"</span></span>
-<span id="cb3-46"><a href="#cb3-46"></a>      <span class="fu">}</span></span>
-<span id="cb3-47"><a href="#cb3-47"></a>    <span class="fu">}</span><span class="ot">,</span></span>
-<span id="cb3-48"><a href="#cb3-48"></a>    <span class="fu">{</span></span>
-<span id="cb3-49"><a href="#cb3-49"></a>      <span class="dt">"type"</span><span class="fu">:</span> <span class="st">"Dimension"</span><span class="fu">,</span></span>
-<span id="cb3-50"><a href="#cb3-50"></a>      <span class="dt">"classified_as"</span><span class="fu">:</span> <span class="ot">[</span></span>
-<span id="cb3-51"><a href="#cb3-51"></a>        <span class="fu">{</span></span>
-<span id="cb3-52"><a href="#cb3-52"></a>          <span class="dt">"id"</span><span class="fu">:</span> <span class="st">"http://vocab.getty.edu/aat/300055647"</span><span class="fu">,</span></span>
-<span id="cb3-53"><a href="#cb3-53"></a>          <span class="dt">"type"</span><span class="fu">:</span> <span class="st">"Type"</span><span class="fu">,</span></span>
-<span id="cb3-54"><a href="#cb3-54"></a>          <span class="dt">"_label"</span><span class="fu">:</span> <span class="st">"Width"</span></span>
-<span id="cb3-55"><a href="#cb3-55"></a>        <span class="fu">}</span></span>
-<span id="cb3-56"><a href="#cb3-56"></a>      <span class="ot">]</span><span class="fu">,</span></span>
-<span id="cb3-57"><a href="#cb3-57"></a>      <span class="dt">"value"</span><span class="fu">:</span> <span class="dv">2087</span><span class="fu">,</span></span>
-<span id="cb3-58"><a href="#cb3-58"></a>      <span class="dt">"unit"</span><span class="fu">:</span> <span class="fu">{</span></span>
-<span id="cb3-59"><a href="#cb3-59"></a>        <span class="dt">"id"</span><span class="fu">:</span> <span class="st">"http://vocab.getty.edu/aat/300266190"</span><span class="fu">,</span></span>
-<span id="cb3-60"><a href="#cb3-60"></a>        <span class="dt">"type"</span><span class="fu">:</span> <span class="st">"MeasurementUnit"</span><span class="fu">,</span></span>
-<span id="cb3-61"><a href="#cb3-61"></a>        <span class="dt">"_label"</span><span class="fu">:</span> <span class="st">"pixels"</span></span>
-<span id="cb3-62"><a href="#cb3-62"></a>      <span class="fu">}</span></span>
-<span id="cb3-63"><a href="#cb3-63"></a>    <span class="fu">}</span></span>
-<span id="cb3-64"><a href="#cb3-64"></a>  <span class="ot">]</span><span class="fu">,</span></span>
-<span id="cb3-65"><a href="#cb3-65"></a>  <span class="dt">"part_of"</span><span class="fu">:</span> <span class="ot">[</span></span>
-<span id="cb3-66"><a href="#cb3-66"></a>    <span class="fu">{</span></span>
-<span id="cb3-67"><a href="#cb3-67"></a>      <span class="dt">"id"</span><span class="fu">:</span> <span class="st">"https://iiif.harvardartmuseums.org/manifests/object/299843"</span><span class="fu">,</span></span>
-<span id="cb3-68"><a href="#cb3-68"></a>      <span class="dt">"type"</span><span class="fu">:</span> <span class="st">"DigitalObject"</span><span class="fu">,</span></span>
-<span id="cb3-69"><a href="#cb3-69"></a>      <span class="dt">"_label"</span><span class="fu">:</span> <span class="st">"IIIF Manifest"</span></span>
-<span id="cb3-70"><a href="#cb3-70"></a>    <span class="fu">}</span></span>
-<span id="cb3-71"><a href="#cb3-71"></a>  <span class="ot">]</span><span class="fu">,</span></span>
-<span id="cb3-72"><a href="#cb3-72"></a>  <span class="dt">"member_of"</span><span class="fu">:</span> <span class="ot">[</span></span>
-<span id="cb3-73"><a href="#cb3-73"></a>    <span class="fu">{</span></span>
-<span id="cb3-74"><a href="#cb3-74"></a>      <span class="dt">"id"</span><span class="fu">:</span> <span class="st">"https://linked.art/example/set/0"</span><span class="fu">,</span></span>
-<span id="cb3-75"><a href="#cb3-75"></a>      <span class="dt">"type"</span><span class="fu">:</span> <span class="st">"Set"</span><span class="fu">,</span></span>
-<span id="cb3-76"><a href="#cb3-76"></a>      <span class="dt">"_label"</span><span class="fu">:</span> <span class="st">"Images of Self-Portraits of Van Gogh"</span></span>
-<span id="cb3-77"><a href="#cb3-77"></a>    <span class="fu">}</span></span>
-<span id="cb3-78"><a href="#cb3-78"></a>  <span class="ot">]</span><span class="fu">,</span></span>
-<span id="cb3-79"><a href="#cb3-79"></a>  <span class="dt">"access_point"</span><span class="fu">:</span> <span class="ot">[</span></span>
-<span id="cb3-80"><a href="#cb3-80"></a>    <span class="fu">{</span></span>
-<span id="cb3-81"><a href="#cb3-81"></a>      <span class="dt">"id"</span><span class="fu">:</span> <span class="st">"https://ids.lib.harvard.edu/ids/iiif/47174896/full/full/0/default.jpg"</span><span class="fu">,</span></span>
-<span id="cb3-82"><a href="#cb3-82"></a>      <span class="dt">"type"</span><span class="fu">:</span> <span class="st">"DigitalObject"</span></span>
-<span id="cb3-83"><a href="#cb3-83"></a>    <span class="fu">}</span></span>
-<span id="cb3-84"><a href="#cb3-84"></a>  <span class="ot">]</span><span class="fu">,</span></span>
-<span id="cb3-85"><a href="#cb3-85"></a>  <span class="dt">"digitally_shows"</span><span class="fu">:</span> <span class="ot">[</span></span>
-<span id="cb3-86"><a href="#cb3-86"></a>    <span class="fu">{</span></span>
-<span id="cb3-87"><a href="#cb3-87"></a>      <span class="dt">"type"</span><span class="fu">:</span> <span class="st">"VisualItem"</span><span class="fu">,</span></span>
-<span id="cb3-88"><a href="#cb3-88"></a>      <span class="dt">"_label"</span><span class="fu">:</span> <span class="st">"Visual Content of Self-Portrait of Van Gogh"</span></span>
-<span id="cb3-89"><a href="#cb3-89"></a>    <span class="fu">}</span></span>
-<span id="cb3-90"><a href="#cb3-90"></a>  <span class="ot">]</span><span class="fu">,</span></span>
-<span id="cb3-91"><a href="#cb3-91"></a>  <span class="dt">"format"</span><span class="fu">:</span> <span class="st">"image/jpeg"</span><span class="fu">,</span></span>
-<span id="cb3-92"><a href="#cb3-92"></a>  <span class="dt">"digitally_available_via"</span><span class="fu">:</span> <span class="ot">[</span></span>
-<span id="cb3-93"><a href="#cb3-93"></a>    <span class="fu">{</span></span>
-<span id="cb3-94"><a href="#cb3-94"></a>      <span class="dt">"type"</span><span class="fu">:</span> <span class="st">"DigitalService"</span><span class="fu">,</span></span>
-<span id="cb3-95"><a href="#cb3-95"></a>      <span class="dt">"_label"</span><span class="fu">:</span> <span class="st">"IIIF Service"</span><span class="fu">,</span></span>
-<span id="cb3-96"><a href="#cb3-96"></a>      <span class="dt">"access_point"</span><span class="fu">:</span> <span class="ot">[</span></span>
-<span id="cb3-97"><a href="#cb3-97"></a>        <span class="fu">{</span></span>
-<span id="cb3-98"><a href="#cb3-98"></a>          <span class="dt">"id"</span><span class="fu">:</span> <span class="st">"https://ids.lib.harvard.edu/ids/iiif/47174896"</span><span class="fu">,</span></span>
-<span id="cb3-99"><a href="#cb3-99"></a>          <span class="dt">"type"</span><span class="fu">:</span> <span class="st">"DigitalObject"</span></span>
-<span id="cb3-100"><a href="#cb3-100"></a>        <span class="fu">}</span></span>
-<span id="cb3-101"><a href="#cb3-101"></a>      <span class="ot">]</span><span class="fu">,</span></span>
-<span id="cb3-102"><a href="#cb3-102"></a>      <span class="dt">"conforms_to"</span><span class="fu">:</span> <span class="ot">[</span></span>
-<span id="cb3-103"><a href="#cb3-103"></a>        <span class="fu">{</span></span>
-<span id="cb3-104"><a href="#cb3-104"></a>          <span class="dt">"id"</span><span class="fu">:</span> <span class="st">"https://iiif.io/api/image/2/context.json"</span><span class="fu">,</span></span>
-<span id="cb3-105"><a href="#cb3-105"></a>          <span class="dt">"type"</span><span class="fu">:</span> <span class="st">"InformationObject"</span></span>
-<span id="cb3-106"><a href="#cb3-106"></a>        <span class="fu">}</span></span>
-<span id="cb3-107"><a href="#cb3-107"></a>      <span class="ot">]</span></span>
-<span id="cb3-108"><a href="#cb3-108"></a>    <span class="fu">}</span></span>
-<span id="cb3-109"><a href="#cb3-109"></a>  <span class="ot">]</span><span class="fu">,</span></span>
-<span id="cb3-110"><a href="#cb3-110"></a>  <span class="dt">"created_by"</span><span class="fu">:</span> <span class="fu">{</span></span>
-<span id="cb3-111"><a href="#cb3-111"></a>    <span class="dt">"type"</span><span class="fu">:</span> <span class="st">"Creation"</span><span class="fu">,</span></span>
-<span id="cb3-112"><a href="#cb3-112"></a>    <span class="dt">"carried_out_by"</span><span class="fu">:</span> <span class="ot">[</span></span>
-<span id="cb3-113"><a href="#cb3-113"></a>      <span class="fu">{</span></span>
-<span id="cb3-114"><a href="#cb3-114"></a>        <span class="dt">"id"</span><span class="fu">:</span> <span class="st">"https://linked.art/example/group/harvardartmuseums.org"</span><span class="fu">,</span></span>
-<span id="cb3-115"><a href="#cb3-115"></a>        <span class="dt">"type"</span><span class="fu">:</span> <span class="st">"Group"</span><span class="fu">,</span></span>
-<span id="cb3-116"><a href="#cb3-116"></a>        <span class="dt">"_label"</span><span class="fu">:</span> <span class="st">"Harvard Art Museums"</span></span>
-<span id="cb3-117"><a href="#cb3-117"></a>      <span class="fu">}</span></span>
-<span id="cb3-118"><a href="#cb3-118"></a>    <span class="ot">]</span><span class="fu">,</span></span>
-<span id="cb3-119"><a href="#cb3-119"></a>    <span class="dt">"used_specific_object"</span><span class="fu">:</span> <span class="ot">[</span></span>
-<span id="cb3-120"><a href="#cb3-120"></a>      <span class="fu">{</span></span>
-<span id="cb3-121"><a href="#cb3-121"></a>        <span class="dt">"id"</span><span class="fu">:</span> <span class="st">"https://harvardartmuseums.org/collections/object/299843"</span><span class="fu">,</span></span>
-<span id="cb3-122"><a href="#cb3-122"></a>        <span class="dt">"type"</span><span class="fu">:</span> <span class="st">"HumanMadeObject"</span><span class="fu">,</span></span>
-<span id="cb3-123"><a href="#cb3-123"></a>        <span class="dt">"_label"</span><span class="fu">:</span> <span class="st">"Self-Portrait of Van Gogh"</span></span>
-<span id="cb3-124"><a href="#cb3-124"></a>      <span class="fu">}</span></span>
-<span id="cb3-125"><a href="#cb3-125"></a>    <span class="ot">]</span></span>
-<span id="cb3-126"><a href="#cb3-126"></a>  <span class="fu">}</span></span>
-<span id="cb3-127"><a href="#cb3-127"></a><span class="fu">}</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p><strong>Linked Art Digital Integration (with IIIF)</strong></p>
-<p><img src="https://julsraemy.ch/prezi/assets/IIIF-LA.svg" class="img-fluid"></p>
-</section>
-</section>
-</section>
-</section>
-</section>
 <section id="references" class="level2">
 
 
@@ -1420,32 +468,8 @@ window.Quarto = {
 </section>
 
 <a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a><div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography" id="quarto-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" data-line-spacing="2" role="list">
-<div id="ref-berners-leeWorldWideWebExecutiveSummary1991" class="csl-entry" role="listitem">
-Berners-Lee, T. (1991, August 6). <em><span>WorldWideWeb</span> - executive summary</em>. archive.md. <a href="https://archive.md/Lfopj">https://archive.md/Lfopj</a>
-</div>
-<div id="ref-berners-leeLinkedData2006" class="csl-entry" role="listitem">
-Berners-Lee, T. (2006, July 27). <em>Linked <span>Data</span></em>. W3C. <a href="https://www.w3.org/DesignIssues/LinkedData.html">https://www.w3.org/DesignIssues/LinkedData.html</a>
-</div>
-<div id="ref-candelaChecklistPublishCollections2023a" class="csl-entry" role="listitem">
-Candela, G., Gabriëls, N., Chambers, S., Dobreva, M., Ames, S., Ferriter, M., Fitzgerald, N., Harbo, V., Hofmann, K., Holownia, O., Irollo, A., Mahey, M., Manchester, E., Pham, T.-A., Potter, A., &amp; Van Keer, E. (2023). A checklist to publish collections as data in <span>GLAM</span> institutions. <em>Global Knowledge, Memory and Communication</em>, <em>ahead-of-print</em>. <a href="https://doi.org/10.1108/GKMC-06-2023-0195">https://doi.org/10.1108/GKMC-06-2023-0195</a>
-</div>
-<div id="ref-carrollCAREPrinciplesIndigenous2020" class="csl-entry" role="listitem">
-Carroll, S. R., Garba, I., Figueroa-Rodríguez, O. L., Holbrook, J., Lovett, R., Materechera, S., Parsons, M., Raseroka, K., Rodriguez-Lonebear, D., Rowe, R., Sara, R., Walker, J. D., Anderson, J., &amp; Hudson, M. (2020). The <span>CARE Principles</span> for <span>Indigenous Data Governance</span>. <em>Data Science Journal</em>, <em>19</em>(1), 43. <a href="https://doi.org/10.5334/dsj-2020-043">https://doi.org/10.5334/dsj-2020-043</a>
-</div>
-<div id="ref-carrollOperationalizingCAREFAIR2021" class="csl-entry" role="listitem">
-Carroll, S. R., Herczog, E., Hudson, M., Russell, K., &amp; Stall, S. (2021). Operationalizing the <span>CARE</span> and <span>FAIR Principles</span> for <span>Indigenous</span> data futures. <em>Scientific Data</em>, <em>8</em>(1), 108. <a href="https://doi.org/10.1038/s41597-021-00892-0">https://doi.org/10.1038/s41597-021-00892-0</a>
-</div>
-<div id="ref-cornutAnnotationsKnowledgePractices2023" class="csl-entry" role="listitem">
-Cornut, M., Raemy, J. A., &amp; Spiess, F. (2023). Annotations as <span>Knowledge Practices</span> in <span>Image Archives</span>: <span>Application</span> of <span>Linked Open Usable Data</span> and <span>Machine Learning</span>. <em>Journal on Computing and Cultural Heritage</em>, <em>16</em>(4), 1–19. <a href="https://doi.org/10.1145/3625301">https://doi.org/10.1145/3625301</a>
-</div>
 <div id="ref-fosterOpenScience2019" class="csl-entry" role="listitem">
 FOSTER. (2019). Open <span>Science</span>. In <em>Foster <span>Taxonomy</span></em>. FACILITATE OPEN SCIENCE TRAINING FOR EUROPEAN RESEARCH. <a href="https://www.fosteropenscience.eu/taxonomy/term/100">https://www.fosteropenscience.eu/taxonomy/term/100</a>
-</div>
-<div id="ref-haslhoferOpenAnnotationCollaboration2011" class="csl-entry" role="listitem">
-Haslhofer, B., Simon, R., Sanderson, R., &amp; Sompel, H. V. de. (2011). The <span>Open Annotation Collaboration</span> (<span>OAC</span>) <span>Model</span>. <em>2011 <span>Workshop</span> on <span>Multimedia</span> on the <span>Web</span></em>, 5–9. <a href="https://doi.org/10.1109/MMWeb.2011.21">https://doi.org/10.1109/MMWeb.2011.21</a>
-</div>
-<div id="ref-idehenSemanticWebLayer2017" class="csl-entry" role="listitem">
-Idehen, K. U. (2017, July 24). <em>Semantic <span>Web Layer Cake Tweak</span>, <span>Explained</span></em>. OpenLink Software Blog. <a href="https://medium.com/openlink-software-blog/semantic-web-layer-cake-tweak-explained-6ba5c6ac3fab">https://medium.com/openlink-software-blog/semantic-web-layer-cake-tweak-explained-6ba5c6ac3fab</a>
 </div>
 <div id="ref-jullienHistoricalAnalysisEmergence2009" class="csl-entry" role="listitem">
 Jullien, N. (2009). A <span>Historical Analysis</span> of the <span>Emergence</span> of <span>Free Cooperative Software Production</span>: In M. Pagani (Ed.), <em>Encyclopedia of <span>Multimedia Technology</span> and <span>Networking</span>, <span>Second Edition</span></em> (pp. 605–612). IGI Global. <a href="https://doi.org/10.4018/978-1-60566-014-1.ch081">https://doi.org/10.4018/978-1-60566-014-1.ch081</a>
@@ -1456,50 +480,11 @@ Max Planck Society, &amp; European Cultural Heritage Online. (2003). <em>Berlin 
 <div id="ref-morrisonRedrawnSlidePresentation2021" class="csl-entry" role="listitem">
 Morrison, R. (2021). <em>Redrawn slide from presentation of <span>Ana Persic</span>, <span>Division</span> of <span>Science Policy</span> and <span>Capacity-Building</span> (<span>SC</span>/<span>PCB</span>), <span>UNESCO</span> (<span>France</span>) presentation to <span>Open Science Conference</span> 2021, <span>ZBW</span> — <span>Leibniz Information Centre</span> for <span>Economics</span>, <span>Germany</span>.</em> [Graphic]. <a href="https://commons.wikimedia.org/wiki/File:Osc2021-unesco-open-science-no-gray.png">https://commons.wikimedia.org/wiki/File:Osc2021-unesco-open-science-no-gray.png</a>
 </div>
-<div id="ref-newburyLOUDLinkedOpen2018" class="csl-entry" role="listitem">
-Newbury, D. (2018). <span>LOUD</span>: <span>Linked Open Usable Data</span> and linked.art. <em>2018 <span>CIDOC Conference</span></em>, 1–11. <a href="https://cidoc.mini.icom.museum/wp-content/uploads/sites/6/2021/03/CIDOC2018_paper_153.pdf">https://cidoc.mini.icom.museum/wp-content/uploads/sites/6/2021/03/CIDOC2018_paper_153.pdf</a>
-</div>
-<div id="ref-padillaAlwaysAlreadyComputational2017" class="csl-entry" role="listitem">
-Padilla, T., Allen, L., Frost, H., Potvin, S., Russey Roke, E., &amp; Varner, S. (2017). Always <span>Already Computational</span>: <span>Collections</span> as <span>Data</span>. <em>Collections as Data</em>. <a href="https://doi.org/10.17605/OSF.IO/MX6UK">https://doi.org/10.17605/OSF.IO/MX6UK</a>
-</div>
-<div id="ref-padillaCollectionsDataPart2023" class="csl-entry" role="listitem">
-Padilla, T., Scates Kettler, H., &amp; Shorish, Y. (2023). <em>Collections as <span>Data</span>: <span>Part</span> to <span>Whole</span></em> (p. 19) [Final Report]. Always Already Computational - Collections as Data. <a href="https://doi.org/10.5281/zenodo.10161976">https://doi.org/10.5281/zenodo.10161976</a>
-</div>
-<div id="ref-padillaVancouverStatementCollections2023" class="csl-entry" role="listitem">
-Padilla, T., Scates Kettler, H., Varner, S., &amp; Shorish, Y. (2023). <em>Vancouver <span>Statement</span> on <span>Collections</span> as <span>Data</span></em> [White paper]. Internet Archive Canada. <a href="https://doi.org/10.5281/zenodo.8341519">https://doi.org/10.5281/zenodo.8341519</a>
-</div>
 <div id="ref-persicBuildingGlobalConsensus2021" class="csl-entry" role="listitem">
 Persic, A. (Director). (2021, February). <em>Building a <span>Global Consensus</span> on <span>Open Science</span> – the future <span>UNESCO Recommendation</span> on <span>Open Science</span></em> [Video recording]. <a href="https://doi.org/10.5446/53434">https://doi.org/10.5446/53434</a>
 </div>
-<div id="ref-raemyCharacterisingIIIFLinked2023" class="csl-entry" role="listitem">
-Raemy, J. A. (2023). <em>Characterising the <span>IIIF</span> and <span>Linked Art Communities</span>: Survey report</em> (p. 29) [Report]. University of Basel. <a href="https://doi.org/10.5451/unibas-ep95340">https://doi.org/10.5451/unibas-ep95340</a>
-</div>
-<div id="ref-raemyLinkedOpenUsable2024a" class="csl-entry" role="listitem">
-Raemy, J. A. (2024). <em>Linked <span>Open Usable Data</span> for <span>Cultural Heritage</span>: <span>Perspectives</span> on <span>Community Practices</span> and <span>Semantic Interoperability</span></em> [Doctoral Thesis, University of Basel]. <a href="https://doi.org/10.5451/unibas-ep96807">https://doi.org/10.5451/unibas-ep96807</a>
-</div>
-<div id="ref-raemyEnablingParticipatoryData2023Poster" class="csl-entry" role="listitem">
-Raemy, J. A., Gray, T., Collinson, A., &amp; Page, K. R. (2023, July 12). Enabling <span>Participatory Data Perspectives</span> for <span>Image Archives</span> through a <span>Linked Art Workflow</span> (<span>Poster</span>). <em>Digital <span>Humanities</span> 2023 <span>Posters</span></em>. Digital <span>Humanities</span> 2023. <a href="https://doi.org/10.5281/zenodo.7878358">https://doi.org/10.5281/zenodo.7878358</a>
-</div>
-<div id="ref-sandersonShoutItOut2018" class="csl-entry" role="listitem">
-Sanderson, R. (2018, May 15). <em>Shout it <span>Out</span>: <span>LOUD</span></em>. <span>EuropeanaTech Conference</span> 2018, Rotterdam, the Netherlands. <a href="https://www.slideshare.net/Europeana/shout-it-out-loud-by-rob-sanderson-europeanatech-conference-2018">https://www.slideshare.net/Europeana/shout-it-out-loud-by-rob-sanderson-europeanatech-conference-2018</a>
-</div>
-<div id="ref-sandersonKeynoteStandardsCommunities2019" class="csl-entry" role="listitem">
-Sanderson, R. (2019). Keynote: <span>Standards</span> and <span>Communities</span>: <span>Connected People</span>, <span>Consistent Data</span>, <span>Usable Applications</span>. <em>2019 <span>ACM</span>/<span>IEEE Joint Conference</span> on <span>Digital Libraries</span> (<span>JCDL</span>)</em>, 28. <a href="https://doi.org/10.1109/JCDL.2019.00009">https://doi.org/10.1109/JCDL.2019.00009</a>
-</div>
-<div id="ref-sandersonDesigningW3COpen2013" class="csl-entry" role="listitem">
-Sanderson, R., Ciccarese, P., &amp; Van de Sompel, H. (2013). Designing the <span>W3C</span> open annotation data model. <em>Proceedings of the 5th <span>Annual ACM Web Science Conference</span></em>, 366–375. <a href="https://doi.org/10.1145/2464464.2464474">https://doi.org/10.1145/2464464.2464474</a>
-</div>
-<div id="ref-snydmanInternationalImageInteroperability2015" class="csl-entry" role="listitem">
-Snydman, S., Sanderson, R., &amp; Cramer, T. (2015). The <span>International Image Interoperability Framework</span> (<span>IIIF</span>): <span>A</span> community &amp; technology approach for web-based images. <em>Archiving <span>Conference</span></em>, <em>12</em>, 16–21. <a href="https://doi.org/10.2352/issn.2168-3204.2015.12.1.art00005">https://doi.org/10.2352/issn.2168-3204.2015.12.1.art00005</a>
-</div>
-<div id="ref-starInstitutionalEcologyTranslations1989" class="csl-entry" role="listitem">
-Star, S. L., &amp; Griesemer, J. R. (1989). Institutional <span>Ecology</span>, ’<span>Translations</span>’ and <span>Boundary Objects</span>: <span>Amateurs</span> and <span>Professionals</span> in <span>Berkeley</span>’s <span>Museum</span> of <span>Vertebrate Zoology</span>, 1907-39. <em>Social Studies of Science</em>, <em>19</em>(3), 387–420. <a href="https://www.jstor.org/stable/285080">https://www.jstor.org/stable/285080</a>
-</div>
 <div id="ref-tennantTaleTwoOpens2020" class="csl-entry" role="listitem">
 Tennant, J., Agarwal, R., Baždarić, K., Brassard, D., Crick, T., Dunleavy, D. J., Evans, T. R., Gardner, N., Gonzalez-Marquez, M., Graziotin, D., Greshake Tzovaras, B., Gunnarsson, D., Havemann, J., Hosseini, M., Katz, D. S., Knöchelmann, M., Madan, C. R., Manghi, P., Marocchino, A., … Yarkoni, T. (2020). <em>A tale of two ’opens’: Intersections between <span>Free</span> and <span>Open Source Software</span> and <span>Open Scholarship</span></em> [Preprint]. SocArXiv. <a href="https://doi.org/10.31235/osf.io/2kxq8">https://doi.org/10.31235/osf.io/2kxq8</a>
-</div>
-<div id="ref-wilkinsonFAIRGuidingPrinciples2016" class="csl-entry" role="listitem">
-Wilkinson, M. D., Dumontier, M., Aalbersberg, Ij. J., Appleton, G., Axton, M., Baak, A., Blomberg, N., Boiten, J.-W., da Silva Santos, L. B., Bourne, P. E., Bouwman, J., Brookes, A. J., Clark, T., Crosas, M., Dillo, I., Dumon, O., Edmunds, S., Evelo, C. T., Finkers, R., … Mons, B. (2016). The <span>FAIR Guiding Principles</span> for scientific data management and stewardship. <em>Scientific Data</em>, <em>3</em>, 160018. <a href="https://doi.org/10.1038/sdata.2016.18">https://doi.org/10.1038/sdata.2016.18</a>
 </div>
 </div></section><section class="quarto-appendix-contents" id="quarto-reuse"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div class="quarto-appendix-contents"><div><a rel="license" href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a></div></div></section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -2080,8 +1065,8 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../sections/platforms.html" class="pagination-link" aria-label="Platforms and Organisations">
-        <span class="nav-page-text">Platforms and Organisations</span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../sections/principles.html" class="pagination-link" aria-label="Associated Principles">
+        <span class="nav-page-text">Associated Principles</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

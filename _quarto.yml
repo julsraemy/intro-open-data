@@ -31,10 +31,14 @@ website:
         menu:
           - text: "Characteristics of Open Data"
             file: sections/characteristics.qmd
-          - text: "Associated Movements and Principles"
+          - text: "Associated Movements"
             file: sections/movements.qmd
-          - text: "Platforms and Organisations"
+          - text: "Associated Principles"
+            file: sections/principles.qmd
+          - text: "Open Data Platforms"
             file: sections/platforms.qmd
+          - text: "Open Data Organisations"
+            file: sections/organisations.qmd
           - text: "Assessment, Data Quality, and Best Practices"
             file: sections/assessment.qmd
           - text: "Techniques, Software, and Tools"
@@ -51,7 +55,9 @@ website:
       contents:
         - sections/characteristics.qmd
         - sections/movements.qmd
+        - sections/principles.qmd
         - sections/platforms.qmd
+        - sections/organisations.qmd
         - sections/assessment.qmd
         - sections/techniques.qmd
         - sections/showcases.qmd
@@ -78,6 +84,7 @@ format:
     page-layout: full
     highlight-style: github
     toc: true
+    toc-depth: 5
     csl: https://www.zotero.org/styles/apa
     bibliography-location: document
   
