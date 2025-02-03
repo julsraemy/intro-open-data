@@ -59,6 +59,7 @@ These tools complement broader frameworks such as FAIR, CARE, Collections as Dat
 ## Periodic Table of Open Data Elements
 
 The Periodic Table of Open Data Elements provides a visual summary of the enabling conditions and challenges that affect the success of open data initiatives. It outlines key elements such as:
+
 - **Problem and Demand Definition**
 - **Capacity and Culture**
 - **Governance**
