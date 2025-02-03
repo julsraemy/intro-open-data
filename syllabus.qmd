@@ -43,23 +43,80 @@ These methods are intended to foster both theoretical understanding and practica
 
 | Date 	| Content 	|
 |------------	|----------------------------	|
-| 17.02.2025 	| Course Overview, [Characteristics of Open Data](sections/characteristics.qmd), [Associated Movements](sections/movements.qmd)	| 
-| 24.02.2025 	| [Associated Principles](sections/principles.qmd), [Open Data Platforms](sections/platforms.qmd), [Open Data Organisations](sections/organisations.qmd)                  	|
-| 03.03.2025 	| [Assessment, Data Quality, and Best Practices](sections/assessment.qmd), [Techniques, Software, and Tools](sections/techniques.qmd)                  	|
+| 17.02.2025 	| Course Overview, [Characteristics of Open Data](sections/characteristics.qmd), [Associated Movements](sections/movements.qmd), [Exercise 1](#exercise-1)	| 
+| 24.02.2025 	| [Associated Principles](sections/principles.qmd), [Exercise 2](#exercise-2), [Open Data Platforms and Organisations](sections/platforms.qmd), [Exercise 3](#exercise-3)                 	|
+| 03.03.2025 	| [Assessment, Data Quality, and Best Practices](sections/assessment.qmd), [Techniques, Software, and Tools](sections/techniques.qmd), [Exercise 4](#exercise-4)                  	|
 | 10.03.2025 	| [Showcases](sections/showcases.qmd), Assignment Workshop                	| 
 
 ## Exercises
 
-(...)
+### Exercise 1
 
+**Find/Define your assignment!** 
 
+What's possible to choose from: 
+
+- **The deletion of datasets from data.gov**: Since Trump has once again been elected President of the United States, health and climate information/datasets have disappeared from federal websites [see <https://www.theverge.com/news/604484/donald-trumps-data-purge-has-begun> and <https://fediscience.org/@petersuber/113874200243958520>].
+- **Comparing CKAN, uData and Piveau**: Compare these three software and their components
+- (...) 
+- **Find it yourself:** Select one or more datasets from one or several [platforms](sections/platforms.qmd) discussed during the course (if several datasets are selected, there must be a common thread). 
+
+### Exercise 2
+
+**Identify the Movements and Principles**
+
+Relate the movements and principles (OA, Open Data, Open Science, FLOSS, FAIR, CARE, Collections as Data, LOUD) to the following propositions (multiple answers possible).
+
+1. Software development
+2. Image dissemination
+3. Metadata dissemination
+4. Publication of scientific articles
+5. Persistent identifier assignment
+6. Digital object interoperability
+7. Development and maintenance of APIs
+8. Documentation
+9. Open license
+10. Inclusivity
+11. Machine-readable (meta)data
+12. Collaboration
+13. Ethical commitment 
+14. Semantic interoperability
+15. Reusability
+
+### Exercise 3
+
+Create a dashboard on [visualize.admin.ch](https://visualize.admin.ch/)
+
+### Exercise 4
+
+**OpenRefine**
+
+Getting started
+
+1. Install the software (<https://openrefine.org/docs>)
+2. Run it locally (accessible at <http://127.0.0.1:3333/>)
+3. Have a look at the different pages and functionalities
+4. Create a new project by importing any supported files
+
+Create a project with an extract from the CAS photographic archives
+
+5. Create a project by importing the data extract from the CAS photographic archives: `ekws_extract.csv`
+6. Review the dataset
+7. Clean the dataset by removing unnecessary columns
+8. Undertake some reconciliation with external services for agents (people and institutions).
+
+A step further...
+
+9. Create a new project by importing a dataset from one of the ORD/OGD portals
+10. Analyse and curate the dataset
+
+Alternatively: go through this tutorial from Library Carpentry: <https://librarycarpentry.org/lc-open-refine/>
 
 ## Course Assessment
 
-- Select one or more datasets from one or several platforms discussed during the course (if several datasets are selected, there must be a common thread)
-- Analyse, describe and identify the potential uses of the dataset(s)
-- Between 900 and 1,100 words (without references)
-- Short paper to be uploaded onto Cyberlearn by **Friday 14 March, 7pm**
+- Analyse, describe and identify the use case or the (potential) uses of the dataset(s).
+- Between 900 and 1,100 words (excluding references) in an open format, preferably `.qmd`. _A template will soon be provided..._
+- Short paper to be submitted either to the lecturer or via a pull request on the [GitHub repository](https://github.com/julsraemy/intro-open-data) (for those who wish to make it public) by **Friday 14 March, 7pm**.
 
 This assignment is weighted at 20% of the 7C2-CT module.
 
