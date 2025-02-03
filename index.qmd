@@ -36,17 +36,28 @@ The course is designed for undergraduate students in Information Science at the 
 - Open data enhances transparency and accountability, particularly in sectors where public trust is paramount.
 - By making data freely accessible, open data initiatives allow for greater scrutiny and analysis, leading to more accountable governance and institutional practices.
 
+### The Evolution of Open Data
+
+- While open data in itself is a commendable goal, the concept of Linked Open (Usable) Data takes it a step further.
+- Linked Open Data enhances the value of open data by ensuring it is not only available but also interconnected, making it more discoverable and useful for a wider range of applications and analyses.
+- LOUD is about enhancing usability and semantic interoperability leveraging community-driven standards and practices.
+
+### OGD and ORD for GLAM institutions
+
+- Open Research Data (ORD) and Open Government Data (OGD) can be viewed both as a service provided to the public and as a process that requires active management and continuous improvement.
+- Institutions in the GLAM (Galleries, Libraries, Archives, Museums) sector need to consider how these open data initiatives fit within their practices, both in terms of contributing data and utilising data for research, curation, and public engagement.
+
 ### AI and Machine Learning
 
-- Open (and structured) data is crucial for AI and ML systems, providing the large datasets necessary for training models.
+- Open (and structured) data is crucial for Artificial Intelligence (AI) and Machine Learning (ML) systems, providing the large datasets necessary for training models.
 - The availability of diverse, high-quality open datasets enables more robust and inclusive AI developments.
-- Open data fosters transparency and ethical practices in AI by ensuring external validation and reducing biases.
+- Open data promotes transparency and ethical practices in AI by ensuring external validation and --- hopefully --- reducing biases.
 
 ### Collaboration is Key
 
 - Collaboration is a fundamental aspect of open data initiatives.
   - Discussing best practices grounded in collaboration, such as leveraging the Collections as Data checklist.
-  - Participating in the IIIF and Linked Art communities for the cultural heritage field (and beyond, notably for the STEM sector).
+  - Participating in the International Image Interoperability Framework (IIIF) and Linked Art communities for the cultural heritage field (and beyond, notably for the STEM --- Science, Technology, Engineering, and Mathematics --- sector).
   - OGD meet-ups (Open Data Beer).
 - Such collaboration is vital for addressing global challenges, encouraging innovation, and ensuring the sustainable development of open data ecosystems.
 

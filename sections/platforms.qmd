@@ -30,7 +30,7 @@ listing:
       description: >
             **Humanities:** The DaSCH Service Platform is a national research infrastructure dedicated to preserving long-term humanities data. The DaSCH – Swiss National Data and Service Center for the Humanities was initiated by the University of Basel's Digital Humanities Lab. In 2017, DaSCH was established as a national facility operated by the Swiss Academy of Humanities and Social Sciences (SAGW). Since 2021, it has operated as a national research data infrastructure primarily funded by the Swiss National Science Foundation (SNSF). The platform employs a core ontology (Knora) and provides modern APIs (RESTful JSON-LD and IIIF Image API) along with Archival Resource Keys (ARKs).
       image: https://app.dasch.swiss/assets/images/dasch-mosaic-icon-color.svg
-      categories: [ord]
+      categories: [iiif, linked data, ord]
     - title: "OLOS"
       path: https://olos.swiss/portal/
       description: >
@@ -42,7 +42,7 @@ listing:
       description: >
         **Institutional:** Yareta is the research data repository developed for Geneva’s higher education institutions. Launched in 2019 and built upon the OLOS platform, it is tailored to manage institutional research data.
       image: https://yareta.unige.ch/assets/themes/yareta/toolbar-header-image.png
-      categories: [ord]
+      categories: [iiif, linked data, ord]
     - title: "Zenodo"
       path: https://zenodo.org/
       description: >
@@ -52,9 +52,21 @@ listing:
     - title: "opendata.swiss"
       path: https://opendata.swiss/
       description: >
-        **National/Registry:** opendata.swiss is the central portal for open government data in Switzerland, managed by the Federal Statistical Office. Originally launched in 2013 by the Swiss Federal Archives as opendata.admin.ch and rebranded in 2016, it aggregates metadata via a JSON API and an XML file compliant with the DCAT-AP CH standard.
+        **National/Registry:** opendata.swiss is the central portal for open government data in Switzerland, managed by the Federal Statistical Office (FSO). Originally launched in 2013 by the Swiss Federal Archives as opendata.admin.ch and rebranded in 2016, it aggregates metadata via a JSON API and an XML file compliant with the DCAT-AP CH standard.
       image: https://www.bfs.admin.ch/dam/bfs/de/logos/campaign/opendata_OFS_portail.png
       categories: [ogd]
+    - title: "LINDAS"
+      path: https://lindas.admin.ch/
+      description: >
+        **Linked Data Service:** the service allows public administrations to publish their data in the form of Knowledge Graphs. LINDAS was built between 2017 and 2020 in the Linked Data Platform project of the Swiss Federal Archives (SFA) with the support of the State Secretariat for Economic Affairs (SECO) and in close collaboration with the Federal Office for the Environment (FOEN).
+      image: https://upload.wikimedia.org/wikipedia/commons/9/95/Coat_of_arms_of_Switzerland.svg
+      categories: [linked data, ogd]
+    - title: "Visualize"
+      path: https://visualize.admin.ch/
+      description: >
+        **Visualisation:** The visualize.admin.ch portal enables the visualisation of Swiss Open Government Data provided by LINDAS, which can then be easily downloaded or integrated into websites and updated automatically. It is operated by the FOEN.
+      image: https://upload.wikimedia.org/wikipedia/commons/9/95/Coat_of_arms_of_Switzerland.svg
+      categories: [linked data, ogd]
     - title: "Open Data Basel-Stadt"
       path: https://data.bs.ch/
       description: >
@@ -78,7 +90,7 @@ listing:
       description: >
         **EU:** European Data is the official portal for European open data, launched in 2021 after a beta phase starting in 2015. It features datasets with DCAT-AP metadata, multiple APIs (including an SPARQL endpoint), and has its source code available on GitLab.
       image: https://data.europa.eu/themes/edp3/dist/ecl/preset-eu/dist/images/logo/standard-version/positive/logo-eu--en.svg
-      categories: [ogd]
+      categories: [ogd, linked data]
     - title: "DATA.GOV"
       path: https://data.gov/
       description: >
@@ -122,7 +134,7 @@ format:
 
 ## Platforms and Organisations
 
-This page features a curated selection of open data platforms and organisations, with a particular emphasis on Switzerland. You can explore various initiatives—ranging from research data repositories like the [Registry of Research Data Repositories](https://www.re3data.org/), [SwissUbase](https://www.swissubase.ch/), and [DaSCH Service Platform](https://app.dasch.swiss/) to open government data portals such as [opendata.swiss](https://opendata.swiss/), [Open Data Basel-Stadt](https://data.bs.ch/), [Stadt Zürich Open Data](https://data.stadt-zuerich.ch/), and the [Open Data Portal of Geneva Public Transport](https://opendata.tpg.ch/). In addition, learn more about community-driven organisations like the [Open Knowledge Network](https://okfn.org/), [Open Research Data National Strategy Council](https://openresearchdata.swiss/) [opendata.ch](https://opendata.ch/), and [Open Data Beer](https://opendatabeer.ch/).
+This page features a curated selection of open data platforms and organisations, with a particular emphasis on Switzerland. You can explore various initiatives—ranging from research data repositories like the [Registry of Research Data Repositories](https://www.re3data.org/), [SwissUbase](https://www.swissubase.ch/), and [DaSCH Service Platform](https://app.dasch.swiss/) to open government data portals such as [opendata.swiss](https://opendata.swiss/), [LINDAS](https://lindas.admin.ch) [Open Data Basel-Stadt](https://data.bs.ch/), [Stadt Zürich Open Data](https://data.stadt-zuerich.ch/), and the [Open Data Portal of Geneva Public Transport](https://opendata.tpg.ch/). In addition, learn more about community-driven organisations like the [Open Knowledge Network](https://okfn.org/), [Open Research Data National Strategy Council](https://openresearchdata.swiss/) [opendata.ch](https://opendata.ch/), and [Open Data Beer](https://opendatabeer.ch/).
 
 For more information about OGD in Switzerland, please see this curated list on GitHub: <https://github.com/rnckp/awesome-ogd-switzerland>.
 
