@@ -13,14 +13,61 @@ license: "CC BY"
 
 ## Open Data Maturity (ODM)
 
-(...)
+### Annual Assessment
 
-## Impact Monitoring Framework
+**Policy** – Since 2015, the European Union has conducted an annual assessment to gauge the progress of European countries in promoting and facilitating the availability and reuse of public sector information – predominantly open government data. This component investigates the open data policies and strategies in place, the national governance models for managing open data, and the measures implemented to execute these policies.
 
-(...)
+**Impact** – The assessment also examines the willingness, preparedness and capacity of countries to measure both the reuse of open data and the impact that this reuse creates.
+
+### Portal and Quality
+
+**Portal** – This element evaluates the functionality of national open data portals. It considers how well the portals cater to user needs, the methods used to assess user behaviour, the breadth of data available across different sectors, and the strategies in place to ensure the portals’ sustainability.
+
+**Quality** – In this area, the evaluation focuses on the measures adopted by portal managers to systematically harvest metadata, monitor metadata quality and ensure compliance with the DCAT-AP metadata standard, as well as the quality of the data published on the national portals.
+
+For more details, please refer to the [European Open Data Maturity publication](https://data.europa.eu/en/publications/open-data-maturity).
+
+## ODM 2023
+
+The 2023 ODM assessment involved 35 participating countries – including the EU-27, three European Free Trade Association countries (Iceland, Norway and Switzerland), and five candidate countries (Bosnia and Herzegovina, Montenegro, Albania, Serbia and Ukraine). Notably, Switzerland scored 79% in Open Data Maturity, ranking 24th among the participants [@page2023OpenData2023].
+
+Further information is available in the [ODM 2023 report](https://data.europa.eu/en/publications/open-data-maturity/2023).
+
+## Measuring Impact
+
+### Impact Monitoring Framework
+
+In Switzerland, the [opendata.swiss](https://opendata.swiss/) platform has leveraged an Impact Monitoring Framework to assess the value of open government data initiatives. This framework employs a structured set of criteria and leverages the Social Return on Investment (SROI) approach to evaluate inputs, outputs, outcomes and overall impact. This systematic method offers a robust means to quantify the social and economic benefits derived from open data projects [@sturmerMeasuringPromiseOpen2016]. 
+
+## Data Quality and Best Practices
+
+### Data Quality
+
+Tracking the state of open government data is crucial. Various tools are available to assess data quality:
+- The Open Knowledge Foundation (OKFN) Data Quality Index.
+- The [Opquast web quality assurance checklist](https://checklists.opquast.com/fr/assurance-qualite-web/download/).
+- Data Quality Scores provided on platforms such as Data Winnipeg, which evaluate the metadata quality of datasets.
+
+### Best Practices and Toolkits
+
+A number of best practice resources and toolkits help guide the effective management of open data:
+- The Annotated 8 Principles of Open Government Data (OGD) (US), which provide detailed guidelines.
+- The [Open Government Data Toolkit](https://opendatatoolkit.worldbank.org/en/data/opendatatoolkit/home), offering comprehensive resources for implementing open data initiatives.
+
+These tools complement broader frameworks such as FAIR, CARE, Collections as Data, and LOUD, all of which are essential for ensuring that open data is both accessible and of high quality.
 
 ## Periodic Table of Open Data Elements
 
-(...)
+The Periodic Table of Open Data Elements provides a visual summary of the enabling conditions and challenges that affect the success of open data initiatives. It outlines key elements such as:
+- **Problem and Demand Definition**
+- **Capacity and Culture**
+- **Governance**
+- **Partnerships**
+- **Risks**
 
+![](https://odimpact.org/images/final-report/table.png)
+
+This table serves as a valuable reference for understanding the multifaceted nature of open data impacts. For further exploration, you can view the [English version](https://odimpact.org/periodic-table.html) or the [French version](https://open.datactivist.coop/apps/periodic-table).
+
+## References
 

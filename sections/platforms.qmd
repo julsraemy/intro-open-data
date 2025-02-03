@@ -1,5 +1,5 @@
 ---
-title: "Open Data Platforms"
+title: "Open Data Platforms and Organisations"
 authors: 
   - name: Julien A. Raemy
     orcid: 0000-0002-4711-5759
@@ -10,35 +10,121 @@ date: "2025-01-19"
 date-modified: last-modified
 license: "CC BY"
 listing:
-  id: platforms
+  id: platforms-orgs
+  max-description-length: 800
   contents:
-    -   title: "Registry of Research Data Repositories"
-        path: https://www.re3data.org/
-        description: "International registry that includes data repositories from various academic disciplines "
-        image: https://upload.wikimedia.org/wikipedia/commons/f/fe/Re3data_Logo_RGB_72dpi.png
-        categories: [ord]
-    -   title: "SwissUbase"
-        path: https://www.swissubase.ch/
-        description: "National cross-disciplinary solution operated by [FORS](https://forscenter.ch/)"
-        image: https://www.swissubase.ch/swissubase-logo.webp
-        categories: [ord]
-    -   title: "DaSCH Service Platform (DSP)"
-        path: https://app.dasch.swiss/
-        description: "National research infrastructure for preserving long-term Humanities Data"
-        image: https://app.dasch.swiss/assets/images/dasch-mosaic-icon-color.svg
-        categories: [ord]
-  sort-ui: [title, categories]
+    - title: "Registry of Research Data Repositories"
+      path: https://www.re3data.org/
+      description: >
+        **Registry:** Launched in 2012, this comprehensive registry of research data repositories provides embeddable tools and detailed metadata—including data accessibility, licensing, persistent identifiers, and certification information. All metadata is available under a CC0 license and accessible via an API.
+      image: https://upload.wikimedia.org/wikipedia/commons/f/fe/Re3data_Logo_RGB_72dpi.png
+      categories: [ord]
+    - title: "SwissUbase"
+      path: https://www.swissubase.ch/
+      description: >
+        **Cross-disciplinary:** SwissUbase is a national solution primarily serving the social sciences and linguistics. Operated by [FORS](https://forscenter.ch/), it was launched in 2021 to replace FORSbase and features its own metadata schema for studies, datasets, and data files with Digital Object Identifier (DOI) support at the dataset level.
+      image: https://www.swissubase.ch/swissubase-logo.webp
+      categories: [ord]
+    - title: "DaSCH Service Platform (DSP)"
+      path: https://app.dasch.swiss/
+      description: >
+            **Humanities:** The DaSCH Service Platform is a national research infrastructure dedicated to preserving long-term humanities data. The DaSCH – Swiss National Data and Service Center for the Humanities was initiated by the University of Basel's Digital Humanities Lab. In 2017, DaSCH was established as a national facility operated by the Swiss Academy of Humanities and Social Sciences (SAGW). Since 2021, it has operated as a national research data infrastructure primarily funded by the Swiss National Science Foundation (SNSF). The platform employs a core ontology (Knora) and provides modern APIs (RESTful JSON-LD and IIIF Image API) along with Archival Resource Keys (ARKs).
+      image: https://app.dasch.swiss/assets/images/dasch-mosaic-icon-color.svg
+      categories: [ord]
+    - title: "OLOS"
+      path: https://olos.swiss/portal/
+      description: >
+        **Cross-institutional:** OLOS is a consultation and archive portal developed under the Data Life-Cycle Management (DLCM) project. It serves multiple institutions and utilizes the Datacite Metadata Schema with DOI assignment at the dataset level.
+      image: https://www.swissuniversities.ch/fileadmin/swissuniversities/Dokumente/Hochschulpolitik/P-5_Services_Kommunikationsprojekt/OLOS/Logo_OLOS.png
+      categories: [ord]
+    - title: "Yareta"
+      path: https://yareta.unige.ch/
+      description: >
+        **Institutional:** Yareta is the research data repository developed for Geneva’s higher education institutions. Launched in 2019 and built upon the OLOS platform, it is tailored to manage institutional research data.
+      image: https://yareta.unige.ch/assets/themes/yareta/toolbar-header-image.png
+      categories: [ord]
+    - title: "Zenodo"
+      path: https://zenodo.org/
+      description: >
+        **Generic:** Developed at CERN, Zenodo is a generalist repository that allows anyone to deposit data. It supports DOI assignment for each version of deposited data, making it a versatile platform for researchers in any discipline.
+      image: https://raw.githubusercontent.com/zenodo/zenodo/master/zenodo/modules/theme/static/img/logos/zenodo-gradient-square.svg
+      categories: [ord]
+    - title: "opendata.swiss"
+      path: https://opendata.swiss/
+      description: >
+        **National/Registry:** opendata.swiss is the central portal for open government data in Switzerland, managed by the Federal Statistical Office. Originally launched in 2013 by the Swiss Federal Archives as opendata.admin.ch and rebranded in 2016, it aggregates metadata via a JSON API and an XML file compliant with the DCAT-AP CH standard.
+      image: https://www.bfs.admin.ch/dam/bfs/de/logos/campaign/opendata_OFS_portail.png
+      categories: [ogd]
+    - title: "Open Data Basel-Stadt"
+      path: https://data.bs.ch/
+      description: >
+        **Cantonal:** Open Data Basel-Stadt is the cantonal portal for open government data from Basel-Stadt. Officially launched in 2019 following a pilot phase, it features a dedicated dashboard, its own metadata schema combining DCAT and DCAT-AP CH properties, and a JSON API.
+      image: https://data.bs.ch/assets/theme_image/ODBS_Logo_rund_gruen.png
+      categories: [ogd]
+    - title: "Stadt Zürich Open Data"
+      path: https://data.stadt-zuerich.ch/
+      description: >
+        **Municipal:** Launched in 2012, Stadt Zürich Open Data is recognized as Switzerland’s first open government data platform. It provides (Geo)JSON APIs, dedicated GitHub scripts, and employs a metadata schema based on DCAT-AP CH properties to enhance data discovery.
+      image: https://data.stadt-zuerich.ch/logo.svg
+      categories: [ogd]
+    - title: "opendata.tpg"
+      path: https://opendata.tpg.ch/
+      description: >
+        **Public-Law Body:** The Open Data Portal of Geneva Public Transport (opendata.tpg) was launched in 2022. Building on an initiative that started in 2015 with real-time transit data, it supports multiple download formats (including DCAT in RDF/XML and JSON) to promote transparency and citizen participation.
+      image: https://s3-eu-central-1.amazonaws.com/aws-ec2-eu-central-1-opendatasoft-staticfileset/tpg/logo
+      categories: [ogd]
+    - title: "European Data"
+      path: https://data.europa.eu/
+      description: >
+        **EU:** European Data is the official portal for European open data, launched in 2021 after a beta phase starting in 2015. It features datasets with DCAT-AP metadata, multiple APIs (including an SPARQL endpoint), and has its source code available on GitLab.
+      image: https://data.europa.eu/themes/edp3/dist/ecl/preset-eu/dist/images/logo/standard-version/positive/logo-eu--en.svg
+      categories: [ogd]
+    - title: "DATA.GOV"
+      path: https://data.gov/
+      description: >
+        **USA:** DATA.GOV is the U.S. Government’s central portal for open data, launched in 2009. It provides access to datasets from various federal agencies using open source applications like CKAN, and employs the DCAT-US Schema v1.1 for metadata.
+      image: https://s3-us-gov-west-1.amazonaws.com/cg-0817d6e3-93c4-4de8-8b32-da6919464e61/logo.svg
+      categories: [ogd]
+    - title: "Open Knowledge Network"
+      path: https://okfn.org/
+      description: >
+        **Global:** Founded in 2011, the Open Knowledge Network is a global foundation dedicated to creating a fair, sustainable, and open digital future. It connects multiple chapters, members, and contributors worldwide to promote open knowledge.
+      image: https://okfn.org/assets/images/lg-okfn.svg
+      categories: [foundation]
+    - title: "Open Research Data National Strategy Council"
+      path: https://openresearchdata.swiss/
+      description: >
+        **Association:** Open Research Data is a community-driven initiative dedicated to promoting open research data practices in Switzerland. It provides resources, guidelines, and networking opportunities for researchers and institutions, helping to advance the culture of open science and data sharing.
+      image: https://openresearchdata.swiss/wp-content/uploads/2023/07/logo.svg
+      categories: [association]
+    - title: "opendata.ch"
+      path: https://opendata.ch/
+      description: >
+        **Community:** opendata.ch is the Swiss Open Data Association—the Swiss chapter of the Open Knowledge Network. Since its inception in 2011, it has supported and coordinated open data initiatives across Switzerland, including a dedicated working group for the cultural heritage sector (OpenGLAM).
+      image: https://opendata.ch/wordpress/files/2021/11/opendata-logo-RGB-full-large.png
+      categories: [association]
+    - title: "Open Data Beer"
+      path: https://opendatabeer.ch/
+      description: >
+        **Community:** Since 2018, Open Data Beer has organised community events that bring together open data practitioners from across Switzerland. Supported by organisations such as the Federal Statistical Office, various cantons, and SBB CFF FFS, these events foster innovation and collaboration.
+      image: https://opendatabeer.files.wordpress.com/2018/02/cropped-icon_transparent1.png
+      categories: [association]
+  sort-ui: [categories, title]
   filter-ui: [description]
   type: grid
   page-size: 36
+format:
+  html:
+    other-links:
+      - text: Awesome Open Government Data Switzerland
+        href: https://github.com/rnckp/awesome-ogd-switzerland
 ---
 
-## Platforms
+## Platforms and Organisations
 
-::: {#platforms}
+This page features a curated selection of open data platforms and organisations, with a particular emphasis on Switzerland. You can explore various initiatives—ranging from research data repositories like the [Registry of Research Data Repositories](https://www.re3data.org/), [SwissUbase](https://www.swissubase.ch/), and [DaSCH Service Platform](https://app.dasch.swiss/) to open government data portals such as [opendata.swiss](https://opendata.swiss/), [Open Data Basel-Stadt](https://data.bs.ch/), [Stadt Zürich Open Data](https://data.stadt-zuerich.ch/), and the [Open Data Portal of Geneva Public Transport](https://opendata.tpg.ch/). In addition, learn more about community-driven organisations like the [Open Knowledge Network](https://okfn.org/), [Open Research Data National Strategy Council](https://openresearchdata.swiss/) [opendata.ch](https://opendata.ch/), and [Open Data Beer](https://opendatabeer.ch/).
+
+For more information about OGD in Switzerland, please see this curated list on GitHub: <https://github.com/rnckp/awesome-ogd-switzerland>.
+
+::: {#platforms-orgs}
 :::
-
-
-
-
-

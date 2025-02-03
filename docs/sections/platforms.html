@@ -8,7 +8,7 @@
 
 <meta name="dcterms.date" content="2025-01-19">
 
-<title>Open Data Platforms – Introduction to Open Data</title>
+<title>Open Data Platforms and Organisations – Introduction to Open Data</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -31,7 +31,7 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
-<link href="../sections/organisations.html" rel="next">
+<link href="../sections/assessment.html" rel="next">
 <link href="../sections/principles.html" rel="prev">
 <link href="../android-chrome-512x512.png" rel="icon" type="image/png">
 <script src="../site_libs/quarto-listing/list.min.js"></script>
@@ -77,7 +77,7 @@ ul.task-list li input[type="checkbox"] {
 <script>
 
   window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-platforms .list');
+    const listingTargetEl = window.document.querySelector('#listing-platforms-orgs .list');
     if (!listingTargetEl) {
       // No listing discovered, do not attach.
       return; 
@@ -90,7 +90,7 @@ ul.task-list li input[type="checkbox"] {
     };
 
     window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-platforms'] = new List('listing-platforms', options);
+    window['quarto-listings']['listing-platforms-orgs'] = new List('listing-platforms-orgs', options);
 
     if (window['quarto-listing-loaded']) {
       window['quarto-listing-loaded']();
@@ -135,10 +135,12 @@ window.Quarto = {
 </script>
 
 <link rel="stylesheet" href="../styles/custom.scss">
-<meta property="og:title" content="Open Data Platforms – Introduction to Open Data">
+<meta property="og:title" content="Open Data Platforms and Organisations – Introduction to Open Data">
+<meta property="og:description" content="">
 <meta property="og:image" content="https://julsraemy.ch/intro-open-data/sections/data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA2ZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDo1N0NEMjA4MDI1MjA2ODExOTk0QzkzNTEzRjZEQTg1NyIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDozM0NDOEJGNEZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDozM0NDOEJGM0ZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ1M1IE1hY2ludG9zaCI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOkZDN0YxMTc0MDcyMDY4MTE5NUZFRDc5MUM2MUUwNEREIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjU3Q0QyMDgwMjUyMDY4MTE5OTRDOTM1MTNGNkRBODU3Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+84NovQAAAR1JREFUeNpiZEADy85ZJgCpeCB2QJM6AMQLo4yOL0AWZETSqACk1gOxAQN+cAGIA4EGPQBxmJA0nwdpjjQ8xqArmczw5tMHXAaALDgP1QMxAGqzAAPxQACqh4ER6uf5MBlkm0X4EGayMfMw/Pr7Bd2gRBZogMFBrv01hisv5jLsv9nLAPIOMnjy8RDDyYctyAbFM2EJbRQw+aAWw/LzVgx7b+cwCHKqMhjJFCBLOzAR6+lXX84xnHjYyqAo5IUizkRCwIENQQckGSDGY4TVgAPEaraQr2a4/24bSuoExcJCfAEJihXkWDj3ZAKy9EJGaEo8T0QSxkjSwORsCAuDQCD+QILmD1A9kECEZgxDaEZhICIzGcIyEyOl2RkgwAAhkmC+eAm0TAAAAABJRU5ErkJggg==">
 <meta property="og:site_name" content="Introduction to Open Data">
-<meta name="twitter:title" content="Open Data Platforms – Introduction to Open Data">
+<meta name="twitter:title" content="Open Data Platforms and Organisations – Introduction to Open Data">
+<meta name="twitter:description" content="">
 <meta name="twitter:image" content="https://julsraemy.ch/intro-open-data/sections/data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA2ZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDo1N0NEMjA4MDI1MjA2ODExOTk0QzkzNTEzRjZEQTg1NyIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDozM0NDOEJGNEZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDozM0NDOEJGM0ZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ1M1IE1hY2ludG9zaCI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOkZDN0YxMTc0MDcyMDY4MTE5NUZFRDc5MUM2MUUwNEREIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjU3Q0QyMDgwMjUyMDY4MTE5OTRDOTM1MTNGNkRBODU3Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+84NovQAAAR1JREFUeNpiZEADy85ZJgCpeCB2QJM6AMQLo4yOL0AWZETSqACk1gOxAQN+cAGIA4EGPQBxmJA0nwdpjjQ8xqArmczw5tMHXAaALDgP1QMxAGqzAAPxQACqh4ER6uf5MBlkm0X4EGayMfMw/Pr7Bd2gRBZogMFBrv01hisv5jLsv9nLAPIOMnjy8RDDyYctyAbFM2EJbRQw+aAWw/LzVgx7b+cwCHKqMhjJFCBLOzAR6+lXX84xnHjYyqAo5IUizkRCwIENQQckGSDGY4TVgAPEaraQr2a4/24bSuoExcJCfAEJihXkWDj3ZAKy9EJGaEo8T0QSxkjSwORsCAuDQCD+QILmD1A9kECEZgxDaEZhICIzGcIyEyOl2RkgwAAhkmC+eAm0TAAAAABJRU5ErkJggg==">
 <meta name="twitter:card" content="summary_large_image">
 </head>
@@ -190,11 +192,7 @@ window.Quarto = {
   </li>  
         <li>
     <a class="dropdown-item" href="../sections/platforms.html">
- <span class="dropdown-text">Open Data Platforms</span></a>
-  </li>  
-        <li>
-    <a class="dropdown-item" href="../sections/organisations.html">
- <span class="dropdown-text">Open Data Organisations</span></a>
+ <span class="dropdown-text">Open Data Platforms and Organiations</span></a>
   </li>  
         <li>
     <a class="dropdown-item" href="../sections/assessment.html">
@@ -231,7 +229,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../sections/platforms.html">Open Data Platforms</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../sections/platforms.html">Open Data Platforms and Organisations</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
@@ -264,13 +262,7 @@ window.Quarto = {
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../sections/platforms.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text">Open Data Platforms</span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../sections/organisations.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Open Data Organisations</span></a>
+ <span class="menu-text">Open Data Platforms and Organisations</span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -301,16 +293,16 @@ window.Quarto = {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#platforms" id="toc-platforms" class="nav-link active" data-scroll-target="#platforms">Platforms</a></li>
+  <li><a href="#platforms-and-organisations" id="toc-platforms-and-organisations" class="nav-link active" data-scroll-target="#platforms-and-organisations">Platforms and Organisations</a></li>
   </ul>
-<div class="toc-actions"><ul><li><a href="https://github.com/julsraemy/intro-open-data/edit/main/sections/platforms.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/julsraemy/intro-open-data/issues/new/choose" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
+<div class="toc-actions"><ul><li><a href="https://github.com/julsraemy/intro-open-data/edit/main/sections/platforms.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/julsraemy/intro-open-data/issues/new/choose" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div><div class="quarto-other-links"><h2>Other Links</h2><ul><li><a href="https://github.com/rnckp/awesome-ogd-switzerland"><i class="bi bi-link-45deg"></i>Awesome Open Government Data Switzerland</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content column-body" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Open Data Platforms</h1>
+<h1 class="title">Open Data Platforms and Organisations</h1>
 </div>
 
 
@@ -341,7 +333,7 @@ window.Quarto = {
     <div>
     <div class="quarto-title-meta-heading">Modified</div>
     <div class="quarto-title-meta-contents">
-      <p class="date-modified">February 1, 2025</p>
+      <p class="date-modified">February 3, 2025</p>
     </div>
   </div>
     
@@ -352,20 +344,22 @@ window.Quarto = {
 </header>
 
 
-<section id="platforms" class="level2">
-<h2 class="anchored" data-anchor-id="platforms">Platforms</h2>
-<div id="listing-platforms" class="quarto-listing quarto-listing-container-grid">
+<section id="platforms-and-organisations" class="level2">
+<h2 class="anchored" data-anchor-id="platforms-and-organisations">Platforms and Organisations</h2>
+<p>This page features a curated selection of open data platforms and organisations, with a particular emphasis on Switzerland. You can explore various initiatives—ranging from research data repositories like the <a href="https://www.re3data.org/">Registry of Research Data Repositories</a>, <a href="https://www.swissubase.ch/">SwissUbase</a>, and <a href="https://app.dasch.swiss/">DaSCH Service Platform</a> to open government data portals such as <a href="https://opendata.swiss/">opendata.swiss</a>, <a href="https://data.bs.ch/">Open Data Basel-Stadt</a>, <a href="https://data.stadt-zuerich.ch/">Stadt Zürich Open Data</a>, and the <a href="https://opendata.tpg.ch/">Open Data Portal of Geneva Public Transport</a>. In addition, learn more about community-driven organisations like the <a href="https://okfn.org/">Open Knowledge Network</a>, <a href="https://openresearchdata.swiss/">Open Research Data National Strategy Council</a> <a href="https://opendata.ch/">opendata.ch</a>, and <a href="https://opendatabeer.ch/">Open Data Beer</a>.</p>
+<p>For more information about OGD in Switzerland, please see this curated list on GitHub: <a href="https://github.com/rnckp/awesome-ogd-switzerland" class="uri">https://github.com/rnckp/awesome-ogd-switzerland</a>.</p>
+<div id="listing-platforms-orgs" class="quarto-listing quarto-listing-container-grid">
 <div class="listing-actions-group">
    <div class="input-group input-group-sm quarto-listing-sort">
      <span class="input-group-text"><i class="bi bi-sort-down"></i></span>
-     <select id="listing-platforms-sort" class="form-select" aria-label="Order By" onchange="window['quarto-listings']['listing-platforms'].sort(this.options[this.selectedIndex].value, { order: this.options[this.selectedIndex].getAttribute('data-direction')})">
+     <select id="listing-platforms-orgs-sort" class="form-select" aria-label="Order By" onchange="window['quarto-listings']['listing-platforms-orgs'].sort(this.options[this.selectedIndex].value, { order: this.options[this.selectedIndex].getAttribute('data-direction')})">
        <option value="" disabled="" selected="" hidden="">Order By</option>
        <option value="index" data-direction="asc">Default</option>
-         <option value="listing-title" data-direction="asc">
-          Title
-        </option>
          <option value="listing-categories" data-direction="asc">
           Categories
+        </option>
+         <option value="listing-title" data-direction="asc">
+          Title
         </option>
      </select>
   </div>
@@ -391,7 +385,7 @@ ord
 </div>
 </div>
 <div class="card-text listing-description">
-International registry that includes data repositories from various academic disciplines
+<p><strong>Registry:</strong> Launched in 2012, this comprehensive registry of research data repositories provides embeddable tools and detailed metadata—including data accessibility, licensing, persistent identifiers, and certification information. All metadata is available under a CC0 license and accessible via an API.</p>
 </div>
 </div>
 </div>
@@ -413,7 +407,7 @@ ord
 </div>
 </div>
 <div class="card-text listing-description">
-National cross-disciplinary solution operated by <span>FORS</span>
+<p><strong>Cross-disciplinary:</strong> SwissUbase is a national solution primarily serving the social sciences and linguistics. Operated by <span>FORS</span>, it was launched in 2021 to replace FORSbase and features its own metadata schema for studies, datasets, and data files with Digital Object Identifier (DOI) support at the dataset level.</p>
 </div>
 </div>
 </div>
@@ -435,7 +429,293 @@ ord
 </div>
 </div>
 <div class="card-text listing-description">
-National research infrastructure for preserving long-term Humanities Data
+<p><strong>Humanities:</strong> The DaSCH Service Platform is a national research infrastructure dedicated to preserving long-term humanities data. The DaSCH – Swiss National Data and Service Center for the Humanities was initiated by the University of Basel’s Digital Humanities Lab. In 2017, DaSCH was established as a national facility operated by the Swiss Academy of Humanities and Social Sciences (SAGW). Since 2021, it has operated as a national research data infrastructure primarily funded by the Swiss National Science Foundation (SNSF). The platform employs a core ontology (Knora) and provides modern APIs (RESTful JSON-LD and IIIF Image API) along with Archival Resource Keys (ARKs).</p>
+</div>
+</div>
+</div>
+</a>
+</div>
+<div class="g-col-1" data-index="3" data-categories="ord">
+<a href="https://olos.swiss/portal/" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top">
+<img loading="lazy" src="https://www.swissuniversities.ch/fileadmin/swissuniversities/Dokumente/Hochschulpolitik/P-5_Services_Kommunikationsprojekt/OLOS/Logo_OLOS.png" class="thumbnail-image card-img" style="height: 150px;">
+</p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+OLOS
+</h5>
+<div class="listing-categories">
+<div class="listing-category" onclick="window.quartoListingCategory('ord'); return false;">
+ord
+</div>
+</div>
+<div class="card-text listing-description">
+<p><strong>Cross-institutional:</strong> OLOS is a consultation and archive portal developed under the Data Life-Cycle Management (DLCM) project. It serves multiple institutions and utilizes the Datacite Metadata Schema with DOI assignment at the dataset level.</p>
+</div>
+</div>
+</div>
+</a>
+</div>
+<div class="g-col-1" data-index="4" data-categories="ord">
+<a href="https://yareta.unige.ch/" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top">
+<img loading="lazy" src="https://yareta.unige.ch/assets/themes/yareta/toolbar-header-image.png" class="thumbnail-image card-img" style="height: 150px;">
+</p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+Yareta
+</h5>
+<div class="listing-categories">
+<div class="listing-category" onclick="window.quartoListingCategory('ord'); return false;">
+ord
+</div>
+</div>
+<div class="card-text listing-description">
+<p><strong>Institutional:</strong> Yareta is the research data repository developed for Geneva’s higher education institutions. Launched in 2019 and built upon the OLOS platform, it is tailored to manage institutional research data.</p>
+</div>
+</div>
+</div>
+</a>
+</div>
+<div class="g-col-1" data-index="5" data-categories="ord">
+<a href="https://zenodo.org/" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top">
+<img loading="lazy" src="https://raw.githubusercontent.com/zenodo/zenodo/master/zenodo/modules/theme/static/img/logos/zenodo-gradient-square.svg" class="thumbnail-image card-img" style="height: 150px;">
+</p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+Zenodo
+</h5>
+<div class="listing-categories">
+<div class="listing-category" onclick="window.quartoListingCategory('ord'); return false;">
+ord
+</div>
+</div>
+<div class="card-text listing-description">
+<p><strong>Generic:</strong> Developed at CERN, Zenodo is a generalist repository that allows anyone to deposit data. It supports DOI assignment for each version of deposited data, making it a versatile platform for researchers in any discipline.</p>
+</div>
+</div>
+</div>
+</a>
+</div>
+<div class="g-col-1" data-index="6" data-categories="ogd">
+<a href="https://opendata.swiss/" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top">
+<img loading="lazy" src="https://www.bfs.admin.ch/dam/bfs/de/logos/campaign/opendata_OFS_portail.png" class="thumbnail-image card-img" style="height: 150px;">
+</p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+opendata.swiss
+</h5>
+<div class="listing-categories">
+<div class="listing-category" onclick="window.quartoListingCategory('ogd'); return false;">
+ogd
+</div>
+</div>
+<div class="card-text listing-description">
+<p><strong>National/Registry:</strong> opendata.swiss is the central portal for open government data in Switzerland, managed by the Federal Statistical Office. Originally launched in 2013 by the Swiss Federal Archives as opendata.admin.ch and rebranded in 2016, it aggregates metadata via a JSON API and an XML file compliant with the DCAT-AP CH standard.</p>
+</div>
+</div>
+</div>
+</a>
+</div>
+<div class="g-col-1" data-index="7" data-categories="ogd">
+<a href="https://data.bs.ch/" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top">
+<img loading="lazy" src="https://data.bs.ch/assets/theme_image/ODBS_Logo_rund_gruen.png" class="thumbnail-image card-img" style="height: 150px;">
+</p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+Open Data Basel-Stadt
+</h5>
+<div class="listing-categories">
+<div class="listing-category" onclick="window.quartoListingCategory('ogd'); return false;">
+ogd
+</div>
+</div>
+<div class="card-text listing-description">
+<p><strong>Cantonal:</strong> Open Data Basel-Stadt is the cantonal portal for open government data from Basel-Stadt. Officially launched in 2019 following a pilot phase, it features a dedicated dashboard, its own metadata schema combining DCAT and DCAT-AP CH properties, and a JSON API.</p>
+</div>
+</div>
+</div>
+</a>
+</div>
+<div class="g-col-1" data-index="8" data-categories="ogd">
+<a href="https://data.stadt-zuerich.ch/" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top">
+<img loading="lazy" src="https://data.stadt-zuerich.ch/logo.svg" class="thumbnail-image card-img" style="height: 150px;">
+</p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+Stadt Zürich Open Data
+</h5>
+<div class="listing-categories">
+<div class="listing-category" onclick="window.quartoListingCategory('ogd'); return false;">
+ogd
+</div>
+</div>
+<div class="card-text listing-description">
+<p><strong>Municipal:</strong> Launched in 2012, Stadt Zürich Open Data is recognized as Switzerland’s first open government data platform. It provides (Geo)JSON APIs, dedicated GitHub scripts, and employs a metadata schema based on DCAT-AP CH properties to enhance data discovery.</p>
+</div>
+</div>
+</div>
+</a>
+</div>
+<div class="g-col-1" data-index="9" data-categories="ogd">
+<a href="https://opendata.tpg.ch/" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top">
+<img loading="lazy" src="https://s3-eu-central-1.amazonaws.com/aws-ec2-eu-central-1-opendatasoft-staticfileset/tpg/logo" class="thumbnail-image card-img" style="height: 150px;">
+</p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+opendata.tpg
+</h5>
+<div class="listing-categories">
+<div class="listing-category" onclick="window.quartoListingCategory('ogd'); return false;">
+ogd
+</div>
+</div>
+<div class="card-text listing-description">
+<p><strong>Public-Law Body:</strong> The Open Data Portal of Geneva Public Transport (opendata.tpg) was launched in 2022. Building on an initiative that started in 2015 with real-time transit data, it supports multiple download formats (including DCAT in RDF/XML and JSON) to promote transparency and citizen participation.</p>
+</div>
+</div>
+</div>
+</a>
+</div>
+<div class="g-col-1" data-index="10" data-categories="ogd">
+<a href="https://data.europa.eu/" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top">
+<img loading="lazy" src="https://data.europa.eu/themes/edp3/dist/ecl/preset-eu/dist/images/logo/standard-version/positive/logo-eu--en.svg" class="thumbnail-image card-img" style="height: 150px;">
+</p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+European Data
+</h5>
+<div class="listing-categories">
+<div class="listing-category" onclick="window.quartoListingCategory('ogd'); return false;">
+ogd
+</div>
+</div>
+<div class="card-text listing-description">
+<p><strong>EU:</strong> European Data is the official portal for European open data, launched in 2021 after a beta phase starting in 2015. It features datasets with DCAT-AP metadata, multiple APIs (including an SPARQL endpoint), and has its source code available on GitLab.</p>
+</div>
+</div>
+</div>
+</a>
+</div>
+<div class="g-col-1" data-index="11" data-categories="ogd">
+<a href="https://data.gov/" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top">
+<img loading="lazy" src="https://s3-us-gov-west-1.amazonaws.com/cg-0817d6e3-93c4-4de8-8b32-da6919464e61/logo.svg" class="thumbnail-image card-img" style="height: 150px;">
+</p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+DATA.GOV
+</h5>
+<div class="listing-categories">
+<div class="listing-category" onclick="window.quartoListingCategory('ogd'); return false;">
+ogd
+</div>
+</div>
+<div class="card-text listing-description">
+<p><strong>USA:</strong> DATA.GOV is the U.S. Government’s central portal for open data, launched in 2009. It provides access to datasets from various federal agencies using open source applications like CKAN, and employs the DCAT-US Schema v1.1 for metadata.</p>
+</div>
+</div>
+</div>
+</a>
+</div>
+<div class="g-col-1" data-index="12" data-categories="foundation">
+<a href="https://okfn.org/" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top">
+<img loading="lazy" src="https://okfn.org/assets/images/lg-okfn.svg" class="thumbnail-image card-img" style="height: 150px;">
+</p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+Open Knowledge Network
+</h5>
+<div class="listing-categories">
+<div class="listing-category" onclick="window.quartoListingCategory('foundation'); return false;">
+foundation
+</div>
+</div>
+<div class="card-text listing-description">
+<p><strong>Global:</strong> Founded in 2011, the Open Knowledge Network is a global foundation dedicated to creating a fair, sustainable, and open digital future. It connects multiple chapters, members, and contributors worldwide to promote open knowledge.</p>
+</div>
+</div>
+</div>
+</a>
+</div>
+<div class="g-col-1" data-index="13" data-categories="association">
+<a href="https://openresearchdata.swiss/" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top">
+<img loading="lazy" src="https://openresearchdata.swiss/wp-content/uploads/2023/07/logo.svg" class="thumbnail-image card-img" style="height: 150px;">
+</p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+Open Research Data National Strategy Council
+</h5>
+<div class="listing-categories">
+<div class="listing-category" onclick="window.quartoListingCategory('association'); return false;">
+association
+</div>
+</div>
+<div class="card-text listing-description">
+<p><strong>Association:</strong> Open Research Data is a community-driven initiative dedicated to promoting open research data practices in Switzerland. It provides resources, guidelines, and networking opportunities for researchers and institutions, helping to advance the culture of open science and data sharing.</p>
+</div>
+</div>
+</div>
+</a>
+</div>
+<div class="g-col-1" data-index="14" data-categories="association">
+<a href="https://opendata.ch/" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top">
+<img loading="lazy" src="https://opendata.ch/wordpress/files/2021/11/opendata-logo-RGB-full-large.png" class="thumbnail-image card-img" style="height: 150px;">
+</p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+opendata.ch
+</h5>
+<div class="listing-categories">
+<div class="listing-category" onclick="window.quartoListingCategory('association'); return false;">
+association
+</div>
+</div>
+<div class="card-text listing-description">
+<p><strong>Community:</strong> opendata.ch is the Swiss Open Data Association—the Swiss chapter of the Open Knowledge Network. Since its inception in 2011, it has supported and coordinated open data initiatives across Switzerland, including a dedicated working group for the cultural heritage sector (OpenGLAM).</p>
+</div>
+</div>
+</div>
+</a>
+</div>
+<div class="g-col-1" data-index="15" data-categories="association">
+<a href="https://opendatabeer.ch/" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top">
+<img loading="lazy" src="https://opendatabeer.files.wordpress.com/2018/02/cropped-icon_transparent1.png" class="thumbnail-image card-img" style="height: 150px;">
+</p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+Open Data Beer
+</h5>
+<div class="listing-categories">
+<div class="listing-category" onclick="window.quartoListingCategory('association'); return false;">
+association
+</div>
+</div>
+<div class="card-text listing-description">
+<p><strong>Community:</strong> Since 2018, Open Data Beer has organised community events that bring together open data practitioners from across Switzerland. Supported by organisations such as the Federal Statistical Office, various cantons, and SBB CFF FFS, these events foster innovation and collaboration.</p>
 </div>
 </div>
 </div>
@@ -1030,8 +1310,8 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../sections/organisations.html" class="pagination-link" aria-label="Open Data Organisations">
-        <span class="nav-page-text">Open Data Organisations</span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../sections/assessment.html" class="pagination-link" aria-label="Assessment, Data Quality, and Best Practices">
+        <span class="nav-page-text">Assessment, Data Quality, and Best Practices</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
