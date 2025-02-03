@@ -9,10 +9,67 @@ authors:
 date: "2025-01-19"
 date-modified: last-modified 
 license: "CC BY"
+listing:
+  id: showcases
+  max-description-length: 800
+  contents:
+    - title: "Our World in Data"
+      categories: [ogd, ord]
+      path: https://ourworldindata.org
+      description: >
+        Our World in Data is a collaborative effort between researchers at the University of Oxford and the non-profit organisation Global Change Data Lab (GCDL). It is a comprehensive online resource that presents empirical research and data on a wide array of global issues, focusing on large-scale problems like poverty, disease, hunger, climate change, war, existential risks, and inequality. The platform aims to provide accessible, comprehensible, and transparent data to inform readers about the state of the world and to support informed decision-making.
+      image: https://upload.wikimedia.org/wikipedia/commons/4/44/Our_World_in_Data_logo.png
+    - title: "Infectious Diseases Dashboard (IDD)"
+      categories: [health, ogd]
+      path: https://idd.bag.admin.ch/
+      image: https://upload.wikimedia.org/wikipedia/commons/9/95/Coat_of_arms_of_Switzerland.svg
+      description: >
+        The IDD is managed by the Federal Office of Public Health (FOPH). The IDD provides information on cases of infection and illness in Switzerland and the Principality of Liechtenstein caused by various pathogens.
+    - title: "Sportanlagen-Finder"
+      categories: [ogd, sport]
+      path: https://data.bs.ch/explore/dataset/100151/
+      image: https://upload.wikimedia.org/wikipedia/commons/7/7d/Wappen_Basel-Stadt_matt.svg
+      description: >
+        The sports facility finder shows sports and exercise facilities operated by the canton of Basel-Stadt as well as all cantonal sports facilities outside the cantonal and national borders. The dataset also lists cantonal premises that are used and rented for sports activities.
+    - title: "Federal Popular Votes"
+      categories: [ogd, politics]
+      path: https://abstimmungen.admin.ch/
+      description: >
+        Managed by the Federal Statistical Office where results of popular votes in Switzerland are continuously updated.
+      image: https://julsraemy.ch/prezi/assets/abstimmung.png
+    - title: "Heisse Preise"
+      categories: [retail pricing, scraping]
+      path: https://heisse-preise.io/
+      image: data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%2210 0 100 100%22><text y=%22.90em%22 font-size=%2290%22>🔥</text></svg>
+      description: >
+        Launched in 2023 by Mario Zechner, this platform offers a comprehensive comparison of food prices across various supermarkets in Austria, tracking and analysing price trends over time.
+    - title: "Animal Crossing Art Generator"
+      categories: [cultural heritage, gaming, iiif]
+      path: https://experiments.getty.edu/ac-art-generator/
+      image: https://experiments.getty.edu/ac-art-generator/images/5b7c44a1c1a3be9cbaff64f179db814c.jpg
+      description: >
+        An innovative tool that allows players to integrate virtual art into the Animal Crossing: New Horizons game. It enables users to turn any image from the Getty Museum's open-access collection (as well as any IIIF-compliant images) into in-game artwork. 
+    - title: "12 Sunsets: Exploring Ed Ruscha's Archive"
+      categories: [cultural heritage, georeferencing, iiif, linked data]
+      path: https://12sunsets.getty.edu/
+      image: https://julsraemy.ch/prezi/assets/12sunsets.gif
+      description: >
+        An interactive platform launched in 2020 by the J. Paul Getty Trust to explore Sunset Boulevard through 60 years of Ed Ruscha’s photography (1965–2007). The 65,000 images are IIIF-compliant and linked to the Getty Research Institute.
+    - title: "LUX: Yale Collections Discovery"
+      categories: [cultural heritage, iiif, linked data]
+      path: https://lux.collections.yale.edu/
+      image: https://julsraemy.ch/prezi/assets/lux-demo.gif
+      description: >
+        LUX provides a unified gateway to over 41 million cultural heritage resources from Yale's museums, archives, and libraries. It uses open standards such as Linked Art, IIIF, and W3C Activity Streams.
+  sort-ui: [categories, title]      
+  filter-ui: [description]
+  type: grid
+  page-size: 36
 ---
 
-## Our World in Data 
+## Showcases
 
-(...)
+Open data enables innovative applications and services across various domains. The following showcases highlight different platforms and projects that leverage open data for public benefit, research, and digital engagement.
 
-
+::: {#showcases}
+:::
