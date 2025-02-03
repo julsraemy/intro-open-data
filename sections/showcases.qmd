@@ -60,7 +60,7 @@ listing:
       path: https://lux.collections.yale.edu/
       image: https://julsraemy.ch/prezi/assets/lux-demo.gif
       description: >
-        LUX provides a unified gateway to over 41 million cultural heritage resources from Yale's museums, archives, and libraries. It uses open standards such as Linked Art, IIIF, and W3C Activity Streams.
+        LUX provides a unified gateway to over 41 million cultural heritage resources from the Yale University Library, Yale Center for British Art, Yale Peabody Museum, and Yale University Art Gallery. It is built on open standards such as Linked Art, IIIF, and W3C Activity Streams.
   sort-ui: [categories, title]      
   filter-ui: [description]
   type: grid
