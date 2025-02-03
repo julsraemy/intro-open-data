@@ -47,9 +47,21 @@ ETL stands for Extract, Transform, Load and describes the process of extracting 
 
 ## Software/Tools
 
+Below is a summary table that presents some key software tools, outlining their main functions and providing examples of typical deployments or customers.
+
+| **Tool**      | **Purpose & Function**                                                     | **Example Deployments/Customers**                                                      |
+|---------------|----------------------------------------------------------------------------|------------------------------------------------------------------------------------------|
+| **CKAN**      | Data management system for building and maintaining data hubs and portals. | Used in government open data portals such as data.gov.uk, data.gov, and various international bodies. |
+| **Piveau**    | Platform for metadata management, data harmonisation, and linked data.       | Deployed in several European open data initiatives.                                      |
+| **EntryScape**| Enables semantic integration and linked data for complex datasets.           | Mainly adopted by Swedish public organisations.  |
+| **uData**     | Facilitates the publication and management of open datasets.                 | Employed by municipalities and local governments for open data portals.                  |
+| **OpenRefine**| Tool for cleaning, transforming, and reconciling messy data.                 | Widely used in academic research, journalism, and by data professionals.                  |
+| **LOMAS**     | Allows secure processing of sensitive data with Differential Privacy.        | Piloted within the Swiss public sector to enable secondary data usage while preserving privacy.  |
+
+
 ### CKAN
 
-[CKAN](https://ckan.org/) is an open source data management system developed by the Open Knowledge Foundation. It is designed to support the creation and maintenance of data hubs and portals, offering a standardised platform for publishing and accessing datasets. CKAN employs a PostgreSQL database, a Solr index, and a comprehensive API to facilitate data discovery and integration (see its [GitHub repository](https://github.com/ckan/ckan) for more technical information).
+[CKAN](https://ckan.org/) is an open source data management system developed by the Open Knowledge Foundation. It is designed to support the creation and maintenance of data hubs and portals, offering a standardised platform for publishing and accessing datasets. CKAN employs a PostgreSQL database, a Solr index, and a comprehensive API to facilitate data discovery and integration (see its [GitHub repository](https://github.com/ckan/ckan) for more technical information). It has been deployed widely in national and local government open data portals (for example, [data.gov.uk](https://data.gov.uk/) and [data.gov](https://www.data.gov/)), as well as by various international organisations
 
 ### Piveau
 
@@ -61,7 +73,7 @@ Key features include:
   Piveau supports scalable harvesting (up to hundreds of thousands of datasets per source) and flexible, configuration-based orchestration, enabling custom processing steps and integration with third-party services.
   
 - **Linked Data and Storage:**  
-  It stores DCAT metadata as RDF in a triplestore (with support for storage backends like Virtuoso and Fuseki) and utilises URI harmonisation to create a consistent knowledge graph. The platform also integrates external vocabularies and ontologies to enhance linked data capabilities.
+  It stores DCAT metadata as RDF in a triplestore and utilises URI harmonisation to create a consistent knowledge graph. The platform also integrates external vocabularies and ontologies to enhance linked data capabilities.
 
 - **Search and Frontend:**  
   A powerful search engine based on Elasticsearch and a rich, customisable, multilingual frontend allow users to efficiently search and filter metadata. Additionally, extensive backend tools facilitate the creation and management of metadata.
@@ -80,11 +92,14 @@ Piveau is open source and its code is available on [GitLab](https://gitlab.com/p
 
 ### EntryScape
 
-EntryScape is an information management platform designed to handle complex datasets through semantic integration and linked data principles. It facilitates the organisation and enrichment of information from varied sources [@ebnerInformationModelManaging2014]. Further information is available on the [EntryScape website](https://entryscape.com/) and via its repository on [Bitbucket](https://bitbucket.org/metasolutions/).
+EntryScape is an information management platform developed by Metasolutions to handle complex datasets through semantic integration and linked data principles [@ebnerInformationModelManaging2014]. It facilitates the organisation and enrichment of heterogeneous data sources, making it easier to create interoperable and semantically rich datasets.
+
+Its customers include a broad range of public organisations such as municipalities, regional authorities, and national agencies. For example, in Sweden, EntryScape is used by national agencies like Skatteverket or Riksarkivet. Further information is available on the [EntryScape website](https://entryscape.com/) and via its repository on [Bitbucket](https://bitbucket.org/metasolutions/).
+
 
 ### uData
 
-[uData](https://udata.readthedocs.io/) is an open data management platform developed by the Open Data Team. It aims to facilitate the publication and management of data in a user-friendly manner, making it easier for both data providers and users to work with datasets. The source code is available on their [GitHub repository](https://github.com/opendatateam/udata).
+[uData](https://udata.readthedocs.io/) is an open data management platform developed by the Open Data Team. It aims to simplify the publication and management of data, offering a user-friendly interface that makes it accessible for both data providers and users. uData is often employed by municipalities and local governments to publish open data portals, and its modular architecture allows for easy integration with existing IT infrastructures. The source code is available on its [GitHub repository](https://github.com/opendatateam/udata).
 
 ### OpenRefine
 

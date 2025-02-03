@@ -13,31 +13,29 @@ license: "CC BY"
 
 ## Open Data Maturity (ODM)
 
+Since 2015, the European Union has conducted an annual assessment to gauge the progress of European countries in promoting and facilitating the availability and reuse of public sector information – predominantly open government data.
+
 ### Annual Assessment
 
-**Policy** – Since 2015, the European Union has conducted an annual assessment to gauge the progress of European countries in promoting and facilitating the availability and reuse of public sector information – predominantly open government data. This component investigates the open data policies and strategies in place, the national governance models for managing open data, and the measures implemented to execute these policies.
-
-**Impact** – The assessment also examines the willingness, preparedness and capacity of countries to measure both the reuse of open data and the impact that this reuse creates.
-
-### Portal and Quality
-
-**Portal** – This element evaluates the functionality of national open data portals. It considers how well the portals cater to user needs, the methods used to assess user behaviour, the breadth of data available across different sectors, and the strategies in place to ensure the portals’ sustainability.
-
-**Quality** – In this area, the evaluation focuses on the measures adopted by portal managers to systematically harvest metadata, monitor metadata quality and ensure compliance with the DCAT-AP metadata standard, as well as the quality of the data published on the national portals.
+1. **Policy** – It investigates the open data policies and strategies in place in the participating countries, the national governance models for managing open data and the measures applied to implement those policies and strategies. 
+2. **Portal** – It investigates the functionality of national open data portals, the extent to which users’ needs and behaviour are examined to improve the portal, the availability of open data across different domains and the approach to ensuring the portal’s sustainability. 
+3. **Impact** –  It analyses the willingness, preparedness and ability of countries to measure both the reuse of open data and the impact created through this reuse. 
+4. **Quality** – It assesses the measures adopted by portal managers to ensure the systematic harvesting of metadata, the monitoring of metadata quality and compliance with the DCAT-AP metadata standard, and the quality of deployment of the published data on the national portal. 
 
 For more details, please refer to the [European Open Data Maturity publication](https://data.europa.eu/en/publications/open-data-maturity).
 
 ### ODM 2023
 
-The 2023 ODM assessment involved 35 participating countries – including the EU-27, three European Free Trade Association countries (Iceland, Norway and Switzerland), and five candidate countries (Bosnia and Herzegovina, Montenegro, Albania, Serbia and Ukraine). Notably, Switzerland scored 79% in Open Data Maturity, ranking 24th among the participants [@page2023OpenData2023].
+The 2023 ODM assessment involved 35 participating countries – including the EU-27, three European Free Trade Association countries (Iceland, Norway and Switzerland), and five candidate countries (Bosnia and Herzegovina, Montenegro, Albania, Serbia and Ukraine). 
 
-Further information is available in the [ODM 2023 report](https://data.europa.eu/en/publications/open-data-maturity/2023).
+In 2023, Switzerland scored 79% in Open Data Maturity, ranking 24th among the participants [@page2023OpenData2023]. Further information is available in the [ODM 2023 report](https://data.europa.eu/en/publications/open-data-maturity/2023).
 
 ### ODM 2024
 
-(...) [@page2024OpenData2024]
+The ODM 2024 assessment marks the 10th edition of this benchmarking initiative. ODM 2024 maintains the same methodology as 2023 but integrates refinements, particularly focusing on **high-value datasets (HVDs)**, **metadata quality**, and **portal performance** [@pageAssessmentMethodology20242024]. 
 
-[ODM 2024 report](https://data.europa.eu/en/publications/open-data-maturity/2024)
+Switzerland ranks 20th with an ODM score of 80 [@page2024OpenData2024]. Further information is available in the [ODM 2024 report](https://data.europa.eu/en/publications/open-data-maturity/2024).
+
 
 ## Measuring Impact
 
