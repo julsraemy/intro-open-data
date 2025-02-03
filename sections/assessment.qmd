@@ -13,7 +13,7 @@ license: "CC BY"
 
 ## Assessment 
 
-### Open Data Maturity (ODM)
+### Open Data Maturity (ODM)
 
 Since 2015, the European Union has conducted an annual assessment to gauge the progress of European countries in promoting and facilitating the availability and reuse of public sector information – predominantly open government data.
 
