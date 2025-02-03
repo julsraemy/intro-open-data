@@ -11,11 +11,13 @@ date-modified: last-modified
 license: "CC BY" 
 ---
 
-## Open Data Maturity (ODM)
+## Assessment 
+
+### Open Data Maturity (ODM)
 
 Since 2015, the European Union has conducted an annual assessment to gauge the progress of European countries in promoting and facilitating the availability and reuse of public sector information – predominantly open government data.
 
-### Annual Assessment
+#### Annual Assessment
 
 1. **Policy** – It investigates the open data policies and strategies in place in the participating countries, the national governance models for managing open data and the measures applied to implement those policies and strategies. 
 2. **Portal** – It investigates the functionality of national open data portals, the extent to which users’ needs and behaviour are examined to improve the portal, the availability of open data across different domains and the approach to ensuring the portal’s sustainability. 
@@ -24,20 +26,17 @@ Since 2015, the European Union has conducted an annual assessment to gauge the p
 
 For more details, please refer to the [European Open Data Maturity publication](https://data.europa.eu/en/publications/open-data-maturity).
 
-### ODM 2023
+#### ODM 2023
 
 The 2023 ODM assessment involved 35 participating countries – including the EU-27, three European Free Trade Association countries (Iceland, Norway and Switzerland), and five candidate countries (Bosnia and Herzegovina, Montenegro, Albania, Serbia and Ukraine). 
 
 In 2023, Switzerland scored 79% in Open Data Maturity, ranking 24th among the participants [@page2023OpenData2023]. Further information is available in the [ODM 2023 report](https://data.europa.eu/en/publications/open-data-maturity/2023).
 
-### ODM 2024
+#### ODM 2024
 
 The ODM 2024 assessment marks the 10th edition of this benchmarking initiative. ODM 2024 maintains the same methodology as 2023 but integrates refinements, particularly focusing on **high-value datasets (HVDs)**, **metadata quality**, and **portal performance** [@pageAssessmentMethodology20242024]. 
 
 Switzerland ranks 20th with an ODM score of 80 [@page2024OpenData2024]. Further information is available in the [ODM 2024 report](https://data.europa.eu/en/publications/open-data-maturity/2024).
-
-
-## Measuring Impact
 
 ### Impact Monitoring Framework
 
@@ -60,7 +59,7 @@ A number of best practice resources and toolkits help guide the effective manage
 
 These tools complement broader frameworks such as FAIR, CARE, Collections as Data, and LOUD, all of which are essential for ensuring that open data is both accessible and of high quality.
 
-## Periodic Table of Open Data Elements
+### Periodic Table of Open Data Elements
 
 The Periodic Table of Open Data Elements provides a visual summary of the enabling conditions and challenges that affect the success of open data initiatives. It outlines key elements such as:
 
