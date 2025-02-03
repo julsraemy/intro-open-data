@@ -251,13 +251,25 @@ div.csl-indent {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#techniques" id="toc-techniques" class="nav-link active" data-scroll-target="#techniques">Techniques</a></li>
-  <li><a href="#sofwaretools" id="toc-sofwaretools" class="nav-link" data-scroll-target="#sofwaretools">Sofware/Tools</a>
+  <li><a href="#techniques" id="toc-techniques" class="nav-link active" data-scroll-target="#techniques">Techniques</a>
+  <ul>
+  <li><a href="#data-scraping" id="toc-data-scraping" class="nav-link" data-scroll-target="#data-scraping">Data Scraping</a></li>
+  <li><a href="#api-integration" id="toc-api-integration" class="nav-link" data-scroll-target="#api-integration">API Integration</a></li>
+  <li><a href="#data-mining" id="toc-data-mining" class="nav-link" data-scroll-target="#data-mining">Data Mining</a></li>
+  <li><a href="#data-wranglingmunging" id="toc-data-wranglingmunging" class="nav-link" data-scroll-target="#data-wranglingmunging">Data Wrangling/Munging</a></li>
+  <li><a href="#data-integration" id="toc-data-integration" class="nav-link" data-scroll-target="#data-integration">Data Integration</a></li>
+  <li><a href="#stream-processing" id="toc-stream-processing" class="nav-link" data-scroll-target="#stream-processing">Stream Processing</a></li>
+  <li><a href="#data-quality-management" id="toc-data-quality-management" class="nav-link" data-scroll-target="#data-quality-management">Data Quality Management</a></li>
+  <li><a href="#extract-transform-load-etl" id="toc-extract-transform-load-etl" class="nav-link" data-scroll-target="#extract-transform-load-etl">Extract, Transform, Load (ETL)</a></li>
+  </ul></li>
+  <li><a href="#softwaretools" id="toc-softwaretools" class="nav-link" data-scroll-target="#softwaretools">Software/Tools</a>
   <ul>
   <li><a href="#ckan" id="toc-ckan" class="nav-link" data-scroll-target="#ckan">CKAN</a></li>
   <li><a href="#piveau" id="toc-piveau" class="nav-link" data-scroll-target="#piveau">Piveau</a></li>
   <li><a href="#entryscape" id="toc-entryscape" class="nav-link" data-scroll-target="#entryscape">EntryScape</a></li>
   <li><a href="#udata" id="toc-udata" class="nav-link" data-scroll-target="#udata">uData</a></li>
+  <li><a href="#openrefine" id="toc-openrefine" class="nav-link" data-scroll-target="#openrefine">OpenRefine</a></li>
+  <li><a href="#lomas" id="toc-lomas" class="nav-link" data-scroll-target="#lomas">LOMAS</a></li>
   </ul></li>
   <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references">References</a></li>
   </ul>
@@ -299,7 +311,7 @@ div.csl-indent {
     <div>
     <div class="quarto-title-meta-heading">Modified</div>
     <div class="quarto-title-meta-contents">
-      <p class="date-modified">February 1, 2025</p>
+      <p class="date-modified">February 3, 2025</p>
     </div>
   </div>
     
@@ -312,27 +324,80 @@ div.csl-indent {
 
 <section id="techniques" class="level2">
 <h2 class="anchored" data-anchor-id="techniques">Techniques</h2>
+<section id="data-scraping" class="level3">
+<h3 class="anchored" data-anchor-id="data-scraping">Data Scraping</h3>
+<p>Data scraping is the automated process of extracting information from websites or other online sources. This technique can be useful for collecting data from multiple sites and automating repetitive tasks. However, challenges include adapting to changes in website layouts, legal and ethical issues, and handling dynamic content (e.g.&nbsp;data loaded via JavaScript). For example, Python libraries such as <a href="https://pypi.org/project/beautifulsoup4/">Beautiful Soup</a> or frameworks like <a href="https://scrapy.org/">Scrapy</a> are frequently used for these purposes.</p>
 </section>
-<section id="sofwaretools" class="level2">
-<h2 class="anchored" data-anchor-id="sofwaretools">Sofware/Tools</h2>
+<section id="api-integration" class="level3">
+<h3 class="anchored" data-anchor-id="api-integration">API Integration</h3>
+<p>API integration involves connecting to external services in order to retrieve structured data, often in real time. This method provides standardised data access and can streamline automated processes. Nevertheless, it requires managing API rate limits, adapting to changes in the API, and integrating data from various systems.</p>
+</section>
+<section id="data-mining" class="level3">
+<h3 class="anchored" data-anchor-id="data-mining">Data Mining</h3>
+<p>Data mining refers to the analysis of large datasets to identify patterns, correlations, and trends. This process can support data-driven decision-making, though it requires significant computational resources and expertise, and may also raise privacy concerns. Software such as <a href="https://altair.com/altair-rapidminer">RapidMiner</a> and <a href="https://www.cs.waikato.ac.nz/~ml/weka/">WEKA</a> is commonly used in this field.</p>
+</section>
+<section id="data-wranglingmunging" class="level3">
+<h3 class="anchored" data-anchor-id="data-wranglingmunging">Data Wrangling/Munging</h3>
+<p>Data wrangling (or data munging) is the process of cleaning, transforming, and organising raw data into a structured format that is suitable for analysis. Although this process can be time-consuming and technically challenging, it is essential for improving data quality. Python’s <a href="https://pandas.pydata.org/">pandas</a> library is a widely used tool in this area.</p>
+</section>
+<section id="data-integration" class="level3">
+<h3 class="anchored" data-anchor-id="data-integration">Data Integration</h3>
+<p>Data integration involves combining data from different sources to create a unified dataset. This technique helps provide a comprehensive view for analysis but may involve challenges such as reconciling differing formats and schemas, and ensuring consistent data quality.</p>
+</section>
+<section id="stream-processing" class="level3">
+<h3 class="anchored" data-anchor-id="stream-processing">Stream Processing</h3>
+<p>Stream processing refers to analysing data in real time as it is generated. This technique is especially useful for handling time-sensitive data and high volumes of information. Tools such as <a href="https://kafka.apache.org/">Apache Kafka</a> and <a href="https://flink.apache.org/">Apache Flink</a> are commonly used to manage data flows and enable real-time analytics.</p>
+</section>
+<section id="data-quality-management" class="level3">
+<h3 class="anchored" data-anchor-id="data-quality-management">Data Quality Management</h3>
+<p>Data quality management is the process of ensuring that data is accurate, complete, and consistent. High-quality data is critical for reliable analysis, although maintaining such quality requires ongoing monitoring and may be resource-intensive.</p>
+</section>
+<section id="extract-transform-load-etl" class="level3">
+<h3 class="anchored" data-anchor-id="extract-transform-load-etl">Extract, Transform, Load (ETL)</h3>
+<p>ETL stands for Extract, Transform, Load and describes the process of extracting data from various sources, transforming it into a standard format, and loading it into a target system for analysis. This approach supports data consolidation but also poses challenges in maintaining transformation accuracy and managing diverse data sources.</p>
+</section>
+</section>
+<section id="softwaretools" class="level2">
+<h2 class="anchored" data-anchor-id="softwaretools">Software/Tools</h2>
 <section id="ckan" class="level3">
 <h3 class="anchored" data-anchor-id="ckan">CKAN</h3>
-<p><a href="https://ckan.org/" class="uri">https://ckan.org/</a> <br> <a href="https://github.com/ckan/ckan" class="uri">https://github.com/ckan/ckan</a></p>
+<p><a href="https://ckan.org/">CKAN</a> is an open source data management system developed by the Open Knowledge Foundation. It is designed to support the creation and maintenance of data hubs and portals, offering a standardised platform for publishing and accessing datasets. CKAN employs a PostgreSQL database, a Solr index, and a comprehensive API to facilitate data discovery and integration (see its <a href="https://github.com/ckan/ckan">GitHub repository</a> for more technical information).</p>
 </section>
 <section id="piveau" class="level3">
 <h3 class="anchored" data-anchor-id="piveau">Piveau</h3>
-<p><span class="citation" data-cites="kirsteinPiveauLargeScaleOpen2020">Kirstein et al. (<a href="#ref-kirsteinPiveauLargeScaleOpen2020" role="doc-biblioref">2020</a>)</span></p>
-<p><a href="https://www.piveau.de/" class="uri">https://www.piveau.de/</a> <br> <a href="https://gitlab.com/piveau/" class="uri">https://gitlab.com/piveau/</a></p>
+<p><a href="https://www.piveau.de/">Piveau</a> is an open data platform comprising several integrated components that focus on the management and integration of open data, with a particular emphasis on metadata management, data harmonisation, and linked data capabilities <span class="citation" data-cites="kirsteinPiveauLargeScaleOpen2020">(<a href="#ref-kirsteinPiveauLargeScaleOpen2020" role="doc-biblioref">Kirstein et al., 2020</a>)</span>. It supports a wide range of data protocols and formats—including OAI-PMH, RDF, CKAN, uData, OwnCloud, JSON, SPARQL, Socrata, and Drupal—allowing for dynamic, programmable data transformation using JavaScript or XSLT. Harvesting processes can be individually scheduled, and the platform provides export capabilities into DCAT(-AP) and related standards.</p>
+<p>Key features include:</p>
+<ul>
+<li><p><strong>Data Acquisition and Transformation:</strong><br>
+Piveau supports scalable harvesting (up to hundreds of thousands of datasets per source) and flexible, configuration-based orchestration, enabling custom processing steps and integration with third-party services.</p></li>
+<li><p><strong>Linked Data and Storage:</strong><br>
+It stores DCAT metadata as RDF in a triplestore (with support for storage backends like Virtuoso and Fuseki) and utilises URI harmonisation to create a consistent knowledge graph. The platform also integrates external vocabularies and ontologies to enhance linked data capabilities.</p></li>
+<li><p><strong>Search and Frontend:</strong><br>
+A powerful search engine based on Elasticsearch and a rich, customisable, multilingual frontend allow users to efficiently search and filter metadata. Additionally, extensive backend tools facilitate the creation and management of metadata.</p></li>
+<li><p><strong>Quality Assurance:</strong><br>
+Piveau periodically generates quality assessments based on SHACL validations and the FAIR principles. These assessments are stored alongside the metadata using the Data Quality Vocabulary (DQV), with reports available in various formats.</p></li>
+<li><p><strong>Access Control and Operations:</strong><br>
+Integration with Keycloak provides robust identity and access management, while containerisation with Docker and support for Kubernetes (with ready-to-use Helm charts) ensure efficient operations. The backends are primarily written in Java and Kotlin (using the Vert.x framework), and the frontends are developed with Vue.js.</p></li>
+</ul>
+<p>Piveau is open source and its code is available on <a href="https://gitlab.com/piveau/">GitLab</a>. Below is an overview of its architecture.</p>
+<p><img src="https://doc.piveau.io/img/overview.png" class="img-fluid"></p>
+<p><a href="https://doc.piveau.io/general/basic-architecture/" class="uri">https://doc.piveau.io/general/basic-architecture/</a></p>
 </section>
 <section id="entryscape" class="level3">
 <h3 class="anchored" data-anchor-id="entryscape">EntryScape</h3>
-<p><span class="citation" data-cites="ebnerInformationModelManaging2014">Ebner &amp; Palmér (<a href="#ref-ebnerInformationModelManaging2014" role="doc-biblioref">2014</a>)</span></p>
-<p><a href="https://entryscape.com/" class="uri">https://entryscape.com/</a> <br> <a href="https://bitbucket.org/metasolutions/" class="uri">https://bitbucket.org/metasolutions/</a></p>
+<p>EntryScape is an information management platform designed to handle complex datasets through semantic integration and linked data principles. It facilitates the organisation and enrichment of information from varied sources <span class="citation" data-cites="ebnerInformationModelManaging2014">(<a href="#ref-ebnerInformationModelManaging2014" role="doc-biblioref">Ebner &amp; Palmér, 2014</a>)</span>. Further information is available on the <a href="https://entryscape.com/">EntryScape website</a> and via its repository on <a href="https://bitbucket.org/metasolutions/">Bitbucket</a>.</p>
 </section>
 <section id="udata" class="level3">
 <h3 class="anchored" data-anchor-id="udata">uData</h3>
-<p><a href="https://udata.readthedocs.io/" class="uri">https://udata.readthedocs.io/</a> <br> <a href="https://github.com/opendatateam/udata" class="uri">https://github.com/opendatateam/udata</a></p>
-<!-- Sensitive data? LOMAS: https://doi.org/10.48550/arXiv.2406.17087 https://dscc-admin-ch.github.io/lomas-docs/  -->
+<p><a href="https://udata.readthedocs.io/">uData</a> is an open data management platform developed by the Open Data Team. It aims to facilitate the publication and management of data in a user-friendly manner, making it easier for both data providers and users to work with datasets. The source code is available on their <a href="https://github.com/opendatateam/udata">GitHub repository</a>.</p>
+</section>
+<section id="openrefine" class="level3">
+<h3 class="anchored" data-anchor-id="openrefine">OpenRefine</h3>
+<p><a href="https://openrefine.org/">OpenRefine</a> is an open source tool for data cleaning and transformation. Initially released in 2010 (originally as Freebase Gridworks, later renamed Google Refine), it operates as a local web application designed to help users clean messy data, standardise formats, and reconcile datasets. It supports various data formats (including CSV, TSV, JSON, and XML) and allows for advanced data manipulation using scripting languages such as GREL and Jython. For more details, see the <a href="https://github.com/OpenRefine/OpenRefine">GitHub repository</a>.</p>
+</section>
+<section id="lomas" class="level3">
+<h3 class="anchored" data-anchor-id="lomas">LOMAS</h3>
+<p><a href="https://dscc-admin-ch.github.io/lomas-docs">LOMAS</a> is an open source platform developed by the Data Science Competence Center (DSCC) of the Swiss Federal Statistical Office. Public services collect large volumes of data, yet strict privacy regulations often limit their secondary use. LOMAS addresses this challenge by enabling authorised users—such as approved researchers and government analysts—to execute algorithms on sensitive datasets without directly accessing the data. Instead, users submit algorithms to the platform, which then processes the data within a secure, trusted computing environment. The results are returned protected by Differential Privacy, a framework that introduces controlled noise to prevent the extraction of identifiable information. This approach allows for the quantification and control of disclosure risk while ensuring transparency about data protection <span class="citation" data-cites="aymonLomasPlatformConfidential2024">(see <a href="#ref-aymonLomasPlatformConfidential2024" role="doc-biblioref">Aymon et al., 2024</a>)</span>.</p>
 </section>
 </section>
 <section id="references" class="level2">
@@ -343,6 +408,9 @@ div.csl-indent {
 </section>
 
 <a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a><div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography" id="quarto-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" data-line-spacing="2" role="list">
+<div id="ref-aymonLomasPlatformConfidential2024" class="csl-entry" role="listitem">
+Aymon, D., Lam, D.-T., Marti, L., Maury-Laribière, P., Choirat, C., &amp; de Fondeville, R. (2024). <em>Lomas: <span>A Platform</span> for <span>Confidential Analysis</span> of <span>Private Data</span></em>. <a href="https://doi.org/10.48550/ARXIV.2406.17087">https://doi.org/10.48550/ARXIV.2406.17087</a>
+</div>
 <div id="ref-ebnerInformationModelManaging2014" class="csl-entry" role="listitem">
 Ebner, H., &amp; Palmér, M. (2014). An information model for managing resources and their metadata. <em>Semantic Web</em>, <em>5</em>(3), 237–255. <a href="https://doi.org/10.3233/SW-120090">https://doi.org/10.3233/SW-120090</a>
 </div>

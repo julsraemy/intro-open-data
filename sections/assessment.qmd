@@ -27,11 +27,17 @@ license: "CC BY"
 
 For more details, please refer to the [European Open Data Maturity publication](https://data.europa.eu/en/publications/open-data-maturity).
 
-## ODM 2023
+### ODM 2023
 
 The 2023 ODM assessment involved 35 participating countries – including the EU-27, three European Free Trade Association countries (Iceland, Norway and Switzerland), and five candidate countries (Bosnia and Herzegovina, Montenegro, Albania, Serbia and Ukraine). Notably, Switzerland scored 79% in Open Data Maturity, ranking 24th among the participants [@page2023OpenData2023].
 
 Further information is available in the [ODM 2023 report](https://data.europa.eu/en/publications/open-data-maturity/2023).
+
+### ODM 2024
+
+(...) [@page2024OpenData2024]
+
+[ODM 2024 report](https://data.europa.eu/en/publications/open-data-maturity/2024)
 
 ## Measuring Impact
 
