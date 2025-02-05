@@ -1,47 +1,55 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://julsraemy.ch/intro-open-data/references.html</loc>
-    <lastmod>2025-02-03T15:31:06.534Z</lastmod>
+    <loc>https://julsraemy.ch/intro-open-data/LICENSE-CCBY.html</loc>
+    <lastmod>2025-02-05T08:21:32.916Z</lastmod>
   </url>
   <url>
-    <loc>https://julsraemy.ch/intro-open-data/about.html</loc>
-    <lastmod>2025-02-01T19:12:59.124Z</lastmod>
-  </url>
-  <url>
-    <loc>https://julsraemy.ch/intro-open-data/sections/assessment.html</loc>
-    <lastmod>2025-02-03T15:37:50.738Z</lastmod>
-  </url>
-  <url>
-    <loc>https://julsraemy.ch/intro-open-data/sections/showcases.html</loc>
-    <lastmod>2025-02-03T16:21:06.510Z</lastmod>
-  </url>
-  <url>
-    <loc>https://julsraemy.ch/intro-open-data/sections/movements.html</loc>
-    <lastmod>2025-02-01T19:11:18.391Z</lastmod>
-  </url>
-  <url>
-    <loc>https://julsraemy.ch/intro-open-data/sections/principles.html</loc>
-    <lastmod>2025-02-03T08:09:16.465Z</lastmod>
-  </url>
-  <url>
-    <loc>https://julsraemy.ch/intro-open-data/sections/platforms.html</loc>
-    <lastmod>2025-02-03T16:54:58.423Z</lastmod>
-  </url>
-  <url>
-    <loc>https://julsraemy.ch/intro-open-data/sections/characteristics.html</loc>
-    <lastmod>2025-02-01T19:12:51.183Z</lastmod>
-  </url>
-  <url>
-    <loc>https://julsraemy.ch/intro-open-data/sections/techniques.html</loc>
-    <lastmod>2025-02-03T15:00:56.881Z</lastmod>
+    <loc>https://julsraemy.ch/intro-open-data/syllabus.html</loc>
+    <lastmod>2025-02-03T17:36:47.853Z</lastmod>
   </url>
   <url>
     <loc>https://julsraemy.ch/intro-open-data/index.html</loc>
     <lastmod>2025-02-03T16:39:00.105Z</lastmod>
   </url>
   <url>
-    <loc>https://julsraemy.ch/intro-open-data/syllabus.html</loc>
-    <lastmod>2025-02-03T17:36:47.853Z</lastmod>
+    <loc>https://julsraemy.ch/intro-open-data/sections/techniques.html</loc>
+    <lastmod>2025-02-03T15:00:56.881Z</lastmod>
+  </url>
+  <url>
+    <loc>https://julsraemy.ch/intro-open-data/sections/characteristics.html</loc>
+    <lastmod>2025-02-01T19:12:51.183Z</lastmod>
+  </url>
+  <url>
+    <loc>https://julsraemy.ch/intro-open-data/sections/platforms.html</loc>
+    <lastmod>2025-02-03T16:54:58.423Z</lastmod>
+  </url>
+  <url>
+    <loc>https://julsraemy.ch/intro-open-data/LICENSE-MIT.html</loc>
+    <lastmod>2025-02-05T08:21:35.375Z</lastmod>
+  </url>
+  <url>
+    <loc>https://julsraemy.ch/intro-open-data/sections/principles.html</loc>
+    <lastmod>2025-02-03T08:09:16.465Z</lastmod>
+  </url>
+  <url>
+    <loc>https://julsraemy.ch/intro-open-data/sections/movements.html</loc>
+    <lastmod>2025-02-01T19:11:18.391Z</lastmod>
+  </url>
+  <url>
+    <loc>https://julsraemy.ch/intro-open-data/sections/showcases.html</loc>
+    <lastmod>2025-02-03T16:21:06.510Z</lastmod>
+  </url>
+  <url>
+    <loc>https://julsraemy.ch/intro-open-data/sections/assessment.html</loc>
+    <lastmod>2025-02-03T15:37:50.738Z</lastmod>
+  </url>
+  <url>
+    <loc>https://julsraemy.ch/intro-open-data/about.html</loc>
+    <lastmod>2025-02-05T08:22:27.440Z</lastmod>
+  </url>
+  <url>
+    <loc>https://julsraemy.ch/intro-open-data/references.html</loc>
+    <lastmod>2025-02-03T15:31:06.534Z</lastmod>
   </url>
 </urlset>
