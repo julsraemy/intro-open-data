@@ -134,9 +134,18 @@ format:
 
 ## Platforms and Organisations
 
-This page features a curated selection of open data platforms and organisations, with a particular emphasis on Switzerland. You can explore various initiatives—ranging from research data repositories like the [Registry of Research Data Repositories](https://www.re3data.org/), [SwissUbase](https://www.swissubase.ch/), and [DaSCH Service Platform](https://app.dasch.swiss/) to open government data portals such as [opendata.swiss](https://opendata.swiss/), [LINDAS](https://lindas.admin.ch) [Open Data Basel-Stadt](https://data.bs.ch/), [Stadt Zürich Open Data](https://data.stadt-zuerich.ch/), and the [Open Data Portal of Geneva Public Transport](https://opendata.tpg.ch/). In addition, learn more about community-driven organisations like the [Open Knowledge Network](https://okfn.org/), [Open Research Data National Strategy Council](https://openresearchdata.swiss/) [opendata.ch](https://opendata.ch/), and [Open Data Beer](https://opendatabeer.ch/).
+This page features a curated selection of open data platforms and organisations, with a particular emphasis on Switzerland. You can explore various initiatives—ranging from research data repositories like the [Registry of Research Data Repositories](https://www.re3data.org/), [SwissUbase](https://www.swissubase.ch/), and [DaSCH Service Platform](https://app.dasch.swiss/) to open government data portals such as [opendata.swiss](https://opendata.swiss/), [LINDAS](https://lindas.admin.ch) [Open Data Basel-Stadt](https://data.bs.ch/), [Stadt Zürich Open Data](https://data.stadt-zuerich.ch/), and the [Open Data Portal of Geneva Public Transport](https://opendata.tpg.ch/). 
 
-For more information about OGD in Switzerland, please see this curated list on GitHub: <https://github.com/rnckp/awesome-ogd-switzerland>.
+In addition, learn more about community-driven organisations like the [Open Knowledge Network](https://okfn.org/), [Open Research Data National Strategy Council](https://openresearchdata.swiss/) [opendata.ch](https://opendata.ch/), and [Open Data Beer](https://opendatabeer.ch/).
+
+It should also be noted that every February around Valentine's Day, **International Love Data Week** brings together data enthusiasts around the world - mostly in academia - to explore best practices in data management, sharing and reuse. For example: 
+
+- HES-SO: <https://www.researchdatasupport.ch/lovedata>
+- Basel University Library: <https://ub.unibas.ch/de/news/details/love-data-week-2025/>
+- FDM im deutschsprachigen Raum: <https://forschungsdaten.info/fdm-im-deutschsprachigen-raum/love-data-week-2025/>
+- University of Michigan: <https://www.icpsr.umich.edu/web/about/cms/3799>.
+
+For more information about OGD in Switzerland, please see this curated and exhaustive list on GitHub: <https://github.com/rnckp/awesome-ogd-switzerland>.
 
 ::: {#platforms-orgs}
 :::

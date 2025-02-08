@@ -54,12 +54,30 @@ These methods are intended to foster both theoretical understanding and practica
 
 **Find/Define your assignment!** 
 
-What's possible to choose from: 
+Available options (except for UC15, which can be assigned to multiple students; all other use cases are allocated on a first-come, first-served basis):
 
-- **The deletion of datasets from data.gov**: Since Trump has once again been elected President of the United States, health and climate information/datasets have disappeared from federal websites [see <https://www.theverge.com/news/604484/donald-trumps-data-purge-has-begun> and <https://fediscience.org/@petersuber/113874200243958520>].
-- **Comparing CKAN, uData and Piveau**: Compare these three software and their components
-- (...) 
-- **Find it yourself:** Select one or more datasets from one or several [platforms](sections/platforms.qmd) discussed during the course (if several datasets are selected, there must be a common thread). 
+- The deletion of datasets from data.gov: Since Trump has once again been elected President of the United States, health and climate information/datasets have disappeared from federal websites [see <https://www.theverge.com/news/604484/donald-trumps-data-purge-has-begun> and <https://fediscience.org/@petersuber/113874200243958520>].
+  - **UC01**: The disappearance of health data from official US websites: an analyis. 
+  - **UC02**: The disappearance of environmental data from official US websites: an analysis. 
+- **UC03**: Linked Open Data Implementation: Comparing practices across European national libraries
+- **UC04**: Comparing CKAN, uData and Piveau for managing data portals
+- **UC05**: IIIF Implementation in Swiss libraries: a comparative analysis of digital collections accessibility across institutions
+- **UC06**: Canton-level Open Data: Comparing data publishing practices across Swiss cantons
+- **UC07**: Art Museum Licensing Practices: A comparative analysis
+  - Case studies: 
+    - Rijksmuseum (Netherlands)
+    - Le Louvre (France)
+    - British Museum (UK)
+    - Kunstmuseum Basel (Switzerland)
+    - National Gallery of Art (USA)
+- **UC08**: Swiss Healthcare Statistics: Accessibility and reusability of cantonal health data
+- **UC09**: Swiss Public Transportation Data: Analysis of SBB's open data usage in third-party applications
+- **UC10**: Comparing MeteoSwiss open data practices with other European meteorological services
+- **UC11**: IIIF for Education: analysing implementation patterns and pedagogical uses across academic digital libraries
+- **UC12**: Swiss Energy Data: Examining transparency in power consumption data across municipalities
+- **UC13**: Open Data Community Events in Switzerland (2019-2024): Analysis of event types (Open Data Beer, GeoBeer, Linked Data Meetups, Love Data Week, etc.), stakeholder participation (government, academia, GLAM institutions), and their potential impact
+- **UC14**: Swiss Federal Linked Data Ecosystem: Analysis of technical infrastructure, vocabularies, and semantic interoperability across the Federal Administration
+- **UC15**: Find it yourself! Select one or more datasets from one or several [platforms](sections/platforms.qmd) discussed during the course (if several datasets are selected, there must be a common thread). 
 
 ### Exercise 2
 
@@ -115,8 +133,8 @@ Alternatively: go through this tutorial from Library Carpentry: <https://library
 ## Course Assessment
 
 - Analyse, describe and identify the use case or the (potential) uses of the dataset(s).
-- Between 900 and 1,100 words (excluding references) in an open format, preferably `.qmd`. _A template will soon be provided..._
-- Short paper to be submitted either to the lecturer or via a pull request on the [GitHub repository](https://github.com/julsraemy/intro-open-data) (for those who wish to make it public) by **Friday 14 March, 7pm**.
+- Between 900 and 1,100 words (excluding references) in either PDF or in `.qmd` if you would like it to be published on this website. _A template will soon be provided..._
+- Short paper to be submitted either to the lecturer or via a pull request on the [GitHub repository](https://github.com/julsraemy/intro-open-data) by **Friday 14 March, 7pm**.
 
 This assignment is weighted at 20% of the 7C2-CT module.
 
