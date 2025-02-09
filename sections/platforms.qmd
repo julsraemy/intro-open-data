@@ -115,10 +115,16 @@ listing:
         **Community:** opendata.ch is the Swiss Open Data Association—the Swiss chapter of the Open Knowledge Network. Since its inception in 2011, it has supported and coordinated open data initiatives across Switzerland, including a dedicated working group for the cultural heritage sector (OpenGLAM).
       image: https://opendata.ch/wordpress/files/2021/11/opendata-logo-RGB-full-large.png
       categories: [association]
+    - title: "Open Research Data Unit"
+      path: https://ord.akademien-schweiz.ch/
+      description: >
+        **Unit:** The ORD Unit of the Swiss Academies of Arts and Sciences implements the Swiss National Action Plan for Open Research Data and serves as a representative for Open Science topics.
+      image: https://api.swiss-academies.ch/site/assets/files/116001/a_logo_academies_en_rgb.png
+      categories: [association]
     - title: "GeoBeer"
       path: https://geobeer.ch/
       description: >
-        **Community:** GeoBeer is a roughly quarterly meetup of people interested in geography, GIS, cartography and the latest technologies. This initiative exists since 2013.  
+        **Community:** GeoBeer is a roughly quarterly meetup of people interested in geography, GIS, cartography and the latest technologies. This Swiss initiative exists since 2013.  
       image: https://geobeer.ch/assets/GeoBeer-logo.png
       categories: [association]
     - title: "Open Data Beer"
