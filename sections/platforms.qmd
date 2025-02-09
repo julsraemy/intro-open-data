@@ -115,6 +115,12 @@ listing:
         **Community:** opendata.ch is the Swiss Open Data Association—the Swiss chapter of the Open Knowledge Network. Since its inception in 2011, it has supported and coordinated open data initiatives across Switzerland, including a dedicated working group for the cultural heritage sector (OpenGLAM).
       image: https://opendata.ch/wordpress/files/2021/11/opendata-logo-RGB-full-large.png
       categories: [association]
+    - title: "GeoBeer"
+      path: https://geobeer.ch/
+      description: >
+        **Community:** GeoBeer is a roughly quarterly meetup of people interested in geography, GIS, cartography and the latest technologies. This initiative exists since 2013.  
+      image: https://geobeer.ch/assets/GeoBeer-logo.png
+      categories: [association]
     - title: "Open Data Beer"
       path: https://opendatabeer.ch/
       description: >
