@@ -1,0 +1,11 @@
+---
+title: "Students' Papers"
+date: "2025-02-17"
+date-modified: last-modified
+listing:
+  contents: assignments
+---
+
+# Students' Papers
+
+This space is reserved for work submitted by students of the course *7C2-CT-4A Introduction to Open Data* who have agreed to have their [short papers](syllabus.qmd#course-assessment) published here.

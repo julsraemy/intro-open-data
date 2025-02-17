@@ -1,0 +1,124 @@
+---
+title: "My title" # Dataset Analysis or Use Case XYZ
+authors: 
+  - name: My name
+    orcid: 0000-0000-0000-0000 # Create your ORCID at https://orcid.org. Optional
+    email: someone@example.com # Optional
+    affiliations:
+      - HES-SO, Haute école de gestion de Genève
+date: "2099-01-01"
+date-modified: last-modified
+license: "CC BY" # see https://quarto.org/docs/authoring/front-matter.html
+---
+
+# Paper Template
+
+This is a template for the course assignment (20% of 7C2-CT module). You can reuse it and either submit a pull request or send the `.qmd` file to the lecturer. The paper should be between 900 and 1,100 words (excluding references).
+
+Important: 
+- Use cases (UC01-UC14) must be pre-assigned by the lecturer on a first-come, first-served basis
+- Dataset selections must be discussed with and approved by the lecturer. UC15 is the only use case that can be assigned to multiple students
+
+For more information about Quarto and its features, please visit: <https://quarto.org/docs/guide/>
+
+You can embed images in your document in several ways:
+
+1. Using external URLs (be careful with licensing), such as <https://upload.wikimedia.org/wikipedia/commons/0/0c/Openscience.svg>:
+
+```md
+![Open Science Diagram](https://upload.wikimedia.org/wikipedia/commons/0/0c/Openscience.svg)
+```
+
+![Open Science Diagram](https://upload.wikimedia.org/wikipedia/commons/0/0c/Openscience.svg)
+
+2. Using local files (when submitting via pull request):
+You have two options for including images:
+- Place them in the `assignments` folder alongside your `.qmd` file:
+
+```md
+![Your Image Caption](your-image.png)
+```
+
+- Create a dedicated images folder for your assignment (e.g., `assignments/your-name-images/`) and reference them:
+
+```md
+![Your Image Caption](your-name-images/your-image.png)
+```
+
+Note: When adding images via pull request:
+- Use relative paths appropriate to your chosen folder structure
+- Ensure you have rights to use and share the images
+- Prefer open licensed images (Creative Commons, Public Domain)
+- Keep image file sizes reasonable
+
+To cite a reference, use the `@` symbol followed by the citation key. For example: This is discussed in @berners-leeLinkedData2006 (`@berners-leeLinkedData2006`) or [@wilkinsonFAIRGuidingPrinciples2016] (`[@wilkinsonFAIRGuidingPrinciples2016]`). Citation keys can be found in the references folder of the course repository. Add your own references to the file or create a dedicated `.bib` file.  
+
+You can include code snippets to show data structure or analysis. For example:
+
+```json
+{
+  "dataset": {
+    "title": "Example Open Dataset",
+    "publisher": "Open Data Institution",
+    "updated": "2024-02-17",
+    "license": "CC-BY-4.0",
+    "distributions": [
+      {
+        "format": "CSV",
+        "downloadURL": "https://example.org/data.csv",
+        "mediaType": "text/csv"
+      },
+      {
+        "format": "JSON",
+        "downloadURL": "https://example.org/data.json",
+        "mediaType": "application/json"
+      }
+    ]
+  }
+}
+```
+
+## Introduction
+
+For use case analysis:
+- Specify your assigned use case number (UC01-UC15)
+- Introduce the context and significance of your analysis
+
+For dataset analysis:
+- Identify your approved dataset(s)
+- Explain the selection rationale and significance
+- State your research objectives
+
+## Background
+
+For use case analysis:
+- Relevant policies and frameworks
+- Current state of practice
+- Key stakeholders
+
+For dataset analysis:
+- Dataset provenance and context
+- Data provider background
+- Current applications
+
+## Methodology
+
+For use case analysis:
+- Analysis framework
+- Comparison criteria
+- Information sources
+
+For dataset analysis:
+- Data processing steps
+- Analysis methods
+
+## Discussion
+
+- Implications for stakeholders
+- Best practices identified
+- Recommendations
+- Future opportunities
+
+## Conclusion
+
+Summarise key findings and their significance for open data practices.

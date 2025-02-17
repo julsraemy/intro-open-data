@@ -1,5 +1,11 @@
 [
   {
+    "listing": "/assignments.html",
+    "items": [
+      "/assignments/template.html"
+    ]
+  },
+  {
     "listing": "/sections/platforms.html",
     "items": []
   },

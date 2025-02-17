@@ -46,6 +46,8 @@ website:
           - text: "Showcases"
             file: sections/showcases.qmd
       - href: references.qmd
+        text: Students' Papers
+      - href: assignments.qmd
         text: References
       - href: about.qmd
         text: About
