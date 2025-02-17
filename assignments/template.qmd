@@ -82,16 +82,11 @@ You can include code snippets to show data structure or analysis. For example:
 
 ## Introduction
 
-For use case analysis:
-
-- Specify your assigned use case number (UC01-UC15)
-- Introduce the context and significance of your analysis
-
-For dataset analysis:
-
-- Identify your approved dataset(s)
-- Explain the selection rationale and significance
-- State your research objectives
+- Specify your assigned use case number (all)
+- Identify your approved dataset(s) (UC15)
+- Explain the selection rationale and significance (UC15)
+- State your research objectives (UC15)
+- Introduce the context and significance of your analysis (UC01-UC14)
 
 ## Background
 
