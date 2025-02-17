@@ -118,7 +118,7 @@ Getting started
 
 Create a project with an extract from the CAS photographic archives
 
-5. Create a project by importing the data extract from the CAS photographic archives: `ekws_extract.csv`
+5. Create a project by importing the data extract from the CAS photographic archives: `ekws_extract.csv` (which can be found on Cyberlearn)
 6. Review the dataset
 7. Clean the dataset by removing unnecessary columns
 8. Undertake some reconciliation with external services for agents (people and institutions).
