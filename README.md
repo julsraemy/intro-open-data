@@ -1,6 +1,6 @@
 # Introduction to Open Data
 
-*Work in progress*
+[![DOI](https://zenodo.org/badge/917662914.svg)](https://doi.org/10.5281/zenodo.14884761)
 
 ## Prerequisites
 - [Quarto](https://quarto.org/docs/get-started/)
@@ -58,4 +58,6 @@ This Quarto-based website supersedes the initial Marp presentation from the 2023
 - **Content**: [Creative Commons Attribution 4.0 International (CC BY 4.0)](https://creativecommons.org/licenses/by/4.0/)
 
 ## Cite this repository
-Raemy, J. A. (2025). *Introduction to Open Data* [Course]. https://github.com/julsraemy/intro-open-data
+Raemy, J. A. (2025). *Introduction to Open Data* [Course]. https://doi.org/10.5281/zenodo.14884761
+
+

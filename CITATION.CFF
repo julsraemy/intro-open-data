@@ -12,6 +12,7 @@ authors:
     affiliation: Swiss Federal Archives
 repository-code: 'https://github.com/julsraemy/intro-open-data'
 url: 'https://julsraemy.ch/intro-open-data/'
+doi: 10.5281/zenodo.14884761
 abstract: >-
   This course provides a comprehensive introduction to Open
   Data, covering key aspects such as: Characteristics of
