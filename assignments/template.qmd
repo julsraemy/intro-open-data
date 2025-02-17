@@ -16,6 +16,7 @@ license: "CC BY" # see https://quarto.org/docs/authoring/front-matter.html
 This is a template for the course assignment (20% of 7C2-CT module). You can reuse it and either submit a pull request or send the `.qmd` file to the lecturer. The paper should be between 900 and 1,100 words (excluding references).
 
 Important: 
+
 - Use cases (UC01-UC14) must be pre-assigned by the lecturer on a first-come, first-served basis
 - Dataset selections must be discussed with and approved by the lecturer. UC15 is the only use case that can be assigned to multiple students
 
@@ -46,6 +47,7 @@ You have two options for including images:
 ```
 
 Note: When adding images via pull request:
+
 - Use relative paths appropriate to your chosen folder structure
 - Ensure you have rights to use and share the images
 - Prefer open licensed images (Creative Commons, Public Domain)
@@ -81,10 +83,12 @@ You can include code snippets to show data structure or analysis. For example:
 ## Introduction
 
 For use case analysis:
+
 - Specify your assigned use case number (UC01-UC15)
 - Introduce the context and significance of your analysis
 
 For dataset analysis:
+
 - Identify your approved dataset(s)
 - Explain the selection rationale and significance
 - State your research objectives
@@ -92,11 +96,13 @@ For dataset analysis:
 ## Background
 
 For use case analysis:
+
 - Relevant policies and frameworks
 - Current state of practice
 - Key stakeholders
 
 For dataset analysis:
+
 - Dataset provenance and context
 - Data provider background
 - Current applications
@@ -104,11 +110,13 @@ For dataset analysis:
 ## Methodology
 
 For use case analysis:
+
 - Analysis framework
 - Comparison criteria
 - Information sources
 
 For dataset analysis:
+
 - Data processing steps
 - Analysis methods
 
