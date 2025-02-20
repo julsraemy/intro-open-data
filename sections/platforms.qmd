@@ -85,6 +85,12 @@ listing:
         **Public-Law Body:** The Open Data Portal of Geneva Public Transport (opendata.tpg) was launched in 2022. Building on an initiative that started in 2015 with real-time transit data, it supports multiple download formats (including DCAT in RDF/XML and JSON) to promote transparency and citizen participation.
       image: https://s3-eu-central-1.amazonaws.com/aws-ec2-eu-central-1-opendatasoft-staticfileset/tpg/logo
       categories: [ogd]
+    - title: "Open data platform mobility Switzerland"
+      path: https://opentransportdata.swiss/en/
+      description: >
+        **Public-Law Body:** opentransportdata.swiss is the customer information platform for Swiss public transport and individual mobility.
+      image: https://83025b28472d6aa2bf5ae59f3724aa78.eu.r2.cloudflarestorage.com/dx-omd-prod/storage/uploads/admin/2024-12-12-120601.839759logo.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=60fd7209f19c7e15910c3c34f227d1c1%2F20250220%2Fauto%2Fs3%2Faws4_request&X-Amz-Date=20250220T175242Z&X-Amz-Expires=60&X-Amz-SignedHeaders=host&X-Amz-Signature=781c9f978458d5970abd7c0bf1c1427dd6c6cd8d7c7d7242dcebe1c2dee55de4
+      categories: [ogd]
     - title: "European Data"
       path: https://data.europa.eu/
       description: >
