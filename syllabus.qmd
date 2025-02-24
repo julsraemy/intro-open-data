@@ -83,23 +83,15 @@ Available options (except for UC15, which can be assigned to multiple students; 
 
 **Identify the Movements and Principles**
 
-Relate the movements and principles (OA, Open Data, Open Science, FLOSS, FAIR, CARE, Collections as Data, LOUD) to the following propositions (multiple answers possible).
+Match each of these frameworks --- OA, Open Science, FLOSS, FAIR, CARE, Collections as Data, LOUD --- with exactly one of the following propositions (note that while there may be overlap between them, each proposition corresponds to one main framework):
 
-1. Software development
-2. Image dissemination
-3. Metadata dissemination
-4. Publication of scientific articles
-5. Persistent identifier assignment
-6. Digital object interoperability
-7. Development and maintenance of APIs
-8. Documentation
-9. Open license
-10. Inclusivity
-11. Machine-readable (meta)data
-12. Collaboration
-13. Ethical commitment 
-14. Semantic interoperability
-15. Reusability
+1. Code sharing practices
+2. Developer-centric data accessibility
+3. Unrestricted access to scholarly publications
+4. Persistent identifier assignment
+5. Digital object interoperability
+6. Ethical data stewardship
+7. Research transparency and reproducibility
 
 ### Exercise 3
 
