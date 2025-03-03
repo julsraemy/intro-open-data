@@ -127,7 +127,7 @@ Alternatively: go through this tutorial from Library Carpentry: <https://library
 
 - Analyse, describe and identify the use case or the (potential) uses of the dataset(s).
 - Between 900 and 1,100 words (excluding references) in either PDF or in `.qmd` if you would like it to be published on this website. Please refer to the [template](assignments/template.qmd).
-- Short paper to be submitted either to the lecturer or via a pull request on the [GitHub repository](https://github.com/julsraemy/intro-open-data) by **Friday 14 March, 7pm**.
+- Short paper to be submitted either to the lecturer by email or via a pull request on the [GitHub repository](https://github.com/julsraemy/intro-open-data) by **Friday 14 March**.
 
 This assignment is weighted at 20% of the 7C2-CT module.
 
