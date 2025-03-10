@@ -32,6 +32,12 @@ listing:
       image: https://upload.wikimedia.org/wikipedia/commons/7/7d/Wappen_Basel-Stadt_matt.svg
       description: >
         The sports facility finder shows sports and exercise facilities operated by the canton of Basel-Stadt as well as all cantonal sports facilities outside the cantonal and national borders. The dataset also lists cantonal premises that are used and rented for sports activities.
+    - title: "Open Data Navigator"
+      categories: [ord, ogd, linked data]
+      path: https://opendatanavigator.switch.ch/
+      image: https://static.www.switch.ch/sites/default/files/styles/hero_large_16_9/public/2023-10/new-switch-logo.png?itok=6ZMfJGLj
+      description: >
+        The SWITCH Open Data Navigator is a discovery platform that aggregates and transforms metadata from various open data providers to make it better discoverable for researchers and students. It focuses on open data that are not generated in research processes but are relevant for research activities, especially those involving multiple disciplinary fields. 
     - title: "Federal Popular Votes"
       categories: [ogd, politics]
       path: https://abstimmungen.admin.ch/
