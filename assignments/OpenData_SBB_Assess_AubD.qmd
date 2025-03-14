@@ -88,7 +88,7 @@ For historical analysis or offline applications:
 
 To analyze train occupancy levels, I developed an interactive dashboard using Dash and Plotly. The dashboard features two separate pie charts, as shown in Figure 1, illustrating the occupancy distribution for a train journey for first-class and second-class seating.
 
-![Figure 1: First-Class and Second-Class Occupancy Distribution](AubD_images//dashboard.png)
+![Figure 1: First-Class and Second-Class Occupancy Distribution](dashboard.png)
 
 #### Description of the Visualization
 
