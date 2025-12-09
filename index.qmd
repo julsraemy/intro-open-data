@@ -4,7 +4,7 @@ subtitle: "HEG-GE Bachelor Information Science | Spring Semester 2024-2025"
 authors: 
   - name: Julien A. Raemy
     orcid: 0000-0002-4711-5759
-    email: julien.raemy@bar.admin.ch
+    email: julien.raemy@hesge.ch
     affiliations:
       - Swiss Federal Archives
       - University of Bern
