@@ -327,7 +327,7 @@ Crowdsourcing initiative from the National Library of Wales
 
 ![](https://iiif.io/assets/uploads/ddmal_section.gif)
 
-<https://ddmal.music.mcgill.ca/IIIF-AV-player/>
+<https://ddmal.ca/IIIF-AV-player/>
 
 **Layers of digitisation**
 
