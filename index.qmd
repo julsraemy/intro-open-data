@@ -27,35 +27,11 @@ The course is designed for undergraduate students in Information Science at the 
 
 ## Why Open Data matters... TL;DR
 
-### Public Engagement and Empowerment
+::: {.column-page}
+<iframe src="why-open-data-matters.html" width="100%" height="600px" style="border: 1px solid #ccc; border-radius: 4px;"></iframe>
+:::
 
-- Open data empowers the public by providing access to information that was previously inaccessible or difficult to obtain.
-- This fosters a more informed citizenry and enables individuals and communities to participate actively in civic and cultural discourses.
-
-### Transparency and Accountability
-
-- Open data enhances transparency and accountability, particularly in sectors where public trust is paramount.
-- By making data freely accessible, open data initiatives allow for greater scrutiny and analysis, leading to more accountable governance and institutional practices.
-
-### The Evolution of Open Data
-
-- While open data in itself is a commendable goal, the concept of Linked Open (Usable) Data takes it a step further.
-- Linked Open Data enhances the value of open data by ensuring it is not only available but also interconnected, making it more discoverable and useful for a wider range of applications and analyses.
-- LOUD is about enhancing usability and semantic interoperability leveraging community-driven standards and practices.
-
-### OGD and ORD for GLAM institutions
-
-- Open Research Data (ORD) and Open Government Data (OGD) can be viewed both as a service provided to the public and as a process that requires active management and continuous improvement.
-- Institutions in the GLAM (Galleries, Libraries, Archives and Museums) sector should consider how these open data initiatives fit into their practices. This applies to both contributing and using data for research, curation and public engagement.
-
-### AI and Machine Learning
-
-- Open (and structured) data is crucial for Artificial Intelligence (AI) and Machine Learning (ML) systems, providing the large datasets necessary for training models.
-- The availability of diverse, high-quality open datasets enables more robust and inclusive AI developments.
-- Open data promotes transparency and ethical practices in AI by ensuring external validation and --- hopefully --- reducing biases.
-
-### Collaboration is Key
-
-- Discussing best practices grounded in collaboration, such as leveraging the Collections as Data checklist.
-- Participating in the International Image Interoperability Framework (IIIF) and Linked Art communities for the cultural heritage field (and beyond, notably for the STEM --- Science, Technology, Engineering, and Mathematics --- sector).
-- OGD meet-ups (Open Data Beer).
+::: {.callout-tip}
+## Navigate the slides
+Use arrow keys or the controls at the bottom to navigate through the presentation. Press `f` for fullscreen mode.
+:::

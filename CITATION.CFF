@@ -9,7 +9,7 @@ authors:
   - given-names: Julien Antoine
     family-names: Raemy
     orcid: 'https://orcid.org/0000-0002-4711-5759'
-    affiliation: Swiss Federal Archives
+    affiliation: docuteam SA
 repository-code: 'https://github.com/julsraemy/intro-open-data'
 url: 'https://julsraemy.ch/intro-open-data/'
 doi: 10.5281/zenodo.14884761
@@ -38,5 +38,5 @@ keywords:
   - Linked Data
   - Linked Open Usable Data
   - Collections as Data
-date-released: 2025-02-01
+date-released: 2026-01-25
 license: CC-BY-4.0

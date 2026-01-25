@@ -1,0 +1,157 @@
+---
+title: "Why Open Data Matters"
+subtitle: "TL;DR"
+format:
+  revealjs:
+    theme: [default, styles/slides.scss]
+    transition: slide
+    background-transition: fade
+    slide-number: true
+    controls: true
+    progress: true
+    hash: true
+    navigation-mode: linear
+    width: 1920
+    height: 1080
+    margin: 0.04
+    min-scale: 0.2
+    max-scale: 2.0
+    logo: logo-open.svg
+    footer: |
+      <div class="footer-content">
+        <span class="footer-left">Julien A. Raemy</span>
+        <span class="footer-right">7C2-CT-4A Introduction to Open Data | Bachelor Information Science, Haute école de gestion de Genève | Spring Semester 2025-2026</span>
+      </div>
+---
+
+## Public Engagement and Empowerment {.smaller}
+
+:::: {.columns}
+::: {.column width="50%"}
+**Empowering the Public**
+
+- Access to previously inaccessible information
+- Democratization of knowledge
+:::
+
+::: {.column width="50%"}
+**Active Participation**
+
+- More informed citizenry
+- Enables civic and cultural discourse
+:::
+::::
+
+::: {.notes}
+Open data fundamentally changes the relationship between institutions and the public by making information accessible to everyone.
+:::
+
+## Transparency and Accountability {.smaller}
+
+:::: {.columns}
+::: {.column width="50%"}
+**Building Trust**
+
+- Critical in sectors requiring public trust
+- Free accessibility enables scrutiny
+:::
+
+::: {.column width="50%"}
+**Better Governance**
+
+- Greater analysis capabilities
+- More accountable practices
+- Institutional transparency
+:::
+::::
+
+::: {.notes}
+Transparency through open data creates accountability mechanisms that benefit both institutions and society.
+:::
+
+## The Evolution of Open Data {.smaller}
+
+::: {.incremental}
+- **Open Data**: A commendable starting point
+- **Linked Open Data**: Interconnected and discoverable
+- **Linked Open Usable Data (LOUD)**: Enhanced usability and semantic interoperability; Community-driven standards and practices
+:::
+
+::: {.notes}
+Open data has evolved from simple availability to sophisticated interconnected systems that maximize usability.
+:::
+
+## OGD and ORD for GLAM (Galleries, Libraries, Archives, Museums) {.smaller}
+
+**Open Government Data (OGD) & Open Research Data (ORD)**
+
+:::: {.columns}
+::: {.column width="50%"}
+**Dual Nature**
+
+- Service to the public
+- Active management process
+:::
+
+::: {.column width="50%"}
+**GLAM Applications**
+
+- Research contributions
+- Curation practices
+- Public engagement
+:::
+::::
+
+::: {.notes}
+GLAM institutions play a crucial role in both producing and utilizing open data for cultural heritage preservation and access.
+:::
+
+## AI and Machine Learning {.smaller}
+
+::: {.incremental}
+- **Training Data**: Large, diverse datasets for robust AI models
+- **Inclusive Development**: High-quality open datasets enable better AI
+- **Transparency**: External validation of AI systems
+- **Ethics**: Reducing biases through openness
+- **Grounding Truth**: Open data provides verifiable sources for fact-checking AI outputs
+:::
+
+::: {.fragment}
+[Open data can be the foundation for responsible AI]{.r-fit-text}
+:::
+
+::: {.notes}
+The relationship between open data and AI is symbiotic - good AI requires good data, and open data ensures AI development is transparent and ethical. Open data also helps ground AI outputs in verifiable reality.
+:::
+
+## Collaboration is Key {.smaller}
+
+:::: {.columns}
+::: {.column width="50%"}
+**Best Practices**
+
+- Collections as Data checklist
+- Community-driven standards
+- Shared resources
+:::
+
+::: {.column width="50%"}
+**Communities**
+
+- IIIF (International Image Interoperability Framework)
+- Linked Art
+- OGD meet-ups (Open Data Beer)
+:::
+::::
+
+::: {.fragment}
+[Open data is not just about availability—it's about creating value through accessibility, interoperability, and collaboration.]{.r-fit-text}
+:::
+
+
+::: {.notes}
+Collaboration across institutions and communities is essential for developing and maintaining effective open data practices.
+:::
+
+## Questions?
+

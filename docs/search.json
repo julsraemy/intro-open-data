@@ -60,14 +60,14 @@
     "href": "index.html",
     "title": "7C2-CT-4A Introduction to Open Data",
     "section": "",
-    "text": "The course is designed for undergraduate students in Information Science at the HES-SO University of Applied Sciences and Arts of Western Switzerland, Haute école de gestion de Genève (HEG-GE). It provides a comprehensive introduction to Open Data, covering key aspects such as:\n\nCharacteristics of Open Data\nAssociated Movements\nAssociated Principles\nOpen Data Platforms and Organisations\nAssessment, Data Quality, and Best Practices\nTechniques, Software, and Tools\nShowcases\n\n\n\n\n\n\nOpen data empowers the public by providing access to information that was previously inaccessible or difficult to obtain.\nThis fosters a more informed citizenry and enables individuals and communities to participate actively in civic and cultural discourses.\n\n\n\n\n\nOpen data enhances transparency and accountability, particularly in sectors where public trust is paramount.\nBy making data freely accessible, open data initiatives allow for greater scrutiny and analysis, leading to more accountable governance and institutional practices.\n\n\n\n\n\nWhile open data in itself is a commendable goal, the concept of Linked Open (Usable) Data takes it a step further.\nLinked Open Data enhances the value of open data by ensuring it is not only available but also interconnected, making it more discoverable and useful for a wider range of applications and analyses.\nLOUD is about enhancing usability and semantic interoperability leveraging community-driven standards and practices.\n\n\n\n\n\nOpen Research Data (ORD) and Open Government Data (OGD) can be viewed both as a service provided to the public and as a process that requires active management and continuous improvement.\nInstitutions in the GLAM (Galleries, Libraries, Archives and Museums) sector should consider how these open data initiatives fit into their practices. This applies to both contributing and using data for research, curation and public engagement.\n\n\n\n\n\nOpen (and structured) data is crucial for Artificial Intelligence (AI) and Machine Learning (ML) systems, providing the large datasets necessary for training models.\nThe availability of diverse, high-quality open datasets enables more robust and inclusive AI developments.\nOpen data promotes transparency and ethical practices in AI by ensuring external validation and — hopefully — reducing biases.\n\n\n\n\n\nDiscussing best practices grounded in collaboration, such as leveraging the Collections as Data checklist.\nParticipating in the International Image Interoperability Framework (IIIF) and Linked Art communities for the cultural heritage field (and beyond, notably for the STEM — Science, Technology, Engineering, and Mathematics — sector).\nOGD meet-ups (Open Data Beer)."
+    "text": "The course is designed for undergraduate students in Information Science at the HES-SO University of Applied Sciences and Arts of Western Switzerland, Haute école de gestion de Genève (HEG-GE). It provides a comprehensive introduction to Open Data, covering key aspects such as:\n\nCharacteristics of Open Data\nAssociated Movements\nAssociated Principles\nOpen Data Platforms and Organisations\nAssessment, Data Quality, and Best Practices\nTechniques, Software, and Tools\nShowcases\n\n\n\n\n\n\n\n\n\n\n\n\n\nNavigate the slides\n\n\n\nUse arrow keys or the controls at the bottom to navigate through the presentation. Press f for fullscreen mode."
   },
   {
     "objectID": "index.html#why-open-data-matters-tldr",
     "href": "index.html#why-open-data-matters-tldr",
     "title": "7C2-CT-4A Introduction to Open Data",
     "section": "",
-    "text": "Open data empowers the public by providing access to information that was previously inaccessible or difficult to obtain.\nThis fosters a more informed citizenry and enables individuals and communities to participate actively in civic and cultural discourses.\n\n\n\n\n\nOpen data enhances transparency and accountability, particularly in sectors where public trust is paramount.\nBy making data freely accessible, open data initiatives allow for greater scrutiny and analysis, leading to more accountable governance and institutional practices.\n\n\n\n\n\nWhile open data in itself is a commendable goal, the concept of Linked Open (Usable) Data takes it a step further.\nLinked Open Data enhances the value of open data by ensuring it is not only available but also interconnected, making it more discoverable and useful for a wider range of applications and analyses.\nLOUD is about enhancing usability and semantic interoperability leveraging community-driven standards and practices.\n\n\n\n\n\nOpen Research Data (ORD) and Open Government Data (OGD) can be viewed both as a service provided to the public and as a process that requires active management and continuous improvement.\nInstitutions in the GLAM (Galleries, Libraries, Archives and Museums) sector should consider how these open data initiatives fit into their practices. This applies to both contributing and using data for research, curation and public engagement.\n\n\n\n\n\nOpen (and structured) data is crucial for Artificial Intelligence (AI) and Machine Learning (ML) systems, providing the large datasets necessary for training models.\nThe availability of diverse, high-quality open datasets enables more robust and inclusive AI developments.\nOpen data promotes transparency and ethical practices in AI by ensuring external validation and — hopefully — reducing biases.\n\n\n\n\n\nDiscussing best practices grounded in collaboration, such as leveraging the Collections as Data checklist.\nParticipating in the International Image Interoperability Framework (IIIF) and Linked Art communities for the cultural heritage field (and beyond, notably for the STEM — Science, Technology, Engineering, and Mathematics — sector).\nOGD meet-ups (Open Data Beer)."
+    "text": "Navigate the slides\n\n\n\nUse arrow keys or the controls at the bottom to navigate through the presentation. Press f for fullscreen mode."
   },
   {
     "objectID": "index.html#a-multitude-of-tools",
@@ -441,7 +441,7 @@
     "href": "about.html#about-the-instructor",
     "title": "About",
     "section": "About the Instructor",
-    "text": "About the Instructor\nDr. Julien A. Raemy is an Information Specialist and Digital Humanities Practitioner. He currently works as a Digital Archiving Project Manager at docuteam. He is also an Associate Researcher in Digital Humanities at the University of Bern (Walter Benjamin Kolleg).\nHe holds a Bachelor’s and Master’s degree in Information Science from the HES-SO University of Applied Sciences and Arts of Western Switzerland. He completed his PhD in Digital Humanities at the University of Basel in 2024, with a dissertation titled Linked Open Usable Data for Cultural Heritage: Perspectives on Community Practices and Semantic Interoperability.\nJulien A. Raemy has worked extensively in academia and in or for the cultural heritage domain, including as a Photo Archivist for the Montreux Jazz Digital Project at the École Polytechnique Fédérale de Lausanne (EPFL), as a Research and Teaching Assistant at the Haute école de gestion de Genève (HEG-GE), as a Knowledge Graph Engineer at the University of Zurich’s Swiss Art Research Infrastructure (SARI), as an Interoperability Specialist at DaSCH, Swiss National Data and Service Center for the Humanities, as well as a Data Scientist and Project Manager for the Swiss Federal Archives.\nHe is also an active member of the International Image Interoperability Framework (IIIF) and Linked Art communities, serving on the IIIF Coordinating Committee and the Linked Art Editorial Board."
+    "text": "About the Instructor\nDr. Julien A. Raemy is a Cultural Heritage and Digital Preservation Expert. He currently works as a Digital Archiving Project Manager at docuteam. He also holds an appointment as an Associate Researcher in Digital Humanities at the University of Bern (Walter Benjamin Kolleg).\nHe holds a Bachelor’s and Master’s degree in Information Science from the HES-SO University of Applied Sciences and Arts of Western Switzerland. He completed his PhD in Digital Humanities at the University of Basel in 2024, with a dissertation titled Linked Open Usable Data for Cultural Heritage: Perspectives on Community Practices and Semantic Interoperability.\nJulien A. Raemy has worked extensively in academia and in or for the cultural heritage domain, including as a Photo Archivist for the Montreux Jazz Digital Project at the École Polytechnique Fédérale de Lausanne (EPFL), as a Research and Teaching Assistant at the Haute école de gestion de Genève (HEG-GE), as a Knowledge Graph Engineer at the University of Zurich’s Swiss Art Research Infrastructure (SARI), as an Interoperability Specialist at DaSCH, Swiss National Data and Service Center for the Humanities, as well as a Data Scientist and Project Manager for the Swiss Federal Archives.\nHe is also an active member of the International Image Interoperability Framework (IIIF) and Linked Art communities, serving on the IIIF Coordinating Committee and the Linked Art Editorial Board."
   },
   {
     "objectID": "about.html#host-institution",
@@ -498,5 +498,68 @@
     "title": "Syllabus",
     "section": "Course Outline (2025-2026)",
     "text": "Course Outline (2025-2026)\n\n\n\nDate\nContent\n\n\n\n\n18.02.2026\nCourse Overview, Characteristics of Open Data, Associated Movements, Exercise 1\n\n\n25.02.2026\nAssociated Principles, Exercise 2, Open Data Platforms and Organisations, Exercise 3\n\n\n04.03.2026\nAssessment, Data Quality, and Best Practices, Techniques, Software, and Tools, Exercise 4\n\n\n11.03.2026\nShowcases, Assignment Workshop"
+  },
+  {
+    "objectID": "why-open-data-matters.html#public-engagement-and-empowerment",
+    "href": "why-open-data-matters.html#public-engagement-and-empowerment",
+    "title": "Why Open Data Matters",
+    "section": "Public Engagement and Empowerment",
+    "text": "Public Engagement and Empowerment\n\n\nEmpowering the Public\n\nAccess to previously inaccessible information\nDemocratization of knowledge\n\n\nActive Participation\n\nMore informed citizenry\nEnables civic and cultural discourse\n\n\n\nOpen data fundamentally changes the relationship between institutions and the public by making information accessible to everyone."
+  },
+  {
+    "objectID": "why-open-data-matters.html#transparency-and-accountability",
+    "href": "why-open-data-matters.html#transparency-and-accountability",
+    "title": "Why Open Data Matters",
+    "section": "Transparency and Accountability",
+    "text": "Transparency and Accountability\n\n\nBuilding Trust\n\nCritical in sectors requiring public trust\nFree accessibility enables scrutiny\n\n\nBetter Governance\n\nGreater analysis capabilities\nMore accountable practices\nInstitutional transparency\n\n\n\nTransparency through open data creates accountability mechanisms that benefit both institutions and society."
+  },
+  {
+    "objectID": "why-open-data-matters.html#the-evolution-of-open-data",
+    "href": "why-open-data-matters.html#the-evolution-of-open-data",
+    "title": "Why Open Data Matters",
+    "section": "The Evolution of Open Data",
+    "text": "The Evolution of Open Data\n\n\nOpen Data: A commendable starting point\nLinked Open Data: Interconnected and discoverable\nLinked Open Usable Data (LOUD): Enhanced usability and semantic interoperability; Community-driven standards and practices\n\n\n\nOpen data has evolved from simple availability to sophisticated interconnected systems that maximize usability."
+  },
+  {
+    "objectID": "why-open-data-matters.html#ogd-and-ord-for-glam",
+    "href": "why-open-data-matters.html#ogd-and-ord-for-glam",
+    "title": "Why Open Data Matters",
+    "section": "OGD and ORD for GLAM",
+    "text": "OGD and ORD for GLAM\nOpen Government Data (OGD) & Open Research Data (ORD)\n\n\nDual Nature\n\nService to the public\nActive management process\n\n\nGLAM Applications\n\nResearch contributions\nCuration practices\nPublic engagement\n\n\n\nGalleries, Libraries, Archives, and Museums\n\n\nGLAM institutions play a crucial role in both producing and utilizing open data for cultural heritage preservation and access."
+  },
+  {
+    "objectID": "why-open-data-matters.html#ai-and-machine-learning",
+    "href": "why-open-data-matters.html#ai-and-machine-learning",
+    "title": "Why Open Data Matters",
+    "section": "AI and Machine Learning",
+    "text": "AI and Machine Learning\n\n\nTraining Data: Large, diverse datasets for robust AI models\nInclusive Development: High-quality open datasets enable better AI\nTransparency: External validation of AI systems\nEthics: Reducing biases through openness\nGrounding Truth: Open data provides verifiable sources for fact-checking AI outputs\n\n\n\nOpen data can be the foundation for responsible AI\n\n\nThe relationship between open data and AI is symbiotic - good AI requires good data, and open data ensures AI development is transparent and ethical. Open data also helps ground AI outputs in verifiable reality."
+  },
+  {
+    "objectID": "why-open-data-matters.html#collaboration-is-key",
+    "href": "why-open-data-matters.html#collaboration-is-key",
+    "title": "Why Open Data Matters",
+    "section": "Collaboration is Key",
+    "text": "Collaboration is Key\n\n\nBest Practices\n\nCollections as Data checklist\nCommunity-driven standards\nShared resources\n\n\nCommunities\n\nIIIF (International Image Interoperability Framework)\nLinked Art\nOGD meet-ups (Open Data Beer)\n\n\n\nOpen data is not just about availability—it’s about creating value through accessibility, interoperability, and collaboration.\n\n\nCollaboration across institutions and communities is essential for developing and maintaining effective open data practices."
+  },
+  {
+    "objectID": "why-open-data-matters.html#section",
+    "href": "why-open-data-matters.html#section",
+    "title": "Why Open Data Matters",
+    "section": "",
+    "text": "Questions?\n\nRemember: Open data is not just about availability—it’s about creating value through accessibility, interoperability, and collaboration.\n\n\n\n\n\nJulien A. Raemy Introduction to Open Data | HEG-GE | Spring semester 2025-2026"
+  },
+  {
+    "objectID": "why-open-data-matters.html#ogd-and-ord-for-glam-galleries-libraries-archives-museums",
+    "href": "why-open-data-matters.html#ogd-and-ord-for-glam-galleries-libraries-archives-museums",
+    "title": "Why Open Data Matters",
+    "section": "OGD and ORD for GLAM (Galleries, Libraries, Archives, Museums)",
+    "text": "OGD and ORD for GLAM (Galleries, Libraries, Archives, Museums)\nOpen Government Data (OGD) & Open Research Data (ORD)\n\n\nDual Nature\n\nService to the public\nActive management process\n\n\nGLAM Applications\n\nResearch contributions\nCuration practices\nPublic engagement\n\n\n\nGLAM institutions play a crucial role in both producing and utilizing open data for cultural heritage preservation and access."
+  },
+  {
+    "objectID": "why-open-data-matters.html#questions",
+    "href": "why-open-data-matters.html#questions",
+    "title": "Why Open Data Matters",
+    "section": "Questions?",
+    "text": "Questions?\n\n\n\n\n\nJulien A. Raemy 7C2-CT-4A Introduction to Open Data | Bachelor Information Science, Haute école de gestion de Genève | Spring Semester 2025-2026"
   }
 ]
