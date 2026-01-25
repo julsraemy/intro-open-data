@@ -16,6 +16,8 @@ format:
     margin: 0.04
     min-scale: 0.2
     max-scale: 2.0
+    pdfSeparateFragments: false
+    pdfMaxPagesPerSlide: 1
     logo: logo-open.svg
     footer: |
       <div class="footer-content">
@@ -152,6 +154,4 @@ The relationship between open data and AI is symbiotic - good AI requires good d
 ::: {.notes}
 Collaboration across institutions and communities is essential for developing and maintaining effective open data practices.
 :::
-
-## Questions?
 

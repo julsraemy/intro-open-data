@@ -4,7 +4,7 @@
 $font-family-sans-serif: "Inter", "Segoe UI", "Roboto", sans-serif;
 $font-family-serif: "Merriweather", "Georgia", serif;
 $presentation-heading-font: $font-family-serif;
-$presentation-font-size-root: 40px;
+$presentation-font-size-root: 32px;
 
 // Academic color palette - inspired by Oxford/Cambridge academic publications
 $body-bg: #f8f6f1;  // Warm cream, like high-quality academic paper
@@ -20,9 +20,9 @@ $accent-tertiary: #1e5631;   // Forest green
 $accent-quaternary: #4a4a4a; // Charcoal gray
 
 // Headings - balanced academic hierarchy
-$presentation-h1-font-size: 2.2em;
-$presentation-h2-font-size: 1.65em;
-$presentation-h3-font-size: 1.35em;
+$presentation-h1-font-size: 2.0em;
+$presentation-h2-font-size: 1.55em;
+$presentation-h3-font-size: 1.25em;
 
 /*-- scss:rules --*/
 
@@ -84,8 +84,9 @@ $presentation-h3-font-size: 1.35em;
 }
 
 .reveal .slides section {
-  padding: 30px 40px;
+  padding: 40px 60px;
   box-sizing: border-box;
+  overflow: visible;
 }
 
 // Academic typography - precise spacing
@@ -195,8 +196,16 @@ $presentation-h3-font-size: 1.35em;
 
 // Custom academic classes
 .reveal .smaller {
-  font-size: 0.88em;
-  line-height: 1.5;
+  font-size: 0.75em;
+  line-height: 1.45;
+}
+
+.reveal .smaller li {
+  margin-bottom: 0.5em;
+}
+
+.reveal .smaller p {
+  margin: 0.5em 0;
 }
 
 // Academic theorem/definition box style
@@ -387,4 +396,48 @@ $presentation-h3-font-size: 1.35em;
 
 .reveal tr:hover {
   background: rgba(0, 33, 71, 0.03);
+}
+
+// Hide PDF export button only (keep other tools visible)
+.reveal .slide-menu-button a[title*="PDF"],
+.reveal button[title*="PDF"],
+a[href*="?print-pdf"] {
+  display: none !important;
+}
+
+// Ensure content fits within slides - prevent overflow
+.reveal .slides section {
+  overflow: hidden;
+}
+
+.reveal .slides section .column {
+  overflow: visible;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+// Make sure long text wraps properly
+.reveal p,
+.reveal li,
+.reveal .footer-right {
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  hyphens: auto;
+}
+
+// Prevent lists from going outside
+.reveal ul,
+.reveal ol {
+  max-width: 100%;
+}
+
+// Make footer text wrap if needed
+.reveal .footer-content {
+  flex-wrap: wrap;
+  row-gap: 0.5em;
+}
+
+.reveal .footer-right {
+  max-width: 70%;
+  line-height: 1.3;
 }
