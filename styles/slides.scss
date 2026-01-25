@@ -4,7 +4,7 @@
 $font-family-sans-serif: "Inter", "Segoe UI", "Roboto", sans-serif;
 $font-family-serif: "Merriweather", "Georgia", serif;
 $presentation-heading-font: $font-family-serif;
-$presentation-font-size-root: 30px;
+$presentation-font-size-root: 40px;
 
 // Academic color palette - inspired by Oxford/Cambridge academic publications
 $body-bg: #f8f6f1;  // Warm cream, like high-quality academic paper
@@ -20,9 +20,9 @@ $accent-tertiary: #1e5631;   // Forest green
 $accent-quaternary: #4a4a4a; // Charcoal gray
 
 // Headings - balanced academic hierarchy
-$presentation-h1-font-size: 2.0em;
-$presentation-h2-font-size: 1.55em;
-$presentation-h3-font-size: 1.25em;
+$presentation-h1-font-size: 2.2em;
+$presentation-h2-font-size: 1.65em;
+$presentation-h3-font-size: 1.35em;
 
 /*-- scss:rules --*/
 
@@ -195,7 +195,7 @@ $presentation-h3-font-size: 1.25em;
 
 // Custom academic classes
 .reveal .smaller {
-  font-size: 0.82em;
+  font-size: 0.88em;
   line-height: 1.5;
 }
 

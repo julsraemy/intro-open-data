@@ -31,7 +31,7 @@ format:
 **Empowering the Public**
 
 - Access to previously inaccessible information
-- Democratization of knowledge
+- Democratisation of knowledge
 :::
 
 ::: {.column width="50%"}
@@ -78,7 +78,7 @@ Transparency through open data creates accountability mechanisms that benefit bo
 :::
 
 ::: {.notes}
-Open data has evolved from simple availability to sophisticated interconnected systems that maximize usability.
+Open data has evolved from simple availability to sophisticated interconnected systems that maximise usability.
 :::
 
 ## OGD and ORD for GLAM (Galleries, Libraries, Archives, Museums) {.smaller}
@@ -103,7 +103,7 @@ Open data has evolved from simple availability to sophisticated interconnected s
 ::::
 
 ::: {.notes}
-GLAM institutions play a crucial role in both producing and utilizing open data for cultural heritage preservation and access.
+GLAM institutions play a crucial role in both producing and using open data for cultural heritage preservation and access.
 :::
 
 ## AI and Machine Learning {.smaller}
