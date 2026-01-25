@@ -1,14 +1,14 @@
 ---
 title: "7C2-CT-4A Introduction to Open Data"
-subtitle: "HEG-GE Bachelor Information Science | Spring Semester 2024-2025"
+subtitle: "HEG-GE Bachelor Information Science | Spring Semester 2025-2026"
 authors: 
   - name: Julien A. Raemy
     orcid: 0000-0002-4711-5759
     email: julien.raemy@hesge.ch
     affiliations:
-      - Swiss Federal Archives
+      - docuteam SA
       - University of Bern
-date: "2025-01-19"
+date: "2025-12-12"
 date-modified: last-modified
 license: "CC BY"
 ---
@@ -46,7 +46,7 @@ The course is designed for undergraduate students in Information Science at the 
 ### OGD and ORD for GLAM institutions
 
 - Open Research Data (ORD) and Open Government Data (OGD) can be viewed both as a service provided to the public and as a process that requires active management and continuous improvement.
-- Institutions in the GLAM (Galleries, Libraries, Archives, Museums) sector need to consider how these open data initiatives fit within their practices, both in terms of contributing data and utilising data for research, curation, and public engagement.
+- Institutions in the GLAM (Galleries, Libraries, Archives and Museums) sector should consider how these open data initiatives fit into their practices. This applies to both contributing and using data for research, curation and public engagement.
 
 ### AI and Machine Learning
 
@@ -56,24 +56,6 @@ The course is designed for undergraduate students in Information Science at the 
 
 ### Collaboration is Key
 
-- Collaboration is a fundamental aspect of open data initiatives.
-  - Discussing best practices grounded in collaboration, such as leveraging the Collections as Data checklist.
-  - Participating in the International Image Interoperability Framework (IIIF) and Linked Art communities for the cultural heritage field (and beyond, notably for the STEM --- Science, Technology, Engineering, and Mathematics --- sector).
-  - OGD meet-ups (Open Data Beer).
-- Such collaboration is vital for addressing global challenges, encouraging innovation, and ensuring the sustainable development of open data ecosystems.
-
-## A multitude of tools
-
-> For a better understanding of the past, <br/>
-Our images have to be enhanced, <br/>
-A new dialogue in three dimensions, <br/>
-Must have openness at its heart, <br/>
-For somewhere within the archive <br/>
-Of our aggregated minds <br/>
-Are a multitude of questions <br/>
-And a multitude of answers, <br/>
-Simply awaiting to be found.
-
-<iframe width="560" height="315" src="https://www.youtube.com/embed/pOX9CrvAG7I?si=yLI8p4AMm0kCsk0y" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-
-@mrgeeDayClosingMultitude2023, Data Poet at EuropeanaTech 2023
+- Discussing best practices grounded in collaboration, such as leveraging the Collections as Data checklist.
+- Participating in the International Image Interoperability Framework (IIIF) and Linked Art communities for the cultural heritage field (and beyond, notably for the STEM --- Science, Technology, Engineering, and Mathematics --- sector).
+- OGD meet-ups (Open Data Beer).

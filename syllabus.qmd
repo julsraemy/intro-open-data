@@ -5,9 +5,9 @@ authors:
     orcid: 0000-0002-4711-5759
     email: julien.raemy@hesge.ch
     affiliations:
-      - Swiss Federal Archives
+      - docuteam SA
       - University of Bern
-date: "2025-01-19"
+date: "2025-12-12"
 date-modified: last-modified
 license: "CC BY"
 ---
@@ -40,14 +40,14 @@ The course employs the following methods to support learning:
 
 These methods are intended to foster both theoretical understanding and practical application of the course material.
 
-## Course Outline (2024-2025)
+## Course Outline (2025-2026)
 
 | Date 	| Content 	|
 |------------	|----------------------------	|
-| 17.02.2025 	| Course Overview, [Characteristics of Open Data](sections/characteristics.qmd), [Associated Movements](sections/movements.qmd), [Exercise 1](#exercise-1)	| 
-| 24.02.2025 	| [Associated Principles](sections/principles.qmd), [Exercise 2](#exercise-2), [Open Data Platforms and Organisations](sections/platforms.qmd), [Exercise 3](#exercise-3)                 	|
-| 03.03.2025 	| [Assessment, Data Quality, and Best Practices](sections/assessment.qmd), [Techniques, Software, and Tools](sections/techniques.qmd), [Exercise 4](#exercise-4)                  	|
-| 10.03.2025 	| [Showcases](sections/showcases.qmd), Assignment Workshop                	| 
+| 18.02.2026 	| Course Overview, [Characteristics of Open Data](sections/characteristics.qmd), [Associated Movements](sections/movements.qmd), [Exercise 1](#exercise-1)	| 
+| 25.02.2026 	| [Associated Principles](sections/principles.qmd), [Exercise 2](#exercise-2), [Open Data Platforms and Organisations](sections/platforms.qmd), [Exercise 3](#exercise-3)                 	|
+| 04.03.2026 	| [Assessment, Data Quality, and Best Practices](sections/assessment.qmd), [Techniques, Software, and Tools](sections/techniques.qmd), [Exercise 4](#exercise-4)                  	|
+| 11.03.2026 	| [Showcases](sections/showcases.qmd), Assignment Workshop                	| 
 
 ## Exercises
 

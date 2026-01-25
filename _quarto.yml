@@ -65,7 +65,7 @@ website:
   
   page-footer:
     left: "Julien A. Raemy | Introduction to Open Data" 
-    right: "Content licensed under a Creative Commons Attribution 4.0 International license (CC BY 4.0)"
+    right: "Content is published under a Creative Commons Attribution 4.0 International licence"
 format:
   html:
     theme: 

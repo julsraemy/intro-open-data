@@ -5,33 +5,33 @@ authors:
     orcid: 0000-0002-4711-5759
     email: julien.raemy@hesge.ch
     affiliations:
-      - Swiss Federal Archives
+      - docuteam SA
       - University of Bern
-date: "2025-01-19"
+date: "2025-12-12"
 date-modified: last-modified
 license: "CC BY"
 format:
   html:
     other-links:
-      - text: Julien A. Raemy's Mastodon
-        href: https://hcommons.social/@julsraemy
       - text: HEG-GE Bachelor Information Science
         href: https://hesge.ch/heg/is
 ---
 
 ## About this Website 
 
-This website represents the second iteration of the *Introduction to Open Data* course, evolving from its initial form as a Markdown-based presentation [@raemyIntroductionOpenData2024].
+This is the third iteration of the *Introduction to Open Data* course and the second in website format. Originally created as a Markdown-based presentation [@raemyIntroductionOpenData2024], the course was first adapted into a website and now continues to evolve. While the core content from the original presentation remains valuable, this version introduces a restructured approach to hopefully better serve learners' needs. 
 
-While the original presentation provided a solid foundation, a website proved to be a more suitable medium for this topic. This Quarto-based site builds on the original content while leveraging the strengths of a web format to provide an enriched and more accessible experience for readers as well as allowing for continuous updates.
+This Quarto-based site maintains essential concepts while offering improved layout, accessibility, and the capacity for ongoing refinement as the open data landscape develops.
 
 ## About the Instructor
 
-Dr. Julien A. Raemy is an Information Specialist and Digital Humanities Practitioner. He currently works as a Data Scientist and Project Manager for LINDASnext at the Swiss Federal Archives. He is also an associate researcher at the University of Bern (Walter Benjamin Kolleg, Digital Humanities). 
+Dr. Julien A. Raemy is a Cultural Heritage and Digital Preservation Expert. He currently works as a Digital Archiving Project Manager at docuteam. He also holds an appointment as an Associate Researcher in Digital Humanities at the University of Bern (Walter Benjamin Kolleg). 
 
-He holds a Bachelor's and Master’s degree in Information Science from the HES-SO University of Applied Sciences and Arts of Western Switzerland. He completed his PhD in Digital Humanities at the University of Basel in 2024, with a dissertation titled [Linked Open Usable Data for Cultural Heritage: Perspectives on Community Practices and Semantic Interoperability](https://phd.julsraemy.ch){.external target="_blank"}. His research examines how cultural heritage institutions can better share their digital collections through LOUD standards, particularly focusing on the International Image Interoperability Framework (IIIF) and Linked Art specifications. Through analysis of the PIA research project and Yale's Collections Discovery platform, his work investigates both the social dynamics of communities developing these standards and the technical challenges of making cultural data more interoperable.
+He holds a Bachelor's and Master’s degree in Information Science from the HES-SO University of Applied Sciences and Arts of Western Switzerland. He completed his PhD in Digital Humanities at the University of Basel in 2024, with a dissertation titled [Linked Open Usable Data for Cultural Heritage: Perspectives on Community Practices and Semantic Interoperability](https://phd.julsraemy.ch){.external target="_blank"}.
 
-Julien A. Raemy has worked extensively in academia and in or for the cultural heritage domain, including as a Photo Archivist for the Montreux Jazz Digital Project at the École Polytechnique Fédérale de Lausanne (EPFL) from 2015 to 2017, as a Research and Teaching Assistant at the Haute école de gestion de Genève (HEG-GE) from 2017 to 2021, and as an Interoperability Specialist at DaSCH, Swiss National Data and Service Center for the Humanities, from 2021 to 2024. He is also an active member of the [IIIF](https://iiif.io) and [Linked Art](https://linked.art) communities.
+Julien A. Raemy has worked extensively in academia and in or for the cultural heritage domain, including as a Photo Archivist for the Montreux Jazz Digital Project at the École Polytechnique Fédérale de Lausanne (EPFL), as a Research and Teaching Assistant at the Haute école de gestion de Genève (HEG-GE), as a Knowledge Graph Engineer at the University of Zurich's Swiss Art Research Infrastructure (SARI), as an Interoperability Specialist at DaSCH, Swiss National Data and Service Center for the Humanities, as well as a Data Scientist and Project Manager for the Swiss Federal Archives.
+
+He is also an active member of the [International Image Interoperability Framework (IIIF)](https://iiif.io) and [Linked Art](https://linked.art) communities, serving on the IIIF Coordinating Committee and the Linked Art Editorial Board.
 
 ## Host Institution
 

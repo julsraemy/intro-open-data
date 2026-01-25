@@ -5,7 +5,7 @@ authors:
     orcid: 0000-0002-4711-5759
     email: julien.raemy@hesge.ch
     affiliations:
-      - Swiss Federal Archives
+      - docuteam SA
       - University of Bern
 date: "2025-01-19"
 date-modified: last-modified
@@ -159,10 +159,10 @@ In addition, learn more about community-driven organisations like the [Open Know
 
 It should also be noted that every February around Valentine's Day, **International Love Data Week** brings together data enthusiasts around the world - mostly in academia - to explore best practices in data management, sharing and reuse. For example: 
 
-- HES-SO: <https://www.researchdatasupport.ch/lovedata>
+- Swiss Research Data Support Network (SRDSN): <https://www.researchdatasupport.ch/lovedata>
 - Basel University Library: <https://ub.unibas.ch/de/news/details/love-data-week-2025/>
-- FDM im deutschsprachigen Raum: <https://forschungsdaten.info/fdm-im-deutschsprachigen-raum/love-data-week-2025/>
-- University of Michigan: <https://www.icpsr.umich.edu/web/about/cms/3799>.
+- FDM im deutschsprachigen Raum: <https://forschungsdaten.info/fdm-im-deutschsprachigen-raum/love-data-week-2026/>
+- University of Michigan: <https://www.icpsr.umich.edu/sites/icpsr/about/news-events/international-love-data-week>.
 
 For more information about OGD in Switzerland, please see this curated and exhaustive list on GitHub: <https://github.com/rnckp/awesome-ogd-switzerland>.
 
