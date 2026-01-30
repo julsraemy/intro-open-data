@@ -58,6 +58,6 @@ This Quarto-based website supersedes the initial Marp presentation from the 2023
 - **Content**: [Creative Commons Attribution 4.0 International (CC BY 4.0)](https://creativecommons.org/licenses/by/4.0/)
 
 ## Cite this repository
-Raemy, J. A. (2025). *Introduction to Open Data* [Course]. https://doi.org/10.5281/zenodo.14884761
+Raemy, J. A. (2026). *Introduction to Open Data* [Course]. https://doi.org/10.5281/zenodo.14884761
 
 
