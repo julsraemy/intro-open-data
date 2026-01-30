@@ -15,7 +15,7 @@ license: "CC BY"
 
 # Introduction to Open Data
 
-The course is designed for undergraduate students in Information Science at the HES-SO University of Applied Sciences and Arts of Western Switzerland, [Haute école de gestion de Genève (HEG-GE)](https://hesge.ch/heg/). It provides a comprehensive introduction to Open Data, covering key aspects such as:
+The course is designed for undergraduate students in Information Science at the HES-SO University of Applied Sciences and Arts of Western Switzerland, [Haute école de gestion de Genève (HEG-GE)](https://hesge.ch/heg/). It provides a comprehensive introduction to Open Data, covering key aspects such as: 
 
 - [Characteristics of Open Data](sections/characteristics.qmd)
 - [Associated Movements](sections/movements.qmd)
