@@ -6,6 +6,11 @@ listing:
   contents: assignments
 ---
 
-# Students' Papers
+# Students' Papers 
 
 This space is reserved for work submitted by students of the course *7C2-CT-4A Introduction to Open Data* who have agreed to have their [short papers](syllabus.qmd#course-assessment) published here.
+
+::: {.callout-note}
+## Legacy Content
+Given that the open publication of students' papers on the website did not prove very successful in 2024–2025, this page is simply being kept for archival purposes.
+:::
