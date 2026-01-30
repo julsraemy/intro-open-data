@@ -11,6 +11,11 @@ date-modified: last-modified
 license: "CC BY" # see https://quarto.org/docs/authoring/front-matter.html
 ---
 
+::: {.callout-note}
+## Legacy Content
+The assessment method has been amended. This page is simply being kept for archival purposes.
+:::
+
 # Paper Template
 
 This is a template for the course assignment (20% of 7C2-CT module). You can reuse it and either submit a pull request or send the `.qmd` file to the lecturer. The paper should be between 900 and 1,100 words (excluding references).
