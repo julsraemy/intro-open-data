@@ -27,11 +27,11 @@ This Quarto-based site maintains essential concepts while offering improved layo
 
 Dr. Julien A. Raemy is a Cultural Heritage and Digital Preservation Expert. He currently works as a Digital Archiving Project Manager at docuteam. He also holds an appointment as an Associate Researcher in Digital Humanities at the University of Bern (Walter Benjamin Kolleg). 
 
-He holds a Bachelor's and Master’s degree in Information Science from the HES-SO University of Applied Sciences and Arts of Western Switzerland. He completed his PhD in Digital Humanities at the University of Basel in 2024, with a dissertation titled [Linked Open Usable Data for Cultural Heritage: Perspectives on Community Practices and Semantic Interoperability](https://phd.julsraemy.ch){.external target="_blank"}.
+He completed his PhD in 2024 at the Digital Humanities Lab of the University of Basel with [a dissertation on Linked Open Usable Data (LOUD)](https://phd.julsraemy.ch){.external target="_blank"}. Previously, he earned a Bachelor's and Master's degree in Information Science from the University of Applied Sciences and Arts Western Switzerland (HES-SO).
 
 Julien A. Raemy has worked extensively in academia and in or for the cultural heritage domain, including as a Photo Archivist for the Montreux Jazz Digital Project at the École Polytechnique Fédérale de Lausanne (EPFL), as a Research and Teaching Assistant at the Haute école de gestion de Genève (HEG-GE), as a Knowledge Graph Engineer at the University of Zurich's Swiss Art Research Infrastructure (SARI), as an Interoperability Specialist at DaSCH, Swiss National Data and Service Center for the Humanities, as well as a Data Scientist and Project Manager for the Swiss Federal Archives.
 
-He is also an active member of the [International Image Interoperability Framework (IIIF)](https://iiif.io) and [Linked Art](https://linked.art) communities, serving on the IIIF Coordinating Committee and the Linked Art Editorial Board.
+In addition, he is actively engaged in the [International Image Interoperability Framework (IIIF)](https://iiif.io) and is a member of the [Linked Art](https://linked.art) Editorial Board.
 
 ## Host Institution
 
