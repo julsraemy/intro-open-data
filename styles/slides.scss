@@ -235,7 +235,7 @@ $presentation-h6-font-size: 0.9em;
 .reveal .footer-content {
   display: block;
   width: 100%;
-  padding: 0.9em 4em 1.2em 10em;
+  padding: 0.7em 2em 0.7em 2em;
   background: linear-gradient(to right, $secondary-color 0%, $secondary-color 50%, #1f38c5 50%, #1f38c5 100%);
   position: relative;
   color: white;
@@ -244,14 +244,15 @@ $presentation-h6-font-size: 0.9em;
   white-space: nowrap;
   overflow: visible;
   box-sizing: border-box;
-  min-height: 3em;
+  min-height: 2.4em;
+  line-height: 1;
 }
 
 .reveal .footer-content span {
   display: inline-block;
 }
 
-// Slide numbers - positioned inside footer on the left
+// Slide numbers - positioned inside footer on the left side
 .reveal .slide-number {
   font-family: "CMUSansSerif", sans-serif;
   font-size: 0.38em;
@@ -259,12 +260,16 @@ $presentation-h6-font-size: 0.9em;
   color: white !important;
   background: transparent !important;
   padding: 0;
+  margin: 0;
   border: none;
   box-shadow: none;
   position: fixed !important;
-  left: 3em !important;
-  bottom: 1.2em !important;
+  left: 2em !important;
+  transform: none !important;
+  bottom: 0.55em !important;
   z-index: 101;
+  line-height: 1;
+  vertical-align: baseline;
 }
 
 // Progress bar (optional, set to display: none if not wanted)
