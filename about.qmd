@@ -27,7 +27,7 @@ This Quarto-based site maintains essential concepts while offering improved layo
 
 Dr. Julien A. Raemy is a Cultural Heritage and Digital Preservation Expert. He currently works as a Digital Archiving Project Manager at docuteam. He also holds an appointment as an Associate Researcher in Digital Humanities at the University of Bern (Walter Benjamin Kolleg). 
 
-He completed his PhD in 2024 at the Digital Humanities Lab of the University of Basel with [a dissertation on Linked Open Usable Data (LOUD)](https://phd.julsraemy.ch){.external target="_blank"}. Previously, he earned a Bachelor's and Master's degree in Information Science from the University of Applied Sciences and Arts Western Switzerland (HES-SO).
+He completed his PhD in 2024 at the Digital Humanities Lab of the University of Basel with [a dissertation on Linked Open Usable Data (LOUD)](https://phd.julsraemy.ch){.external target="_blank"}. Previously, he earned a Bachelor's and Master's degree in Information Science from the HES-SO University of Applied Sciences and Arts of Western Switzerland.
 
 Julien A. Raemy has worked extensively in academia and in or for the cultural heritage domain, including as a Photo Archivist for the Montreux Jazz Digital Project at the École Polytechnique Fédérale de Lausanne (EPFL), as a Research and Teaching Assistant at the Haute école de gestion de Genève (HEG-GE), as a Knowledge Graph Engineer at the University of Zurich's Swiss Art Research Infrastructure (SARI), as an Interoperability Specialist at DaSCH, Swiss National Data and Service Center for the Humanities, as well as a Data Scientist and Project Manager for the Swiss Federal Archives.
 
