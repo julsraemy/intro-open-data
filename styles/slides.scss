@@ -1,380 +1,198 @@
 /*-- scss:defaults --*/
 
-// Academic LaTeX/Beamer-inspired theme with rigorous typography
-$font-family-sans-serif: "Inter", "Segoe UI", "Roboto", sans-serif;
-$font-family-serif: "Merriweather", "Georgia", serif;
-$presentation-heading-font: $font-family-serif;
-$presentation-font-size-root: 32px;
+// Beam-inspired theme using CMU fonts
+$font-family-sans-serif: "CMUSansSerif", "Segoe UI", Helvetica, sans-serif;
+$presentation-heading-font: "CMUSansSerif-Bold", "Segoe UI Semibold", sans-serif;
+$presentation-font-size-root: 36px;
 
-// Academic color palette - inspired by Oxford/Cambridge academic publications
-$body-bg: #f8f6f1;  // Warm cream, like high-quality academic paper
-$body-color: #1d1d1d;  // Deep charcoal for maximum readability
-$link-color: #003d82;  // Academic navy blue
-$selection-bg: #4a7ba7;
-$presentation-heading-color: #002147;  // Oxford blue
+// Beam color palette
+$main-color: #465B64;
+$secondary-color: #141414;
+$body-bg: #ffffff;
+$body-color: $secondary-color;
+$link-color: $main-color;
+$presentation-heading-color: $secondary-color;
 
-// Accent colors - conservative academic palette
-$accent-primary: #002147;    // Oxford blue
-$accent-secondary: #872434;  // Burgundy red (academic journals)
-$accent-tertiary: #1e5631;   // Forest green
-$accent-quaternary: #4a4a4a; // Charcoal gray
-
-// Headings - balanced academic hierarchy
-$presentation-h1-font-size: 2.0em;
-$presentation-h2-font-size: 1.55em;
-$presentation-h3-font-size: 1.25em;
+// Heading sizes (matching Marp Beam but larger)
+$presentation-h1-font-size: 3.0em;
+$presentation-h2-font-size: 2.2em;
+$presentation-h3-font-size: 1.5em;
+$presentation-h4-font-size: 1.2em;
+$presentation-h5-font-size: 1em;
+$presentation-h6-font-size: 0.9em;
 
 /*-- scss:rules --*/
 
-// Import professional academic fonts
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,400;1,700&display=swap');
+// Import CMU fonts
+@font-face {
+  font-family: "CMUSansSerif";
+  src: local("CMUSansSerif"), url("https://phd.julsraemy.ch/assets/fonts/cmunbmr.ttf");
+}
+@font-face {
+  font-family: "CMUSansSerif-Italic";
+  src: local("CMUSansSerif-Italic"), url("https://phd.julsraemy.ch/assets/fonts/cmunbmo.ttf");
+  font-style: italic;
+}
+@font-face {
+  font-family: "CMUSansSerif-BoldItalic";
+  src: local("CMUSansSerif-BoldItalic"), url("https://phd.julsraemy.ch/assets/fonts/cmunbso.ttf");
+  font-weight: bold;
+  font-style: italic;
+}
+@font-face {
+  font-family: "CMUSansSerif-Bold";
+  src: local("CMUSansSerif-Bold"), url("https://phd.julsraemy.ch/assets/fonts/cmunbsr.ttf");
+  font-weight: bold;
+}
 
 .reveal {
-  font-family: "Inter", "Segoe UI", sans-serif;
+  font-family: "CMUSansSerif", "Segoe UI", Helvetica, sans-serif;
   font-size: $presentation-font-size-root;
   font-weight: 400;
   color: $body-color;
-  letter-spacing: 0.01em;
 }
 
-// Academic heading hierarchy with proper weights
+// Headings - Beam style
 .reveal h1,
 .reveal h2,
 .reveal h3,
 .reveal h4,
 .reveal h5,
 .reveal h6 {
-  font-family: "Merriweather", Georgia, serif;
+  font-family: "CMUSansSerif-Bold", "Segoe UI Semibold", sans-serif;
   font-weight: 700;
   text-transform: none;
   color: $presentation-heading-color;
-  margin-bottom: 0.6em;
-  margin-top: 0.4em;
-  line-height: 1.25;
-  letter-spacing: -0.01em;
+  margin-bottom: 0.5em;
+  margin-top: 0.5em;
+  line-height: 1.2;
 }
 
+// H1 with Beam-style top bar (for title slides)
+.reveal h1:nth-of-type(1) {
+  font-size: $presentation-h1-font-size;
+  color: #ffffff;
+  background-color: $main-color;
+  border-top: 0.3em solid $main-color;
+  padding: 0.2em 0.5em;
+  margin: 0;
+  text-indent: 0;
+}
+
+// Regular headings
 .reveal h1 {
   font-size: $presentation-h1-font-size;
-  font-weight: 900;
-  border-bottom: 3px solid $accent-primary;
-  padding-bottom: 0.35em;
-  margin-bottom: 0.8em;
 }
 
 .reveal h2 {
   font-size: $presentation-h2-font-size;
-  border-bottom: 2px solid $accent-primary;
-  padding-bottom: 0.3em;
-  margin-bottom: 0.7em;
 }
 
 .reveal h3 {
   font-size: $presentation-h3-font-size;
-  color: $accent-secondary;
-  font-weight: 700;
-  border-bottom: 1px solid rgba(135, 36, 52, 0.3);
-  padding-bottom: 0.2em;
 }
 
-// Slide styling with academic margins
+.reveal h4 {
+  font-size: $presentation-h4-font-size;
+}
+
+.reveal h5 {
+  font-size: $presentation-h5-font-size;
+}
+
+.reveal h6 {
+  font-size: $presentation-h6-font-size;
+}
+
+// Slide styling with proper margins
 .reveal .slides {
   text-align: left;
 }
 
 .reveal .slides section {
-  padding: 40px 60px;
+  padding: 60px 78.5px;
   box-sizing: border-box;
   overflow: visible;
 }
 
-// Academic typography - precise spacing
+// Typography
 .reveal p {
-  margin: 0.7em 0;
-  line-height: 1.6;
-  text-align: justify;
-  hyphens: auto;
+  margin: 0.5em 0;
+  line-height: 1.5;
+  text-align: left;
+  font-size: 1.4em;
 }
 
 .reveal ul,
 .reveal ol {
-  margin: 0.9em 0;
+  margin: 0.8em 0;
   padding-left: 2em;
 }
 
 .reveal li {
-  margin-bottom: 0.6em;
-  line-height: 1.5;
+  margin-bottom: 0.4em;
+  line-height: 1.4;
   text-align: left;
 }
 
-.reveal ul ul,
-.reveal ol ol {
-  margin-top: 0.4em;
-  margin-bottom: 0.4em;
-  font-size: 0.94em;
-}
-
-// Nested lists - academic style
-.reveal ul li::marker {
-  color: $accent-primary;
-  font-weight: 600;
-}
-
-// Academic links
+// Links - Beam style
 .reveal a {
   color: $link-color;
   text-decoration: none;
-  border-bottom: 1px solid rgba(0, 61, 130, 0.3);
-  transition: all 0.2s ease;
+  transition: color 0.2s ease;
 }
 
 .reveal a:hover {
   color: lighten($link-color, 10%);
-  border-bottom: 1px solid $link-color;
-  background: rgba(0, 61, 130, 0.05);
 }
 
-// Academic emphasis - conservative styling
-.reveal strong,
-.reveal b {
-  font-weight: 700;
-  color: $accent-secondary;
-}
-
-.reveal em,
-.reveal i {
-  font-style: italic;
-  color: $accent-tertiary;
-  font-weight: 400;
-}
-
-// Columns - academic journal style
-.reveal .columns {
-  display: flex;
-  gap: 2.5em;
-  align-items: flex-start;
-}
-
-.reveal .column {
-  flex: 1;
-}
-
-// Code blocks - academic monograph style
-.reveal pre {
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
-  border: 1px solid #d8d0c0;
-  border-left: 4px solid $accent-primary;
-  border-radius: 2px;
-  background: #fcfbf8;
-  font-family: "Consolas", "Monaco", "Courier New", monospace;
-  font-size: 0.68em;
-  line-height: 1.4;
-  padding: 1em;
-}
-
+// Code styling
 .reveal code {
+  background-color: rgba(100, 100, 100, 0.2);
+  color: $body-color;
+  padding: 0.1em 0.3em;
+  border-radius: 3px;
+  font-family: monospace;
+  font-size: 0.9em;
+}
+
+.reveal pre {
+  box-shadow: none;
+  border: 1px solid #d0d0d0;
+  border-radius: 3px;
+  background: #f5f5f5;
   font-family: "Consolas", "Monaco", "Courier New", monospace;
-  color: $accent-secondary;
-  background: #fcfbf8;
-  padding: 0.15em 0.4em;
-  border-radius: 2px;
-  border: 1px solid #e8e2d5;
-  font-size: 0.9em;
+  font-size: 0.7em;
+  line-height: 1.3;
+  padding: 0.8em;
+  margin: 1em 0;
 }
 
-// Academic fragments - subtle reveal
-.reveal .fragment {
-  opacity: 0.25;
-  transition: opacity 0.3s ease;
-}
-
-.reveal .fragment.visible {
-  opacity: 1;
-}
-
-// Custom academic classes
-.reveal .smaller {
-  font-size: 0.75em;
-  line-height: 1.45;
-}
-
-.reveal .smaller li {
-  margin-bottom: 0.5em;
-}
-
-.reveal .smaller p {
-  margin: 0.5em 0;
-}
-
-// Academic theorem/definition box style
-.reveal .r-fit-text {
-  font-size: 1.3em !important;
-  font-weight: 700;
-  color: $accent-primary !important;
-  text-align: center;
-  padding: 0.8em 1.2em;
-  font-family: "Merriweather", Georgia, serif;
-  border: 2px solid $accent-primary;
-  background: rgba(0, 33, 71, 0.03);
-  margin: 1.2em 0;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
-}
-
-// Footer - academic conference style
-.reveal .footer {
-  font-size: 0.45em;
-  padding: 0.5em 2em;
-  background: linear-gradient(to bottom, transparent, rgba(0, 33, 71, 0.03));
-  border-top: 2px solid rgba(0, 33, 71, 0.15);
-  font-family: "Inter", sans-serif;
-  letter-spacing: 0.02em;
-}
-
-.reveal .footer-content {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 100%;
-  gap: 3em;
-}
-
-.reveal .footer-left {
-  text-align: left;
-  font-weight: 600;
-  color: $accent-primary;
-  flex-shrink: 0;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-  font-size: 1.05em;
-}
-
-.reveal .footer-right {
-  text-align: right;
-  font-style: normal;
-  color: $accent-quaternary;
-  flex-shrink: 1;
-  font-weight: 400;
-}
-
-.reveal .footer-right a {
-  color: $accent-quaternary;
-  text-decoration: none;
+.reveal pre code {
+  background: transparent;
+  padding: 0;
   border: none;
-  background: none;
-  transition: opacity 0.2s ease;
+  font-size: 1em;
 }
 
-.reveal .footer-right a:hover {
-  opacity: 0.7;
-  background: none;
-  border: none;
+// Mark/highlight
+.reveal mark {
+  background-color: #f5db7e;
+  color: $body-color;
+  padding: 0.1em 0.2em;
 }
 
-// Logo styling - make it clickable to return home
-.reveal .slide-logo {
-  max-height: 50px;
-  opacity: 0.8;
-  transition: opacity 0.2s ease;
-}
-
-.reveal .slide-logo:hover {
-  opacity: 1;
-}
-
-// Academic progress bar
-.reveal .progress {
-  background: rgba(0, 33, 71, 0.1);
-  height: 4px;
-}
-
-.reveal .progress span {
-  background: $accent-primary;
-  transition: width 800ms cubic-bezier(0.26, 0.86, 0.44, 0.985);
-}
-
-// Controls - academic style
-.reveal .controls {
-  color: $accent-primary;
-  opacity: 0.7;
-}
-
-.reveal .controls:hover {
-  opacity: 1;
-}
-
-// Academic slide numbers
-.reveal .slide-number {
-  font-family: "Inter", sans-serif;
-  font-size: 0.55em;
-  font-weight: 600;
-  color: $accent-primary;
-  background: rgba(248, 246, 241, 0.95);
-  padding: 6px 12px;
-  border-radius: 2px;
-  border: 1px solid rgba(0, 33, 71, 0.2);
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
-}
-
-// Title slide - academic conference style
-.reveal .title-slide h1 {
-  font-size: 2.5em;
-  margin-bottom: 0.4em;
-  color: $accent-primary;
-  font-weight: 900;
-  line-height: 1.2;
-}
-
-.reveal .title-slide .subtitle {
-  font-size: 1.2em;
-  color: $accent-secondary;
-  font-style: italic;
-  margin-bottom: 2em;
-  font-weight: 400;
-}
-
-// Speaker notes emphasis
-.reveal .notes strong {
-  color: $accent-secondary;
-  font-weight: 700;
-}
-
-// Academic callouts/theorem boxes
-.reveal .callout,
-.reveal .theorem,
-.reveal .definition {
-  border-left: 5px solid $accent-primary;
-  background: #fcfbf8;
-  padding: 1em 1.3em;
-  margin: 1.2em 0;
-  border-radius: 0 3px 3px 0;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
-  font-size: 0.95em;
-}
-
-.reveal .callout-title {
-  font-weight: 700;
-  color: $accent-primary;
-  margin-bottom: 0.5em;
-  font-family: "Merriweather", serif;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-  font-size: 0.9em;
-}
-
-// Academic blockquotes
+// Blockquotes - simple style
 .reveal blockquote {
-  border-left: 4px solid $accent-primary;
-  padding-left: 1.5em;
-  margin: 1.5em 0;
+  border-left: 3px solid $main-color;
+  padding-left: 1em;
+  margin: 1em 0;
   font-style: italic;
-  color: $accent-quaternary;
-  background: rgba(0, 33, 71, 0.02);
-  padding: 1em 1.5em;
+  color: #666;
+  background: transparent;
 }
 
-// Tables - academic publication style
+// Tables
 .reveal table {
   border-collapse: collapse;
   margin: 1em 0;
@@ -382,30 +200,126 @@ $presentation-h3-font-size: 1.25em;
 }
 
 .reveal th {
-  background: rgba(0, 33, 71, 0.08);
-  border-bottom: 2px solid $accent-primary;
+  background: rgba(70, 91, 100, 0.1);
+  border-bottom: 2px solid $main-color;
   padding: 0.6em 1em;
   font-weight: 700;
   text-align: left;
 }
 
 .reveal td {
-  border-bottom: 1px solid rgba(0, 33, 71, 0.15);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
   padding: 0.5em 1em;
 }
 
 .reveal tr:hover {
-  background: rgba(0, 33, 71, 0.03);
+  background: rgba(70, 91, 100, 0.05);
 }
 
-// Hide PDF export button only (keep other tools visible)
+// Footer - Beam style with two-colored bar
+.reveal .footer {
+  font-size: 0.38em;
+  padding: 0;
+  background: transparent;
+  border: none;
+  font-family: "CMUSansSerif", sans-serif;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100vw;
+  height: auto;
+  z-index: 100;
+}
+
+.reveal .footer-content {
+  display: block;
+  width: 100%;
+  padding: 0.9em 4em 1.2em 10em;
+  background: linear-gradient(to right, $secondary-color 0%, $secondary-color 50%, #1f38c5 50%, #1f38c5 100%);
+  position: relative;
+  color: white;
+  font-weight: normal;
+  text-align: right;
+  white-space: nowrap;
+  overflow: visible;
+  box-sizing: border-box;
+  min-height: 3em;
+}
+
+.reveal .footer-content span {
+  display: inline-block;
+}
+
+// Slide numbers - positioned inside footer on the left
+.reveal .slide-number {
+  font-family: "CMUSansSerif", sans-serif;
+  font-size: 0.38em;
+  font-weight: normal;
+  color: white !important;
+  background: transparent !important;
+  padding: 0;
+  border: none;
+  box-shadow: none;
+  position: fixed !important;
+  left: 3em !important;
+  bottom: 1.2em !important;
+  z-index: 101;
+}
+
+// Progress bar (optional, set to display: none if not wanted)
+.reveal .progress {
+  display: none;
+}
+
+// Custom classes
+.reveal .smaller {
+  font-size: 0.65em;
+  line-height: 1.4;
+}
+
+.reveal .smaller li {
+  margin-bottom: 0.4em;
+}
+
+.reveal .smaller p {
+  margin: 0.4em 0;
+}
+
+// Columns - two column layout
+.reveal .columns {
+  display: flex;
+  gap: 2em;
+  align-items: flex-start;
+}
+
+.reveal .column {
+  flex: 1;
+  overflow: visible;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+// Fragments
+.reveal .fragment {
+  opacity: 0.3;
+  transition: opacity 0.3s ease;
+  font-size: inherit;
+}
+
+.reveal .fragment.visible {
+  opacity: 1;
+  font-size: inherit;
+}
+
+// Hide PDF export and keep other tools
 .reveal .slide-menu-button a[title*="PDF"],
 .reveal button[title*="PDF"],
 a[href*="?print-pdf"] {
   display: none !important;
 }
 
-// Ensure content fits within slides - prevent overflow
+// Ensure content fits within slides
 .reveal .slides section {
   overflow: hidden;
 }
@@ -416,7 +330,6 @@ a[href*="?print-pdf"] {
   overflow-wrap: break-word;
 }
 
-// Make sure long text wraps properly
 .reveal p,
 .reveal li,
 .reveal .footer-right {
@@ -425,19 +338,118 @@ a[href*="?print-pdf"] {
   hyphens: auto;
 }
 
-// Prevent lists from going outside
 .reveal ul,
 .reveal ol {
   max-width: 100%;
 }
 
-// Make footer text wrap if needed
-.reveal .footer-content {
-  flex-wrap: wrap;
-  row-gap: 0.5em;
+// Title slide specific styling
+.reveal .title-slide h1 {
+  background-color: $main-color;
+  border-radius: 25px;
+  text-align: center;
+  color: #ffffff;
+  padding: 0.5em 1em;
+  margin: 2em auto 1em auto;
+  width: 80%;
+  max-width: 80%;
+  border-top: none;
 }
 
-.reveal .footer-right {
-  max-width: 70%;
-  line-height: 1.3;
+.reveal .title-slide h1.title {
+  background-color: $main-color;
+  border-radius: 25px;
+  text-align: center;
+  color: #ffffff;
+  padding: 0.5em 1em;
+  margin: 2em auto 1em auto;
+  width: 80%;
+  max-width: 80%;
+  border-top: none;
+}
+
+.reveal .title-slide .subtitle {
+  text-align: center;
+  font-style: italic;
+  margin-top: 0.5em;
+  margin-bottom: 1.5em;
+  color: $body-color;
+  font-size: 1em;
+}
+
+.reveal .title-slide p.subtitle {
+  text-align: center;
+  font-style: italic;
+  margin-top: 0.5em;
+  margin-bottom: 1.5em;
+  color: $body-color;
+  font-size: 1em;
+}
+
+.reveal .title-slide p {
+  text-align: center;
+  margin: 0.3em auto;
+  line-height: 1.6;
+  font-size: 0.85em;
+}
+
+.reveal .title-slide .author,
+.reveal .title-slide .quarto-title-author-name,
+.reveal .title-slide .quarto-title-authors {
+  text-align: center;
+  margin-top: 1em;
+  color: $body-color;
+  display: block;
+  font-size: 0.85em;
+}
+
+.reveal .title-slide .quarto-title-block {
+  text-align: center;
+}
+
+.reveal .title-slide .date {
+  text-align: center;
+  font-size: 0.7em;
+  margin-top: 0.5em;
+  color: #666;
+}
+
+.reveal .title-slide .quarto-title-author-name {
+  font-weight: bold;
+  font-size: 1.1em;
+}
+
+// Social badges/logos on title slide
+.reveal .title-slide img {
+  display: inline-block;
+  margin: 0.3em 0.2em;
+  vertical-align: middle;
+  height: auto;
+  max-height: 2.5em;
+  border: none;
+  box-shadow: none;
+  background: none;
+}
+
+.reveal .title-slide a {
+  display: inline-block;
+  margin: 0 0.2em;
+}
+
+.reveal .title-slide strong {
+  font-weight: bold;
+  font-size: 1.1em;
+}
+
+// Strong and emphasis
+.reveal strong,
+.reveal b {
+  font-weight: bold;
+  color: $body-color;
+}
+
+.reveal em,
+.reveal i {
+  font-style: italic;
+  color: $body-color;
 }

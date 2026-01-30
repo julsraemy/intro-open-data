@@ -11,6 +11,7 @@
 <link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
   <meta name="generator" content="quarto-1.5.55">
 
+  <meta name="author" content="Julien A. Raemy (docuteam SA; University of Bern)      HES-SO University of Applied Sciences and Arts Western Switzerland  HEG-GE Bachelor Information Science">
   <title>Introduction to Open Data – Why Open Data Matters</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
@@ -336,6 +337,11 @@
   <p class="subtitle">TL;DR</p>
 
 <div class="quarto-title-authors">
+<div class="quarto-title-author">
+<div class="quarto-title-author-name">
+<p><strong>Julien A. Raemy</strong> (docuteam SA; University of Bern)<br> <a href="https://orcid.org/0000-0002-4711-5759"><img src="https://img.shields.io/static/v1?label=ORCID&amp;message=0000-0002-4711-5759&amp;color=A6CE39&amp;logo=orcid" alt="ORCID"></a> <a href="https://scholar.google.ch/citations?user=pGROUG0AAAAJ&amp;hl"><img src="https://img.shields.io/static/v1?label=Google%20Scholar&amp;message=Julien%20A.%20Raemy&amp;color=4285F4&amp;logo=googlescholar" alt="Google Scholar"></a> <a href="https://github.com/julsraemy"><img src="https://img.shields.io/static/v1?label=GitHub&amp;message=julsraemy&amp;color=181717&amp;logo=github" alt="GitHub"></a> <a href="https://hcommons.social/@julsraemy"><img src="https://img.shields.io/static/v1?label=Mastodon&amp;message=@julsraemy@hcommons.social&amp;color=6364FF&amp;logo=mastodon" alt="Mastodon"></a><br> HES-SO University of Applied Sciences and Arts Western Switzerland<br> HEG-GE Bachelor Information Science</p> 
+</div>
+</div>
 </div>
 
 </section>
@@ -519,10 +525,9 @@
       }</style></aside>
 
 <div class="quarto-auto-generated-content">
-<p><img src="logo-open.svg" class="slide-logo"></p>
 <div class="footer footer-default">
 <div class="footer-content">
-<p><span class="footer-left">Julien A. Raemy</span> <span class="footer-right">7C2-CT-4A Introduction to Open Data | Bachelor Information Science, Haute école de gestion de Genève | Spring Semester 2025-2026</span></p>
+7C2-CT-4A Introduction to Open Data
 </div>
 </div>
 </div>
@@ -557,7 +562,6 @@
 'autoAnimateEasing': "ease",
 'autoAnimateDuration': 1,
 'autoAnimateUnmatched': true,
-'pdfMaxPagesPerSlide': 1,
 'menu': {"side":"left","useTextContentForMissingTitles":true,"markers":false,"loadIcons":false,"custom":[{"title":"Tools","icon":"<i class=\"fas fa-gear\"></i>","content":"<ul class=\"slide-menu-items\">\n<li class=\"slide-tool-item active\" data-item=\"0\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.fullscreen(event)\"><kbd>f</kbd> Fullscreen</a></li>\n<li class=\"slide-tool-item\" data-item=\"1\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.speakerMode(event)\"><kbd>s</kbd> Speaker View</a></li>\n<li class=\"slide-tool-item\" data-item=\"2\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.overview(event)\"><kbd>o</kbd> Slide Overview</a></li>\n<li class=\"slide-tool-item\" data-item=\"3\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.togglePdfExport(event)\"><kbd>e</kbd> PDF Export Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"4\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.keyboardHelp(event)\"><kbd>?</kbd> Keyboard Help</a></li>\n</ul>"}],"openButton":true},
 'smaller': false,
  
@@ -846,6 +850,11 @@
             if (link.dataset.originalHref !== undefined) {
               link.href = link.dataset.originalHref;
             }
+              // target, if specified
+              link.setAttribute("target", "_blank");
+              if (link.getAttribute("rel") === null) {
+                link.setAttribute("rel", "noopener");
+              }
           }
         }
       function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
@@ -928,6 +937,25 @@
           });
         }
       }
+    });
+    </script>
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      // Make all external links open in new tab
+      document.querySelectorAll('a[href^="http"]').forEach(function(link) {
+        link.setAttribute('target', '_blank');
+        link.setAttribute('rel', 'noopener noreferrer');
+      });
+
+      // Add home button to top-left corner (targets parent window to break out of iframe)
+      var homeButton = document.createElement('a');
+      homeButton.href = 'index.html';
+      homeButton.target = '_parent';
+      homeButton.innerHTML = '🏠 Home';
+      homeButton.style.cssText = 'position: fixed; top: 20px; left: 20px; z-index: 1000; background: rgba(70, 91, 100, 0.9); color: white; padding: 8px 15px; border-radius: 5px; text-decoration: none; font-family: "CMUSansSerif", sans-serif; font-size: 0.8em; transition: background 0.2s;';
+      homeButton.onmouseover = function() { this.style.background = 'rgba(70, 91, 100, 1)'; };
+      homeButton.onmouseout = function() { this.style.background = 'rgba(70, 91, 100, 0.9)'; };
+      document.body.appendChild(homeButton);
     });
     </script>
     

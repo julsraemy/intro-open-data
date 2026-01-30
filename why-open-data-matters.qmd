@@ -1,6 +1,15 @@
 ---
 title: "Why Open Data Matters"
 subtitle: "TL;DR"
+author:
+  - name: |
+      <strong>Julien A. Raemy</strong> (docuteam SA; University of Bern)<br>
+      <a href="https://orcid.org/0000-0002-4711-5759"><img src="https://img.shields.io/static/v1?label=ORCID&message=0000-0002-4711-5759&color=A6CE39&logo=orcid" alt="ORCID"></a> 
+      <a href="https://scholar.google.ch/citations?user=pGROUG0AAAAJ&hl"><img src="https://img.shields.io/static/v1?label=Google%20Scholar&message=Julien%20A.%20Raemy&color=4285F4&logo=googlescholar" alt="Google Scholar"></a> 
+      <a href="https://github.com/julsraemy"><img src="https://img.shields.io/static/v1?label=GitHub&message=julsraemy&color=181717&logo=github" alt="GitHub"></a> 
+      <a href="https://hcommons.social/@julsraemy"><img src="https://img.shields.io/static/v1?label=Mastodon&message=@julsraemy@hcommons.social&color=6364FF&logo=mastodon" alt="Mastodon"></a><br>
+      HES-SO University of Applied Sciences and Arts Western Switzerland<br>
+      HEG-GE Bachelor Information Science
 format:
   revealjs:
     theme: [default, styles/slides.scss]
@@ -16,15 +25,33 @@ format:
     margin: 0.04
     min-scale: 0.2
     max-scale: 2.0
-    pdfSeparateFragments: false
-    pdfMaxPagesPerSlide: 1
-    logo: logo-open.svg
+    show-notes: false
+    link-external-newwindow: true
     footer: |
-      <div class="footer-content">
-        <span class="footer-left">Julien A. Raemy</span>
-        <span class="footer-right">7C2-CT-4A Introduction to Open Data | Bachelor Information Science, Haute école de gestion de Genève | Spring Semester 2025-2026</span>
-      </div>
+      <div class="footer-content">7C2-CT-4A Introduction to Open Data</div>
+    include-after-body:
+      text: |
+        <script>
+        document.addEventListener('DOMContentLoaded', function() {
+          // Make all external links open in new tab
+          document.querySelectorAll('a[href^="http"]').forEach(function(link) {
+            link.setAttribute('target', '_blank');
+            link.setAttribute('rel', 'noopener noreferrer');
+          });
+          
+          // Add home button to top-left corner (targets parent window to break out of iframe)
+          var homeButton = document.createElement('a');
+          homeButton.href = 'index.html';
+          homeButton.target = '_parent';
+          homeButton.innerHTML = '🏠 Home';
+          homeButton.style.cssText = 'position: fixed; top: 20px; left: 20px; z-index: 1000; background: rgba(70, 91, 100, 0.9); color: white; padding: 8px 15px; border-radius: 5px; text-decoration: none; font-family: "CMUSansSerif", sans-serif; font-size: 0.8em; transition: background 0.2s;';
+          homeButton.onmouseover = function() { this.style.background = 'rgba(70, 91, 100, 1)'; };
+          homeButton.onmouseout = function() { this.style.background = 'rgba(70, 91, 100, 0.9)'; };
+          document.body.appendChild(homeButton);
+        });
+        </script>
 ---
+
 
 ## Public Engagement and Empowerment {.smaller}
 
