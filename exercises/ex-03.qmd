@@ -1,0 +1,366 @@
+---
+title: "Exercise 3: Movements and Principles"
+authors: 
+  - name: Julien A. Raemy
+    orcid: 0000-0002-4711-5759
+    email: julien.raemy@hesge.ch
+    affiliations:
+      - docuteam SA
+      - University of Bern
+date: "2026-02-01"
+date-modified: last-modified
+license: "CC BY"
+format:
+  html:
+    theme: default
+    toc: false
+include-in-header:
+  - text: |
+      <style>
+        .exercise-container {
+          max-width: 900px;
+          margin: 0 auto;
+        }
+        .matching-row {
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          gap: 1rem;
+          align-items: center;
+          padding: 1rem;
+          margin-bottom: 1rem;
+          background-color: #f9f9f9;
+          border-radius: 6px;
+          border-left: 4px solid #007bff;
+        }
+        .framework-label {
+          font-weight: bold;
+          color: #0056b3;
+        }
+        .proposition-label {
+          font-style: italic;
+          color: #555;
+        }
+        select {
+          padding: 0.5rem;
+          border: 2px solid #ddd;
+          border-radius: 4px;
+          font-size: 1rem;
+          cursor: pointer;
+        }
+        select:focus {
+          outline: none;
+          border-color: #007bff;
+          box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.25);
+        }
+        .validate-btn {
+          padding: 0.5rem 1rem;
+          background-color: #28a745;
+          color: white;
+          border: none;
+          border-radius: 4px;
+          cursor: pointer;
+          font-weight: bold;
+          transition: background-color 0.3s;
+        }
+        .validate-btn:hover {
+          background-color: #218838;
+        }
+        .validate-btn:disabled {
+          background-color: #ccc;
+          cursor: not-allowed;
+        }
+        .feedback {
+          padding: 0.5rem;
+          border-radius: 4px;
+          font-weight: bold;
+          text-align: center;
+          min-height: 2.5rem;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+        .feedback.correct {
+          background-color: #d4edda;
+          color: #155724;
+          border: 1px solid #c3e6cb;
+        }
+        .feedback.incorrect {
+          background-color: #f8d7da;
+          color: #721c24;
+          border: 1px solid #f5c6cb;
+        }
+        .feedback.empty {
+          background-color: #e9ecef;
+          color: #999;
+          font-weight: normal;
+        }
+        .results-summary {
+          margin-top: 2rem;
+          padding: 1.5rem;
+          background-color: #f0f0f0;
+          border-radius: 6px;
+          text-align: center;
+        }
+        .score {
+          font-size: 2rem;
+          font-weight: bold;
+          color: #0056b3;
+        }
+        .reset-btn {
+          padding: 0.75rem 1.5rem;
+          background-color: #6c757d;
+          color: white;
+          border: none;
+          border-radius: 4px;
+          cursor: pointer;
+          font-weight: bold;
+          margin-top: 1rem;
+          transition: background-color 0.3s;
+        }
+        .reset-btn:hover {
+          background-color: #5a6268;
+        }
+        .instructions {
+          background-color: #e7f3ff;
+          border-left: 4px solid #2196F3;
+          padding: 1rem;
+          margin-bottom: 2rem;
+          border-radius: 4px;
+        }
+        .answer-key {
+          margin-top: 2rem;
+          padding: 1rem;
+          background-color: #fff3cd;
+          border-left: 4px solid #ffc107;
+          border-radius: 4px;
+          display: none;
+        }
+        .answer-key.show {
+          display: block;
+        }
+      </style>
+---
+
+## Movements and Principles
+
+<div class="instructions">
+  <strong>Instructions:</strong> 
+Select a proposition (A, B, C, etc.) for each framework. When you arere ready, click "Validate All" to see your results.  While there may be overlap between them, each proposition corresponds to one main framework.
+</div>
+
+<div class="exercise-container">
+
+### Frameworks to Match
+
+| Letter | Proposition |
+|--------|-------------|
+| A | Persistent identifier assignment |
+| B | Code sharing practices |
+| C | Ethical data stewardship |
+| D | Developer-centric data accessibility |
+| E | Unrestricted access to scholarly publications |
+| F | Digital object interoperability |
+| G | Research transparency and reproducibility |
+
+<div id="matching-exercise"></div>
+
+<div style="text-align: center; margin-top: 2rem;">
+  <button class="validate-btn" style="padding: 0.75rem 2rem; font-size: 1.1rem;" onclick="validateAll()">Validate All</button>
+</div>
+
+<div class="results-summary" id="results" style="display: none;">
+  <div class="score" id="score-display"></div>
+  <p id="score-text"></p>
+  <button class="reset-btn" onclick="resetExercise()">Reset Exercise</button>
+  <button class="reset-btn" style="background-color: #17a2b8; margin-left: 1rem;" onclick="toggleAnswerKey()">Show Answer Key</button>
+</div>
+
+<div class="answer-key" id="answerKey">
+  <h4>Answer Key</h4>
+  <table style="width: 100%;">
+    <tr>
+      <th style="text-align: left;">Framework</th>
+      <th style="text-align: left;">Correct Match</th>
+    </tr>
+    <tr>
+      <td><strong>1. FLOSS</strong></td>
+      <td>B - Code sharing practices</td>
+    </tr>
+    <tr>
+      <td><strong>2. LOUD</strong></td>
+      <td>D - Developer-centric data accessibility</td>
+    </tr>
+    <tr>
+      <td><strong>3. OA</strong></td>
+      <td>E - Unrestricted access to scholarly publications</td>
+    </tr>
+    <tr>
+      <td><strong>4. FAIR</strong></td>
+      <td>A - Persistent identifier assignment</td>
+    </tr>
+    <tr>
+      <td><strong>5. Collections as Data</strong></td>
+      <td>F - Digital object interoperability</td>
+    </tr>
+    <tr>
+      <td><strong>6. CARE</strong></td>
+      <td>C - Ethical data stewardship</td>
+    </tr>
+    <tr>
+      <td><strong>7. Open Science</strong></td>
+      <td>G - Research transparency and reproducibility</td>
+    </tr>
+  </table>
+</div>
+
+</div>
+
+<script>
+const frameworks = [
+  { id: 1, name: "FLOSS" },
+  { id: 2, name: "LOUD" },
+  { id: 3, name: "OA" },
+  { id: 4, name: "FAIR" },
+  { id: 5, name: "Collections as Data" },
+  { id: 6, name: "CARE" },
+  { id: 7, name: "Open Science" }
+];
+
+const propositions = [
+  { letter: "A", text: "Persistent identifier assignment" },
+  { letter: "B", text: "Code sharing practices" },
+  { letter: "C", text: "Ethical data stewardship" },
+  { letter: "D", text: "Developer-centric data accessibility" },
+  { letter: "E", text: "Unrestricted access to scholarly publications" },
+  { letter: "F", text: "Digital object interoperability" },
+  { letter: "G", text: "Research transparency and reproducibility" }
+];
+
+const correctAnswers = {
+  1: "B",
+  2: "D",
+  3: "E",
+  4: "A",
+  5: "F",
+  6: "C",
+  7: "G"
+};
+
+const userAnswers = {};
+const feedback = {};
+
+function renderExercise() {
+  const container = document.getElementById("matching-exercise");
+  
+  let html = '<div>';
+  
+  frameworks.forEach(framework => {
+    const selectedValue = userAnswers[framework.id] || "";
+    
+    html += `
+      <div class="matching-row">
+        <div class="framework-label">${framework.id}. ${framework.name}</div>
+        <div>
+          <select id="select-${framework.id}" onchange="updateAnswer(${framework.id})">
+            <option value="">-- Select --</option>
+            ${propositions.map(p => `<option value="${p.letter}" ${selectedValue === p.letter ? 'selected' : ''}>${p.letter}</option>`).join("")}
+          </select>
+        </div>
+      </div>
+    `;
+  });
+  
+  html += '</div>';
+  container.innerHTML = html;
+}
+
+function updateAnswer(frameworkId) {
+  const select = document.getElementById(`select-${frameworkId}`);
+  userAnswers[frameworkId] = select.value;
+  renderExercise();
+}
+
+function validateAll() {
+  // Check if all fields are filled
+  const allFilled = frameworks.every(f => userAnswers[f.id]);
+  
+  if (!allFilled) {
+    alert("Please select an answer for all frameworks before validating.");
+    return;
+  }
+  
+  // Validate all answers
+  frameworks.forEach(framework => {
+    const isCorrect = userAnswers[framework.id] === correctAnswers[framework.id];
+    feedback[framework.id] = { correct: isCorrect };
+  });
+  
+  displayResults();
+}
+
+function displayResults() {
+  const correctCount = frameworks.filter(f => feedback[f.id].correct).length;
+  const total = frameworks.length;
+  
+  const resultsContainer = document.getElementById("results");
+  
+  let resultHTML = `
+    <div class="score">${correctCount}/${total}</div>
+  `;
+  
+  if (correctCount === total) {
+    resultHTML += "<p><strong>Perfect! 🎉 You matched all frameworks correctly.</strong></p>";
+  } else if (correctCount >= 5) {
+    resultHTML += `<p><strong>Great job!</strong> You got ${correctCount} out of ${total} correct.</p>`;
+  } else {
+    resultHTML += `<p><strong>Good effort!</strong> You got ${correctCount} out of ${total} correct.</p>`;
+  }
+  
+  resultHTML += "<h3>Your Answers:</h3>";
+  resultHTML += "<table style='width: 100%; text-align: left;'>";
+  resultHTML += "<tr><th>Framework</th><th>Your Answer</th><th>Correct Answer</th><th>Result</th></tr>";
+  
+  frameworks.forEach(framework => {
+    const userAnswer = userAnswers[framework.id];
+    const correctAnswer = correctAnswers[framework.id];
+    const isCorrect = feedback[framework.id].correct;
+    const resultClass = isCorrect ? 'correct' : 'incorrect';
+    const resultText = isCorrect ? '✓' : '✗';
+    
+    resultHTML += `
+      <tr class="${resultClass}">
+        <td><strong>${framework.id}. ${framework.name}</strong></td>
+        <td>${userAnswer}</td>
+        <td>${correctAnswer}</td>
+        <td>${resultText}</td>
+      </tr>
+    `;
+  });
+  
+  resultHTML += "</table>";
+  resultHTML += `
+    <button class="reset-btn" onclick="resetExercise()">Reset Exercise</button>
+    <button class="reset-btn" style="background-color: #17a2b8; margin-left: 1rem;" onclick="toggleAnswerKey()">Show Answer Key</button>
+  `;
+  
+  resultsContainer.innerHTML = resultHTML;
+  resultsContainer.style.display = "block";
+}
+
+function resetExercise() {
+  Object.keys(userAnswers).forEach(key => {
+    userAnswers[key] = "";
+    feedback[key] = null;
+  });
+  document.getElementById("results").style.display = "none";
+  document.getElementById("answerKey").classList.remove("show");
+  renderExercise();
+}
+
+function toggleAnswerKey() {
+  document.getElementById("answerKey").classList.toggle("show");
+}
+
+// Initial render
+renderExercise();
+</script>

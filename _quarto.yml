@@ -29,6 +29,22 @@ website:
         text: Home
       - href: syllabus.qmd
         text: Syllabus
+      - text: Exercises
+        menu:
+          - text: "Exercise 1: OA Deep Dive"
+            file: exercises/ex-01.qmd
+          - text: "Exercise 2: Up do date with Linked Data"
+            file: exercises/ex-02.qmd
+          - text: "Exercise 3: Movements and Principles"
+            file: exercises/ex-03.qmd
+          - text: "Exercise 4: The Reuser's Perspective (OGD)"
+            file: exercises/ex-04.qmd
+          - text: "Exercise 5: Reading Assignment"
+            file: exercises/ex-05.qmd
+          - text: "Exercise 6: Open Refine"
+            file: exercises/ex-06.qmd
+          - text: "Exercise 7: IIIF & ML"
+            file: exercises/ex-07.qmd
       - text: "Course Sections"
         menu:
           - text: "Characteristics of Open Data"
@@ -37,7 +53,7 @@ website:
             file: sections/movements.qmd
           - text: "Associated Principles"
             file: sections/principles.qmd
-          - text: "Open Data Platforms and Organiations"
+          - text: "Open Data Platforms and Organisations"
             file: sections/platforms.qmd
           - text: "Assessment, Data Quality, and Best Practices"
             file: sections/assessment.qmd

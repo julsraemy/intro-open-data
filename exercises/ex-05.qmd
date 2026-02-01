@@ -1,0 +1,17 @@
+---
+title: "Exercise 5: Reading Assignment"
+authors: 
+  - name: Julien A. Raemy
+    orcid: 0000-0002-4711-5759
+    email: julien.raemy@hesge.ch
+    affiliations:
+      - docuteam SA
+      - University of Bern
+date: "2026-02-01"
+date-modified: last-modified
+license: "CC BY"
+---
+
+## Reading Assignment
+
+(...)

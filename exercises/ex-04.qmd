@@ -1,0 +1,27 @@
+---
+title: "Exercise 4: The Reuser's Perspective (OGD)"
+authors: 
+  - name: Julien A. Raemy
+    orcid: 0000-0002-4711-5759
+    email: julien.raemy@hesge.ch
+    affiliations:
+      - docuteam SA
+      - University of Bern
+date: "2026-02-01"
+date-modified: last-modified
+license: "CC BY"
+---
+
+## The Reuser's Perspective (OGD)
+
+### 4A - open.data.swiss
+
+(...)
+
+### 4B - LINDAS/Visualize
+
+Create a dashboard on [visualize.admin.ch](https://visualize.admin.ch/)
+
+### 4C - LINDAS/SPARQL
+
+Go to the [LINDAS SPARQL Endpoint](https://lindas.admin.ch/sparql/).

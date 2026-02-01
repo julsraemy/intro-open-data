@@ -1,0 +1,22 @@
+---
+title: "Exercise 1: OA Deep Dive"
+authors: 
+  - name: Julien A. Raemy
+    orcid: 0000-0002-4711-5759
+    email: julien.raemy@hesge.ch
+    affiliations:
+      - docuteam SA
+      - University of Bern
+date: "2026-02-01"
+date-modified: last-modified
+license: "CC BY"
+---
+
+## OA Deep Dive
+
+You have five minutes to read the section on Open Access (OA) on the [Associated Movements](../sections/movements.qmd) page. Then, everyone will take a quiz.
+
+Classquiz: 
+
+
+

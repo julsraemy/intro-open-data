@@ -7,7 +7,7 @@ authors:
     affiliations:
       - docuteam SA
       - University of Bern
-date: "2025-12-12"
+date: "2024-12-12"
 date-modified: last-modified
 license: "CC BY"
 ---
@@ -27,122 +27,34 @@ These objectives provide the foundation for the course and guide the learning ou
 The topics covered in this course include:
 
 - Background on open data;
-- benefits and risks of opening data;
-- models related to using and publishing open data.
+- Benefits and risks of opening data;
+- Models related to using and publishing open data.
 
 ## Methods
 
 The course employs the following methods to support learning:
 
 - Course presentations;
-- practical examination and exploration of online services;
-- assignments
+- Exploration of online services;
+- Hands-on exercises;
+- Engagement with scholarly literature.
 
 These methods are intended to foster both theoretical understanding and practical application of the course material.
 
 ## Course Outline (2025-2026)
 
+An exam will be held at the end of the fourth and final session. It will consist of multiple-choice and open-ended questions, will last a maximum of one hour, and will be conducted through Cyberlearn. All course notes and access to the internet are permitted. However, LLM and communication tools are not permitted.
+
 | Date 	| Content 	|
 |------------	|----------------------------	|
-| 18.02.2026 	| Course Overview, [Characteristics of Open Data](sections/characteristics.qmd), [Associated Movements](sections/movements.qmd), [Exercise 1](#exercise-1)	| 
-| 25.02.2026 	| [Associated Principles](sections/principles.qmd), [Exercise 2](#exercise-2), [Open Data Platforms and Organisations](sections/platforms.qmd), [Exercise 3](#exercise-3)                 	|
-| 04.03.2026 	| [Assessment, Data Quality, and Best Practices](sections/assessment.qmd), [Techniques, Software, and Tools](sections/techniques.qmd), [Exercise 4](#exercise-4)                  	|
-| 11.03.2026 	| [Showcases](sections/showcases.qmd), Assignment Workshop                	| 
+| 18.02.2026 	| Course Overview<br/>[Characteristics of Open Data](sections/characteristics.qmd)<br/>[Exercise 1: OA Deep Dive](exercises/ex-01.qmd)<br/>[Associated Movements](sections/movements.qmd)<br/>[Associated Principles](sections/principles.qmd)<br/>[Exercise 2: Up to date with Linked Data](exercises/ex-02.qmd)	| 
+| 25.02.2026 	| [Exercise 3: Movements and Principles](exercises/ex-03.qmd)<br/>[Open Data Platforms and Organisations](sections/platforms.qmd)<br/>[Exercise 4: The Reuser's Perspective](exercises/ex-04.qmd)<br/>[Exercise 5: Reading Assignment](exercises/ex-05.qmd)                  	|
+| 04.03.2026 	| [Exercise 5: Reading Assignment (Follow-up)](exercises/ex-05.qmd)<br/>[Assessment, Data Quality, and Best Practices](sections/assessment.qmd)<br/>[Techniques, Software, and Tools](sections/techniques.qmd)<br/>[Exercise 6: Open Refine](exercises/ex-06.qmd)<br/>[Exercise 7: IIIF & ML](exercises/ex-07.qmd)                   	|
+| 11.03.2026 	| [Exercise 7: IIIF & ML (Follow-up)](exercises/ex-07.qmd)<br/>[Showcases](sections/showcases.qmd)<br/>Course Recap<br/>Examination (multiple-choice and open-ended)              	| 
 
-## Exercises
+::: {.callout-warning}
+## Missed Examination Policy
+If a student is absent during the last session and misses the examination for legitimate reasons, a substitute assignment will be organised by the tutor.
+:::
 
-### Exercise 1
 
-**Find/Define your assignment!** 
-
-Available options (except for UC15, which can be assigned to multiple students; all other use cases are allocated on a first-come, first-served basis):
-
-- The deletion of datasets from data.gov: Since Trump has once again been elected President of the United States, health and climate information/datasets have disappeared from federal websites [see <https://www.theverge.com/news/604484/donald-trumps-data-purge-has-begun> and <https://fediscience.org/@petersuber/113874200243958520>].
-  - **UC01**: The disappearance of health data from official US websites: an analyis. 
-  - **UC02**: The disappearance of environmental data from official US websites: an analysis. 
-- **UC03**: Linked Open Data Implementation: Comparing practices across European national libraries
-- **UC04**: Comparing CKAN, uData and Piveau for managing data portals
-- **UC05**: IIIF Implementation in Swiss libraries: a comparative analysis of digital collections accessibility across institutions
-- **UC06**: Canton-level Open Data: Comparing data publishing practices across Swiss cantons
-- **UC07**: Art Museum Licensing Practices: A comparative analysis
-  - Case studies: 
-    - Rijksmuseum (Netherlands)
-    - Le Louvre (France)
-    - British Museum (UK)
-    - Kunstmuseum Basel (Switzerland)
-    - National Gallery of Art (USA)
-- **UC08**: Swiss Healthcare Statistics: Accessibility and reusability of cantonal health data
-- **UC09**: Swiss Public Transportation Data: Analysis of SBB's open data usage in third-party applications
-- **UC10**: Comparing MeteoSwiss open data practices with other European meteorological services
-- **UC11**: IIIF for Education: analysing implementation patterns and pedagogical uses across academic digital libraries
-- **UC12**: Swiss Energy Data: Examining transparency in power consumption data across municipalities
-- **UC13**: Open Data Community Events in Switzerland (2019-2024): Analysis of event types (Open Data Beer, GeoBeer, Linked Data Meetups, Love Data Week, etc.), stakeholder participation (government, academia, GLAM institutions), and their potential impact
-- **UC14**: Swiss Federal Linked Data Ecosystem: Analysis of technical infrastructure, vocabularies, and semantic interoperability across the Federal Administration
-- **UC15**: Find it yourself! Select one or more datasets from one or several [platforms](sections/platforms.qmd) discussed during the course (if several datasets are selected, there must be a common thread). 
-
-### Exercise 2
-
-**Identify the Movements and Principles**
-
-Match each of these frameworks --- OA, Open Science, FLOSS, FAIR, CARE, Collections as Data, LOUD --- with exactly one of the following propositions (note that while there may be overlap between them, each proposition corresponds to one main framework):
-
-1. Code sharing practices
-2. Developer-centric data accessibility
-3. Unrestricted access to scholarly publications
-4. Persistent identifier assignment
-5. Digital object interoperability
-6. Ethical data stewardship
-7. Research transparency and reproducibility
-
-### Exercise 3
-
-Create a dashboard on [visualize.admin.ch](https://visualize.admin.ch/)
-
-### Exercise 4
-
-**OpenRefine**
-
-Getting started
-
-1. Install the software (<https://openrefine.org/docs>)
-2. Run it locally (accessible at <http://127.0.0.1:3333/>)
-3. Have a look at the different pages and functionalities
-4. Create a new project by importing any supported files
-
-Create a project with an extract from the CAS photographic archives
-
-5. Create a project by importing the data extract from the CAS photographic archives: `ekws_extract.csv` (which can be found on Cyberlearn)
-6. Review the dataset
-7. Clean the dataset by removing unnecessary columns
-8. Undertake some reconciliation with external services for agents (people and institutions).
-
-A step further...
-
-9. Create a new project by importing a dataset from one of the ORD/OGD portals
-10. Analyse and curate the dataset
-
-Alternatively: go through this tutorial from Library Carpentry: <https://librarycarpentry.org/lc-open-refine/>
-
-## Course Assessment
-
-- Analyse, describe and identify the use case or the (potential) uses of the dataset(s).
-- Between 900 and 1,100 words (excluding references) in either PDF or in `.qmd` if you would like it to be published on this website. Please refer to the [template](assignments/template.qmd).
-- Short paper to be submitted either to the lecturer by email or via a pull request on the [GitHub repository](https://github.com/julsraemy/intro-open-data) by **Friday 14 March**.
-
-This assignment is weighted at 20% of the 7C2-CT module.
-
-### Criteria
-
-|         Assessment Criteria        | Points |
-|:---                                |:------:|
-| Introduction and Contextualisation | 5      |
-| Analysis and Argumentation         | 20     |
-| Structure and Writing              | 10     |
-| Presentation and Referencing       | 5      |
-| **Total**                          | **40** |
-
-*Additional details will be discussed during the course.*
-
-<!---
-Maybe, description of the dataset in DCAT-AP CH. Could also be an exercise. 
--->

@@ -97,7 +97,6 @@ EntryScape is an information management platform developed by Metasolutions to h
 
 Its customers include a broad range of public organisations such as municipalities, regional authorities, and national agencies. For example, in Sweden, EntryScape is used by national agencies like Skatteverket or Riksarkivet. Further information is available on the [EntryScape website](https://entryscape.com/) and via its repository on [Bitbucket](https://bitbucket.org/metasolutions/).
 
-
 ### uData
 
 [uData](https://udata.readthedocs.io/) is an open data management platform developed by the Open Data Team. It aims to simplify the publication and management of data, offering a user-friendly interface that makes it accessible for both data providers and users. uData is often employed by municipalities and local governments to publish open data portals, and its modular architecture allows for easy integration with existing IT infrastructures. The source code is available on its [GitHub repository](https://github.com/opendatateam/udata).
