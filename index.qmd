@@ -25,13 +25,14 @@ The course is designed for undergraduate students in Information Science at the 
 - [Techniques, Software, and Tools](sections/techniques.qmd)
 - [Showcases](sections/showcases.qmd)
 
-## Why Open Data matters... TL;DR
-
-::: {.column-page}
-<iframe src="why-open-data-matters.html" width="100%" height="600px" style="border: 1px solid #ccc; border-radius: 4px;"></iframe>
-:::
+## Why Open Data matters... TL;DR+
 
 ::: {.callout-tip}
 ## Navigate the slides
 Use arrow keys or the controls at the bottom to navigate through the presentation. Press `f` for fullscreen mode.
 :::
+
+::: {.column-page}
+<iframe src="why-open-data-matters.html" width="100%" height="600px" style="border: 1px solid #ccc; border-radius: 4px;"></iframe>
+:::
+
