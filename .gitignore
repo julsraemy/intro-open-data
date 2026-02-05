@@ -1,6 +1,5 @@
 # Ignore everything in docs except for the generated files
 docs/*
-docs/
 !docs/.nojekyll
 !docs/**
 
