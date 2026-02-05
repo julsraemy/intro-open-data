@@ -1,5 +1,6 @@
 # Ignore everything in docs except for the generated files
 docs/*
+docs/
 !docs/.nojekyll
 !docs/**
 
@@ -49,3 +50,5 @@ db.sqlite3-journal
 *.bak
 
 /.quarto/
+
+**/*.quarto_ipynb

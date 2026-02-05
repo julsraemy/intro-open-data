@@ -12,7 +12,9 @@ date-modified: last-modified
 license: "CC BY"
 format:
   html:
-    theme: default
+    theme:
+      light: flatly
+      dark: darkly
     toc: false
 include-in-header:
   - text: |
@@ -28,33 +30,35 @@ include-in-header:
           align-items: center;
           padding: 1rem;
           margin-bottom: 1rem;
-          background-color: #f9f9f9;
+          background-color: var(--bs-secondary-bg);
           border-radius: 6px;
-          border-left: 4px solid #007bff;
+          border-left: 4px solid var(--bs-primary);
         }
         .framework-label {
           font-weight: bold;
-          color: #0056b3;
+          color: var(--bs-primary);
         }
         .proposition-label {
           font-style: italic;
-          color: #555;
+          color: var(--bs-secondary-color);
         }
         select {
           padding: 0.5rem;
-          border: 2px solid #ddd;
+          border: 2px solid var(--bs-border-color);
           border-radius: 4px;
           font-size: 1rem;
           cursor: pointer;
+          background-color: var(--bs-body-bg);
+          color: var(--bs-body-color);
         }
         select:focus {
           outline: none;
-          border-color: #007bff;
-          box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.25);
+          border-color: var(--bs-primary);
+          box-shadow: 0 0 0 3px var(--bs-primary-bg-subtle);
         }
         .validate-btn {
           padding: 0.5rem 1rem;
-          background-color: #28a745;
+          background-color: var(--bs-success);
           color: white;
           border: none;
           border-radius: 4px;
@@ -63,10 +67,10 @@ include-in-header:
           transition: background-color 0.3s;
         }
         .validate-btn:hover {
-          background-color: #218838;
+          background-color: var(--bs-success-border-subtle);
         }
         .validate-btn:disabled {
-          background-color: #ccc;
+          background-color: var(--bs-secondary);
           cursor: not-allowed;
         }
         .feedback {
@@ -80,35 +84,35 @@ include-in-header:
           justify-content: center;
         }
         .feedback.correct {
-          background-color: #d4edda;
-          color: #155724;
-          border: 1px solid #c3e6cb;
+          background-color: var(--bs-success-bg-subtle);
+          color: var(--bs-success-text-emphasis);
+          border: 1px solid var(--bs-success-border-subtle);
         }
         .feedback.incorrect {
-          background-color: #f8d7da;
-          color: #721c24;
-          border: 1px solid #f5c6cb;
+          background-color: var(--bs-danger-bg-subtle);
+          color: var(--bs-danger-text-emphasis);
+          border: 1px solid var(--bs-danger-border-subtle);
         }
         .feedback.empty {
-          background-color: #e9ecef;
-          color: #999;
+          background-color: var(--bs-secondary-bg);
+          color: var(--bs-secondary-color);
           font-weight: normal;
         }
         .results-summary {
           margin-top: 2rem;
           padding: 1.5rem;
-          background-color: #f0f0f0;
+          background-color: var(--bs-secondary-bg);
           border-radius: 6px;
           text-align: center;
         }
         .score {
           font-size: 2rem;
           font-weight: bold;
-          color: #0056b3;
+          color: var(--bs-primary);
         }
         .reset-btn {
           padding: 0.75rem 1.5rem;
-          background-color: #6c757d;
+          background-color: var(--bs-secondary);
           color: white;
           border: none;
           border-radius: 4px;
@@ -118,37 +122,42 @@ include-in-header:
           transition: background-color 0.3s;
         }
         .reset-btn:hover {
-          background-color: #5a6268;
+          background-color: var(--bs-secondary-border-subtle);
         }
         .instructions {
-          background-color: #e7f3ff;
-          border-left: 4px solid #2196F3;
+          background-color: var(--bs-info-bg-subtle);
+          border-left: 4px solid var(--bs-info);
           padding: 1rem;
           margin-bottom: 2rem;
           border-radius: 4px;
+          color: var(--bs-info-text-emphasis);
         }
         .answer-key {
           margin-top: 2rem;
           padding: 1rem;
-          background-color: #fff3cd;
-          border-left: 4px solid #ffc107;
+          background-color: var(--bs-warning-bg-subtle);
+          border-left: 4px solid var(--bs-warning);
           border-radius: 4px;
           display: none;
+          color: var(--bs-warning-text-emphasis);
         }
         .answer-key.show {
           display: block;
+        }
+        .answer-key table {
+          color: var(--bs-body-color);
         }
       </style>
 ---
 
 ## Movements and Principles
 
-<div class="instructions">
-  <strong>Instructions:</strong> 
+::: {.callout-note}
+## Instructions
 Select a proposition (A, B, C, etc.) for each framework. When you arere ready, click "Validate All" to see your results.  While there may be overlap between them, each proposition corresponds to one main framework.
-</div>
+:::
 
-<div class="exercise-container">
+
 
 ### Frameworks to Match
 

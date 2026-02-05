@@ -1,17 +1,167 @@
 ---
 title: "Exercise 2: Up to date with Linked Data"
-authors: 
+authors:
   - name: Julien A. Raemy
     orcid: 0000-0002-4711-5759
     email: julien.raemy@hesge.ch
     affiliations:
       - docuteam SA
       - University of Bern
-date: "2026-02-01"
+date: "2026-02-04"
 date-modified: last-modified
 license: "CC BY"
 ---
 
-## Up do date with Linked Data
+## Up to date with Linked Data
 
-(...)
+Linked Data is about publishing structured data on the web so that it can be interlinked and become more useful through semantic queries. It extends standard web technologies (HTTP, URIs) to share information in a machine-readable way.
+
+### The Four Principles of Linked Data
+
+Tim Berners-Lee defined four principles for publishing data on the web:
+
+1. **Use URIs as names for things** - Give everything a unique web address
+2. **Use HTTP URIs** - Make those addresses accessible via the web
+3. **Provide useful information** - When someone looks up a URI, return data using standards (RDF, SPARQL)
+4. **Include links to other URIs** - Enable discovery of related information
+
+### Understanding RDF Triples
+
+RDF (Resource Description Framework) represents data as **triples**: subject-predicate-object statements.
+
+**Example:** "Vincent van Gogh created the Starry Night painting"
+
+```
+subject:   <http://example.org/artist/vangogh>
+predicate: <http://example.org/vocab/created>
+object:    <http://example.org/artwork/starrynight>
+```
+
+### Turtle Syntax
+
+Turtle (Terse RDF Triple Language) is a human-readable syntax for RDF. Let's look at a cultural heritage example:
+
+```turtle
+@prefix ex: <http://example.org/> .
+@prefix schema: <http://schema.org/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+
+ex:vangogh a foaf:Person ;
+    foaf:name "Vincent van Gogh" ;
+    foaf:birthday "1853-03-30" ;
+    schema:nationality "Dutch" ;
+    ex:created ex:starrynight .
+
+ex:starrynight a schema:Painting ;
+    schema:name "The Starry Night" ;
+    schema:dateCreated "1889-06" ;
+    schema:material "Oil on canvas" ;
+    schema:creator ex:vangogh ;
+    schema:location ex:moma .
+
+ex:moma a schema:Museum ;
+    foaf:name "Museum of Modern Art" ;
+    schema:location "New York, USA" .
+```
+
+**Key elements:**
+
+- `@prefix` declares namespace prefixes
+- `a` means "is of type"
+- `;` continues statements about the same subject
+- `.` ends a group of statements
+
+### SPARQL Queries
+
+SPARQL is the query language for RDF data. It allows you to find patterns in the data.
+
+**Basic SPARQL query structure:**
+
+```sparql
+PREFIX ex: <http://example.org/>
+PREFIX schema: <http://schema.org/>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+
+SELECT ?subject ?predicate ?object
+WHERE {
+    ?subject ?predicate ?object .
+}
+```
+
+**Find all paintings:**
+
+```sparql
+SELECT ?painting ?name
+WHERE {
+    ?painting a schema:Painting ;
+              schema:name ?name .
+}
+```
+
+**Find artworks created by Van Gogh:**
+
+```sparql
+SELECT ?artwork ?title
+WHERE {
+    ex:vangogh ex:created ?artwork .
+    ?artwork schema:name ?title .
+}
+```
+
+## Exercises (15-20 minutes)
+
+### A: Understanding Turtle Syntax (4-5 minutes)
+
+Look at the following Turtle snippet describing a manuscript:
+
+```turtle
+@prefix ex: <http://library.org/> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix schema: <http://schema.org/> .
+
+ex:manuscript_042 a schema:Book ;
+    dc:title "Grandes Chroniques de France" ;
+    dc:creator "Anonymous" ;
+    schema:dateCreated "1375" ;
+    ex:heldBy ex:chateauroux_library .
+
+ex:chateauroux_library a schema:Library ;
+    schema:name "Bibliothèque municipale de Châteauroux" ;
+    schema:location "France" .
+```
+
+- What type of resource is `ex:manuscript_042`?
+- How many properties describe the manuscript?
+- What relationship links the manuscript to the library?
+
+### B: Real-World SPARQL Exploration (6-8 minutes)
+
+Visit the **Wikidata Query Service**: <https://query.wikidata.org/>
+
+Try this query to find Van Gogh paintings with images:
+
+```sparql
+SELECT ?painting ?paintingLabel ?image
+WHERE {
+    ?painting wdt:P31 wd:Q3305213 ;    # instance of painting
+              wdt:P170 wd:Q5582 ;       # creator: Vincent van Gogh
+              wdt:P18 ?image .          # has image
+    SERVICE wikibase:label { bd:serviceParam wikibase:language "en". }
+}
+```
+
+- How many paintings with images did you find?
+- Try modifying the query to find paintings by a different artist (hint: search Wikidata for another artist's Q-number, e.g., Pablo Picasso is `wd:Q5593`). What artist did you choose and how many results did you get?
+
+### C: Reflection Questions (5-7 minutes)
+
+- What are the main advantages of using Linked Data for cultural heritage collections?
+- What challenges might institutions face when implementing Linked Data?
+- Based on your experience with the Wikidata Query Service, what makes a SPARQL endpoint useful or difficult to use?
+
+## Additional Resources
+
+- **Linked Data Principles**: <https://www.w3.org/DesignIssues/LinkedData.html>
+- **Turtle Specification**: <https://www.w3.org/TR/turtle/>
+- **SPARQL Tutorial**: <https://www.w3.org/TR/sparql11-query/>
+- **Wikidata SPARQL Examples**: <https://www.wikidata.org/wiki/Wikidata:SPARQL_query_service/queries/examples>
