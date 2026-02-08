@@ -27,6 +27,11 @@ format:
         href: https://linked.art/loud
 ---
 
+::: {.callout-note}
+## Slide Presentation
+Most of the following content can be found in presentation format: [Associated Movements and Principles (slides 89-161)](https://julsraemy.ch/prezi/intro-open-data-2024.html#89). Please note this is the 2024 version of the course and will not be kept updated.
+:::
+
 ## FAIR Data Principles 
 
 ![](https://upload.wikimedia.org/wikipedia/commons/a/aa/FAIR_data_principles.jpg)

@@ -12,6 +12,11 @@ date-modified: last-modified
 license: "CC BY" 
 ---
 
+::: {.callout-note}
+## Slide Presentation
+Most of the following content can be found in presentation format: [Associated Movements and Principles (slides 74-88)](https://julsraemy.ch/prezi/intro-open-data-2024.html#74). Please note this is the 2024 version of the course and will not be kept updated.
+:::
+
 ## Open Access 
 
 ### Berlin Declaration on Open Access to Knowledge in the Sciences and Humanities
