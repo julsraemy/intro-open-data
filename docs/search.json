@@ -76,7 +76,7 @@
     "href": "sections/principles.html",
     "title": "Associated Principles",
     "section": "",
-    "text": "https://www.go-fair.org/fair-principles/ (Wilkinson et al., 2016)\n\n\n\nF1. (Meta)data are assigned a globally unique and persistent identifier\nF2. Data are described with rich metadata (defined by R1)\nF3. Metadata clearly and explicitly include the identifier of the data they describe\nF4. (Meta)data are registered or indexed in a searchable resource\n\n\n\n\n\nA1. (Meta)data are retrievable by their identifier using a standardised communications protocol\n\nA1.1 The protocol is open, free, and universally implementable\nA1.2 The protocol allows for an authentication and authorisation procedure, where necessary\n\nA2. Metadata are accessible, even when the data are no longer available\n\n\n\n\n\nI1. (Meta)data use a formal, accessible, shared, and broadly applicable language for knowledge representation.\nI2. (Meta)data use vocabularies that follow FAIR principles\nI3. (Meta)data include qualified references to other (meta)data\n\n\n\n\n\nR1. (Meta)data are richly described with a plurality of accurate and relevant attributes\n\nR1.1. (Meta)data are released with a clear and accessible data usage license\nR1.2. (Meta)data are associated with detailed provenance\nR1.3. (Meta)data meet domain-relevant community standards",
+    "text": "TipNavigate the slides\n\n\n\nUse arrow keys or the controls at the bottom to navigate through the presentation. Press f for fullscreen mode.",
     "crumbs": [
       "Associated Principles"
     ]
@@ -85,8 +85,8 @@
     "objectID": "sections/principles.html#fair-data-principles",
     "href": "sections/principles.html#fair-data-principles",
     "title": "Associated Principles",
-    "section": "",
-    "text": "https://www.go-fair.org/fair-principles/ (Wilkinson et al., 2016)\n\n\n\nF1. (Meta)data are assigned a globally unique and persistent identifier\nF2. Data are described with rich metadata (defined by R1)\nF3. Metadata clearly and explicitly include the identifier of the data they describe\nF4. (Meta)data are registered or indexed in a searchable resource\n\n\n\n\n\nA1. (Meta)data are retrievable by their identifier using a standardised communications protocol\n\nA1.1 The protocol is open, free, and universally implementable\nA1.2 The protocol allows for an authentication and authorisation procedure, where necessary\n\nA2. Metadata are accessible, even when the data are no longer available\n\n\n\n\n\nI1. (Meta)data use a formal, accessible, shared, and broadly applicable language for knowledge representation.\nI2. (Meta)data use vocabularies that follow FAIR principles\nI3. (Meta)data include qualified references to other (meta)data\n\n\n\n\n\nR1. (Meta)data are richly described with a plurality of accurate and relevant attributes\n\nR1.1. (Meta)data are released with a clear and accessible data usage license\nR1.2. (Meta)data are associated with detailed provenance\nR1.3. (Meta)data meet domain-relevant community standards",
+    "section": "FAIR Data Principles",
+    "text": "FAIR Data Principles\n\nhttps://www.go-fair.org/fair-principles/ (Wilkinson et al., 2016)\n\nFindable\n\nF1. (Meta)data are assigned a globally unique and persistent identifier\nF2. Data are described with rich metadata (defined by R1)\nF3. Metadata clearly and explicitly include the identifier of the data they describe\nF4. (Meta)data are registered or indexed in a searchable resource\n\n\n\nAccessible\n\nA1. (Meta)data are retrievable by their identifier using a standardised communications protocol\n\nA1.1 The protocol is open, free, and universally implementable\nA1.2 The protocol allows for an authentication and authorisation procedure, where necessary\n\nA2. Metadata are accessible, even when the data are no longer available\n\n\n\nInteroperable\n\nI1. (Meta)data use a formal, accessible, shared, and broadly applicable language for knowledge representation.\nI2. (Meta)data use vocabularies that follow FAIR principles\nI3. (Meta)data include qualified references to other (meta)data\n\n\n\nReusable\n\nR1. (Meta)data are richly described with a plurality of accurate and relevant attributes\n\nR1.1. (Meta)data are released with a clear and accessible data usage license\nR1.2. (Meta)data are associated with detailed provenance\nR1.3. (Meta)data meet domain-relevant community standards",
     "crumbs": [
       "Associated Principles"
     ]
@@ -624,5 +624,285 @@
     "title": "Syllabus",
     "section": "Course Outline (2025-2026)",
     "text": "Course Outline (2025-2026)\nAn exam will be held at the end of the fourth and final session. It will consist of multiple-choice and open-ended questions, will last a maximum of one hour, and will be conducted through Cyberlearn. All course notes and access to the internet are permitted. However, LLM and communication tools are not permitted.\n\n\n\nDate\nContent\n\n\n\n\n18.02.2026\nCourse OverviewCharacteristics of Open DataExercise 1: OA Deep DiveAssociated MovementsAssociated PrinciplesExercise 2: Up to date with Linked Data\n\n\n25.02.2026\nExercise 3: Movements and PrinciplesOpen Data Platforms and OrganisationsExercise 4: The Reuser’s PerspectiveExercise 5: Reading Assignment\n\n\n04.03.2026\nExercise 5: Reading Assignment (Follow-up)Assessment, Data Quality, and Best PracticesTechniques, Software, and ToolsExercise 6: Open RefineExercise 7: IIIF & ML\n\n\n11.03.2026\nExercise 7: IIIF & ML (Follow-up)ShowcasesCourse RecapExamination (multiple-choice and open-ended)\n\n\n\n\n\n\n\n\n\nWarningMissed Examination Policy\n\n\n\nIf a student is absent during the last session and misses the examination for legitimate reasons, a substitute assignment will be organised by the tutor."
+  },
+  {
+    "objectID": "principles-slides.html#fair-data-principles",
+    "href": "principles-slides.html#fair-data-principles",
+    "title": "Associated Principles",
+    "section": "FAIR Data Principles",
+    "text": "FAIR Data Principles\n\nhttps://www.go-fair.org/fair-principles/\n\nThe FAIR principles were published in 2016 to improve the Findability, Accessibility, Interoperability, and Reusability of digital assets."
+  },
+  {
+    "objectID": "principles-slides.html#fair-findable",
+    "href": "principles-slides.html#fair-findable",
+    "title": "Associated Principles",
+    "section": "FAIR: Findable",
+    "text": "FAIR: Findable\n\nF1. (Meta)data are assigned a globally unique and persistent identifier\nF2. Data are described with rich metadata (defined by R1)\nF3. Metadata clearly and explicitly include the identifier of the data they describe\nF4. (Meta)data are registered or indexed in a searchable resource\n\n\nFindability ensures that both humans and machines can discover data and metadata."
+  },
+  {
+    "objectID": "principles-slides.html#fair-accessible",
+    "href": "principles-slides.html#fair-accessible",
+    "title": "Associated Principles",
+    "section": "FAIR: Accessible",
+    "text": "FAIR: Accessible\n\nA1. (Meta)data are retrievable by their identifier using a standardised communications protocol\n\nA1.1 The protocol is open, free, and universally implementable\nA1.2 The protocol allows for an authentication and authorisation procedure, where necessary\n\nA2. Metadata are accessible, even when the data are no longer available\n\n\nAccessibility means data can be retrieved through standard protocols, even with proper authentication when needed."
+  },
+  {
+    "objectID": "principles-slides.html#fair-interoperable",
+    "href": "principles-slides.html#fair-interoperable",
+    "title": "Associated Principles",
+    "section": "FAIR: Interoperable",
+    "text": "FAIR: Interoperable\n\nI1. (Meta)data use a formal, accessible, shared, and broadly applicable language for knowledge representation\nI2. (Meta)data use vocabularies that follow FAIR principles\nI3. (Meta)data include qualified references to other (meta)data\n\n\nInteroperability enables data to work with applications and workflows for analysis, storage, and processing."
+  },
+  {
+    "objectID": "principles-slides.html#fair-reusable",
+    "href": "principles-slides.html#fair-reusable",
+    "title": "Associated Principles",
+    "section": "FAIR: Reusable",
+    "text": "FAIR: Reusable\n\nR1. (Meta)data are richly described with a plurality of accurate and relevant attributes\n\nR1.1. (Meta)data are released with a clear and accessible data usage licence\nR1.2. (Meta)data are associated with detailed provenance\nR1.3. (Meta)data meet domain-relevant community standards\n\n\n\nReusability ensures data can be used in future research with clear licensing and provenance information."
+  },
+  {
+    "objectID": "principles-slides.html#care-principles",
+    "href": "principles-slides.html#care-principles",
+    "title": "Associated Principles",
+    "section": "CARE Principles",
+    "text": "CARE Principles\n\nCARE Principles for Indigenous Data Governance\nhttps://www.gida-global.org/care\n\nCARE principles complement FAIR by addressing people and purpose in data governance, particularly for Indigenous data."
+  },
+  {
+    "objectID": "principles-slides.html#care-collective-benefit",
+    "href": "principles-slides.html#care-collective-benefit",
+    "title": "Associated Principles",
+    "section": "CARE: Collective Benefit",
+    "text": "CARE: Collective Benefit\n\nC1. For inclusive development and innovation\nC2. For improved governance and citizen engagement\nC3. For equitable outcomes\n\n\nData ecosystems should be designed to support Indigenous peoples’ rights and wellbeing."
+  },
+  {
+    "objectID": "principles-slides.html#care-authority-to-control",
+    "href": "principles-slides.html#care-authority-to-control",
+    "title": "Associated Principles",
+    "section": "CARE: Authority to Control",
+    "text": "CARE: Authority to Control\n\nA1. Recognising rights and interests\nA2. Data for governance\nA3. Governance of data\n\n\nIndigenous peoples have the right to govern data about their communities, territories, and resources."
+  },
+  {
+    "objectID": "principles-slides.html#care-responsibility",
+    "href": "principles-slides.html#care-responsibility",
+    "title": "Associated Principles",
+    "section": "CARE: Responsibility",
+    "text": "CARE: Responsibility\n\nR1. For positive relationships\nR2. For expanding capability and capacity\nR3. For Indigenous languages and worldviews\n\n\nThose working with Indigenous data have responsibilities to share benefits and ensure respectful use."
+  },
+  {
+    "objectID": "principles-slides.html#care-ethics",
+    "href": "principles-slides.html#care-ethics",
+    "title": "Associated Principles",
+    "section": "CARE: Ethics",
+    "text": "CARE: Ethics\n\nE1. For minimising harm and maximising benefit\nE2. For justice\nE3. For future use\n\n\nIndigenous data should be used ethically to advance justice and support Indigenous innovation."
+  },
+  {
+    "objectID": "principles-slides.html#operationalising-care-and-fair",
+    "href": "principles-slides.html#operationalising-care-and-fair",
+    "title": "Associated Principles",
+    "section": "Operationalising CARE and FAIR",
+    "text": "Operationalising CARE and FAIR\n\n\nCARE and FAIR work together: FAIR focuses on data characteristics, CARE focuses on people and purpose."
+  },
+  {
+    "objectID": "principles-slides.html#collections-as-data",
+    "href": "principles-slides.html#collections-as-data",
+    "title": "Associated Principles",
+    "section": "Collections as Data",
+    "text": "Collections as Data\n\nSummits:\n\n2017: Santa Barbara Statement\n2023: Vancouver Statement\n\nMain Outputs:\n\n10 principles\n‘Part to Whole’ Report\nChecklist and initiatives\n\nhttps://collectionsasdata.github.io/\n\nCollections as Data encourages computational use of digitised and born-digital collections."
+  },
+  {
+    "objectID": "principles-slides.html#collections-as-data-principles-1-6",
+    "href": "principles-slides.html#collections-as-data-principles-1-6",
+    "title": "Associated Principles",
+    "section": "Collections as Data: Principles 1-6",
+    "text": "Collections as Data: Principles 1-6\n\nCollections as Data development aims to encourage computational use of collections\nStewards are guided by ongoing ethical commitments\nStewards aim to lower barriers to use\nDesigned for everyone serves no one\nShared documentation helps others find a path to doing the work\nShould be made openly accessible by default, except where ethical or legal obligations preclude it\n\n\nThe first six principles focus on access, ethics, and user needs."
+  },
+  {
+    "objectID": "principles-slides.html#collections-as-data-principles-7-10",
+    "href": "principles-slides.html#collections-as-data-principles-7-10",
+    "title": "Associated Principles",
+    "section": "Collections as Data: Principles 7-10",
+    "text": "Collections as Data: Principles 7-10\n\nDevelopment values interoperability\nStewards work transparently to develop trustworthy, long-lived collections\nData as well as the data that describe those data are considered in scope\nDevelopment is an ongoing process and does not necessarily conclude with a final version\n\n\nThe remaining principles emphasise interoperability, transparency, and iterative development."
+  },
+  {
+    "objectID": "principles-slides.html#collections-as-data-part-to-whole",
+    "href": "principles-slides.html#collections-as-data-part-to-whole",
+    "title": "Associated Principles",
+    "section": "Collections as Data: Part to Whole",
+    "text": "Collections as Data: Part to Whole\n\n\nKey Concepts:\n\nBoundary Object concept\nEthical considerations\nCommunity engagement\nOrganisational support\n\n\nFuture Challenges:\n\nAI integration\nGlobal vs local balance\nResource limitations\nAI training considerations\n\n\n\nThe Part to Whole report explores how collections-as-data serve as flexible tools adaptable to various needs."
+  },
+  {
+    "objectID": "principles-slides.html#collections-as-data-glam-checklist",
+    "href": "principles-slides.html#collections-as-data-glam-checklist",
+    "title": "Associated Principles",
+    "section": "Collections as Data: GLAM Checklist",
+    "text": "Collections as Data: GLAM Checklist\n\nClear licence allowing reuse\nCitation suggestion\nDataset documentation\nPublic platform\nUsage examples\nStructured dataset\nMachine-readable metadata\nCollaborative platforms\nAPI access\nPortal page\nTerms of use\n\n\nThis checklist provides practical guidance for GLAM institutions publishing collections as data."
+  },
+  {
+    "objectID": "principles-slides.html#linked-data",
+    "href": "principles-slides.html#linked-data",
+    "title": "Associated Principles",
+    "section": "Linked Data",
+    "text": "Linked Data\n\nThe [World Wide Web] project merges the techniques of information retrieval and hypertext to make an easy but powerful global information system. The project started with the philosophy that much academic information should be freely available to anyone.\n\n— Tim Berners-Lee, 1991\n\nThe Web was conceived with open access to information as a core principle."
+  },
+  {
+    "objectID": "principles-slides.html#linked-data-principles",
+    "href": "principles-slides.html#linked-data-principles",
+    "title": "Associated Principles",
+    "section": "Linked Data Principles",
+    "text": "Linked Data Principles\n\nUse URIs as names for things\nUse HTTP URIs so that people can look up those names\nWhen someone looks up a URI, provide useful information using standards (RDF, RDFS, SPARQL)\nInclude links to other URIs so that they can discover more things\n\n— Tim Berners-Lee, 2006\n\nThese four principles enable data to be connected and discoverable on the Web."
+  },
+  {
+    "objectID": "principles-slides.html#linked-open-data-lod",
+    "href": "principles-slides.html#linked-open-data-lod",
+    "title": "Associated Principles",
+    "section": "Linked Open Data (LOD)",
+    "text": "Linked Open Data (LOD)\n\n5-star deployment scheme for Open Data\nhttps://5stardata.info/\n\nThe 5-star model provides a roadmap from basic open data to fully linked open data."
+  },
+  {
+    "objectID": "principles-slides.html#the-semantic-web",
+    "href": "principles-slides.html#the-semantic-web",
+    "title": "Associated Principles",
+    "section": "The Semantic Web",
+    "text": "The Semantic Web\n\nThe Semantic Web extends the World Wide Web through standards to make it machine-readable\n\nThe Semantic Web layer cake shows the technologies that enable machine-readable data."
+  },
+  {
+    "objectID": "principles-slides.html#resource-description-framework-rdf",
+    "href": "principles-slides.html#resource-description-framework-rdf",
+    "title": "Associated Principles",
+    "section": "Resource Description Framework (RDF)",
+    "text": "Resource Description Framework (RDF)\nEverything in threes: subject, predicate, object \\((s \\ \\vec{p} \\ o)\\)\n\n\nRDF uses triples to create graphs of linked data with URIs for most components."
+  },
+  {
+    "objectID": "principles-slides.html#linked-open-usable-data-loud",
+    "href": "principles-slides.html#linked-open-usable-data-loud",
+    "title": "Associated Principles",
+    "section": "Linked Open Usable Data (LOUD)",
+    "text": "Linked Open Usable Data (LOUD)\nLOUD extends LOD by emphasising usability\n\nCoined by Robert Sanderson (2018, 2019)\nGoal: Achieve the Semantic Web’s intent on a global scale in a usable fashion\nLeverages community-driven and JSON-LD-based specifications\nFive design principles for developer accessibility\n\n\nLOUD makes linked data more accessible to software developers and end users."
+  },
+  {
+    "objectID": "principles-slides.html#loud-design-principles",
+    "href": "principles-slides.html#loud-design-principles",
+    "title": "Associated Principles",
+    "section": "LOUD Design Principles",
+    "text": "LOUD Design Principles\n\nThe right Abstraction for the audience\nFew Barriers to entry\nComprehensible by introspection\nDocumentation with working examples\nFew Exceptions, instead many consistent patterns\n\nhttps://linked.art/loud/\n\nThese principles guide the development of usable linked data specifications."
+  },
+  {
+    "objectID": "principles-slides.html#loud-communities",
+    "href": "principles-slides.html#loud-communities",
+    "title": "Associated Principles",
+    "section": "LOUD Communities",
+    "text": "LOUD Communities\n\n\nKey Characteristics:\n\nSynergy of social and technical integration\nShared expertise and leadership\nCollaboration across boundaries\nInclusivity and diversity\n\n\nCore Values:\n\nOpenness and friendliness\nTransparency\nOnline and face-to-face meetings\n\n\n\nLOUD communities like IIIF and Linked Art combine strong technical standards with welcoming social practices."
+  },
+  {
+    "objectID": "principles-slides.html#loud-standards",
+    "href": "principles-slides.html#loud-standards",
+    "title": "Associated Principles",
+    "section": "LOUD Standards",
+    "text": "LOUD Standards\nThree main specifications follow LOUD principles:\n\nInternational Image Interoperability Framework (IIIF)\nW3C Web Annotation Data Model\nLinked Art\n\nAll use JSON-LD and emphasise developer experience\n\nThese standards demonstrate how LOUD principles can be applied in practice."
+  },
+  {
+    "objectID": "principles-slides.html#iiif-overview",
+    "href": "principles-slides.html#iiif-overview",
+    "title": "Associated Principles",
+    "section": "IIIF Overview",
+    "text": "IIIF Overview\n\n\nA model for presenting and annotating content\nA global community developing shared APIs\nImplements software and exposes interoperable content\n\nhttps://iiif.io\n\nIIIF solves the problem of image delivery silos through standardised APIs."
+  },
+  {
+    "objectID": "principles-slides.html#iiif-the-problem",
+    "href": "principles-slides.html#iiif-the-problem",
+    "title": "Associated Principles",
+    "section": "IIIF: The Problem",
+    "text": "IIIF: The Problem\n\n\nBefore IIIF:\n\nSiloed image repositories\nDuplication of efforts\nProprietary viewers\nLimited interoperability\n\n\nWith IIIF:\n\nShared infrastructure\nReusable viewers\nInteroperable resources\nGlobal collaboration\n\n\n\nIIIF eliminates the need for each institution to build custom image delivery systems."
+  },
+  {
+    "objectID": "principles-slides.html#iiif-capabilities",
+    "href": "principles-slides.html#iiif-capabilities",
+    "title": "Associated Principles",
+    "section": "IIIF Capabilities",
+    "text": "IIIF Capabilities\n\n\n\nDeep zoom with large images\nCompare images\nReunify scattered collections\nSearch within\n\n\n\nStorytelling\nCrowdsourcing\nMachine-generated annotations\nBeyond images (A/V)\n\n\n\nIIIF enables rich interactions with cultural heritage materials."
+  },
+  {
+    "objectID": "principles-slides.html#iiif-specifications",
+    "href": "principles-slides.html#iiif-specifications",
+    "title": "Associated Principles",
+    "section": "IIIF Specifications",
+    "text": "IIIF Specifications\nCore APIs:\n\nImage API - Delivers images with region, size, rotation parameters\nPresentation API - Provides structural metadata for viewing\n\nAdditional APIs:\n\nAuthorization Flow, Change Discovery, Content Search, Content State\n\nhttps://iiif.io/api\n\nIIIF’s modular API design allows implementations to choose what they need."
+  },
+  {
+    "objectID": "principles-slides.html#iiif-image-api",
+    "href": "principles-slides.html#iiif-image-api",
+    "title": "Associated Principles",
+    "section": "IIIF Image API",
+    "text": "IIIF Image API\n\nURI Syntax:\n{scheme}://{server}{/prefix}/{identifier}/{region}/{size}/{rotation}/{quality}.{format}\nExample:\nhttps://iiif.dasch.swiss/.../full/1000,/0/default.jpg\n\nThe Image API uses URI parameters to deliver images on demand."
+  },
+  {
+    "objectID": "principles-slides.html#iiif-presentation-api",
+    "href": "principles-slides.html#iiif-presentation-api",
+    "title": "Associated Principles",
+    "section": "IIIF Presentation API",
+    "text": "IIIF Presentation API\n\nProvides structural metadata using JSON-LD for:\n\nCollections\nManifests\nCanvases\nAnnotation Pages\n\n\nThe Presentation API describes how to display and navigate cultural heritage objects."
+  },
+  {
+    "objectID": "principles-slides.html#web-annotation-data-model",
+    "href": "principles-slides.html#web-annotation-data-model",
+    "title": "Associated Principles",
+    "section": "Web Annotation Data Model",
+    "text": "Web Annotation Data Model\n\nThree-part structure:\n\nTarget: The resource being annotated\nBody: The annotation content\nAnnotation: Links body and target\n\nhttps://www.w3.org/TR/annotation-model/\n\nThe W3C Web Annotation model provides a standard way to associate content with resources."
+  },
+  {
+    "objectID": "principles-slides.html#linked-art",
+    "href": "principles-slides.html#linked-art",
+    "title": "Associated Principles",
+    "section": "Linked Art",
+    "text": "Linked Art\n\nA community and CIDOC Working Group defining:\n\nMetadata application profile for cultural heritage\nTechnical means for convenient interaction (API)\n\nhttps://linked.art\n\nLinked Art applies LOUD principles to art museum data."
+  },
+  {
+    "objectID": "principles-slides.html#linked-art-data-model",
+    "href": "principles-slides.html#linked-art-data-model",
+    "title": "Associated Principles",
+    "section": "Linked Art Data Model",
+    "text": "Linked Art Data Model\n\n\n\nLevel\nTechnology\n\n\n\n\nConceptual Model\nCIDOC-CRM\n\n\nOntology\nRDF encoding of CRM 7.1 + extensions\n\n\nVocabulary\nGetty AAT, TGN, ULAN\n\n\nProfile\nObject-based cultural heritage\n\n\nAPI\nJSON-LD 1.1, REST\n\n\n\n\nLinked Art builds on established cultural heritage standards with a focus on usability."
+  },
+  {
+    "objectID": "principles-slides.html#linked-art-community",
+    "href": "principles-slides.html#linked-art-community",
+    "title": "Associated Principles",
+    "section": "Linked Art Community",
+    "text": "Linked Art Community\nMajor Institutions:\n\nThe Metropolitan Museum of Art\nJ. Paul Getty Trust\nYale University\nSmithsonian Institution\nEuropeana\nVictoria and Albert Museum\nAnd many more…\n\n\nLinked Art has strong institutional support from leading museums and cultural organisations."
+  },
+  {
+    "objectID": "principles-slides.html#linked-art-overview",
+    "href": "principles-slides.html#linked-art-overview",
+    "title": "Associated Principles",
+    "section": "Linked Art Overview",
+    "text": "Linked Art Overview\n\n\nLinked Art models the full lifecycle of cultural heritage objects and related entities."
+  },
+  {
+    "objectID": "principles-slides.html#iiif-and-linked-art-integration",
+    "href": "principles-slides.html#iiif-and-linked-art-integration",
+    "title": "Associated Principles",
+    "section": "IIIF and Linked Art Integration",
+    "text": "IIIF and Linked Art Integration\n\nComplementary roles:\n\nIIIF for digital access\nLinked Art for semantic description\n\n\nIIIF and Linked Art work together to provide both access and rich metadata."
+  },
+  {
+    "objectID": "principles-slides.html#loud-infrastructure-example",
+    "href": "principles-slides.html#loud-infrastructure-example",
+    "title": "Associated Principles",
+    "section": "LOUD Infrastructure Example",
+    "text": "LOUD Infrastructure Example\n\n\nLOUD standards enable sophisticated infrastructure for cultural heritage access and research."
+  },
+  {
+    "objectID": "principles-slides.html#loud-in-a-nutshell",
+    "href": "principles-slides.html#loud-in-a-nutshell",
+    "title": "Associated Principles",
+    "section": "LOUD in a Nutshell",
+    "text": "LOUD in a Nutshell\n\nCommunity-driven: Grassroots development with transparency\nImplementation-focused: Specifications developed alongside working software\nSemantic interoperability: Even at the cost of ontological purity\nCommon denominators: For institutions, public bodies, and research projects\n\n\nLOUD practices enhance semantic interoperability across cultural heritage\n\n\nLOUD represents a pragmatic approach to linked data that prioritises usability and adoption."
+  },
+  {
+    "objectID": "principles-slides.html#summary",
+    "href": "principles-slides.html#summary",
+    "title": "Associated Principles",
+    "section": "Summary",
+    "text": "Summary\n\n\nData Principles:\n\nFAIR for findability and reusability\nCARE for ethical Indigenous data governance\nCollections as Data for computational use\n\n\nTechnical Standards:\n\nLinked Data for connectivity\nLOUD for usability\nIIIF, Web Annotation, Linked Art as implementations\n\n\n\nThese principles and standards work together to enable open, ethical, and usable data"
   }
 ]
