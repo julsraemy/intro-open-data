@@ -418,7 +418,7 @@ ul.task-list li input[type="checkbox"] {
     <div>
     <div class="quarto-title-meta-heading">Modified</div>
     <div class="quarto-title-meta-contents">
-      <p class="date-modified">February 4, 2026</p>
+      <p class="date-modified">February 8, 2026</p>
     </div>
   </div>
     
@@ -431,8 +431,493 @@ ul.task-list li input[type="checkbox"] {
 
 <section id="oa-deep-dive" class="level2">
 <h2 class="anchored" data-anchor-id="oa-deep-dive">OA Deep Dive</h2>
-<p>You have five minutes to read the section on Open Access (OA) on the <a href="../sections/movements.html">Associated Movements</a> page. Then, everyone will take a quiz.</p>
-<p>Classquiz:</p>
+<p>You have five minutes to read the section on Open Access (OA) on the <a href="../sections/movements.html">Associated Movements</a> page. Then, you can individually take the quiz below.</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Instructions
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>The quiz contains 12 questions with a time limit for each question (20-30 seconds). The maximum possible score is 1200 points, which are awarded based on both accuracy and speed. After completing the quiz, note your total points and number of correct answers for discussion.</p>
+</div>
+</div>
+<style>
+    .quiz-container * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    
+    .quiz-container {
+        font-family: Arial, sans-serif;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        border-radius: 20px;
+        padding: 40px;
+        margin: 40px 0;
+    }
+    
+    .quiz-box {
+        background: white;
+        border-radius: 20px;
+        padding: 40px;
+        max-width: 900px;
+        margin: 0 auto;
+        box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+    }
+    
+    .quiz-title {
+        text-align: center;
+        color: #667eea;
+        margin-bottom: 30px;
+        font-size: 2.5em;
+    }
+    
+    .quiz-question {
+        font-size: 1.3em;
+        margin-bottom: 20px;
+        color: #333;
+        font-weight: bold;
+    }
+    
+    .quiz-options {
+        display: grid;
+        gap: 15px;
+        margin-bottom: 20px;
+    }
+    
+    .quiz-btn {
+        padding: 20px;
+        font-size: 1.1em;
+        border: 2px solid #ddd;
+        background: white;
+        border-radius: 10px;
+        cursor: pointer;
+        transition: all 0.3s;
+        text-align: left;
+    }
+    
+    .quiz-btn:hover:not(:disabled) {
+        background: #f0f0f0;
+        border-color: #667eea;
+        transform: translateY(-2px);
+    }
+    
+    .quiz-btn.correct {
+        background: #10b981;
+        color: white;
+        border-color: #10b981;
+    }
+    
+    .quiz-btn.incorrect {
+        background: #ef4444;
+        color: white;
+        border-color: #ef4444;
+    }
+    
+    .quiz-btn:disabled {
+        cursor: not-allowed;
+    }
+    
+    .quiz-feedback {
+        padding: 20px;
+        border-radius: 10px;
+        margin-bottom: 20px;
+    }
+    
+    .quiz-feedback.correct {
+        background: #d1fae5;
+        border: 2px solid #10b981;
+    }
+    
+    .quiz-feedback.incorrect {
+        background: #fee2e2;
+        border: 2px solid #ef4444;
+    }
+    
+    .quiz-next-btn {
+        background: #667eea;
+        color: white;
+        border: none;
+        padding: 15px 40px;
+        font-size: 1.1em;
+        border-radius: 10px;
+        cursor: pointer;
+        display: block;
+        margin: 0 auto;
+    }
+    
+    .quiz-next-btn:hover {
+        background: #5568d3;
+    }
+    
+    .quiz-timer {
+        text-align: center;
+        font-size: 2em;
+        margin-bottom: 20px;
+        color: #667eea;
+        font-weight: bold;
+    }
+    
+    .quiz-timer.urgent {
+        color: #ef4444;
+        animation: pulse 1s infinite;
+    }
+    
+    @keyframes pulse {
+        0%, 100% { opacity: 1; }
+        50% { opacity: 0.5; }
+    }
+    
+    .quiz-score {
+        text-align: center;
+        font-size: 1.5em;
+        margin-bottom: 20px;
+        color: #333;
+    }
+    
+    .quiz-start-screen, .quiz-end-screen {
+        text-align: center;
+    }
+    
+    .quiz-start-btn {
+        background: #667eea;
+        color: white;
+        border: none;
+        padding: 20px 60px;
+        font-size: 1.5em;
+        border-radius: 15px;
+        cursor: pointer;
+        margin-top: 30px;
+    }
+    
+    .quiz-start-btn:hover {
+        background: #5568d3;
+        transform: scale(1.05);
+    }
+    
+    .quiz-final-score {
+        font-size: 3em;
+        color: #667eea;
+        margin: 20px 0;
+        font-weight: bold;
+    }
+    
+    .quiz-label {
+        display: inline-block;
+        background: #667eea;
+        color: white;
+        padding: 5px 15px;
+        border-radius: 20px;
+        font-size: 0.9em;
+        margin-right: 10px;
+    }
+    
+    .quiz-trap {
+        background: #fef3c7;
+        border-left: 4px solid #f59e0b;
+        padding: 10px;
+        margin-top: 10px;
+        font-size: 0.9em;
+    }
+</style>
+
+<div class="quiz-container">
+    <div class="quiz-box" id="quizApp"></div>
+</div>
+
+<script>
+(function() {
+    const questions = [
+        {
+            q: "According to the Berlin Declaration, users must be granted the right to make derivative works.",
+            options: ["TRUE", "FALSE"],
+            correct: 0,
+            explanation: "TRUE — The Berlin Declaration explicitly requires the right to make derivative works.",
+            trap: "Easy to miss 'derivative works' in the lengthy Declaration text.",
+            time: 15
+        },
+        {
+            q: "A researcher pays $2,800 to make their article freely available in Nature Communications. What OA model is this?",
+            options: ["Green OA", "Gold OA", "Diamond OA", "Bronze OA"],
+            correct: 1,
+            explanation: "Gold OA — Author pays an Article Processing Charge (APC) for immediate open access.",
+            trap: "Easy to confuse Gold (author pays APC) with Diamond (no APC) or Hybrid (paywall journal with OA option).",
+            time: 25
+        },
+        {
+            q: "An author publishes in a subscription journal, then deposits their accepted manuscript in a university repository where it becomes freely accessible after 12 months. What OA model is this?",
+            options: ["Gold OA", "Green OA", "Hybrid OA", "Bronze OA"],
+            correct: 1,
+            explanation: "Green OA — Self-archiving in a repository, even with an embargo period.",
+            trap: "The 'after 12 months' implies delay, but this is self-archiving (Green) rather than publisher-provided OA.",
+            time: 25
+        },
+        {
+            q: "Which OA model provides immediate access but does NOT guarantee users the right to create derivative works?",
+            options: ["Gold OA", "Diamond OA", "Bronze OA", "Green OA (post-embargo)"],
+            correct: 2,
+            explanation: "Bronze OA — 'Free to read' but lacks explicit OA licence (no remix rights).",
+            trap: "Bronze is 'free to read' but lacks explicit OA licence. This is the hardest question.",
+            time: 20
+        },
+        {
+            q: "Under Blue OA, which version can authors legally self-archive?",
+            options: ["Pre-print only", "Post-print or publisher's final version", "Any version they choose", "None—Blue OA prohibits archiving"],
+            correct: 1,
+            explanation: "Post-print or publisher's final version — Blue OA allows archiving of accepted/final versions.",
+            trap: "Easy to confuse Blue (post-print/final) with Green (often pre-print) or general self-archiving rules.",
+            time: 20
+        },
+        {
+            q: "Black Open Access is considered a legitimate OA model by the academic community.",
+            options: ["FALSE", "TRUE"],
+            correct: 0,
+            explanation: "FALSE — Black OA refers to unauthorised/piracy (Sci-Hub, etc.), not a legitimate model.",
+            trap: "'Black' sounds official like other colours, but it's unauthorised/piracy.",
+            time: 15
+        },
+        {
+            q: "A journal funded entirely by a university library charges no APCs and provides immediate OA. What model?",
+            options: ["Gold OA", "Green OA", "Diamond/Platinum OA", "Hybrid OA"],
+            correct: 2,
+            explanation: "Diamond/Platinum OA — No APC charged, immediate open access, typically institution-funded.",
+            trap: "No APC + immediate OA = Diamond. Easy to guess Gold because it's 'publisher-provided.'",
+            time: 20
+        },
+        {
+            q: "A subscription journal offers authors the option to pay for OA. What's the key difference between this and Gold OA?",
+            options: ["The APC is higher", "The journal primarily operates on subscription model", "It requires an embargo", "It's not immediate OA"],
+            correct: 1,
+            explanation: "The journal primarily operates on subscription model — This is Hybrid OA, where a subscription journal offers paid OA options.",
+            trap: "Both are immediate and involve APCs. The difference is the journal's business model (subscription vs. OA-native).",
+            time: 25
+        },
+        {
+            q: "A researcher uploads their manuscript to arXiv before peer review. What is this version called?",
+            options: ["Post-print", "Pre-print", "Version of Record", "Proof"],
+            correct: 1,
+            explanation: "Pre-print — A manuscript version before peer review.",
+            trap: "Basic terminology, but essential for Green OA understanding.",
+            time: 20
+        },
+        {
+            q: "Which scenario violates the Berlin Declaration's principles?",
+            options: ["An article is free to read but requires registration", "An article allows downloading but prohibits redistribution", "An article requires proper attribution", "Both A and B"],
+            correct: 3,
+            explanation: "Both A and B — Berlin requires 'free, irrevocable, worldwide' access. Registration walls and redistribution bans violate this. Proper attribution (C) is required, not prohibited.",
+            trap: "Berlin requires free access—registration walls and redistribution bans violate this. Proper attribution is required, not prohibited.",
+            time: 25
+        },
+        {
+            q: "In the context of Open Science, where does Open Access to publications typically fit?",
+            options: ["As an alternative to Open Science", "As one component of broader Open Science practices", "As a prerequisite for Open Data only", "As a separate movement with no connection"],
+            correct: 1,
+            explanation: "As one component of broader Open Science practices — OA is a subset of Open Science, which also includes open data, methodology, peer review, etc.",
+            trap: "Easy to see OA and Open Science as synonymous. OA is a subset—Open Science also includes open data, methodology, peer review, open source software, etc.",
+            time: 25
+        },
+        {
+            q: "A dataset is deposited in a repository with CC0 licence. The accompanying article is paywalled. Which statement is accurate?",
+            options: ["This is full Open Access because the data is open", "This is Open Data without Open Access to the publication", "This violates Open Science principles entirely", "The CC0 licence automatically makes the article OA"],
+            correct: 1,
+            explanation: "This is Open Data without Open Access to the publication — Open Data and Open Access are independent concepts.",
+            trap: "Easy to conflate Open Data and Open Access. They are independent—you can have open data with closed articles (and vice versa).",
+            time: 25
+        }
+    ];
+
+    let currentQ = 0;
+    let score = 0;
+    let timeLeft = 0;
+    let timer = null;
+    let answered = false;
+    let totalCorrect = 0;
+    window.quizResults = [];
+
+    function render() {
+        const app = document.getElementById('quizApp');
+        
+        if (currentQ === -1) {
+            app.innerHTML = `
+                <div class="quiz-start-screen">
+                    <h1 class="quiz-title">🎯 Open Access Deep Dive Quiz</h1>
+                    <p style="font-size: 1.2em; margin: 20px 0;">Test your knowledge of Open Access models and principles!</p>
+                    <p style="margin: 10px 0;">12 questions • Timed • Points based on speed and accuracy</p>
+                    <p style="font-size: 0.9em; color: #666;">100 points for answers in first 3 seconds, 10 points in last second</p>
+                    <button class="quiz-start-btn" onclick="window.startQuiz()">START QUIZ</button>
+                </div>
+            `;
+        } else if (currentQ >= questions.length) {
+            const maxPoints = questions.length * 100;
+            
+            // Generate summary of all questions
+            let summaryHTML = '';
+            questions.forEach((q, idx) => {
+                const result = window.quizResults[idx];
+                const isCorrect = result && result.correct;
+                const points = result ? result.points : 0;
+                
+                summaryHTML += `
+                    <div style="background: ${isCorrect ? '#d1fae5' : '#fee2e2'}; border-left: 4px solid ${isCorrect ? '#10b981' : '#ef4444'}; padding: 15px; margin-bottom: 15px; border-radius: 8px;">
+                        <div style="display: flex; justify-content: space-between; align-items: start; margin-bottom: 8px;">
+                            <strong style="color: #333;">Question ${idx + 1}</strong>
+                            <strong style="color: ${isCorrect ? '#10b981' : '#ef4444'}; font-size: 1.1em;">${points} pts</strong>
+                        </div>
+                        <p style="color: #666; font-size: 0.95em; margin: 5px 0;">${q.q}</p>
+                        ${!isCorrect ? `<p style="color: #666; font-size: 0.9em; margin-top: 8px;"><strong>Correct answer:</strong> ${q.options[q.correct]}</p>` : ''}
+                    </div>
+                `;
+            });
+            
+            app.innerHTML = `
+                <div class="quiz-end-screen">
+                    <h1 class="quiz-title">🏆 Quiz Complete!</h1>
+                    <div class="quiz-final-score">${score}</div>
+                    <p style="font-size: 1.3em;">out of ${maxPoints} points</p>
+                    <p style="font-size: 1.5em; margin: 20px 0; font-weight: bold;">${totalCorrect}/${questions.length} correct</p>
+                    
+                    <div style="margin: 30px 0;">
+                        <h2 style="color: #667eea; margin-bottom: 20px; font-size: 1.5em;">Question Summary</h2>
+                        <div style="max-height: 400px; overflow-y: auto; padding-right: 10px;">
+                            ${summaryHTML}
+                        </div>
+                    </div>
+                    
+                    <button class="quiz-start-btn" onclick="window.restartQuiz()">Try Again</button>
+                </div>
+            `;
+        } else {
+            const q = questions[currentQ];
+            let optionsHTML = '';
+            
+            q.options.forEach((opt, i) => {
+                let className = 'quiz-btn';
+                if (answered) {
+                    if (i === q.correct) className += ' correct';
+                    else if (i === window.selectedAnswer) className += ' incorrect';
+                }
+                
+                const label = q.options.length === 4 ? ['A', 'B', 'C', 'D'][i] + '. ' : '';
+                optionsHTML += `<button class="${className}" onclick="window.selectAnswer(${i})" ${answered ? 'disabled' : ''}>${label}${opt}</button>`;
+            });
+            
+            let feedbackHTML = '';
+            if (answered) {
+                const isCorrect = window.selectedAnswer === q.correct;
+                const points = window.earnedPoints || 0;
+                feedbackHTML = `
+                    <div class="quiz-feedback ${isCorrect ? 'correct' : 'incorrect'}">
+                        <strong style="font-size: 1.2em;">${isCorrect ? '✓ CORRECT!' : window.selectedAnswer === null ? '⏱️ TIME\'S UP!' : '✗ INCORRECT'}</strong>
+                        ${isCorrect ? `<p style="margin: 10px 0; font-size: 1.1em;">+${points} points</p>` : ''}
+                        <p style="margin: 10px 0;">${q.explanation}</p>
+                        ${!isCorrect ? `<div class="quiz-trap"><strong>🪤 THE TRAP:</strong> ${q.trap}</div>` : ''}
+                    </div>
+                    <button class="quiz-next-btn" onclick="window.nextQuestion()">${currentQ < questions.length - 1 ? 'NEXT QUESTION →' : 'SEE RESULTS →'}</button>
+                `;
+            }
+            
+            app.innerHTML = `
+                <div class="quiz-score">Score: ${score} points</div>
+                <div class="quiz-timer ${timeLeft <= 5 ? 'urgent' : ''}">⏱ ${timeLeft}s</div>
+                <div class="quiz-question">
+                    <span class="quiz-label">Q${currentQ + 1}/${questions.length}</span>
+                    ${q.q}
+                </div>
+                <div class="quiz-options">${optionsHTML}</div>
+                ${feedbackHTML}
+            `;
+        }
+    }
+
+    window.startQuiz = function() {
+        currentQ = 0;
+        score = 0;
+        totalCorrect = 0;
+        window.quizResults = [];
+        startTimer();
+        render();
+    };
+
+    function startTimer() {
+        answered = false;
+        timeLeft = questions[currentQ].time;
+        
+        if (timer) clearInterval(timer);
+        
+        timer = setInterval(() => {
+            timeLeft--;
+            if (timeLeft <= 0) {
+                clearInterval(timer);
+                if (!answered) {
+                    window.selectedAnswer = null;
+                    window.earnedPoints = 0;
+                    window.quizResults[currentQ] = { correct: false, points: 0 };
+                    answered = true;
+                    render();
+                }
+            }
+            render();
+        }, 1000);
+    }
+
+    window.selectAnswer = function(index) {
+        if (answered) return;
+        
+        clearInterval(timer);
+        answered = true;
+        window.selectedAnswer = index;
+        
+        const q = questions[currentQ];
+        const isCorrect = index === q.correct;
+        
+        if (isCorrect) {
+            const timeElapsed = q.time - timeLeft;
+            let points;
+            
+            if (timeElapsed <= 3) {
+                points = 100;
+            } else {
+                const adjustedElapsed = timeElapsed - 3;
+                const adjustedTotal = q.time - 4;
+                points = Math.round(Math.max(10, 100 - (adjustedElapsed / adjustedTotal) * 90));
+            }
+            
+            score += points;
+            totalCorrect++;
+            window.earnedPoints = points;
+            window.quizResults[currentQ] = { correct: true, points: points };
+        } else {
+            window.earnedPoints = 0;
+            window.quizResults[currentQ] = { correct: false, points: 0 };
+        }
+        
+        render();
+    };
+
+    window.nextQuestion = function() {
+        currentQ++;
+        if (currentQ < questions.length) {
+            startTimer();
+        }
+        render();
+    };
+
+    window.restartQuiz = function() {
+        currentQ = -1;
+        score = 0;
+        totalCorrect = 0;
+        render();
+    };
+
+    // Initialise
+    currentQ = -1;
+    render();
+})();
+</script>
 
 
 </section>
