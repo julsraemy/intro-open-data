@@ -18,7 +18,7 @@ You have five minutes to read the section on Open Access (OA) on the [Associated
 
 ::: {.callout-note}
 ## Instructions
-The quiz contains 12 questions with a time limit for each question (20-30 seconds). The maximum possible score is 1200 points, which are awarded based on both accuracy and speed. After completing the quiz, note your total points and number of correct answers for discussion.
+The quiz contains 12 questions with a time limit for each question (15-25 seconds). The maximum possible score is 1200 points, which are awarded based on both accuracy and speed. After completing the quiz, note your total points and number of correct answers for discussion.
 :::
 
 ```{=html}
