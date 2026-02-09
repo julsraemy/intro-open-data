@@ -12,13 +12,25 @@ date-modified: last-modified
 license: "CC BY"
 ---
 
-## Discovering ORD Platforms
+## Discovering Research Data Platforms
 
-Go to <https://www.re3data.org/> and find the following: 
 
-a) Which cross-institutional repository based in Switzerland provides ARK identifiers? Find and provide an example ARK from this repository.
+::: {.callout-note}
+## Instructions
+[re3data](https://www.re3data.org/) (Registry of Research Data Repositories) is a global registry of research data repositories from different academic disciplines. It provides detailed information about repository features, standards, and policies. Visit <https://www.re3data.org/> to answer the following questions.
+:::
 
-b) How many life sciences repositories built on Invenio RDM are listed on re3data? Name another well-known general-purpose repository that also uses Invenio RDM.
+a) **Persistent Identifiers**: Which cross-institutional repository based in Switzerland provides ARK (Archival Resource Key) identifiers? Find and provide an example ARK from this repository.
 
-c) 
+b) **Repository Software**: How many life sciences repositories built on Invenio RDM are listed on re3data? Name another well-known general-purpose repository that also uses Invenio RDM.
+
+c) **Data Accessibility**: Examine Yareta (University of Geneva's research data repository). What types of data access does it support? Is all data openly accessible, or are there restrictions?
+
+d) **Certification & Trust**: Which Swiss research data repository has received the CoreTrustSeal certification? What does this certification indicate about a repository?
+
+e) **Terms of Use and Licences**: What licences does the OLOS repository (Open Access Repository of Bern University of Applied Sciences) support for deposited materials?
+
+f) **Repository Policies**: Does Yareta have a preservation policy? If so, what does it specify about long-term data retention?
+
+g) **Additional Information**: Compare the subject coverage between OLOS and Yareta. Which repository is more discipline-specific, and which is more general-purpose?
 

@@ -252,7 +252,7 @@
     "href": "exercises/ex-04.html",
     "title": "Exercise 4: Discovering ORD Platforms",
     "section": "",
-    "text": "Go to https://www.re3data.org/ and find the following:\n\nWhich cross-institutional repository based in Switzerland provides ARK identifiers? Find and provide an example ARK from this repository.\nHow many life sciences repositories built on Invenio RDM are listed on re3data? Name another well-known general-purpose repository that also uses Invenio RDM."
+    "text": "NoteInstructions\n\n\n\nre3data (Registry of Research Data Repositories) is a global registry of research data repositories from different academic disciplines. It provides detailed information about repository features, standards, and policies. Visit https://www.re3data.org/ to answer the following questions.\n\n\n\nPersistent Identifiers: Which cross-institutional repository based in Switzerland provides ARK (Archival Resource Key) identifiers? Find and provide an example ARK from this repository.\nRepository Software: How many life sciences repositories built on Invenio RDM are listed on re3data? Name another well-known general-purpose repository that also uses Invenio RDM.\nData Accessibility: Examine Yareta (University of Geneva’s research data repository). What types of data access does it support? Is all data openly accessible, or are there restrictions?\nCertification & Trust: Which Swiss research data repository has received the CoreTrustSeal certification? What does this certification indicate about a repository?\nTerms of Use and Licences: What licences does the OLOS repository (Open Access Repository of Bern University of Applied Sciences) support for deposited materials?\nRepository Policies: Does Yareta have a preservation policy? If so, what does it specify about long-term data retention?\nAdditional Information: Compare the subject coverage between OLOS and Yareta. Which repository is more discipline-specific, and which is more general-purpose?"
   },
   {
     "objectID": "exercises/ex-04.html#the-reusers-perspective-ogd",
@@ -953,5 +953,12 @@
     "title": "Exercise 4: Discovering ORD Platforms",
     "section": "",
     "text": "Go to https://www.re3data.org/ and find the following:\n\nWhich cross-institutional repository based in Switzerland provides ARK identifiers? Find and provide an example ARK from this repository.\nHow many life sciences repositories built on Invenio RDM are listed on re3data? Name another well-known general-purpose repository that also uses Invenio RDM."
+  },
+  {
+    "objectID": "exercises/ex-04.html#discovering-research-data-platforms",
+    "href": "exercises/ex-04.html#discovering-research-data-platforms",
+    "title": "Exercise 4: Discovering ORD Platforms",
+    "section": "",
+    "text": "NoteInstructions\n\n\n\nre3data (Registry of Research Data Repositories) is a global registry of research data repositories from different academic disciplines. It provides detailed information about repository features, standards, and policies. Visit https://www.re3data.org/ to answer the following questions.\n\n\n\nPersistent Identifiers: Which cross-institutional repository based in Switzerland provides ARK (Archival Resource Key) identifiers? Find and provide an example ARK from this repository.\nRepository Software: How many life sciences repositories built on Invenio RDM are listed on re3data? Name another well-known general-purpose repository that also uses Invenio RDM.\nData Accessibility: Examine Yareta (University of Geneva’s research data repository). What types of data access does it support? Is all data openly accessible, or are there restrictions?\nCertification & Trust: Which Swiss research data repository has received the CoreTrustSeal certification? What does this certification indicate about a repository?\nTerms of Use and Licences: What licences does the OLOS repository (Open Access Repository of Bern University of Applied Sciences) support for deposited materials?\nRepository Policies: Does Yareta have a preservation policy? If so, what does it specify about long-term data retention?\nAdditional Information: Compare the subject coverage between OLOS and Yareta. Which repository is more discipline-specific, and which is more general-purpose?"
   }
 ]
