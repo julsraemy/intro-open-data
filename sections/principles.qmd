@@ -34,7 +34,7 @@ Most of the following content can be found in presentation format: [Associated M
 
 ## FAIR Data Principles 
 
-![](https://upload.wikimedia.org/wikipedia/commons/a/aa/FAIR_data_principles.jpg)
+![FAIR guiding principles for data resources](https://upload.wikimedia.org/wikipedia/commons/a/aa/FAIR_data_principles.jpg)
 
 <https://www.go-fair.org/fair-principles/> [@wilkinsonFAIRGuidingPrinciples2016]
 
@@ -67,7 +67,7 @@ Most of the following content can be found in presentation format: [Associated M
 
 ## CARE Principles for Indigenous Data Governance
 
-![](https://images.squarespace-cdn.com/content/v1/5d3799de845604000199cd24/1567592451970-2R8XFL670QNMAGDRV7ED/Be+FAIR+and+CARE.png)
+![Be FAIR and CARE](https://images.squarespace-cdn.com/content/v1/5d3799de845604000199cd24/1567592451970-2R8XFL670QNMAGDRV7ED/Be+FAIR+and+CARE.png)
 
 @carrollCAREPrinciplesIndigenous2020
 
@@ -164,7 +164,7 @@ Most of the following content can be found in presentation format: [Associated M
 
 ### Workflow
 
-![](https://julsraemy.ch/prezi/assets/cad-workflow.jpg)
+![Workflow to publish collections as data](https://julsraemy.ch/prezi/assets/cad-workflow.jpg)
 
 <https://marketplace.sshopencloud.eu/workflow/I3JvP6>
 
@@ -173,7 +173,7 @@ Most of the following content can be found in presentation format: [Associated M
 - Data-level access to collections
 - Digital Humanities Research
 
-![](https://www.kbr.be/wp-content/uploads/2020/11/data-level-access-to-collections.png)
+![Data produced for a digisited historical newspaper](https://www.kbr.be/wp-content/uploads/2020/11/data-level-access-to-collections.png)
 
 <https://www.kbr.be/en/projects/data-kbr-be/>
 
@@ -202,15 +202,15 @@ Linked Data refers to a method of publishing structured data so that it can be i
 
 Linked Open Data is a subset of Linked Data that is open, meaning it is freely accessible and reusable by anyone. It adheres to the principles of being accessible under an open license, available in a machine-readable format, using open standards from the W3C (such as RDF and SPARQL), and linked to other datasets to increase its utility.
 
-![](https://5stardata.info/images/5-star-steps.png)
+![5-star deployment scheme for Open Data](https://5stardata.info/images/5-star-steps.png)
 
-5-star deployment scheme for Open Data: <https://5stardata.info/>
+<https://5stardata.info/>
 
 ### The Semantic Web or _the Web of Data_
 
 The Semantic Web is an extension of the World Wide Web, through standards, to make it machine-readable.
 
-![](https://julsraemy.ch/prezi/assets/tweaked-semweb-layer-cake.webp)
+![Tweaked Semantic Web Technology Layer Cake](https://julsraemy.ch/prezi/assets/tweaked-semweb-layer-cake.webp)
 
 @idehenSemanticWebLayer2017
 
@@ -254,6 +254,8 @@ The IIIF and Linked Art communities are built on a synergy of social and technic
 
 
 ##### International Image Interoperability Framework (IIIF)
+
+![IIIF Logo](https://julsraemy.ch/prezi/assets/IIIF-logo-500w.png)
 
 - A model for presenting and annotating content
 - A global community that develops shared application programming interfaces (APIs), implements them in software, and exposes interoperable content 
@@ -709,6 +711,8 @@ This model ensures compatibility with web architecture and facilitates cross-pla
 ```
 
 ##### Linked Art
+
+![Linked Art Logo](https://julsraemy.ch/prezi/assets/Linked_Art_logo.png)
 
 Linked Art is a community and a CIDOC (_ICOM International Committee for Documentation_) Working Group collaborating to define a metadata application profile for describing cultural heritage, and the technical means for conveniently interacting with it (the API). 
 
