@@ -1,5 +1,5 @@
 ---
-title: "Exercise 7: IIIF & ML"
+title: "Exercise 7: Open Refine"
 authors: 
   - name: Julien A. Raemy
     orcid: 0000-0002-4711-5759
@@ -12,6 +12,55 @@ date-modified: last-modified
 license: "CC BY"
 ---
 
-## IIIF & ML
+## Open Refine
 
-(...)
+### A. Getting started
+
+1. Install the software (<https://openrefine.org/docs>)
+2. Run it locally (accessible at <http://127.0.0.1:3333/>)
+3. Have a look at the different pages and functionalities
+4. Create a new project by importing any supported files
+
+### B. Basic Cleaning & Faceting with the Powerhouse Museum Dataset
+
+5. Create a new project by importing the Powerhouse Museum TSV file (<https://zenodo.org/records/17047254/files/phm_collection_adapted.tsv>) — remember to select "Tab-separated values"
+6. **Whitespace detection**: Use *Facet by blank* on the `categories` column, then apply *Edit cells > Common transforms > Trim leading and trailing whitespace*. Observe how "blank" cells are revealed.
+7. **Clustering**: Create a *Text facet* on the `category` column. Click *Cluster* and use the "key collision" method to merge case inconsistencies (e.g., "Pottery" vs "pottery").
+8. **Multi-valued cells**: Split the `categories` column by the separator `|` (pipe character). Count how many objects have more than 3 categories, then rejoin the cells.
+
+### C. Authority Control & Reconciliation with the Metropolitan Museum of Art
+
+9. Create a new project by importing the Met Museum CSV (<https://github.com/metmuseum/openaccess>) — use the first 5,000 rows for better performance
+10. **Reconcile artists**: Select the `Artist Display Name` column. Start reconciling against **Wikidata** (service: <https://wikidata.reconci.link/en/api>, type: **Q5** for humans).
+11. **Judgment exercise**: Auto-match high confidence scores (>90), manually review medium scores (70-90) to distinguish between homonyms (e.g., different "John Smith" artists), and mark low scores (<70) as "None".
+12. **Extract QIDs**: Transform reconciled cells to extract just the QID number for external linking.
+
+### D. Manuscript Reconciliation with Biblissima
+
+13. Create a new project by importing the manuscript CSV from <https://raw.githubusercontent.com/emmamorlock/workshop/refs/heads/main/exercices/handouts/biblissima.csv>
+14. **Explore manuscript metadata**: Review columns such as `shelfmark`, `repository`, `author`, and `title`. Create text facets to identify variations in repository names or author attributions.
+15. **Reconcile shelfmarks**: Use the Biblissima reconciliation endpoint (<https://data.biblissima.fr/api/reconcile>, type: **Manuscript**) to match records against the Biblissima authority file. This connects your local shelfmarks to persistent URIs.
+16. **Enrich with IIIF** (optional extension): After reconciliation, use *Edit column > Add column by fetching URLs* to retrieve JSON data from the reconciled Biblissima URIs. Parse the JSON to extract `iiif_manifest_url` fields where available.
+
+Cf. @sajdakReconcilierAvecOpenRefine2024. 
+
+### E. API Integration & JSON with the Smithsonian
+
+17. Create a new project by importing a Smithsonian JSON file (not CSV) from <https://github.com/Smithsonian/OpenAccess>
+18. **Flatten nested JSON**: Convert nested paths (e.g., `title.content`) to flat columns using the transform expression: `value.parseJson()['title']`
+19. **Extract media**: Parse the JSON to find objects with images by extracting `online_media.mediaCount`
+20. **Reconcile topics**: Match `topic` fields against Library of Congress Subject Headings (LCSH) using their reconciliation service.
+
+### F. A step further...
+
+21. Export your cleaned datasets in both CSV and JSON formats
+22. Export the project history (OpenRefine project archive) to document your transformation steps
+
+More information and tutorials on OpenRefine can be found on the following links:
+
+- Library Carpentry website: <https://librarycarpentry.org/lc-open-refine/>
+- University of Nevada Las Vegas: <https://guides.library.unlv.edu/open-refine/getting-started>
+- University of Illinois Urbana-Champaign: <https://guides.library.illinois.edu/openrefine>
+
+## References
+

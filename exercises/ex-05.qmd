@@ -1,5 +1,5 @@
 ---
-title: "Exercise 5: Reading Assignment"
+title: "Exercise 5: The Reuser's Perspective (OGD)"
 authors: 
   - name: Julien A. Raemy
     orcid: 0000-0002-4711-5759
@@ -7,11 +7,21 @@ authors:
     affiliations:
       - docuteam SA
       - University of Bern
-date: "2026-02-01"
+date: "2026-02-09"
 date-modified: last-modified
 license: "CC BY"
 ---
 
-## Reading Assignment
+## The Reuser's Perspective (OGD)
+
+### A - open.data.swiss
 
 (...)
+
+### B - LINDAS/Visualize
+
+Create a dashboard on [visualize.admin.ch](https://visualize.admin.ch/)
+
+### C - LINDAS/SPARQL
+
+Go to the [LINDAS SPARQL Endpoint](https://lindas.admin.ch/sparql/).

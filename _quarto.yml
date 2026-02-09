@@ -37,14 +37,16 @@ website:
             file: exercises/ex-02.qmd
           - text: "Exercise 3: Movements and Principles"
             file: exercises/ex-03.qmd
-          - text: "Exercise 4: The Reuser's Perspective (OGD)"
+          - text: "Exercise 4: Comparing ORD Platforms"
             file: exercises/ex-04.qmd
-          - text: "Exercise 5: Reading Assignment"
+          - text: "Exercise 5: The Reuser's Perspective (OGD)"
             file: exercises/ex-05.qmd
-          - text: "Exercise 6: Open Refine"
+          - text: "Exercise 6: Reading Assignment"
             file: exercises/ex-06.qmd
-          - text: "Exercise 7: IIIF & ML"
+          - text: "Exercise 7: Open Refine"
             file: exercises/ex-07.qmd
+          - text: "Exercise 8: IIIF & ML"
+            file: exercises/ex-08.qmd
       - text: "Course Sections"
         menu:
           - text: "Characteristics of Open Data"

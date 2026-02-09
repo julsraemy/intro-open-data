@@ -160,9 +160,10 @@ In addition, learn more about community-driven organisations like the [Open Know
 It should also be noted that every February around Valentine's Day, **International Love Data Week** brings together data enthusiasts around the world - mostly in academia - to explore best practices in data management, sharing and reuse. For example: 
 
 - Swiss Research Data Support Network (SRDSN): <https://www.researchdatasupport.ch/lovedata>
-- Basel University Library: <https://ub.unibas.ch/de/news/details/love-data-week-2025/>
+- Basel University Library Love Data Week 2026: <https://researchdata.unibas.ch/en/news/details/love-data-week-2026/>
+- University of Geneva Love Data Week 2026: <https://www.unige.ch/researchdata/propos/actualites/love-data-week-2026>
 - FDM im deutschsprachigen Raum: <https://forschungsdaten.info/fdm-im-deutschsprachigen-raum/love-data-week-2026/>
-- University of Michigan: <https://www.icpsr.umich.edu/sites/icpsr/about/news-events/international-love-data-week>.
+- University of Michigan - International Love Data Week: <https://www.icpsr.umich.edu/sites/icpsr/about/news-events/international-love-data-week>.
 
 For more information about OGD in Switzerland, please see this curated and exhaustive list on GitHub: <https://github.com/rnckp/awesome-ogd-switzerland>.
 

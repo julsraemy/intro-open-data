@@ -1,5 +1,5 @@
 ---
-title: "Exercise 4: Comparing ORD Platforms"
+title: "Exercise 8: IIIF & ML"
 authors: 
   - name: Julien A. Raemy
     orcid: 0000-0002-4711-5759
@@ -7,11 +7,11 @@ authors:
     affiliations:
       - docuteam SA
       - University of Bern
-date: "2026-02-09"
+date: "2026-02-10"
 date-modified: last-modified
 license: "CC BY"
 ---
 
-## Comparing ORD Platforms
-
-...
+## IIIF & ML
+ 
+(...)
