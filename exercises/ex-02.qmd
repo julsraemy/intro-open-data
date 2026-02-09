@@ -131,7 +131,7 @@ ex:chateauroux_library a schema:Library ;
 ```
 
 - What type of resource is `ex:manuscript_042`?
-- How many properties describe the manuscript?
+- How many triples have `ex:manuscript_042` as their subject?
 - What relationship links the manuscript to the library?
 
 ### B: Real-World SPARQL Exploration (6-8 minutes)

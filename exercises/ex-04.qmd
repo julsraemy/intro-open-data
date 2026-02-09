@@ -14,4 +14,11 @@ license: "CC BY"
 
 ## Comparing ORD Platforms
 
-...
+Go to <https://www.re3data.org/> and find the following: 
+
+a) Which cross-institutional repository based in Switzerland provides ARK identifiers? Find and provide an example ARK from this repository.
+
+b) How many life sciences repositories built on Invenio RDM are listed on re3data? Name another well-known general-purpose repository that also uses Invenio RDM.
+
+c) 
+
