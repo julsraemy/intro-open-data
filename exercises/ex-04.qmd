@@ -1,5 +1,5 @@
 ---
-title: "Exercise 4: Comparing ORD Platforms"
+title: "Exercise 4: Discovering ORD Platforms"
 authors: 
   - name: Julien A. Raemy
     orcid: 0000-0002-4711-5759
@@ -12,7 +12,7 @@ date-modified: last-modified
 license: "CC BY"
 ---
 
-## Comparing ORD Platforms
+## Discovering ORD Platforms
 
 Go to <https://www.re3data.org/> and find the following: 
 

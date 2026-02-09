@@ -48,7 +48,7 @@ An exam will be held at the end of the fourth and final session. It will consist
 | Date 	| Content 	|
 |------------	|----------------------------	|
 | 18.02.2026 	| Course Overview<br/>[Characteristics of Open Data](sections/characteristics.qmd)<br/>[Exercise 1: OA Deep Dive](exercises/ex-01.qmd)<br/>[Associated Movements](sections/movements.qmd)<br/>[Associated Principles](sections/principles.qmd)<br/>[Exercise 2: Up to date with Linked Data](exercises/ex-02.qmd)	| 
-| 25.02.2026 	| [Exercise 3: Movements and Principles](exercises/ex-03.qmd)<br/>[Open Data Platforms and Organisations](sections/platforms.qmd)<br/>[Exercise 4: Comparing ORD Platforms](exercises/ex-04.qmd)<br/>[Exercise 5: The Reuser's Perspective (OGD)](exercises/ex-05.qmd)<br/>[Exercise 6: Reading Assignment](exercises/ex-06.qmd)                  	|
+| 25.02.2026 	| [Exercise 3: Movements and Principles](exercises/ex-03.qmd)<br/>[Open Data Platforms and Organisations](sections/platforms.qmd)<br/>[Exercise 4: Discovering ORD Platforms](exercises/ex-04.qmd)<br/>[Exercise 5: The Reuser's Perspective (OGD)](exercises/ex-05.qmd)<br/>[Exercise 6: Reading Assignment](exercises/ex-06.qmd)                  	|
 | 04.03.2026 	| [Exercise 6: Reading Assignment (Follow-up)](exercises/ex-06.qmd)<br/>[Assessment, Data Quality, and Best Practices](sections/assessment.qmd)<br/>[Techniques, Software, and Tools](sections/techniques.qmd)<br/>[Exercise 7: Open Refine](exercises/ex-07.qmd)<br/>[Exercise 8: IIIF & ML](exercises/ex-08.qmd)                   	|
 | 11.03.2026 	| [Exercise 8: IIIF & ML (Follow-up)](exercises/ex-08.qmd)<br/>[Showcases](sections/showcases.qmd)<br/>Course Recap<br/>Examination (multiple-choice and open-ended)              	| 
 

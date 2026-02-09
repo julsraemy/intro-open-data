@@ -37,7 +37,7 @@ website:
             file: exercises/ex-02.qmd
           - text: "Exercise 3: Movements and Principles"
             file: exercises/ex-03.qmd
-          - text: "Exercise 4: Comparing ORD Platforms"
+          - text: "Exercise 4: Discovering ORD Platforms"
             file: exercises/ex-04.qmd
           - text: "Exercise 5: The Reuser's Perspective (OGD)"
             file: exercises/ex-05.qmd

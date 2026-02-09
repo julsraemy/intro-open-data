@@ -250,7 +250,7 @@
   {
     "objectID": "exercises/ex-04.html",
     "href": "exercises/ex-04.html",
-    "title": "Exercise 4: Comparing ORD Platforms",
+    "title": "Exercise 4: Discovering ORD Platforms",
     "section": "",
     "text": "Go to https://www.re3data.org/ and find the following:\n\nWhich cross-institutional repository based in Switzerland provides ARK identifiers? Find and provide an example ARK from this repository.\nHow many life sciences repositories built on Invenio RDM are listed on re3data? Name another well-known general-purpose repository that also uses Invenio RDM."
   },
@@ -623,7 +623,7 @@
     "href": "syllabus.html#course-outline-2025-2026",
     "title": "Syllabus",
     "section": "Course Outline (2025-2026)",
-    "text": "Course Outline (2025-2026)\nAn exam will be held at the end of the fourth and final session. It will consist of multiple-choice and open-ended questions, will last a maximum of one hour, and will be conducted through Cyberlearn. All course notes and access to the internet are permitted. However, LLM and communication tools are not permitted.\n\n\n\nDate\nContent\n\n\n\n\n18.02.2026\nCourse OverviewCharacteristics of Open DataExercise 1: OA Deep DiveAssociated MovementsAssociated PrinciplesExercise 2: Up to date with Linked Data\n\n\n25.02.2026\nExercise 3: Movements and PrinciplesOpen Data Platforms and OrganisationsExercise 4: Comparing ORD PlatformsExercise 5: The Reuser’s Perspective (OGD)Exercise 6: Reading Assignment\n\n\n04.03.2026\nExercise 6: Reading Assignment (Follow-up)Assessment, Data Quality, and Best PracticesTechniques, Software, and ToolsExercise 7: Open RefineExercise 8: IIIF & ML\n\n\n11.03.2026\nExercise 8: IIIF & ML (Follow-up)ShowcasesCourse RecapExamination (multiple-choice and open-ended)\n\n\n\n\n\n\n\n\n\nWarningMissed Examination Policy\n\n\n\nIf a student is absent during the last session and misses the examination for legitimate reasons, a substitute assignment will be organised by the tutor."
+    "text": "Course Outline (2025-2026)\nAn exam will be held at the end of the fourth and final session. It will consist of multiple-choice and open-ended questions, will last a maximum of one hour, and will be conducted through Cyberlearn. All course notes and access to the internet are permitted. However, LLM and communication tools are not permitted.\n\n\n\nDate\nContent\n\n\n\n\n18.02.2026\nCourse OverviewCharacteristics of Open DataExercise 1: OA Deep DiveAssociated MovementsAssociated PrinciplesExercise 2: Up to date with Linked Data\n\n\n25.02.2026\nExercise 3: Movements and PrinciplesOpen Data Platforms and OrganisationsExercise 4: Discovering ORD PlatformsExercise 5: The Reuser’s Perspective (OGD)Exercise 6: Reading Assignment\n\n\n04.03.2026\nExercise 6: Reading Assignment (Follow-up)Assessment, Data Quality, and Best PracticesTechniques, Software, and ToolsExercise 7: Open RefineExercise 8: IIIF & ML\n\n\n11.03.2026\nExercise 8: IIIF & ML (Follow-up)ShowcasesCourse RecapExamination (multiple-choice and open-ended)\n\n\n\n\n\n\n\n\n\nWarningMissed Examination Policy\n\n\n\nIf a student is absent during the last session and misses the examination for legitimate reasons, a substitute assignment will be organised by the tutor."
   },
   {
     "objectID": "principles-slides.html#fair-data-principles",
@@ -946,5 +946,12 @@
     "title": "Exercise 6: Reading Assignment",
     "section": "",
     "text": "(…)"
+  },
+  {
+    "objectID": "exercises/ex-04.html#discovering-ord-platforms",
+    "href": "exercises/ex-04.html#discovering-ord-platforms",
+    "title": "Exercise 4: Discovering ORD Platforms",
+    "section": "",
+    "text": "Go to https://www.re3data.org/ and find the following:\n\nWhich cross-institutional repository based in Switzerland provides ARK identifiers? Find and provide an example ARK from this repository.\nHow many life sciences repositories built on Invenio RDM are listed on re3data? Name another well-known general-purpose repository that also uses Invenio RDM."
   }
 ]
