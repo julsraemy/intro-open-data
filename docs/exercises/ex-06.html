@@ -6,9 +6,9 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="dcterms.date" content="2026-02-01">
+<meta name="dcterms.date" content="2026-02-10">
 
-<title>Exercise 6: Open Refine – Introduction to Open Data</title>
+<title>Exercise 6: Reading Assignment – Introduction to Open Data</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -21,27 +21,7 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-/* CSS for citations */
-div.csl-bib-body { }
-div.csl-entry {
-  clear: both;
-  margin-bottom: 0em;
-}
-.hanging-indent div.csl-entry {
-  margin-left:2em;
-  text-indent:-2em;
-}
-div.csl-left-margin {
-  min-width:2em;
-  float:left;
-}
-div.csl-right-inline {
-  margin-left:2em;
-  padding-left:1em;
-}
-div.csl-indent {
-  margin-left: 2em;
-}</style>
+</style>
 
 
 <script src="../site_libs/quarto-nav/quarto-nav.js"></script>
@@ -97,10 +77,12 @@ div.csl-indent {
 
 
 <link rel="stylesheet" href="../styles/custom.scss">
-<meta property="og:title" content="Exercise 6: Open Refine – Introduction to Open Data">
+<meta property="og:title" content="Exercise 6: Reading Assignment – Introduction to Open Data">
+<meta property="og:description" content="">
 <meta property="og:image" content="https://julsraemy.ch/intro-open-data/exercises/data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA2ZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDo1N0NEMjA4MDI1MjA2ODExOTk0QzkzNTEzRjZEQTg1NyIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDozM0NDOEJGNEZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDozM0NDOEJGM0ZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ1M1IE1hY2ludG9zaCI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOkZDN0YxMTc0MDcyMDY4MTE5NUZFRDc5MUM2MUUwNEREIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjU3Q0QyMDgwMjUyMDY4MTE5OTRDOTM1MTNGNkRBODU3Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+84NovQAAAR1JREFUeNpiZEADy85ZJgCpeCB2QJM6AMQLo4yOL0AWZETSqACk1gOxAQN+cAGIA4EGPQBxmJA0nwdpjjQ8xqArmczw5tMHXAaALDgP1QMxAGqzAAPxQACqh4ER6uf5MBlkm0X4EGayMfMw/Pr7Bd2gRBZogMFBrv01hisv5jLsv9nLAPIOMnjy8RDDyYctyAbFM2EJbRQw+aAWw/LzVgx7b+cwCHKqMhjJFCBLOzAR6+lXX84xnHjYyqAo5IUizkRCwIENQQckGSDGY4TVgAPEaraQr2a4/24bSuoExcJCfAEJihXkWDj3ZAKy9EJGaEo8T0QSxkjSwORsCAuDQCD+QILmD1A9kECEZgxDaEZhICIzGcIyEyOl2RkgwAAhkmC+eAm0TAAAAABJRU5ErkJggg==">
 <meta property="og:site_name" content="Introduction to Open Data">
-<meta name="twitter:title" content="Exercise 6: Open Refine – Introduction to Open Data">
+<meta name="twitter:title" content="Exercise 6: Reading Assignment – Introduction to Open Data">
+<meta name="twitter:description" content="">
 <meta name="twitter:image" content="https://julsraemy.ch/intro-open-data/exercises/data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA2ZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDo1N0NEMjA4MDI1MjA2ODExOTk0QzkzNTEzRjZEQTg1NyIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDozM0NDOEJGNEZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDozM0NDOEJGM0ZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ1M1IE1hY2ludG9zaCI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOkZDN0YxMTc0MDcyMDY4MTE5NUZFRDc5MUM2MUUwNEREIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjU3Q0QyMDgwMjUyMDY4MTE5OTRDOTM1MTNGNkRBODU3Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+84NovQAAAR1JREFUeNpiZEADy85ZJgCpeCB2QJM6AMQLo4yOL0AWZETSqACk1gOxAQN+cAGIA4EGPQBxmJA0nwdpjjQ8xqArmczw5tMHXAaALDgP1QMxAGqzAAPxQACqh4ER6uf5MBlkm0X4EGayMfMw/Pr7Bd2gRBZogMFBrv01hisv5jLsv9nLAPIOMnjy8RDDyYctyAbFM2EJbRQw+aAWw/LzVgx7b+cwCHKqMhjJFCBLOzAR6+lXX84xnHjYyqAo5IUizkRCwIENQQckGSDGY4TVgAPEaraQr2a4/24bSuoExcJCfAEJihXkWDj3ZAKy9EJGaEo8T0QSxkjSwORsCAuDQCD+QILmD1A9kECEZgxDaEZhICIzGcIyEyOl2RkgwAAhkmC+eAm0TAAAAABJRU5ErkJggg==">
 <meta name="twitter:card" content="summary_large_image">
 </head>
@@ -315,19 +297,23 @@ div.csl-indent {
   </li>  
         <li>
     <a class="dropdown-item" href="../exercises/ex-04.html">
- <span class="dropdown-text">Exercise 4: The Reuser’s Perspective (OGD)</span></a>
+ <span class="dropdown-text">Exercise 4: Comparing ORD Platforms</span></a>
   </li>  
         <li>
     <a class="dropdown-item" href="../exercises/ex-05.html">
- <span class="dropdown-text">Exercise 5: Reading Assignment</span></a>
+ <span class="dropdown-text">Exercise 5: The Reuser’s Perspective (OGD)</span></a>
   </li>  
         <li>
     <a class="dropdown-item" href="../exercises/ex-06.html">
- <span class="dropdown-text">Exercise 6: Open Refine</span></a>
+ <span class="dropdown-text">Exercise 6: Reading Assignment</span></a>
   </li>  
         <li>
     <a class="dropdown-item" href="../exercises/ex-07.html">
- <span class="dropdown-text">Exercise 7: IIIF &amp; ML</span></a>
+ <span class="dropdown-text">Exercise 7: Open Refine</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../exercises/ex-08.html">
+ <span class="dropdown-text">Exercise 8: IIIF &amp; ML</span></a>
   </li>  
     </ul>
   </li>
@@ -392,16 +378,7 @@ div.csl-indent {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#open-refine" id="toc-open-refine" class="nav-link active" data-scroll-target="#open-refine">Open Refine</a>
-  <ul>
-  <li><a href="#a.-getting-started" id="toc-a.-getting-started" class="nav-link" data-scroll-target="#a.-getting-started">A. Getting started</a></li>
-  <li><a href="#b.-basic-cleaning-faceting-with-the-powerhouse-museum-dataset" id="toc-b.-basic-cleaning-faceting-with-the-powerhouse-museum-dataset" class="nav-link" data-scroll-target="#b.-basic-cleaning-faceting-with-the-powerhouse-museum-dataset">B. Basic Cleaning &amp; Faceting with the Powerhouse Museum Dataset</a></li>
-  <li><a href="#c.-authority-control-reconciliation-with-the-metropolitan-museum-of-art" id="toc-c.-authority-control-reconciliation-with-the-metropolitan-museum-of-art" class="nav-link" data-scroll-target="#c.-authority-control-reconciliation-with-the-metropolitan-museum-of-art">C. Authority Control &amp; Reconciliation with the Metropolitan Museum of Art</a></li>
-  <li><a href="#d.-manuscript-reconciliation-with-biblissima" id="toc-d.-manuscript-reconciliation-with-biblissima" class="nav-link" data-scroll-target="#d.-manuscript-reconciliation-with-biblissima">D. Manuscript Reconciliation with Biblissima</a></li>
-  <li><a href="#e.-api-integration-json-with-the-smithsonian" id="toc-e.-api-integration-json-with-the-smithsonian" class="nav-link" data-scroll-target="#e.-api-integration-json-with-the-smithsonian">E. API Integration &amp; JSON with the Smithsonian</a></li>
-  <li><a href="#f.-a-step-further" id="toc-f.-a-step-further" class="nav-link" data-scroll-target="#f.-a-step-further">F. A step further…</a></li>
-  </ul></li>
-  <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references">References</a></li>
+  <li><a href="#reading-assignment" id="toc-reading-assignment" class="nav-link active" data-scroll-target="#reading-assignment">Reading Assignment</a></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/julsraemy/intro-open-data/edit/main/exercises/ex-06.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/julsraemy/intro-open-data/issues/new/choose" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
@@ -411,7 +388,7 @@ div.csl-indent {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Exercise 6: Open Refine</h1>
+<h1 class="title">Exercise 6: Reading Assignment</h1>
 </div>
 
 
@@ -438,7 +415,7 @@ div.csl-indent {
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">February 1, 2026</p>
+      <p class="date">February 10, 2026</p>
     </div>
   </div>
   
@@ -456,80 +433,14 @@ div.csl-indent {
 </header>
 
 
-<section id="open-refine" class="level2">
-<h2 class="anchored" data-anchor-id="open-refine">Open Refine</h2>
-<section id="a.-getting-started" class="level3">
-<h3 class="anchored" data-anchor-id="a.-getting-started">A. Getting started</h3>
-<ol type="1">
-<li>Install the software (<a href="https://openrefine.org/docs" class="uri">https://openrefine.org/docs</a>)</li>
-<li>Run it locally (accessible at <a href="http://127.0.0.1:3333/" class="uri">http://127.0.0.1:3333/</a>)</li>
-<li>Have a look at the different pages and functionalities</li>
-<li>Create a new project by importing any supported files</li>
-</ol>
-</section>
-<section id="b.-basic-cleaning-faceting-with-the-powerhouse-museum-dataset" class="level3">
-<h3 class="anchored" data-anchor-id="b.-basic-cleaning-faceting-with-the-powerhouse-museum-dataset">B. Basic Cleaning &amp; Faceting with the Powerhouse Museum Dataset</h3>
-<ol start="5" type="1">
-<li>Create a new project by importing the Powerhouse Museum TSV file (<a href="https://zenodo.org/records/17047254/files/phm_collection_adapted.tsv" class="uri">https://zenodo.org/records/17047254/files/phm_collection_adapted.tsv</a>) — remember to select “Tab-separated values”</li>
-<li><strong>Whitespace detection</strong>: Use <em>Facet by blank</em> on the <code>categories</code> column, then apply <em>Edit cells &gt; Common transforms &gt; Trim leading and trailing whitespace</em>. Observe how “blank” cells are revealed.</li>
-<li><strong>Clustering</strong>: Create a <em>Text facet</em> on the <code>category</code> column. Click <em>Cluster</em> and use the “key collision” method to merge case inconsistencies (e.g., “Pottery” vs “pottery”).</li>
-<li><strong>Multi-valued cells</strong>: Split the <code>categories</code> column by the separator <code>|</code> (pipe character). Count how many objects have more than 3 categories, then rejoin the cells.</li>
-</ol>
-</section>
-<section id="c.-authority-control-reconciliation-with-the-metropolitan-museum-of-art" class="level3">
-<h3 class="anchored" data-anchor-id="c.-authority-control-reconciliation-with-the-metropolitan-museum-of-art">C. Authority Control &amp; Reconciliation with the Metropolitan Museum of Art</h3>
-<ol start="9" type="1">
-<li>Create a new project by importing the Met Museum CSV (<a href="https://github.com/metmuseum/openaccess" class="uri">https://github.com/metmuseum/openaccess</a>) — use the first 5,000 rows for better performance</li>
-<li><strong>Reconcile artists</strong>: Select the <code>Artist Display Name</code> column. Start reconciling against <strong>Wikidata</strong> (service: <a href="https://wikidata.reconci.link/en/api" class="uri">https://wikidata.reconci.link/en/api</a>, type: <strong>Q5</strong> for humans).</li>
-<li><strong>Judgment exercise</strong>: Auto-match high confidence scores (&gt;90), manually review medium scores (70-90) to distinguish between homonyms (e.g., different “John Smith” artists), and mark low scores (&lt;70) as “None”.</li>
-<li><strong>Extract QIDs</strong>: Transform reconciled cells to extract just the QID number for external linking.</li>
-</ol>
-</section>
-<section id="d.-manuscript-reconciliation-with-biblissima" class="level3">
-<h3 class="anchored" data-anchor-id="d.-manuscript-reconciliation-with-biblissima">D. Manuscript Reconciliation with Biblissima</h3>
-<ol start="13" type="1">
-<li>Create a new project by importing the manuscript CSV from <a href="https://raw.githubusercontent.com/emmamorlock/workshop/refs/heads/main/exercices/handouts/biblissima.csv" class="uri">https://raw.githubusercontent.com/emmamorlock/workshop/refs/heads/main/exercices/handouts/biblissima.csv</a></li>
-<li><strong>Explore manuscript metadata</strong>: Review columns such as <code>shelfmark</code>, <code>repository</code>, <code>author</code>, and <code>title</code>. Create text facets to identify variations in repository names or author attributions.</li>
-<li><strong>Reconcile shelfmarks</strong>: Use the Biblissima reconciliation endpoint (<a href="https://data.biblissima.fr/api/reconcile" class="uri">https://data.biblissima.fr/api/reconcile</a>, type: <strong>Manuscript</strong>) to match records against the Biblissima authority file. This connects your local shelfmarks to persistent URIs.</li>
-<li><strong>Enrich with IIIF</strong> (optional extension): After reconciliation, use <em>Edit column &gt; Add column by fetching URLs</em> to retrieve JSON data from the reconciled Biblissima URIs. Parse the JSON to extract <code>iiif_manifest_url</code> fields where available.</li>
-</ol>
-<p>Cf. <span class="citation" data-cites="sajdakReconcilierAvecOpenRefine2024">Sajdak (<a href="#ref-sajdakReconcilierAvecOpenRefine2024" role="doc-biblioref">2024</a>)</span>.</p>
-</section>
-<section id="e.-api-integration-json-with-the-smithsonian" class="level3">
-<h3 class="anchored" data-anchor-id="e.-api-integration-json-with-the-smithsonian">E. API Integration &amp; JSON with the Smithsonian</h3>
-<ol start="17" type="1">
-<li>Create a new project by importing a Smithsonian JSON file (not CSV) from <a href="https://github.com/Smithsonian/OpenAccess" class="uri">https://github.com/Smithsonian/OpenAccess</a></li>
-<li><strong>Flatten nested JSON</strong>: Convert nested paths (e.g., <code>title.content</code>) to flat columns using the transform expression: <code>value.parseJson()['title']</code></li>
-<li><strong>Extract media</strong>: Parse the JSON to find objects with images by extracting <code>online_media.mediaCount</code></li>
-<li><strong>Reconcile topics</strong>: Match <code>topic</code> fields against Library of Congress Subject Headings (LCSH) using their reconciliation service.</li>
-</ol>
-</section>
-<section id="f.-a-step-further" class="level3">
-<h3 class="anchored" data-anchor-id="f.-a-step-further">F. A step further…</h3>
-<ol start="21" type="1">
-<li>Export your cleaned datasets in both CSV and JSON formats</li>
-<li>Export the project history (OpenRefine project archive) to document your transformation steps</li>
-</ol>
-<p>More information and tutorials on OpenRefine can be found on the following links:</p>
-<ul>
-<li>Library Carpentry website: <a href="https://librarycarpentry.org/lc-open-refine/" class="uri">https://librarycarpentry.org/lc-open-refine/</a></li>
-<li>University of Nevada Las Vegas: <a href="https://guides.library.unlv.edu/open-refine/getting-started" class="uri">https://guides.library.unlv.edu/open-refine/getting-started</a></li>
-<li>University of Illinois Urbana-Champaign: <a href="https://guides.library.illinois.edu/openrefine" class="uri">https://guides.library.illinois.edu/openrefine</a></li>
-</ul>
-</section>
-</section>
-<section id="references" class="level2">
-
-
+<section id="reading-assignment" class="level2">
+<h2 class="anchored" data-anchor-id="reading-assignment">Reading Assignment</h2>
+<p>(…)</p>
 
 
 </section>
 
-<a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a><div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography" id="quarto-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" data-line-spacing="2" role="list">
-<div id="ref-sajdakReconcilierAvecOpenRefine2024" class="csl-entry" role="listitem">
-Sajdak, C. (2024). <em>Réconcilier avec <span>OpenRefine</span></em>. Biblissima+. <a href="https://doc.biblissima.fr/api/openrefine/">https://doc.biblissima.fr/api/openrefine/</a>
-</div>
-</div></section><section class="quarto-appendix-contents" id="quarto-reuse"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div class="quarto-appendix-contents"><div><a rel="license" href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a></div></div></section></div></main> <!-- /main -->
+<a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a><div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-reuse"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div class="quarto-appendix-contents"><div><a rel="license" href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a></div></div></section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     // Ensure there is a toggle, if there isn't float one in the top right
