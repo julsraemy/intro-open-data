@@ -14,4 +14,19 @@ license: "CC BY"
 
 ## Reading Assignment
 
-(...)
+::: {.callout-note}
+## Instructions
+Please read @disliCopyrightLicencingCultural2025 and answer the questions below. We will discuss this further in the next lesson.
+:::
+
+1. The article emphasises that digitisation doesn't grant institutions ownership of public domain works, yet many cultural heritage institutions still restrict access. Why do you think this protective stance persists, and what arguments could convince institutions to adopt more open practices?
+
+2. The FAIR principles recommend machine-readable licences for data reusability, but Table 3 shows most institutions don't provide them. What are the practical barriers to implementing machine-readable licensing, and why does this gap matter for computational research?
+
+3. Fair use exceptions vary significantly by country (e.g., EU's DSM Directive vs. US case law). How should international digital humanities projects navigate these differences when building cross-border collections as data?
+
+4. The article distinguishes between "access for scholarly research" versus "for-profit AI training." Is this a meaningful distinction ethically and practically? How might institutions technically enforce different access tiers?
+
+5. Choose one example from Table 4 (restricted public domain collections). What specific technical and policy changes would be needed to transform this into a proper "collection as data" following the article's recommendations?
+
+6. The CARE principles emphasise "Collective Benefit" and "Authority to Control" for Indigenous data. How might these principles conflict with or complement the push for open licences in cultural heritage contexts? When should access be restricted?
