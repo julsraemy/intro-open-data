@@ -21,6 +21,41 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
@@ -378,9 +413,12 @@ ul.task-list li input[type="checkbox"] {
   <ul>
   <li><a href="#the-reusers-perspective-ogd" id="toc-the-reusers-perspective-ogd" class="nav-link active" data-scroll-target="#the-reusers-perspective-ogd">The Reuser’s Perspective (OGD)</a>
   <ul>
-  <li><a href="#a---opendata.swiss" id="toc-a---opendata.swiss" class="nav-link" data-scroll-target="#a---opendata.swiss">A - opendata.swiss</a></li>
-  <li><a href="#b---lindasvisualize" id="toc-b---lindasvisualize" class="nav-link" data-scroll-target="#b---lindasvisualize">B - LINDAS/Visualize</a></li>
-  <li><a href="#c---lindassparql" id="toc-c---lindassparql" class="nav-link" data-scroll-target="#c---lindassparql">C - LINDAS/SPARQL</a></li>
+  <li><a href="#a---exploring-and-reusing-swiss-ogd" id="toc-a---exploring-and-reusing-swiss-ogd" class="nav-link" data-scroll-target="#a---exploring-and-reusing-swiss-ogd">A - Exploring and Reusing Swiss OGD</a></li>
+  <li><a href="#b---ogd-as-linked-data-lindas" id="toc-b---ogd-as-linked-data-lindas" class="nav-link" data-scroll-target="#b---ogd-as-linked-data-lindas">B - OGD as Linked Data (LINDAS)</a>
+  <ul>
+  <li><a href="#visualize" id="toc-visualize" class="nav-link" data-scroll-target="#visualize">Visualize</a></li>
+  <li><a href="#sparql" id="toc-sparql" class="nav-link" data-scroll-target="#sparql">SPARQL</a></li>
+  </ul></li>
   </ul></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/julsraemy/intro-open-data/edit/main/exercises/ex-05.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/julsraemy/intro-open-data/issues/new/choose" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
@@ -425,7 +463,7 @@ ul.task-list li input[type="checkbox"] {
     <div>
     <div class="quarto-title-meta-heading">Modified</div>
     <div class="quarto-title-meta-contents">
-      <p class="date-modified">February 16, 2026</p>
+      <p class="date-modified">February 17, 2026</p>
     </div>
   </div>
     
@@ -448,30 +486,119 @@ ul.task-list li input[type="checkbox"] {
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>Go to these three Open Governement Data (OGD) platforms, browse, search and do what is described below. You can do this exercise alone or in pairs. The whole exercise should take between 15 and 20 minutes. Afterwards, you will share what you have discovered and/or created with the class.</p>
+<p>Browse, search and do what is described below. You can do this exercise alone or in pairs. The whole exercise should take between 20 and 30 minutes. Afterwards, you will share what you have discovered and/or created with the class.</p>
 </div>
 </div>
-<section id="a---opendata.swiss" class="level3">
-<h3 class="anchored" data-anchor-id="a---opendata.swiss">A - opendata.swiss</h3>
-<p>Go to <a href="https://opendata.swiss/">opendata.swiss</a>.</p>
+<section id="a---exploring-and-reusing-swiss-ogd" class="level3">
+<h3 class="anchored" data-anchor-id="a---exploring-and-reusing-swiss-ogd">A - Exploring and Reusing Swiss OGD</h3>
 <ol type="1">
-<li><p>What are the three cantons that provide the most datasets on opendata.swiss?</p></li>
-<li><p>Something else</p></li>
-<li><p>Same thing with the API / https://handbook.opendata.swiss</p></li>
-<li><p>How many mailboxes are in… From where do the data come?</p></li>
+<li><p>Go to <a href="https://opendata.swiss/">opendata.swiss</a>. What are the three cantons that provide the most datasets on opendata.swiss?</p></li>
+<li><p>Go to the <em>Ist-Daten</em> (Target/Actual Comparison of SBB departure/arrive times) page (<a href="https://opendata.swiss/en/perma/ist-daten-sbb@schweizerische-bundesbahnen-sbb" class="uri">https://opendata.swiss/en/perma/ist-daten-sbb@schweizerische-bundesbahnen-sbb</a>) and download the CSV file. Open it in a spreadsheet application (Excel, LibreOffice Calc, Google Sheets) or a text editor. The file contains data from the previous day depending on when you download it. Answer the following:</p>
+<ol type="a">
+<li><p><strong>Most punctual station</strong>: Which train station (<code>Stop name</code>) has the best on-time performance? Compare the scheduled times (<code>Arrival time</code> / <code>Departure time</code>) with the actual times (<code>Arrival actual time</code> / <code>Departure actual time</code>) to determine where delays are smallest on average.</p></li>
+<li><p><strong>Most delayed station</strong>: Conversely, which station has the highest average delay?</p></li>
+<li><p><strong>Cancelled trains</strong>: How many trains were cancelled on that day? Look at the <code>Cancelled TF</code> column (where <code>true</code> indicates a cancellation).</p></li>
+</ol></li>
+<li><p>Now try to get transport information via an <strong>API</strong> instead of downloading a file. The Swiss public transport API at <a href="https://transport.opendata.ch/" class="uri">https://transport.opendata.ch/</a> is freely accessible without authentication. Try the following:</p>
+<ol type="a">
+<li><p>Look up the next departures from a station of your choice, e.g.: <code>https://transport.opendata.ch/v1/stationboard?station=Bern&amp;limit=5</code></p></li>
+<li><p>Try changing the <code>station</code> parameter to another station and observe the results.</p></li>
+<li><p>Compare the experience: what are the advantages and limitations of using a live API versus analysing a downloaded CSV file?</p></li>
+</ol></li>
+<li><p>How many mailboxes are there in your commune or city? Explore the application at <a href="https://wieviele-briefkaesten-gibt-es.streamlit.app/" class="uri">https://wieviele-briefkaesten-gibt-es.streamlit.app/</a>. Where do these data originally come from?</p></li>
 </ol>
-<p>https://wieviele-briefkaesten-gibt-es.streamlit.app/</p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Hints for Part A
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-2" class="callout-2-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<ul>
+<li><strong>Q1</strong>: Use the “Organisation” or “Canton” filter on the opendata.swiss search page to see the counts.</li>
+<li><strong>Q2a/b</strong>: In a spreadsheet, calculate delays by subtracting the scheduled time from the actual time. Try using a pivot table or <code>AVERAGEIF</code>-style formulas grouped by <code>Stop name</code>. Ignore rows where times are missing or where <code>Arrival forecast status</code> / <code>Departure forecast status</code> show unusual values (e.g.&nbsp;<code>UNBEKANNT</code>). Stations with very few stops may appear artificially punctual or delayed — consider filtering for stations with a minimum number of stops.</li>
+<li><strong>Q2c</strong>: Filter or count rows where <code>Cancelled TF</code> equals <code>true</code>. In Excel/LibreOffice, you can use <code>=COUNTIF(column, "true")</code>.</li>
+<li><strong>Q3a/b</strong>: The transport.opendata.ch API returns JSON. You can paste the URL directly in your browser to see the result. Try the <code>/v1/connections</code> endpoint as well (e.g.&nbsp;<code>?from=Lausanne&amp;to=Genève</code>). The API documentation at <a href="https://transport.opendata.ch/docs.html" class="uri">https://transport.opendata.ch/docs.html</a> describes all available parameters.</li>
+<li><strong>Q3c</strong>: Think about: real-time vs.&nbsp;historical data, ease of use, volume of data retrievable, and what you can do with each approach.</li>
+<li><strong>Q4</strong>: The application estimates the number of delivery addresses / mailboxes (<em>Zustelladressen / Briefkästen</em>) for a user-defined area. To investigate where the data come from, you can look at the source code on GitHub (<a href="https://github.com/davidoesch/wo-sind-briefkaesten" class="uri">https://github.com/davidoesch/wo-sind-briefkaesten</a>) or use your browser’s developer tools (Network tab) while the app loads to see which data sources are being fetched. The underlying data come from the Federal Building and Housing Register (GWR) of the Federal Statistical Office (BFS) and business locations from the Overture Maps Foundation.</li>
+</ul>
+</div>
+</div>
+</div>
 </section>
-<section id="b---lindasvisualize" class="level3">
-<h3 class="anchored" data-anchor-id="b---lindasvisualize">B - LINDAS/Visualize</h3>
-<p>Create a visualization</p>
-<p>Create a dashboard on <a href="https://visualize.admin.ch/">visualize.admin.ch</a></p>
+<section id="b---ogd-as-linked-data-lindas" class="level3">
+<h3 class="anchored" data-anchor-id="b---ogd-as-linked-data-lindas">B - OGD as Linked Data (LINDAS)</h3>
+<p><a href="https://lindas.admin.ch/">LINDAS</a> (Linked Data Service) is the Swiss federal platform for publishing and querying government data as Linked Data.</p>
+<section id="visualize" class="level4">
+<h4 class="anchored" data-anchor-id="visualize">Visualize</h4>
+<p>Go to <a href="https://visualize.admin.ch/">visualize.admin.ch</a> and use the <strong>Verkehrsleistung auf den Flugplätzen</strong> dataset (published by the Bundesamt für Zivilluftfahrt BAZL). This dataset records the number of annual air traffic movements (1 movement = 1 take-off or 1 landing) at Swiss airports.</p>
+<ol type="1">
+<li><p>For the year <strong>2023</strong>, were there more flight movements at <strong>Geneva</strong> or at <strong>Basel</strong>? Try to visualise this comparison on a <strong>map</strong>.</p></li>
+<li><p>Look at the data for <strong>Zurich Airport</strong> across multiple years. By how many movements (or what percentage) did flight traffic drop in <strong>2020 and 2021</strong> compared to 2019?</p></li>
+</ol>
 </section>
-<section id="c---lindassparql" class="level3">
-<h3 class="anchored" data-anchor-id="c---lindassparql">C - LINDAS/SPARQL</h3>
+<section id="sparql" class="level4">
+<h4 class="anchored" data-anchor-id="sparql">SPARQL</h4>
 <p>Go to the <a href="https://lindas.admin.ch/sparql/">LINDAS SPARQL Endpoint</a>.</p>
+<ol start="3" type="1">
+<li><p>Query the same <strong>aviation dataset</strong> via SPARQL. The dataset is available as a Linked Data cube at <code>https://transport.ld.admin.ch/foca/FOCA_Air_traffic_movements/5</code>. Try to retrieve the number of flight movements per airport for a given year. Start by exploring the structure of the data with a simple query, then refine.</p></li>
+<li><p>Now try a completely different dataset: the <strong>Archive database of the Swiss Federal Archives</strong> (<code>https://culture.ld.admin.ch/.well-known/dataset/ais</code>). This dataset uses the <strong>Records in Context (RiC)</strong> ontology. Try the following query to find archival records related to “Bern”:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode numberSource sparql number-lines code-with-copy"><code class="sourceCode"><span id="cb1-1"><a href="#cb1-1"></a>PREFIX rdf: &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt;</span>
+<span id="cb1-2"><a href="#cb1-2"></a>PREFIX rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt;</span>
+<span id="cb1-3"><a href="#cb1-3"></a>PREFIX rico: &lt;https://www.ica.org/standards/RiC/ontology#&gt;</span>
+<span id="cb1-4"><a href="#cb1-4"></a></span>
+<span id="cb1-5"><a href="#cb1-5"></a>SELECT ?record ?identifier ?title ?beginDate ?endDate ?expressedDate ?holder</span>
+<span id="cb1-6"><a href="#cb1-6"></a>WHERE {</span>
+<span id="cb1-7"><a href="#cb1-7"></a>  GRAPH &lt;https://lindas.admin.ch/sfa/ais&gt; {</span>
+<span id="cb1-8"><a href="#cb1-8"></a>    ?record rdf:type rico:Record .</span>
+<span id="cb1-9"><a href="#cb1-9"></a>    ?record rico:title ?title .</span>
+<span id="cb1-10"><a href="#cb1-10"></a>    ?record rico:identifier ?identifier .</span>
+<span id="cb1-11"><a href="#cb1-11"></a></span>
+<span id="cb1-12"><a href="#cb1-12"></a>    OPTIONAL { ?record rico:hasOrHadHolder ?holder }</span>
+<span id="cb1-13"><a href="#cb1-13"></a></span>
+<span id="cb1-14"><a href="#cb1-14"></a>    OPTIONAL {</span>
+<span id="cb1-15"><a href="#cb1-15"></a>      ?record rico:isAssociatedWithDate ?date .</span>
+<span id="cb1-16"><a href="#cb1-16"></a>      OPTIONAL { ?date rico:beginningDate ?beginDate }</span>
+<span id="cb1-17"><a href="#cb1-17"></a>      OPTIONAL { ?date rico:endDate ?endDate }</span>
+<span id="cb1-18"><a href="#cb1-18"></a>      OPTIONAL { ?date rico:expressedDate ?expressedDate }</span>
+<span id="cb1-19"><a href="#cb1-19"></a>    }</span>
+<span id="cb1-20"><a href="#cb1-20"></a></span>
+<span id="cb1-21"><a href="#cb1-21"></a>    FILTER(CONTAINS(LCASE(?title), "bern"))</span>
+<span id="cb1-22"><a href="#cb1-22"></a>  }</span>
+<span id="cb1-23"><a href="#cb1-23"></a>}</span>
+<span id="cb1-24"><a href="#cb1-24"></a>ORDER BY ?beginDate</span>
+<span id="cb1-25"><a href="#cb1-25"></a>LIMIT 100</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Run this query, then try modifying it to search for a different topic (e.g.&nbsp;a different city, a subject that interests you, or a specific date range).</p></li>
+</ol>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-3-contents" aria-controls="callout-3" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Hints for Part B
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-3" class="callout-3-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<ul>
+<li><strong>Q1</strong>: On visualize.admin.ch, search for “Verkehrsleistung” or “Flugplätzen” to find the dataset. Once selected, choose a map visualisation and filter by the year 2023. Compare the circle sizes or values for Geneva and Basel.</li>
+<li><strong>Q2</strong>: Select the line chart view and filter for Zurich Airport only.</li>
+<li><strong>Q3</strong>: To explore the aviation cube via SPARQL, start with a <code>DESCRIBE</code> query to understand the structure, or try <code>SELECT * WHERE { ?s ?p ?o } LIMIT 20</code> within the FOCA graph. The observations contain dimensions for airport, year, and a measure for the number of movements. You may need to experiment with the predicate URIs — look at what properties the observations have.</li>
+<li><strong>Q4</strong>: <a href="https://www.ica.org/standards/RiC/ontology">Records in Context (RiC)</a> is an ontology developed by the International Council on Archives (ICA) for describing archival records as Linked Data. In the query, <code>rico:Record</code> represents an archival record, <code>rico:title</code> its title, and <code>rico:isAssociatedWithDate</code> links to date information. Try replacing <code>"bern"</code> in the <code>FILTER</code> with another term, or remove the filter entirely and add <code>FILTER(?beginDate &gt; "1900-01-01"^^xsd:date)</code> to explore records from the 20th century onwards.</li>
+</ul>
+</div>
+</div>
+</div>
 
 
+</section>
 </section>
 </section>
 
