@@ -171,6 +171,19 @@ Select a proposition (A, B, C, etc.) for each framework. When you arere ready, c
 | F | Digital object interoperability |
 | G | Research transparency and reproducibility |
 
+
+::: {.callout-tip collapse="true"}
+## Hints
+
+- **FLOSS**: Think about what the "S" in this acronym stands for. Which proposition relates most directly to that?
+- **LOUD**: The "U" in this acronym is key — this framework is about making data not just open, but genuinely _usable_. Who is the primary target audience?
+- **OA**: This two-letter abbreviation is primarily associated with the academic and scholarly world. What type of output does it focus on making freely available?
+- **FAIR**: One of the four letters stands for "Findable". What technical mechanism is essential for making data findable on the web?
+- **Collections as Data**: This framework reimagines cultural heritage collections as things that can be computed on. Think about what needs to happen for digital objects from different institutions to work together.
+- **CARE**: This framework emerged from Indigenous data governance discussions. Consider what its core values — Collective benefit, Authority to control, Responsibility, Ethics — prioritise above all.
+- **Open Science**: This is the broadest movement on the list, covering the entire research lifecycle. What are the fundamental goals it seeks to achieve in how research is conducted?
+:::
+
 <div id="matching-exercise"></div>
 
 <div style="text-align: center; margin-top: 2rem;">
@@ -223,6 +236,8 @@ Select a proposition (A, B, C, etc.) for each framework. When you arere ready, c
 </div>
 
 </div>
+
+
 
 <script>
 const frameworks = [

@@ -14,11 +14,33 @@ license: "CC BY"
 
 ## The Reuser's Perspective (OGD)
 
-### A - open.data.swiss
+::: {.callout-note}
+## Instructions
+Go to these three Open Governement Data (OGD) platforms, browse, search and do what is described below. You can do this exercise alone or in pairs. The whole exercise should take between 15 and 20 minutes. Afterwards, you will share what you have discovered and/or created with the class. 
+:::
 
-(...)
+### A - opendata.swiss
+
+Go to [opendata.swiss](https://opendata.swiss/). 
+
+1. What are the three cantons that provide the most datasets on opendata.swiss?
+
+2. Something else
+
+3. Same thing with the API / https://handbook.opendata.swiss
+
+4. How many mailboxes are in... From where do the data come?
+
+https://wieviele-briefkaesten-gibt-es.streamlit.app/ 
+
+
+
+
+
 
 ### B - LINDAS/Visualize
+
+Create a visualization 
 
 Create a dashboard on [visualize.admin.ch](https://visualize.admin.ch/)
 

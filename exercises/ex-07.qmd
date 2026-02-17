@@ -17,9 +17,15 @@ license: "CC BY"
 ### A. Getting started
 
 1. Install the software (<https://openrefine.org/docs>)
-2. Run it locally (accessible at <http://127.0.0.1:3333/>)
+2. Run it locally (usually accessible at <http://127.0.0.1:3333/>)
 3. Have a look at the different pages and functionalities
 4. Create a new project by importing any supported files
+
+::: {.callout-tip collapse="true"}
+## Hints for Part A
+- OpenRefine runs in your browser but is a local application — no data leaves your machine.
+- Try importing a small CSV or Excel file you already have to get familiar with the interface before moving on.
+:::
 
 ### B. Basic Cleaning & Faceting with the Powerhouse Museum Dataset
 
@@ -28,12 +34,25 @@ license: "CC BY"
 7. **Clustering**: Create a *Text facet* on the `category` column. Click *Cluster* and use the "key collision" method to merge case inconsistencies (e.g., "Pottery" vs "pottery").
 8. **Multi-valued cells**: Split the `categories` column by the separator `|` (pipe character). Count how many objects have more than 3 categories, then rejoin the cells.
 
+::: {.callout-tip collapse="true"}
+## Hints for Part B
+- For step 6, the blank facet is under *Facet > Customized facets > Facet by blank*.
+- For step 7, try different clustering methods (fingerprint, ngram) — they catch different types of inconsistencies.
+- For step 8, use *Edit cells > Split multi-valued cells* and then *Join multi-valued cells* to rejoin.
+:::
+
 ### C. Authority Control & Reconciliation with the Metropolitan Museum of Art
 
 9. Create a new project by importing the Met Museum CSV (<https://github.com/metmuseum/openaccess>) — use the first 5,000 rows for better performance
 10. **Reconcile artists**: Select the `Artist Display Name` column. Start reconciling against **Wikidata** (service: <https://wikidata.reconci.link/en/api>, type: **Q5** for humans).
 11. **Judgment exercise**: Auto-match high confidence scores (>90), manually review medium scores (70-90) to distinguish between homonyms (e.g., different "John Smith" artists), and mark low scores (<70) as "None".
 12. **Extract QIDs**: Transform reconciled cells to extract just the QID number for external linking.
+
+::: {.callout-tip collapse="true"}
+## Hints for Part C
+- To add a reconciliation service: *Reconcile > Start reconciling > Add Standard Service* and paste the URL.
+- For step 12, use *Edit cells > Transform* with GREL: `cell.recon.match.id`
+:::
 
 ### D. Manuscript Reconciliation with Biblissima
 
@@ -44,6 +63,12 @@ license: "CC BY"
 
 Cf. @sajdakReconcilierAvecOpenRefine2024. 
 
+::: {.callout-tip collapse="true"}
+## Hints for Part D
+- The Biblissima endpoint works like Wikidata's — add it the same way and select the "Manuscript" type.
+- For step 16, the fetched JSON may contain a `iiif_manifest_url` key — use `value.parseJson()['iiif_manifest_url']` to extract it.
+:::
+
 ### E. API Integration & JSON with the Smithsonian
 
 17. Create a new project by importing a Smithsonian JSON file (not CSV) from <https://github.com/Smithsonian/OpenAccess>
@@ -51,10 +76,22 @@ Cf. @sajdakReconcilierAvecOpenRefine2024.
 19. **Extract media**: Parse the JSON to find objects with images by extracting `online_media.mediaCount`
 20. **Reconcile topics**: Match `topic` fields against Library of Congress Subject Headings (LCSH) using their reconciliation service.
 
+::: {.callout-tip collapse="true"}
+## Hints for Part E
+- When importing JSON, OpenRefine lets you select the record path — pick the array that contains the collection objects.
+- For step 18, use `value.parseJson()` in *Edit cells > Transform* to navigate nested structures.
+:::
+
 ### F. A step further...
 
 21. Export your cleaned datasets in both CSV and JSON formats
 22. Export the project history (OpenRefine project archive) to document your transformation steps
+
+::: {.callout-tip collapse="true"}
+## Hints for Part F
+- Use *Export > Comma-separated value* and *Export > Templating* (for JSON) respectively.
+- The project archive is under *Export > OpenRefine project archive to file* — this saves all your transformation history.
+:::
 
 More information and tutorials on OpenRefine can be found on the following links:
 

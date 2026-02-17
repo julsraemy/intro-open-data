@@ -449,7 +449,7 @@ div.csl-indent {
     <div>
     <div class="quarto-title-meta-heading">Modified</div>
     <div class="quarto-title-meta-contents">
-      <p class="date-modified">February 9, 2026</p>
+      <p class="date-modified">February 17, 2026</p>
     </div>
   </div>
     
@@ -466,10 +466,29 @@ div.csl-indent {
 <h3 class="anchored" data-anchor-id="a.-getting-started">A. Getting started</h3>
 <ol type="1">
 <li>Install the software (<a href="https://openrefine.org/docs" class="uri">https://openrefine.org/docs</a>)</li>
-<li>Run it locally (accessible at <a href="http://127.0.0.1:3333/" class="uri">http://127.0.0.1:3333/</a>)</li>
+<li>Run it locally (usually accessible at <a href="http://127.0.0.1:3333/" class="uri">http://127.0.0.1:3333/</a>)</li>
 <li>Have a look at the different pages and functionalities</li>
 <li>Create a new project by importing any supported files</li>
 </ol>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Hints for Part A
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-1" class="callout-1-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<ul>
+<li>OpenRefine runs in your browser but is a local application — no data leaves your machine.</li>
+<li>Try importing a small CSV or Excel file you already have to get familiar with the interface before moving on.</li>
+</ul>
+</div>
+</div>
+</div>
 </section>
 <section id="b.-basic-cleaning-faceting-with-the-powerhouse-museum-dataset" class="level3">
 <h3 class="anchored" data-anchor-id="b.-basic-cleaning-faceting-with-the-powerhouse-museum-dataset">B. Basic Cleaning &amp; Faceting with the Powerhouse Museum Dataset</h3>
@@ -479,6 +498,26 @@ div.csl-indent {
 <li><strong>Clustering</strong>: Create a <em>Text facet</em> on the <code>category</code> column. Click <em>Cluster</em> and use the “key collision” method to merge case inconsistencies (e.g., “Pottery” vs “pottery”).</li>
 <li><strong>Multi-valued cells</strong>: Split the <code>categories</code> column by the separator <code>|</code> (pipe character). Count how many objects have more than 3 categories, then rejoin the cells.</li>
 </ol>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Hints for Part B
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-2" class="callout-2-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<ul>
+<li>For step 6, the blank facet is under <em>Facet &gt; Customized facets &gt; Facet by blank</em>.</li>
+<li>For step 7, try different clustering methods (fingerprint, ngram) — they catch different types of inconsistencies.</li>
+<li>For step 8, use <em>Edit cells &gt; Split multi-valued cells</em> and then <em>Join multi-valued cells</em> to rejoin.</li>
+</ul>
+</div>
+</div>
+</div>
 </section>
 <section id="c.-authority-control-reconciliation-with-the-metropolitan-museum-of-art" class="level3">
 <h3 class="anchored" data-anchor-id="c.-authority-control-reconciliation-with-the-metropolitan-museum-of-art">C. Authority Control &amp; Reconciliation with the Metropolitan Museum of Art</h3>
@@ -488,6 +527,25 @@ div.csl-indent {
 <li><strong>Judgment exercise</strong>: Auto-match high confidence scores (&gt;90), manually review medium scores (70-90) to distinguish between homonyms (e.g., different “John Smith” artists), and mark low scores (&lt;70) as “None”.</li>
 <li><strong>Extract QIDs</strong>: Transform reconciled cells to extract just the QID number for external linking.</li>
 </ol>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-3-contents" aria-controls="callout-3" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Hints for Part C
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-3" class="callout-3-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<ul>
+<li>To add a reconciliation service: <em>Reconcile &gt; Start reconciling &gt; Add Standard Service</em> and paste the URL.</li>
+<li>For step 12, use <em>Edit cells &gt; Transform</em> with GREL: <code>cell.recon.match.id</code></li>
+</ul>
+</div>
+</div>
+</div>
 </section>
 <section id="d.-manuscript-reconciliation-with-biblissima" class="level3">
 <h3 class="anchored" data-anchor-id="d.-manuscript-reconciliation-with-biblissima">D. Manuscript Reconciliation with Biblissima</h3>
@@ -498,6 +556,25 @@ div.csl-indent {
 <li><strong>Enrich with IIIF</strong> (optional extension): After reconciliation, use <em>Edit column &gt; Add column by fetching URLs</em> to retrieve JSON data from the reconciled Biblissima URIs. Parse the JSON to extract <code>iiif_manifest_url</code> fields where available.</li>
 </ol>
 <p>Cf. <span class="citation" data-cites="sajdakReconcilierAvecOpenRefine2024">Sajdak (<a href="#ref-sajdakReconcilierAvecOpenRefine2024" role="doc-biblioref">2024</a>)</span>.</p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-4-contents" aria-controls="callout-4" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Hints for Part D
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-4" class="callout-4-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<ul>
+<li>The Biblissima endpoint works like Wikidata’s — add it the same way and select the “Manuscript” type.</li>
+<li>For step 16, the fetched JSON may contain a <code>iiif_manifest_url</code> key — use <code>value.parseJson()['iiif_manifest_url']</code> to extract it.</li>
+</ul>
+</div>
+</div>
+</div>
 </section>
 <section id="e.-api-integration-json-with-the-smithsonian" class="level3">
 <h3 class="anchored" data-anchor-id="e.-api-integration-json-with-the-smithsonian">E. API Integration &amp; JSON with the Smithsonian</h3>
@@ -507,6 +584,25 @@ div.csl-indent {
 <li><strong>Extract media</strong>: Parse the JSON to find objects with images by extracting <code>online_media.mediaCount</code></li>
 <li><strong>Reconcile topics</strong>: Match <code>topic</code> fields against Library of Congress Subject Headings (LCSH) using their reconciliation service.</li>
 </ol>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-5-contents" aria-controls="callout-5" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Hints for Part E
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-5" class="callout-5-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<ul>
+<li>When importing JSON, OpenRefine lets you select the record path — pick the array that contains the collection objects.</li>
+<li>For step 18, use <code>value.parseJson()</code> in <em>Edit cells &gt; Transform</em> to navigate nested structures.</li>
+</ul>
+</div>
+</div>
+</div>
 </section>
 <section id="f.-a-step-further" class="level3">
 <h3 class="anchored" data-anchor-id="f.-a-step-further">F. A step further…</h3>
@@ -514,6 +610,25 @@ div.csl-indent {
 <li>Export your cleaned datasets in both CSV and JSON formats</li>
 <li>Export the project history (OpenRefine project archive) to document your transformation steps</li>
 </ol>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-6-contents" aria-controls="callout-6" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Hints for Part F
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-6" class="callout-6-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<ul>
+<li>Use <em>Export &gt; Comma-separated value</em> and <em>Export &gt; Templating</em> (for JSON) respectively.</li>
+<li>The project archive is under <em>Export &gt; OpenRefine project archive to file</em> — this saves all your transformation history.</li>
+</ul>
+</div>
+</div>
+</div>
 <p>More information and tutorials on OpenRefine can be found on the following links:</p>
 <ul>
 <li>Library Carpentry website: <a href="https://librarycarpentry.org/lc-open-refine/" class="uri">https://librarycarpentry.org/lc-open-refine/</a></li>

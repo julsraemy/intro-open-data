@@ -134,6 +134,14 @@ ex:chateauroux_library a schema:Library ;
 - How many triples have `ex:manuscript_042` as their subject?
 - What relationship links the manuscript to the library?
 
+::: {.callout-tip collapse="true"}
+## Hints for Part A
+
+- **Type of resource**: Pay attention to the keyword `a` in Turtle — it is shorthand for `rdf:type`. What comes right after `a` on the line where `ex:manuscript_042` is first described?
+- **Counting triples**: Each property-value pair (including the `a` statement) about a subject is one triple. Remember that `;` separates multiple triples sharing the same subject. Count each line carefully.
+- **Relationship to the library**: Look for the triple where the object is `ex:chateauroux_library`. The predicate (property) in that triple is your answer.
+:::
+
 ### B: Real-World SPARQL Exploration (6-8 minutes)
 
 Visit the **Wikidata Query Service**: <https://query.wikidata.org/>
@@ -153,11 +161,26 @@ WHERE {
 - How many paintings with images did you find?
 - Try modifying the query to find paintings by a different artist (hint: search Wikidata for another artist's Q-number, e.g., Pablo Picasso is `wd:Q5593`). What artist did you choose and how many results did you get?
 
+::: {.callout-tip collapse="true"}
+## Hints for Part B
+
+- **Number of paintings**: After running the query, the Wikidata Query Service shows the total result count at the bottom of the results table. You should find several dozen results for Van Gogh.
+- **Modifying the query**: The only part you need to change is `wd:Q5582` (Van Gogh's identifier). To find another artist's Q-number, use the Wikidata search bar at [wikidata.org](https://www.wikidata.org/) and look for the Q-identifier on their page. Replace it in the `wdt:P170` line. Some artists may have significantly more or fewer results depending on how well their works are documented on Wikidata.
+:::
+
 ### C: Reflection Questions (5-7 minutes)
 
 - What are the main advantages of using Linked Data for cultural heritage collections?
 - What challenges might institutions face when implementing Linked Data?
 - Based on your experience with the Wikidata Query Service, what makes a SPARQL endpoint useful or difficult to use?
+
+::: {.callout-tip collapse="true"}
+## Hints for Part C
+
+- **Advantages**: Think about what happens when collections from different institutions can reference the same entities (people, places, concepts). Consider aspects like discoverability, interoperability across systems, and the ability to enrich records by linking to external knowledge bases.
+- **Challenges**: Consider the practical side — what does an institution need in terms of expertise, tooling, and ongoing maintenance? Think also about data quality, choosing the right vocabularies/ontologies, and dealing with legacy cataloguing systems.
+- **SPARQL usability**: Reflect on your own experience — was the query language intuitive? Did features like auto-completion help? Think about the balance between the power of the query language and the learning curve for newcomers.
+:::
 
 ## Additional Resources
 

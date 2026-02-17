@@ -1,0 +1,531 @@
+---
+title: "Characteristics of Open Data"
+subtitle: "Definitions, History, Licences & Technical Means"
+author:
+  - name: |
+      <strong>Julien A. Raemy</strong> (docuteam SA; University of Bern)<br>
+      <a href="https://orcid.org/0000-0002-4711-5759"><img src="https://img.shields.io/static/v1?label=ORCID&message=0000-0002-4711-5759&color=A6CE39&logo=orcid" alt="ORCID"></a>
+      <a href="https://scholar.google.ch/citations?user=pGROUG0AAAAJ&hl"><img src="https://img.shields.io/static/v1?label=Google%20Scholar&message=Julien%20A.%20Raemy&color=4285F4&logo=googlescholar" alt="Google Scholar"></a>
+      <a href="https://github.com/julsraemy"><img src="https://img.shields.io/static/v1?label=GitHub&message=julsraemy&color=181717&logo=github" alt="GitHub"></a>
+      <a href="https://hcommons.social/@julsraemy"><img src="https://img.shields.io/static/v1?label=Mastodon&message=@julsraemy@hcommons.social&color=6364FF&logo=mastodon" alt="Mastodon"></a><br>
+      HES-SO University of Applied Sciences and Arts Western Switzerland<br>
+      HEG-GE Bachelor Information Science
+format:
+  revealjs:
+    theme: [default, ../styles/slides.scss]
+    transition: slide
+    background-transition: fade
+    slide-number: true
+    controls: true
+    progress: true
+    hash: true
+    navigation-mode: linear
+    width: 1920
+    height: 1080
+    margin: 0.04
+    min-scale: 0.2
+    max-scale: 2.0
+    show-notes: false
+    link-external-newwindow: true
+    footer: |
+      <div class="footer-content">7C2-CT-4A Introduction to Open Data</div>
+    include-after-body:
+      text: |
+        <script>
+        document.addEventListener('DOMContentLoaded', function() {
+          // Make all external links open in new tab
+          document.querySelectorAll('a[href^="http"]').forEach(function(link) {
+            link.setAttribute('target', '_blank');
+            link.setAttribute('rel', 'noopener noreferrer');
+          });
+
+          // Add home button to top-left corner (targets parent window to break out of iframe)
+          var homeButton = document.createElement('a');
+          homeButton.href = 'characteristics.html';
+          homeButton.target = '_parent';
+          homeButton.innerHTML = '🏠 Home';
+          homeButton.style.cssText = 'position: fixed; top: 20px; left: 20px; z-index: 1000; background: rgba(70, 91, 100, 0.9); color: white; padding: 8px 15px; border-radius: 5px; text-decoration: none; font-family: "CMUSansSerif", sans-serif; font-size: 0.8em; transition: background 0.2s;';
+          homeButton.onmouseover = function() { this.style.background = 'rgba(70, 91, 100, 1)'; };
+          homeButton.onmouseout = function() { this.style.background = 'rgba(70, 91, 100, 0.9)'; };
+          document.body.appendChild(homeButton);
+        });
+        </script>
+---
+
+
+## Definitions: Open(ness) {.smaller}
+
+> Open means anyone can freely access, use, modify, and share for any purpose (subject, at most, to requirements that preserve provenance and openness).
+
+[Open Knowledge Network — The Open Definition](https://opendefinition.org/)
+
+::: {.incremental}
+- **No limitations on access**: Accessibility must not depend on cost, authentication, or privileges
+- **Free and open**: Open knowledge should be shared freely, without cost or barriers
+- Knowledge funded by public mandates must benefit the public without restrictions
+:::
+
+::: {.notes}
+The Open Definition from the Open Knowledge Network provides the foundational understanding of what "open" means. Key takeaway: publicly funded knowledge must serve the public.
+:::
+
+## Definitions: Data & Metadata {.smaller}
+
+:::: {.columns}
+::: {.column width="50%"}
+**Data**
+
+> Data at its most basic level as the absence of uniformity, whether in the real world or in some symbolic system. Only once such data have some recognisable structure and are given some meaning can they be considered information.
+
+Floridi (2010)
+:::
+
+::: {.column width="50%"}
+**Metadata**
+
+> Data whose purpose is to describe and give information about other data.
+
+Oxford English Dictionary (2023)
+
+> There is no fixed boundary between "data" and "metadata", and information viewed as data in one discipline may be metadata in another.
+
+Alter & Gonzalez (2018)
+:::
+::::
+
+::: {.notes}
+Data and metadata are foundational concepts. The boundary between them is fluid and context-dependent.
+:::
+
+## Definitions: Open Data {.smaller}
+
+> Open data and content can be freely used, modified, and shared by anyone for any purpose.
+
+[Open Knowledge Network — The Open Definition](https://opendefinition.org/)
+
+::: {.fragment}
+**Two core requirements:**
+
+1. **Legally open**: available under an open licence that permits anyone to freely access, reuse, and redistribute
+2. **Technically open**: available for no more than the cost of reproduction, in machine-readable and bulk form
+:::
+
+::: {.notes}
+Open data must satisfy both legal and technical openness to truly be considered open.
+:::
+
+## History {.smaller}
+
+::: {.incremental}
+- **1942**: Robert K. Merton — each researcher must contribute to the "common pot" and give up intellectual property rights to allow knowledge to move forward
+- **1995**: The term "Open Data" first appeared, related to geophysical and environmental data sharing
+- **November 2005**: Open Knowledge Foundation creates the Open Definition
+- **December 2007**: The Sebastopol Meeting — 30 Internet thinkers and activists define open public data and identify 8 principles
+- **February 2009**: Tim Berners-Lee at TED2009 — "Raw Data Now"
+:::
+
+::: {.notes}
+The concept of open data has deep roots in the scientific community, but the formal movement gained momentum in the 2000s.
+:::
+
+## The Sebastopol Meeting (2007) {.smaller}
+
+In December 2007, thirty thinkers and activists met in Sebastopol, CA to define open public data.
+
+:::: {.columns}
+::: {.column width="50%"}
+**Key participants:**
+
+- **Tim O'Reilly** — coined "open source" and "Web 2.0"
+- **Lawrence Lessig** — Stanford Law, founder of Creative Commons
+- **Aaron Swartz** — inventor of RSS, free knowledge activist
+:::
+
+::: {.column width="50%"}
+**Others:**
+
+- **Adrian Holovaty** — founder of EveryBlock
+- **Tom Steinberg** — founder of FixMyStreet
+:::
+::::
+
+::: {.fragment}
+Together, they created 8 principles to define and evaluate open public data.
+:::
+
+::: {.notes}
+The Sebastopol meeting was a pivotal moment in the open data movement, leading to the 8 principles of open government data.
+:::
+
+## Impact on Disciplines {.smaller}
+
+:::: {.columns}
+::: {.column width="50%"}
+**Catalysing Progress**
+
+- Drives interdisciplinary research through universally accessible datasets
+- Fosters collaboration across diverse fields
+- Facilitates advanced, data-driven research
+:::
+
+::: {.column width="50%"}
+**Discipline-specific Impact**
+
+- **Information Science**: improved data management, retrieval, and dissemination
+- **Digital Humanities**: new digital approaches to historical, cultural, and linguistic studies
+- **Data Science**: predictive modeling, ML, big data analytics across health, finance, social sciences
+:::
+::::
+
+::: {.notes}
+Open data is a foundation for collaboration and innovation across disciplines.
+:::
+
+## Typology of Open Data {.smaller}
+
+:::: {.columns}
+::: {.column width="50%"}
+**Main Sources**
+
+- **Research**: Open Research Data (ORD)
+- **Government**: Open Government Data (OGD)
+- **Non-profit Organisations**
+- **Private Organisations**
+:::
+
+::: {.column width="50%"}
+**Disciplines**
+
+- Cultural Heritage
+- Healthcare & Education
+- Transportation & Meteorology
+- Geospatial Information
+- Economic & Finance
+- Legal & Criminal Justice
+- ...
+:::
+::::
+
+::: {.notes}
+Open data comes from a variety of sources and spans across many disciplines.
+:::
+
+## Open Research Data (ORD) {.smaller}
+
+> Research data are the evidence that underpins the answer to the research question, and can be used to validate findings regardless of its form.
+
+**DORA** (San Francisco Declaration on Research Assessment):
+
+::: {.incremental}
+- Consider the value and impact of all research outputs (**including datasets** and software)
+- Be open and transparent by providing data and methods used to calculate all metrics
+- Provide data under a licence that allows unrestricted reuse
+:::
+
+::: {.notes}
+Research data is a key component of the open data ecosystem. DORA emphasises the value of datasets as research outputs.
+:::
+
+## ORD in Switzerland {.smaller}
+
+:::: {.columns}
+::: {.column width="50%"}
+**SNSF Policy**
+
+Funded researchers must:
+
+- Store research data produced during their work
+- Share data with other researchers (unless bound by legal/ethical clauses)
+- Deposit data and metadata onto public repositories
+:::
+
+::: {.column width="50%"}
+**Swiss National ORD Strategy — Action Areas**
+
+1. Support researchers in adopting ORD practices
+2. Develop sustainable basic infrastructures
+3. Equip researchers for ORD skills development
+4. Build supportive institutional conditions
+:::
+::::
+
+::: {.notes}
+Switzerland has a strong policy framework for open research data through the SNSF and the national ORD strategy.
+:::
+
+## RDM & DMP {.smaller}
+
+:::: {.columns}
+::: {.column width="50%"}
+**Research Data Management (RDM)**
+
+- Organisation, storage, and preservation of research data
+- Ensures data are well-organised, accessible for current and future research
+- Improves reliability, validity, and reproducibility
+:::
+
+::: {.column width="50%"}
+**Data Management Plan (DMP)**
+
+- Formal document outlining data handling during and after a project
+- Now mandatory for most funding agencies
+- A DMP is essentially a blueprint for RDM
+:::
+::::
+
+::: {.fragment}
+University libraries often provide services and resources to assist researchers in creating DMPs.
+:::
+
+::: {.notes}
+RDM and DMP are closely linked. The DMP provides the plan, and RDM is the day-to-day execution.
+:::
+
+## Open Government Data (OGD) {.smaller}
+
+> The work of government involves collecting huge amounts of data, much of which is not confidential. The value of much of this data can be greatly enhanced by releasing it as open data.
+
+**OGD in Switzerland:**
+
+::: {.incremental}
+- OGD Masterplan by the Federal Statistical Office
+- **LMETA Art. 10, al. 4**: Data must be published free of charge, in a timely manner, in machine-readable and open formats
+- National data management (NaDB), i14y Interoperability platform, Digital Switzerland Strategy
+:::
+
+::: {.notes}
+Switzerland has a strong legal and institutional framework for open government data.
+:::
+
+## Purposes of Open Data {.smaller}
+
+::: {.incremental}
+- Transparency and democratic control
+- Participation
+- Self-empowerment
+- Improved or new private products and services
+- Innovation
+- Improved efficiency and effectiveness of government services
+- Impact measurement of policies
+- New knowledge from combined data sources and patterns in large data volumes
+:::
+
+::: {.notes}
+Open data serves many purposes, from transparency and accountability to innovation and new knowledge creation.
+:::
+
+## OGD Principles (Sebastopol, 2007) {.smaller}
+
+:::: {.columns}
+::: {.column width="50%"}
+1. **Complete**: All public data is made available
+2. **Primary**: Data at the source, highest granularity
+3. **Timely**: Available as quickly as necessary
+4. **Accessible**: Widest range of users and purposes
+:::
+
+::: {.column width="50%"}
+5. **Machine processable**: Structured for automated processing
+6. **Non-discriminatory**: No registration required
+7. **Non-proprietary**: Open formats only
+8. **License-free**: No copyright, patent, or trade secret restrictions
+:::
+::::
+
+::: {.notes}
+These 8 principles from the Sebastopol meeting define the characteristics that open government data should have.
+:::
+
+## Licences: Copyright vs. Copyleft {.smaller}
+
+:::: {.columns}
+::: {.column width="50%"}
+**Copyright**
+
+- Exclusive rights to control use, reproduction, distribution
+- Protects economic interests
+- **Anglo-Saxon**: focuses on economic rights, transferable
+- **European** (_droit d'auteur_): emphasises inalienable moral rights
+:::
+
+::: {.column width="50%"}
+**Copyleft**
+
+- Allows use, modification, distribution
+- Condition: keep works and derivatives open
+- Promotes freedom, sharing, and collaboration
+:::
+::::
+
+::: {.notes}
+Understanding the distinction between copyright and copyleft is essential for working with open data licences.
+:::
+
+## Creative Commons (CC) {.smaller}
+
+:::: {.columns}
+::: {.column width="50%"}
+- [![](https://julsraemy.ch/prezi/assets/cc-by.svg)](https://creativecommons.org/licenses/by/4.0/) **CC BY**: Attribution
+- [![](https://julsraemy.ch/prezi/assets/cc-by-sa.svg)](https://creativecommons.org/licenses/by-sa/4.0/) **CC BY-SA**: Attribution, Share Alike
+- [![](https://julsraemy.ch/prezi/assets/cc-by-nd.svg)](https://creativecommons.org/licenses/by-nd/4.0/) **CC BY-ND**: Attribution, No Derivatives
+- [![](https://julsraemy.ch/prezi/assets/cc-by-nc.svg)](https://creativecommons.org/licenses/by-nc/4.0/) **CC BY-NC**: Attribution, No Commercial Use
+:::
+
+::: {.column width="50%"}
+- [![](https://julsraemy.ch/prezi/assets/cc-by-nc-sa.svg)](https://creativecommons.org/licenses/by-nc-sa/4.0/) **CC BY-NC-SA**: Attribution, NC, Share Alike
+- [![](https://julsraemy.ch/prezi/assets/cc-by-nc-nd.svg)](https://creativecommons.org/licenses/by-nc-nd/4.0/) **CC BY-NC-ND**: Attribution, NC, No Derivatives
+- [![](https://julsraemy.ch/prezi/assets/cc0.svg)](https://creativecommons.org/public-domain/cc0/) **CC0**: Public Domain Dedication
+- [![](https://julsraemy.ch/prezi/assets/cc-pdm.svg)](https://creativecommons.org/public-domain/pdm/) **PDM**: Public Domain Mark
+:::
+::::
+
+::: {.notes}
+Creative Commons licences provide a standardised way to grant permissions for creative works and data.
+:::
+
+## CC Spectrum & Other Licences {.smaller}
+
+:::: {.columns}
+::: {.column width="50%"}
+**CC Spectrum**
+
+![](https://upload.wikimedia.org/wikipedia/commons/e/e1/Creative_commons_license_spectrum.svg)
+:::
+
+::: {.column width="50%"}
+**Other Relevant Licences**
+
+- **Rights Statements**: 12 statements for cultural heritage (In Copyright / No Copyright / Other)
+- **ODbL**: Copyleft, Attribution & Share-Alike for databases
+- **PDDL**: Public domain for databases
+- **Software**: GPL, AGPL, MPL, MIT, Apache
+- **RAIL**: Responsible AI Licenses (data, apps, models, source code)
+- **IHAIL**: I Hate AI License (prohibits AI use)
+:::
+::::
+
+::: {.notes}
+Beyond Creative Commons, there are many specialised licences for different types of data and software.
+:::
+
+## Recommendations for Open Data Licences {.smaller}
+
+Preferred Creative Commons licences for open datasets (Santos, 2020):
+
+::: {.incremental}
+1. [![](https://julsraemy.ch/prezi/assets/cc0.svg)](https://creativecommons.org/public-domain/cc0/) **CC0** — to the fullest extent allowed by law (complete waiver not feasible under Swiss regulations)
+2. [![](https://julsraemy.ch/prezi/assets/cc-by.svg)](https://creativecommons.org/licenses/by/4.0/) **CC BY 4.0**
+3. [![](https://julsraemy.ch/prezi/assets/cc-by-sa.svg)](https://creativecommons.org/licenses/by-sa/4.0/) **CC BY-SA 4.0**
+:::
+
+::: {.fragment}
+![](https://julsraemy.ch/prezi/assets/santos-arbre.svg){height="350"}
+:::
+
+::: {.notes}
+For open research data, CC0 is the recommended first choice, followed by CC BY and CC BY-SA.
+:::
+
+## Technical Means: Overview {.smaller}
+
+Key factors in providing structured data for machines:
+
+:::: {.columns}
+::: {.column width="50%"}
+**Data & Formats**
+
+- Text-based formats: TXT, MD, CSV, XML, Turtle, JSON, JSON-LD
+- Binary-encoded formats: images (TIFF, JPEG2000), audio (FLAC, WAV), video (FFV1/MKV), documents (PDF/A)
+:::
+
+::: {.column width="50%"}
+**Supporting Elements**
+
+- Metadata standards / schemas
+- Documentation
+- Protocols
+- Infrastructure
+:::
+::::
+
+::: {.notes}
+Technical means encompass the formats, standards, and infrastructure needed to make data accessible and interoperable.
+:::
+
+## Infrastructure {.smaller}
+
+> It is by definition invisible, part of the background for other kinds of work.
+
+Star (1999) identifies nine dimensions:
+
+:::: {.columns}
+::: {.column width="50%"}
+- Embeddedness
+- Transparency
+- Reach or scope
+- Learned as part of membership
+- Links with conventions of practice
+:::
+
+::: {.column width="50%"}
+- Embodiment of standards
+- Built on an installed base
+- Becomes visible upon breakdown
+- Fixed in modular increments
+:::
+::::
+
+::: {.notes}
+Infrastructure is typically invisible until it breaks down. Understanding its dimensions helps in designing robust open data systems.
+:::
+
+## Metadata Standards & DCAT {.smaller}
+
+:::: {.columns}
+::: {.column width="50%"}
+**Standards vs. Schemas**
+
+- **Standards**: rules and guidelines (CIDOC-CRM, Dublin Core, MARC, PREMIS)
+- **Schemas**: specific implementations (EAD, LIDO, MODS)
+
+_Standards provide the "what" and "why"; schemas offer the "how"._
+:::
+
+::: {.column width="50%"}
+**DCAT** (Data Catalog Vocabulary)
+
+Seven main classes:
+
+1. `dcat:Catalog`
+2. `dcat:Resource`
+3. `dcat:Dataset`
+4. `dcat:Distribution`
+5. `dcat:DataService`
+6. `dcat:DatasetSeries`
+7. `dcat:CatalogRecord`
+:::
+::::
+
+::: {.fragment}
+**DCAT-AP CH** (Swiss profile) is a subprofile of **DCAT-AP** (European profile)
+:::
+
+::: {.notes}
+DCAT is the standard vocabulary for describing data catalogues on the Web. Switzerland uses its own application profile.
+:::
+
+## Protocols {.smaller}
+
+::: {.incremental}
+- **API** — mechanism enabling two software components to communicate
+  - **REST**: stateless HTTP requests
+  - **SOAP**: structured information exchange with high security
+- **FTP** — transfer of large data files
+- **OAI-PMH** — harvesting metadata from digital libraries
+- **RSS / Atom Feeds** — regular updates for frequently changing data
+- **SPARQL** — querying and manipulating RDF data
+:::
+
+::: {.notes}
+These protocols and technologies form the backbone of open data exchange and accessibility on the internet.
+:::

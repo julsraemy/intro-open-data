@@ -34,3 +34,15 @@ f) **Repository Policies**: Does Yareta have a preservation policy? If so, what 
 
 g) **Additional Information**: Compare the subject coverage between OLOS and Yareta. Which repository is more discipline-specific, and which is more general-purpose?
 
+::: {.callout-tip collapse="true"}
+## Hints
+
+- **a) Persistent Identifiers**: On re3data, try filtering by country (Switzerland) and by persistent identifier type (ARK). The repository you are looking for is tied to a national-level infrastructure for research data in the humanities and social sciences. Once you find it, browse its collections to locate an example ARK — these typically start with `ark:/`.
+- **b) Repository Software**: Use re3data's filters to narrow down by software (Invenio RDM) and subject (life sciences). For the general-purpose repository, think about the most well-known open-access platform used by researchers worldwide to deposit datasets — it is operated by CERN.
+- **c) Data Accessibility**: Look at the Yareta entry on re3data and check the "Data access" section. Pay attention to whether the repository distinguishes between metadata access and data file access — not all content may be freely downloadable, even if the metadata is visible.
+- **d) Certification & Trust**: On re3data, filter Swiss repositories by certification type (CoreTrustSeal). CoreTrustSeal is a community-based certification focusing on sustainable and trustworthy data infrastructure. Think about what guarantees it gives depositors and reusers.
+- **e) Terms of Use and Licences**: Check the OLOS entry on re3data and look at its licence information. Consider whether it supports Creative Commons licences and if depositors can choose from multiple options.
+- **f) Repository Policies**: Look at Yareta's re3data entry for its preservation policy details. Check whether a specific retention period is mentioned and whether it commits to keeping data beyond the end of a research project.
+- **g) Additional Information**: Compare the "Subject" fields of both OLOS and Yareta on re3data. One is affiliated with a specific university of applied sciences (which may reflect in its subject focus), while the other serves a broader research university context.
+:::
+

@@ -637,7 +637,7 @@ Specifications based on DCAT for describing public sector datasets
 
 - DCAT Application Profile for data portals in Europe: [DCAT-AP 3.0](https://semiceu.github.io/DCAT-AP/releases/3.0.0/)
 - DCAT Application Profile for the United States of America: [DCAT-US - Version 3](https://doi-do.github.io/dcat-us/)
-- DCAT Application Profile for Data Portals in Switzerland (DCAT-AP CH): [eCH-0200](https://ech.ch/fr/ech/ech-0200/2.0.0)
+- DCAT Application Profile for Data Portals in Switzerland (DCAT-AP CH): [eCH-0200](https://ech.ch/fr/ech/ech-0200/)
 
 _DCAT-AP CH is a subprofile of DCAT-AP_
 
@@ -720,6 +720,17 @@ A robust set of rules and standards governs the exchange and accessibility of op
 - **Really Simple Syndication or Rich Site Summary (RSS) / Atom Feeds**: used for regularly updating or publishing data that changes frequently. Feeds enable publishers to syndicate data automatically.
 - **SPARQL Protocol and RDF Query Language (SPARQL)**: used for querying and manipulating RDF
 
+
+## Condensed Slide Version
+
+::: {.callout-tip}
+## Navigate the slides
+Use arrow keys or the controls at the bottom to navigate through the presentation. Press `f` for fullscreen mode.
+:::
+
+::: {.column-page}
+<iframe src="characteristics-slides.html" width="100%" height="600px" style="border: 1px solid #ccc; border-radius: 4px;"></iframe>
+:::
 
 ## References
 

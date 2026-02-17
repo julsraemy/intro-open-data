@@ -30,3 +30,16 @@ Please read @disliCopyrightLicencingCultural2025 and answer the questions below.
 5. Choose one example from Table 4 (restricted public domain collections). What specific technical and policy changes would be needed to transform this into a proper "collection as data" following the article's recommendations?
 
 6. The CARE principles emphasise "Collective Benefit" and "Authority to Control" for Indigenous data. How might these principles conflict with or complement the push for open licences in cultural heritage contexts? When should access be restricted?
+
+::: {.callout-tip collapse="true"}
+## Hints
+
+It is recommended to write your answers in a document (Word, LibreOffice Writer, Markdown, etc.) so you can refer back to them during the in-class discussion.
+
+- **Q1**: Think about institutional motivations beyond copyright — revenue, control, reputation. The article discusses the gap between legal status and institutional behaviour.
+- **Q2**: Consider what "machine-readable" actually means in practice (e.g. structured metadata, standardised licence URIs).
+- **Q3**: The article covers several (national) frameworks. Focus on the tension between harmonisation and local legal requirements.
+- **Q4**: The article raises this question in the context of AI training. Think about whether intent-based distinctions are enforceable at scale.
+- **Q5**: Pick a concrete example and think about what would need to change both technically (formats, APIs, metadata) and legally (licence, terms of use).
+- **Q6**: Consider cases where "open by default" may not be appropriate. The CARE principles offer a framework — how does it interact with Creative Commons-style openness?
+:::

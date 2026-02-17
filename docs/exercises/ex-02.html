@@ -470,7 +470,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <div>
     <div class="quarto-title-meta-heading">Modified</div>
     <div class="quarto-title-meta-contents">
-      <p class="date-modified">February 9, 2026</p>
+      <p class="date-modified">February 17, 2026</p>
     </div>
   </div>
     
@@ -582,6 +582,26 @@ object:    &lt;http://example.org/artwork/starrynight&gt;</code></pre>
 <li>How many triples have <code>ex:manuscript_042</code> as their subject?</li>
 <li>What relationship links the manuscript to the library?</li>
 </ul>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Hints for Part A
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-1" class="callout-1-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<ul>
+<li><strong>Type of resource</strong>: Pay attention to the keyword <code>a</code> in Turtle — it is shorthand for <code>rdf:type</code>. What comes right after <code>a</code> on the line where <code>ex:manuscript_042</code> is first described?</li>
+<li><strong>Counting triples</strong>: Each property-value pair (including the <code>a</code> statement) about a subject is one triple. Remember that <code>;</code> separates multiple triples sharing the same subject. Count each line carefully.</li>
+<li><strong>Relationship to the library</strong>: Look for the triple where the object is <code>ex:chateauroux_library</code>. The predicate (property) in that triple is your answer.</li>
+</ul>
+</div>
+</div>
+</div>
 </section>
 <section id="b-real-world-sparql-exploration-6-8-minutes" class="level3">
 <h3 class="anchored" data-anchor-id="b-real-world-sparql-exploration-6-8-minutes">B: Real-World SPARQL Exploration (6-8 minutes)</h3>
@@ -598,6 +618,25 @@ object:    &lt;http://example.org/artwork/starrynight&gt;</code></pre>
 <li>How many paintings with images did you find?</li>
 <li>Try modifying the query to find paintings by a different artist (hint: search Wikidata for another artist’s Q-number, e.g., Pablo Picasso is <code>wd:Q5593</code>). What artist did you choose and how many results did you get?</li>
 </ul>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Hints for Part B
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-2" class="callout-2-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<ul>
+<li><strong>Number of paintings</strong>: After running the query, the Wikidata Query Service shows the total result count at the bottom of the results table. You should find several dozen results for Van Gogh.</li>
+<li><strong>Modifying the query</strong>: The only part you need to change is <code>wd:Q5582</code> (Van Gogh’s identifier). To find another artist’s Q-number, use the Wikidata search bar at <a href="https://www.wikidata.org/">wikidata.org</a> and look for the Q-identifier on their page. Replace it in the <code>wdt:P170</code> line. Some artists may have significantly more or fewer results depending on how well their works are documented on Wikidata.</li>
+</ul>
+</div>
+</div>
+</div>
 </section>
 <section id="c-reflection-questions-5-7-minutes" class="level3">
 <h3 class="anchored" data-anchor-id="c-reflection-questions-5-7-minutes">C: Reflection Questions (5-7 minutes)</h3>
@@ -606,6 +645,26 @@ object:    &lt;http://example.org/artwork/starrynight&gt;</code></pre>
 <li>What challenges might institutions face when implementing Linked Data?</li>
 <li>Based on your experience with the Wikidata Query Service, what makes a SPARQL endpoint useful or difficult to use?</li>
 </ul>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-3-contents" aria-controls="callout-3" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Hints for Part C
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-3" class="callout-3-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<ul>
+<li><strong>Advantages</strong>: Think about what happens when collections from different institutions can reference the same entities (people, places, concepts). Consider aspects like discoverability, interoperability across systems, and the ability to enrich records by linking to external knowledge bases.</li>
+<li><strong>Challenges</strong>: Consider the practical side — what does an institution need in terms of expertise, tooling, and ongoing maintenance? Think also about data quality, choosing the right vocabularies/ontologies, and dealing with legacy cataloguing systems.</li>
+<li><strong>SPARQL usability</strong>: Reflect on your own experience — was the query language intuitive? Did features like auto-completion help? Think about the balance between the power of the query language and the learning curve for newcomers.</li>
+</ul>
+</div>
+</div>
+</div>
 </section>
 </section>
 <section id="additional-resources" class="level2">
