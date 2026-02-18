@@ -25,7 +25,7 @@ The course is designed for undergraduate students in Information Science at the 
 - [Techniques, Software, and Tools](sections/techniques.qmd)
 - [Showcases](sections/showcases.qmd)
 
-## Why Open Data matters... TL;DR+
+## Why Open Data matters... TL;DR
 
 ::: {.callout-tip}
 ## Navigate the slides
