@@ -565,7 +565,7 @@ ul.task-list li input[type="checkbox"] {
 </iframe>
 </div>
 <div id="tabset-1-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-2-tab">
-<p><em>Irises</em> by Vincent van Gogh (Getty Museum) — a full IIIF manifest in Mirador, with multiple canvases, metadata, and annotations:</p>
+<p><em>Irises</em> by Vincent van Gogh (Getty Museum) — a IIIF manifest in Mirador:</p>
 <iframe src="https://projectmirador.org/embed/?iiif-content=https://media.getty.edu/iiif/manifest/53be857e-41e8-4198-b45d-2e0f52d3051b" width="100%" height="480px" style="border: 1px solid #dee2e6; border-radius: 4px;" allowfullscreen="">
 </iframe>
 </div>
@@ -647,7 +647,7 @@ ul.task-list li input[type="checkbox"] {
 <li>Relationships via <strong>foreign keys</strong> + SQL <code>JOIN</code></li>
 <li>IDs are <strong>local</strong> — <code>id: 1</code> means nothing outside this database</li>
 <li>Schema is <strong>rigid</strong> — adding a column requires a migration</li>
-<li>Data is <strong>siloed</strong> — not designed to link to the Rijksmuseum’s database</li>
+<li>Data is <strong>siloed</strong> — not (usually) designed to link to any other external databases</li>
 </ul>
 </div>
 <div id="tabset-2-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-2-2-tab">
@@ -792,7 +792,7 @@ graph TD
 <ul>
 <li><strong>Unique</strong>: no two entities share the same PID</li>
 <li><strong>Persistent</strong>: remains valid even if hosting infrastructure changes</li>
-<li><strong>Resolvable</strong>: points to current location via standard resolver</li>
+<li><strong>Resolvable</strong>: points to current location via standard resolver — but resolution only guarantees you can <em>find</em> the resource, not that you can <em>access</em> it; a DOI behind a paywall resolves to a landing page, not the content</li>
 <li><strong>Interoperable</strong>: recognised across systems and communities</li>
 <li><strong>Human &amp; machine-readable</strong>: accessible both visually and programmatically</li>
 </ul>
@@ -851,7 +851,7 @@ graph TD
 </div>
 <div id="callout-7" class="callout-7-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p>DOI is the industry standard for academic publishing, ORCID for researchers, ROR for institutions, and ARK for cultural heritage objects. Each PID type has a dedicated resolver: doi.org, orcid.org, ror.org, hdl.handle.net, and n2t.net (ARK).</p>
+<p>DOI is the industry standard for academic publishing, ORCID for researchers, ROR for institutions, and ARK for cultural heritage objects. Each PID type has a dedicated resolver: doi.org, orcid.org, ror.org, hdl.handle.net, and n2t.net (ARK). A critical limitation: PIDs are often conflated with open access, but they are orthogonal — a DOI resolves regardless of whether the resource is open or behind a paywall. Persistence and resolvability are properties of the identifier, not of the access conditions.</p>
 </div>
 </div>
 </div>
@@ -865,9 +865,9 @@ graph TD
 <div id="tabset-3-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-3-1-tab">
 <ul>
 <li><strong>Open Data</strong> = legally open + technically open (machine-readable)</li>
-<li><strong>Open Access (OA)</strong>: free online access to scholarly publications — Gold, Green, Diamond, Bronze…</li>
+<li><strong>Open Access (OA)</strong>: free online access to scholarly publications — complements Open Data by opening the outputs that describe and contextualise datasets</li>
 <li><strong>Open Research Data (ORD)</strong>: research datasets open by default — increasingly funder-mandated, central to university library services</li>
-<li><strong>Open Government Data (OGD)</strong>: public-sector data published proactively — replaces closed-by-default custody and fixed retention periods</li>
+<li><strong>Open Government Data (OGD)</strong>: public-sector data published proactively — but retention periods, sensitivity, and archival obligations still apply and must be respected</li>
 </ul>
 </div>
 <div id="tabset-3-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-3-2-tab">
@@ -880,7 +880,7 @@ graph TD
 </div>
 <div id="tabset-3-3" class="tab-pane" role="tabpanel" aria-labelledby="tabset-3-3-tab">
 <ul>
-<li><strong>Linked Data &amp; Triplestore</strong>: global URIs as identifiers; triples (subject → predicate → object) as the data model; SPARQL as the query language</li>
+<li><strong>Linked Data</strong>: global URIs as identifiers; triples (subject → predicate → object) as the data model (RDF as the syntax); SPARQL as the query language</li>
 <li><strong>PIDs</strong>: unique, persistent, resolvable — the same entity recognised across every institution</li>
 </ul>
 </div>
@@ -898,9 +898,9 @@ graph TD
 </div>
 <div id="callout-8" class="callout-8-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p><strong>Open Science Landscape</strong>: OA covers scholarly publications; ORD extends the logic to any dataset produced by research — the two are related but distinct, and funders increasingly mandate both. OGD applies open data principles to the public sector: for archives, this overturns the traditional logic of retention periods and scheduled releases in favour of proactive, early publication.</p>
+<p><strong>Open Science Landscape</strong>: OA covers scholarly publications; ORD extends the logic to any dataset produced by research — the two are related but distinct, and funders increasingly mandate both. OA and Open Data are complementary: open publications provide the interpretive layer for open datasets, and together they make research fully reproducible. OGD applies open data principles to the public sector, but retention periods, data sensitivity, and archival obligations remain in force — proactive publication must be balanced against these constraints, which affect archives in particular.</p>
 <p><strong>Principles &amp; Frameworks</strong>: FAIR and CARE are complementary — FAIR governs technical structure, CARE protects the interests of communities whose data is used. Collections as Data and LOUD are responses specific to GLAM and Linked Data contexts: the former reframes cultural heritage collections as first-class computational resources; the latter ensures that the Linked Data stack is actually adopted by developers, with IIIF and Linked Art as leading examples.</p>
-<p><strong>Technical Stack</strong>: PIDs and Linked Data together realise the Web of Data — the vision of the same entity (<code>wd:Q5582</code>, Van Gogh) linked across the Getty, Wikidata, and the Rijksmuseum, navigated seamlessly across institutional boundaries.</p>
+<p><strong>Technical Stack</strong>: PIDs and Linked Data each play a distinct role in the Web of Data — PIDs give entities stable, globally unique addresses; Linked Data makes the relationships between them explicit and traversable. Neither alone is sufficient, but both contribute to an open web where the same entity (<code>wd:Q5582</code>, Van Gogh) can be referenced and navigated across different platforms.</p>
 </div>
 </div>
 </div>

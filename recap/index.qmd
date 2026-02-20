@@ -89,7 +89,7 @@ A Swiss postal archive photograph served via IIIF Image API — zoom, pan, and r
 
 ## Presentation API
 
-_Irises_ by Vincent van Gogh (Getty Museum) — a full IIIF manifest in Mirador, with multiple canvases, metadata, and annotations:
+_Irises_ by Vincent van Gogh (Getty Museum) — a IIIF manifest in Mirador:
 
 <iframe src="https://projectmirador.org/embed/?iiif-content=https://media.getty.edu/iiif/manifest/53be857e-41e8-4198-b45d-2e0f52d3051b"
         width="100%" height="480px"
@@ -136,7 +136,7 @@ Three siloed tables, linked by local integer IDs:
 - Relationships via **foreign keys** + SQL `JOIN`
 - IDs are **local** — `id: 1` means nothing outside this database
 - Schema is **rigid** — adding a column requires a migration
-- Data is **siloed** — not designed to link to the Rijksmuseum's database
+- Data is **siloed** — not (usually) designed to link to any other external databases
 
 ## Triplestore
 
@@ -206,7 +206,7 @@ graph TD
 
 - **Unique**: no two entities share the same PID
 - **Persistent**: remains valid even if hosting infrastructure changes
-- **Resolvable**: points to current location via standard resolver
+- **Resolvable**: points to current location via standard resolver — but resolution only guarantees you can _find_ the resource, not that you can _access_ it; a DOI behind a paywall resolves to a landing page, not the content
 - **Interoperable**: recognised across systems and communities
 - **Human & machine-readable**: accessible both visually and programmatically
 
@@ -221,7 +221,7 @@ graph TD
 | **Handle** | General-purpose resources | `20.500.14716/127190` | <https://hdl.handle.net/20.500.14716/127190> |
 
 ::: {.callout-note collapse="true" title="More context"}
-DOI is the industry standard for academic publishing, ORCID for researchers, ROR for institutions, and ARK for cultural heritage objects. Each PID type has a dedicated resolver: doi.org, orcid.org, ror.org, hdl.handle.net, and n2t.net (ARK).
+DOI is the industry standard for academic publishing, ORCID for researchers, ROR for institutions, and ARK for cultural heritage objects. Each PID type has a dedicated resolver: doi.org, orcid.org, ror.org, hdl.handle.net, and n2t.net (ARK). A critical limitation: PIDs are often conflated with open access, but they are orthogonal — a DOI resolves regardless of whether the resource is open or behind a paywall. Persistence and resolvability are properties of the identifier, not of the access conditions.
 :::
 
 ---
@@ -233,9 +233,9 @@ DOI is the industry standard for academic publishing, ORCID for researchers, ROR
 ## Open Science Landscape
 
 - **Open Data** = legally open + technically open (machine-readable)
-- **Open Access (OA)**: free online access to scholarly publications — Gold, Green, Diamond, Bronze…
+- **Open Access (OA)**: free online access to scholarly publications — complements Open Data by opening the outputs that describe and contextualise datasets
 - **Open Research Data (ORD)**: research datasets open by default — increasingly funder-mandated, central to university library services
-- **Open Government Data (OGD)**: public-sector data published proactively — replaces closed-by-default custody and fixed retention periods
+- **Open Government Data (OGD)**: public-sector data published proactively — but retention periods, sensitivity, and archival obligations still apply and must be respected
 
 ## Principles & Frameworks
 
@@ -246,17 +246,17 @@ DOI is the industry standard for academic publishing, ORCID for researchers, ROR
 
 ## Technical Stack
 
-- **Linked Data & Triplestore**: global URIs as identifiers; triples (subject → predicate → object) as the data model; SPARQL as the query language
+- **Linked Data**: global URIs as identifiers; triples (subject → predicate → object) as the data model (RDF as the syntax); SPARQL as the query language
 - **PIDs**: unique, persistent, resolvable — the same entity recognised across every institution
 
 :::
 
 ::: {.callout-note collapse="true" title="More context"}
-**Open Science Landscape**: OA covers scholarly publications; ORD extends the logic to any dataset produced by research — the two are related but distinct, and funders increasingly mandate both. OGD applies open data principles to the public sector: for archives, this overturns the traditional logic of retention periods and scheduled releases in favour of proactive, early publication.
+**Open Science Landscape**: OA covers scholarly publications; ORD extends the logic to any dataset produced by research — the two are related but distinct, and funders increasingly mandate both. OA and Open Data are complementary: open publications provide the interpretive layer for open datasets, and together they make research fully reproducible. OGD applies open data principles to the public sector, but retention periods, data sensitivity, and archival obligations remain in force — proactive publication must be balanced against these constraints, which affect archives in particular.
 
 **Principles & Frameworks**: FAIR and CARE are complementary — FAIR governs technical structure, CARE protects the interests of communities whose data is used. Collections as Data and LOUD are responses specific to GLAM and Linked Data contexts: the former reframes cultural heritage collections as first-class computational resources; the latter ensures that the Linked Data stack is actually adopted by developers, with IIIF and Linked Art as leading examples.
 
-**Technical Stack**: PIDs and Linked Data together realise the Web of Data — the vision of the same entity (`wd:Q5582`, Van Gogh) linked across the Getty, Wikidata, and the Rijksmuseum, navigated seamlessly across institutional boundaries.
+**Technical Stack**: PIDs and Linked Data each play a distinct role in the Web of Data — PIDs give entities stable, globally unique addresses; Linked Data makes the relationships between them explicit and traversable. Neither alone is sufficient, but both contribute to an open web where the same entity (`wd:Q5582`, Van Gogh) can be referenced and navigated across different platforms.
 :::
 
 > Open data is not just about making files available — it is about creating an interconnected web of usable, ethically governed knowledge.
