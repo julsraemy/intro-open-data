@@ -1,8 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://julsraemy.ch/intro-open-data/recap/recap-week1-slides.html</loc>
+    <lastmod>2026-02-20T13:34:59.304Z</lastmod>
+  </url>
+  <url>
     <loc>https://julsraemy.ch/intro-open-data/why-open-data-matters.html</loc>
     <lastmod>2026-02-04T15:51:34.700Z</lastmod>
+  </url>
+  <url>
+    <loc>https://julsraemy.ch/intro-open-data/sections/characteristics.html</loc>
+    <lastmod>2026-02-17T16:37:32.741Z</lastmod>
   </url>
   <url>
     <loc>https://julsraemy.ch/intro-open-data/sections/techniques.html</loc>
@@ -17,52 +25,56 @@
     <lastmod>2026-02-08T16:28:00.164Z</lastmod>
   </url>
   <url>
-    <loc>https://julsraemy.ch/intro-open-data/sections/assessment.html</loc>
+    <loc>https://julsraemy.ch/intro-open-data/references.html</loc>
     <lastmod>2026-02-04T15:51:34.699Z</lastmod>
-  </url>
-  <url>
-    <loc>https://julsraemy.ch/intro-open-data/index.html</loc>
-    <lastmod>2026-02-18T07:17:41.113Z</lastmod>
-  </url>
-  <url>
-    <loc>https://julsraemy.ch/intro-open-data/exercises/ex-03.html</loc>
-    <lastmod>2026-02-17T16:43:47.602Z</lastmod>
-  </url>
-  <url>
-    <loc>https://julsraemy.ch/intro-open-data/exercises/ex-07.html</loc>
-    <lastmod>2026-02-17T16:51:15.582Z</lastmod>
   </url>
   <url>
     <loc>https://julsraemy.ch/intro-open-data/exercises/ex-05.html</loc>
     <lastmod>2026-02-17T18:34:51.886Z</lastmod>
   </url>
   <url>
-    <loc>https://julsraemy.ch/intro-open-data/exercises/ex-01.html</loc>
-    <lastmod>2026-02-08T16:02:15.337Z</lastmod>
+    <loc>https://julsraemy.ch/intro-open-data/exercises/ex-07.html</loc>
+    <lastmod>2026-02-17T16:51:15.582Z</lastmod>
   </url>
   <url>
-    <loc>https://julsraemy.ch/intro-open-data/assignments/OpenData_SBB_Assess_AubD.html</loc>
-    <lastmod>2026-02-04T15:51:34.674Z</lastmod>
+    <loc>https://julsraemy.ch/intro-open-data/exercises/ex-03.html</loc>
+    <lastmod>2026-02-20T11:43:10.655Z</lastmod>
   </url>
   <url>
-    <loc>https://julsraemy.ch/intro-open-data/about.html</loc>
-    <lastmod>2026-02-18T06:55:03.586Z</lastmod>
+    <loc>https://julsraemy.ch/intro-open-data/exercises/ex-08.html</loc>
+    <lastmod>2026-02-09T06:56:41.757Z</lastmod>
   </url>
   <url>
-    <loc>https://julsraemy.ch/intro-open-data/LICENSE-CCBY.html</loc>
-    <lastmod>2026-02-04T15:51:34.672Z</lastmod>
-  </url>
-  <url>
-    <loc>https://julsraemy.ch/intro-open-data/LICENSE-MIT.html</loc>
-    <lastmod>2026-02-04T15:51:34.673Z</lastmod>
+    <loc>https://julsraemy.ch/intro-open-data/assignments/template.html</loc>
+    <lastmod>2026-02-04T15:51:34.675Z</lastmod>
   </url>
   <url>
     <loc>https://julsraemy.ch/intro-open-data/assignments.html</loc>
     <lastmod>2026-02-04T15:51:34.673Z</lastmod>
   </url>
   <url>
-    <loc>https://julsraemy.ch/intro-open-data/assignments/template.html</loc>
-    <lastmod>2026-02-04T15:51:34.675Z</lastmod>
+    <loc>https://julsraemy.ch/intro-open-data/LICENSE-MIT.html</loc>
+    <lastmod>2026-02-04T15:51:34.673Z</lastmod>
+  </url>
+  <url>
+    <loc>https://julsraemy.ch/intro-open-data/LICENSE-CCBY.html</loc>
+    <lastmod>2026-02-04T15:51:34.672Z</lastmod>
+  </url>
+  <url>
+    <loc>https://julsraemy.ch/intro-open-data/about.html</loc>
+    <lastmod>2026-02-18T06:55:03.586Z</lastmod>
+  </url>
+  <url>
+    <loc>https://julsraemy.ch/intro-open-data/assignments/OpenData_SBB_Assess_AubD.html</loc>
+    <lastmod>2026-02-04T15:51:34.674Z</lastmod>
+  </url>
+  <url>
+    <loc>https://julsraemy.ch/intro-open-data/exercises/ex-01.html</loc>
+    <lastmod>2026-02-08T16:02:15.337Z</lastmod>
+  </url>
+  <url>
+    <loc>https://julsraemy.ch/intro-open-data/exercises/ex-02.html</loc>
+    <lastmod>2026-02-20T11:43:22.832Z</lastmod>
   </url>
   <url>
     <loc>https://julsraemy.ch/intro-open-data/exercises/ex-04.html</loc>
@@ -73,20 +85,12 @@
     <lastmod>2026-02-17T16:55:22.093Z</lastmod>
   </url>
   <url>
-    <loc>https://julsraemy.ch/intro-open-data/exercises/ex-02.html</loc>
-    <lastmod>2026-02-17T16:40:58.846Z</lastmod>
+    <loc>https://julsraemy.ch/intro-open-data/index.html</loc>
+    <lastmod>2026-02-18T07:17:41.113Z</lastmod>
   </url>
   <url>
-    <loc>https://julsraemy.ch/intro-open-data/exercises/ex-08.html</loc>
-    <lastmod>2026-02-09T06:56:41.757Z</lastmod>
-  </url>
-  <url>
-    <loc>https://julsraemy.ch/intro-open-data/references.html</loc>
+    <loc>https://julsraemy.ch/intro-open-data/sections/assessment.html</loc>
     <lastmod>2026-02-04T15:51:34.699Z</lastmod>
-  </url>
-  <url>
-    <loc>https://julsraemy.ch/intro-open-data/sections/characteristics.html</loc>
-    <lastmod>2026-02-17T16:37:32.741Z</lastmod>
   </url>
   <url>
     <loc>https://julsraemy.ch/intro-open-data/sections/platforms.html</loc>
@@ -97,11 +101,15 @@
     <lastmod>2026-02-04T15:51:34.699Z</lastmod>
   </url>
   <url>
-    <loc>https://julsraemy.ch/intro-open-data/syllabus.html</loc>
-    <lastmod>2026-02-09T07:56:27.564Z</lastmod>
-  </url>
-  <url>
     <loc>https://julsraemy.ch/intro-open-data/sections/characteristics-slides.html</loc>
     <lastmod>2026-02-17T16:29:49.656Z</lastmod>
+  </url>
+  <url>
+    <loc>https://julsraemy.ch/intro-open-data/syllabus.html</loc>
+    <lastmod>2026-02-20T11:50:17.856Z</lastmod>
+  </url>
+  <url>
+    <loc>https://julsraemy.ch/intro-open-data/recap/index.html</loc>
+    <lastmod>2026-02-20T14:24:47.392Z</lastmod>
   </url>
 </urlset>

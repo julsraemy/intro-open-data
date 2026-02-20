@@ -33,9 +33,9 @@ website:
         menu:
           - text: "Exercise 1: OA Deep Dive"
             file: exercises/ex-01.qmd
-          - text: "Exercise 2: Up do date with Linked Data"
+          - text: "Exercise 2: Movements and Principles"
             file: exercises/ex-02.qmd
-          - text: "Exercise 3: Movements and Principles"
+          - text: "Exercise 3: Up to date with Linked Data"
             file: exercises/ex-03.qmd
           - text: "Exercise 4: Discovering ORD Platforms"
             file: exercises/ex-04.qmd
@@ -63,6 +63,8 @@ website:
             file: sections/techniques.qmd
           - text: "Showcases"
             file: sections/showcases.qmd
+      - href: recap/index.qmd
+        text: Recap
       - href: references.qmd
         text: References
       - href: about.qmd

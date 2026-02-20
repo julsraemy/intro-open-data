@@ -1,0 +1,272 @@
+---
+title: "Recap"
+authors:
+  - name: Julien A. Raemy
+    orcid: 0000-0002-4711-5759
+    email: julien.raemy@hesge.ch
+    affiliations:
+      - docuteam SA
+      - University of Bern
+date: "2026-02-20"
+date-modified: last-modified
+license: "CC BY"
+---
+
+Each week's recap is a concise summary of the key concepts, exercises, and takeaways covered in class. Expandable _More context_ sections provide additional detail on each topic. Use this page to review before the next session or before the final examination.
+
+---
+
+## Week 1
+
+### What is Open Data?
+
+#### Definitions
+
+- **Openness**: freely access, use, modify, and share — for any purpose
+- **Legally open**: under an open licence permitting reuse and redistribution
+- **Technically open**: machine-readable, no more than reproduction cost
+- **Metadata**: data about data — no fixed boundary between the two
+
+#### A Brief History
+
+- 1942 — Merton: researchers must contribute to the "common pot"
+- 1995 — term "Open Data" first appears (geophysical/environmental data)
+- 2005 — Open Knowledge Foundation publishes the Open Definition
+- 2007 — Sebastopol Meeting: 8 principles of open government data
+- 2009 — Berners-Lee at TED: _"Raw Data Now"_
+
+::: {.callout-note collapse="true" title="More context"}
+Open data requires both legal and technical openness. The concept predates the term — the idea that publicly funded knowledge must benefit the public has roots in 1940s science.
+:::
+
+---
+
+### Movements and Principles
+
+#### Movements
+
+- **Open Access (OA)**: free, online access to scholarly publications — Gold, Green, Diamond, Hybrid, Bronze, Blue, Black
+- **Open Science / Open Scholarship**: entire research lifecycle made open — data, methods, peer review, software
+- **FLOSS**: Free/Libre and Open Source Software — 4 freedoms (run, study, change, distribute)
+
+#### Principles
+
+- **FAIR**: Findable, Accessible, Interoperable, Reusable — the technical framework for data sharing
+- **CARE**: Collective Benefit, Authority to Control, Responsibility, Ethics — governance for Indigenous data
+- **Collections as Data**: GLAM collections reimagined as computational resources — openness by default, interoperability, ethical stewardship
+- **LOUD**: Linked Open _Usable_ Data — developer-friendly, JSON-LD, community-driven
+
+> FAIR tells us _how_ to structure data. CARE tells us _whose interests_ must be protected.
+
+::: {.callout-note collapse="true" title="More context"}
+These movements and principles are complementary, not competing. Open Access focuses on publications, Open Science on the full research process, FLOSS on tools. FAIR and CARE together ensure data is both technically sound and ethically grounded.
+:::
+
+---
+
+### IIIF and Linked Art
+
+Two standards that put LOUD into practice in GLAM collections.
+
+#### IIIF — International Image Interoperability Framework
+
+IIIF defines standard APIs so that any compliant viewer can display any compliant resource, regardless of the hosting institution. The two core APIs are:
+
+- **Image API**: delivers pixels on demand — any region, size, rotation, and format; enables deep zoom without downloading the full file
+- **Presentation API**: assembles media resources (images, audio, video) and metadata into a _manifest_ — a JSON-LD document describing how a digital object is structured and displayed
+
+::: {.panel-tabset}
+
+## Image API
+
+A Swiss postal archive photograph served via IIIF Image API — zoom, pan, and rotate directly in the browser:
+
+<iframe src="https://mejackreed.github.io/Leaflet-IIIF/examples/?url=https://iiif.ptt-archiv.ch/iiif/3/P-38-2-1851-08.jp2/info.json"
+        width="100%" height="480px"
+        style="border: 1px solid #dee2e6; border-radius: 4px;"
+        allowfullscreen>
+</iframe>
+
+## Presentation API
+
+_Irises_ by Vincent van Gogh (Getty Museum) — a full IIIF manifest in Mirador, with multiple canvases, metadata, and annotations:
+
+<iframe src="https://projectmirador.org/embed/?iiif-content=https://media.getty.edu/iiif/manifest/53be857e-41e8-4198-b45d-2e0f52d3051b"
+        width="100%" height="480px"
+        style="border: 1px solid #dee2e6; border-radius: 4px;"
+        allowfullscreen>
+</iframe>
+
+:::
+
+::: {.callout-note collapse="true" title="More context"}
+The Image API exposes a simple URL pattern: `{base}/{identifier}/{region}/{size}/{rotation}/{quality}.{format}` — any pixel crop can be requested without preprocessing. The Presentation API wraps one or more media resources into a manifest that tells a client (viewer/player) how to display or play the object Mirador and Universal Viewer are the two most widely deployed open-source IIIF viewers.
+:::
+
+#### Linked Art
+
+Linked Art is a community and shared data model for cultural heritage description, built on JSON-LD and CIDOC-CRM. It is a concrete implementation of LOUD — semantically rich enough for research, simple enough for developers. The **LUX** platform at Yale University is the largest production deployment, combining collections from Yale's museums, libraries, and archives into a single queryable knowledge graph:
+
+<video controls style="width: 100%; aspect-ratio: 16/9; border-radius: 4px; display: block;">
+  <source src="https://julsraemy.ch/prezi/assets/lux-demo.mp4" type="video/mp4">
+</video>
+
+::: {.callout-note collapse="true" title="More context"}
+Linked Art constrains the full complexity of CIDOC-CRM into a profile served as JSON-LD over standard HTTP APIs — any developer who can consume JSON can work with it. LUX exposes millions of records (objects, people, places, concepts, events) as Linked Art entities, all interlinked and queryable. This is the Web of Data made operational at institutional scale.
+:::
+
+---
+
+### From Tables to Triples
+
+A museum wants to describe Van Gogh's _Starry Night_. Two approaches to modelling the same information:
+
+::: {.panel-tabset}
+
+## Relational Database
+
+Three siloed tables, linked by local integer IDs:
+
+| Table | Key columns |
+|---|---|
+| **Artist** | `id`, `name`, `nationality`, `birthday` |
+| **Artwork** | `id`, `title`, `date`, `material`, `artist_id` ↗ |
+| **Museum** | `id`, `name`, `location` |
+
+- Relationships via **foreign keys** + SQL `JOIN`
+- IDs are **local** — `id: 1` means nothing outside this database
+- Schema is **rigid** — adding a column requires a migration
+- Data is **siloed** — not designed to link to the Rijksmuseum's database
+
+## Triplestore
+
+Nine triples — every relationship is explicit data:
+
+| Subject | Predicate | Object |
+|---|---|---|
+| `ex:vangogh` | `rdf:type` | `foaf:Person` |
+| `ex:vangogh` | `foaf:name` | `"Vincent van Gogh"` |
+| `ex:vangogh` | `schema:nationality` | `"Dutch"` |
+| `ex:vangogh` | `ex:created` | `ex:starrynight` |
+| `ex:starrynight` | `rdf:type` | `schema:Painting` |
+| `ex:starrynight` | `schema:name` | `"The Starry Night"` |
+| `ex:starrynight` | `schema:location` | `ex:moma` |
+| `ex:moma` | `rdf:type` | `schema:Museum` |
+| `ex:moma` | `foaf:name` | `"Museum of Modern Art"` |
+
+- IDs are **global URIs** — `wd:Q5582` is Van Gogh _everywhere_
+- Schema is **flexible** — add triples without breaking anything
+- Relationships are **globally linked** — any entity can reference any URI
+
+:::
+
+::: {.callout-note collapse="true" title="More context"}
+This is the core Linked Data shift. In a relational DB, relationships are implicit (foreign keys, JOIN operations) and local. In a triplestore, every relationship is an explicit triple with a globally meaningful URI. The same Van Gogh (`wd:Q5582`) can be referenced by the Getty, Wikidata, and the Rijksmuseum simultaneously.
+:::
+
+---
+
+### The Same Data as a Knowledge Graph
+
+The nine triples from the Triplestore tab visualised as a directed graph. Orange rounded nodes are named resources (URIs); dark red rectangles are class types; dark teal rectangles are literal string values.
+
+```{mermaid}
+%%{init: {'flowchart': {'nodeSpacing': 90, 'rankSpacing': 90}, 'themeVariables': {'fontSize': '14px', 'fontFamily': '"trebuchet ms",verdana,arial,sans-serif', 'lineColor': '#555555'}}}%%
+graph TD
+    VG(["ex:vangogh"]) -->|"rdf:type"| PERSON["foaf:Person"]
+    VG -->|"foaf:name"| VGNAME["'Vincent van Gogh'"]
+    VG -->|"schema:nationality"| NAT["'Dutch'"]
+    VG -->|"ex:created"| SN(["ex:starrynight"])
+    SN -->|"rdf:type"| PAINT["schema:Painting"]
+    SN -->|"schema:name"| SNNAME["'The Starry Night'"]
+    SN -->|"schema:location"| MOMA(["ex:moma"])
+    MOMA -->|"rdf:type"| MUS["schema:Museum"]
+    MOMA -->|"foaf:name"| MNAME["'Museum of Modern Art'"]
+
+    classDef object fill:#C0770E,stroke:#7A4A00,color:#ffffff,font-weight:bold
+    classDef type fill:#5D1E1E,stroke:#3A0A0A,color:#ffffff
+    classDef literal fill:#1E3A4A,stroke:#0A1F2A,color:#ECF0F1
+
+    class VG,SN,MOMA object
+    class PERSON,PAINT,MUS type
+    class VGNAME,NAT,SNNAME,MNAME literal
+```
+
+::: {.callout-note collapse="true" title="More context"}
+`ex:moma` could link to `wd:Q188740` (MoMA on Wikidata), which in turn links to hundreds of other artists and artworks — that is the Web of Data. The graph is open-ended — any node can link out to any other URI on the web, connecting data across institutions globally.
+:::
+
+---
+
+### Persistent Identifiers (PIDs)
+
+**Why PIDs matter:** Without globally unique, stable identifiers, data remains siloed. PIDs ensure the same entity is recognised everywhere.
+
+**PID Characteristics**
+
+- **Unique**: no two entities share the same PID
+- **Persistent**: remains valid even if hosting infrastructure changes
+- **Resolvable**: points to current location via standard resolver
+- **Interoperable**: recognised across systems and communities
+- **Human & machine-readable**: accessible both visually and programmatically
+
+**Common PID Types/Schemes**
+
+| **PID** | **Identifies** | **Example** | **Resolver** |
+|---|---|---|---|
+| **Digital Object Identifier (DOI)** | Publications, datasets, objects | `10.1038/nature12373` | <https://doi.org/10.1038/nature12373> |
+| **Open Researcher and Contributor ID (ORCID)** | Researchers, scholars | `0000-0002-5444-2280` | <https://orcid.org/0000-0002-5444-2280> |
+| **Research Organization Registry (ROR)** | Research organisations | `01xkakk17` | <https://ror.org/01xkakk17> |
+| **Archival Resource Key (ARK)** | Cultural heritage objects | `ark:12148/btv1b108473193/` | <https://n2t.net/ark:12148/btv1b108473193/> |
+| **Handle** | General-purpose resources | `20.500.14716/127190` | <https://hdl.handle.net/20.500.14716/127190> |
+
+::: {.callout-note collapse="true" title="More context"}
+DOI is the industry standard for academic publishing, ORCID for researchers, ROR for institutions, and ARK for cultural heritage objects. Each PID type has a dedicated resolver: doi.org, orcid.org, ror.org, hdl.handle.net, and n2t.net (ARK).
+:::
+
+---
+
+### Key Takeaways
+
+::: {.panel-tabset}
+
+## Open Science Landscape
+
+- **Open Data** = legally open + technically open (machine-readable)
+- **Open Access (OA)**: free online access to scholarly publications — Gold, Green, Diamond, Bronze…
+- **Open Research Data (ORD)**: research datasets open by default — increasingly funder-mandated, central to university library services
+- **Open Government Data (OGD)**: public-sector data published proactively — replaces closed-by-default custody and fixed retention periods
+
+## Principles & Frameworks
+
+- **FAIR**: structure data for machine use — Findable, Accessible, Interoperable, Reusable
+- **CARE**: governance for data about people — Collective Benefit, Authority, Responsibility, Ethics
+- **Collections as Data**: GLAM holdings as computational datasets — bulk access, not just item discovery
+- **LOUD**: Linked Data that works in practice — JSON-LD, developer-friendly; instantiated by IIIF and Linked Art
+
+## Technical Stack
+
+- **Linked Data & Triplestore**: global URIs as identifiers; triples (subject → predicate → object) as the data model; SPARQL as the query language
+- **PIDs**: unique, persistent, resolvable — the same entity recognised across every institution
+
+:::
+
+::: {.callout-note collapse="true" title="More context"}
+**Open Science Landscape**: OA covers scholarly publications; ORD extends the logic to any dataset produced by research — the two are related but distinct, and funders increasingly mandate both. OGD applies open data principles to the public sector: for archives, this overturns the traditional logic of retention periods and scheduled releases in favour of proactive, early publication.
+
+**Principles & Frameworks**: FAIR and CARE are complementary — FAIR governs technical structure, CARE protects the interests of communities whose data is used. Collections as Data and LOUD are responses specific to GLAM and Linked Data contexts: the former reframes cultural heritage collections as first-class computational resources; the latter ensures that the Linked Data stack is actually adopted by developers, with IIIF and Linked Art as leading examples.
+
+**Technical Stack**: PIDs and Linked Data together realise the Web of Data — the vision of the same entity (`wd:Q5582`, Van Gogh) linked across the Getty, Wikidata, and the Rijksmuseum, navigated seamlessly across institutional boundaries.
+:::
+
+> Open data is not just about making files available — it is about creating an interconnected web of usable, ethically governed knowledge.
+
+---
+
+## Week 2
+
+*Content coming after Week 2.*
+
+## Week 3
+
+*Content coming after Week 3.*

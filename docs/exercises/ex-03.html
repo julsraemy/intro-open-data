@@ -6,9 +6,9 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="dcterms.date" content="2026-02-01">
+<meta name="dcterms.date" content="2026-02-04">
 
-<title>Exercise 3: Movements and Principles – Introduction to Open Data</title>
+<title>Exercise 3: Up to date with Linked Data – Introduction to Open Data</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,6 +20,41 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 </style>
 
@@ -74,143 +109,15 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
-<style>
-  .exercise-container {
-    max-width: 900px;
-    margin: 0 auto;
-  }
-  .matching-row {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 1rem;
-    align-items: center;
-    padding: 1rem;
-    margin-bottom: 1rem;
-    background-color: var(--bs-secondary-bg);
-    border-radius: 6px;
-    border-left: 4px solid var(--bs-primary);
-  }
-  .framework-label {
-    font-weight: bold;
-    color: var(--bs-primary);
-  }
-  .proposition-label {
-    font-style: italic;
-    color: var(--bs-secondary-color);
-  }
-  select {
-    padding: 0.5rem;
-    border: 2px solid var(--bs-border-color);
-    border-radius: 4px;
-    font-size: 1rem;
-    cursor: pointer;
-    background-color: var(--bs-body-bg);
-    color: var(--bs-body-color);
-  }
-  select:focus {
-    outline: none;
-    border-color: var(--bs-primary);
-    box-shadow: 0 0 0 3px var(--bs-primary-bg-subtle);
-  }
-  .validate-btn {
-    padding: 0.5rem 1rem;
-    background-color: var(--bs-success);
-    color: white;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    font-weight: bold;
-    transition: background-color 0.3s;
-  }
-  .validate-btn:hover {
-    background-color: var(--bs-success-border-subtle);
-  }
-  .validate-btn:disabled {
-    background-color: var(--bs-secondary);
-    cursor: not-allowed;
-  }
-  .feedback {
-    padding: 0.5rem;
-    border-radius: 4px;
-    font-weight: bold;
-    text-align: center;
-    min-height: 2.5rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  .feedback.correct {
-    background-color: var(--bs-success-bg-subtle);
-    color: var(--bs-success-text-emphasis);
-    border: 1px solid var(--bs-success-border-subtle);
-  }
-  .feedback.incorrect {
-    background-color: var(--bs-danger-bg-subtle);
-    color: var(--bs-danger-text-emphasis);
-    border: 1px solid var(--bs-danger-border-subtle);
-  }
-  .feedback.empty {
-    background-color: var(--bs-secondary-bg);
-    color: var(--bs-secondary-color);
-    font-weight: normal;
-  }
-  .results-summary {
-    margin-top: 2rem;
-    padding: 1.5rem;
-    background-color: var(--bs-secondary-bg);
-    border-radius: 6px;
-    text-align: center;
-  }
-  .score {
-    font-size: 2rem;
-    font-weight: bold;
-    color: var(--bs-primary);
-  }
-  .reset-btn {
-    padding: 0.75rem 1.5rem;
-    background-color: var(--bs-secondary);
-    color: white;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    font-weight: bold;
-    margin-top: 1rem;
-    transition: background-color 0.3s;
-  }
-  .reset-btn:hover {
-    background-color: var(--bs-secondary-border-subtle);
-  }
-  .instructions {
-    background-color: var(--bs-info-bg-subtle);
-    border-left: 4px solid var(--bs-info);
-    padding: 1rem;
-    margin-bottom: 2rem;
-    border-radius: 4px;
-    color: var(--bs-info-text-emphasis);
-  }
-  .answer-key {
-    margin-top: 2rem;
-    padding: 1rem;
-    background-color: var(--bs-warning-bg-subtle);
-    border-left: 4px solid var(--bs-warning);
-    border-radius: 4px;
-    display: none;
-    color: var(--bs-warning-text-emphasis);
-  }
-  .answer-key.show {
-    display: block;
-  }
-  .answer-key table {
-    color: var(--bs-body-color);
-  }
-</style>
 
 
 <link rel="stylesheet" href="../styles/custom.scss">
-<meta property="og:title" content="Exercise 3: Movements and Principles – Introduction to Open Data">
+<meta property="og:title" content="Exercise 3: Up to date with Linked Data – Introduction to Open Data">
+<meta property="og:description" content="">
 <meta property="og:image" content="https://julsraemy.ch/intro-open-data/exercises/data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA2ZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDo1N0NEMjA4MDI1MjA2ODExOTk0QzkzNTEzRjZEQTg1NyIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDozM0NDOEJGNEZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDozM0NDOEJGM0ZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ1M1IE1hY2ludG9zaCI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOkZDN0YxMTc0MDcyMDY4MTE5NUZFRDc5MUM2MUUwNEREIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjU3Q0QyMDgwMjUyMDY4MTE5OTRDOTM1MTNGNkRBODU3Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+84NovQAAAR1JREFUeNpiZEADy85ZJgCpeCB2QJM6AMQLo4yOL0AWZETSqACk1gOxAQN+cAGIA4EGPQBxmJA0nwdpjjQ8xqArmczw5tMHXAaALDgP1QMxAGqzAAPxQACqh4ER6uf5MBlkm0X4EGayMfMw/Pr7Bd2gRBZogMFBrv01hisv5jLsv9nLAPIOMnjy8RDDyYctyAbFM2EJbRQw+aAWw/LzVgx7b+cwCHKqMhjJFCBLOzAR6+lXX84xnHjYyqAo5IUizkRCwIENQQckGSDGY4TVgAPEaraQr2a4/24bSuoExcJCfAEJihXkWDj3ZAKy9EJGaEo8T0QSxkjSwORsCAuDQCD+QILmD1A9kECEZgxDaEZhICIzGcIyEyOl2RkgwAAhkmC+eAm0TAAAAABJRU5ErkJggg==">
 <meta property="og:site_name" content="Introduction to Open Data">
-<meta name="twitter:title" content="Exercise 3: Movements and Principles – Introduction to Open Data">
+<meta name="twitter:title" content="Exercise 3: Up to date with Linked Data – Introduction to Open Data">
+<meta name="twitter:description" content="">
 <meta name="twitter:image" content="https://julsraemy.ch/intro-open-data/exercises/data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA2ZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDo1N0NEMjA4MDI1MjA2ODExOTk0QzkzNTEzRjZEQTg1NyIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDozM0NDOEJGNEZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDozM0NDOEJGM0ZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ1M1IE1hY2ludG9zaCI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOkZDN0YxMTc0MDcyMDY4MTE5NUZFRDc5MUM2MUUwNEREIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjU3Q0QyMDgwMjUyMDY4MTE5OTRDOTM1MTNGNkRBODU3Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+84NovQAAAR1JREFUeNpiZEADy85ZJgCpeCB2QJM6AMQLo4yOL0AWZETSqACk1gOxAQN+cAGIA4EGPQBxmJA0nwdpjjQ8xqArmczw5tMHXAaALDgP1QMxAGqzAAPxQACqh4ER6uf5MBlkm0X4EGayMfMw/Pr7Bd2gRBZogMFBrv01hisv5jLsv9nLAPIOMnjy8RDDyYctyAbFM2EJbRQw+aAWw/LzVgx7b+cwCHKqMhjJFCBLOzAR6+lXX84xnHjYyqAo5IUizkRCwIENQQckGSDGY4TVgAPEaraQr2a4/24bSuoExcJCfAEJihXkWDj3ZAKy9EJGaEo8T0QSxkjSwORsCAuDQCD+QILmD1A9kECEZgxDaEZhICIzGcIyEyOl2RkgwAAhkmC+eAm0TAAAAABJRU5ErkJggg==">
 <meta name="twitter:card" content="summary_large_image">
 </head>
@@ -417,11 +324,11 @@ ul.task-list li input[type="checkbox"] {
   </li>  
         <li>
     <a class="dropdown-item" href="../exercises/ex-02.html">
- <span class="dropdown-text">Exercise 2: Up do date with Linked Data</span></a>
+ <span class="dropdown-text">Exercise 2: Movements and Principles</span></a>
   </li>  
         <li>
     <a class="dropdown-item" href="../exercises/ex-03.html">
- <span class="dropdown-text">Exercise 3: Movements and Principles</span></a>
+ <span class="dropdown-text">Exercise 3: Up to date with Linked Data</span></a>
   </li>  
         <li>
     <a class="dropdown-item" href="../exercises/ex-04.html">
@@ -481,6 +388,10 @@ ul.task-list li input[type="checkbox"] {
     </ul>
   </li>
   <li class="nav-item">
+    <a class="nav-link" href="../recap/index.html"> 
+<span class="menu-text">Recap</span></a>
+  </li>  
+  <li class="nav-item">
     <a class="nav-link" href="../references.html"> 
 <span class="menu-text">References</span></a>
   </li>  
@@ -501,18 +412,39 @@ ul.task-list li input[type="checkbox"] {
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#up-to-date-with-linked-data" id="toc-up-to-date-with-linked-data" class="nav-link active" data-scroll-target="#up-to-date-with-linked-data">Up to date with Linked Data</a>
+  <ul>
+  <li><a href="#the-four-principles-of-linked-data" id="toc-the-four-principles-of-linked-data" class="nav-link" data-scroll-target="#the-four-principles-of-linked-data">The Four Principles of Linked Data</a></li>
+  <li><a href="#understanding-rdf-triples" id="toc-understanding-rdf-triples" class="nav-link" data-scroll-target="#understanding-rdf-triples">Understanding RDF Triples</a></li>
+  <li><a href="#turtle-syntax" id="toc-turtle-syntax" class="nav-link" data-scroll-target="#turtle-syntax">Turtle Syntax</a></li>
+  <li><a href="#sparql-queries" id="toc-sparql-queries" class="nav-link" data-scroll-target="#sparql-queries">SPARQL Queries</a></li>
+  </ul></li>
+  <li><a href="#exercises-15-20-minutes" id="toc-exercises-15-20-minutes" class="nav-link" data-scroll-target="#exercises-15-20-minutes">Exercises (15-20 minutes)</a>
+  <ul>
+  <li><a href="#a-understanding-turtle-syntax-4-5-minutes" id="toc-a-understanding-turtle-syntax-4-5-minutes" class="nav-link" data-scroll-target="#a-understanding-turtle-syntax-4-5-minutes">A: Understanding Turtle Syntax (4-5 minutes)</a></li>
+  <li><a href="#b-real-world-sparql-exploration-6-8-minutes" id="toc-b-real-world-sparql-exploration-6-8-minutes" class="nav-link" data-scroll-target="#b-real-world-sparql-exploration-6-8-minutes">B: Real-World SPARQL Exploration (6-8 minutes)</a></li>
+  <li><a href="#c-reflection-questions-5-7-minutes" id="toc-c-reflection-questions-5-7-minutes" class="nav-link" data-scroll-target="#c-reflection-questions-5-7-minutes">C: Reflection Questions (5-7 minutes)</a></li>
+  </ul></li>
+  <li><a href="#additional-resources" id="toc-additional-resources" class="nav-link" data-scroll-target="#additional-resources">Additional Resources</a></li>
+  </ul>
+<div class="toc-actions"><ul><li><a href="https://github.com/julsraemy/intro-open-data/edit/main/exercises/ex-03.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/julsraemy/intro-open-data/issues/new/choose" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
+    </div>
 <!-- main -->
-<main class="content column-page" id="quarto-document-content">
+<main class="content column-page-left" id="quarto-document-content">
 
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Exercise 3: Movements and Principles</h1>
+<h1 class="title">Exercise 3: Up to date with Linked Data</h1>
 </div>
 
 
-<div class="quarto-title-meta-author column-page">
+<div class="quarto-title-meta-author column-page-left">
   <div class="quarto-title-meta-heading">Author</div>
   <div class="quarto-title-meta-heading">Affiliations</div>
   
@@ -529,20 +461,20 @@ ul.task-list li input[type="checkbox"] {
       </div>
   </div>
 
-<div class="quarto-title-meta column-page">
+<div class="quarto-title-meta column-page-left">
 
       
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">February 1, 2026</p>
+      <p class="date">February 4, 2026</p>
     </div>
   </div>
   
     <div>
     <div class="quarto-title-meta-heading">Modified</div>
     <div class="quarto-title-meta-contents">
-      <p class="date-modified">February 17, 2026</p>
+      <p class="date-modified">February 20, 2026</p>
     </div>
   </div>
     
@@ -553,326 +485,205 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="movements-and-principles" class="level2">
-<h2 class="anchored" data-anchor-id="movements-and-principles">Movements and Principles</h2>
-<div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center">
+<section id="up-to-date-with-linked-data" class="level2">
+<h2 class="anchored" data-anchor-id="up-to-date-with-linked-data">Up to date with Linked Data</h2>
+<p>Linked Data is about publishing structured data on the web so that it can be interlinked and become more useful through semantic queries. It extends standard web technologies (HTTP, URIs) to share information in a machine-readable way.</p>
+<section id="the-four-principles-of-linked-data" class="level3">
+<h3 class="anchored" data-anchor-id="the-four-principles-of-linked-data">The Four Principles of Linked Data</h3>
+<p>Tim Berners-Lee defined four principles for publishing data on the web:</p>
+<ol type="1">
+<li><strong>Use URIs as names for things</strong> - Give everything a unique web address</li>
+<li><strong>Use HTTP URIs</strong> - Make those addresses accessible via the web</li>
+<li><strong>Provide useful information</strong> - When someone looks up a URI, return data using standards (RDF, SPARQL)</li>
+<li><strong>Include links to other URIs</strong> - Enable discovery of related information</li>
+</ol>
+</section>
+<section id="understanding-rdf-triples" class="level3">
+<h3 class="anchored" data-anchor-id="understanding-rdf-triples">Understanding RDF Triples</h3>
+<p>RDF (Resource Description Framework) represents data as <strong>triples</strong>: subject-predicate-object statements.</p>
+<p><strong>Example:</strong> “Vincent van Gogh created the Starry Night painting”</p>
+<pre><code>subject:   &lt;http://example.org/artist/vangogh&gt;
+predicate: &lt;http://example.org/vocab/created&gt;
+object:    &lt;http://example.org/artwork/starrynight&gt;</code></pre>
+</section>
+<section id="turtle-syntax" class="level3">
+<h3 class="anchored" data-anchor-id="turtle-syntax">Turtle Syntax</h3>
+<p>Turtle (Terse RDF Triple Language) is a human-readable syntax for RDF. Let’s look at a cultural heritage example:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode numberSource turtle number-lines code-with-copy"><code class="sourceCode"><span id="cb2-1"><a href="#cb2-1"></a>@prefix ex: &lt;http://example.org/&gt; .</span>
+<span id="cb2-2"><a href="#cb2-2"></a>@prefix schema: &lt;http://schema.org/&gt; .</span>
+<span id="cb2-3"><a href="#cb2-3"></a>@prefix foaf: &lt;http://xmlns.com/foaf/0.1/&gt; .</span>
+<span id="cb2-4"><a href="#cb2-4"></a></span>
+<span id="cb2-5"><a href="#cb2-5"></a>ex:vangogh a foaf:Person ;</span>
+<span id="cb2-6"><a href="#cb2-6"></a>    foaf:name "Vincent van Gogh" ;</span>
+<span id="cb2-7"><a href="#cb2-7"></a>    foaf:birthday "1853-03-30" ;</span>
+<span id="cb2-8"><a href="#cb2-8"></a>    schema:nationality "Dutch" ;</span>
+<span id="cb2-9"><a href="#cb2-9"></a>    ex:created ex:starrynight .</span>
+<span id="cb2-10"><a href="#cb2-10"></a></span>
+<span id="cb2-11"><a href="#cb2-11"></a>ex:starrynight a schema:Painting ;</span>
+<span id="cb2-12"><a href="#cb2-12"></a>    schema:name "The Starry Night" ;</span>
+<span id="cb2-13"><a href="#cb2-13"></a>    schema:dateCreated "1889-06" ;</span>
+<span id="cb2-14"><a href="#cb2-14"></a>    schema:material "Oil on canvas" ;</span>
+<span id="cb2-15"><a href="#cb2-15"></a>    schema:creator ex:vangogh ;</span>
+<span id="cb2-16"><a href="#cb2-16"></a>    schema:location ex:moma .</span>
+<span id="cb2-17"><a href="#cb2-17"></a></span>
+<span id="cb2-18"><a href="#cb2-18"></a>ex:moma a schema:Museum ;</span>
+<span id="cb2-19"><a href="#cb2-19"></a>    foaf:name "Museum of Modern Art" ;</span>
+<span id="cb2-20"><a href="#cb2-20"></a>    schema:location "New York, USA" .</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p><strong>Key elements:</strong></p>
+<ul>
+<li><code>@prefix</code> declares namespace prefixes</li>
+<li><code>a</code> means “is of type”</li>
+<li><code>;</code> continues statements about the same subject</li>
+<li><code>.</code> ends a group of statements</li>
+</ul>
+</section>
+<section id="sparql-queries" class="level3">
+<h3 class="anchored" data-anchor-id="sparql-queries">SPARQL Queries</h3>
+<p>SPARQL is the query language for RDF data. It allows you to find patterns in the data.</p>
+<p><strong>Basic SPARQL query structure:</strong></p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode numberSource sparql number-lines code-with-copy"><code class="sourceCode"><span id="cb3-1"><a href="#cb3-1"></a>PREFIX ex: &lt;http://example.org/&gt;</span>
+<span id="cb3-2"><a href="#cb3-2"></a>PREFIX schema: &lt;http://schema.org/&gt;</span>
+<span id="cb3-3"><a href="#cb3-3"></a>PREFIX foaf: &lt;http://xmlns.com/foaf/0.1/&gt;</span>
+<span id="cb3-4"><a href="#cb3-4"></a></span>
+<span id="cb3-5"><a href="#cb3-5"></a>SELECT ?subject ?predicate ?object</span>
+<span id="cb3-6"><a href="#cb3-6"></a>WHERE {</span>
+<span id="cb3-7"><a href="#cb3-7"></a>    ?subject ?predicate ?object .</span>
+<span id="cb3-8"><a href="#cb3-8"></a>}</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p><strong>Find all paintings:</strong></p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode numberSource sparql number-lines code-with-copy"><code class="sourceCode"><span id="cb4-1"><a href="#cb4-1"></a>SELECT ?painting ?name</span>
+<span id="cb4-2"><a href="#cb4-2"></a>WHERE {</span>
+<span id="cb4-3"><a href="#cb4-3"></a>    ?painting a schema:Painting ;</span>
+<span id="cb4-4"><a href="#cb4-4"></a>              schema:name ?name .</span>
+<span id="cb4-5"><a href="#cb4-5"></a>}</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p><strong>Find artworks created by Van Gogh:</strong></p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5"><pre class="sourceCode numberSource sparql number-lines code-with-copy"><code class="sourceCode"><span id="cb5-1"><a href="#cb5-1"></a>SELECT ?artwork ?title</span>
+<span id="cb5-2"><a href="#cb5-2"></a>WHERE {</span>
+<span id="cb5-3"><a href="#cb5-3"></a>    ex:vangogh ex:created ?artwork .</span>
+<span id="cb5-4"><a href="#cb5-4"></a>    ?artwork schema:name ?title .</span>
+<span id="cb5-5"><a href="#cb5-5"></a>}</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+</section>
+<section id="exercises-15-20-minutes" class="level2">
+<h2 class="anchored" data-anchor-id="exercises-15-20-minutes">Exercises (15-20 minutes)</h2>
+<section id="a-understanding-turtle-syntax-4-5-minutes" class="level3">
+<h3 class="anchored" data-anchor-id="a-understanding-turtle-syntax-4-5-minutes">A: Understanding Turtle Syntax (4-5 minutes)</h3>
+<p>Look at the following Turtle snippet describing a manuscript:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb6"><pre class="sourceCode numberSource turtle number-lines code-with-copy"><code class="sourceCode"><span id="cb6-1"><a href="#cb6-1"></a>@prefix ex: &lt;http://library.org/&gt; .</span>
+<span id="cb6-2"><a href="#cb6-2"></a>@prefix dc: &lt;http://purl.org/dc/elements/1.1/&gt; .</span>
+<span id="cb6-3"><a href="#cb6-3"></a>@prefix schema: &lt;http://schema.org/&gt; .</span>
+<span id="cb6-4"><a href="#cb6-4"></a></span>
+<span id="cb6-5"><a href="#cb6-5"></a>ex:manuscript_042 a schema:Book ;</span>
+<span id="cb6-6"><a href="#cb6-6"></a>    dc:title "Grandes Chroniques de France" ;</span>
+<span id="cb6-7"><a href="#cb6-7"></a>    dc:creator "Anonymous" ;</span>
+<span id="cb6-8"><a href="#cb6-8"></a>    schema:dateCreated "1375" ;</span>
+<span id="cb6-9"><a href="#cb6-9"></a>    ex:heldBy ex:chateauroux_library .</span>
+<span id="cb6-10"><a href="#cb6-10"></a></span>
+<span id="cb6-11"><a href="#cb6-11"></a>ex:chateauroux_library a schema:Library ;</span>
+<span id="cb6-12"><a href="#cb6-12"></a>    schema:name "Bibliothèque municipale de Châteauroux" ;</span>
+<span id="cb6-13"><a href="#cb6-13"></a>    schema:location "France" .</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<ul>
+<li>What type of resource is <code>ex:manuscript_042</code>?</li>
+<li>How many triples have <code>ex:manuscript_042</code> as their subject?</li>
+<li>What relationship links the manuscript to the library?</li>
+</ul>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Note</span>Instructions
+<span class="screen-reader-only">Tip</span>Hints for Part A
 </div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
+<div id="callout-1" class="callout-1-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p>Select a proposition (A, B, C, etc.) for each framework. When you arere ready, click “Validate All” to see your results. While there may be overlap between them, each proposition corresponds to one main framework.</p>
+<ul>
+<li><strong>Type of resource</strong>: Pay attention to the keyword <code>a</code> in Turtle — it is shorthand for <code>rdf:type</code>. What comes right after <code>a</code> on the line where <code>ex:manuscript_042</code> is first described?</li>
+<li><strong>Counting triples</strong>: Each property-value pair (including the <code>a</code> statement) about a subject is one triple. Remember that <code>;</code> separates multiple triples sharing the same subject. Count each line carefully.</li>
+<li><strong>Relationship to the library</strong>: Look for the triple where the object is <code>ex:chateauroux_library</code>. The predicate (property) in that triple is your answer.</li>
+</ul>
 </div>
 </div>
-<section id="frameworks-to-match" class="level3">
-<h3 class="anchored" data-anchor-id="frameworks-to-match">Frameworks to Match</h3>
-<table class="caption-top table">
-<thead>
-<tr class="header">
-<th>Letter</th>
-<th>Proposition</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>A</td>
-<td>Persistent identifier assignment</td>
-</tr>
-<tr class="even">
-<td>B</td>
-<td>Code sharing practices</td>
-</tr>
-<tr class="odd">
-<td>C</td>
-<td>Ethical data stewardship</td>
-</tr>
-<tr class="even">
-<td>D</td>
-<td>Developer-centric data accessibility</td>
-</tr>
-<tr class="odd">
-<td>E</td>
-<td>Unrestricted access to scholarly publications</td>
-</tr>
-<tr class="even">
-<td>F</td>
-<td>Digital object interoperability</td>
-</tr>
-<tr class="odd">
-<td>G</td>
-<td>Research transparency and reproducibility</td>
-</tr>
-</tbody>
-</table>
+</div>
+</section>
+<section id="b-real-world-sparql-exploration-6-8-minutes" class="level3">
+<h3 class="anchored" data-anchor-id="b-real-world-sparql-exploration-6-8-minutes">B: Real-World SPARQL Exploration (6-8 minutes)</h3>
+<p>Visit the <strong>Wikidata Query Service</strong>: <a href="https://query.wikidata.org/" class="uri">https://query.wikidata.org/</a></p>
+<p>Try this query to find Van Gogh paintings with images:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb7"><pre class="sourceCode numberSource sparql number-lines code-with-copy"><code class="sourceCode"><span id="cb7-1"><a href="#cb7-1"></a>SELECT ?painting ?paintingLabel ?image</span>
+<span id="cb7-2"><a href="#cb7-2"></a>WHERE {</span>
+<span id="cb7-3"><a href="#cb7-3"></a>    ?painting wdt:P31 wd:Q3305213 ;    # instance of painting</span>
+<span id="cb7-4"><a href="#cb7-4"></a>              wdt:P170 wd:Q5582 ;       # creator: Vincent van Gogh</span>
+<span id="cb7-5"><a href="#cb7-5"></a>              wdt:P18 ?image .          # has image</span>
+<span id="cb7-6"><a href="#cb7-6"></a>    SERVICE wikibase:label { bd:serviceParam wikibase:language "en". }</span>
+<span id="cb7-7"><a href="#cb7-7"></a>}</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<ul>
+<li>How many paintings with images did you find?</li>
+<li>Try modifying the query to find paintings by a different artist (hint: search Wikidata for another artist’s Q-number, e.g., Pablo Picasso is <code>wd:Q5593</code>). What artist did you choose and how many results did you get?</li>
+</ul>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Tip</span>Hints
+<span class="screen-reader-only">Tip</span>Hints for Part B
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
 <div id="callout-2" class="callout-2-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <ul>
-<li><strong>FLOSS</strong>: Think about what the “S” in this acronym stands for. Which proposition relates most directly to that?</li>
-<li><strong>LOUD</strong>: The “U” in this acronym is key — this framework is about making data not just open, but genuinely <em>usable</em>. Who is the primary target audience?</li>
-<li><strong>OA</strong>: This two-letter abbreviation is primarily associated with the academic and scholarly world. What type of output does it focus on making freely available?</li>
-<li><strong>FAIR</strong>: One of the four letters stands for “Findable”. What technical mechanism is essential for making data findable on the web?</li>
-<li><strong>Collections as Data</strong>: This framework reimagines cultural heritage collections as things that can be computed on. Think about what needs to happen for digital objects from different institutions to work together.</li>
-<li><strong>CARE</strong>: This framework emerged from Indigenous data governance discussions. Consider what its core values — Collective benefit, Authority to control, Responsibility, Ethics — prioritise above all.</li>
-<li><strong>Open Science</strong>: This is the broadest movement on the list, covering the entire research lifecycle. What are the fundamental goals it seeks to achieve in how research is conducted?</li>
+<li><strong>Number of paintings</strong>: After running the query, the Wikidata Query Service shows the total result count at the bottom of the results table. You should find several dozen results for Van Gogh.</li>
+<li><strong>Modifying the query</strong>: The only part you need to change is <code>wd:Q5582</code> (Van Gogh’s identifier). To find another artist’s Q-number, use the Wikidata search bar at <a href="https://www.wikidata.org/">wikidata.org</a> and look for the Q-identifier on their page. Replace it in the <code>wdt:P170</code> line. Some artists may have significantly more or fewer results depending on how well their works are documented on Wikidata.</li>
 </ul>
 </div>
 </div>
 </div>
-<div id="matching-exercise">
-
+</section>
+<section id="c-reflection-questions-5-7-minutes" class="level3">
+<h3 class="anchored" data-anchor-id="c-reflection-questions-5-7-minutes">C: Reflection Questions (5-7 minutes)</h3>
+<ul>
+<li>What are the main advantages of using Linked Data for cultural heritage collections?</li>
+<li>What challenges might institutions face when implementing Linked Data?</li>
+<li>Based on your experience with the Wikidata Query Service, what makes a SPARQL endpoint useful or difficult to use?</li>
+</ul>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-3-contents" aria-controls="callout-3" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
 </div>
-<div style="text-align: center; margin-top: 2rem;">
-<p><button class="validate-btn" style="padding: 0.75rem 2rem; font-size: 1.1rem;" onclick="validateAll()">Validate All</button></p>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Hints for Part C
 </div>
-<div id="results" class="results-summary" style="display: none;">
-<div id="score-display" class="score">
-
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<p id="score-text">
-</p>
-<p><button class="reset-btn" onclick="resetExercise()">Reset Exercise</button> <button class="reset-btn" style="background-color: #17a2b8; margin-left: 1rem;" onclick="toggleAnswerKey()">Show Answer Key</button></p>
+<div id="callout-3" class="callout-3-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<ul>
+<li><strong>Advantages</strong>: Think about what happens when collections from different institutions can reference the same entities (people, places, concepts). Consider aspects like discoverability, interoperability across systems, and the ability to enrich records by linking to external knowledge bases.</li>
+<li><strong>Challenges</strong>: Consider the practical side — what does an institution need in terms of expertise, tooling, and ongoing maintenance? Think also about data quality, choosing the right vocabularies/ontologies, and dealing with legacy cataloguing systems.</li>
+<li><strong>SPARQL usability</strong>: Reflect on your own experience — was the query language intuitive? Did features like auto-completion help? Think about the balance between the power of the query language and the learning curve for newcomers.</li>
+</ul>
 </div>
-<div id="answerKey" class="answer-key">
-<h4 class="anchored">
-Answer Key
-</h4>
-<table style="width: 100%;">
-<tbody><tr>
-<th style="text-align: left;">
-Framework
-</th>
-<th style="text-align: left;">
-Correct Match
-</th>
-</tr>
-<tr>
-<td>
-<strong>1. FLOSS</strong>
-</td>
-<td>
-B - Code sharing practices
-</td>
-</tr>
-<tr>
-<td>
-<strong>2. LOUD</strong>
-</td>
-<td>
-D - Developer-centric data accessibility
-</td>
-</tr>
-<tr>
-<td>
-<strong>3. OA</strong>
-</td>
-<td>
-E - Unrestricted access to scholarly publications
-</td>
-</tr>
-<tr>
-<td>
-<strong>4. FAIR</strong>
-</td>
-<td>
-A - Persistent identifier assignment
-</td>
-</tr>
-<tr>
-<td>
-<strong>5. Collections as Data</strong>
-</td>
-<td>
-F - Digital object interoperability
-</td>
-</tr>
-<tr>
-<td>
-<strong>6. CARE</strong>
-</td>
-<td>
-C - Ethical data stewardship
-</td>
-</tr>
-<tr>
-<td>
-<strong>7. Open Science</strong>
-</td>
-<td>
-G - Research transparency and reproducibility
-</td>
-</tr>
-</tbody></table>
 </div>
-</section></section><a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a><div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-reuse"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div class="quarto-appendix-contents"><div><a rel="license" href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a></div></div></section></div></main></div>
-<script>
-const frameworks = [
-  { id: 1, name: "FLOSS" },
-  { id: 2, name: "LOUD" },
-  { id: 3, name: "OA" },
-  { id: 4, name: "FAIR" },
-  { id: 5, name: "Collections as Data" },
-  { id: 6, name: "CARE" },
-  { id: 7, name: "Open Science" }
-];
-
-const propositions = [
-  { letter: "A", text: "Persistent identifier assignment" },
-  { letter: "B", text: "Code sharing practices" },
-  { letter: "C", text: "Ethical data stewardship" },
-  { letter: "D", text: "Developer-centric data accessibility" },
-  { letter: "E", text: "Unrestricted access to scholarly publications" },
-  { letter: "F", text: "Digital object interoperability" },
-  { letter: "G", text: "Research transparency and reproducibility" }
-];
-
-const correctAnswers = {
-  1: "B",
-  2: "D",
-  3: "E",
-  4: "A",
-  5: "F",
-  6: "C",
-  7: "G"
-};
-
-const userAnswers = {};
-const feedback = {};
-
-function renderExercise() {
-  const container = document.getElementById("matching-exercise");
-  
-  let html = '<div>';
-  
-  frameworks.forEach(framework => {
-    const selectedValue = userAnswers[framework.id] || "";
-    
-    html += `
-      <div class="matching-row">
-        <div class="framework-label">${framework.id}. ${framework.name}</div>
-        <div>
-          <select id="select-${framework.id}" onchange="updateAnswer(${framework.id})">
-            <option value="">-- Select --</option>
-            ${propositions.map(p => `<option value="${p.letter}" ${selectedValue === p.letter ? 'selected' : ''}>${p.letter}</option>`).join("")}
-          </select>
-        </div>
-      </div>
-    `;
-  });
-  
-  html += '</div>';
-  container.innerHTML = html;
-}
-
-function updateAnswer(frameworkId) {
-  const select = document.getElementById(`select-${frameworkId}`);
-  userAnswers[frameworkId] = select.value;
-  renderExercise();
-}
-
-function validateAll() {
-  // Check if all fields are filled
-  const allFilled = frameworks.every(f => userAnswers[f.id]);
-  
-  if (!allFilled) {
-    alert("Please select an answer for all frameworks before validating.");
-    return;
-  }
-  
-  // Validate all answers
-  frameworks.forEach(framework => {
-    const isCorrect = userAnswers[framework.id] === correctAnswers[framework.id];
-    feedback[framework.id] = { correct: isCorrect };
-  });
-  
-  displayResults();
-}
-
-function displayResults() {
-  const correctCount = frameworks.filter(f => feedback[f.id].correct).length;
-  const total = frameworks.length;
-  
-  const resultsContainer = document.getElementById("results");
-  
-  let resultHTML = `
-    <div class="score">${correctCount}/${total}</div>
-  `;
-  
-  if (correctCount === total) {
-    resultHTML += "<p><strong>Perfect! 🎉 You matched all frameworks correctly.</strong></p>";
-  } else if (correctCount >= 5) {
-    resultHTML += `<p><strong>Great job!</strong> You got ${correctCount} out of ${total} correct.</p>`;
-  } else {
-    resultHTML += `<p><strong>Good effort!</strong> You got ${correctCount} out of ${total} correct.</p>`;
-  }
-  
-  resultHTML += "<h3>Your Answers:</h3>";
-  resultHTML += "<table style='width: 100%; text-align: left;'>";
-  resultHTML += "<tr><th>Framework</th><th>Your Answer</th><th>Correct Answer</th><th>Result</th></tr>";
-  
-  frameworks.forEach(framework => {
-    const userAnswer = userAnswers[framework.id];
-    const correctAnswer = correctAnswers[framework.id];
-    const isCorrect = feedback[framework.id].correct;
-    const resultClass = isCorrect ? 'correct' : 'incorrect';
-    const resultText = isCorrect ? '✓' : '✗';
-    
-    resultHTML += `
-      <tr class="${resultClass}">
-        <td><strong>${framework.id}. ${framework.name}</strong></td>
-        <td>${userAnswer}</td>
-        <td>${correctAnswer}</td>
-        <td>${resultText}</td>
-      </tr>
-    `;
-  });
-  
-  resultHTML += "</table>";
-  resultHTML += `
-    <button class="reset-btn" onclick="resetExercise()">Reset Exercise</button>
-    <button class="reset-btn" style="background-color: #17a2b8; margin-left: 1rem;" onclick="toggleAnswerKey()">Show Answer Key</button>
-  `;
-  
-  resultsContainer.innerHTML = resultHTML;
-  resultsContainer.style.display = "block";
-}
-
-function resetExercise() {
-  Object.keys(userAnswers).forEach(key => {
-    userAnswers[key] = "";
-    feedback[key] = null;
-  });
-  document.getElementById("results").style.display = "none";
-  document.getElementById("answerKey").classList.remove("show");
-  renderExercise();
-}
-
-function toggleAnswerKey() {
-  document.getElementById("answerKey").classList.toggle("show");
-}
-
-// Initial render
-renderExercise();
-</script>
+</div>
+</section>
+</section>
+<section id="additional-resources" class="level2">
+<h2 class="anchored" data-anchor-id="additional-resources">Additional Resources</h2>
+<ul>
+<li><strong>Linked Data Principles</strong>: <a href="https://www.w3.org/DesignIssues/LinkedData.html" class="uri">https://www.w3.org/DesignIssues/LinkedData.html</a></li>
+<li><strong>Turtle Specification</strong>: <a href="https://www.w3.org/TR/turtle/" class="uri">https://www.w3.org/TR/turtle/</a></li>
+<li><strong>SPARQL Tutorial</strong>: <a href="https://www.w3.org/TR/sparql11-query/" class="uri">https://www.w3.org/TR/sparql11-query/</a></li>
+<li><strong>Wikidata SPARQL Examples</strong>: <a href="https://www.wikidata.org/wiki/Wikidata:SPARQL_query_service/queries/examples" class="uri">https://www.wikidata.org/wiki/Wikidata:SPARQL_query_service/queries/examples</a></li>
+</ul>
 
 
+</section>
 
-
-
- <!-- /main -->
+<a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a><div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-reuse"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div class="quarto-appendix-contents"><div><a rel="license" href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a></div></div></section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     // Ensure there is a toggle, if there isn't float one in the top right
@@ -1293,7 +1104,7 @@ renderExercise();
     }
   });
   </script>
- <!-- /content -->
+</div> <!-- /content -->
 <footer class="footer">
   <div class="nav-footer">
     <div class="nav-footer-left">
@@ -1301,7 +1112,7 @@ renderExercise();
 </div>   
     <div class="nav-footer-center">
       &nbsp;
-    <div class="toc-actions"><ul><li><a href="https://github.com/julsraemy/intro-open-data/edit/main/exercises/ex-03.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/julsraemy/intro-open-data/issues/new/choose" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
+    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/julsraemy/intro-open-data/edit/main/exercises/ex-03.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/julsraemy/intro-open-data/issues/new/choose" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
     <div class="nav-footer-right">
 <p>Content is published under a Creative Commons Attribution 4.0 International licence</p>
 </div>

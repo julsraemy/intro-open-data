@@ -6,9 +6,9 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="dcterms.date" content="2026-02-09">
+<meta name="dcterms.date" content="2026-02-20">
 
-<title>Exercise 5: The Reuser’s Perspective (OGD) – Introduction to Open Data</title>
+<title>Recap – Introduction to Open Data</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,41 +20,6 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
-}
-/* CSS for syntax highlighting */
-html { -webkit-text-size-adjust: 100%; }
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-div.sourceCode { margin: 1em 0; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
-}
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-  }
-pre.numberSource { margin-left: 3em;  padding-left: 4px; }
-div.sourceCode
-  {   }
-@media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 </style>
 
@@ -109,14 +74,19 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     "search-label": "Search"
   }
 }</script>
+<script src="../site_libs/quarto-diagram/mermaid.min.js"></script>
+<script src="../site_libs/quarto-diagram/mermaid-init.js"></script>
+<link href="../site_libs/quarto-diagram/mermaid.css" rel="stylesheet">
 
 
 <link rel="stylesheet" href="../styles/custom.scss">
-<meta property="og:title" content="Exercise 5: The Reuser’s Perspective (OGD) – Introduction to Open Data">
-<meta property="og:image" content="https://julsraemy.ch/intro-open-data/exercises/data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA2ZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDo1N0NEMjA4MDI1MjA2ODExOTk0QzkzNTEzRjZEQTg1NyIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDozM0NDOEJGNEZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDozM0NDOEJGM0ZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ1M1IE1hY2ludG9zaCI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOkZDN0YxMTc0MDcyMDY4MTE5NUZFRDc5MUM2MUUwNEREIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjU3Q0QyMDgwMjUyMDY4MTE5OTRDOTM1MTNGNkRBODU3Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+84NovQAAAR1JREFUeNpiZEADy85ZJgCpeCB2QJM6AMQLo4yOL0AWZETSqACk1gOxAQN+cAGIA4EGPQBxmJA0nwdpjjQ8xqArmczw5tMHXAaALDgP1QMxAGqzAAPxQACqh4ER6uf5MBlkm0X4EGayMfMw/Pr7Bd2gRBZogMFBrv01hisv5jLsv9nLAPIOMnjy8RDDyYctyAbFM2EJbRQw+aAWw/LzVgx7b+cwCHKqMhjJFCBLOzAR6+lXX84xnHjYyqAo5IUizkRCwIENQQckGSDGY4TVgAPEaraQr2a4/24bSuoExcJCfAEJihXkWDj3ZAKy9EJGaEo8T0QSxkjSwORsCAuDQCD+QILmD1A9kECEZgxDaEZhICIzGcIyEyOl2RkgwAAhkmC+eAm0TAAAAABJRU5ErkJggg==">
+<meta property="og:title" content="Recap – Introduction to Open Data">
+<meta property="og:description" content="">
+<meta property="og:image" content="https://julsraemy.ch/intro-open-data/recap/data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA2ZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDo1N0NEMjA4MDI1MjA2ODExOTk0QzkzNTEzRjZEQTg1NyIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDozM0NDOEJGNEZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDozM0NDOEJGM0ZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ1M1IE1hY2ludG9zaCI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOkZDN0YxMTc0MDcyMDY4MTE5NUZFRDc5MUM2MUUwNEREIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjU3Q0QyMDgwMjUyMDY4MTE5OTRDOTM1MTNGNkRBODU3Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+84NovQAAAR1JREFUeNpiZEADy85ZJgCpeCB2QJM6AMQLo4yOL0AWZETSqACk1gOxAQN+cAGIA4EGPQBxmJA0nwdpjjQ8xqArmczw5tMHXAaALDgP1QMxAGqzAAPxQACqh4ER6uf5MBlkm0X4EGayMfMw/Pr7Bd2gRBZogMFBrv01hisv5jLsv9nLAPIOMnjy8RDDyYctyAbFM2EJbRQw+aAWw/LzVgx7b+cwCHKqMhjJFCBLOzAR6+lXX84xnHjYyqAo5IUizkRCwIENQQckGSDGY4TVgAPEaraQr2a4/24bSuoExcJCfAEJihXkWDj3ZAKy9EJGaEo8T0QSxkjSwORsCAuDQCD+QILmD1A9kECEZgxDaEZhICIzGcIyEyOl2RkgwAAhkmC+eAm0TAAAAABJRU5ErkJggg==">
 <meta property="og:site_name" content="Introduction to Open Data">
-<meta name="twitter:title" content="Exercise 5: The Reuser’s Perspective (OGD) – Introduction to Open Data">
-<meta name="twitter:image" content="https://julsraemy.ch/intro-open-data/exercises/data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA2ZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDo1N0NEMjA4MDI1MjA2ODExOTk0QzkzNTEzRjZEQTg1NyIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDozM0NDOEJGNEZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDozM0NDOEJGM0ZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ1M1IE1hY2ludG9zaCI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOkZDN0YxMTc0MDcyMDY4MTE5NUZFRDc5MUM2MUUwNEREIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjU3Q0QyMDgwMjUyMDY4MTE5OTRDOTM1MTNGNkRBODU3Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+84NovQAAAR1JREFUeNpiZEADy85ZJgCpeCB2QJM6AMQLo4yOL0AWZETSqACk1gOxAQN+cAGIA4EGPQBxmJA0nwdpjjQ8xqArmczw5tMHXAaALDgP1QMxAGqzAAPxQACqh4ER6uf5MBlkm0X4EGayMfMw/Pr7Bd2gRBZogMFBrv01hisv5jLsv9nLAPIOMnjy8RDDyYctyAbFM2EJbRQw+aAWw/LzVgx7b+cwCHKqMhjJFCBLOzAR6+lXX84xnHjYyqAo5IUizkRCwIENQQckGSDGY4TVgAPEaraQr2a4/24bSuoExcJCfAEJihXkWDj3ZAKy9EJGaEo8T0QSxkjSwORsCAuDQCD+QILmD1A9kECEZgxDaEZhICIzGcIyEyOl2RkgwAAhkmC+eAm0TAAAAABJRU5ErkJggg==">
+<meta name="twitter:title" content="Recap – Introduction to Open Data">
+<meta name="twitter:description" content="">
+<meta name="twitter:image" content="https://julsraemy.ch/intro-open-data/recap/data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA2ZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDo1N0NEMjA4MDI1MjA2ODExOTk0QzkzNTEzRjZEQTg1NyIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDozM0NDOEJGNEZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDozM0NDOEJGM0ZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ1M1IE1hY2ludG9zaCI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOkZDN0YxMTc0MDcyMDY4MTE5NUZFRDc5MUM2MUUwNEREIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjU3Q0QyMDgwMjUyMDY4MTE5OTRDOTM1MTNGNkRBODU3Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+84NovQAAAR1JREFUeNpiZEADy85ZJgCpeCB2QJM6AMQLo4yOL0AWZETSqACk1gOxAQN+cAGIA4EGPQBxmJA0nwdpjjQ8xqArmczw5tMHXAaALDgP1QMxAGqzAAPxQACqh4ER6uf5MBlkm0X4EGayMfMw/Pr7Bd2gRBZogMFBrv01hisv5jLsv9nLAPIOMnjy8RDDyYctyAbFM2EJbRQw+aAWw/LzVgx7b+cwCHKqMhjJFCBLOzAR6+lXX84xnHjYyqAo5IUizkRCwIENQQckGSDGY4TVgAPEaraQr2a4/24bSuoExcJCfAEJihXkWDj3ZAKy9EJGaEo8T0QSxkjSwORsCAuDQCD+QILmD1A9kECEZgxDaEZhICIzGcIyEyOl2RkgwAAhkmC+eAm0TAAAAABJRU5ErkJggg==">
 <meta name="twitter:card" content="summary_large_image">
 </head>
 
@@ -386,7 +356,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     </ul>
   </li>
   <li class="nav-item">
-    <a class="nav-link" href="../recap/index.html"> 
+    <a class="nav-link active" href="../recap/index.html" aria-current="page"> 
 <span class="menu-text">Recap</span></a>
   </li>  
   <li class="nav-item">
@@ -415,17 +385,32 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#the-reusers-perspective-ogd" id="toc-the-reusers-perspective-ogd" class="nav-link active" data-scroll-target="#the-reusers-perspective-ogd">The Reuser’s Perspective (OGD)</a>
+  <li><a href="#week-1" id="toc-week-1" class="nav-link active" data-scroll-target="#week-1">Week 1</a>
   <ul>
-  <li><a href="#a---exploring-and-reusing-swiss-ogd" id="toc-a---exploring-and-reusing-swiss-ogd" class="nav-link" data-scroll-target="#a---exploring-and-reusing-swiss-ogd">A - Exploring and Reusing Swiss OGD</a></li>
-  <li><a href="#b---ogd-as-linked-data-lindas" id="toc-b---ogd-as-linked-data-lindas" class="nav-link" data-scroll-target="#b---ogd-as-linked-data-lindas">B - OGD as Linked Data (LINDAS)</a>
+  <li><a href="#what-is-open-data" id="toc-what-is-open-data" class="nav-link" data-scroll-target="#what-is-open-data">What is Open Data?</a>
   <ul>
-  <li><a href="#visualize" id="toc-visualize" class="nav-link" data-scroll-target="#visualize">Visualize</a></li>
-  <li><a href="#sparql" id="toc-sparql" class="nav-link" data-scroll-target="#sparql">SPARQL</a></li>
+  <li><a href="#definitions" id="toc-definitions" class="nav-link" data-scroll-target="#definitions">Definitions</a></li>
+  <li><a href="#a-brief-history" id="toc-a-brief-history" class="nav-link" data-scroll-target="#a-brief-history">A Brief History</a></li>
   </ul></li>
+  <li><a href="#movements-and-principles" id="toc-movements-and-principles" class="nav-link" data-scroll-target="#movements-and-principles">Movements and Principles</a>
+  <ul>
+  <li><a href="#movements" id="toc-movements" class="nav-link" data-scroll-target="#movements">Movements</a></li>
+  <li><a href="#principles" id="toc-principles" class="nav-link" data-scroll-target="#principles">Principles</a></li>
   </ul></li>
+  <li><a href="#iiif-and-linked-art" id="toc-iiif-and-linked-art" class="nav-link" data-scroll-target="#iiif-and-linked-art">IIIF and Linked Art</a>
+  <ul>
+  <li><a href="#iiif-international-image-interoperability-framework" id="toc-iiif-international-image-interoperability-framework" class="nav-link" data-scroll-target="#iiif-international-image-interoperability-framework">IIIF — International Image Interoperability Framework</a></li>
+  <li><a href="#linked-art" id="toc-linked-art" class="nav-link" data-scroll-target="#linked-art">Linked Art</a></li>
+  </ul></li>
+  <li><a href="#from-tables-to-triples" id="toc-from-tables-to-triples" class="nav-link" data-scroll-target="#from-tables-to-triples">From Tables to Triples</a></li>
+  <li><a href="#the-same-data-as-a-knowledge-graph" id="toc-the-same-data-as-a-knowledge-graph" class="nav-link" data-scroll-target="#the-same-data-as-a-knowledge-graph">The Same Data as a Knowledge Graph</a></li>
+  <li><a href="#persistent-identifiers-pids" id="toc-persistent-identifiers-pids" class="nav-link" data-scroll-target="#persistent-identifiers-pids">Persistent Identifiers (PIDs)</a></li>
+  <li><a href="#key-takeaways" id="toc-key-takeaways" class="nav-link" data-scroll-target="#key-takeaways">Key Takeaways</a></li>
+  </ul></li>
+  <li><a href="#week-2" id="toc-week-2" class="nav-link" data-scroll-target="#week-2">Week 2</a></li>
+  <li><a href="#week-3" id="toc-week-3" class="nav-link" data-scroll-target="#week-3">Week 3</a></li>
   </ul>
-<div class="toc-actions"><ul><li><a href="https://github.com/julsraemy/intro-open-data/edit/main/exercises/ex-05.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/julsraemy/intro-open-data/issues/new/choose" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
+<div class="toc-actions"><ul><li><a href="https://github.com/julsraemy/intro-open-data/edit/main/recap/index.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/julsraemy/intro-open-data/issues/new/choose" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content column-page-left" id="quarto-document-content">
@@ -433,7 +418,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Exercise 5: The Reuser’s Perspective (OGD)</h1>
+<h1 class="title">Recap</h1>
 </div>
 
 
@@ -460,14 +445,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">February 9, 2026</p>
+      <p class="date">February 20, 2026</p>
     </div>
   </div>
   
     <div>
     <div class="quarto-title-meta-heading">Modified</div>
     <div class="quarto-title-meta-contents">
-      <p class="date-modified">February 17, 2026</p>
+      <p class="date-modified">February 20, 2026</p>
     </div>
   </div>
     
@@ -478,132 +463,462 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
-<section id="the-reusers-perspective-ogd" class="level2">
-<h2 class="anchored" data-anchor-id="the-reusers-perspective-ogd">The Reuser’s Perspective (OGD)</h2>
-<div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center">
+<p>Each week’s recap is a concise summary of the key concepts, exercises, and takeaways covered in class. Expandable <em>More context</em> sections provide additional detail on each topic. Use this page to review before the next session or before the final examination.</p>
+<hr>
+<section id="week-1" class="level2">
+<h2 class="anchored" data-anchor-id="week-1">Week 1</h2>
+<section id="what-is-open-data" class="level3">
+<h3 class="anchored" data-anchor-id="what-is-open-data">What is Open Data?</h3>
+<section id="definitions" class="level4">
+<h4 class="anchored" data-anchor-id="definitions">Definitions</h4>
+<ul>
+<li><strong>Openness</strong>: freely access, use, modify, and share — for any purpose</li>
+<li><strong>Legally open</strong>: under an open licence permitting reuse and redistribution</li>
+<li><strong>Technically open</strong>: machine-readable, no more than reproduction cost</li>
+<li><strong>Metadata</strong>: data about data — no fixed boundary between the two</li>
+</ul>
+</section>
+<section id="a-brief-history" class="level4">
+<h4 class="anchored" data-anchor-id="a-brief-history">A Brief History</h4>
+<ul>
+<li>1942 — Merton: researchers must contribute to the “common pot”</li>
+<li>1995 — term “Open Data” first appears (geophysical/environmental data)</li>
+<li>2005 — Open Knowledge Foundation publishes the Open Definition</li>
+<li>2007 — Sebastopol Meeting: 8 principles of open government data</li>
+<li>2009 — Berners-Lee at TED: <em>“Raw Data Now”</em></li>
+</ul>
+<div class="callout callout-style-default callout-note callout-titled" title="More context">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Note</span>Instructions
+<span class="screen-reader-only">Note</span>More context
 </div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
+<div id="callout-1" class="callout-1-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p>Browse, search and do what is described below. You can do this exercise alone or in pairs. The whole exercise should take between 20 and 30 minutes. Afterwards, you will share what you have discovered and/or created with the class.</p>
+<p>Open data requires both legal and technical openness. The concept predates the term — the idea that publicly funded knowledge must benefit the public has roots in 1940s science.</p>
 </div>
 </div>
-<section id="a---exploring-and-reusing-swiss-ogd" class="level3">
-<h3 class="anchored" data-anchor-id="a---exploring-and-reusing-swiss-ogd">A - Exploring and Reusing Swiss OGD</h3>
-<ol type="1">
-<li><p>Go to <a href="https://opendata.swiss/">opendata.swiss</a>. What are the three cantons that provide the most datasets on opendata.swiss?</p></li>
-<li><p>Go to the <em>Ist-Daten</em> (Target/Actual Comparison of SBB departure/arrive times) page (<a href="https://opendata.swiss/en/perma/ist-daten-sbb@schweizerische-bundesbahnen-sbb" class="uri">https://opendata.swiss/en/perma/ist-daten-sbb@schweizerische-bundesbahnen-sbb</a>) and download the CSV file. Open it in a spreadsheet application (Excel, LibreOffice Calc, Google Sheets) or a text editor. The file contains data from the previous day depending on when you download it. Answer the following:</p>
-<ol type="a">
-<li><p><strong>Most punctual station</strong>: Which train station (<code>Stop name</code>) has the best on-time performance? Compare the scheduled times (<code>Arrival time</code> / <code>Departure time</code>) with the actual times (<code>Arrival actual time</code> / <code>Departure actual time</code>) to determine where delays are smallest on average.</p></li>
-<li><p><strong>Most delayed station</strong>: Conversely, which station has the highest average delay?</p></li>
-<li><p><strong>Cancelled trains</strong>: How many trains were cancelled on that day? Look at the <code>Cancelled TF</code> column (where <code>true</code> indicates a cancellation).</p></li>
-</ol></li>
-<li><p>Now try to get transport information via an <strong>API</strong> instead of downloading a file. The Swiss public transport API at <a href="https://transport.opendata.ch/" class="uri">https://transport.opendata.ch/</a> is freely accessible without authentication. Try the following:</p>
-<ol type="a">
-<li><p>Look up the next departures from a station of your choice, e.g.: <code>https://transport.opendata.ch/v1/stationboard?station=Bern&amp;limit=5</code></p></li>
-<li><p>Try changing the <code>station</code> parameter to another station and observe the results.</p></li>
-<li><p>Compare the experience: what are the advantages and limitations of using a live API versus analysing a downloaded CSV file?</p></li>
-</ol></li>
-<li><p>How many mailboxes are there in your commune or city? Explore the application at <a href="https://wieviele-briefkaesten-gibt-es.streamlit.app/" class="uri">https://wieviele-briefkaesten-gibt-es.streamlit.app/</a>. Where do these data originally come from?</p></li>
-</ol>
-<div class="callout callout-style-default callout-tip callout-titled">
+</div>
+<hr>
+</section>
+</section>
+<section id="movements-and-principles" class="level3">
+<h3 class="anchored" data-anchor-id="movements-and-principles">Movements and Principles</h3>
+<section id="movements" class="level4">
+<h4 class="anchored" data-anchor-id="movements">Movements</h4>
+<ul>
+<li><strong>Open Access (OA)</strong>: free, online access to scholarly publications — Gold, Green, Diamond, Hybrid, Bronze, Blue, Black</li>
+<li><strong>Open Science / Open Scholarship</strong>: entire research lifecycle made open — data, methods, peer review, software</li>
+<li><strong>FLOSS</strong>: Free/Libre and Open Source Software — 4 freedoms (run, study, change, distribute)</li>
+</ul>
+</section>
+<section id="principles" class="level4">
+<h4 class="anchored" data-anchor-id="principles">Principles</h4>
+<ul>
+<li><strong>FAIR</strong>: Findable, Accessible, Interoperable, Reusable — the technical framework for data sharing</li>
+<li><strong>CARE</strong>: Collective Benefit, Authority to Control, Responsibility, Ethics — governance for Indigenous data</li>
+<li><strong>Collections as Data</strong>: GLAM collections reimagined as computational resources — openness by default, interoperability, ethical stewardship</li>
+<li><strong>LOUD</strong>: Linked Open <em>Usable</em> Data — developer-friendly, JSON-LD, community-driven</li>
+</ul>
+<blockquote class="blockquote">
+<p>FAIR tells us <em>how</em> to structure data. CARE tells us <em>whose interests</em> must be protected.</p>
+</blockquote>
+<div class="callout callout-style-default callout-note callout-titled" title="More context">
 <div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Tip</span>Hints for Part A
+<span class="screen-reader-only">Note</span>More context
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
 <div id="callout-2" class="callout-2-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
+<p>These movements and principles are complementary, not competing. Open Access focuses on publications, Open Science on the full research process, FLOSS on tools. FAIR and CARE together ensure data is both technically sound and ethically grounded.</p>
+</div>
+</div>
+</div>
+<hr>
+</section>
+</section>
+<section id="iiif-and-linked-art" class="level3">
+<h3 class="anchored" data-anchor-id="iiif-and-linked-art">IIIF and Linked Art</h3>
+<p>Two standards that put LOUD into practice in GLAM collections.</p>
+<section id="iiif-international-image-interoperability-framework" class="level4">
+<h4 class="anchored" data-anchor-id="iiif-international-image-interoperability-framework">IIIF — International Image Interoperability Framework</h4>
+<p>IIIF defines standard APIs so that any compliant viewer can display any compliant resource, regardless of the hosting institution. The two core APIs are:</p>
 <ul>
-<li><strong>Q1</strong>: Use the “Organisation” or “Canton” filter on the opendata.swiss search page to see the counts.</li>
-<li><strong>Q2a/b</strong>: In a spreadsheet, calculate delays by subtracting the scheduled time from the actual time. Try using a pivot table or <code>AVERAGEIF</code>-style formulas grouped by <code>Stop name</code>. Ignore rows where times are missing or where <code>Arrival forecast status</code> / <code>Departure forecast status</code> show unusual values (e.g.&nbsp;<code>UNBEKANNT</code>). Stations with very few stops may appear artificially punctual or delayed — consider filtering for stations with a minimum number of stops.</li>
-<li><strong>Q2c</strong>: Filter or count rows where <code>Cancelled TF</code> equals <code>true</code>. In Excel/LibreOffice, you can use <code>=COUNTIF(column, "true")</code>.</li>
-<li><strong>Q3a/b</strong>: The transport.opendata.ch API returns JSON. You can paste the URL directly in your browser to see the result. Try the <code>/v1/connections</code> endpoint as well (e.g.&nbsp;<code>?from=Lausanne&amp;to=Genève</code>). The API documentation at <a href="https://transport.opendata.ch/docs.html" class="uri">https://transport.opendata.ch/docs.html</a> describes all available parameters.</li>
-<li><strong>Q3c</strong>: Think about: real-time vs.&nbsp;historical data, ease of use, volume of data retrievable, and what you can do with each approach.</li>
-<li><strong>Q4</strong>: The application estimates the number of delivery addresses / mailboxes (<em>Zustelladressen / Briefkästen</em>) for a user-defined area. To investigate where the data come from, you can look at the source code on GitHub (<a href="https://github.com/davidoesch/wo-sind-briefkaesten" class="uri">https://github.com/davidoesch/wo-sind-briefkaesten</a>) or use your browser’s developer tools (Network tab) while the app loads to see which data sources are being fetched. The underlying data come from the Federal Building and Housing Register (GWR) of the Federal Statistical Office (BFS) and business locations from the Overture Maps Foundation.</li>
+<li><strong>Image API</strong>: delivers pixels on demand — any region, size, rotation, and format; enables deep zoom without downloading the full file</li>
+<li><strong>Presentation API</strong>: assembles media resources (images, audio, video) and metadata into a <em>manifest</em> — a JSON-LD document describing how a digital object is structured and displayed</li>
 </ul>
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" role="tab" aria-controls="tabset-1-1" aria-selected="true" href="">Image API</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" role="tab" aria-controls="tabset-1-2" aria-selected="false" href="">Presentation API</a></li></ul>
+<div class="tab-content">
+<div id="tabset-1-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-1-1-tab">
+<p>A Swiss postal archive photograph served via IIIF Image API — zoom, pan, and rotate directly in the browser:</p>
+<iframe src="https://mejackreed.github.io/Leaflet-IIIF/examples/?url=https://iiif.ptt-archiv.ch/iiif/3/P-38-2-1851-08.jp2/info.json" width="100%" height="480px" style="border: 1px solid #dee2e6; border-radius: 4px;" allowfullscreen="">
+</iframe>
+</div>
+<div id="tabset-1-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-2-tab">
+<p><em>Irises</em> by Vincent van Gogh (Getty Museum) — a full IIIF manifest in Mirador, with multiple canvases, metadata, and annotations:</p>
+<iframe src="https://projectmirador.org/embed/?iiif-content=https://media.getty.edu/iiif/manifest/53be857e-41e8-4198-b45d-2e0f52d3051b" width="100%" height="480px" style="border: 1px solid #dee2e6; border-radius: 4px;" allowfullscreen="">
+</iframe>
 </div>
 </div>
 </div>
-</section>
-<section id="b---ogd-as-linked-data-lindas" class="level3">
-<h3 class="anchored" data-anchor-id="b---ogd-as-linked-data-lindas">B - OGD as Linked Data (LINDAS)</h3>
-<p><a href="https://lindas.admin.ch/">LINDAS</a> (Linked Data Service) is the Swiss federal platform for publishing and querying government data as Linked Data.</p>
-<section id="visualize" class="level4">
-<h4 class="anchored" data-anchor-id="visualize">Visualize</h4>
-<p>Go to <a href="https://visualize.admin.ch/">visualize.admin.ch</a> and use the <strong>Verkehrsleistung auf den Flugplätzen</strong> dataset (published by the Bundesamt für Zivilluftfahrt BAZL). This dataset records the number of annual air traffic movements (1 movement = 1 take-off or 1 landing) at Swiss airports.</p>
-<ol type="1">
-<li><p>For the year <strong>2023</strong>, were there more flight movements at <strong>Geneva</strong> or at <strong>Basel</strong>? Try to visualise this comparison on a <strong>map</strong>.</p></li>
-<li><p>Look at the data for <strong>Zurich Airport</strong> across multiple years. By how many movements (or what percentage) did flight traffic drop in <strong>2020 and 2021</strong> compared to 2019?</p></li>
-</ol>
-</section>
-<section id="sparql" class="level4">
-<h4 class="anchored" data-anchor-id="sparql">SPARQL</h4>
-<p>Go to the <a href="https://lindas.admin.ch/sparql/">LINDAS SPARQL Endpoint</a>.</p>
-<ol start="3" type="1">
-<li><p>Query the same <strong>aviation dataset</strong> via SPARQL. The dataset is available as a Linked Data cube at <code>https://transport.ld.admin.ch/foca/FOCA_Air_traffic_movements/5</code>. Try to retrieve the number of flight movements per airport for a given year. Start by exploring the structure of the data with a simple query, then refine.</p></li>
-<li><p>Now try a completely different dataset: the <strong>Archive database of the Swiss Federal Archives</strong> (<code>https://culture.ld.admin.ch/.well-known/dataset/ais</code>). This dataset uses the <strong>Records in Context (RiC)</strong> ontology. Try the following query to find archival records related to “Bern”:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode numberSource sparql number-lines code-with-copy"><code class="sourceCode"><span id="cb1-1"><a href="#cb1-1"></a>PREFIX rdf: &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt;</span>
-<span id="cb1-2"><a href="#cb1-2"></a>PREFIX rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt;</span>
-<span id="cb1-3"><a href="#cb1-3"></a>PREFIX rico: &lt;https://www.ica.org/standards/RiC/ontology#&gt;</span>
-<span id="cb1-4"><a href="#cb1-4"></a></span>
-<span id="cb1-5"><a href="#cb1-5"></a>SELECT ?record ?identifier ?title ?beginDate ?endDate ?expressedDate ?holder</span>
-<span id="cb1-6"><a href="#cb1-6"></a>WHERE {</span>
-<span id="cb1-7"><a href="#cb1-7"></a>  GRAPH &lt;https://lindas.admin.ch/sfa/ais&gt; {</span>
-<span id="cb1-8"><a href="#cb1-8"></a>    ?record rdf:type rico:Record .</span>
-<span id="cb1-9"><a href="#cb1-9"></a>    ?record rico:title ?title .</span>
-<span id="cb1-10"><a href="#cb1-10"></a>    ?record rico:identifier ?identifier .</span>
-<span id="cb1-11"><a href="#cb1-11"></a></span>
-<span id="cb1-12"><a href="#cb1-12"></a>    OPTIONAL { ?record rico:hasOrHadHolder ?holder }</span>
-<span id="cb1-13"><a href="#cb1-13"></a></span>
-<span id="cb1-14"><a href="#cb1-14"></a>    OPTIONAL {</span>
-<span id="cb1-15"><a href="#cb1-15"></a>      ?record rico:isAssociatedWithDate ?date .</span>
-<span id="cb1-16"><a href="#cb1-16"></a>      OPTIONAL { ?date rico:beginningDate ?beginDate }</span>
-<span id="cb1-17"><a href="#cb1-17"></a>      OPTIONAL { ?date rico:endDate ?endDate }</span>
-<span id="cb1-18"><a href="#cb1-18"></a>      OPTIONAL { ?date rico:expressedDate ?expressedDate }</span>
-<span id="cb1-19"><a href="#cb1-19"></a>    }</span>
-<span id="cb1-20"><a href="#cb1-20"></a></span>
-<span id="cb1-21"><a href="#cb1-21"></a>    FILTER(CONTAINS(LCASE(?title), "bern"))</span>
-<span id="cb1-22"><a href="#cb1-22"></a>  }</span>
-<span id="cb1-23"><a href="#cb1-23"></a>}</span>
-<span id="cb1-24"><a href="#cb1-24"></a>ORDER BY ?beginDate</span>
-<span id="cb1-25"><a href="#cb1-25"></a>LIMIT 100</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>Run this query, then try modifying it to search for a different topic (e.g.&nbsp;a different city, a subject that interests you, or a specific date range).</p></li>
-</ol>
-<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout callout-style-default callout-note callout-titled" title="More context">
 <div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-3-contents" aria-controls="callout-3" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Tip</span>Hints for Part B
+<span class="screen-reader-only">Note</span>More context
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
 <div id="callout-3" class="callout-3-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
+<p>The Image API exposes a simple URL pattern: <code>{base}/{identifier}/{region}/{size}/{rotation}/{quality}.{format}</code> — any pixel crop can be requested without preprocessing. The Presentation API wraps one or more media resources into a manifest that tells a client (viewer/player) how to display or play the object Mirador and Universal Viewer are the two most widely deployed open-source IIIF viewers.</p>
+</div>
+</div>
+</div>
+</section>
+<section id="linked-art" class="level4">
+<h4 class="anchored" data-anchor-id="linked-art">Linked Art</h4>
+<p>Linked Art is a community and shared data model for cultural heritage description, built on JSON-LD and CIDOC-CRM. It is a concrete implementation of LOUD — semantically rich enough for research, simple enough for developers. The <strong>LUX</strong> platform at Yale University is the largest production deployment, combining collections from Yale’s museums, libraries, and archives into a single queryable knowledge graph:</p>
+<video controls="" style="width: 100%; aspect-ratio: 16/9; border-radius: 4px; display: block;">
+<source src="https://julsraemy.ch/prezi/assets/lux-demo.mp4" type="video/mp4">
+</video>
+<div class="callout callout-style-default callout-note callout-titled" title="More context">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-4-contents" aria-controls="callout-4" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>More context
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-4" class="callout-4-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>Linked Art constrains the full complexity of CIDOC-CRM into a profile served as JSON-LD over standard HTTP APIs — any developer who can consume JSON can work with it. LUX exposes millions of records (objects, people, places, concepts, events) as Linked Art entities, all interlinked and queryable. This is the Web of Data made operational at institutional scale.</p>
+</div>
+</div>
+</div>
+<hr>
+</section>
+</section>
+<section id="from-tables-to-triples" class="level3">
+<h3 class="anchored" data-anchor-id="from-tables-to-triples">From Tables to Triples</h3>
+<p>A museum wants to describe Van Gogh’s <em>Starry Night</em>. Two approaches to modelling the same information:</p>
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-2-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-1" role="tab" aria-controls="tabset-2-1" aria-selected="true" href="">Relational Database</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-2-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-2" role="tab" aria-controls="tabset-2-2" aria-selected="false" href="">Triplestore</a></li></ul>
+<div class="tab-content">
+<div id="tabset-2-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-2-1-tab">
+<p>Three siloed tables, linked by local integer IDs:</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Table</th>
+<th>Key columns</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Artist</strong></td>
+<td><code>id</code>, <code>name</code>, <code>nationality</code>, <code>birthday</code></td>
+</tr>
+<tr class="even">
+<td><strong>Artwork</strong></td>
+<td><code>id</code>, <code>title</code>, <code>date</code>, <code>material</code>, <code>artist_id</code> ↗</td>
+</tr>
+<tr class="odd">
+<td><strong>Museum</strong></td>
+<td><code>id</code>, <code>name</code>, <code>location</code></td>
+</tr>
+</tbody>
+</table>
 <ul>
-<li><strong>Q1</strong>: On visualize.admin.ch, search for “Verkehrsleistung” or “Flugplätzen” to find the dataset. Once selected, choose a map visualisation and filter by the year 2023. Compare the circle sizes or values for Geneva and Basel.</li>
-<li><strong>Q2</strong>: Select the line chart view and filter for Zurich Airport only.</li>
-<li><strong>Q3</strong>: To explore the aviation cube via SPARQL, start with a <code>DESCRIBE</code> query to understand the structure, or try <code>SELECT * WHERE { ?s ?p ?o } LIMIT 20</code> within the FOCA graph. The observations contain dimensions for airport, year, and a measure for the number of movements. You may need to experiment with the predicate URIs — look at what properties the observations have.</li>
-<li><strong>Q4</strong>: <a href="https://www.ica.org/standards/RiC/ontology">Records in Context (RiC)</a> is an ontology developed by the International Council on Archives (ICA) for describing archival records as Linked Data. In the query, <code>rico:Record</code> represents an archival record, <code>rico:title</code> its title, and <code>rico:isAssociatedWithDate</code> links to date information. Try replacing <code>"bern"</code> in the <code>FILTER</code> with another term, or remove the filter entirely and add <code>FILTER(?beginDate &gt; "1900-01-01"^^xsd:date)</code> to explore records from the 20th century onwards.</li>
+<li>Relationships via <strong>foreign keys</strong> + SQL <code>JOIN</code></li>
+<li>IDs are <strong>local</strong> — <code>id: 1</code> means nothing outside this database</li>
+<li>Schema is <strong>rigid</strong> — adding a column requires a migration</li>
+<li>Data is <strong>siloed</strong> — not designed to link to the Rijksmuseum’s database</li>
+</ul>
+</div>
+<div id="tabset-2-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-2-2-tab">
+<p>Nine triples — every relationship is explicit data:</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Subject</th>
+<th>Predicate</th>
+<th>Object</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>ex:vangogh</code></td>
+<td><code>rdf:type</code></td>
+<td><code>foaf:Person</code></td>
+</tr>
+<tr class="even">
+<td><code>ex:vangogh</code></td>
+<td><code>foaf:name</code></td>
+<td><code>"Vincent van Gogh"</code></td>
+</tr>
+<tr class="odd">
+<td><code>ex:vangogh</code></td>
+<td><code>schema:nationality</code></td>
+<td><code>"Dutch"</code></td>
+</tr>
+<tr class="even">
+<td><code>ex:vangogh</code></td>
+<td><code>ex:created</code></td>
+<td><code>ex:starrynight</code></td>
+</tr>
+<tr class="odd">
+<td><code>ex:starrynight</code></td>
+<td><code>rdf:type</code></td>
+<td><code>schema:Painting</code></td>
+</tr>
+<tr class="even">
+<td><code>ex:starrynight</code></td>
+<td><code>schema:name</code></td>
+<td><code>"The Starry Night"</code></td>
+</tr>
+<tr class="odd">
+<td><code>ex:starrynight</code></td>
+<td><code>schema:location</code></td>
+<td><code>ex:moma</code></td>
+</tr>
+<tr class="even">
+<td><code>ex:moma</code></td>
+<td><code>rdf:type</code></td>
+<td><code>schema:Museum</code></td>
+</tr>
+<tr class="odd">
+<td><code>ex:moma</code></td>
+<td><code>foaf:name</code></td>
+<td><code>"Museum of Modern Art"</code></td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>IDs are <strong>global URIs</strong> — <code>wd:Q5582</code> is Van Gogh <em>everywhere</em></li>
+<li>Schema is <strong>flexible</strong> — add triples without breaking anything</li>
+<li>Relationships are <strong>globally linked</strong> — any entity can reference any URI</li>
 </ul>
 </div>
 </div>
 </div>
+<div class="callout callout-style-default callout-note callout-titled" title="More context">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-5-contents" aria-controls="callout-5" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>More context
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-5" class="callout-5-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>This is the core Linked Data shift. In a relational DB, relationships are implicit (foreign keys, JOIN operations) and local. In a triplestore, every relationship is an explicit triple with a globally meaningful URI. The same Van Gogh (<code>wd:Q5582</code>) can be referenced by the Getty, Wikidata, and the Rijksmuseum simultaneously.</p>
+</div>
+</div>
+</div>
+<hr>
+</section>
+<section id="the-same-data-as-a-knowledge-graph" class="level3">
+<h3 class="anchored" data-anchor-id="the-same-data-as-a-knowledge-graph">The Same Data as a Knowledge Graph</h3>
+<p>The nine triples from the Triplestore tab visualised as a directed graph. Orange rounded nodes are named resources (URIs); dark red rectangles are class types; dark teal rectangles are literal string values.</p>
+<div class="cell" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class="figure"><p></p>
+<div>
+<pre class="mermaid mermaid-js">%%{init: {'flowchart': {'nodeSpacing': 90, 'rankSpacing': 90}, 'themeVariables': {'fontSize': '14px', 'fontFamily': '"trebuchet ms",verdana,arial,sans-serif', 'lineColor': '#555555'}}}%%
+graph TD
+    VG(["ex:vangogh"]) --&gt;|"rdf:type"| PERSON["foaf:Person"]
+    VG --&gt;|"foaf:name"| VGNAME["'Vincent van Gogh'"]
+    VG --&gt;|"schema:nationality"| NAT["'Dutch'"]
+    VG --&gt;|"ex:created"| SN(["ex:starrynight"])
+    SN --&gt;|"rdf:type"| PAINT["schema:Painting"]
+    SN --&gt;|"schema:name"| SNNAME["'The Starry Night'"]
+    SN --&gt;|"schema:location"| MOMA(["ex:moma"])
+    MOMA --&gt;|"rdf:type"| MUS["schema:Museum"]
+    MOMA --&gt;|"foaf:name"| MNAME["'Museum of Modern Art'"]
 
+    classDef object fill:#C0770E,stroke:#7A4A00,color:#ffffff,font-weight:bold
+    classDef type fill:#5D1E1E,stroke:#3A0A0A,color:#ffffff
+    classDef literal fill:#1E3A4A,stroke:#0A1F2A,color:#ECF0F1
 
+    class VG,SN,MOMA object
+    class PERSON,PAINT,MUS type
+    class VGNAME,NAT,SNNAME,MNAME literal
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
+<div class="callout callout-style-default callout-note callout-titled" title="More context">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-6-contents" aria-controls="callout-6" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>More context
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-6" class="callout-6-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p><code>ex:moma</code> could link to <code>wd:Q188740</code> (MoMA on Wikidata), which in turn links to hundreds of other artists and artworks — that is the Web of Data. The graph is open-ended — any node can link out to any other URI on the web, connecting data across institutions globally.</p>
+</div>
+</div>
+</div>
+<hr>
+</section>
+<section id="persistent-identifiers-pids" class="level3">
+<h3 class="anchored" data-anchor-id="persistent-identifiers-pids">Persistent Identifiers (PIDs)</h3>
+<p><strong>Why PIDs matter:</strong> Without globally unique, stable identifiers, data remains siloed. PIDs ensure the same entity is recognised everywhere.</p>
+<p><strong>PID Characteristics</strong></p>
+<ul>
+<li><strong>Unique</strong>: no two entities share the same PID</li>
+<li><strong>Persistent</strong>: remains valid even if hosting infrastructure changes</li>
+<li><strong>Resolvable</strong>: points to current location via standard resolver</li>
+<li><strong>Interoperable</strong>: recognised across systems and communities</li>
+<li><strong>Human &amp; machine-readable</strong>: accessible both visually and programmatically</li>
+</ul>
+<p><strong>Common PID Types/Schemes</strong></p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th><strong>PID</strong></th>
+<th><strong>Identifies</strong></th>
+<th><strong>Example</strong></th>
+<th><strong>Resolver</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Digital Object Identifier (DOI)</strong></td>
+<td>Publications, datasets, objects</td>
+<td><code>10.1038/nature12373</code></td>
+<td><a href="https://doi.org/10.1038/nature12373" class="uri">https://doi.org/10.1038/nature12373</a></td>
+</tr>
+<tr class="even">
+<td><strong>Open Researcher and Contributor ID (ORCID)</strong></td>
+<td>Researchers, scholars</td>
+<td><code>0000-0002-5444-2280</code></td>
+<td><a href="https://orcid.org/0000-0002-5444-2280" class="uri">https://orcid.org/0000-0002-5444-2280</a></td>
+</tr>
+<tr class="odd">
+<td><strong>Research Organization Registry (ROR)</strong></td>
+<td>Research organisations</td>
+<td><code>01xkakk17</code></td>
+<td><a href="https://ror.org/01xkakk17" class="uri">https://ror.org/01xkakk17</a></td>
+</tr>
+<tr class="even">
+<td><strong>Archival Resource Key (ARK)</strong></td>
+<td>Cultural heritage objects</td>
+<td><code>ark:12148/btv1b108473193/</code></td>
+<td><a href="https://n2t.net/ark:12148/btv1b108473193/" class="uri">https://n2t.net/ark:12148/btv1b108473193/</a></td>
+</tr>
+<tr class="odd">
+<td><strong>Handle</strong></td>
+<td>General-purpose resources</td>
+<td><code>20.500.14716/127190</code></td>
+<td><a href="https://hdl.handle.net/20.500.14716/127190" class="uri">https://hdl.handle.net/20.500.14716/127190</a></td>
+</tr>
+</tbody>
+</table>
+<div class="callout callout-style-default callout-note callout-titled" title="More context">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-7-contents" aria-controls="callout-7" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>More context
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-7" class="callout-7-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>DOI is the industry standard for academic publishing, ORCID for researchers, ROR for institutions, and ARK for cultural heritage objects. Each PID type has a dedicated resolver: doi.org, orcid.org, ror.org, hdl.handle.net, and n2t.net (ARK).</p>
+</div>
+</div>
+</div>
+<hr>
+</section>
+<section id="key-takeaways" class="level3">
+<h3 class="anchored" data-anchor-id="key-takeaways">Key Takeaways</h3>
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-3-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-3-1" role="tab" aria-controls="tabset-3-1" aria-selected="true" href="">Open Science Landscape</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-3-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-3-2" role="tab" aria-controls="tabset-3-2" aria-selected="false" href="">Principles &amp; Frameworks</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-3-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-3-3" role="tab" aria-controls="tabset-3-3" aria-selected="false" href="">Technical Stack</a></li></ul>
+<div class="tab-content">
+<div id="tabset-3-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-3-1-tab">
+<ul>
+<li><strong>Open Data</strong> = legally open + technically open (machine-readable)</li>
+<li><strong>Open Access (OA)</strong>: free online access to scholarly publications — Gold, Green, Diamond, Bronze…</li>
+<li><strong>Open Research Data (ORD)</strong>: research datasets open by default — increasingly funder-mandated, central to university library services</li>
+<li><strong>Open Government Data (OGD)</strong>: public-sector data published proactively — replaces closed-by-default custody and fixed retention periods</li>
+</ul>
+</div>
+<div id="tabset-3-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-3-2-tab">
+<ul>
+<li><strong>FAIR</strong>: structure data for machine use — Findable, Accessible, Interoperable, Reusable</li>
+<li><strong>CARE</strong>: governance for data about people — Collective Benefit, Authority, Responsibility, Ethics</li>
+<li><strong>Collections as Data</strong>: GLAM holdings as computational datasets — bulk access, not just item discovery</li>
+<li><strong>LOUD</strong>: Linked Data that works in practice — JSON-LD, developer-friendly; instantiated by IIIF and Linked Art</li>
+</ul>
+</div>
+<div id="tabset-3-3" class="tab-pane" role="tabpanel" aria-labelledby="tabset-3-3-tab">
+<ul>
+<li><strong>Linked Data &amp; Triplestore</strong>: global URIs as identifiers; triples (subject → predicate → object) as the data model; SPARQL as the query language</li>
+<li><strong>PIDs</strong>: unique, persistent, resolvable — the same entity recognised across every institution</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="callout callout-style-default callout-note callout-titled" title="More context">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-8-contents" aria-controls="callout-8" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>More context
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-8" class="callout-8-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p><strong>Open Science Landscape</strong>: OA covers scholarly publications; ORD extends the logic to any dataset produced by research — the two are related but distinct, and funders increasingly mandate both. OGD applies open data principles to the public sector: for archives, this overturns the traditional logic of retention periods and scheduled releases in favour of proactive, early publication.</p>
+<p><strong>Principles &amp; Frameworks</strong>: FAIR and CARE are complementary — FAIR governs technical structure, CARE protects the interests of communities whose data is used. Collections as Data and LOUD are responses specific to GLAM and Linked Data contexts: the former reframes cultural heritage collections as first-class computational resources; the latter ensures that the Linked Data stack is actually adopted by developers, with IIIF and Linked Art as leading examples.</p>
+<p><strong>Technical Stack</strong>: PIDs and Linked Data together realise the Web of Data — the vision of the same entity (<code>wd:Q5582</code>, Van Gogh) linked across the Getty, Wikidata, and the Rijksmuseum, navigated seamlessly across institutional boundaries.</p>
+</div>
+</div>
+</div>
+<blockquote class="blockquote">
+<p>Open data is not just about making files available — it is about creating an interconnected web of usable, ethically governed knowledge.</p>
+</blockquote>
+<hr>
 </section>
 </section>
+<section id="week-2" class="level2">
+<h2 class="anchored" data-anchor-id="week-2">Week 2</h2>
+<p><em>Content coming after Week 2.</em></p>
+</section>
+<section id="week-3" class="level2">
+<h2 class="anchored" data-anchor-id="week-3">Week 3</h2>
+<p><em>Content coming after Week 3.</em></p>
+
+
 </section>
 
 <a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a><div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-reuse"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div class="quarto-appendix-contents"><div><a rel="license" href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a></div></div></section></div></main> <!-- /main -->
@@ -1035,7 +1350,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>   
     <div class="nav-footer-center">
       &nbsp;
-    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/julsraemy/intro-open-data/edit/main/exercises/ex-05.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/julsraemy/intro-open-data/issues/new/choose" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
+    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/julsraemy/intro-open-data/edit/main/recap/index.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/julsraemy/intro-open-data/issues/new/choose" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
     <div class="nav-footer-right">
 <p>Content is published under a Creative Commons Attribution 4.0 International licence</p>
 </div>

@@ -1,390 +1,190 @@
 ---
-title: "Exercise 3: Movements and Principles"
-authors: 
+title: "Exercise 3: Up to date with Linked Data"
+authors:
   - name: Julien A. Raemy
     orcid: 0000-0002-4711-5759
     email: julien.raemy@hesge.ch
     affiliations:
       - docuteam SA
       - University of Bern
-date: "2026-02-01"
+date: "2026-02-04"
 date-modified: last-modified
 license: "CC BY"
-format:
-  html:
-    theme:
-      light: flatly
-      dark: darkly
-    toc: false
-include-in-header:
-  - text: |
-      <style>
-        .exercise-container {
-          max-width: 900px;
-          margin: 0 auto;
-        }
-        .matching-row {
-          display: grid;
-          grid-template-columns: 1fr 1fr;
-          gap: 1rem;
-          align-items: center;
-          padding: 1rem;
-          margin-bottom: 1rem;
-          background-color: var(--bs-secondary-bg);
-          border-radius: 6px;
-          border-left: 4px solid var(--bs-primary);
-        }
-        .framework-label {
-          font-weight: bold;
-          color: var(--bs-primary);
-        }
-        .proposition-label {
-          font-style: italic;
-          color: var(--bs-secondary-color);
-        }
-        select {
-          padding: 0.5rem;
-          border: 2px solid var(--bs-border-color);
-          border-radius: 4px;
-          font-size: 1rem;
-          cursor: pointer;
-          background-color: var(--bs-body-bg);
-          color: var(--bs-body-color);
-        }
-        select:focus {
-          outline: none;
-          border-color: var(--bs-primary);
-          box-shadow: 0 0 0 3px var(--bs-primary-bg-subtle);
-        }
-        .validate-btn {
-          padding: 0.5rem 1rem;
-          background-color: var(--bs-success);
-          color: white;
-          border: none;
-          border-radius: 4px;
-          cursor: pointer;
-          font-weight: bold;
-          transition: background-color 0.3s;
-        }
-        .validate-btn:hover {
-          background-color: var(--bs-success-border-subtle);
-        }
-        .validate-btn:disabled {
-          background-color: var(--bs-secondary);
-          cursor: not-allowed;
-        }
-        .feedback {
-          padding: 0.5rem;
-          border-radius: 4px;
-          font-weight: bold;
-          text-align: center;
-          min-height: 2.5rem;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-        }
-        .feedback.correct {
-          background-color: var(--bs-success-bg-subtle);
-          color: var(--bs-success-text-emphasis);
-          border: 1px solid var(--bs-success-border-subtle);
-        }
-        .feedback.incorrect {
-          background-color: var(--bs-danger-bg-subtle);
-          color: var(--bs-danger-text-emphasis);
-          border: 1px solid var(--bs-danger-border-subtle);
-        }
-        .feedback.empty {
-          background-color: var(--bs-secondary-bg);
-          color: var(--bs-secondary-color);
-          font-weight: normal;
-        }
-        .results-summary {
-          margin-top: 2rem;
-          padding: 1.5rem;
-          background-color: var(--bs-secondary-bg);
-          border-radius: 6px;
-          text-align: center;
-        }
-        .score {
-          font-size: 2rem;
-          font-weight: bold;
-          color: var(--bs-primary);
-        }
-        .reset-btn {
-          padding: 0.75rem 1.5rem;
-          background-color: var(--bs-secondary);
-          color: white;
-          border: none;
-          border-radius: 4px;
-          cursor: pointer;
-          font-weight: bold;
-          margin-top: 1rem;
-          transition: background-color 0.3s;
-        }
-        .reset-btn:hover {
-          background-color: var(--bs-secondary-border-subtle);
-        }
-        .instructions {
-          background-color: var(--bs-info-bg-subtle);
-          border-left: 4px solid var(--bs-info);
-          padding: 1rem;
-          margin-bottom: 2rem;
-          border-radius: 4px;
-          color: var(--bs-info-text-emphasis);
-        }
-        .answer-key {
-          margin-top: 2rem;
-          padding: 1rem;
-          background-color: var(--bs-warning-bg-subtle);
-          border-left: 4px solid var(--bs-warning);
-          border-radius: 4px;
-          display: none;
-          color: var(--bs-warning-text-emphasis);
-        }
-        .answer-key.show {
-          display: block;
-        }
-        .answer-key table {
-          color: var(--bs-body-color);
-        }
-      </style>
 ---
 
-## Movements and Principles
+## Up to date with Linked Data
 
-::: {.callout-note}
-## Instructions
-Select a proposition (A, B, C, etc.) for each framework. When you arere ready, click "Validate All" to see your results.  While there may be overlap between them, each proposition corresponds to one main framework.
-:::
+Linked Data is about publishing structured data on the web so that it can be interlinked and become more useful through semantic queries. It extends standard web technologies (HTTP, URIs) to share information in a machine-readable way.
 
+### The Four Principles of Linked Data
 
+Tim Berners-Lee defined four principles for publishing data on the web:
 
-### Frameworks to Match
+1. **Use URIs as names for things** - Give everything a unique web address
+2. **Use HTTP URIs** - Make those addresses accessible via the web
+3. **Provide useful information** - When someone looks up a URI, return data using standards (RDF, SPARQL)
+4. **Include links to other URIs** - Enable discovery of related information
 
-| Letter | Proposition |
-|--------|-------------|
-| A | Persistent identifier assignment |
-| B | Code sharing practices |
-| C | Ethical data stewardship |
-| D | Developer-centric data accessibility |
-| E | Unrestricted access to scholarly publications |
-| F | Digital object interoperability |
-| G | Research transparency and reproducibility |
+### Understanding RDF Triples
 
+RDF (Resource Description Framework) represents data as **triples**: subject-predicate-object statements.
+
+**Example:** "Vincent van Gogh created the Starry Night painting"
+
+```
+subject:   <http://example.org/artist/vangogh>
+predicate: <http://example.org/vocab/created>
+object:    <http://example.org/artwork/starrynight>
+```
+
+### Turtle Syntax
+
+Turtle (Terse RDF Triple Language) is a human-readable syntax for RDF. Let's look at a cultural heritage example:
+
+```turtle
+@prefix ex: <http://example.org/> .
+@prefix schema: <http://schema.org/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+
+ex:vangogh a foaf:Person ;
+    foaf:name "Vincent van Gogh" ;
+    foaf:birthday "1853-03-30" ;
+    schema:nationality "Dutch" ;
+    ex:created ex:starrynight .
+
+ex:starrynight a schema:Painting ;
+    schema:name "The Starry Night" ;
+    schema:dateCreated "1889-06" ;
+    schema:material "Oil on canvas" ;
+    schema:creator ex:vangogh ;
+    schema:location ex:moma .
+
+ex:moma a schema:Museum ;
+    foaf:name "Museum of Modern Art" ;
+    schema:location "New York, USA" .
+```
+
+**Key elements:**
+
+- `@prefix` declares namespace prefixes
+- `a` means "is of type"
+- `;` continues statements about the same subject
+- `.` ends a group of statements
+
+### SPARQL Queries
+
+SPARQL is the query language for RDF data. It allows you to find patterns in the data.
+
+**Basic SPARQL query structure:**
+
+```sparql
+PREFIX ex: <http://example.org/>
+PREFIX schema: <http://schema.org/>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+
+SELECT ?subject ?predicate ?object
+WHERE {
+    ?subject ?predicate ?object .
+}
+```
+
+**Find all paintings:**
+
+```sparql
+SELECT ?painting ?name
+WHERE {
+    ?painting a schema:Painting ;
+              schema:name ?name .
+}
+```
+
+**Find artworks created by Van Gogh:**
+
+```sparql
+SELECT ?artwork ?title
+WHERE {
+    ex:vangogh ex:created ?artwork .
+    ?artwork schema:name ?title .
+}
+```
+
+## Exercises (15-20 minutes)
+
+### A: Understanding Turtle Syntax (4-5 minutes)
+
+Look at the following Turtle snippet describing a manuscript:
+
+```turtle
+@prefix ex: <http://library.org/> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix schema: <http://schema.org/> .
+
+ex:manuscript_042 a schema:Book ;
+    dc:title "Grandes Chroniques de France" ;
+    dc:creator "Anonymous" ;
+    schema:dateCreated "1375" ;
+    ex:heldBy ex:chateauroux_library .
+
+ex:chateauroux_library a schema:Library ;
+    schema:name "Bibliothèque municipale de Châteauroux" ;
+    schema:location "France" .
+```
+
+- What type of resource is `ex:manuscript_042`?
+- How many triples have `ex:manuscript_042` as their subject?
+- What relationship links the manuscript to the library?
 
 ::: {.callout-tip collapse="true"}
-## Hints
+## Hints for Part A
 
-- **FLOSS**: Think about what the "S" in this acronym stands for. Which proposition relates most directly to that?
-- **LOUD**: The "U" in this acronym is key — this framework is about making data not just open, but genuinely _usable_. Who is the primary target audience?
-- **OA**: This two-letter abbreviation is primarily associated with the academic and scholarly world. What type of output does it focus on making freely available?
-- **FAIR**: One of the four letters stands for "Findable". What technical mechanism is essential for making data findable on the web?
-- **Collections as Data**: This framework reimagines cultural heritage collections as things that can be computed on. Think about what needs to happen for digital objects from different institutions to work together.
-- **CARE**: This framework emerged from Indigenous data governance discussions. Consider what its core values — Collective benefit, Authority to control, Responsibility, Ethics — prioritise above all.
-- **Open Science**: This is the broadest movement on the list, covering the entire research lifecycle. What are the fundamental goals it seeks to achieve in how research is conducted?
+- **Type of resource**: Pay attention to the keyword `a` in Turtle — it is shorthand for `rdf:type`. What comes right after `a` on the line where `ex:manuscript_042` is first described?
+- **Counting triples**: Each property-value pair (including the `a` statement) about a subject is one triple. Remember that `;` separates multiple triples sharing the same subject. Count each line carefully.
+- **Relationship to the library**: Look for the triple where the object is `ex:chateauroux_library`. The predicate (property) in that triple is your answer.
 :::
 
-<div id="matching-exercise"></div>
+### B: Real-World SPARQL Exploration (6-8 minutes)
 
-<div style="text-align: center; margin-top: 2rem;">
-  <button class="validate-btn" style="padding: 0.75rem 2rem; font-size: 1.1rem;" onclick="validateAll()">Validate All</button>
-</div>
+Visit the **Wikidata Query Service**: <https://query.wikidata.org/>
 
-<div class="results-summary" id="results" style="display: none;">
-  <div class="score" id="score-display"></div>
-  <p id="score-text"></p>
-  <button class="reset-btn" onclick="resetExercise()">Reset Exercise</button>
-  <button class="reset-btn" style="background-color: #17a2b8; margin-left: 1rem;" onclick="toggleAnswerKey()">Show Answer Key</button>
-</div>
+Try this query to find Van Gogh paintings with images:
 
-<div class="answer-key" id="answerKey">
-  <h4>Answer Key</h4>
-  <table style="width: 100%;">
-    <tr>
-      <th style="text-align: left;">Framework</th>
-      <th style="text-align: left;">Correct Match</th>
-    </tr>
-    <tr>
-      <td><strong>1. FLOSS</strong></td>
-      <td>B - Code sharing practices</td>
-    </tr>
-    <tr>
-      <td><strong>2. LOUD</strong></td>
-      <td>D - Developer-centric data accessibility</td>
-    </tr>
-    <tr>
-      <td><strong>3. OA</strong></td>
-      <td>E - Unrestricted access to scholarly publications</td>
-    </tr>
-    <tr>
-      <td><strong>4. FAIR</strong></td>
-      <td>A - Persistent identifier assignment</td>
-    </tr>
-    <tr>
-      <td><strong>5. Collections as Data</strong></td>
-      <td>F - Digital object interoperability</td>
-    </tr>
-    <tr>
-      <td><strong>6. CARE</strong></td>
-      <td>C - Ethical data stewardship</td>
-    </tr>
-    <tr>
-      <td><strong>7. Open Science</strong></td>
-      <td>G - Research transparency and reproducibility</td>
-    </tr>
-  </table>
-</div>
-
-</div>
-
-
-
-<script>
-const frameworks = [
-  { id: 1, name: "FLOSS" },
-  { id: 2, name: "LOUD" },
-  { id: 3, name: "OA" },
-  { id: 4, name: "FAIR" },
-  { id: 5, name: "Collections as Data" },
-  { id: 6, name: "CARE" },
-  { id: 7, name: "Open Science" }
-];
-
-const propositions = [
-  { letter: "A", text: "Persistent identifier assignment" },
-  { letter: "B", text: "Code sharing practices" },
-  { letter: "C", text: "Ethical data stewardship" },
-  { letter: "D", text: "Developer-centric data accessibility" },
-  { letter: "E", text: "Unrestricted access to scholarly publications" },
-  { letter: "F", text: "Digital object interoperability" },
-  { letter: "G", text: "Research transparency and reproducibility" }
-];
-
-const correctAnswers = {
-  1: "B",
-  2: "D",
-  3: "E",
-  4: "A",
-  5: "F",
-  6: "C",
-  7: "G"
-};
-
-const userAnswers = {};
-const feedback = {};
-
-function renderExercise() {
-  const container = document.getElementById("matching-exercise");
-  
-  let html = '<div>';
-  
-  frameworks.forEach(framework => {
-    const selectedValue = userAnswers[framework.id] || "";
-    
-    html += `
-      <div class="matching-row">
-        <div class="framework-label">${framework.id}. ${framework.name}</div>
-        <div>
-          <select id="select-${framework.id}" onchange="updateAnswer(${framework.id})">
-            <option value="">-- Select --</option>
-            ${propositions.map(p => `<option value="${p.letter}" ${selectedValue === p.letter ? 'selected' : ''}>${p.letter}</option>`).join("")}
-          </select>
-        </div>
-      </div>
-    `;
-  });
-  
-  html += '</div>';
-  container.innerHTML = html;
+```sparql
+SELECT ?painting ?paintingLabel ?image
+WHERE {
+    ?painting wdt:P31 wd:Q3305213 ;    # instance of painting
+              wdt:P170 wd:Q5582 ;       # creator: Vincent van Gogh
+              wdt:P18 ?image .          # has image
+    SERVICE wikibase:label { bd:serviceParam wikibase:language "en". }
 }
+```
 
-function updateAnswer(frameworkId) {
-  const select = document.getElementById(`select-${frameworkId}`);
-  userAnswers[frameworkId] = select.value;
-  renderExercise();
-}
+- How many paintings with images did you find?
+- Try modifying the query to find paintings by a different artist (hint: search Wikidata for another artist's Q-number, e.g., Pablo Picasso is `wd:Q5593`). What artist did you choose and how many results did you get?
 
-function validateAll() {
-  // Check if all fields are filled
-  const allFilled = frameworks.every(f => userAnswers[f.id]);
-  
-  if (!allFilled) {
-    alert("Please select an answer for all frameworks before validating.");
-    return;
-  }
-  
-  // Validate all answers
-  frameworks.forEach(framework => {
-    const isCorrect = userAnswers[framework.id] === correctAnswers[framework.id];
-    feedback[framework.id] = { correct: isCorrect };
-  });
-  
-  displayResults();
-}
+::: {.callout-tip collapse="true"}
+## Hints for Part B
 
-function displayResults() {
-  const correctCount = frameworks.filter(f => feedback[f.id].correct).length;
-  const total = frameworks.length;
-  
-  const resultsContainer = document.getElementById("results");
-  
-  let resultHTML = `
-    <div class="score">${correctCount}/${total}</div>
-  `;
-  
-  if (correctCount === total) {
-    resultHTML += "<p><strong>Perfect! 🎉 You matched all frameworks correctly.</strong></p>";
-  } else if (correctCount >= 5) {
-    resultHTML += `<p><strong>Great job!</strong> You got ${correctCount} out of ${total} correct.</p>`;
-  } else {
-    resultHTML += `<p><strong>Good effort!</strong> You got ${correctCount} out of ${total} correct.</p>`;
-  }
-  
-  resultHTML += "<h3>Your Answers:</h3>";
-  resultHTML += "<table style='width: 100%; text-align: left;'>";
-  resultHTML += "<tr><th>Framework</th><th>Your Answer</th><th>Correct Answer</th><th>Result</th></tr>";
-  
-  frameworks.forEach(framework => {
-    const userAnswer = userAnswers[framework.id];
-    const correctAnswer = correctAnswers[framework.id];
-    const isCorrect = feedback[framework.id].correct;
-    const resultClass = isCorrect ? 'correct' : 'incorrect';
-    const resultText = isCorrect ? '✓' : '✗';
-    
-    resultHTML += `
-      <tr class="${resultClass}">
-        <td><strong>${framework.id}. ${framework.name}</strong></td>
-        <td>${userAnswer}</td>
-        <td>${correctAnswer}</td>
-        <td>${resultText}</td>
-      </tr>
-    `;
-  });
-  
-  resultHTML += "</table>";
-  resultHTML += `
-    <button class="reset-btn" onclick="resetExercise()">Reset Exercise</button>
-    <button class="reset-btn" style="background-color: #17a2b8; margin-left: 1rem;" onclick="toggleAnswerKey()">Show Answer Key</button>
-  `;
-  
-  resultsContainer.innerHTML = resultHTML;
-  resultsContainer.style.display = "block";
-}
+- **Number of paintings**: After running the query, the Wikidata Query Service shows the total result count at the bottom of the results table. You should find several dozen results for Van Gogh.
+- **Modifying the query**: The only part you need to change is `wd:Q5582` (Van Gogh's identifier). To find another artist's Q-number, use the Wikidata search bar at [wikidata.org](https://www.wikidata.org/) and look for the Q-identifier on their page. Replace it in the `wdt:P170` line. Some artists may have significantly more or fewer results depending on how well their works are documented on Wikidata.
+:::
 
-function resetExercise() {
-  Object.keys(userAnswers).forEach(key => {
-    userAnswers[key] = "";
-    feedback[key] = null;
-  });
-  document.getElementById("results").style.display = "none";
-  document.getElementById("answerKey").classList.remove("show");
-  renderExercise();
-}
+### C: Reflection Questions (5-7 minutes)
 
-function toggleAnswerKey() {
-  document.getElementById("answerKey").classList.toggle("show");
-}
+- What are the main advantages of using Linked Data for cultural heritage collections?
+- What challenges might institutions face when implementing Linked Data?
+- Based on your experience with the Wikidata Query Service, what makes a SPARQL endpoint useful or difficult to use?
 
-// Initial render
-renderExercise();
-</script>
+::: {.callout-tip collapse="true"}
+## Hints for Part C
+
+- **Advantages**: Think about what happens when collections from different institutions can reference the same entities (people, places, concepts). Consider aspects like discoverability, interoperability across systems, and the ability to enrich records by linking to external knowledge bases.
+- **Challenges**: Consider the practical side — what does an institution need in terms of expertise, tooling, and ongoing maintenance? Think also about data quality, choosing the right vocabularies/ontologies, and dealing with legacy cataloguing systems.
+- **SPARQL usability**: Reflect on your own experience — was the query language intuitive? Did features like auto-completion help? Think about the balance between the power of the query language and the learning curve for newcomers.
+:::
+
+## Additional Resources
+
+- **Linked Data Principles**: <https://www.w3.org/DesignIssues/LinkedData.html>
+- **Turtle Specification**: <https://www.w3.org/TR/turtle/>
+- **SPARQL Tutorial**: <https://www.w3.org/TR/sparql11-query/>
+- **Wikidata SPARQL Examples**: <https://www.wikidata.org/wiki/Wikidata:SPARQL_query_service/queries/examples>
