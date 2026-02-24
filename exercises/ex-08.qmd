@@ -37,7 +37,7 @@ The images below are served from two different institutions using the same IIIF 
   </figure>
   <figure style="margin: 0; flex: 1; min-width: 200px;">
     <img src="https://e-codices.ch/loris/fmb/fmb-cb-0600a/fmb-cb-0600a_004.jp2/full/600,/0/default.jpg"
-         alt="Dragon miniature, Cologny, Fondation Martin Bodmer, Cod. Bodmer 600/1 (e-codices)"
+         alt="Cologny, Fondation Martin Bodmer, Cod. Bodmer 600/1 (e-codices)"
          style="width: 100%; border: 1px solid #ddd; border-radius: 4px;" />
     <figcaption style="font-size: 0.85em; color: #555; margin-top: 0.4rem;">
       Cologny, Fondation Martin Bodmer, Cod. Bodmer 600/1. The Life of Buddha, first book (Shaka no Honji, jō). e-codices<br/>
