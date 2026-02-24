@@ -21,6 +21,41 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
@@ -382,7 +417,18 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#iiif-ml" id="toc-iiif-ml" class="nav-link active" data-scroll-target="#iiif-ml">IIIF &amp; ML</a></li>
+  <li><a href="#iiif-ml" id="toc-iiif-ml" class="nav-link active" data-scroll-target="#iiif-ml">IIIF &amp; ML</a>
+  <ul>
+  <li><a href="#a.-finding-and-comparing-iiif-resources" id="toc-a.-finding-and-comparing-iiif-resources" class="nav-link" data-scroll-target="#a.-finding-and-comparing-iiif-resources">A. Finding and Comparing IIIF Resources</a></li>
+  <li><a href="#b.-iiif-image-api-uri-manipulation" id="toc-b.-iiif-image-api-uri-manipulation" class="nav-link" data-scroll-target="#b.-iiif-image-api-uri-manipulation">B. IIIF Image API — URI Manipulation</a></li>
+  <li><a href="#c.-exploring-a-manifest-as-json-ld" id="toc-c.-exploring-a-manifest-as-json-ld" class="nav-link" data-scroll-target="#c.-exploring-a-manifest-as-json-ld">C. Exploring a Manifest as JSON-LD</a></li>
+  <li><a href="#d.-building-a-iiif-collection-on-biblissima" id="toc-d.-building-a-iiif-collection-on-biblissima" class="nav-link" data-scroll-target="#d.-building-a-iiif-collection-on-biblissima">D. Building a IIIF Collection on Biblissima</a></li>
+  <li><a href="#e.-creative-reuse-iiif-collage" id="toc-e.-creative-reuse-iiif-collage" class="nav-link" data-scroll-target="#e.-creative-reuse-iiif-collage">E. Creative Reuse: IIIF Collage</a></li>
+  <li><a href="#f.-ml-powered-analysis-illustration-detector" id="toc-f.-ml-powered-analysis-illustration-detector" class="nav-link" data-scroll-target="#f.-ml-powered-analysis-illustration-detector">F. ML-Powered Analysis: Illustration Detector</a></li>
+  <li><a href="#g.-reflection" id="toc-g.-reflection" class="nav-link" data-scroll-target="#g.-reflection">G. Reflection</a></li>
+  <li><a href="#bonus-run-your-own-local-iiif-server" id="toc-bonus-run-your-own-local-iiif-server" class="nav-link" data-scroll-target="#bonus-run-your-own-local-iiif-server">Bonus: Run Your Own Local IIIF Server</a></li>
+  </ul></li>
+  <li><a href="#additional-resources" id="toc-additional-resources" class="nav-link" data-scroll-target="#additional-resources">Additional Resources</a></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/julsraemy/intro-open-data/edit/main/exercises/ex-08.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/julsraemy/intro-open-data/issues/new/choose" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
@@ -426,7 +472,7 @@ ul.task-list li input[type="checkbox"] {
     <div>
     <div class="quarto-title-meta-heading">Modified</div>
     <div class="quarto-title-meta-contents">
-      <p class="date-modified">February 9, 2026</p>
+      <p class="date-modified">February 24, 2026</p>
     </div>
   </div>
     
@@ -439,7 +485,465 @@ ul.task-list li input[type="checkbox"] {
 
 <section id="iiif-ml" class="level2">
 <h2 class="anchored" data-anchor-id="iiif-ml">IIIF &amp; ML</h2>
-<p>(…)</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Instructions
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>This exercise covers IIIF (International Image Interoperability Framework) from the ground up — finding and comparing resources, manipulating Image API URIs, reading a manifest as JSON-LD, and building a collection — before moving on to Machine Learning applications. Work alone or in pairs.</p>
+</div>
+</div>
+<p>The images below are served from two different institutions using the same IIIF Image API standard. Notice the structural similarity of the URLs despite the different servers and collections:</p>
+<div style="display: flex; gap: 1rem; flex-wrap: wrap; margin: 1.5rem 0;">
+  <figure style="margin: 0; flex: 1; min-width: 200px;" class="figure">
+    <img src="https://api.digitale-sammlungen.de/iiif/image/v2/bsb00004647_00005/full/300,/0/default.jpg" alt="Gutenberg Bible page, Bayerische Staatsbibliothek" style="width: 100%; border: 1px solid #ddd; border-radius: 4px;" class="figure-img">
+    <figcaption style="font-size: 0.85em; color: #555; margin-top: 0.4rem;">
+      Gutenberg Bible — Bayerische Staatsbibliothek (BSB), Munich<br>
+      <code style="font-size:0.8em;">…/iiif/image/v2/bsb00004647_00005/full/300,/0/default.jpg</code>
+    </figcaption>
+  </figure>
+  <figure style="margin: 0; flex: 1; min-width: 200px;" class="figure">
+    <img src="https://e-codices.ch/loris/fmb/fmb-cb-0600a/fmb-cb-0600a_004.jp2/full/300,/0/default.jpg" alt="Dragon miniature, Engelberg Abbey" style="width: 100%; border: 1px solid #ddd; border-radius: 4px;" class="figure-img">
+    <figcaption style="font-size: 0.85em; color: #555; margin-top: 0.4rem;">
+      Dragon miniature — Engelberg Abbey (e-codices)<br>
+      <code style="font-size:0.8em;">…/loris/fmb/fmb-cb-0600a/…/full/300,/0/default.jpg</code>
+    </figcaption>
+  </figure>
+</div>
+<section id="a.-finding-and-comparing-iiif-resources" class="level3">
+<h3 class="anchored" data-anchor-id="a.-finding-and-comparing-iiif-resources">A. Finding and Comparing IIIF Resources</h3>
+<ol type="1">
+<li><p>Open the Mirador demo viewer at <a href="https://projectmirador.org/demo/" class="uri">https://projectmirador.org/demo/</a>, close the default examples, and open at least two versions of the Gutenberg Bible by pasting these manifest URLs:</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Institution</th>
+<th>Manifest URL</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Bayerische Staatsbibliothek (BSB)</td>
+<td><code>https://api.digitale-sammlungen.de/iiif/presentation/v2/bsb00004647/manifest</code></td>
+</tr>
+<tr class="even">
+<td>Bibliothèque Mazarine</td>
+<td><code>https://mazarinum.bibliotheque-mazarine.fr/iiif/1703/manifest</code></td>
+</tr>
+</tbody>
+</table></li>
+<li><p>Compare the two versions side by side in Mirador. Are the metadata labels consistent across both institutions? What differences do you notice in the way each institution has described or structured their copy?</p></li>
+<li><p>Find a third Gutenberg Bible (or fragment) on one of the following portals and open its manifest in Mirador:</p>
+<ul>
+<li>Digital Bodleian (University of Oxford): <a href="https://digital.bodleian.ox.ac.uk/" class="uri">https://digital.bodleian.ox.ac.uk/</a></li>
+<li>Gallica (BnF): <a href="https://gallica.bnf.fr/" class="uri">https://gallica.bnf.fr/</a></li>
+<li>DigiVatlib (Vatican): <a href="https://digi.vatlib.it/" class="uri">https://digi.vatlib.it/</a></li>
+</ul></li>
+</ol>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Hints for Part A
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-2" class="callout-2-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<ul>
+<li>To open a manifest in Mirador, click the <strong>+</strong> (Add resource) button and paste the manifest URL.</li>
+<li>On Gallica, search for “Bible de Gutenberg” and look for the IIIF logo on the item page, or use the <a href="https://seige.digital/en/detektiiif/">detektIIIF browser extension</a> to surface manifests automatically as you browse.</li>
+<li>Metadata consistency is a known challenge in IIIF: institutions use different labels (<code>Title</code>, <code>Titel</code>, <code>Titre</code>…) and different levels of description. This becomes important when aggregating content programmatically.</li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+<section id="b.-iiif-image-api-uri-manipulation" class="level3">
+<h3 class="anchored" data-anchor-id="b.-iiif-image-api-uri-manipulation">B. IIIF Image API — URI Manipulation</h3>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>IIIF Image API — URI Syntax and Version Differences
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>The URI follows this pattern: <code>{server}/{identifier}/{region}/{size}/{rotation}/{quality}.{format}</code></p>
+<p>The full syntax is covered in the course recap. The key differences between the two current versions:</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Parameter</th>
+<th>API 2.1</th>
+<th>API 3.0</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Full image (no downscaling)</td>
+<td><code>full</code></td>
+<td><code>max</code></td>
+</tr>
+<tr class="even">
+<td>Upscaling beyond native size</td>
+<td>not supported</td>
+<td><code>^w,</code> or <code>^!w,h</code></td>
+</tr>
+<tr class="odd">
+<td>Quality: server default</td>
+<td><code>native</code> <em>(deprecated)</em> → <code>default</code></td>
+<td><code>default</code></td>
+</tr>
+<tr class="even">
+<td><code>@context</code></td>
+<td><code>…/image/2/context.json</code></td>
+<td><code>…/image/3/context.json</code></td>
+</tr>
+</tbody>
+</table>
+<p>In practice, many servers still accept <code>full</code> for backwards compatibility, but <code>max</code> is the correct term in 3.0. The <code>region</code>, <code>rotation</code>, <code>quality</code>, and <code>format</code> parameters are otherwise identical between versions.</p>
+</div>
+</div>
+<ol start="4" type="1">
+<li><p>Start from this Image API URI for a BSB page and open it in your browser:</p>
+<pre><code>https://api.digitale-sammlungen.de/iiif/image/v2/bsb00004647_00005/full/full/0/default.jpg</code></pre>
+<p>Use the <strong>IIIF Image Inspector</strong> at <a href="https://iiifimage.link/" class="uri">https://iiifimage.link/</a> to manipulate the URI parameters. Try to produce at least two of the following variations:</p>
+<ul>
+<li>A cropped region (e.g.&nbsp;the top-left quarter of the page)</li>
+<li>A specific pixel width (e.g.&nbsp;<code>200,</code>)</li>
+<li>A 90° or 180° rotation</li>
+<li>A greyscale or bitonal rendering</li>
+</ul></li>
+<li><p>Now rewrite the same URI using the API 3.0 convention. What single parameter do you need to change?</p></li>
+</ol>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-4-contents" aria-controls="callout-4" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Hints for Part B
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-4" class="callout-4-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<ul>
+<li>In the Inspector, change one parameter at a time and observe how the image updates — this is the easiest way to build intuition.</li>
+<li>The <code>region</code> parameter uses pixel coordinates: <code>x,y,w,h</code>. To crop the top-left quarter of an image that is 2000 × 2800 px, you would use <code>0,0,1000,1400</code>.</li>
+<li>For step 5: replace the second <code>full</code> (the size parameter) with <code>max</code>. The rest of the URI stays the same.</li>
+<li>Additional tools: <a href="https://ncsu-libraries.github.io/iiif-crop-tool/">IIIF Cropping Tool</a> (2.1 only, focused on the <code>region</code> parameter).</li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+<section id="c.-exploring-a-manifest-as-json-ld" class="level3">
+<h3 class="anchored" data-anchor-id="c.-exploring-a-manifest-as-json-ld">C. Exploring a Manifest as JSON-LD</h3>
+<ol start="6" type="1">
+<li><p>Open the Fragmentarium manifest in your browser (or a JSON viewer such as <a href="https://jsonhero.io/" class="uri">https://jsonhero.io/</a>):</p>
+<pre><code>https://fragmentarium.ms/metadata/iiif/F-65po/manifest.json</code></pre></li>
+</ol>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>IIIF Presentation API — Version Differences
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>The Fragmentarium manifest uses <strong>Presentation API 2.1</strong>. Many newer institutions publish in <strong>3.0</strong>. The main structural differences:</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Aspect</th>
+<th>Presentation API 2.1</th>
+<th>Presentation API 3.0</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>JSON-LD keywords</td>
+<td><code>@id</code>, <code>@type</code></td>
+<td><code>id</code>, <code>type</code></td>
+</tr>
+<tr class="even">
+<td>Type values</td>
+<td><code>sc:Manifest</code>, <code>sc:Canvas</code></td>
+<td><code>Manifest</code>, <code>Canvas</code></td>
+</tr>
+<tr class="odd">
+<td>Image path</td>
+<td><code>sequences[0]</code> → <code>canvases</code> → <code>images</code> → <code>resource</code> → <code>@id</code></td>
+<td><code>items</code> → <code>items</code> (AnnotationPage) → <code>items</code> (Annotation) → <code>body</code> → <code>id</code></td>
+</tr>
+<tr class="even">
+<td>Descriptive text</td>
+<td><code>label</code> (string), <code>description</code></td>
+<td><code>label</code> (language map <code>{"en": ["…"]}</code>), <code>summary</code></td>
+</tr>
+<tr class="odd">
+<td>Rights / attribution</td>
+<td><code>license</code>, <code>attribution</code></td>
+<td><code>rights</code>, <code>requiredStatement</code></td>
+</tr>
+<tr class="even">
+<td><code>@context</code></td>
+<td><code>…/presentation/2/context.json</code></td>
+<td><code>…/presentation/3/context.json</code></td>
+</tr>
+</tbody>
+</table>
+<p>A <strong>language map</strong> means the same label field can carry multiple languages simultaneously: <code>{"en": ["Gutenberg Bible"], "de": ["Gutenberg-Bibel"]}</code>. This is one of the most visible changes when comparing raw manifests side by side.</p>
+</div>
+</div>
+<ol start="7" type="1">
+<li><p>Navigate the v2.1 JSON structure to find:</p>
+<ul>
+<li>The manifest <code>label</code> and <code>description</code></li>
+<li>The image URI at: <code>sequences</code> → <code>canvases</code> → <code>images</code> → <code>resource</code> → <code>@id</code></li>
+<li>The <code>info.json</code> base URI at: <code>resource</code> → <code>service</code> → <code>@id</code></li>
+</ul></li>
+<li><p>Append <code>/info.json</code> to the service <code>@id</code> you found and open it. What does it tell you about the image (dimensions, available sizes, API compliance level)?</p></li>
+<li><p>Now open a Presentation API <strong>3.0</strong> manifest for comparison:</p>
+<pre><code>https://manifests.collections.yale.edu/ycba/obj/34</code></pre>
+<p>Locate the image URI using the v3 path (<code>items</code> → <code>items</code> → <code>items</code> → <code>body</code> → <code>id</code>). Can you spot the <code>@context</code> difference, the <code>label</code> language map, and the absence of <code>sequences</code>?</p></li>
+</ol>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-6-contents" aria-controls="callout-6" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Hints for Part C
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-6" class="callout-6-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<ul>
+<li>If the raw JSON is hard to read in a browser, paste the URL into <a href="https://jsonhero.io/" class="uri">https://jsonhero.io/</a> for an interactive tree view.</li>
+<li>In the v2.1 manifest, <code>sequences[0].canvases[0].images[0].resource["@id"]</code> gives you the full Image API URI (ending in <code>/full/full/0/default.jpg</code>). Paste it into your browser to display the image directly.</li>
+<li>The <code>service["@id"]</code> inside <code>resource</code> is the Image API base URI. Add <code>/info.json</code> to retrieve the image’s capability document (pixel dimensions, tile sizes, compliance level).</li>
+<li>In the v3 BSB manifest, look at <code>items[0].items[0].items[0].body.id</code> for the image URI. The structure is more deeply nested because annotation pages sit between canvases and their content. The <code>label</code> will be a language map (<code>{"de": ["…"]}</code>), and there is no <code>sequences</code> key at all.</li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+<section id="d.-building-a-iiif-collection-on-biblissima" class="level3">
+<h3 class="anchored" data-anchor-id="d.-building-a-iiif-collection-on-biblissima">D. Building a IIIF Collection on Biblissima</h3>
+<ol start="10" type="1">
+<li><p>Go to <a href="https://iiif.biblissima.fr/collections/" class="uri">https://iiif.biblissima.fr/collections/</a> and create a new IIIF Collection.</p></li>
+<li><p>Load your collection into a viewer: paste the collection URL into <a href="https://www.universalviewer.dev/">Universal Viewer</a> or <a href="https://projectmirador.org/demo/">Mirador</a>.</p></li>
+<li><p>Open the raw JSON of your collection. How does a collection reference its member manifests?</p></li>
+</ol>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-7-contents" aria-controls="callout-7" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Hints for Part D
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-7" class="callout-7-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<ul>
+<li>On Biblissima, you do not need an account — you can build and share a collection directly. Copy the collection URL once you have added your items.</li>
+<li>In the collection JSON, the top-level type is <code>sc:Collection</code> (Presentation API 2) or <code>Collection</code> (Presentation API 3). Member manifests appear in the <code>manifests</code> array (v2) or <code>items</code> array (v3).</li>
+<li>A IIIF Collection is itself a valid IIIF resource: you can nest collections inside other collections, enabling hierarchical structures for large corpora.</li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+<section id="e.-creative-reuse-iiif-collage" class="level3">
+<h3 class="anchored" data-anchor-id="e.-creative-reuse-iiif-collage">E. Creative Reuse: IIIF Collage</h3>
+<p>The <a href="https://huggingface.co/spaces/eamonnbell/iiif-collage-demo">IIIF Collage Demo</a> assembles images from IIIF manifests into generative visual collages.</p>
+<ol start="13" type="1">
+<li><p>Open the demo at <a href="https://huggingface.co/spaces/eamonnbell/iiif-collage-demo" class="uri">https://huggingface.co/spaces/eamonnbell/iiif-collage-demo</a> and generate a collage from one of the manifests used earlier.</p></li>
+<li><p>Try a second manifest of your choice. What do you observe about the way images are selected and arranged? What is preserved — and what is lost — when a sequential manuscript becomes an unordered collage?</p></li>
+</ol>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-8-contents" aria-controls="callout-8" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Hints for Part E
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-8" class="callout-8-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<ul>
+<li>If the Space is slow to respond, it may be waking up from idle — wait a moment and retry.</li>
+<li>The collage is built from the canvases in the manifest: the more pages, the richer the result.</li>
+<li>Think about the difference between a <em>reading</em> experience and a <em>visual</em> one — what changes when sequence is removed?</li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+<section id="f.-ml-powered-analysis-illustration-detector" class="level3">
+<h3 class="anchored" data-anchor-id="f.-ml-powered-analysis-illustration-detector">F. ML-Powered Analysis: Illustration Detector</h3>
+<p>The <a href="https://huggingface.co/spaces/small-models-for-glam/iiif-illustration-detector">IIIF Illustration Detector</a> uses a small object-detection model to localise illustrations, miniatures, and decorations within digitised pages.</p>
+<ol start="15" type="1">
+<li><p>Open the demo at <a href="https://huggingface.co/spaces/small-models-for-glam/iiif-illustration-detector" class="uri">https://huggingface.co/spaces/small-models-for-glam/iiif-illustration-detector</a></p></li>
+<li><p>Test the model with these two contrasting manifests:</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Content type</th>
+<th>Manifest URL</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Heavily illustrated manuscript</td>
+<td><code>https://www.e-codices.unifr.ch/metadata/iiif/fmb-cb-0600a/manifest.json</code></td>
+</tr>
+<tr class="even">
+<td>Text-heavy printed book</td>
+<td><code>https://api.digitale-sammlungen.de/iiif/presentation/v2/bsb00004647/manifest</code></td>
+</tr>
+</tbody>
+</table></li>
+<li><p>Compare the detection results: Where does the model perform well? Where does it struggle? Do you notice any false positives (text regions flagged as illustrations)? Try a third manifest with different visual content — a natural history atlas, a book with engravings, or a newspaper.</p></li>
+</ol>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-9-contents" aria-controls="callout-9" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Hints for Part F
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-9" class="callout-9-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<ul>
+<li>The model outputs bounding boxes with confidence scores. Low-confidence detections may indicate ambiguous content (decorative initials, ruled borders).</li>
+<li>Dense text columns or marginal annotations can sometimes trigger detections — think about why a model trained on visual regions might confuse them with illustrations.</li>
+<li>For botanical or scientific illustrations, try the <a href="https://www.biodiversitylibrary.org/">Biodiversity Heritage Library</a> — many items expose IIIF manifests via their API.</li>
+<li>Consider the downstream value: how could automated illustration detection at scale help cataloguers, researchers, or discovery interfaces?</li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+<section id="g.-reflection" class="level3">
+<h3 class="anchored" data-anchor-id="g.-reflection">G. Reflection</h3>
+<ol start="18" type="1">
+<li><p>What advantages does the IIIF standard offer when building ML pipelines across multiple cultural heritage institutions?</p></li>
+<li><p>What are the main limitations or risks of applying pre-trained ML models to historical documents?</p></li>
+<li><p>How might the outputs of a tool like the Illustration Detector be published as structured open data alongside the source IIIF manifest?</p></li>
+</ol>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-10-contents" aria-controls="callout-10" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Hints for Part G
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-10" class="callout-10-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<ul>
+<li><strong>Q18</strong>: Think about interoperability — IIIF means a pipeline written once can consume images from the BSB, the BnF, or e-codices without institution-specific code. What does that enable at scale?</li>
+<li><strong>Q19</strong>: Consider training data bias (contemporary photographs vs.&nbsp;medieval manuscripts), the difference between <em>detecting</em> and <em>understanding</em> visual content, and the risk of propagating errors into downstream metadata.</li>
+<li><strong>Q20</strong>: Detected regions can be encoded as <a href="https://www.w3.org/TR/annotation-model/">W3C Web Annotations</a> and attached to IIIF canvases via the <code>annotations</code> property. Have a look at the <a href="https://iiif.io/api/cookbook/">IIIF Cookbook</a> for annotation examples.</li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+<section id="bonus-run-your-own-local-iiif-server" class="level3">
+<h3 class="anchored" data-anchor-id="bonus-run-your-own-local-iiif-server">Bonus: Run Your Own Local IIIF Server</h3>
+<p><a href="https://github.com/rsimon/tiny-iiif">tiny-iiif</a> is a lightweight, Docker-based tool for hosting your own IIIF Image API server and generating IIIF Presentation API 3.0 manifests automatically from uploaded images.</p>
+<ol start="21" type="1">
+<li><p><strong>Get the repository</strong> — clone it or download the ZIP:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1"></a><span class="fu">git</span> clone https://github.com/rsimon/tiny-iiif.git</span>
+<span id="cb4-2"><a href="#cb4-2"></a><span class="bu">cd</span> tiny-iiif</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div></li>
+<li><p><strong>Configure</strong> — copy the example environment file:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1"></a><span class="fu">cp</span> .env.example .env</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Default credentials: <code>tiny / tiny</code>. IIPImage is used by default; Cantaloupe is available via <code>COMPOSE_PROFILE=cantaloupe</code> in <code>.env</code>.</p></li>
+<li><p><strong>Start the server</strong>:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb6"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1"></a><span class="ex">docker</span> compose up <span class="at">--build</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div></li>
+<li><p>Open the admin interface at <a href="http://localhost/tiny" class="uri">http://localhost/tiny</a>, log in, and upload a few images via drag-and-drop — they are automatically converted to pyramidal TIFFs. Create a folder, add your images, and inspect the auto-generated manifest.</p></li>
+<li><p><strong>Open the manifest</strong> in Mirador (<a href="https://projectmirador.org/demo/" class="uri">https://projectmirador.org/demo/</a>) or Universal Viewer (<a href="https://www.universalviewer.dev/" class="uri">https://www.universalviewer.dev/</a>). As an extension: can you run the Illustration Detector (Part F) on the manifest your local server just generated?</p></li>
+</ol>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-11-contents" aria-controls="callout-11" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Hints for the Bonus
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-11" class="callout-11-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<ul>
+<li>You will need <a href="https://www.docker.com/products/docker-desktop/">Docker Desktop</a> (macOS/Windows) or Docker Engine + Compose (Linux) installed and running before you start.</li>
+<li>Pyramidal TIFF conversion may take a few seconds per image — wait for the progress indicator before opening the manifest.</li>
+<li>To stop the server cleanly: <code>docker compose down</code></li>
+<li>The local manifest URL will follow the pattern <code>http://localhost/tiny/...</code> — paste it directly into any IIIF viewer or the Illustration Detector.</li>
+<li>tiny-iiif generates <strong>Presentation API 3.0</strong> manifests — a good opportunity to compare their structure with the v2.1 Fragmentarium manifest from Part C.</li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="additional-resources" class="level2">
+<h2 class="anchored" data-anchor-id="additional-resources">Additional Resources</h2>
+<ul>
+<li>IIIF Image API 2.1 URI syntax: <a href="https://iiif.io/api/image/2.1/#uri-syntax" class="uri">https://iiif.io/api/image/2.1/#uri-syntax</a></li>
+<li>IIIF Image API 3.0 URI syntax: <a href="https://iiif.io/api/image/3.0/#2-uri-syntax" class="uri">https://iiif.io/api/image/3.0/#2-uri-syntax</a></li>
+<li>IIIF Presentation API 2.1: <a href="https://iiif.io/api/presentation/2.1/" class="uri">https://iiif.io/api/presentation/2.1/</a></li>
+<li>IIIF Presentation API 3.0: <a href="https://iiif.io/api/presentation/3/" class="uri">https://iiif.io/api/presentation/3/</a></li>
+<li>IIIF Cookbook: <a href="https://iiif.io/api/cookbook/" class="uri">https://iiif.io/api/cookbook/</a></li>
+<li>IIIF Community groups: <a href="https://iiif.io/community/groups/" class="uri">https://iiif.io/community/groups/</a></li>
+<li>Hugging Face GLAM ML models: <a href="https://huggingface.co/spaces/small-models-for-glam" class="uri">https://huggingface.co/spaces/small-models-for-glam</a></li>
+<li>tiny-iiif on GitHub: <a href="https://github.com/rsimon/tiny-iiif" class="uri">https://github.com/rsimon/tiny-iiif</a></li>
+</ul>
 
 
 </section>
