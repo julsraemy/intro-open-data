@@ -7,7 +7,7 @@ authors:
     affiliations:
       - docuteam SA
       - University of Bern
-date: "2026-02-10"
+date: "2026-02-24"
 date-modified: last-modified
 license: "CC BY"
 ---
@@ -19,26 +19,29 @@ license: "CC BY"
 This exercise covers IIIF (International Image Interoperability Framework) from the ground up — finding and comparing resources, manipulating Image API URIs, reading a manifest as JSON-LD, and building a collection — before moving on to Machine Learning applications. Work alone or in pairs.
 :::
 
-The images below are served from two different institutions using the same IIIF Image API standard. Notice the structural similarity of the URLs despite the different servers and collections:
+The images below are served from two different institutions using the same IIIF Image API standard. Notice the structural similarity of the URLs despite the different servers and collections (both return 600px wide images via the `600,` size parameter):
+
+- <https://api.digitale-sammlungen.de/iiif/image/v2/bsb00004647_00005/full/600,/0/default.jpg>
+- <https://e-codices.ch/loris/fmb/fmb-cb-0600a/fmb-cb-0600a_004.jp2/full/600,/0/default.jpg>
 
 ```{=html}
 <div style="display: flex; gap: 1rem; flex-wrap: wrap; margin: 1.5rem 0;">
   <figure style="margin: 0; flex: 1; min-width: 200px;">
-    <img src="https://api.digitale-sammlungen.de/iiif/image/v2/bsb00004647_00005/full/300,/0/default.jpg"
+    <img src="https://api.digitale-sammlungen.de/iiif/image/v2/bsb00004647_00005/full/600,/0/default.jpg"
          alt="Gutenberg Bible page, Bayerische Staatsbibliothek"
          style="width: 100%; border: 1px solid #ddd; border-radius: 4px;" />
     <figcaption style="font-size: 0.85em; color: #555; margin-top: 0.4rem;">
       Gutenberg Bible — Bayerische Staatsbibliothek (BSB), Munich<br/>
-      <code style="font-size:0.8em;">…/iiif/image/v2/bsb00004647_00005/full/300,/0/default.jpg</code>
+      <code style="font-size:0.8em;">…/bsb00004647_00005/full/600,/0/default.jpg</code>
     </figcaption>
   </figure>
   <figure style="margin: 0; flex: 1; min-width: 200px;">
-    <img src="https://e-codices.ch/loris/fmb/fmb-cb-0600a/fmb-cb-0600a_004.jp2/full/300,/0/default.jpg"
+    <img src="https://e-codices.ch/loris/fmb/fmb-cb-0600a/fmb-cb-0600a_004.jp2/full/600,/0/default.jpg"
          alt="Dragon miniature, Engelberg Abbey"
          style="width: 100%; border: 1px solid #ddd; border-radius: 4px;" />
     <figcaption style="font-size: 0.85em; color: #555; margin-top: 0.4rem;">
       Dragon miniature — Engelberg Abbey (e-codices)<br/>
-      <code style="font-size:0.8em;">…/loris/fmb/fmb-cb-0600a/…/full/300,/0/default.jpg</code>
+      <code style="font-size:0.8em;">…/fmb-cb-0600a/fmb-cb-0600a_004.jp2/full/600,/0/default.jpg</code>
     </figcaption>
   </figure>
 </div>
@@ -78,7 +81,7 @@ The URI follows this pattern: `{server}/{identifier}/{region}/{size}/{rotation}/
 
 The full syntax is covered in the course recap. The key differences between the two current versions:
 
-| Parameter | API 2.1 | API 3.0 |
+| Parameter | IIIF Image API 2.1 | IIIF Image API 3.0 |
 |---|---|---|
 | Full image (no downscaling) | `full` | `max` |
 | Upscaling beyond native size | not supported | `^w,` or `^!w,h` |
@@ -101,14 +104,20 @@ In practice, many servers still accept `full` for backwards compatibility, but `
    - A 90° or 180° rotation
    - A greyscale or bitonal rendering
 
-5. Now rewrite the same URI using the API 3.0 convention. What single parameter do you need to change?
+5. The BSB server only supports Image API 2. To explore API 3, use this image from the PTT Archive instead — check its `info.json` first:
+
+   ```
+   https://iiif.ptt-archiv.ch/iiif/3/P-38-2-1851-08.jp2/info.json
+   ```
+
+   Construct a valid IIIF Image API 3 URI that returns the full image at maximum size. What single size parameter differs from the equivalent API 2 URI?
 
 ::: {.callout-tip collapse="true"}
 ## Hints for Part B
 
 - In the Inspector, change one parameter at a time and observe how the image updates — this is the easiest way to build intuition.
 - The `region` parameter uses pixel coordinates: `x,y,w,h`. To crop the top-left quarter of an image that is 2000 × 2800 px, you would use `0,0,1000,1400`.
-- For step 5: replace the second `full` (the size parameter) with `max`. The rest of the URI stays the same.
+- For step 5: the base URI structure is `{base}/{region}/{size}/{rotation}/{quality}.{format}`. In API 3, `full` (meaning "as large as possible") was renamed to `max`. So the URI becomes: `https://iiif.ptt-archiv.ch/iiif/3/P-38-2-1851-08.jp2/full/max/0/default.jpg`
 - Additional tools: [IIIF Cropping Tool](https://ncsu-libraries.github.io/iiif-crop-tool/) (2.1 only, focused on the `region` parameter).
 :::
 
@@ -125,7 +134,7 @@ In practice, many servers still accept `full` for backwards compatibility, but `
 
 The Fragmentarium manifest uses **Presentation API 2.1**. Many newer institutions publish in **3.0**. The main structural differences:
 
-| Aspect | Presentation API 2.1 | Presentation API 3.0 |
+| Aspect | IIIF Presentation API 2.1 | IIIF Presentation API 3.0 |
 |---|---|---|
 | JSON-LD keywords | `@id`, `@type` | `id`, `type` |
 | Type values | `sc:Manifest`, `sc:Canvas` | `Manifest`, `Canvas` |
@@ -214,13 +223,12 @@ The [IIIF Illustration Detector](https://huggingface.co/spaces/small-models-for-
 
 - The model outputs bounding boxes with confidence scores. Low-confidence detections may indicate ambiguous content (decorative initials, ruled borders).
 - Dense text columns or marginal annotations can sometimes trigger detections — think about why a model trained on visual regions might confuse them with illustrations.
-- For botanical or scientific illustrations, try the [Biodiversity Heritage Library](https://www.biodiversitylibrary.org/) — many items expose IIIF manifests via their API.
 - Consider the downstream value: how could automated illustration detection at scale help cataloguers, researchers, or discovery interfaces?
 :::
 
 ### G. Reflection
 
-18. What advantages does the IIIF standard offer when building ML pipelines across multiple cultural heritage institutions?
+18. What advantages do the IIIF specifications offer when building ML pipelines across multiple cultural heritage institutions?
 
 19. What are the main limitations or risks of applying pre-trained ML models to historical documents?
 

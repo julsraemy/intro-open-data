@@ -424,7 +424,7 @@ ul.task-list li input[type="checkbox"] {
     <div>
     <div class="quarto-title-meta-heading">Modified</div>
     <div class="quarto-title-meta-contents">
-      <p class="date-modified">February 17, 2026</p>
+      <p class="date-modified">February 24, 2026</p>
     </div>
   </div>
     
@@ -453,11 +453,16 @@ ul.task-list li input[type="checkbox"] {
 <ol type="a">
 <li><p><strong>Persistent Identifiers</strong>: Which cross-institutional repository based in Switzerland provides ARK (Archival Resource Key) identifiers? Find and provide an example ARK from this repository.</p></li>
 <li><p><strong>Repository Software</strong>: How many life sciences repositories built on Invenio RDM are listed on re3data? Name another well-known general-purpose repository that also uses Invenio RDM.</p></li>
-<li><p><strong>Data Accessibility</strong>: Examine Yareta (University of Geneva’s research data repository). What types of data access does it support? Is all data openly accessible, or are there restrictions?</p></li>
-<li><p><strong>Certification &amp; Trust</strong>: Which Swiss research data repository has received the CoreTrustSeal certification? What does this certification indicate about a repository?</p></li>
-<li><p><strong>Terms of Use and Licences</strong>: What licences does the OLOS repository (Open Access Repository of Bern University of Applied Sciences) support for deposited materials?</p></li>
-<li><p><strong>Repository Policies</strong>: Does Yareta have a preservation policy? If so, what does it specify about long-term data retention?</p></li>
-<li><p><strong>Additional Information</strong>: Compare the subject coverage between OLOS and Yareta. Which repository is more discipline-specific, and which is more general-purpose?</p></li>
+<li><p><strong>Data Accessibility</strong>: Examine <a href="https://yareta.unige.ch/">Yareta</a> (University of Geneva’s research data repository) on re3data. What types of data access does it support? Is all data openly accessible, or are there restrictions?</p></li>
+<li><p><strong>Certification &amp; Trust</strong>: Which Swiss research data repository has received the <a href="https://www.coretrustseal.org/">CoreTrustSeal</a> certification? What does this certification indicate about a repository?</p></li>
+<li><p><strong>Terms of Use and Licences</strong>: What licences does the <a href="https://olos.swiss/">OLOS</a> repository support for deposited materials?</p></li>
+<li><p><strong>Application Programming Interfaces (APIs)</strong>: What kind of APIs provide <a href="https://opac.rism.info/">RISM</a> (Répertoire International des Sources Musicales)?</p></li>
+<li><p><strong>re3data as a data source</strong>: re3data is not just a website — it exposes its own registry data via a REST API (<a href="https://www.re3data.org/api/doc/" class="uri">https://www.re3data.org/api/doc/</a>). Think of it as a meta-repository: a dataset <em>about</em> datasets.</p>
+<ul>
+<li>What persistent identifier does re3data assign to each repository entry? Find the one for Yareta on its re3data page.</li>
+<li>Retrieve the full XML record for Yareta via the API (the identifier appears in the re3data URL, e.g.&nbsp;<code>https://www.re3data.org/api/v1/repository/{id}</code>). What metadata schema is used in the response?</li>
+<li>What does this tell you about re3data’s own commitment to the principles it documents in others?</li>
+</ul></li>
 </ol>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
@@ -472,13 +477,13 @@ ul.task-list li input[type="checkbox"] {
 <div id="callout-2" class="callout-2-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <ul>
-<li><strong>a) Persistent Identifiers</strong>: On re3data, try filtering by country (Switzerland) and by persistent identifier type (ARK). The repository you are looking for is tied to a national-level infrastructure for research data in the humanities and social sciences. Once you find it, browse its collections to locate an example ARK — these typically start with <code>ark:/</code>.</li>
+<li><strong>a) Persistent Identifiers</strong>: On re3data, try filtering by country (Switzerland) and by persistent identifier type (ARK). The repository you are looking for is tied to a national-level infrastructure for research data in the humanities and social sciences. Beware that the repository URL may be outdated on re3data. Once you find it, browse its collections to locate an example ARK — these typically start with <code>ark:</code>.</li>
 <li><strong>b) Repository Software</strong>: Use re3data’s filters to narrow down by software (Invenio RDM) and subject (life sciences). For the general-purpose repository, think about the most well-known open-access platform used by researchers worldwide to deposit datasets — it is operated by CERN.</li>
-<li><strong>c) Data Accessibility</strong>: Look at the Yareta entry on re3data and check the “Data access” section. Pay attention to whether the repository distinguishes between metadata access and data file access — not all content may be freely downloadable, even if the metadata is visible.</li>
+<li><strong>c) Data Accessibility</strong>: Look at the Yareta entry on re3data and check the “Terms” section. Pay attention to whether the repository distinguishes between metadata access and data file access — not all content may be freely downloadable, even if the metadata is visible.</li>
 <li><strong>d) Certification &amp; Trust</strong>: On re3data, filter Swiss repositories by certification type (CoreTrustSeal). CoreTrustSeal is a community-based certification focusing on sustainable and trustworthy data infrastructure. Think about what guarantees it gives depositors and reusers.</li>
 <li><strong>e) Terms of Use and Licences</strong>: Check the OLOS entry on re3data and look at its licence information. Consider whether it supports Creative Commons licences and if depositors can choose from multiple options.</li>
-<li><strong>f) Repository Policies</strong>: Look at Yareta’s re3data entry for its preservation policy details. Check whether a specific retention period is mentioned and whether it commits to keeping data beyond the end of a research project.</li>
-<li><strong>g) Additional Information</strong>: Compare the “Subject” fields of both OLOS and Yareta on re3data. One is affiliated with a specific university of applied sciences (which may reflect in its subject focus), while the other serves a broader research university context.</li>
+<li><strong>f) APIs</strong>: Search for “RISM” on re3data and open its entry. Look at the “Interfaces” section. You will encounter library-specific protocols alongside more generic ones.</li>
+<li><strong>g) re3data API</strong>: The re3data identifier for a repository is visible in its page URL on re3data.org (format: <code>r3d100...</code>). Each entry also has a <strong>DOI</strong> (prefix <code>10.17616</code>) — look for it on the repository page. The API returns <strong>XML</strong> using re3data’s own metadata schema (<code>https://www.re3data.org/schema/</code>); the root element and namespace declare which schema version is in use. The reflexive point: re3data assigns DOIs to repository entries and publishes machine-readable metadata — applying to itself the same openness standards it tracks for others.</li>
 </ul>
 </div>
 </div>

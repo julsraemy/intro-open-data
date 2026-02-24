@@ -6,7 +6,7 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="dcterms.date" content="2026-02-10">
+<meta name="dcterms.date" content="2026-02-24">
 
 <title>Exercise 8: IIIF &amp; ML – Introduction to Open Data</title>
 <style>
@@ -465,7 +465,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">February 10, 2026</p>
+      <p class="date">February 24, 2026</p>
     </div>
   </div>
   
@@ -498,20 +498,24 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>This exercise covers IIIF (International Image Interoperability Framework) from the ground up — finding and comparing resources, manipulating Image API URIs, reading a manifest as JSON-LD, and building a collection — before moving on to Machine Learning applications. Work alone or in pairs.</p>
 </div>
 </div>
-<p>The images below are served from two different institutions using the same IIIF Image API standard. Notice the structural similarity of the URLs despite the different servers and collections:</p>
+<p>The images below are served from two different institutions using the same IIIF Image API standard. Notice the structural similarity of the URLs despite the different servers and collections (both return 600px wide images via the <code>600,</code> size parameter):</p>
+<ul>
+<li><a href="https://api.digitale-sammlungen.de/iiif/image/v2/bsb00004647_00005/full/600,/0/default.jpg" class="uri">https://api.digitale-sammlungen.de/iiif/image/v2/bsb00004647_00005/full/600,/0/default.jpg</a></li>
+<li><a href="https://e-codices.ch/loris/fmb/fmb-cb-0600a/fmb-cb-0600a_004.jp2/full/600,/0/default.jpg" class="uri">https://e-codices.ch/loris/fmb/fmb-cb-0600a/fmb-cb-0600a_004.jp2/full/600,/0/default.jpg</a></li>
+</ul>
 <div style="display: flex; gap: 1rem; flex-wrap: wrap; margin: 1.5rem 0;">
   <figure style="margin: 0; flex: 1; min-width: 200px;" class="figure">
-    <img src="https://api.digitale-sammlungen.de/iiif/image/v2/bsb00004647_00005/full/300,/0/default.jpg" alt="Gutenberg Bible page, Bayerische Staatsbibliothek" style="width: 100%; border: 1px solid #ddd; border-radius: 4px;" class="figure-img">
+    <img src="https://api.digitale-sammlungen.de/iiif/image/v2/bsb00004647_00005/full/600,/0/default.jpg" alt="Gutenberg Bible page, Bayerische Staatsbibliothek" style="width: 100%; border: 1px solid #ddd; border-radius: 4px;" class="figure-img">
     <figcaption style="font-size: 0.85em; color: #555; margin-top: 0.4rem;">
       Gutenberg Bible — Bayerische Staatsbibliothek (BSB), Munich<br>
-      <code style="font-size:0.8em;">…/iiif/image/v2/bsb00004647_00005/full/300,/0/default.jpg</code>
+      <code style="font-size:0.8em;">…/bsb00004647_00005/full/600,/0/default.jpg</code>
     </figcaption>
   </figure>
   <figure style="margin: 0; flex: 1; min-width: 200px;" class="figure">
-    <img src="https://e-codices.ch/loris/fmb/fmb-cb-0600a/fmb-cb-0600a_004.jp2/full/300,/0/default.jpg" alt="Dragon miniature, Engelberg Abbey" style="width: 100%; border: 1px solid #ddd; border-radius: 4px;" class="figure-img">
+    <img src="https://e-codices.ch/loris/fmb/fmb-cb-0600a/fmb-cb-0600a_004.jp2/full/600,/0/default.jpg" alt="Dragon miniature, Engelberg Abbey" style="width: 100%; border: 1px solid #ddd; border-radius: 4px;" class="figure-img">
     <figcaption style="font-size: 0.85em; color: #555; margin-top: 0.4rem;">
       Dragon miniature — Engelberg Abbey (e-codices)<br>
-      <code style="font-size:0.8em;">…/loris/fmb/fmb-cb-0600a/…/full/300,/0/default.jpg</code>
+      <code style="font-size:0.8em;">…/fmb-cb-0600a/fmb-cb-0600a_004.jp2/full/600,/0/default.jpg</code>
     </figcaption>
   </figure>
 </div>
@@ -593,8 +597,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <thead>
 <tr class="header">
 <th>Parameter</th>
-<th>API 2.1</th>
-<th>API 3.0</th>
+<th>IIIF Image API 2.1</th>
+<th>IIIF Image API 3.0</th>
 </tr>
 </thead>
 <tbody>
@@ -633,7 +637,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li>A 90° or 180° rotation</li>
 <li>A greyscale or bitonal rendering</li>
 </ul></li>
-<li><p>Now rewrite the same URI using the API 3.0 convention. What single parameter do you need to change?</p></li>
+<li><p>The BSB server only supports Image API 2. To explore API 3, use this image from the PTT Archive instead — check its <code>info.json</code> first:</p>
+<pre><code>https://iiif.ptt-archiv.ch/iiif/3/P-38-2-1851-08.jp2/info.json</code></pre>
+<p>Construct a valid IIIF Image API 3 URI that returns the full image at maximum size. What single size parameter differs from the equivalent API 2 URI?</p></li>
 </ol>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-4-contents" aria-controls="callout-4" aria-expanded="false" aria-label="Toggle callout">
@@ -650,7 +656,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <ul>
 <li>In the Inspector, change one parameter at a time and observe how the image updates — this is the easiest way to build intuition.</li>
 <li>The <code>region</code> parameter uses pixel coordinates: <code>x,y,w,h</code>. To crop the top-left quarter of an image that is 2000 × 2800 px, you would use <code>0,0,1000,1400</code>.</li>
-<li>For step 5: replace the second <code>full</code> (the size parameter) with <code>max</code>. The rest of the URI stays the same.</li>
+<li>For step 5: the base URI structure is <code>{base}/{region}/{size}/{rotation}/{quality}.{format}</code>. In API 3, <code>full</code> (meaning “as large as possible”) was renamed to <code>max</code>. So the URI becomes: <code>https://iiif.ptt-archiv.ch/iiif/3/P-38-2-1851-08.jp2/full/max/0/default.jpg</code></li>
 <li>Additional tools: <a href="https://ncsu-libraries.github.io/iiif-crop-tool/">IIIF Cropping Tool</a> (2.1 only, focused on the <code>region</code> parameter).</li>
 </ul>
 </div>
@@ -683,8 +689,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <thead>
 <tr class="header">
 <th>Aspect</th>
-<th>Presentation API 2.1</th>
-<th>Presentation API 3.0</th>
+<th>IIIF Presentation API 2.1</th>
+<th>IIIF Presentation API 3.0</th>
 </tr>
 </thead>
 <tbody>
@@ -858,7 +864,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <ul>
 <li>The model outputs bounding boxes with confidence scores. Low-confidence detections may indicate ambiguous content (decorative initials, ruled borders).</li>
 <li>Dense text columns or marginal annotations can sometimes trigger detections — think about why a model trained on visual regions might confuse them with illustrations.</li>
-<li>For botanical or scientific illustrations, try the <a href="https://www.biodiversitylibrary.org/">Biodiversity Heritage Library</a> — many items expose IIIF manifests via their API.</li>
 <li>Consider the downstream value: how could automated illustration detection at scale help cataloguers, researchers, or discovery interfaces?</li>
 </ul>
 </div>
@@ -868,7 +873,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="g.-reflection" class="level3">
 <h3 class="anchored" data-anchor-id="g.-reflection">G. Reflection</h3>
 <ol start="18" type="1">
-<li><p>What advantages does the IIIF standard offer when building ML pipelines across multiple cultural heritage institutions?</p></li>
+<li><p>What advantages do the IIIF specifications offer when building ML pipelines across multiple cultural heritage institutions?</p></li>
 <li><p>What are the main limitations or risks of applying pre-trained ML models to historical documents?</p></li>
 <li><p>How might the outputs of a tool like the Illustration Detector be published as structured open data alongside the source IIIF manifest?</p></li>
 </ol>
@@ -898,13 +903,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p><a href="https://github.com/rsimon/tiny-iiif">tiny-iiif</a> is a lightweight, Docker-based tool for hosting your own IIIF Image API server and generating IIIF Presentation API 3.0 manifests automatically from uploaded images.</p>
 <ol start="21" type="1">
 <li><p><strong>Get the repository</strong> — clone it or download the ZIP:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1"></a><span class="fu">git</span> clone https://github.com/rsimon/tiny-iiif.git</span>
-<span id="cb4-2"><a href="#cb4-2"></a><span class="bu">cd</span> tiny-iiif</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div></li>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1"></a><span class="fu">git</span> clone https://github.com/rsimon/tiny-iiif.git</span>
+<span id="cb5-2"><a href="#cb5-2"></a><span class="bu">cd</span> tiny-iiif</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div></li>
 <li><p><strong>Configure</strong> — copy the example environment file:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1"></a><span class="fu">cp</span> .env.example .env</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb6"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1"></a><span class="fu">cp</span> .env.example .env</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>Default credentials: <code>tiny / tiny</code>. IIPImage is used by default; Cantaloupe is available via <code>COMPOSE_PROFILE=cantaloupe</code> in <code>.env</code>.</p></li>
 <li><p><strong>Start the server</strong>:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb6"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1"></a><span class="ex">docker</span> compose up <span class="at">--build</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div></li>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb7"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb7-1"><a href="#cb7-1"></a><span class="ex">docker</span> compose up <span class="at">--build</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div></li>
 <li><p>Open the admin interface at <a href="http://localhost/tiny" class="uri">http://localhost/tiny</a>, log in, and upload a few images via drag-and-drop — they are automatically converted to pyramidal TIFFs. Create a folder, add your images, and inspect the auto-generated manifest.</p></li>
 <li><p><strong>Open the manifest</strong> in Mirador (<a href="https://projectmirador.org/demo/" class="uri">https://projectmirador.org/demo/</a>) or Universal Viewer (<a href="https://www.universalviewer.dev/" class="uri">https://www.universalviewer.dev/</a>). As an extension: can you run the Illustration Detector (Part F) on the manifest your local server just generated?</p></li>
 </ol>

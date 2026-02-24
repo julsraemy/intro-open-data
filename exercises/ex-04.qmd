@@ -24,25 +24,29 @@ a) **Persistent Identifiers**: Which cross-institutional repository based in Swi
 
 b) **Repository Software**: How many life sciences repositories built on Invenio RDM are listed on re3data? Name another well-known general-purpose repository that also uses Invenio RDM.
 
-c) **Data Accessibility**: Examine Yareta (University of Geneva's research data repository). What types of data access does it support? Is all data openly accessible, or are there restrictions?
+c) **Data Accessibility**: Examine [Yareta](https://yareta.unige.ch/) (University of Geneva's research data repository) on re3data. What types of data access does it support? Is all data openly accessible, or are there restrictions?
 
-d) **Certification & Trust**: Which Swiss research data repository has received the CoreTrustSeal certification? What does this certification indicate about a repository?
+d) **Certification & Trust**: Which Swiss research data repository has received the [CoreTrustSeal](https://www.coretrustseal.org/) certification? What does this certification indicate about a repository?
 
-e) **Terms of Use and Licences**: What licences does the OLOS repository (Open Access Repository of Bern University of Applied Sciences) support for deposited materials?
+e) **Terms of Use and Licences**: What licences does the [OLOS](https://olos.swiss/) repository support for deposited materials?
 
-f) **Repository Policies**: Does Yareta have a preservation policy? If so, what does it specify about long-term data retention?
+f) **Application Programming Interfaces (APIs)**: What kind of APIs provide [RISM](https://opac.rism.info/) (Répertoire International des Sources Musicales)?
 
-g) **Additional Information**: Compare the subject coverage between OLOS and Yareta. Which repository is more discipline-specific, and which is more general-purpose?
+g) **re3data as a data source**: re3data is not just a website — it exposes its own registry data via a REST API (<https://www.re3data.org/api/doc/>). Think of it as a meta-repository: a dataset *about* datasets.
+
+   - What persistent identifier does re3data assign to each repository entry? Find the one for Yareta on its re3data page.
+   - Retrieve the full XML record for Yareta via the API (the identifier appears in the re3data URL, e.g. `https://www.re3data.org/api/v1/repository/{id}`). What metadata schema is used in the response?
+   - What does this tell you about re3data's own commitment to the principles it documents in others?
 
 ::: {.callout-tip collapse="true"}
 ## Hints
 
-- **a) Persistent Identifiers**: On re3data, try filtering by country (Switzerland) and by persistent identifier type (ARK). The repository you are looking for is tied to a national-level infrastructure for research data in the humanities and social sciences. Once you find it, browse its collections to locate an example ARK — these typically start with `ark:/`.
+- **a) Persistent Identifiers**: On re3data, try filtering by country (Switzerland) and by persistent identifier type (ARK). The repository you are looking for is tied to a national-level infrastructure for research data in the humanities and social sciences. Beware that the repository URL may be outdated on re3data. Once you find it, browse its collections to locate an example ARK — these typically start with `ark:`.
 - **b) Repository Software**: Use re3data's filters to narrow down by software (Invenio RDM) and subject (life sciences). For the general-purpose repository, think about the most well-known open-access platform used by researchers worldwide to deposit datasets — it is operated by CERN.
-- **c) Data Accessibility**: Look at the Yareta entry on re3data and check the "Data access" section. Pay attention to whether the repository distinguishes between metadata access and data file access — not all content may be freely downloadable, even if the metadata is visible.
+- **c) Data Accessibility**: Look at the Yareta entry on re3data and check the "Terms" section. Pay attention to whether the repository distinguishes between metadata access and data file access — not all content may be freely downloadable, even if the metadata is visible.
 - **d) Certification & Trust**: On re3data, filter Swiss repositories by certification type (CoreTrustSeal). CoreTrustSeal is a community-based certification focusing on sustainable and trustworthy data infrastructure. Think about what guarantees it gives depositors and reusers.
 - **e) Terms of Use and Licences**: Check the OLOS entry on re3data and look at its licence information. Consider whether it supports Creative Commons licences and if depositors can choose from multiple options.
-- **f) Repository Policies**: Look at Yareta's re3data entry for its preservation policy details. Check whether a specific retention period is mentioned and whether it commits to keeping data beyond the end of a research project.
-- **g) Additional Information**: Compare the "Subject" fields of both OLOS and Yareta on re3data. One is affiliated with a specific university of applied sciences (which may reflect in its subject focus), while the other serves a broader research university context.
+- **f) APIs**: Search for "RISM" on re3data and open its entry. Look at the "Interfaces" section. You will encounter library-specific protocols alongside more generic ones.
+- **g) re3data API**: The re3data identifier for a repository is visible in its page URL on re3data.org (format: `r3d100...`). Each entry also has a **DOI** (prefix `10.17616`) — look for it on the repository page. The API returns **XML** using re3data's own metadata schema (`https://www.re3data.org/schema/`); the root element and namespace declare which schema version is in use. The reflexive point: re3data assigns DOIs to repository entries and publishes machine-readable metadata — applying to itself the same openness standards it tracks for others.
 :::
 
