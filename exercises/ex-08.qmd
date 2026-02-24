@@ -31,16 +31,16 @@ The images below are served from two different institutions using the same IIIF 
          alt="Gutenberg Bible page, Bayerische Staatsbibliothek"
          style="width: 100%; border: 1px solid #ddd; border-radius: 4px;" />
     <figcaption style="font-size: 0.85em; color: #555; margin-top: 0.4rem;">
-      Gutenberg Bible — Bayerische Staatsbibliothek (BSB), Munich<br/>
+      Biblia. [1], Genesis-Psalmi — Bayerische Staatsbibliothek (BSB), Munich<br/>
       <code style="font-size:0.8em;">…/bsb00004647_00005/full/600,/0/default.jpg</code>
     </figcaption>
   </figure>
   <figure style="margin: 0; flex: 1; min-width: 200px;">
     <img src="https://e-codices.ch/loris/fmb/fmb-cb-0600a/fmb-cb-0600a_004.jp2/full/600,/0/default.jpg"
-         alt="Dragon miniature, Engelberg Abbey"
+         alt="Dragon miniature, Cologny, Fondation Martin Bodmer, Cod. Bodmer 600/1 (e-codices)"
          style="width: 100%; border: 1px solid #ddd; border-radius: 4px;" />
     <figcaption style="font-size: 0.85em; color: #555; margin-top: 0.4rem;">
-      Dragon miniature — Engelberg Abbey (e-codices)<br/>
+      Cologny, Fondation Martin Bodmer, Cod. Bodmer 600/1. The Life of Buddha, first book (Shaka no Honji, jō). e-codices<br/>
       <code style="font-size:0.8em;">…/fmb-cb-0600a/fmb-cb-0600a_004.jp2/full/600,/0/default.jpg</code>
     </figcaption>
   </figure>
