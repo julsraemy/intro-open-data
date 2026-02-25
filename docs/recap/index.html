@@ -452,7 +452,7 @@ ul.task-list li input[type="checkbox"] {
     <div>
     <div class="quarto-title-meta-heading">Modified</div>
     <div class="quarto-title-meta-contents">
-      <p class="date-modified">February 20, 2026</p>
+      <p class="date-modified">February 25, 2026</p>
     </div>
   </div>
     
@@ -827,7 +827,7 @@ graph TD
 </tr>
 <tr class="even">
 <td><strong>Archival Resource Key (ARK)</strong></td>
-<td>Cultural heritage objects</td>
+<td>Any digital or physical object</td>
 <td><code>ark:12148/btv1b108473193/</code></td>
 <td><a href="https://n2t.net/ark:12148/btv1b108473193/" class="uri">https://n2t.net/ark:12148/btv1b108473193/</a></td>
 </tr>
@@ -851,7 +851,9 @@ graph TD
 </div>
 <div id="callout-7" class="callout-7-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p>DOI is the industry standard for academic publishing, ORCID for researchers, ROR for institutions, and ARK for cultural heritage objects. Each PID type has a dedicated resolver: doi.org, orcid.org, ror.org, hdl.handle.net, and n2t.net (ARK). A critical limitation: PIDs are often conflated with open access, but they are orthogonal — a DOI resolves regardless of whether the resource is open or behind a paywall. Persistence and resolvability are properties of the identifier, not of the access conditions.</p>
+<p>DOI is the industry standard for academic publishing, ORCID for researchers, ROR for institutions, and ARK for cultural heritage — though ARK is a general-purpose scheme usable for any digital or physical object. Each PID type has a dedicated resolver: doi.org, orcid.org, ror.org, hdl.handle.net, and n2t.net (ARK). A critical limitation: PIDs are often conflated with open access, but they are orthogonal — a DOI resolves regardless of whether the resource is open or behind a paywall. Persistence and resolvability are properties of the identifier, not of the access conditions.</p>
+<p>For datasets specifically, DOI is the dominant scheme, but Handle (on which DOI is technically built), ARK, and various discipline-specific or institutional PIDs are also used. DOI is itself built on top of the Handle system — it is essentially a Handle with doi.org as its resolver and a governance layer managed by the International DOI Foundation.</p>
+<p><strong>Cool URIs</strong>: Linked Data introduces the concept of “cool URIs” (coined by Tim Berners-Lee) — URIs that do not change over time. A cool URI can be a PID, but it does not have to be: any stable, well-managed URI qualifies. Importantly, cool URIs are not necessarily URLs intended for human browsing; they function as globally unique identifiers for concepts and entities (e.g., <code>wd:Q5582</code> for Van Gogh), and dereferencing them may return machine-readable RDF rather than a human-readable page.</p>
 </div>
 </div>
 </div>
