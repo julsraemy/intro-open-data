@@ -467,7 +467,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <div>
     <div class="quarto-title-meta-heading">Modified</div>
     <div class="quarto-title-meta-contents">
-      <p class="date-modified">February 17, 2026</p>
+      <p class="date-modified">February 26, 2026</p>
     </div>
   </div>
     
@@ -497,17 +497,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <h3 class="anchored" data-anchor-id="a---exploring-and-reusing-swiss-ogd">A - Exploring and Reusing Swiss OGD</h3>
 <ol type="1">
 <li><p>Go to <a href="https://opendata.swiss/">opendata.swiss</a>. What are the three cantons that provide the most datasets on opendata.swiss?</p></li>
-<li><p>Go to the <em>Ist-Daten</em> (Target/Actual Comparison of SBB departure/arrive times) page (<a href="https://opendata.swiss/en/perma/ist-daten-sbb@schweizerische-bundesbahnen-sbb" class="uri">https://opendata.swiss/en/perma/ist-daten-sbb@schweizerische-bundesbahnen-sbb</a>) and download the CSV file. Open it in a spreadsheet application (Excel, LibreOffice Calc, Google Sheets) or a text editor. The file contains data from the previous day depending on when you download it. Answer the following:</p>
-<ol type="a">
-<li><p><strong>Most punctual station</strong>: Which train station (<code>Stop name</code>) has the best on-time performance? Compare the scheduled times (<code>Arrival time</code> / <code>Departure time</code>) with the actual times (<code>Arrival actual time</code> / <code>Departure actual time</code>) to determine where delays are smallest on average.</p></li>
-<li><p><strong>Most delayed station</strong>: Conversely, which station has the highest average delay?</p></li>
-<li><p><strong>Cancelled trains</strong>: How many trains were cancelled on that day? Look at the <code>Cancelled TF</code> column (where <code>true</code> indicates a cancellation).</p></li>
-</ol></li>
+<li><p>Go to the <em>Ist-Daten</em> (Target/Actual Comparison of SBB departure/arrive times) page (<a href="https://opendata.swiss/en/perma/ist-daten-sbb@schweizerische-bundesbahnen-sbb" class="uri">https://opendata.swiss/en/perma/ist-daten-sbb@schweizerische-bundesbahnen-sbb</a>) and download the CSV file. Open it in a spreadsheet application (Excel, LibreOffice Calc, Google Sheets) and have a look at its structure and content. Can you identify which columns correspond to the train station, the train number, the scheduled departure time, and the actual departure time? As you will notice, working with such a large raw file can be cumbersome — this is where APIs (see Q3) become much more convenient for quick, targeted requests.</p></li>
 <li><p>Now try to get transport information via an <strong>API</strong> instead of downloading a file. The Swiss public transport API at <a href="https://transport.opendata.ch/" class="uri">https://transport.opendata.ch/</a> is freely accessible without authentication. Try the following:</p>
 <ol type="a">
 <li><p>Look up the next departures from a station of your choice, e.g.: <code>https://transport.opendata.ch/v1/stationboard?station=Bern&amp;limit=5</code></p></li>
 <li><p>Try changing the <code>station</code> parameter to another station and observe the results.</p></li>
-<li><p>Compare the experience: what are the advantages and limitations of using a live API versus analysing a downloaded CSV file?</p></li>
 </ol></li>
 <li><p>How many mailboxes are there in your commune or city? Explore the application at <a href="https://wieviele-briefkaesten-gibt-es.streamlit.app/" class="uri">https://wieviele-briefkaesten-gibt-es.streamlit.app/</a>. Where do these data originally come from?</p></li>
 </ol>
@@ -525,10 +519,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="callout-body-container callout-body">
 <ul>
 <li><strong>Q1</strong>: Use the “Organisation” or “Canton” filter on the opendata.swiss search page to see the counts.</li>
-<li><strong>Q2a/b</strong>: In a spreadsheet, calculate delays by subtracting the scheduled time from the actual time. Try using a pivot table or <code>AVERAGEIF</code>-style formulas grouped by <code>Stop name</code>. Ignore rows where times are missing or where <code>Arrival forecast status</code> / <code>Departure forecast status</code> show unusual values (e.g.&nbsp;<code>UNBEKANNT</code>). Stations with very few stops may appear artificially punctual or delayed — consider filtering for stations with a minimum number of stops.</li>
-<li><strong>Q2c</strong>: Filter or count rows where <code>Cancelled TF</code> equals <code>true</code>. In Excel/LibreOffice, you can use <code>=COUNTIF(column, "true")</code>.</li>
-<li><strong>Q3a/b</strong>: The transport.opendata.ch API returns JSON. You can paste the URL directly in your browser to see the result. Try the <code>/v1/connections</code> endpoint as well (e.g.&nbsp;<code>?from=Lausanne&amp;to=Genève</code>). The API documentation at <a href="https://transport.opendata.ch/docs.html" class="uri">https://transport.opendata.ch/docs.html</a> describes all available parameters.</li>
-<li><strong>Q3c</strong>: Think about: real-time vs.&nbsp;historical data, ease of use, volume of data retrievable, and what you can do with each approach.</li>
+<li><strong>Q2</strong>: The key columns are: <code>Stop name</code> (train station), <code>Journey identifier</code> (train number), <code>Departure time</code> / <code>Arrival time</code> (scheduled times), <code>Departure forecast</code> / <code>Arrival forecast</code> (actual times), <code>Departure delay</code> / <code>Arrival delay</code>, and <code>Cancelled TF</code> (cancellation flag).</li>
+<li><strong>Q3</strong>: The transport.opendata.ch API returns JSON. You can paste the URL directly in your browser to see the result. Try the <code>/v1/connections</code> endpoint as well (e.g.&nbsp;<code>?from=Lausanne&amp;to=Genève</code>). The API documentation at <a href="https://transport.opendata.ch/docs.html" class="uri">https://transport.opendata.ch/docs.html</a> describes all available parameters.</li>
 <li><strong>Q4</strong>: The application estimates the number of delivery addresses / mailboxes (<em>Zustelladressen / Briefkästen</em>) for a user-defined area. To investigate where the data come from, you can look at the source code on GitHub (<a href="https://github.com/davidoesch/wo-sind-briefkaesten" class="uri">https://github.com/davidoesch/wo-sind-briefkaesten</a>) or use your browser’s developer tools (Network tab) while the app loads to see which data sources are being fetched. The underlying data come from the Federal Building and Housing Register (GWR) of the Federal Statistical Office (BFS) and business locations from the Overture Maps Foundation.</li>
 </ul>
 </div>
@@ -548,10 +540,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="sparql" class="level4">
 <h4 class="anchored" data-anchor-id="sparql">SPARQL</h4>
-<p>Go to the <a href="https://lindas.admin.ch/sparql/">LINDAS SPARQL Endpoint</a>.</p>
+<p>SPARQL (SPARQL Protocol and RDF Query Language) is the standard query language for Linked Data. Interestingly, tools like <a href="https://visualize.admin.ch/">visualize.admin.ch</a> use SPARQL queries behind the scenes — every chart or map you created above was powered by an automatically generated SPARQL query sent to the LINDAS endpoint.</p>
+<p>You can write and run SPARQL queries directly at the <a href="https://lindas.admin.ch/sparql/">LINDAS SPARQL Endpoint</a>.</p>
 <ol start="3" type="1">
-<li><p>Query the same <strong>aviation dataset</strong> via SPARQL. The dataset is available as a Linked Data cube at <code>https://transport.ld.admin.ch/foca/FOCA_Air_traffic_movements/5</code>. Try to retrieve the number of flight movements per airport for a given year. Start by exploring the structure of the data with a simple query, then refine.</p></li>
-<li><p>Now try a completely different dataset: the <strong>Archive database of the Swiss Federal Archives</strong> (<code>https://culture.ld.admin.ch/.well-known/dataset/ais</code>). This dataset uses the <strong>Records in Context (RiC)</strong> ontology. Try the following query to find archival records related to “Bern”:</p>
+<li><p>Try the following query to explore the <strong>Archive database of the Swiss Federal Archives</strong>: the <strong>Archive database of the Swiss Federal Archives</strong> (<code>https://culture.ld.admin.ch/.well-known/dataset/ais</code>). This dataset uses the <strong>Records in Context (RiC)</strong> ontology. Try the following query to find archival records related to “Bern”:</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode numberSource sparql number-lines code-with-copy"><code class="sourceCode"><span id="cb1-1"><a href="#cb1-1"></a>PREFIX rdf: &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt;</span>
 <span id="cb1-2"><a href="#cb1-2"></a>PREFIX rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt;</span>
 <span id="cb1-3"><a href="#cb1-3"></a>PREFIX rico: &lt;https://www.ica.org/standards/RiC/ontology#&gt;</span>
@@ -594,8 +586,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <ul>
 <li><strong>Q1</strong>: On visualize.admin.ch, search for “Verkehrsleistung” or “Flugplätzen” to find the dataset. Once selected, choose a map visualisation and filter by the year 2023. Compare the circle sizes or values for Geneva and Basel.</li>
 <li><strong>Q2</strong>: Select the line chart view and filter for Zurich Airport only.</li>
-<li><strong>Q3</strong>: To explore the aviation cube via SPARQL, start with a <code>DESCRIBE</code> query to understand the structure, or try <code>SELECT * WHERE { ?s ?p ?o } LIMIT 20</code> within the FOCA graph. The observations contain dimensions for airport, year, and a measure for the number of movements. You may need to experiment with the predicate URIs — look at what properties the observations have.</li>
-<li><strong>Q4</strong>: <a href="https://www.ica.org/standards/RiC/ontology">Records in Context (RiC)</a> is an ontology developed by the International Council on Archives (ICA) for describing archival records as Linked Data. In the query, <code>rico:Record</code> represents an archival record, <code>rico:title</code> its title, and <code>rico:isAssociatedWithDate</code> links to date information. Try replacing <code>"bern"</code> in the <code>FILTER</code> with another term, or remove the filter entirely and add <code>FILTER(?beginDate &gt; "1900-01-01"^^xsd:date)</code> to explore records from the 20th century onwards.</li>
+<li><strong>Q3</strong>: <a href="https://www.ica.org/standards/RiC/ontology">Records in Context (RiC)</a> is an ontology developed by the International Council on Archives (ICA) for describing archival records as Linked Data. In the query, <code>rico:Record</code> represents an archival record, <code>rico:title</code> its title, and <code>rico:isAssociatedWithDate</code> links to date information. Try replacing <code>"bern"</code> in the <code>FILTER</code> with another term, or remove the filter entirely and add <code>FILTER(?beginDate &gt; "1900-01-01"^^xsd:date)</code> to explore records from the 20th century onwards.</li>
 </ul>
 </div>
 </div>

@@ -1,17 +1,17 @@
 [
   {
-    "listing": "/assignments.html",
-    "items": [
-      "/assignments/template.html",
-      "/assignments/OpenData_SBB_Assess_AubD.html"
-    ]
+    "listing": "/sections/showcases.html",
+    "items": []
   },
   {
     "listing": "/sections/platforms.html",
     "items": []
   },
   {
-    "listing": "/sections/showcases.html",
-    "items": []
+    "listing": "/assignments.html",
+    "items": [
+      "/assignments/template.html",
+      "/assignments/OpenData_SBB_Assess_AubD.html"
+    ]
   }
 ]

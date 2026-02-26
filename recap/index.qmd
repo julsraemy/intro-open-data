@@ -269,7 +269,43 @@ For datasets specifically, DOI is the dominant scheme, but Handle (on which DOI 
 
 ## Week 2
 
-*Content coming after Week 2.*
+### ORD Platforms
+
+- **re3data** is a global registry of research data repositories — a meta-repository: a dataset _about_ datasets
+- Repositories vary in PID support, software, access conditions, certification, and APIs
+- re3data assigns DOIs to its own entries and exposes a REST API — applying to itself the same openness standards it documents in others
+
+**Switzerland's ORD landscape**
+
+Swiss researchers are increasingly required by funders (SNSF, swissuniversities, Horizon Europe, etc.) to make their (meta)data as open as possible. This typically means depositing in a recognised repository:
+
+- **Institutional**: if the university hosts one (e.g. [Yareta](https://yareta.unige.ch) at the University of Geneva)
+- **Cross-institutional / disciplinary**: e.g. [SwissUBase](https://www.swissubase.ch/) (social sciences), [DaSCH](https://www.dasch.swiss/) (humanities), [Zenodo](https://zenodo.org/) (general-purpose)
+
+Not all data is openly accessible by default — some repositories support **restricted access** (e.g. for sensitive data) or **embargoes**: a period during which data is retained but not yet publicly released (Yareta, for instance, supports this).
+
+::: {.callout-warning}
+re3data entries depend on repository owners keeping their information up to date. If they do not, entries become stale — broken URLs, outdated policies, missing features. The registry is only as reliable as the community that actively curates it.
+:::
+
+---
+
+### OGD Platforms
+
+- **opendata.swiss** is Switzerland's central OGD **catalogue** — it does not store datasets itself; it points to where they are hosted. Publishers deposit metadata and links to the actual files, services, or APIs either manually or via semi-automatic harvesting from cantonal and communal portals
+- The metadata model behind opendata.swiss is **DCAT-AP CH** (the Swiss application profile of DCAT, the Data Catalogue Vocabulary), enabling interoperability with other OGD portals
+- Data can be consumed as bulk file downloads or via APIs (e.g. [transport.opendata.ch](https://transport.opendata.ch/)) — APIs are far more practical for targeted queries on large datasets
+- **LINDAS** publishes Swiss federal government data as Linked Data — queryable via SPARQL; tools like [visualize.admin.ch](https://visualize.admin.ch/) use it under the hood
+
+**Licensing in OGD**: not all public bodies use Creative Commons licences. Some institutions define their own terms of use — though these often mirror CC licences in spirit (attribution, non-commercial restrictions, etc.). Always check the specific licence attached to a dataset before reusing it.
+
+---
+
+### Key Takeaways
+
+- ORD and OGD platforms serve different communities (researchers vs. the public) but share the same core principles: open access, machine-readable formats, identifiers
+- For researchers in Switzerland, choosing a repository depends on funder mandates, institutional offerings, and disciplinary norms — data does not have to be immediately open, but it should be findable and accessible under clear conditions
+- Registries and portals are only useful if their metadata is actively maintained — community curation is not optional, it is part of the infrastructure
 
 ## Week 3
 

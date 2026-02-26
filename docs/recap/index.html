@@ -407,7 +407,12 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#persistent-identifiers-pids" id="toc-persistent-identifiers-pids" class="nav-link" data-scroll-target="#persistent-identifiers-pids">Persistent Identifiers (PIDs)</a></li>
   <li><a href="#key-takeaways" id="toc-key-takeaways" class="nav-link" data-scroll-target="#key-takeaways">Key Takeaways</a></li>
   </ul></li>
-  <li><a href="#week-2" id="toc-week-2" class="nav-link" data-scroll-target="#week-2">Week 2</a></li>
+  <li><a href="#week-2" id="toc-week-2" class="nav-link" data-scroll-target="#week-2">Week 2</a>
+  <ul>
+  <li><a href="#ord-platforms" id="toc-ord-platforms" class="nav-link" data-scroll-target="#ord-platforms">ORD Platforms</a></li>
+  <li><a href="#ogd-platforms" id="toc-ogd-platforms" class="nav-link" data-scroll-target="#ogd-platforms">OGD Platforms</a></li>
+  <li><a href="#key-takeaways-1" id="toc-key-takeaways-1" class="nav-link" data-scroll-target="#key-takeaways-1">Key Takeaways</a></li>
+  </ul></li>
   <li><a href="#week-3" id="toc-week-3" class="nav-link" data-scroll-target="#week-3">Week 3</a></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/julsraemy/intro-open-data/edit/main/recap/index.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/julsraemy/intro-open-data/issues/new/choose" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
@@ -452,7 +457,7 @@ ul.task-list li input[type="checkbox"] {
     <div>
     <div class="quarto-title-meta-heading">Modified</div>
     <div class="quarto-title-meta-contents">
-      <p class="date-modified">February 25, 2026</p>
+      <p class="date-modified">February 26, 2026</p>
     </div>
   </div>
     
@@ -914,7 +919,54 @@ graph TD
 </section>
 <section id="week-2" class="level2">
 <h2 class="anchored" data-anchor-id="week-2">Week 2</h2>
-<p><em>Content coming after Week 2.</em></p>
+<section id="ord-platforms" class="level3">
+<h3 class="anchored" data-anchor-id="ord-platforms">ORD Platforms</h3>
+<ul>
+<li><strong>re3data</strong> is a global registry of research data repositories — a meta-repository: a dataset <em>about</em> datasets</li>
+<li>Repositories vary in PID support, software, access conditions, certification, and APIs</li>
+<li>re3data assigns DOIs to its own entries and exposes a REST API — applying to itself the same openness standards it documents in others</li>
+</ul>
+<p><strong>Switzerland’s ORD landscape</strong></p>
+<p>Swiss researchers are increasingly required by funders (SNSF, swissuniversities, Horizon Europe, etc.) to make their (meta)data as open as possible. This typically means depositing in a recognised repository:</p>
+<ul>
+<li><strong>Institutional</strong>: if the university hosts one (e.g.&nbsp;<a href="https://yareta.unige.ch">Yareta</a> at the University of Geneva)</li>
+<li><strong>Cross-institutional / disciplinary</strong>: e.g.&nbsp;<a href="https://www.swissubase.ch/">SwissUBase</a> (social sciences), <a href="https://www.dasch.swiss/">DaSCH</a> (humanities), <a href="https://zenodo.org/">Zenodo</a> (general-purpose)</li>
+</ul>
+<p>Not all data is openly accessible by default — some repositories support <strong>restricted access</strong> (e.g.&nbsp;for sensitive data) or <strong>embargoes</strong>: a period during which data is retained but not yet publicly released (Yareta, for instance, supports this).</p>
+<div class="callout callout-style-default callout-warning callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Warning
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>re3data entries depend on repository owners keeping their information up to date. If they do not, entries become stale — broken URLs, outdated policies, missing features. The registry is only as reliable as the community that actively curates it.</p>
+</div>
+</div>
+<hr>
+</section>
+<section id="ogd-platforms" class="level3">
+<h3 class="anchored" data-anchor-id="ogd-platforms">OGD Platforms</h3>
+<ul>
+<li><strong>opendata.swiss</strong> is Switzerland’s central OGD <strong>catalogue</strong> — it does not store datasets itself; it points to where they are hosted. Publishers deposit metadata and links to the actual files, services, or APIs either manually or via semi-automatic harvesting from cantonal and communal portals</li>
+<li>The metadata model behind opendata.swiss is <strong>DCAT-AP CH</strong> (the Swiss application profile of DCAT, the Data Catalogue Vocabulary), enabling interoperability with other OGD portals</li>
+<li>Data can be consumed as bulk file downloads or via APIs (e.g.&nbsp;<a href="https://transport.opendata.ch/">transport.opendata.ch</a>) — APIs are far more practical for targeted queries on large datasets</li>
+<li><strong>LINDAS</strong> publishes Swiss federal government data as Linked Data — queryable via SPARQL; tools like <a href="https://visualize.admin.ch/">visualize.admin.ch</a> use it under the hood</li>
+</ul>
+<p><strong>Licensing in OGD</strong>: not all public bodies use Creative Commons licences. Some institutions define their own terms of use — though these often mirror CC licences in spirit (attribution, non-commercial restrictions, etc.). Always check the specific licence attached to a dataset before reusing it.</p>
+<hr>
+</section>
+<section id="key-takeaways-1" class="level3">
+<h3 class="anchored" data-anchor-id="key-takeaways-1">Key Takeaways</h3>
+<ul>
+<li>ORD and OGD platforms serve different communities (researchers vs.&nbsp;the public) but share the same core principles: open access, machine-readable formats, identifiers</li>
+<li>For researchers in Switzerland, choosing a repository depends on funder mandates, institutional offerings, and disciplinary norms — data does not have to be immediately open, but it should be findable and accessible under clear conditions</li>
+<li>Registries and portals are only useful if their metadata is actively maintained — community curation is not optional, it is part of the infrastructure</li>
+</ul>
+</section>
 </section>
 <section id="week-3" class="level2">
 <h2 class="anchored" data-anchor-id="week-3">Week 3</h2>

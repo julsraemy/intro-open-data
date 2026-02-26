@@ -23,13 +23,7 @@ Browse, search and do what is described below. You can do this exercise alone or
 
 1. Go to [opendata.swiss](https://opendata.swiss/). What are the three cantons that provide the most datasets on opendata.swiss?
 
-2. Go to the _Ist-Daten_ (Target/Actual Comparison of SBB departure/arrive times) page (<https://opendata.swiss/en/perma/ist-daten-sbb@schweizerische-bundesbahnen-sbb>) and download the CSV file. Open it in a spreadsheet application (Excel, LibreOffice Calc, Google Sheets) or a text editor. The file contains data from the previous day depending on when you download it. Answer the following:
-
-    a) **Most punctual station**: Which train station (`Stop name`) has the best on-time performance? Compare the scheduled times (`Arrival time` / `Departure time`) with the actual times (`Arrival actual time` / `Departure actual time`) to determine where delays are smallest on average.
-
-    b) **Most delayed station**: Conversely, which station has the highest average delay?
-
-    c) **Cancelled trains**: How many trains were cancelled on that day? Look at the `Cancelled TF` column (where `true` indicates a cancellation).
+2. Go to the _Ist-Daten_ (Target/Actual Comparison of SBB departure/arrive times) page (<https://opendata.swiss/en/perma/ist-daten-sbb@schweizerische-bundesbahnen-sbb>) and download the CSV file. Open it in a spreadsheet application (Excel, LibreOffice Calc, Google Sheets) and have a look at its structure and content. Can you identify which columns correspond to the train station, the train number, the scheduled departure time, and the actual departure time? As you will notice, working with such a large raw file can be cumbersome — this is where APIs (see Q3) become much more convenient for quick, targeted requests.
 
 3. Now try to get transport information via an **API** instead of downloading a file. The Swiss public transport API at <https://transport.opendata.ch/> is freely accessible without authentication. Try the following:
 
@@ -37,18 +31,14 @@ Browse, search and do what is described below. You can do this exercise alone or
 
     b) Try changing the `station` parameter to another station and observe the results.
 
-    c) Compare the experience: what are the advantages and limitations of using a live API versus analysing a downloaded CSV file?
-
 4. How many mailboxes are there in your commune or city? Explore the application at <https://wieviele-briefkaesten-gibt-es.streamlit.app/>. Where do these data originally come from?
 
 ::: {.callout-tip collapse="true"}
 ## Hints for Part A
 
 - **Q1**: Use the "Organisation" or "Canton" filter on the opendata.swiss search page to see the counts.
-- **Q2a/b**: In a spreadsheet, calculate delays by subtracting the scheduled time from the actual time. Try using a pivot table or `AVERAGEIF`-style formulas grouped by `Stop name`. Ignore rows where times are missing or where `Arrival forecast status` / `Departure forecast status` show unusual values (e.g. `UNBEKANNT`). Stations with very few stops may appear artificially punctual or delayed — consider filtering for stations with a minimum number of stops.
-- **Q2c**: Filter or count rows where `Cancelled TF` equals `true`. In Excel/LibreOffice, you can use `=COUNTIF(column, "true")`.
-- **Q3a/b**: The transport.opendata.ch API returns JSON. You can paste the URL directly in your browser to see the result. Try the `/v1/connections` endpoint as well (e.g. `?from=Lausanne&to=Genève`). The API documentation at <https://transport.opendata.ch/docs.html> describes all available parameters.
-- **Q3c**: Think about: real-time vs. historical data, ease of use, volume of data retrievable, and what you can do with each approach.
+- **Q2**: The key columns are: `Stop name` (train station), `Journey identifier` (train number), `Departure time` / `Arrival time` (scheduled times), `Departure forecast` / `Arrival forecast` (actual times), `Departure delay` / `Arrival delay`, and `Cancelled TF` (cancellation flag).
+- **Q3**: The transport.opendata.ch API returns JSON. You can paste the URL directly in your browser to see the result. Try the `/v1/connections` endpoint as well (e.g. `?from=Lausanne&to=Genève`). The API documentation at <https://transport.opendata.ch/docs.html> describes all available parameters.
 - **Q4**: The application estimates the number of delivery addresses / mailboxes (_Zustelladressen / Briefkästen_) for a user-defined area. To investigate where the data come from, you can look at the source code on GitHub (<https://github.com/davidoesch/wo-sind-briefkaesten>) or use your browser's developer tools (Network tab) while the app loads to see which data sources are being fetched. The underlying data come from the Federal Building and Housing Register (GWR) of the Federal Statistical Office (BFS) and business locations from the Overture Maps Foundation.
 :::
 
@@ -66,11 +56,11 @@ Go to [visualize.admin.ch](https://visualize.admin.ch/) and use the **Verkehrsle
 
 #### SPARQL
 
-Go to the [LINDAS SPARQL Endpoint](https://lindas.admin.ch/sparql/).
+SPARQL (SPARQL Protocol and RDF Query Language) is the standard query language for Linked Data. Interestingly, tools like [visualize.admin.ch](https://visualize.admin.ch/) use SPARQL queries behind the scenes — every chart or map you created above was powered by an automatically generated SPARQL query sent to the LINDAS endpoint.
 
-3. Query the same **aviation dataset** via SPARQL. The dataset is available as a Linked Data cube at `https://transport.ld.admin.ch/foca/FOCA_Air_traffic_movements/5`. Try to retrieve the number of flight movements per airport for a given year. Start by exploring the structure of the data with a simple query, then refine.
+You can write and run SPARQL queries directly at the [LINDAS SPARQL Endpoint](https://lindas.admin.ch/sparql/).
 
-4. Now try a completely different dataset: the **Archive database of the Swiss Federal Archives** (`https://culture.ld.admin.ch/.well-known/dataset/ais`). This dataset uses the **Records in Context (RiC)** ontology. Try the following query to find archival records related to "Bern":
+3. Try the following query to explore the **Archive database of the Swiss Federal Archives**: the **Archive database of the Swiss Federal Archives** (`https://culture.ld.admin.ch/.well-known/dataset/ais`). This dataset uses the **Records in Context (RiC)** ontology. Try the following query to find archival records related to "Bern":
 
     ```sparql
     PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
@@ -107,6 +97,5 @@ Go to the [LINDAS SPARQL Endpoint](https://lindas.admin.ch/sparql/).
 
 - **Q1**: On visualize.admin.ch, search for "Verkehrsleistung" or "Flugplätzen" to find the dataset. Once selected, choose a map visualisation and filter by the year 2023. Compare the circle sizes or values for Geneva and Basel.
 - **Q2**: Select the line chart view and filter for Zurich Airport only.
-- **Q3**: To explore the aviation cube via SPARQL, start with a `DESCRIBE` query to understand the structure, or try `SELECT * WHERE { ?s ?p ?o } LIMIT 20` within the FOCA graph. The observations contain dimensions for airport, year, and a measure for the number of movements. You may need to experiment with the predicate URIs — look at what properties the observations have.
-- **Q4**: [Records in Context (RiC)](https://www.ica.org/standards/RiC/ontology) is an ontology developed by the International Council on Archives (ICA) for describing archival records as Linked Data. In the query, `rico:Record` represents an archival record, `rico:title` its title, and `rico:isAssociatedWithDate` links to date information. Try replacing `"bern"` in the `FILTER` with another term, or remove the filter entirely and add `FILTER(?beginDate > "1900-01-01"^^xsd:date)` to explore records from the 20th century onwards.
+- **Q3**: [Records in Context (RiC)](https://www.ica.org/standards/RiC/ontology) is an ontology developed by the International Council on Archives (ICA) for describing archival records as Linked Data. In the query, `rico:Record` represents an archival record, `rico:title` its title, and `rico:isAssociatedWithDate` links to date information. Try replacing `"bern"` in the `FILTER` with another term, or remove the filter entirely and add `FILTER(?beginDate > "1900-01-01"^^xsd:date)` to explore records from the 20th century onwards.
 :::

@@ -404,10 +404,7 @@ div.csl-indent {
   <ul>
   <li><a href="#a.-getting-started" id="toc-a.-getting-started" class="nav-link" data-scroll-target="#a.-getting-started">A. Getting started</a></li>
   <li><a href="#b.-basic-cleaning-faceting-with-the-powerhouse-museum-dataset" id="toc-b.-basic-cleaning-faceting-with-the-powerhouse-museum-dataset" class="nav-link" data-scroll-target="#b.-basic-cleaning-faceting-with-the-powerhouse-museum-dataset">B. Basic Cleaning &amp; Faceting with the Powerhouse Museum Dataset</a></li>
-  <li><a href="#c.-authority-control-reconciliation-with-the-metropolitan-museum-of-art" id="toc-c.-authority-control-reconciliation-with-the-metropolitan-museum-of-art" class="nav-link" data-scroll-target="#c.-authority-control-reconciliation-with-the-metropolitan-museum-of-art">C. Authority Control &amp; Reconciliation with the Metropolitan Museum of Art</a></li>
-  <li><a href="#d.-manuscript-reconciliation-with-biblissima" id="toc-d.-manuscript-reconciliation-with-biblissima" class="nav-link" data-scroll-target="#d.-manuscript-reconciliation-with-biblissima">D. Manuscript Reconciliation with Biblissima</a></li>
-  <li><a href="#e.-api-integration-json-with-the-smithsonian" id="toc-e.-api-integration-json-with-the-smithsonian" class="nav-link" data-scroll-target="#e.-api-integration-json-with-the-smithsonian">E. API Integration &amp; JSON with the Smithsonian</a></li>
-  <li><a href="#f.-a-step-further" id="toc-f.-a-step-further" class="nav-link" data-scroll-target="#f.-a-step-further">F. A step further…</a></li>
+  <li><a href="#c.-manuscript-reconciliation-with-biblissima" id="toc-c.-manuscript-reconciliation-with-biblissima" class="nav-link" data-scroll-target="#c.-manuscript-reconciliation-with-biblissima">C. Manuscript Reconciliation with Biblissima</a></li>
   </ul></li>
   <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references">References</a></li>
   </ul>
@@ -453,7 +450,7 @@ div.csl-indent {
     <div>
     <div class="quarto-title-meta-heading">Modified</div>
     <div class="quarto-title-meta-contents">
-      <p class="date-modified">February 17, 2026</p>
+      <p class="date-modified">February 26, 2026</p>
     </div>
   </div>
     
@@ -523,14 +520,15 @@ div.csl-indent {
 </div>
 </div>
 </section>
-<section id="c.-authority-control-reconciliation-with-the-metropolitan-museum-of-art" class="level3">
-<h3 class="anchored" data-anchor-id="c.-authority-control-reconciliation-with-the-metropolitan-museum-of-art">C. Authority Control &amp; Reconciliation with the Metropolitan Museum of Art</h3>
+<section id="c.-manuscript-reconciliation-with-biblissima" class="level3">
+<h3 class="anchored" data-anchor-id="c.-manuscript-reconciliation-with-biblissima">C. Manuscript Reconciliation with Biblissima</h3>
 <ol start="9" type="1">
-<li>Create a new project by importing the Met Museum CSV (<a href="https://github.com/metmuseum/openaccess" class="uri">https://github.com/metmuseum/openaccess</a>) — use the first 5,000 rows for better performance</li>
-<li><strong>Reconcile artists</strong>: Select the <code>Artist Display Name</code> column. Start reconciling against <strong>Wikidata</strong> (service: <a href="https://wikidata.reconci.link/en/api" class="uri">https://wikidata.reconci.link/en/api</a>, type: <strong>Q5</strong> for humans).</li>
-<li><strong>Judgment exercise</strong>: Auto-match high confidence scores (&gt;90), manually review medium scores (70-90) to distinguish between homonyms (e.g., different “John Smith” artists), and mark low scores (&lt;70) as “None”.</li>
-<li><strong>Extract QIDs</strong>: Transform reconciled cells to extract just the QID number for external linking.</li>
+<li>Create a new project by importing the manuscript CSV from <a href="https://raw.githubusercontent.com/emmamorlock/workshop/refs/heads/main/exercices/handouts/biblissima.csv" class="uri">https://raw.githubusercontent.com/emmamorlock/workshop/refs/heads/main/exercices/handouts/biblissima.csv</a></li>
+<li><strong>Explore manuscript metadata</strong>: Review columns such as <code>shelfmark</code>, <code>repository</code>, <code>author</code>, and <code>title</code>. Create text facets to identify variations in repository names or author attributions.</li>
+<li><strong>Reconcile shelfmarks</strong>: Use the Biblissima reconciliation endpoint (<a href="https://data.biblissima.fr/api/reconcile" class="uri">https://data.biblissima.fr/api/reconcile</a>, type: <strong>Manuscript</strong>) to match records against the Biblissima authority file. This connects your local shelfmarks to persistent URIs.</li>
+<li><strong>Enrich with IIIF</strong> (optional extension): After reconciliation, use <em>Edit column &gt; Add column by fetching URLs</em> to retrieve JSON data from the reconciled Biblissima URIs. Parse the JSON to extract <code>iiif_manifest_url</code> fields where available.</li>
 </ol>
+<p>Cf. <span class="citation" data-cites="sajdakReconcilierAvecOpenRefine2024">Sajdak (<a href="#ref-sajdakReconcilierAvecOpenRefine2024" role="doc-biblioref">2024</a>)</span>.</p>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-3-contents" aria-controls="callout-3" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
@@ -544,91 +542,8 @@ div.csl-indent {
 <div id="callout-3" class="callout-3-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <ul>
-<li>To add a reconciliation service: <em>Reconcile &gt; Start reconciling &gt; Add Standard Service</em> and paste the URL.</li>
-<li>For step 12, use <em>Edit cells &gt; Transform</em> with GREL: <code>cell.recon.match.id</code></li>
-</ul>
-</div>
-</div>
-</div>
-</section>
-<section id="d.-manuscript-reconciliation-with-biblissima" class="level3">
-<h3 class="anchored" data-anchor-id="d.-manuscript-reconciliation-with-biblissima">D. Manuscript Reconciliation with Biblissima</h3>
-<ol start="13" type="1">
-<li>Create a new project by importing the manuscript CSV from <a href="https://raw.githubusercontent.com/emmamorlock/workshop/refs/heads/main/exercices/handouts/biblissima.csv" class="uri">https://raw.githubusercontent.com/emmamorlock/workshop/refs/heads/main/exercices/handouts/biblissima.csv</a></li>
-<li><strong>Explore manuscript metadata</strong>: Review columns such as <code>shelfmark</code>, <code>repository</code>, <code>author</code>, and <code>title</code>. Create text facets to identify variations in repository names or author attributions.</li>
-<li><strong>Reconcile shelfmarks</strong>: Use the Biblissima reconciliation endpoint (<a href="https://data.biblissima.fr/api/reconcile" class="uri">https://data.biblissima.fr/api/reconcile</a>, type: <strong>Manuscript</strong>) to match records against the Biblissima authority file. This connects your local shelfmarks to persistent URIs.</li>
-<li><strong>Enrich with IIIF</strong> (optional extension): After reconciliation, use <em>Edit column &gt; Add column by fetching URLs</em> to retrieve JSON data from the reconciled Biblissima URIs. Parse the JSON to extract <code>iiif_manifest_url</code> fields where available.</li>
-</ol>
-<p>Cf. <span class="citation" data-cites="sajdakReconcilierAvecOpenRefine2024">Sajdak (<a href="#ref-sajdakReconcilierAvecOpenRefine2024" role="doc-biblioref">2024</a>)</span>.</p>
-<div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-4-contents" aria-controls="callout-4" aria-expanded="false" aria-label="Toggle callout">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Tip</span>Hints for Part D
-</div>
-<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
-</div>
-<div id="callout-4" class="callout-4-contents callout-collapse collapse">
-<div class="callout-body-container callout-body">
-<ul>
 <li>The Biblissima endpoint works like Wikidata’s — add it the same way and select the “Manuscript” type.</li>
-<li>For step 16, the fetched JSON may contain a <code>iiif_manifest_url</code> key — use <code>value.parseJson()['iiif_manifest_url']</code> to extract it.</li>
-</ul>
-</div>
-</div>
-</div>
-</section>
-<section id="e.-api-integration-json-with-the-smithsonian" class="level3">
-<h3 class="anchored" data-anchor-id="e.-api-integration-json-with-the-smithsonian">E. API Integration &amp; JSON with the Smithsonian</h3>
-<ol start="17" type="1">
-<li>Create a new project by importing a Smithsonian JSON file (not CSV) from <a href="https://github.com/Smithsonian/OpenAccess" class="uri">https://github.com/Smithsonian/OpenAccess</a></li>
-<li><strong>Flatten nested JSON</strong>: Convert nested paths (e.g., <code>title.content</code>) to flat columns using the transform expression: <code>value.parseJson()['title']</code></li>
-<li><strong>Extract media</strong>: Parse the JSON to find objects with images by extracting <code>online_media.mediaCount</code></li>
-<li><strong>Reconcile topics</strong>: Match <code>topic</code> fields against Library of Congress Subject Headings (LCSH) using their reconciliation service.</li>
-</ol>
-<div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-5-contents" aria-controls="callout-5" aria-expanded="false" aria-label="Toggle callout">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Tip</span>Hints for Part E
-</div>
-<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
-</div>
-<div id="callout-5" class="callout-5-contents callout-collapse collapse">
-<div class="callout-body-container callout-body">
-<ul>
-<li>When importing JSON, OpenRefine lets you select the record path — pick the array that contains the collection objects.</li>
-<li>For step 18, use <code>value.parseJson()</code> in <em>Edit cells &gt; Transform</em> to navigate nested structures.</li>
-</ul>
-</div>
-</div>
-</div>
-</section>
-<section id="f.-a-step-further" class="level3">
-<h3 class="anchored" data-anchor-id="f.-a-step-further">F. A step further…</h3>
-<ol start="21" type="1">
-<li>Export your cleaned datasets in both CSV and JSON formats</li>
-<li>Export the project history (OpenRefine project archive) to document your transformation steps</li>
-</ol>
-<div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-6-contents" aria-controls="callout-6" aria-expanded="false" aria-label="Toggle callout">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Tip</span>Hints for Part F
-</div>
-<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
-</div>
-<div id="callout-6" class="callout-6-contents callout-collapse collapse">
-<div class="callout-body-container callout-body">
-<ul>
-<li>Use <em>Export &gt; Comma-separated value</em> and <em>Export &gt; Templating</em> (for JSON) respectively.</li>
-<li>The project archive is under <em>Export &gt; OpenRefine project archive to file</em> — this saves all your transformation history.</li>
+<li>For step 12, the fetched JSON may contain a <code>iiif_manifest_url</code> key — use <code>value.parseJson()['iiif_manifest_url']</code> to extract it.</li>
 </ul>
 </div>
 </div>
