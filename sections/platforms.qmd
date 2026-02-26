@@ -86,6 +86,12 @@ listing:
         **Public-Law Body:** The Open Data Portal of Geneva Public Transport (opendata.tpg) was launched in 2022. Building on an initiative that started in 2015 with real-time transit data, it supports multiple download formats (including DCAT in RDF/XML and JSON) to promote transparency and citizen participation.
       image: https://s3-eu-central-1.amazonaws.com/aws-ec2-eu-central-1-opendatasoft-staticfileset/tpg/logo
       categories: [ogd]
+    - title: "Open Data from Swiss Parliaments and Politics"
+      path: https://openparldata.ch/
+      description: >
+        **Swiss Parliamentary OGD:** OpenParlData.ch provides free, harmonised open data from national, cantonal, and municipal Swiss parliaments—covering political actors, parliamentary proceedings, decrees, consultations, votes, and more from 78 parliaments. Data is published under CC BY 4.0, accessible via an API (currently in beta) and bulk [exports](https://files.openparldata.ch/exports/). The source code is publicly available and open to contributions.
+      image: https://openparldata.ch/media/openParlData-D7XPKWIP.svg
+      categories: [ogd]
     - title: "Open data platform mobility Switzerland"
       path: https://opentransportdata.swiss/en/
       description: >

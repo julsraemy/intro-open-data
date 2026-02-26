@@ -20,7 +20,7 @@ Data scraping is the automated process of extracting information from websites o
 
 ### API Integration
 
-API integration involves connecting to external services in order to retrieve structured data, often in real time. This method provides standardised data access and can streamline automated processes. Nevertheless, it requires managing API rate limits, adapting to changes in the API, and integrating data from various systems.
+API integration involves connecting to external services in order to retrieve structured data, often in real time. This method provides standardised data access and can streamline automated processes. Nevertheless, it requires managing API rate limits, adapting to changes in the API, and integrating data from various systems. For example, [swissparlpy](https://metaodi.ch/swissparlpy/) is a Python module that provides convenient access to the [Swiss Parliament OData service](https://ws.parlament.ch/odata.svc/).
 
 ### Data Mining
 
@@ -66,26 +66,7 @@ Below is a summary table that presents some key software tools, outlining their 
 
 ### Piveau
 
-[Piveau](https://www.piveau.de/) is an open data platform comprising several integrated components that focus on the management and integration of open data, with a particular emphasis on metadata management, data harmonisation, and linked data capabilities [@kirsteinPiveauLargeScaleOpen2020]. It supports a wide range of data protocols and formats—including OAI-PMH, RDF, CKAN, uData, OwnCloud, JSON, SPARQL, Socrata, and Drupal—allowing for dynamic, programmable data transformation using JavaScript or XSLT. Harvesting processes can be individually scheduled, and the platform provides export capabilities into DCAT(-AP) and related standards.
-
-Key features include:
-
-- **Data Acquisition and Transformation:**  
-  Piveau supports scalable harvesting (up to hundreds of thousands of datasets per source) and flexible, configuration-based orchestration, enabling custom processing steps and integration with third-party services.
-  
-- **Linked Data and Storage:**  
-  It stores DCAT metadata as RDF in a triplestore and utilises URI harmonisation to create a consistent knowledge graph. The platform also integrates external vocabularies and ontologies to enhance linked data capabilities.
-
-- **Search and Frontend:**  
-  A powerful search engine based on Elasticsearch and a rich, customisable, multilingual frontend allow users to efficiently search and filter metadata. Additionally, extensive backend tools facilitate the creation and management of metadata.
-
-- **Quality Assurance:**  
-  Piveau periodically generates quality assessments based on SHACL validations. These assessments are stored alongside the metadata using the Data Quality Vocabulary (DQV), with reports available in various formats.
-
-- **Access Control and Operations:**  
-  Integration with Keycloak provides robust identity and access management, while containerisation with Docker and support for Kubernetes (with ready-to-use Helm charts) ensure efficient operations. The backends are primarily written in Java and Kotlin (using the Vert.x framework), and the frontends are developed with Vue.js.
-
-Piveau is open source and its code is available on [GitLab](https://gitlab.com/piveau/). Below is an overview of its architecture.
+[Piveau](https://www.piveau.de/) is an open source platform for open data management, with a focus on metadata management, data harmonisation, and linked data [@kirsteinPiveauLargeScaleOpen2020]. It supports a wide range of formats and protocols (OAI-PMH, RDF, CKAN, SPARQL, Socrata, etc.) and exports to DCAT(-AP). Metadata is stored as RDF in a triplestore, quality assessments are generated via SHACL validations, and search is powered by Elasticsearch. The platform runs in Docker/Kubernetes, with backends in Java/Kotlin (Vert.x) and frontends in Vue.js. Its code is available on [GitLab](https://gitlab.com/piveau/). Below is an overview of its architecture.
 
 ![](https://doc.piveau.io/img/overview.png)
 
@@ -107,7 +88,7 @@ Its customers include a broad range of public organisations such as municipaliti
 
 ### LOMAS
 
-[LOMAS](https://dscc-admin-ch.github.io/lomas-docs) is an open source platform developed by the Data Science Competence Center (DSCC) of the Swiss Federal Statistical Office. Public services collect large volumes of data, yet strict privacy regulations often limit their secondary use. LOMAS addresses this challenge by enabling authorised users—such as approved researchers and government analysts—to execute algorithms on sensitive datasets without directly accessing the data. Instead, users submit algorithms to the platform, which then processes the data within a secure, trusted computing environment. The results are returned protected by Differential Privacy, a framework that introduces controlled noise to prevent the extraction of identifiable information. This approach allows for the quantification and control of disclosure risk while ensuring transparency about data protection [see @aymonLomasPlatformConfidential2024].
+[LOMAS](https://dscc-admin-ch.github.io/lomas-docs) is an open source platform developed by the Data Science Competence Center (DSCC) of the Swiss Federal Statistical Office. It enables authorised researchers and analysts to run algorithms on sensitive datasets without direct data access: users submit their code, the platform executes it in a secure environment, and returns results protected by Differential Privacy (introducing controlled noise to prevent re-identification) [see @aymonLomasPlatformConfidential2024].
 
 
 ## References

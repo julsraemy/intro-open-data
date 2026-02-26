@@ -527,7 +527,7 @@ div.csl-indent {
     <div>
     <div class="quarto-title-meta-heading">Modified</div>
     <div class="quarto-title-meta-contents">
-      <p class="date-modified">February 4, 2026</p>
+      <p class="date-modified">February 26, 2026</p>
     </div>
   </div>
     
@@ -546,7 +546,7 @@ div.csl-indent {
 </section>
 <section id="api-integration" class="level3">
 <h3 class="anchored" data-anchor-id="api-integration">API Integration</h3>
-<p>API integration involves connecting to external services in order to retrieve structured data, often in real time. This method provides standardised data access and can streamline automated processes. Nevertheless, it requires managing API rate limits, adapting to changes in the API, and integrating data from various systems.</p>
+<p>API integration involves connecting to external services in order to retrieve structured data, often in real time. This method provides standardised data access and can streamline automated processes. Nevertheless, it requires managing API rate limits, adapting to changes in the API, and integrating data from various systems. For example, <a href="https://metaodi.ch/swissparlpy/">swissparlpy</a> is a Python module that provides convenient access to the <a href="https://ws.parlament.ch/odata.svc/">Swiss Parliament OData service</a>.</p>
 </section>
 <section id="data-mining" class="level3">
 <h3 class="anchored" data-anchor-id="data-mining">Data Mining</h3>
@@ -628,21 +628,7 @@ div.csl-indent {
 </section>
 <section id="piveau" class="level3">
 <h3 class="anchored" data-anchor-id="piveau">Piveau</h3>
-<p><a href="https://www.piveau.de/">Piveau</a> is an open data platform comprising several integrated components that focus on the management and integration of open data, with a particular emphasis on metadata management, data harmonisation, and linked data capabilities <span class="citation" data-cites="kirsteinPiveauLargeScaleOpen2020">(<a href="#ref-kirsteinPiveauLargeScaleOpen2020" role="doc-biblioref">Kirstein et al., 2020</a>)</span>. It supports a wide range of data protocols and formats—including OAI-PMH, RDF, CKAN, uData, OwnCloud, JSON, SPARQL, Socrata, and Drupal—allowing for dynamic, programmable data transformation using JavaScript or XSLT. Harvesting processes can be individually scheduled, and the platform provides export capabilities into DCAT(-AP) and related standards.</p>
-<p>Key features include:</p>
-<ul>
-<li><p><strong>Data Acquisition and Transformation:</strong><br>
-Piveau supports scalable harvesting (up to hundreds of thousands of datasets per source) and flexible, configuration-based orchestration, enabling custom processing steps and integration with third-party services.</p></li>
-<li><p><strong>Linked Data and Storage:</strong><br>
-It stores DCAT metadata as RDF in a triplestore and utilises URI harmonisation to create a consistent knowledge graph. The platform also integrates external vocabularies and ontologies to enhance linked data capabilities.</p></li>
-<li><p><strong>Search and Frontend:</strong><br>
-A powerful search engine based on Elasticsearch and a rich, customisable, multilingual frontend allow users to efficiently search and filter metadata. Additionally, extensive backend tools facilitate the creation and management of metadata.</p></li>
-<li><p><strong>Quality Assurance:</strong><br>
-Piveau periodically generates quality assessments based on SHACL validations. These assessments are stored alongside the metadata using the Data Quality Vocabulary (DQV), with reports available in various formats.</p></li>
-<li><p><strong>Access Control and Operations:</strong><br>
-Integration with Keycloak provides robust identity and access management, while containerisation with Docker and support for Kubernetes (with ready-to-use Helm charts) ensure efficient operations. The backends are primarily written in Java and Kotlin (using the Vert.x framework), and the frontends are developed with Vue.js.</p></li>
-</ul>
-<p>Piveau is open source and its code is available on <a href="https://gitlab.com/piveau/">GitLab</a>. Below is an overview of its architecture.</p>
+<p><a href="https://www.piveau.de/">Piveau</a> is an open source platform for open data management, with a focus on metadata management, data harmonisation, and linked data <span class="citation" data-cites="kirsteinPiveauLargeScaleOpen2020">(<a href="#ref-kirsteinPiveauLargeScaleOpen2020" role="doc-biblioref">Kirstein et al., 2020</a>)</span>. It supports a wide range of formats and protocols (OAI-PMH, RDF, CKAN, SPARQL, Socrata, etc.) and exports to DCAT(-AP). Metadata is stored as RDF in a triplestore, quality assessments are generated via SHACL validations, and search is powered by Elasticsearch. The platform runs in Docker/Kubernetes, with backends in Java/Kotlin (Vert.x) and frontends in Vue.js. Its code is available on <a href="https://gitlab.com/piveau/">GitLab</a>. Below is an overview of its architecture.</p>
 <p><img src="https://doc.piveau.io/img/overview.png" class="img-fluid"></p>
 <p><a href="https://doc.piveau.io/general/basic-architecture/" class="uri">https://doc.piveau.io/general/basic-architecture/</a></p>
 </section>
@@ -661,7 +647,7 @@ Integration with Keycloak provides robust identity and access management, while 
 </section>
 <section id="lomas" class="level3">
 <h3 class="anchored" data-anchor-id="lomas">LOMAS</h3>
-<p><a href="https://dscc-admin-ch.github.io/lomas-docs">LOMAS</a> is an open source platform developed by the Data Science Competence Center (DSCC) of the Swiss Federal Statistical Office. Public services collect large volumes of data, yet strict privacy regulations often limit their secondary use. LOMAS addresses this challenge by enabling authorised users—such as approved researchers and government analysts—to execute algorithms on sensitive datasets without directly accessing the data. Instead, users submit algorithms to the platform, which then processes the data within a secure, trusted computing environment. The results are returned protected by Differential Privacy, a framework that introduces controlled noise to prevent the extraction of identifiable information. This approach allows for the quantification and control of disclosure risk while ensuring transparency about data protection <span class="citation" data-cites="aymonLomasPlatformConfidential2024">(see <a href="#ref-aymonLomasPlatformConfidential2024" role="doc-biblioref">Aymon et al., 2024</a>)</span>.</p>
+<p><a href="https://dscc-admin-ch.github.io/lomas-docs">LOMAS</a> is an open source platform developed by the Data Science Competence Center (DSCC) of the Swiss Federal Statistical Office. It enables authorised researchers and analysts to run algorithms on sensitive datasets without direct data access: users submit their code, the platform executes it in a secure environment, and returns results protected by Differential Privacy (introducing controlled noise to prevent re-identification) <span class="citation" data-cites="aymonLomasPlatformConfidential2024">(see <a href="#ref-aymonLomasPlatformConfidential2024" role="doc-biblioref">Aymon et al., 2024</a>)</span>.</p>
 </section>
 </section>
 <section id="references" class="level2">
