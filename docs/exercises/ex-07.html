@@ -21,27 +21,7 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-/* CSS for citations */
-div.csl-bib-body { }
-div.csl-entry {
-  clear: both;
-  margin-bottom: 0em;
-}
-.hanging-indent div.csl-entry {
-  margin-left:2em;
-  text-indent:-2em;
-}
-div.csl-left-margin {
-  min-width:2em;
-  float:left;
-}
-div.csl-right-inline {
-  margin-left:2em;
-  padding-left:1em;
-}
-div.csl-indent {
-  margin-left: 2em;
-}</style>
+</style>
 
 
 <script src="../site_libs/quarto-nav/quarto-nav.js"></script>
@@ -450,7 +430,7 @@ div.csl-indent {
     <div>
     <div class="quarto-title-meta-heading">Modified</div>
     <div class="quarto-title-meta-contents">
-      <p class="date-modified">February 26, 2026</p>
+      <p class="date-modified">March 3, 2026</p>
     </div>
   </div>
     
@@ -494,10 +474,32 @@ div.csl-indent {
 <section id="b.-basic-cleaning-faceting-with-the-powerhouse-museum-dataset" class="level3">
 <h3 class="anchored" data-anchor-id="b.-basic-cleaning-faceting-with-the-powerhouse-museum-dataset">B. Basic Cleaning &amp; Faceting with the Powerhouse Museum Dataset</h3>
 <ol start="5" type="1">
-<li>Create a new project by importing the Powerhouse Museum TSV file (<a href="https://zenodo.org/records/17047254/files/phm_collection_adapted.tsv" class="uri">https://zenodo.org/records/17047254/files/phm_collection_adapted.tsv</a>) — remember to select “Tab-separated values”</li>
-<li><strong>Whitespace detection</strong>: Use <em>Facet by blank</em> on the <code>categories</code> column, then apply <em>Edit cells &gt; Common transforms &gt; Trim leading and trailing whitespace</em>. Observe how “blank” cells are revealed.</li>
-<li><strong>Clustering</strong>: Create a <em>Text facet</em> on the <code>category</code> column. Click <em>Cluster</em> and use the “key collision” method to merge case inconsistencies (e.g., “Pottery” vs “pottery”).</li>
-<li><strong>Multi-valued cells</strong>: Split the <code>categories</code> column by the separator <code>|</code> (pipe character). Count how many objects have more than 3 categories, then rejoin the cells.</li>
+<li><p>Create a new project by importing the Powerhouse Museum TSV file. Instead of downloading the file first, use the <strong>“Get data from Web Address / URL”</strong> option in the import screen and paste this link: <a href="https://zenodo.org/records/17047254/files/phm_collection_adapted.tsv" class="uri">https://zenodo.org/records/17047254/files/phm_collection_adapted.tsv</a>. Remember to select “Tab-separated values”.</p></li>
+<li><p><strong>Explore with Facets</strong>:</p>
+<ul>
+<li>Click the dropdown arrow in the <code>Categories</code> column header and select <strong>Facet &gt; Text facet</strong>.</li>
+<li>A list of unique values appears on the left. Click on “Spacesuits” to filter the view, then click <strong>Reset</strong> to show all data again.</li>
+<li><em>Goal:</em> Understand how facets allow you to filter data and spot inconsistencies without deleting anything.</li>
+</ul></li>
+<li><p><strong>Test the Undo Stack</strong>:</p>
+<ul>
+<li>Make a temporary change: Go to the <code>Object Title</code> column &gt; <strong>Edit cells &gt; Transform</strong> and type <code>value.toUppercase()</code>. Click OK.</li>
+<li>Look at the <strong>Undo / Redo</strong> tab on the left. Click the previous step in the list to instantly revert the change.</li>
+<li><em>Goal:</em> Confirm that every action is recorded and reversible.</li>
+</ul></li>
+<li><p><strong>Multi-valued cells</strong>: The <code>categories</code> column contains multiple values separated by a pipe character (<code>|</code>).</p>
+<ul>
+<li>Use <em>Edit cells &gt; Split multi-valued cells</em> to separate them (enter <code>|</code> as the separator).</li>
+<li>Count how many objects have more than 3 categories (hint: use <em>Facet &gt; Custom facets &gt; Facet by length</em> on the split column).</li>
+<li>Once analysed, rejoin the cells using <em>Edit cells &gt; Join multi-valued cells</em>.</li>
+</ul></li>
+<li><p><strong>Text Facet &amp; Regular Expressions</strong>: The <code>Provenance (Production)</code> column contains structured strings separated by pipes (e.g., <code>Maker: ...; ...; ...|</code>).</p>
+<ul>
+<li>Create a <em>Text facet</em> on the <code>Provenance (Production)</code> column to observe the variations.</li>
+<li>Notice that many entries start with specific roles like “Maker:” or “Designer:”.</li>
+<li>Use <em>Edit cells &gt; Transform</em> with a GREL regex to extract just the role. Try the expression: <code>value.match(/^(Maker|Designer|User):/)[0]</code>.</li>
+<li>Alternatively, use <em>Edit column &gt; Add column based on this column</em> to create a new “Role” column extracting the first word before the colon.</li>
+</ul></li>
 </ol>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
@@ -512,9 +514,10 @@ div.csl-indent {
 <div id="callout-2" class="callout-2-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <ul>
-<li>For step 6, the blank facet is under <em>Facet &gt; Customized facets &gt; Facet by blank</em>.</li>
-<li>For step 7, try different clustering methods (fingerprint, ngram) — they catch different types of inconsistencies.</li>
-<li>For step 8, use <em>Edit cells &gt; Split multi-valued cells</em> and then <em>Join multi-valued cells</em> to rejoin.</li>
+<li><strong>For Step 5</strong>: Importing directly from URL saves disk space.</li>
+<li><strong>For Step 6</strong>: Facets are the most powerful tool in OpenRefine. They allow you to filter data and see errors (like typos or inconsistent capitalization) instantly.</li>
+<li><strong>For Step 8</strong>: After splitting, OpenRefine creates multiple rows for a single record. Use the “Record” mode (top left) to count categories per original object if needed.</li>
+<li><strong>For Step 9</strong>: Regular Expressions (regex) are powerful for extracting patterns. <code>^</code> matches the start of the string, and <code>(...)</code> captures the group. If the pattern isn’t found, the result will be <code>null</code>.</li>
 </ul>
 </div>
 </div>
@@ -522,13 +525,48 @@ div.csl-indent {
 </section>
 <section id="c.-manuscript-reconciliation-with-biblissima" class="level3">
 <h3 class="anchored" data-anchor-id="c.-manuscript-reconciliation-with-biblissima">C. Manuscript Reconciliation with Biblissima</h3>
-<ol start="9" type="1">
-<li>Create a new project by importing the manuscript CSV from <a href="https://raw.githubusercontent.com/emmamorlock/workshop/refs/heads/main/exercices/handouts/biblissima.csv" class="uri">https://raw.githubusercontent.com/emmamorlock/workshop/refs/heads/main/exercices/handouts/biblissima.csv</a></li>
-<li><strong>Explore manuscript metadata</strong>: Review columns such as <code>shelfmark</code>, <code>repository</code>, <code>author</code>, and <code>title</code>. Create text facets to identify variations in repository names or author attributions.</li>
-<li><strong>Reconcile shelfmarks</strong>: Use the Biblissima reconciliation endpoint (<a href="https://data.biblissima.fr/api/reconcile" class="uri">https://data.biblissima.fr/api/reconcile</a>, type: <strong>Manuscript</strong>) to match records against the Biblissima authority file. This connects your local shelfmarks to persistent URIs.</li>
-<li><strong>Enrich with IIIF</strong> (optional extension): After reconciliation, use <em>Edit column &gt; Add column by fetching URLs</em> to retrieve JSON data from the reconciled Biblissima URIs. Parse the JSON to extract <code>iiif_manifest_url</code> fields where available.</li>
+<ol start="10" type="1">
+<li><strong>Import and Inspect</strong>:
+<ul>
+<li>Create a new project by importing the CSV from: <a href="https://raw.githubusercontent.com/emmamorlock/workshop/refs/heads/main/exercices/handouts/biblissima.csv" class="uri">https://raw.githubusercontent.com/emmamorlock/workshop/refs/heads/main/exercices/handouts/biblissima.csv</a></li>
+<li>Observe the columns: <code>----</code> (Name), <code>coord</code>, <code>Type</code>, <code>YearBirth</code>, <code>YearDeath</code>.</li>
+<li><em>Note:</em> There is no explicit “Author” or “Repository” column. The <code>Type</code> column identifies if a row is a person, a place, a descriptor, or a shelfmark.</li>
+</ul></li>
+<li><strong>Filter Non-Person Entities</strong>:
+<ul>
+<li>The dataset contains mixed types. We want to focus on cleaning and reconciling <strong>persons</strong>.</li>
+<li>Click the <code>Type</code> column &gt; <strong>Facet &gt; Text facet</strong>.</li>
+<li>In the left panel, uncheck <code>descriptor</code>, <code>place</code>, and <code>shelfmark</code>. Only <code>person</code> should remain checked.</li>
+<li><em>Result:</em> The grid now shows only rows representing people.</li>
+</ul></li>
+<li><strong>Clean Name Variations</strong>:
+<ul>
+<li>Look at the <code>----</code> (Name) column. Notice inconsistencies like ” Petrarch” (leading spaces) or “Charles I” (multiple spaces).</li>
+<li>Apply <strong>Edit cells &gt; Common transforms &gt; Trim leading and trailing whitespace</strong>.</li>
+<li>Apply <strong>Edit cells &gt; Common transforms &gt; To titlecase</strong> to standardize capitalization.</li>
+<li><em>Optional:</em> Use <em>Edit cells &gt; Common transforms &gt; Collapse consecutive whitespace</em> if available, or use Transform with <code>value.replace(/\s+/, " ")</code>.</li>
+</ul></li>
+<li><strong>Reconcile with Biblissima</strong>:
+<ul>
+<li>Now that names are cleaner, connect them to the official Biblissima authority file.</li>
+<li>Click the <code>----</code> (Name) column &gt; <strong>Reconcile &gt; Start reconciling…</strong></li>
+<li>If Biblissima is not in the list, click <strong>Add standard service…</strong> and enter: <code>https://data.biblissima.fr/reconcile/en/api</code></li>
+<li>Select the <strong>Biblissima</strong> service and choose the type <strong>Person</strong> (or <em>Autorité</em> depending on the endpoint response).</li>
+<li>Click <strong>Start Reconciling</strong>.</li>
+<li>Review the matches:
+<ul>
+<li><strong>Green</strong>: High confidence match.</li>
+<li><strong>Yellow</strong>: Multiple candidates (click the cell to choose the correct one).</li>
+<li><strong>Red</strong>: No match found.</li>
+</ul></li>
+</ul></li>
+<li><strong>Extract Reconciled Data</strong>:
+<ul>
+<li>Once reconciliation is complete, new columns are added automatically (e.g., <code>----: ID</code>, <code>----: Type</code>, <code>----: Score</code>).</li>
+<li>Use <strong>Edit column &gt; Add column from reconciled values…</strong> to extract specific details like the <strong>Biblissima URI</strong> or <strong>Preferred Label</strong>.</li>
+<li>This creates a persistent link between your local messy data and the authoritative record.</li>
+</ul></li>
 </ol>
-<p>Cf. <span class="citation" data-cites="sajdakReconcilierAvecOpenRefine2024">Sajdak (<a href="#ref-sajdakReconcilierAvecOpenRefine2024" role="doc-biblioref">2024</a>)</span>.</p>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-3-contents" aria-controls="callout-3" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
@@ -542,8 +580,10 @@ div.csl-indent {
 <div id="callout-3" class="callout-3-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <ul>
-<li>The Biblissima endpoint works like Wikidata’s — add it the same way and select the “Manuscript” type.</li>
-<li>For step 12, the fetched JSON may contain a <code>iiif_manifest_url</code> key — use <code>value.parseJson()['iiif_manifest_url']</code> to extract it.</li>
+<li><strong>For Step 11</strong>: Faceting allows you to temporarily hide rows you don’t need. If you want to permanently delete non-person rows, you can use <em>Edit rows &gt; Remove all matching rows</em> while the facet is active.</li>
+<li><strong>For Step 12</strong>: Always trim whitespace <em>before</em> reconciling. ” Charles” and “Charles” are treated as different strings by the reconciliation service, reducing your match rate.</li>
+<li><strong>For Step 13</strong>: Reconciliation is not just matching; it disambiguates. “Charles I” could be the King of Portugal or England. The service provides candidates so you can choose the correct historical figure based on the context (dates).</li>
+<li><strong>For Step 14</strong>: The extracted URI (e.g., <code>http://data.biblissima.fr/...</code>) is a stable link you can use to fetch more data or link to other datasets (Linked Open Data).</li>
 </ul>
 </div>
 </div>
@@ -557,17 +597,12 @@ div.csl-indent {
 </section>
 </section>
 <section id="references" class="level2">
-
-
+<h2 class="anchored" data-anchor-id="references">References</h2>
 
 
 </section>
 
-<a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a><div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography" id="quarto-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" data-line-spacing="2" role="list">
-<div id="ref-sajdakReconcilierAvecOpenRefine2024" class="csl-entry" role="listitem">
-Sajdak, C. (2024). <em>Réconcilier avec <span>OpenRefine</span></em>. Biblissima+. <a href="https://doc.biblissima.fr/api/openrefine/">https://doc.biblissima.fr/api/openrefine/</a>
-</div>
-</div></section><section class="quarto-appendix-contents" id="quarto-reuse"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div class="quarto-appendix-contents"><div><a rel="license" href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a></div></div></section></div></main> <!-- /main -->
+<a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a><div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-reuse"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div class="quarto-appendix-contents"><div><a rel="license" href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a></div></div></section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     // Ensure there is a toggle, if there isn't float one in the top right

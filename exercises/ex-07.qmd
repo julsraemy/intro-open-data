@@ -29,31 +29,78 @@ license: "CC BY"
 
 ### B. Basic Cleaning & Faceting with the Powerhouse Museum Dataset
 
-5. Create a new project by importing the Powerhouse Museum TSV file (<https://zenodo.org/records/17047254/files/phm_collection_adapted.tsv>) — remember to select "Tab-separated values"
-6. **Whitespace detection**: Use *Facet by blank* on the `categories` column, then apply *Edit cells > Common transforms > Trim leading and trailing whitespace*. Observe how "blank" cells are revealed.
-7. **Clustering**: Create a *Text facet* on the `category` column. Click *Cluster* and use the "key collision" method to merge case inconsistencies (e.g., "Pottery" vs "pottery").
-8. **Multi-valued cells**: Split the `categories` column by the separator `|` (pipe character). Count how many objects have more than 3 categories, then rejoin the cells.
+5. Create a new project by importing the Powerhouse Museum TSV file. Instead of downloading the file first, use the **"Get data from Web Address / URL"** option in the import screen and paste this link: <https://zenodo.org/records/17047254/files/phm_collection_adapted.tsv>. Remember to select "Tab-separated values".
+
+6. **Explore with Facets**: 
+   - Click the dropdown arrow in the `Categories` column header and select **Facet > Text facet**. 
+   - A list of unique values appears on the left. Click on "Spacesuits" to filter the view, then click **Reset** to show all data again. 
+   - *Goal:* Understand how facets allow you to filter data and spot inconsistencies without deleting anything.
+
+7. **Test the Undo Stack**: 
+   - Make a temporary change: Go to the `Object Title` column > **Edit cells > Transform** and type `value.toUppercase()`. Click OK.
+   - Look at the **Undo / Redo** tab on the left. Click the previous step in the list to instantly revert the change. 
+   - *Goal:* Confirm that every action is recorded and reversible.
+
+8. **Multi-valued cells**: The `categories` column contains multiple values separated by a pipe character (`|`). 
+   - Use *Edit cells > Split multi-valued cells* to separate them (enter `|` as the separator).
+   - Count how many objects have more than 3 categories (hint: use *Facet > Custom facets > Facet by length* on the split column).
+   - Once analysed, rejoin the cells using *Edit cells > Join multi-valued cells*.
+
+9. **Text Facet & Regular Expressions**: The `Provenance (Production)` column contains structured strings separated by pipes (e.g., `Maker: ...; ...; ...|`).
+   - Create a *Text facet* on the `Provenance (Production)` column to observe the variations.
+   - Notice that many entries start with specific roles like "Maker:" or "Designer:".
+   - Use *Edit cells > Transform* with a GREL regex to extract just the role. Try the expression: `value.match(/^(Maker|Designer|User):/)[0]`.
+   - Alternatively, use *Edit column > Add column based on this column* to create a new "Role" column extracting the first word before the colon.
 
 ::: {.callout-tip collapse="true"}
 ## Hints for Part B
-- For step 6, the blank facet is under *Facet > Customized facets > Facet by blank*.
-- For step 7, try different clustering methods (fingerprint, ngram) — they catch different types of inconsistencies.
-- For step 8, use *Edit cells > Split multi-valued cells* and then *Join multi-valued cells* to rejoin.
+- **For Step 5**: Importing directly from URL saves disk space.
+- **For Step 6**: Facets are the most powerful tool in OpenRefine. They allow you to filter data and see errors (like typos or inconsistent capitalization) instantly.
+- **For Step 8**: After splitting, OpenRefine creates multiple rows for a single record. Use the "Record" mode (top left) to count categories per original object if needed.
+- **For Step 9**: Regular Expressions (regex) are powerful for extracting patterns. `^` matches the start of the string, and `(...)` captures the group. If the pattern isn't found, the result will be `null`.
 :::
 
 ### C. Manuscript Reconciliation with Biblissima
 
-9. Create a new project by importing the manuscript CSV from <https://raw.githubusercontent.com/emmamorlock/workshop/refs/heads/main/exercices/handouts/biblissima.csv>
-10. **Explore manuscript metadata**: Review columns such as `shelfmark`, `repository`, `author`, and `title`. Create text facets to identify variations in repository names or author attributions.
-11. **Reconcile shelfmarks**: Use the Biblissima reconciliation endpoint (<https://data.biblissima.fr/api/reconcile>, type: **Manuscript**) to match records against the Biblissima authority file. This connects your local shelfmarks to persistent URIs.
-12. **Enrich with IIIF** (optional extension): After reconciliation, use *Edit column > Add column by fetching URLs* to retrieve JSON data from the reconciled Biblissima URIs. Parse the JSON to extract `iiif_manifest_url` fields where available.
+10. **Import and Inspect**: 
+    - Create a new project by importing the CSV from: <https://raw.githubusercontent.com/emmamorlock/workshop/refs/heads/main/exercices/handouts/biblissima.csv>
+    - Observe the columns: `----` (Name), `coord`, `Type`, `YearBirth`, `YearDeath`.
+    - *Note:* There is no explicit "Author" or "Repository" column. The `Type` column identifies if a row is a person, a place, a descriptor, or a shelfmark.
 
-Cf. @sajdakReconcilierAvecOpenRefine2024.
+11. **Filter Non-Person Entities**: 
+    - The dataset contains mixed types. We want to focus on cleaning and reconciling **persons**.
+    - Click the `Type` column > **Facet > Text facet**.
+    - In the left panel, uncheck `descriptor`, `place`, and `shelfmark`. Only `person` should remain checked.
+    - *Result:* The grid now shows only rows representing people.
+
+12. **Clean Name Variations**: 
+    - Look at the `----` (Name) column. Notice inconsistencies like "   Petrarch" (leading spaces) or "Charles      I" (multiple spaces).
+    - Apply **Edit cells > Common transforms > Trim leading and trailing whitespace**.
+    - Apply **Edit cells > Common transforms > To titlecase** to standardize capitalization.
+    - *Optional:* Use *Edit cells > Common transforms > Collapse consecutive whitespace* if available, or use Transform with `value.replace(/\s+/, " ")`.
+
+13. **Reconcile with Biblissima**: 
+    - Now that names are cleaner, connect them to the official Biblissima authority file.
+    - Click the `----` (Name) column > **Reconcile > Start reconciling...**
+    - If Biblissima is not in the list, click **Add standard service...** and enter: `https://data.biblissima.fr/reconcile/en/api`
+    - Select the **Biblissima** service and choose the type **Person** (or *Autorité* depending on the endpoint response).
+    - Click **Start Reconciling**.
+    - Review the matches: 
+        - **Green**: High confidence match.
+        - **Yellow**: Multiple candidates (click the cell to choose the correct one).
+        - **Red**: No match found.
+
+14. **Extract Reconciled Data**: 
+    - Once reconciliation is complete, new columns are added automatically (e.g., `----: ID`, `----: Type`, `----: Score`).
+    - Use **Edit column > Add column from reconciled values...** to extract specific details like the **Biblissima URI** or **Preferred Label**.
+    - This creates a persistent link between your local messy data and the authoritative record.
 
 ::: {.callout-tip collapse="true"}
 ## Hints for Part C
-- The Biblissima endpoint works like Wikidata's — add it the same way and select the "Manuscript" type.
-- For step 12, the fetched JSON may contain a `iiif_manifest_url` key — use `value.parseJson()['iiif_manifest_url']` to extract it.
+- **For Step 11**: Faceting allows you to temporarily hide rows you don't need. If you want to permanently delete non-person rows, you can use *Edit rows > Remove all matching rows* while the facet is active.
+- **For Step 12**: Always trim whitespace *before* reconciling. " Charles" and "Charles" are treated as different strings by the reconciliation service, reducing your match rate.
+- **For Step 13**: Reconciliation is not just matching; it disambiguates. "Charles I" could be the King of Portugal or England. The service provides candidates so you can choose the correct historical figure based on the context (dates).
+- **For Step 14**: The extracted URI (e.g., `http://data.biblissima.fr/...`) is a stable link you can use to fetch more data or link to other datasets (Linked Open Data).
 :::
 
 More information and tutorials on OpenRefine can be found on the following links:
