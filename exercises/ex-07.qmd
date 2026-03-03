@@ -83,12 +83,8 @@ license: "CC BY"
     - Now that names are cleaner, connect them to the official Biblissima authority file.
     - Click the `----` (Name) column > **Reconcile > Start reconciling...**
     - If Biblissima is not in the list, click **Add standard service...** and enter: `https://data.biblissima.fr/reconcile/en/api`
-    - Select the **Biblissima** service and choose the type **Person** (or *Autorité* depending on the endpoint response).
+    - Select the **Biblissima** service, choose the type **Human** and add relevant properties to help in the reconciliation.
     - Click **Start Reconciling**.
-    - Review the matches: 
-        - **Green**: High confidence match.
-        - **Yellow**: Multiple candidates (click the cell to choose the correct one).
-        - **Red**: No match found.
 
 14. **Extract Reconciled Data**: 
     - Once reconciliation is complete, new columns are added automatically (e.g., `----: ID`, `----: Type`, `----: Score`).
