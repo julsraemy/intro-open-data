@@ -39,6 +39,20 @@ The ODM 2024 assessment marks the 10th edition of this benchmarking initiative. 
 
 Switzerland ranks 20th with an ODM score of 80 [@page2024OpenData2024]. Further information is available in the [ODM 2024 report](https://data.europa.eu/en/publications/open-data-maturity/2024).
 
+#### ODM 2025
+
+The 11th Open Data Maturity (ODM) assessment covers 36 countries, maintaining its four pillars (Policy, Portal, Impact, Quality) while intensifying focus on **High-Value Datasets (HVDs)** and metadata interoperability. The European average rose slightly from 80% in 2024 to **81% in 2025** ([data.europa.eu](https://data.europa.eu/sites/default/files/2025-12/2025_odm_report_5.pdf)).
+
+Switzerland remains in the **"Followers"** group (74–80% score), alongside Germany and the Netherlands. While infrastructure is robust, the plateau suggests a need to shift focus from data publication volumes to measurable reuse and impact to join the "Trend-setters" (e.g., France, Poland at 100%).
+
+**Key Reflections:**
+
+- Quality over Quantity: Future benchmarks should prioritize concrete economic impact over dataset counts.
+- Automation: Criteria must favor API-driven interoperability over static file downloads.
+- HVD Compliance: Availability of regulated High-Value Datasets should be a critical threshold for maturity.
+
+For Switzerland, the path forward is political rather than technical: leveraging existing infrastructure to foster open innovation rather than merely maintaining compliance.
+
 ### Impact Monitoring Framework
 
 In Switzerland, the [opendata.swiss](https://opendata.swiss/) platform has leveraged an Impact Monitoring Framework to assess the value of open government data initiatives. This framework employs a structured set of criteria and leverages the Social Return on Investment (SROI) approach to evaluate inputs, outputs, outcomes and overall impact. This systematic method offers a robust means to quantify the social and economic benefits derived from open data projects [@sturmerMeasuringPromiseOpen2016]. 
