@@ -21,7 +21,27 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="../site_libs/quarto-nav/quarto-nav.js"></script>
@@ -413,7 +433,13 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#ogd-platforms" id="toc-ogd-platforms" class="nav-link" data-scroll-target="#ogd-platforms">OGD Platforms</a></li>
   <li><a href="#key-takeaways-1" id="toc-key-takeaways-1" class="nav-link" data-scroll-target="#key-takeaways-1">Key Takeaways</a></li>
   </ul></li>
-  <li><a href="#week-3" id="toc-week-3" class="nav-link" data-scroll-target="#week-3">Week 3</a></li>
+  <li><a href="#week-3" id="toc-week-3" class="nav-link" data-scroll-target="#week-3">Week 3</a>
+  <ul>
+  <li><a href="#discussion-ethics-access" id="toc-discussion-ethics-access" class="nav-link" data-scroll-target="#discussion-ethics-access">Discussion: Ethics &amp; Access</a></li>
+  <li><a href="#assessment-quality-frameworks" id="toc-assessment-quality-frameworks" class="nav-link" data-scroll-target="#assessment-quality-frameworks">Assessment &amp; Quality Frameworks</a></li>
+  <li><a href="#tool-openrefine" id="toc-tool-openrefine" class="nav-link" data-scroll-target="#tool-openrefine">Tool: OpenRefine</a></li>
+  <li><a href="#key-takeaways-2" id="toc-key-takeaways-2" class="nav-link" data-scroll-target="#key-takeaways-2">Key Takeaways</a></li>
+  </ul></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/julsraemy/intro-open-data/edit/main/recap/index.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/julsraemy/intro-open-data/issues/new/choose" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
@@ -457,7 +483,7 @@ ul.task-list li input[type="checkbox"] {
     <div>
     <div class="quarto-title-meta-heading">Modified</div>
     <div class="quarto-title-meta-contents">
-      <p class="date-modified">February 26, 2026</p>
+      <p class="date-modified">March 4, 2026</p>
     </div>
   </div>
     
@@ -970,12 +996,37 @@ Warning
 </section>
 <section id="week-3" class="level2">
 <h2 class="anchored" data-anchor-id="week-3">Week 3</h2>
-<p><em>Content coming after Week 3.</em></p>
+<section id="discussion-ethics-access" class="level3">
+<h3 class="anchored" data-anchor-id="discussion-ethics-access">Discussion: Ethics &amp; Access</h3>
+<p>Building on <span class="citation" data-cites="disliCopyrightLicencingCultural2025">Dişli &amp; Candela (<a href="#ref-disliCopyrightLicencingCultural2025" role="doc-biblioref">2025</a>)</span>, we examined the tension between “guardian” mentalities and open access for public domain works. Key debates included the practical barriers to machine-readable licensing, navigating cross-border legal frameworks (Fair Use vs.&nbsp;DSM), and defining ethical boundaries between scholarly research and commercial AI training. We also explored how CARE principles may necessitate restricted access for Indigenous data, challenging the assumption that “open” is always the default solution.</p>
+</section>
+<section id="assessment-quality-frameworks" class="level3">
+<h3 class="anchored" data-anchor-id="assessment-quality-frameworks">Assessment &amp; Quality Frameworks</h3>
+<p>We analyzed the Open Data Maturity (ODM) 2025 findings, noting Switzerland’s stable but stagnant position in the “Followers” group, which underscores the shift from measuring data volume to evaluating real-world impact and API interoperability. The session (very briefly) introduced holistic quality tools like the Periodic Table of Open Data Elements, emphasising that successful initiatives depend as much on governance, culture, and demand definition as on technical standards.</p>
+</section>
+<section id="tool-openrefine" class="level3">
+<h3 class="anchored" data-anchor-id="tool-openrefine">Tool: OpenRefine</h3>
+<p>OpenRefine was presented as the standard tool for data wrangling, enabling users to clean messy datasets, standardise inconsistent formats, and reconcile local identifiers with global authority files (e.g., Wikidata). Its power lies in transforming raw, unstructured exports into reliable, machine-actionable data ready for analysis or publication.</p>
+</section>
+<section id="key-takeaways-2" class="level3">
+<h3 class="anchored" data-anchor-id="key-takeaways-2">Key Takeaways</h3>
+<ul>
+<li>Ethics over Ideology: Openness is not absolute; CARE principles and commercial restrictions demonstrate that governance and context must dictate access levels, not just technical capability.</li>
+<li>Technical Enforcement:** Cultural heritage institutions must move beyond passive terms of use to actively enforce access policies technically—using authentication tiers, API rate limiting, <code>robots.txt</code>, and secure data spaces to distinguish between scholarly research and commercial AI scraping.</li>
+<li>Impact &gt; Volume: High maturity (ODM) is no longer about publishing more files, but about ensuring data is interoperable (APIs), legally clear (machine-readable licenses), and measurably reused.For example, <a href="https://www.data.gouv.fr/">data.gouv.fr</a> has introduced Model Context Protocol (MCP) access, a critical standard allowing LLMs to securely connect to live, contextual public data rather than relying on static datasets.</li>
+<li>Cleaning is Research: Data wrangling with tools like OpenRefine is a critical scholarly activity that transforms static collections into dynamic, queryable datasets.</li>
+</ul>
+
 
 
 </section>
+</section>
 
-<a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a><div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-reuse"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div class="quarto-appendix-contents"><div><a rel="license" href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a></div></div></section></div></main> <!-- /main -->
+<a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a><div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography" id="quarto-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" data-line-spacing="2" role="list">
+<div id="ref-disliCopyrightLicencingCultural2025" class="csl-entry" role="listitem">
+Dişli, M., &amp; Candela, G. (2025). Copyright and <span>Licencing</span> for <span>Cultural Heritage Collections As Data</span>. <em>Journal of Open Humanities Data</em>, <em>11</em>, 11. <a href="https://doi.org/10.5334/johd.263">https://doi.org/10.5334/johd.263</a>
+</div>
+</div></section><section class="quarto-appendix-contents" id="quarto-reuse"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div class="quarto-appendix-contents"><div><a rel="license" href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a></div></div></section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     // Ensure there is a toggle, if there isn't float one in the top right

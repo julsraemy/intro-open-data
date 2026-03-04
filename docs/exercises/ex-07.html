@@ -430,7 +430,7 @@ ul.task-list li input[type="checkbox"] {
     <div>
     <div class="quarto-title-meta-heading">Modified</div>
     <div class="quarto-title-meta-contents">
-      <p class="date-modified">March 3, 2026</p>
+      <p class="date-modified">March 4, 2026</p>
     </div>
   </div>
     
@@ -477,9 +477,8 @@ ul.task-list li input[type="checkbox"] {
 <li><p>Create a new project by importing the Powerhouse Museum TSV file. Instead of downloading the file first, use the <strong>“Get data from Web Address / URL”</strong> option in the import screen and paste this link: <a href="https://zenodo.org/records/17047254/files/phm_collection_adapted.tsv" class="uri">https://zenodo.org/records/17047254/files/phm_collection_adapted.tsv</a>. Remember to select “Tab-separated values”.</p></li>
 <li><p><strong>Explore with Facets</strong>:</p>
 <ul>
-<li>Click the dropdown arrow in the <code>Categories</code> column header and select <strong>Facet &gt; Text facet</strong>.</li>
-<li>A list of unique values appears on the left. Click on “Spacesuits” to filter the view, then click <strong>Reset</strong> to show all data again.</li>
-<li><em>Goal:</em> Understand how facets allow you to filter data and spot inconsistencies without deleting anything.</li>
+<li>Click the dropdown arrow in the <code>Categories</code> column header and select <strong>Facet &gt; Text filter</strong>.</li>
+<li>Search “Spacesuits” to filter the view</li>
 </ul></li>
 <li><p><strong>Test the Undo Stack</strong>:</p>
 <ul>
@@ -515,7 +514,7 @@ ul.task-list li input[type="checkbox"] {
 <div class="callout-body-container callout-body">
 <ul>
 <li><strong>For Step 5</strong>: Importing directly from URL saves disk space.</li>
-<li><strong>For Step 6</strong>: Facets are the most powerful tool in OpenRefine. They allow you to filter data and see errors (like typos or inconsistent capitalization) instantly.</li>
+<li><strong>For Step 6</strong>: Facets and filters are the most powerful tool in OpenRefine. They allow you to filter data and see errors (like typos or inconsistent capitalization) instantly.</li>
 <li><strong>For Step 8</strong>: After splitting, OpenRefine creates multiple rows for a single record. Use the “Record” mode (top left) to count categories per original object if needed.</li>
 <li><strong>For Step 9</strong>: Regular Expressions (regex) are powerful for extracting patterns. <code>^</code> matches the start of the string, and <code>(...)</code> captures the group. If the pattern isn’t found, the result will be <code>null</code>.</li>
 </ul>
@@ -556,8 +555,7 @@ ul.task-list li input[type="checkbox"] {
 </ul></li>
 <li><strong>Extract Reconciled Data</strong>:
 <ul>
-<li>Once reconciliation is complete, new columns are added automatically (e.g., <code>----: ID</code>, <code>----: Type</code>, <code>----: Score</code>).</li>
-<li>Use <strong>Edit column &gt; Add column from reconciled values…</strong> to extract specific details like the <strong>Biblissima URI</strong> or <strong>Preferred Label</strong>.</li>
+<li>Use <strong>Reconcile &gt; Add column with URLs of match entites…</strong> to extract sthe <strong>Biblissima URI</strong></li>
 <li>This creates a persistent link between your local messy data and the authoritative record.</li>
 </ul></li>
 </ol>

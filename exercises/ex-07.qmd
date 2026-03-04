@@ -32,9 +32,8 @@ license: "CC BY"
 5. Create a new project by importing the Powerhouse Museum TSV file. Instead of downloading the file first, use the **"Get data from Web Address / URL"** option in the import screen and paste this link: <https://zenodo.org/records/17047254/files/phm_collection_adapted.tsv>. Remember to select "Tab-separated values".
 
 6. **Explore with Facets**: 
-   - Click the dropdown arrow in the `Categories` column header and select **Facet > Text facet**. 
-   - A list of unique values appears on the left. Click on "Spacesuits" to filter the view, then click **Reset** to show all data again. 
-   - *Goal:* Understand how facets allow you to filter data and spot inconsistencies without deleting anything.
+   - Click the dropdown arrow in the `Categories` column header and select **Facet > Text filter**. 
+   - Search "Spacesuits" to filter the view 
 
 7. **Test the Undo Stack**: 
    - Make a temporary change: Go to the `Object Title` column > **Edit cells > Transform** and type `value.toUppercase()`. Click OK.
@@ -55,7 +54,7 @@ license: "CC BY"
 ::: {.callout-tip collapse="true"}
 ## Hints for Part B
 - **For Step 5**: Importing directly from URL saves disk space.
-- **For Step 6**: Facets are the most powerful tool in OpenRefine. They allow you to filter data and see errors (like typos or inconsistent capitalization) instantly.
+- **For Step 6**: Facets and filters are the most powerful tool in OpenRefine. They allow you to filter data and see errors (like typos or inconsistent capitalization) instantly.
 - **For Step 8**: After splitting, OpenRefine creates multiple rows for a single record. Use the "Record" mode (top left) to count categories per original object if needed.
 - **For Step 9**: Regular Expressions (regex) are powerful for extracting patterns. `^` matches the start of the string, and `(...)` captures the group. If the pattern isn't found, the result will be `null`.
 :::
@@ -87,8 +86,7 @@ license: "CC BY"
     - Click **Start Reconciling**.
 
 14. **Extract Reconciled Data**: 
-    - Once reconciliation is complete, new columns are added automatically (e.g., `----: ID`, `----: Type`, `----: Score`).
-    - Use **Edit column > Add column from reconciled values...** to extract specific details like the **Biblissima URI** or **Preferred Label**.
+    - Use **Reconcile > Add column with URLs of match entites...** to extract sthe **Biblissima URI**
     - This creates a persistent link between your local messy data and the authoritative record.
 
 ::: {.callout-tip collapse="true"}

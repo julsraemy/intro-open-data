@@ -309,4 +309,17 @@ re3data entries depend on repository owners keeping their information up to date
 
 ## Week 3
 
-*Content coming after Week 3.*
+### Discussion: Ethics & Access
+Building on @disliCopyrightLicencingCultural2025, we examined the tension between "guardian" mentalities and open access for public domain works. Key debates included the practical barriers to machine-readable licensing, navigating cross-border legal frameworks (Fair Use vs. DSM), and defining ethical boundaries between scholarly research and commercial AI training. We also explored how CARE principles may necessitate restricted access for Indigenous data, challenging the assumption that "open" is always the default solution.
+
+### Assessment & Quality Frameworks
+We analyzed the Open Data Maturity (ODM) 2025 findings, noting Switzerland’s stable but stagnant position in the "Followers" group, which underscores the shift from measuring data volume to evaluating real-world impact and API interoperability. The session (very briefly) introduced holistic quality tools like the Periodic Table of Open Data Elements, emphasising that successful initiatives depend as much on governance, culture, and demand definition as on technical standards.
+
+### Tool: OpenRefine
+OpenRefine was presented as the standard tool for data wrangling, enabling users to clean messy datasets, standardise inconsistent formats, and reconcile local identifiers with global authority files (e.g., Wikidata). Its power lies in transforming raw, unstructured exports into reliable, machine-actionable data ready for analysis or publication. 
+
+### Key Takeaways
+- Ethics over Ideology: Openness is not absolute; CARE principles and commercial restrictions demonstrate that governance and context must dictate access levels, not just technical capability.
+- Technical Enforcement:** Cultural heritage institutions must move beyond passive terms of use to actively enforce access policies technically—using authentication tiers, API rate limiting, `robots.txt`, and secure data spaces to distinguish between scholarly research and commercial AI scraping.
+- Impact > Volume: High maturity (ODM) is no longer about publishing more files, but about ensuring data is interoperable (APIs), legally clear (machine-readable licenses), and measurably reused.For example, [data.gouv.fr](https://www.data.gouv.fr/) has introduced Model Context Protocol (MCP) access, a critical standard allowing LLMs to securely connect to live, contextual public data rather than relying on static datasets.
+- Cleaning is Research: Data wrangling with tools like OpenRefine is a critical scholarly activity that transforms static collections into dynamic, queryable datasets.
