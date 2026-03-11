@@ -19,6 +19,30 @@ license: "CC BY"
 This exercise covers IIIF (International Image Interoperability Framework) from the ground up — finding and comparing resources, manipulating Image API URIs, reading a manifest as JSON-LD, and building a collection — before moving on to Machine Learning applications. Work alone or in pairs.
 :::
 
+### A. Finding and Comparing IIIF Resources
+
+1. Open the Mirador demo viewer at <https://projectmirador.org/demo/>, close the default examples, and open at least two versions of the Gutenberg Bible by pasting these manifest URLs:
+
+   | Institution | Manifest URL |
+   |---|---|
+   | Bayerische Staatsbibliothek (BSB) | `https://api.digitale-sammlungen.de/iiif/presentation/v2/bsb00004647/manifest` |
+   | Bibliothèque Mazarine | `https://mazarinum.bibliotheque-mazarine.fr/iiif/1703/manifest` |
+
+2. Find a third Gutenberg Bible (or fragment) on one of the following portals and open its manifest in Mirador:
+
+   - Digital Bodleian (University of Oxford): <https://digital.bodleian.ox.ac.uk/>
+   - Gallica (BnF): <https://gallica.bnf.fr/>
+   - DigiVatlib (Vatican): <https://digi.vatlib.it/>
+
+::: {.callout-tip collapse="true"}
+## Hints for Part A
+
+- To open a manifest in Mirador, click the **+** (Add resource) button and paste the manifest URL.
+- On Gallica, search for "Gutenberg" and look for the IIIF logo on the item page or open Mirador to find it. Alternatively, you can use the [detektIIIF browser extension](https://seige.digital/en/detektiiif/) to surface manifests automatically as you browse. This plug-in works for Firefox and Google Chrome.
+:::
+
+### B. IIIF Image API — URI Manipulation
+
 The images below are served from two different institutions using the same IIIF Image API standard. Notice the structural similarity of the URLs despite the different servers and collections (both return 600px wide images via the `600,` size parameter):
 
 - <https://api.digitale-sammlungen.de/iiif/image/v2/bsb00004647_00005/full/600,/0/default.jpg>
@@ -47,39 +71,12 @@ The images below are served from two different institutions using the same IIIF 
 </div>
 ```
 
-### A. Finding and Comparing IIIF Resources
-
-1. Open the Mirador demo viewer at <https://projectmirador.org/demo/>, close the default examples, and open at least two versions of the Gutenberg Bible by pasting these manifest URLs:
-
-   | Institution | Manifest URL |
-   |---|---|
-   | Bayerische Staatsbibliothek (BSB) | `https://api.digitale-sammlungen.de/iiif/presentation/v2/bsb00004647/manifest` |
-   | Bibliothèque Mazarine | `https://mazarinum.bibliotheque-mazarine.fr/iiif/1703/manifest` |
-
-2. Compare the two versions side by side in Mirador. Are the metadata labels consistent across both institutions? What differences do you notice in the way each institution has described or structured their copy?
-
-3. Find a third Gutenberg Bible (or fragment) on one of the following portals and open its manifest in Mirador:
-
-   - Digital Bodleian (University of Oxford): <https://digital.bodleian.ox.ac.uk/>
-   - Gallica (BnF): <https://gallica.bnf.fr/>
-   - DigiVatlib (Vatican): <https://digi.vatlib.it/>
-
-::: {.callout-tip collapse="true"}
-## Hints for Part A
-
-- To open a manifest in Mirador, click the **+** (Add resource) button and paste the manifest URL.
-- On Gallica, search for "Bible de Gutenberg" and look for the IIIF logo on the item page, or use the [detektIIIF browser extension](https://seige.digital/en/detektiiif/) to surface manifests automatically as you browse.
-- Metadata consistency is a known challenge in IIIF: institutions use different labels (`Title`, `Titel`, `Titre`…) and different levels of description. This becomes important when aggregating content programmatically.
-:::
-
-### B. IIIF Image API — URI Manipulation
-
 ::: {.callout-tip}
 ## IIIF Image API — URI Syntax and Version Differences
 
 The URI follows this pattern: `{server}/{identifier}/{region}/{size}/{rotation}/{quality}.{format}`
 
-The full syntax is covered in the course recap. The key differences between the two current versions:
+The key differences between the two current versions:
 
 | Parameter | IIIF Image API 2.1 | IIIF Image API 3.0 |
 |---|---|---|
@@ -91,11 +88,10 @@ The full syntax is covered in the course recap. The key differences between the 
 In practice, many servers still accept `full` for backwards compatibility, but `max` is the correct term in 3.0. The `region`, `rotation`, `quality`, and `format` parameters are otherwise identical between versions.
 :::
 
-4. Start from this Image API URI for a BSB page and open it in your browser:
+3. Start from this Image API URI for a BSB page and open it in your browser:
 
-   ```
-   https://api.digitale-sammlungen.de/iiif/image/v2/bsb00004647_00005/full/full/0/default.jpg
-   ```
+
+<https://api.digitale-sammlungen.de/iiif/image/v2/bsb00004647_00005/full/full/0/default.jpg>
 
    Use the **IIIF Image Inspector** at <https://iiifimage.link/> to manipulate the URI parameters. Try to produce at least two of the following variations:
 
@@ -104,13 +100,12 @@ In practice, many servers still accept `full` for backwards compatibility, but `
    - A 90° or 180° rotation
    - A greyscale or bitonal rendering
 
-5. The BSB server only supports Image API 2. To explore API 3, use this image from the PTT Archive instead — check its `info.json` first:
+4. The BSB server only supports Image API 2. To explore API 3, use this image from the PTT Archive instead — check its `info.json` first:
 
-   ```
-   https://iiif.ptt-archiv.ch/iiif/3/P-38-2-1851-08.jp2/info.json
-   ```
 
-   Construct a valid IIIF Image API 3 URI that returns the full image at maximum size. What single size parameter differs from the equivalent API 2 URI?
+<https://iiif.ptt-archiv.ch/iiif/3/P-38-2-1851-08.jp2/info.json>
+
+   Construct a valid IIIF Image API 3 URI that returns the full image at maximum size.
 
 ::: {.callout-tip collapse="true"}
 ## Hints for Part B
@@ -123,11 +118,9 @@ In practice, many servers still accept `full` for backwards compatibility, but `
 
 ### C. Exploring a Manifest as JSON-LD
 
-6. Open the Fragmentarium manifest in your browser (or a JSON viewer such as <https://jsonhero.io/>):
+5. Open the Fragmentarium manifest in your browser:
 
-   ```
-   https://fragmentarium.ms/metadata/iiif/F-65po/manifest.json
-   ```
+<https://fragmentarium.ms/metadata/iiif/F-65po/manifest.json>
 
 ::: {.callout-tip}
 ## IIIF Presentation API — Version Differences
@@ -143,80 +136,63 @@ The Fragmentarium manifest uses **Presentation API 2.1**. Many newer institution
 | Rights / attribution | `license`, `attribution` | `rights`, `requiredStatement` |
 | `@context` | `…/presentation/2/context.json` | `…/presentation/3/context.json` |
 
-A **language map** means the same label field can carry multiple languages simultaneously: `{"en": ["Gutenberg Bible"], "de": ["Gutenberg-Bibel"]}`. This is one of the most visible changes when comparing raw manifests side by side.
 :::
 
-7. Navigate the v2.1 JSON structure to find:
+6. Navigate the v2.1 JSON structure to find:
 
-   - The manifest `label` and `description`
+   - The manifest `label`
    - The image URI at: `sequences` → `canvases` → `images` → `resource` → `@id`
    - The `info.json` base URI at: `resource` → `service` → `@id`
 
-8. Append `/info.json` to the service `@id` you found and open it. What does it tell you about the image (dimensions, available sizes, API compliance level)?
-
-9. Now open a Presentation API **3.0** manifest for comparison:
-
-   ```
-   https://manifests.collections.yale.edu/ycba/obj/34
-   ```
-
-   Locate the image URI using the v3 path (`items` → `items` → `items` → `body` → `id`). Can you spot the `@context` difference, the `label` language map, and the absence of `sequences`?
+7. Open it (normally the URL redirects to the `/info.json`; if not, you need to append it). What information does it provide about the image, such as dimensions, available sizes and API compliance level?
 
 ::: {.callout-tip collapse="true"}
 ## Hints for Part C
 
 - If the raw JSON is hard to read in a browser, paste the URL into <https://jsonhero.io/> for an interactive tree view.
 - In the v2.1 manifest, `sequences[0].canvases[0].images[0].resource["@id"]` gives you the full Image API URI (ending in `/full/full/0/default.jpg`). Paste it into your browser to display the image directly.
-- The `service["@id"]` inside `resource` is the Image API base URI. Add `/info.json` to retrieve the image's capability document (pixel dimensions, tile sizes, compliance level).
-- In the v3 BSB manifest, look at `items[0].items[0].items[0].body.id` for the image URI. The structure is more deeply nested because annotation pages sit between canvases and their content. The `label` will be a language map (`{"de": ["…"]}`), and there is no `sequences` key at all.
+- The `service["@id"]` inside `resource` is the Image API base URI and should redirect to the `/info.json`.
 :::
 
 ### D. Building a IIIF Collection on Biblissima
 
-10. Go to <https://iiif.biblissima.fr/collections/> and create a new IIIF Collection.
+1. Go to <https://iiif.biblissima.fr/collections/> and create a new IIIF Collection by adding a few digital objects to your basket 🛒.
 
-11. Load your collection into a viewer: paste the collection URL into [Universal Viewer](https://www.universalviewer.dev/) or [Mirador](https://projectmirador.org/demo/).
+2. View your newly created collection in Mirador.
 
-12. Open the raw JSON of your collection. How does a collection reference its member manifests?
+3.  Open the raw JSON of your collection. How does a collection reference its member manifests?
 
 ::: {.callout-tip collapse="true"}
 ## Hints for Part D
 
 - On Biblissima, you do not need an account — you can build and share a collection directly. Copy the collection URL once you have added your items.
-- In the collection JSON, the top-level type is `sc:Collection` (Presentation API 2) or `Collection` (Presentation API 3). Member manifests appear in the `manifests` array (v2) or `items` array (v3).
+- In the collection JSON, the top-level type is `sc:Collection` (Presentation API 2) or `Collection` (Presentation API 3). Member manifests appear in the `members` array (v2) or `items` array (v3).
 - A IIIF Collection is itself a valid IIIF resource: you can nest collections inside other collections, enabling hierarchical structures for large corpora.
 :::
 
-### E. Creative Reuse: IIIF Collage
+### E. Creative Reuse: IIIF Collage Demo
 
 The [IIIF Collage Demo](https://huggingface.co/spaces/eamonnbell/iiif-collage-demo) assembles images from IIIF manifests into generative visual collages.
 
-13. Open the demo at <https://huggingface.co/spaces/eamonnbell/iiif-collage-demo> and generate a collage from one of the manifests used earlier.
+11.  Generate a collage by clicking on the dice icon 🎲. This will randomly select a manifest and look for fragments.
 
-14. Try a second manifest of your choice. What do you observe about the way images are selected and arranged? What is preserved — and what is lost — when a sequential manuscript becomes an unordered collage?
+12. Once you see the fragments, you can start your collage. Save it as a PNG or view it as a new manifest.
 
 ::: {.callout-tip collapse="true"}
 ## Hints for Part E
 
 - If the Space is slow to respond, it may be waking up from idle — wait a moment and retry.
 - The collage is built from the canvases in the manifest: the more pages, the richer the result.
-- Think about the difference between a *reading* experience and a *visual* one — what changes when sequence is removed?
 :::
 
 ### F. ML-Powered Analysis: Illustration Detector
 
 The [IIIF Illustration Detector](https://huggingface.co/spaces/small-models-for-glam/iiif-illustration-detector) uses a small object-detection model to localise illustrations, miniatures, and decorations within digitised pages.
 
-15. Open the demo at <https://huggingface.co/spaces/small-models-for-glam/iiif-illustration-detector>
+13.   Open the demo, select a sample manifest from the drop-down list and load it.
 
-16. Test the model with these two contrasting manifests:
 
-    | Content type | Manifest URL |
-    |---|---|
-    | Heavily illustrated manuscript | `https://www.e-codices.unifr.ch/metadata/iiif/fmb-cb-0600a/manifest.json` |
-    | Text-heavy printed book | `https://api.digitale-sammlungen.de/iiif/presentation/v2/bsb00004647/manifest` |
-
-17. Compare the detection results: Where does the model perform well? Where does it struggle? Do you notice any false positives (text regions flagged as illustrations)? Try a third manifest with different visual content — a natural history atlas, a book with engravings, or a newspaper.
+14. Classify with a low (<50%) and high confidence threshold (>90%) and export the annotations. Have a look at the JSON-LD file.
 
 ::: {.callout-tip collapse="true"}
 ## Hints for Part F
@@ -228,32 +204,29 @@ The [IIIF Illustration Detector](https://huggingface.co/spaces/small-models-for-
 
 ### G. Reflection
 
-18. What advantages do the IIIF specifications offer when building ML pipelines across multiple cultural heritage institutions?
+15. What advantages do the IIIF specifications offer when building ML pipelines across multiple cultural heritage institutions?
 
-19. What are the main limitations or risks of applying pre-trained ML models to historical documents?
-
-20. How might the outputs of a tool like the Illustration Detector be published as structured open data alongside the source IIIF manifest?
+16. How might the outputs of a tool like the Illustration Detector be published as structured open data alongside the source IIIF manifest?
 
 ::: {.callout-tip collapse="true"}
 ## Hints for Part G
 
-- **Q18**: Think about interoperability — IIIF means a pipeline written once can consume images from the BSB, the BnF, or e-codices without institution-specific code. What does that enable at scale?
-- **Q19**: Consider training data bias (contemporary photographs vs. medieval manuscripts), the difference between *detecting* and *understanding* visual content, and the risk of propagating errors into downstream metadata.
-- **Q20**: Detected regions can be encoded as [W3C Web Annotations](https://www.w3.org/TR/annotation-model/) and attached to IIIF canvases via the `annotations` property. Have a look at the [IIIF Cookbook](https://iiif.io/api/cookbook/) for annotation examples.
+- **Q15**: Think about interoperability — IIIF means a pipeline written once can consume images from the BSB, the BnF, or e-codices without institution-specific code. What does that enable at scale?
+- **Q16**: Detected regions can be encoded as [W3C Web Annotations](https://www.w3.org/TR/annotation-model/) and attached to IIIF canvases via the `annotations` property. Have a look at the [IIIF Cookbook](https://iiif.io/api/cookbook/) for annotation examples.
 :::
 
 ### Bonus: Run Your Own Local IIIF Server
 
 [tiny-iiif](https://github.com/rsimon/tiny-iiif) is a lightweight, Docker-based tool for hosting your own IIIF Image API server and generating IIIF Presentation API 3.0 manifests automatically from uploaded images.
 
-21. **Get the repository** — clone it or download the ZIP:
+17. **Get the repository** — clone it or download the ZIP:
 
     ```bash
     git clone https://github.com/rsimon/tiny-iiif.git
     cd tiny-iiif
     ```
 
-22. **Configure** — copy the example environment file:
+18. **Configure** — copy the example environment file:
 
     ```bash
     cp .env.example .env
@@ -261,24 +234,22 @@ The [IIIF Illustration Detector](https://huggingface.co/spaces/small-models-for-
 
     Default credentials: `tiny / tiny`. IIPImage is used by default; Cantaloupe is available via `COMPOSE_PROFILE=cantaloupe` in `.env`.
 
-23. **Start the server**:
+19. **Start the server**:
 
     ```bash
     docker compose up --build
     ```
 
-24. Open the admin interface at <http://localhost/tiny>, log in, and upload a few images via drag-and-drop — they are automatically converted to pyramidal TIFFs. Create a folder, add your images, and inspect the auto-generated manifest.
+20. Open the admin interface at <http://localhost/tiny>, log in, and upload a few images via drag-and-drop — they are automatically converted to pyramidal TIFFs. Create a folder, add your images, and inspect the auto-generated manifest.
 
-25. **Open the manifest** in Mirador (<https://projectmirador.org/demo/>) or Universal Viewer (<https://www.universalviewer.dev/>). As an extension: can you run the Illustration Detector (Part F) on the manifest your local server just generated?
+21. **Open the manifest** in Mirador (<https://projectmirador.org/demo/>) or Universal Viewer (<https://www.universalviewer.dev/>). As an extension: can you run the Illustration Detector (Part F) on the manifest your local server just generated?
 
 ::: {.callout-tip collapse="true"}
 ## Hints for the Bonus
 
 - You will need [Docker Desktop](https://www.docker.com/products/docker-desktop/) (macOS/Windows) or Docker Engine + Compose (Linux) installed and running before you start.
-- Pyramidal TIFF conversion may take a few seconds per image — wait for the progress indicator before opening the manifest.
 - To stop the server cleanly: `docker compose down`
-- The local manifest URL will follow the pattern `http://localhost/tiny/...` — paste it directly into any IIIF viewer or the Illustration Detector.
-- tiny-iiif generates **Presentation API 3.0** manifests — a good opportunity to compare their structure with the v2.1 Fragmentarium manifest from Part C.
+- The local manifest URL will follow the pattern `http://localhost/manifests/...` — paste it directly into any IIIF clients.
 :::
 
 ## Additional Resources
@@ -287,6 +258,7 @@ The [IIIF Illustration Detector](https://huggingface.co/spaces/small-models-for-
 - IIIF Image API 3.0 URI syntax: <https://iiif.io/api/image/3.0/#2-uri-syntax>
 - IIIF Presentation API 2.1: <https://iiif.io/api/presentation/2.1/>
 - IIIF Presentation API 3.0: <https://iiif.io/api/presentation/3/>
+- Guides to finding IIIF resources: <https://iiif.io/guides/finding_resources/>
 - IIIF Cookbook: <https://iiif.io/api/cookbook/>
 - IIIF Community groups: <https://iiif.io/community/groups/>
 - Hugging Face GLAM ML models: <https://huggingface.co/spaces/small-models-for-glam>

@@ -419,7 +419,11 @@ div.csl-indent {
   </ul></li>
   <li><a href="#iiif-and-linked-art" id="toc-iiif-and-linked-art" class="nav-link" data-scroll-target="#iiif-and-linked-art">IIIF and Linked Art</a>
   <ul>
-  <li><a href="#iiif-international-image-interoperability-framework" id="toc-iiif-international-image-interoperability-framework" class="nav-link" data-scroll-target="#iiif-international-image-interoperability-framework">IIIF — International Image Interoperability Framework</a></li>
+  <li><a href="#iiif-international-image-interoperability-framework" id="toc-iiif-international-image-interoperability-framework" class="nav-link" data-scroll-target="#iiif-international-image-interoperability-framework">IIIF — International Image Interoperability Framework</a>
+  <ul class="collapse">
+  <li><a href="#understanding-tile-pyramids-how-deep-zoom-works" id="toc-understanding-tile-pyramids-how-deep-zoom-works" class="nav-link" data-scroll-target="#understanding-tile-pyramids-how-deep-zoom-works">Understanding Tile Pyramids: How Deep Zoom Works</a></li>
+  <li><a href="#presentation-api-structuring-complex-objects" id="toc-presentation-api-structuring-complex-objects" class="nav-link" data-scroll-target="#presentation-api-structuring-complex-objects">Presentation API: Structuring Complex Objects</a></li>
+  </ul></li>
   <li><a href="#linked-art" id="toc-linked-art" class="nav-link" data-scroll-target="#linked-art">Linked Art</a></li>
   </ul></li>
   <li><a href="#from-tables-to-triples" id="toc-from-tables-to-triples" class="nav-link" data-scroll-target="#from-tables-to-triples">From Tables to Triples</a></li>
@@ -483,7 +487,7 @@ div.csl-indent {
     <div>
     <div class="quarto-title-meta-heading">Modified</div>
     <div class="quarto-title-meta-contents">
-      <p class="date-modified">March 4, 2026</p>
+      <p class="date-modified">March 11, 2026</p>
     </div>
   </div>
     
@@ -587,16 +591,42 @@ div.csl-indent {
 <li><strong>Image API</strong>: delivers pixels on demand — any region, size, rotation, and format; enables deep zoom without downloading the full file</li>
 <li><strong>Presentation API</strong>: assembles media resources (images, audio, video) and metadata into a <em>manifest</em> — a JSON-LD document describing how a digital object is structured and displayed</li>
 </ul>
+<section id="understanding-tile-pyramids-how-deep-zoom-works" class="level5">
+<h5 class="anchored" data-anchor-id="understanding-tile-pyramids-how-deep-zoom-works">Understanding Tile Pyramids: How Deep Zoom Works</h5>
+<p>The Image API’s power comes from its use of <strong>tile pyramids</strong>, a multi-resolution strategy that makes seamless deep zoom possible. Rather than serving a single massive image file, the server pre-generates the image at multiple zoom levels, each subdivided into tiles. When you zoom or pan in a viewer, it requests only the specific tiles needed for your current viewport.</p>
+<p>Explore how tile pyramids work interactively:</p>
+<iframe width="100%" height="600px" frameborder="0" src="https://observablehq.com/embed/@allmaps/tile-pyramid?cells=viewof+tileSourceUrl%2Cviewof+highlight%2Cviz">
+</iframe>
+<p><a href="https://observablehq.com/@allmaps/tile-pyramid" class="uri">https://observablehq.com/@allmaps/tile-pyramid</a></p>
+</section>
+<section id="presentation-api-structuring-complex-objects" class="level5">
+<h5 class="anchored" data-anchor-id="presentation-api-structuring-complex-objects">Presentation API: Structuring Complex Objects</h5>
+<p>The Presentation API provides more than just single images. It uses JSON-LD to describe how media resources are organised and how they relate to each other.</p>
+<p><strong>Presentation API 3.0 Key types:</strong></p>
+<ul>
+<li><strong>Collection</strong>: An ordered list of Manifests and/or further Collections. Allows grouping in a hierarchical structure for navigation, search results, or related resource sets.</li>
+<li><strong>Manifest</strong>: A description of a compound object’s structure and properties (title, descriptive metadata, licence, etc.). Usually represents a single object like a book, painting, or music album.</li>
+<li><strong>Canvas</strong>: A virtual display surface representing a view of the object. Content is associated with Canvases via Annotations. Provides spatial and temporal framing (borrowed from PDF, HTML, Photoshop).</li>
+<li><strong>Range</strong>: An ordered list of Canvases and/or further Ranges. Groups Canvases by content (chapters, scenes) or physical features (page gatherings, physical carriers). Called <em>Sequence</em> in IIIF Presentation API 2.1.</li>
+<li><strong>Content</strong>: Web resources (images, audio, video, text) associated with Canvases via Annotations or providing resource representations.</li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://julsraemy.ch/prezi/assets/presentationapi-resources.png" class="img-fluid figure-img"></p>
+<figcaption>IIIF Presentation API Resource Model</figcaption>
+</figure>
+</div>
+<p>To give a simple example, a digitised book’s manifest contains multiple canvases (one per page), each of which links to an Image API service. Annotations may include page transcriptions or corrections. Ranges organise canvases into chapters. This human-readable JSON structure is accessible to developers while remaining semantically rich enough to capture complex cultural heritage objects.</p>
 <div class="tabset-margin-container"></div><div class="panel-tabset">
 <ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" role="tab" aria-controls="tabset-1-1" aria-selected="true" href="">Image API</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" role="tab" aria-controls="tabset-1-2" aria-selected="false" href="">Presentation API</a></li></ul>
 <div class="tab-content">
 <div id="tabset-1-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-1-1-tab">
-<p>A Swiss postal archive photograph served via IIIF Image API — zoom, pan, and rotate directly in the browser:</p>
+<p>A photograph from the Swiss postal archive is served through the IIIF Image API (<code>https://iiif.ptt-archiv.ch/iiif/3/P-38-2-1851-08.jp2/info.json</code>) in Leaflet-IIIF, a lightweight image viewer. You can zoom, pan and rotate the image directly in the browser.</p>
 <iframe src="https://mejackreed.github.io/Leaflet-IIIF/examples/?url=https://iiif.ptt-archiv.ch/iiif/3/P-38-2-1851-08.jp2/info.json" width="100%" height="480px" style="border: 1px solid #dee2e6; border-radius: 4px;" allowfullscreen="">
 </iframe>
 </div>
 <div id="tabset-1-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-2-tab">
-<p><em>Irises</em> by Vincent van Gogh (Getty Museum) — a IIIF manifest in Mirador:</p>
+<p>The painting <em>Irises</em> by Vincent van Gogh (held at the Getty Museum in Los Angeles) is displayed in Mirador, a robust IIIF-compliant client, by means of a IIIF manifest (<code>https://media.getty.edu/iiif/manifest/53be857e-41e8-4198-b45d-2e0f52d3051b</code>).</p>
 <iframe src="https://projectmirador.org/embed/?iiif-content=https://media.getty.edu/iiif/manifest/53be857e-41e8-4198-b45d-2e0f52d3051b" width="100%" height="480px" style="border: 1px solid #dee2e6; border-radius: 4px;" allowfullscreen="">
 </iframe>
 </div>
@@ -618,6 +648,7 @@ div.csl-indent {
 </div>
 </div>
 </div>
+</section>
 </section>
 <section id="linked-art" class="level4">
 <h4 class="anchored" data-anchor-id="linked-art">Linked Art</h4>
@@ -1013,7 +1044,7 @@ Warning
 <ul>
 <li>Ethics over Ideology: Openness is not absolute; CARE principles and commercial restrictions demonstrate that governance and context must dictate access levels, not just technical capability.</li>
 <li>Technical Enforcement:** Cultural heritage institutions must move beyond passive terms of use to actively enforce access policies technically—using authentication tiers, API rate limiting, <code>robots.txt</code>, and secure data spaces to distinguish between scholarly research and commercial AI scraping.</li>
-<li>Impact &gt; Volume: High maturity (ODM) is no longer about publishing more files, but about ensuring data is interoperable (APIs), legally clear (machine-readable licenses), and measurably reused.For example, <a href="https://www.data.gouv.fr/">data.gouv.fr</a> has introduced Model Context Protocol (MCP) access, a critical standard allowing LLMs to securely connect to live, contextual public data rather than relying on static datasets.</li>
+<li>Impact &gt; Volume: High maturity (ODM) is no longer about publishing more files, but about ensuring data is interoperable (APIs), legally clear (machine-readable licenses), and measurably reused. For example, <a href="https://www.data.gouv.fr/">data.gouv.fr</a> has introduced Model Context Protocol (MCP) access, a critical standard allowing LLMs to securely connect to live, contextual public data rather than relying on static datasets.</li>
 <li>Cleaning is Research: Data wrangling with tools like OpenRefine is a critical scholarly activity that transforms static collections into dynamic, queryable datasets.</li>
 </ul>
 
