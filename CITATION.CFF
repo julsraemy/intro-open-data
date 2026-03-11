@@ -4,7 +4,7 @@
 cff-version: 1.2.0
 title: Introduction to Open Data
 message: 'If you use this course, please cite it using the metadata'
-type: course
+type: software
 authors:
   - given-names: Julien Antoine
     family-names: Raemy
@@ -12,14 +12,13 @@ authors:
     affiliation: docuteam SA
 repository-code: 'https://github.com/julsraemy/intro-open-data'
 url: 'https://julsraemy.ch/intro-open-data/'
-doi: 10.5281/zenodo.14884761
 abstract: >-
   This course provides a comprehensive introduction to Open
   Data, covering key aspects such as: Characteristics of
   Open Data, Associated Movements and Principles, Platforms
-  and Organisations, Assessment, Data Quality, and Best Practices, Techniques,
-  Software, and Tools, Showcases.
-  The course is designed for undergraduate students in
+  and Organisations, Assessment, Data Quality, and Best
+  Practices, Techniques, Software, and Tools, Showcases. The
+  course is designed for undergraduate students in
   Information Science at the HES-SO University of Applied
   Sciences and Arts of Western Switzerland, Haute école de
   gestion de Genève (HEG-GE).
@@ -38,5 +37,7 @@ keywords:
   - Linked Data
   - Linked Open Usable Data
   - Collections as Data
-date-released: 2026-03-03
 license: CC-BY-4.0
+version: 2.0.0
+date-released: '2026-03-11'
+doi: 10.5281/zenodo.14884761
