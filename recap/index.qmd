@@ -81,10 +81,10 @@ The Image API's power comes from its use of **tile pyramids**, a multi-resolutio
 
 Explore how tile pyramids work interactively:
 
-<iframe width="100%" height="600px" frameborder="0"
-src="https://observablehq.com/embed/@allmaps/tile-pyramid?cells=viewof+tileSourceUrl%2Cviewof+highlight%2Cviz"></iframe>
 
-<https://observablehq.com/@allmaps/tile-pyramid>
+<iframe src="https://pages.allmaps.org/iiif-pyramid/embed/?url=https%3A%2F%2Fiiif.micr.io%2FhsdOg&amp;layout=split&amp;header=0&amp;controls=1&amp;minimaps=1&amp;table=0&amp;grid=1&amp;figure=0&amp;sync=1&amp;scrollZoom=0&amp;tilt=right&amp;pyramidLayout=stacked#v=1&amp;image=0%2C0%2C2.293775534&amp;pyramid=0%2C0%2C2.089698476&amp;level=8&amp;layout=split&amp;split=50&amp;tilt=right&amp;arrangement=stacked&amp;grid=1&amp;figure=0&amp;sync=1" title="Allmaps IIIF Pyramid" width="100%" height="600" style="border:0" loading="lazy" allowfullscreen></iframe>
+
+<https://pages.allmaps.org/iiif-pyramid/>
 
 ##### Presentation API: Structuring Complex Objects
 
