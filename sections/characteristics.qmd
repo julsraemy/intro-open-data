@@ -213,7 +213,7 @@ A DMP is essentially a blueprint for RDM. It outlines the policies and standards
 
 ![](https://julsraemy.ch/prezi/assets/ogd-masterplan.png)
 
-<https://www.bfs.admin.ch/bfs/fr/home/services/ogd/masterplan.html>
+<https://statistik.admin.ch/en/asset/28425595>
 
 #### LMETA. Art. 10, al. 4
 
@@ -636,7 +636,7 @@ Binary files are used to store non-text data, such as images, audio, or executab
 Specifications based on DCAT for describing public sector datasets
 
 - DCAT Application Profile for data portals in Europe: [DCAT-AP 3.0](https://semiceu.github.io/DCAT-AP/releases/3.0.0/)
-- DCAT Application Profile for the United States of America: [DCAT-US - Version 3](https://doi-do.github.io/dcat-us/)
+- DCAT Application Profile for the United States of America: [DCAT-US - Version 3](https://resources.data.gov/standards/catalog/dcat-us/)
 - DCAT Application Profile for Data Portals in Switzerland (DCAT-AP CH): [eCH-0200](https://ech.ch/fr/ech/ech-0200/)
 
 _DCAT-AP CH is a subprofile of DCAT-AP_

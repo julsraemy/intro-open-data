@@ -33,7 +33,7 @@ listing:
       image: https://app.dasch.swiss/assets/images/dasch-mosaic-icon-color.svg
       categories: [iiif, linked data, ord]
     - title: "OLOS"
-      path: https://olos.swiss/portal/
+      path: https://olos.swiss/portal/home
       description: >
         **Cross-institutional:** OLOS is a consultation and archive portal developed under the Data Life-Cycle Management (DLCM) project. It serves multiple institutions and utilizes the Datacite Metadata Schema with DOI assignment at the dataset level.
       image: https://www.swissuniversities.ch/fileadmin/swissuniversities/Dokumente/Hochschulpolitik/P-5_Services_Kommunikationsprojekt/OLOS/Logo_OLOS.png
@@ -54,7 +54,7 @@ listing:
       path: https://opendata.swiss/
       description: >
         **National/Registry:** opendata.swiss is the central portal for open government data in Switzerland, managed by the Federal Statistical Office (FSO). Originally launched in 2013 by the Swiss Federal Archives as opendata.admin.ch and rebranded in 2016, it aggregates metadata via a JSON API and an XML file compliant with the DCAT-AP CH standard.
-      image: https://www.bfs.admin.ch/dam/bfs/de/logos/campaign/opendata_OFS_portail.png
+      image: https://thumb.wikimedia.org/wikipedia/commons/thumb/9/95/Coat_of_arms_of_Switzerland.svg/1280px-Coat_of_arms_of_Switzerland.svg.png
       categories: [ogd]
     - title: "LINDAS"
       path: https://lindas.admin.ch/
@@ -102,7 +102,7 @@ listing:
       path: https://data.europa.eu/
       description: >
         **EU:** European Data is the official portal for European open data, launched in 2021 after a beta phase starting in 2015. It features datasets with DCAT-AP metadata, multiple APIs (including an SPARQL endpoint), and has its source code available on GitLab.
-      image: https://data.europa.eu/themes/edp3/dist/ecl/preset-eu/dist/images/logo/standard-version/positive/logo-eu--en.svg
+      image: https://data.europa.eu/themes/contrib/oe_theme/dist/eu/images/logo/standard-version/positive/logo-eu--en.svg
       categories: [ogd, linked data]
     - title: "DATA.GOV"
       path: https://data.gov/

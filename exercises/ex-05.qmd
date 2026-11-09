@@ -31,15 +31,12 @@ Browse, search and do what is described below. You can do this exercise alone or
 
     b) Try changing the `station` parameter to another station and observe the results.
 
-4. How many mailboxes are there in your commune or city? Explore the application at <https://wieviele-briefkaesten-gibt-es.streamlit.app/>. Where do these data originally come from?
-
 ::: {.callout-tip collapse="true"}
 ## Hints for Part A
 
 - **Q1**: Use the "Organisation" or "Canton" filter on the opendata.swiss search page to see the counts.
 - **Q2**: The key columns are: `Stop name` (train station), `Journey identifier` (train number), `Departure time` / `Arrival time` (scheduled times), `Departure forecast` / `Arrival forecast` (actual times), `Departure delay` / `Arrival delay`, and `Cancelled TF` (cancellation flag).
 - **Q3**: The transport.opendata.ch API returns JSON. You can paste the URL directly in your browser to see the result. Try the `/v1/connections` endpoint as well (e.g. `?from=Lausanne&to=Genève`). The API documentation at <https://transport.opendata.ch/docs.html> describes all available parameters.
-- **Q4**: The application estimates the number of delivery addresses / mailboxes (_Zustelladressen / Briefkästen_) for a user-defined area. To investigate where the data come from, you can look at the source code on GitHub (<https://github.com/davidoesch/wo-sind-briefkaesten>) or use your browser's developer tools (Network tab) while the app loads to see which data sources are being fetched. The underlying data come from the Federal Building and Housing Register (GWR) of the Federal Statistical Office (BFS) and business locations from the Overture Maps Foundation.
 :::
 
 ### B - OGD as Linked Data (LINDAS)
@@ -60,7 +57,7 @@ SPARQL (SPARQL Protocol and RDF Query Language) is the standard query language f
 
 You can write and run SPARQL queries directly at the [LINDAS SPARQL Endpoint](https://lindas.admin.ch/sparql/).
 
-3. Try the following query to explore the **Archive database of the Swiss Federal Archives**: the **Archive database of the Swiss Federal Archives** (`https://culture.ld.admin.ch/.well-known/dataset/ais`). This dataset uses the **Records in Context (RiC)** ontology. Try the following query to find archival records related to "Bern":
+3. Try the following query to explore the **Archive database of the Swiss Federal Archives**: the **Archive database of the Swiss Federal Archives** (`https://culture.ld.admin.ch/.well-known/dataset/ais`). This dataset uses the **Records in Contexts (RiC)** ontology. Try the following query to find archival records related to "Bern":
 
     ```sparql
     PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
@@ -97,5 +94,5 @@ You can write and run SPARQL queries directly at the [LINDAS SPARQL Endpoint](ht
 
 - **Q1**: On visualize.admin.ch, search for "Verkehrsleistung" or "Flugplätzen" to find the dataset. Once selected, choose a map visualisation and filter by the year 2023. Compare the circle sizes or values for Geneva and Basel.
 - **Q2**: Select the line chart view and filter for Zurich Airport only.
-- **Q3**: [Records in Context (RiC)](https://www.ica.org/standards/RiC/ontology) is an ontology developed by the International Council on Archives (ICA) for describing archival records as Linked Data. In the query, `rico:Record` represents an archival record, `rico:title` its title, and `rico:isAssociatedWithDate` links to date information. Try replacing `"bern"` in the `FILTER` with another term, or remove the filter entirely and add `FILTER(?beginDate > "1900-01-01"^^xsd:date)` to explore records from the 20th century onwards.
+- **Q3**: [Records in Contexts (RiC)](https://www.ica.org/standards/RiC/ontology) is an ontology developed by the International Council on Archives (ICA) for describing archival records as Linked Data. In the query, `rico:Record` represents an archival record, `rico:title` its title, and `rico:isAssociatedWithDate` links to date information. Try replacing `"bern"` in the `FILTER` with another term, or remove the filter entirely and add `FILTER(?beginDate > "1900-01-01"^^xsd:date)` to explore records from the 20th century onwards.
 :::

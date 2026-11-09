@@ -32,12 +32,6 @@ listing:
       image: https://upload.wikimedia.org/wikipedia/commons/7/7d/Wappen_Basel-Stadt_matt.svg
       description: >
         The sports facility finder shows sports and exercise facilities operated by the canton of Basel-Stadt as well as all cantonal sports facilities outside the cantonal and national borders. The dataset also lists cantonal premises that are used and rented for sports activities.
-    - title: "Open Data Navigator"
-      categories: [ord, ogd, linked data]
-      path: https://opendatanavigator.switch.ch/
-      image: https://static.www.switch.ch/sites/default/files/styles/hero_large_16_9/public/2023-10/new-switch-logo.png?itok=6ZMfJGLj
-      description: >
-        The SWITCH Open Data Navigator is a discovery platform that aggregates and transforms metadata from various open data providers to make it better discoverable for researchers and students. It focuses on open data that are not generated in research processes but are relevant for research activities, especially those involving multiple disciplinary fields. 
     - title: "Federal Popular Votes"
       categories: [ogd, politics]
       path: https://abstimmungen.admin.ch/
@@ -50,12 +44,6 @@ listing:
       image: data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%2210 0 100 100%22><text y=%22.90em%22 font-size=%2290%22>🔥</text></svg>
       description: >
         Launched in 2023 by Mario Zechner, this platform offers a comprehensive comparison of food prices across various supermarkets in Austria, tracking and analysing price trends over time.
-    - title: "Animal Crossing Art Generator"
-      categories: [cultural heritage, gaming, iiif]
-      path: https://experiments.getty.edu/ac-art-generator/
-      image: https://experiments.getty.edu/ac-art-generator/images/5b7c44a1c1a3be9cbaff64f179db814c.jpg
-      description: >
-        An innovative tool that allows players to integrate virtual art into the Animal Crossing: New Horizons game. It enables users to turn any image from the Getty Museum's open-access collection (as well as any IIIF-compliant images) into in-game artwork. 
     - title: "12 Sunsets: Exploring Ed Ruscha's Archive"
       categories: [cultural heritage, georeferencing, iiif, linked data]
       path: https://12sunsets.getty.edu/

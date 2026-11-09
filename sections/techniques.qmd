@@ -1,6 +1,6 @@
 ---
 title: "Techniques, Software, and Tools"
-authors: 
+authors:
   - name: Julien A. Raemy
     orcid: 0000-0002-4711-5759
     email: julien.raemy@hesge.ch
@@ -12,83 +12,79 @@ date-modified: last-modified
 license: "CC BY"
 ---
 
-## Techniques
+## The Data Pipeline
 
-### Data Scraping
+Working with open data rarely means downloading a file and being done. School of Data, the data literacy network started by the Open Knowledge Foundation, describes this work from beginning to end as the **Data Pipeline**, a sequence of seven steps [@schoolofdataMethodologyDataPipeline]. School of Data presents it as a work in progress rather than a fixed method, and in practice you will often go back and forth between steps. This page goes through each step with typical techniques and tools, before you practise verifying and cleaning data in [Exercise 7](../exercises/ex-07.qmd).
 
-Data scraping is the automated process of extracting information from websites or other online sources. This technique can be useful for collecting data from multiple sites and automating repetitive tasks. However, challenges include adapting to changes in website layouts, legal and ethical issues, and handling dynamic content (e.g. data loaded via JavaScript). For example, Python libraries such as [Beautiful Soup](https://pypi.org/project/beautifulsoup4/) or frameworks like [Scrapy](https://scrapy.org/) are frequently used for these purposes.
+```{mermaid}
+flowchart LR
+  A[Define] --> B[Find] --> C[Get] --> D[Verify] --> E[Clean] --> F[Analyse] --> G[Present]
+  style D stroke-width:3px
+  style E stroke-width:3px
+```
 
-### API Integration
+::: {.callout-note collapse="true"}
+## Other names for the same steps: ETL, ELT and lifecycle models
+The Data Pipeline is one way of describing the work. Depending on the field, you will meet other names and groupings for the same activities:
 
-API integration involves connecting to external services in order to retrieve structured data, often in real time. This method provides standardised data access and can streamline automated processes. Nevertheless, it requires managing API rate limits, adapting to changes in the API, and integrating data from various systems. For example, [swissparlpy](https://metaodi.ch/swissparlpy/) is a Python module that provides convenient access to the [Swiss Parliament OData service](https://ws.parlament.ch/odata.svc/).
+- **ETL (Extract, Transform, Load)**: the classic term in data engineering. Data is *extracted* from its sources (*Get*), *transformed* into a consistent format (*Verify* and *Clean*), then *loaded* into a target system such as a database, data warehouse or portal.
+- **ELT (Extract, Load, Transform)**: the same steps in a different order. Raw data is loaded into the target system first and transformed there, when needed. This approach has become common with cloud data warehouses and data lakes: the raw data is kept, and the transformations can be changed or rerun later without fetching the data again.
+- **Data lifecycle models**: research data management and digital curation describe a longer cycle that also includes planning, documentation, preservation and reuse, for example the research data lifecycle used by many universities.
 
-### Data Mining
+Whatever the names, the questions stay the same: where does the data come from, what is changed and why, and where does it end up?
+:::
 
-Data mining refers to the analysis of large datasets to identify patterns, correlations, and trends. This process can support data-driven decision-making, though it requires significant computational resources and expertise, and may also raise privacy concerns. Software such as [RapidMiner](https://altair.com/altair-rapidminer) and [WEKA](https://www.cs.waikato.ac.nz/~ml/weka/) is commonly used in this field.
+### 1. Define
 
-### Data Wrangling/Munging
+Every data project starts with a question. Going from a broad theme (for example, air pollution) to a specific question (has bike sharing reduced air pollution in my city?) tells you what data you will need, and whether it is likely to be easy or hard to get.
 
-Data wrangling (or data munging) is the process of cleaning, transforming, and organising raw data into a structured format that is suitable for analysis. Although this process can be time-consuming and technically challenging, it is essential for improving data quality. Python’s [pandas](https://pandas.pydata.org/) library is a widely used tool in this area.
+### 2. Find
 
-### Data Integration
+Datasets are found through portals, catalogues and registries such as opendata.swiss or re3data (see [Open Data Platforms and Organisations](platforms.qmd)), but also through search engines, by asking people, or through freedom of information requests. Good metadata matters most at this step: a dataset nobody can find will not be reused.
 
-Data integration involves combining data from different sources to create a unified dataset. This technique helps provide a comprehensive view for analysis but may involve challenges such as reconciling differing formats and schemas, and ensuring consistent data quality.
+### 3. Get
 
-### Stream Processing
+There are three main ways to obtain data:
 
-Stream processing refers to analysing data in real time as it is generated. This technique is especially useful for handling time-sensitive data and high volumes of information. Tools such as [Apache Kafka](https://kafka.apache.org/) and [Apache Flink](https://flink.apache.org/) are commonly used to manage data flows and enable real-time analytics.
+- **Download** a file (CSV, JSON, XML…). This is the simplest, but large files quickly become cumbersome.
+- **Call an API** to retrieve exactly the records you need, often in real time. For example, [swissparlpy](https://metaodi.ch/swissparlpy/) is a Python module that gives access to the [Swiss Parliament OData service](https://ws.parlament.ch/odata.svc/). APIs come with rate limits and can change over time.
+- **Scrape** a website when no download or API exists, using libraries such as [Beautiful Soup](https://pypi.org/project/beautifulsoup4/) or frameworks like [Scrapy](https://scrapy.org/). Scraping breaks whenever the website changes and raises legal and ethical questions: check the terms of use and `robots.txt` first.
 
-### Data Quality Management
+### 4. Verify · _Exercise 7, Part B_
 
-Data quality management is the process of ensuring that data is accurate, complete, and consistent. High-quality data is critical for reliable analysis, although maintaining such quality requires ongoing monitoring and may be resource-intensive.
+Having the data does not mean it is the data you need. Check its metadata, how it was collected, who produced it and whether the source is credible, and look for values that cannot be right. As School of Data puts it, "all data is bad, we just need to find out how bad it is" [@schoolofdataMethodologyDataPipeline]. The [Assessment, Data Quality, and Best Practices](assessment.qmd) section presents frameworks for this step.
 
-### Extract, Transform, Load (ETL)
+### 5. Clean · _Exercise 7, Parts A to C_
 
-ETL stands for Extract, Transform, Load and describes the process of extracting data from various sources, transforming it into a standard format, and loading it into a target system for analysis. This approach supports data consolidation but also poses challenges in maintaining transformation accuracy and managing diverse data sources.
+Data wrangling (or munging) turns raw data into a consistent, machine-readable format. Typical problems include the same value spelled in different ways, several values in one cell, mixed date formats and duplicated rows. Cleaning is part of **data quality management**: making sure data is accurate, complete and consistent.
 
-## Software/Tools
+When data from several sources is combined, the same thing is often named differently. **Reconciliation** matches local values (such as a person's name) to an authority file and stores its persistent identifier, so your data becomes linked to other datasets.
 
-Below is a summary table that presents some key software tools, outlining their main functions and providing examples of typical deployments or customers.
+- [OpenRefine](https://openrefine.org/) is an open source tool for cleaning, transforming and reconciling messy data through a graphical interface. It runs locally in your browser, keeps a full history of every change, and supports CSV, TSV, JSON, XML and more. It was first released in 2010 as Freebase Gridworks, then renamed Google Refine.
+- [pandas](https://pandas.pydata.org/) is a Python library that does the same in code. It takes more effort to learn, but scripts can be rerun and shared, which makes the cleaning reproducible.
 
-| **Tool**      | **Purpose & Function**                                                     | **Example Deployments/Customers**                                                      |
-|---------------|----------------------------------------------------------------------------|------------------------------------------------------------------------------------------|
-| **CKAN**      | Data management system for building and maintaining data hubs and portals. | Used in government open data portals such as data.gov.uk, data.gov, and various international bodies. |
-| **Piveau**    | Platform for metadata management, data harmonisation, and linked data.       | Deployed in several European open data initiatives.                                      |
-| **EntryScape**| Enables semantic integration and linked data for complex datasets.           | Mainly adopted by Swedish public organisations.  |
-| **uData**     | Facilitates the publication and management of open datasets.                 | Employed by municipalities and local governments for open data portals.                  |
-| **OpenRefine**| Tool for cleaning, transforming, and reconciling messy data.                 | Widely used in academic research, journalism, and by data professionals.                  |
-| **LOMAS**     | Allows secure processing of sensitive data with Differential Privacy.        | Piloted within the Swiss public sector to enable secondary data usage while preserving privacy.  |
+### 6. Analyse
 
+This is where you look for answers to the question you defined at the start, with spreadsheets, programming languages, visualisations or statistical software. Data mining looks for patterns, correlations and trends in large datasets; it requires computational resources and expertise, and it may raise privacy concerns. Tools such as [RapidMiner](https://altair.com/altair-rapidminer) and [WEKA](https://ml.cms.waikato.ac.nz/weka/) offer graphical interfaces for common methods such as clustering and classification.
 
-### CKAN
+### 7. Present
 
-[CKAN](https://ckan.org/) is an open source data management system developed by the Open Knowledge Foundation. It is designed to support the creation and maintenance of data hubs and portals, offering a standardised platform for publishing and accessing datasets. CKAN employs a PostgreSQL database, a Solr index, and a comprehensive API to facilitate data discovery and integration (see its [GitHub repository](https://github.com/ckan/ckan) for more technical information). It has been deployed widely in national and local government open data portals (for example, [data.gov.uk](https://data.gov.uk/) and [data.gov](https://www.data.gov/)), as well as by various international organisations
+Finally, results have to be communicated. Presenting data means thinking about your audience, the question you set out to answer and the medium that best conveys your message, whether a chart, a map, an article or an interactive application. Working with designers and storytellers can help.
 
-### Piveau
+## Publishing Open Data: Portal Software
 
-[Piveau](https://www.piveau.de/) is an open source platform for open data management, with a focus on metadata management, data harmonisation, and linked data [@kirsteinPiveauLargeScaleOpen2020]. It supports a wide range of formats and protocols (OAI-PMH, RDF, CKAN, SPARQL, Socrata, etc.) and exports to DCAT(-AP). Metadata is stored as RDF in a triplestore, quality assessments are generated via SHACL validations, and search is powered by Elasticsearch. The platform runs in Docker/Kubernetes, with backends in Java/Kotlin (Vert.x) and frontends in Vue.js. Its code is available on [GitLab](https://gitlab.com/piveau/). Below is an overview of its architecture.
+The Data Pipeline describes the work of someone *reusing* data. On the other side, publishers rely on dedicated software to run open data portals, manage datasets and their metadata, and provide access via APIs.
 
-![](https://doc.piveau.io/img/overview.png)
+| **Software** | **What it does** | **Used by** |
+|---|---|---|
+| [CKAN](https://ckan.org/) | Open source data management system by the Open Knowledge Foundation, with a full API for publishing and discovering datasets ([GitHub](https://github.com/ckan/ckan)). | Government portals such as [data.gov.uk](https://data.gov.uk/) and [data.gov](https://www.data.gov/) |
+| [Piveau](https://www.piveau.de/) | Metadata management and harmonisation based on Linked Data: stores metadata as RDF, exports DCAT(-AP) and checks quality with SHACL [@kirsteinPiveauLargeScaleOpen2020]. | Several European open data initiatives |
+| [EntryScape](https://entryscape.com/) | Information management with semantic integration and Linked Data [@ebnerInformationModelManaging2014]. | Swedish public bodies such as Skatteverket and Riksarkivet |
+| [uData](https://udata.readthedocs.io/) | Open data platform with a user-friendly interface for publishers and users ([GitHub](https://github.com/opendatateam/udata)). | [data.gouv.fr](https://www.data.gouv.fr/) and local governments |
 
-<https://doc.piveau.io/general/basic-architecture/>
-
-### EntryScape
-
-EntryScape is an information management platform developed by Metasolutions to handle complex datasets through semantic integration and linked data principles [@ebnerInformationModelManaging2014]. It facilitates the organisation and enrichment of heterogeneous data sources, making it easier to create interoperable and semantically rich datasets.
-
-Its customers include a broad range of public organisations such as municipalities, regional authorities, and national agencies. For example, in Sweden, EntryScape is used by national agencies like Skatteverket or Riksarkivet. Further information is available on the [EntryScape website](https://entryscape.com/) and via its repository on [Bitbucket](https://bitbucket.org/metasolutions/).
-
-### uData
-
-[uData](https://udata.readthedocs.io/) is an open data management platform developed by the Open Data Team. It aims to simplify the publication and management of data, offering a user-friendly interface that makes it accessible for both data providers and users. uData is often employed by municipalities and local governments to publish open data portals, and its modular architecture allows for easy integration with existing IT infrastructures. The source code is available on its [GitHub repository](https://github.com/opendatateam/udata).
-
-### OpenRefine
-
-[OpenRefine](https://openrefine.org/) is an open source tool for data cleaning and transformation. Initially released in 2010 (originally as Freebase Gridworks, later renamed Google Refine), it operates as a local web application designed to help users clean messy data, standardise formats, and reconcile datasets. It supports various data formats (including CSV, TSV, JSON, and XML) and allows for advanced data manipulation using scripting languages such as GREL and Jython. For more details, see the [GitHub repository](https://github.com/OpenRefine/OpenRefine).
-
-### LOMAS
-
-[LOMAS](https://dscc-admin-ch.github.io/lomas-docs) is an open source platform developed by the Data Science Competence Center (DSCC) of the Swiss Federal Statistical Office. It enables authorised researchers and analysts to run algorithms on sensitive datasets without direct data access: users submit their code, the platform executes it in a secure environment, and returns results protected by Differential Privacy (introducing controlled noise to prevent re-identification) [see @aymonLomasPlatformConfidential2024].
-
+::: {.callout-note}
+## Publishing sensitive data: LOMAS
+Not all data can be published openly. [LOMAS](https://dscc-admin-ch.github.io/lomas/), developed by the Data Science Competence Center of the Swiss Federal Statistical Office, lets authorised researchers run their code on sensitive datasets without ever seeing the data itself. Results are protected by Differential Privacy, which adds controlled noise to prevent re-identification [@aymonLomasPlatformConfidential2024].
+:::
 
 ## References

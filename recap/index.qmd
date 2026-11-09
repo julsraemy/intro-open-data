@@ -10,11 +10,21 @@ authors:
 date: "2026-02-20"
 date-modified: last-modified
 license: "CC BY"
+recap:
+  week1: false
+  week2: false
+  week3: false
 ---
 
 Each week's recap is a concise summary of the key concepts, exercises, and takeaways covered in class. Expandable _More context_ sections provide additional detail on each topic. Use this page to review before the next session or before the final examination.
 
 ---
+
+::: {.callout-note}
+The recaps will be published here after each session.
+:::
+
+::::: {.content-visible when-meta="recap.week1"}
 
 ## Week 1
 
@@ -134,9 +144,11 @@ The Image API exposes a simple URL pattern: `{base}/{identifier}/{region}/{size}
 
 Linked Art is a community and shared data model for cultural heritage description, built on JSON-LD and CIDOC-CRM. It is a concrete implementation of LOUD — semantically rich enough for research, simple enough for developers. The **LUX** platform at Yale University is the largest production deployment, combining collections from Yale's museums, libraries, and archives into a single queryable knowledge graph:
 
+```{=html}
 <video controls style="width: 100%; aspect-ratio: 16/9; border-radius: 4px; display: block;">
   <source src="https://julsraemy.ch/prezi/assets/lux-demo.mp4" type="video/mp4">
 </video>
+```
 
 ::: {.callout-note collapse="true" title="More context"}
 Linked Art constrains the full complexity of CIDOC-CRM into a profile served as JSON-LD over standard HTTP APIs — any developer who can consume JSON can work with it. LUX exposes millions of records (objects, people, places, concepts, events) as Linked Art entities, all interlinked and queryable. This is the Web of Data made operational at institutional scale.
@@ -292,6 +304,10 @@ For datasets specifically, DOI is the dominant scheme, but Handle (on which DOI 
 
 > Open data is not just about making files available — it is about creating an interconnected web of usable, ethically governed knowledge.
 
+:::::
+
+::::: {.content-visible when-meta="recap.week2"}
+
 ---
 
 ## Week 2
@@ -334,6 +350,12 @@ re3data entries depend on repository owners keeping their information up to date
 - For researchers in Switzerland, choosing a repository depends on funder mandates, institutional offerings, and disciplinary norms — data does not have to be immediately open, but it should be findable and accessible under clear conditions
 - Registries and portals are only useful if their metadata is actively maintained — community curation is not optional, it is part of the infrastructure
 
+:::::
+
+::::: {.content-visible when-meta="recap.week3"}
+
+---
+
 ## Week 3
 
 ### Discussion: Ethics & Access
@@ -350,3 +372,5 @@ OpenRefine was presented as the standard tool for data wrangling, enabling users
 - Technical Enforcement:** Cultural heritage institutions must move beyond passive terms of use to actively enforce access policies technically—using authentication tiers, API rate limiting, `robots.txt`, and secure data spaces to distinguish between scholarly research and commercial AI scraping.
 - Impact > Volume: High maturity (ODM) is no longer about publishing more files, but about ensuring data is interoperable (APIs), legally clear (machine-readable licenses), and measurably reused. For example, [data.gouv.fr](https://www.data.gouv.fr/) has introduced Model Context Protocol (MCP) access, a critical standard allowing LLMs to securely connect to live, contextual public data rather than relying on static datasets.
 - Cleaning is Research: Data wrangling with tools like OpenRefine is a critical scholarly activity that transforms static collections into dynamic, queryable datasets.
+
+:::::

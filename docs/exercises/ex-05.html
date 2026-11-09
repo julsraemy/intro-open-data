@@ -467,7 +467,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <div>
     <div class="quarto-title-meta-heading">Modified</div>
     <div class="quarto-title-meta-contents">
-      <p class="date-modified">February 26, 2026</p>
+      <p class="date-modified">November 9, 2026</p>
     </div>
   </div>
     
@@ -503,7 +503,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li><p>Look up the next departures from a station of your choice, e.g.: <code>https://transport.opendata.ch/v1/stationboard?station=Bern&amp;limit=5</code></p></li>
 <li><p>Try changing the <code>station</code> parameter to another station and observe the results.</p></li>
 </ol></li>
-<li><p>How many mailboxes are there in your commune or city? Explore the application at <a href="https://wieviele-briefkaesten-gibt-es.streamlit.app/" class="uri">https://wieviele-briefkaesten-gibt-es.streamlit.app/</a>. Where do these data originally come from?</p></li>
 </ol>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
@@ -521,7 +520,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li><strong>Q1</strong>: Use the “Organisation” or “Canton” filter on the opendata.swiss search page to see the counts.</li>
 <li><strong>Q2</strong>: The key columns are: <code>Stop name</code> (train station), <code>Journey identifier</code> (train number), <code>Departure time</code> / <code>Arrival time</code> (scheduled times), <code>Departure forecast</code> / <code>Arrival forecast</code> (actual times), <code>Departure delay</code> / <code>Arrival delay</code>, and <code>Cancelled TF</code> (cancellation flag).</li>
 <li><strong>Q3</strong>: The transport.opendata.ch API returns JSON. You can paste the URL directly in your browser to see the result. Try the <code>/v1/connections</code> endpoint as well (e.g.&nbsp;<code>?from=Lausanne&amp;to=Genève</code>). The API documentation at <a href="https://transport.opendata.ch/docs.html" class="uri">https://transport.opendata.ch/docs.html</a> describes all available parameters.</li>
-<li><strong>Q4</strong>: The application estimates the number of delivery addresses / mailboxes (<em>Zustelladressen / Briefkästen</em>) for a user-defined area. To investigate where the data come from, you can look at the source code on GitHub (<a href="https://github.com/davidoesch/wo-sind-briefkaesten" class="uri">https://github.com/davidoesch/wo-sind-briefkaesten</a>) or use your browser’s developer tools (Network tab) while the app loads to see which data sources are being fetched. The underlying data come from the Federal Building and Housing Register (GWR) of the Federal Statistical Office (BFS) and business locations from the Overture Maps Foundation.</li>
 </ul>
 </div>
 </div>
@@ -543,7 +541,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>SPARQL (SPARQL Protocol and RDF Query Language) is the standard query language for Linked Data. Interestingly, tools like <a href="https://visualize.admin.ch/">visualize.admin.ch</a> use SPARQL queries behind the scenes — every chart or map you created above was powered by an automatically generated SPARQL query sent to the LINDAS endpoint.</p>
 <p>You can write and run SPARQL queries directly at the <a href="https://lindas.admin.ch/sparql/">LINDAS SPARQL Endpoint</a>.</p>
 <ol start="3" type="1">
-<li><p>Try the following query to explore the <strong>Archive database of the Swiss Federal Archives</strong>: the <strong>Archive database of the Swiss Federal Archives</strong> (<code>https://culture.ld.admin.ch/.well-known/dataset/ais</code>). This dataset uses the <strong>Records in Context (RiC)</strong> ontology. Try the following query to find archival records related to “Bern”:</p>
+<li><p>Try the following query to explore the <strong>Archive database of the Swiss Federal Archives</strong>: the <strong>Archive database of the Swiss Federal Archives</strong> (<code>https://culture.ld.admin.ch/.well-known/dataset/ais</code>). This dataset uses the <strong>Records in Contexts (RiC)</strong> ontology. Try the following query to find archival records related to “Bern”:</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode numberSource sparql number-lines code-with-copy"><code class="sourceCode"><span id="cb1-1"><a href="#cb1-1"></a>PREFIX rdf: &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt;</span>
 <span id="cb1-2"><a href="#cb1-2"></a>PREFIX rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt;</span>
 <span id="cb1-3"><a href="#cb1-3"></a>PREFIX rico: &lt;https://www.ica.org/standards/RiC/ontology#&gt;</span>
@@ -586,7 +584,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <ul>
 <li><strong>Q1</strong>: On visualize.admin.ch, search for “Verkehrsleistung” or “Flugplätzen” to find the dataset. Once selected, choose a map visualisation and filter by the year 2023. Compare the circle sizes or values for Geneva and Basel.</li>
 <li><strong>Q2</strong>: Select the line chart view and filter for Zurich Airport only.</li>
-<li><strong>Q3</strong>: <a href="https://www.ica.org/standards/RiC/ontology">Records in Context (RiC)</a> is an ontology developed by the International Council on Archives (ICA) for describing archival records as Linked Data. In the query, <code>rico:Record</code> represents an archival record, <code>rico:title</code> its title, and <code>rico:isAssociatedWithDate</code> links to date information. Try replacing <code>"bern"</code> in the <code>FILTER</code> with another term, or remove the filter entirely and add <code>FILTER(?beginDate &gt; "1900-01-01"^^xsd:date)</code> to explore records from the 20th century onwards.</li>
+<li><strong>Q3</strong>: <a href="https://www.ica.org/standards/RiC/ontology">Records in Contexts (RiC)</a> is an ontology developed by the International Council on Archives (ICA) for describing archival records as Linked Data. In the query, <code>rico:Record</code> represents an archival record, <code>rico:title</code> its title, and <code>rico:isAssociatedWithDate</code> links to date information. Try replacing <code>"bern"</code> in the <code>FILTER</code> with another term, or remove the filter entirely and add <code>FILTER(?beginDate &gt; "1900-01-01"^^xsd:date)</code> to explore records from the 20th century onwards.</li>
 </ul>
 </div>
 </div>

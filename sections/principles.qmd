@@ -16,7 +16,7 @@ format:
       - text: FAIR Data Principles
         href: https://www.go-fair.org/fair-principles/
       - text: CARE Principles for Indigenous Data Governance
-        href: https://www.gida-global.org/care
+        href: https://www.gida-global.org/careprinciples
       - text: Collections as Data
         href: https://collectionsasdata.github.io/
       - text: Linked Data
@@ -298,7 +298,7 @@ The IIIF and Linked Art communities are built on a synergy of social and technic
 
 ![](https://julsraemy.ch/prezi/assets/compare.gif)
 
-Letter from Alexander Hamilton Papers (September 6, 1780), Library of Congress. <https://prtd.app/#72f604db-6869-4c08-91ce-7c79502a7f35>. IIIF Manifest: <https://dvp.prtd.app/hamilton/manifest.json>
+Letter from Alexander Hamilton Papers (September 6, 1780), Library of Congress.
 
 **Reunify**
 
@@ -672,43 +672,26 @@ This model ensures compatibility with web architecture and facilitates cross-pla
 ```json
 {
   "@context": "http://iiif.io/api/presentation/3/context.json",
-  "id": "https://iiif.participatory-archives.ch/annotations/SGV_12N_08589-p1-list.json",
+  "id": "https://iiif.io/api/cookbook/recipe/0269-embedded-or-referenced-annotations/annotationpage.json",
   "type": "AnnotationPage",
   "items": [
     {
-      "@context": "http://www.w3.org/ns/anno.jsonld",
-      "id": "https://iiif.participatory-archives.ch/annotations/SGV_12N_08589-p1-list/annotation-436121.json",
-      "motivation": "commenting",
+      "id": "https://iiif.io/api/cookbook/recipe/0269-embedded-or-referenced-annotations/canvas-1/annopage-2/anno-1",
       "type": "Annotation",
-      "body": [
-        {
-          "type": "TextualBody",
-          "value": "person",
-          "purpose": "commenting"
-        },
-        {
-          "type": "TextualBody",
-          "value": "Object Detection (vitrivr)",
-          "purpose": "tagging"
-        },
-        {
-          "type": "TextualBody",
-          "value": "<br><small>Detection score: 0.9574</small>",
-          "purpose": "commenting"
-        }
-      ],
-      "target": {
-        "source": "https://iiif.participatory-archives.ch/SGV_12N_08589/canvas/p1",
-        "selector": {
-          "type": "FragmentSelector",
-          "conformsTo": "http://www.w3.org/TR/media-frags/",
-          "value": "xywh=319,2942,463,523"
-        },
-        "dcterms:isPartOf": {
-          "type": "Manifest",
-          "id": "https://iiif.participatory-archives.ch/SGV_12N_08589/manifest.json"
-        }}},
+      "motivation": "commenting",
+      "body": {
+        "type": "TextualBody",
+        "language": "de",
+        "format": "text/plain",
+        "value": "Göttinger Marktplatz mit Gänseliesel Brunnen"
+      },
+      "target": "https://iiif.io/api/cookbook/recipe/0269-embedded-or-referenced-annotations/canvas-1"
+    }
+  ]
+}
 ```
+
+Source: [IIIF Cookbook, Embedded or referenced Annotations](https://iiif.io/api/cookbook/recipe/0269-embedded-or-referenced-annotations/)
 
 ##### Linked Art
 

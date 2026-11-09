@@ -96,6 +96,9 @@ div.csl-indent {
     "search-label": "Search"
   }
 }</script>
+<script src="../site_libs/quarto-diagram/mermaid.min.js"></script>
+<script src="../site_libs/quarto-diagram/mermaid-init.js"></script>
+<link href="../site_libs/quarto-diagram/mermaid.css" rel="stylesheet">
 
 
 <link rel="stylesheet" href="../styles/custom.scss">
@@ -463,26 +466,17 @@ div.csl-indent {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#techniques" id="toc-techniques" class="nav-link active" data-scroll-target="#techniques">Techniques</a>
+  <li><a href="#the-data-pipeline" id="toc-the-data-pipeline" class="nav-link active" data-scroll-target="#the-data-pipeline">The Data Pipeline</a>
   <ul>
-  <li><a href="#data-scraping" id="toc-data-scraping" class="nav-link" data-scroll-target="#data-scraping">Data Scraping</a></li>
-  <li><a href="#api-integration" id="toc-api-integration" class="nav-link" data-scroll-target="#api-integration">API Integration</a></li>
-  <li><a href="#data-mining" id="toc-data-mining" class="nav-link" data-scroll-target="#data-mining">Data Mining</a></li>
-  <li><a href="#data-wranglingmunging" id="toc-data-wranglingmunging" class="nav-link" data-scroll-target="#data-wranglingmunging">Data Wrangling/Munging</a></li>
-  <li><a href="#data-integration" id="toc-data-integration" class="nav-link" data-scroll-target="#data-integration">Data Integration</a></li>
-  <li><a href="#stream-processing" id="toc-stream-processing" class="nav-link" data-scroll-target="#stream-processing">Stream Processing</a></li>
-  <li><a href="#data-quality-management" id="toc-data-quality-management" class="nav-link" data-scroll-target="#data-quality-management">Data Quality Management</a></li>
-  <li><a href="#extract-transform-load-etl" id="toc-extract-transform-load-etl" class="nav-link" data-scroll-target="#extract-transform-load-etl">Extract, Transform, Load (ETL)</a></li>
+  <li><a href="#define" id="toc-define" class="nav-link" data-scroll-target="#define">1. Define</a></li>
+  <li><a href="#find" id="toc-find" class="nav-link" data-scroll-target="#find">2. Find</a></li>
+  <li><a href="#get" id="toc-get" class="nav-link" data-scroll-target="#get">3. Get</a></li>
+  <li><a href="#verify-exercise-7-part-b" id="toc-verify-exercise-7-part-b" class="nav-link" data-scroll-target="#verify-exercise-7-part-b">4. Verify · <em>Exercise 7, Part B</em></a></li>
+  <li><a href="#clean-exercise-7-parts-a-to-c" id="toc-clean-exercise-7-parts-a-to-c" class="nav-link" data-scroll-target="#clean-exercise-7-parts-a-to-c">5. Clean · <em>Exercise 7, Parts A to C</em></a></li>
+  <li><a href="#analyse" id="toc-analyse" class="nav-link" data-scroll-target="#analyse">6. Analyse</a></li>
+  <li><a href="#present" id="toc-present" class="nav-link" data-scroll-target="#present">7. Present</a></li>
   </ul></li>
-  <li><a href="#softwaretools" id="toc-softwaretools" class="nav-link" data-scroll-target="#softwaretools">Software/Tools</a>
-  <ul>
-  <li><a href="#ckan" id="toc-ckan" class="nav-link" data-scroll-target="#ckan">CKAN</a></li>
-  <li><a href="#piveau" id="toc-piveau" class="nav-link" data-scroll-target="#piveau">Piveau</a></li>
-  <li><a href="#entryscape" id="toc-entryscape" class="nav-link" data-scroll-target="#entryscape">EntryScape</a></li>
-  <li><a href="#udata" id="toc-udata" class="nav-link" data-scroll-target="#udata">uData</a></li>
-  <li><a href="#openrefine" id="toc-openrefine" class="nav-link" data-scroll-target="#openrefine">OpenRefine</a></li>
-  <li><a href="#lomas" id="toc-lomas" class="nav-link" data-scroll-target="#lomas">LOMAS</a></li>
-  </ul></li>
+  <li><a href="#publishing-open-data-portal-software" id="toc-publishing-open-data-portal-software" class="nav-link" data-scroll-target="#publishing-open-data-portal-software">Publishing Open Data: Portal Software</a></li>
   <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references">References</a></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/julsraemy/intro-open-data/edit/main/sections/techniques.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/julsraemy/intro-open-data/issues/new/choose" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
@@ -527,7 +521,7 @@ div.csl-indent {
     <div>
     <div class="quarto-title-meta-heading">Modified</div>
     <div class="quarto-title-meta-contents">
-      <p class="date-modified">February 26, 2026</p>
+      <p class="date-modified">November 9, 2026</p>
     </div>
   </div>
     
@@ -538,117 +532,132 @@ div.csl-indent {
 </header>
 
 
-<section id="techniques" class="level2">
-<h2 class="anchored" data-anchor-id="techniques">Techniques</h2>
-<section id="data-scraping" class="level3">
-<h3 class="anchored" data-anchor-id="data-scraping">Data Scraping</h3>
-<p>Data scraping is the automated process of extracting information from websites or other online sources. This technique can be useful for collecting data from multiple sites and automating repetitive tasks. However, challenges include adapting to changes in website layouts, legal and ethical issues, and handling dynamic content (e.g.&nbsp;data loaded via JavaScript). For example, Python libraries such as <a href="https://pypi.org/project/beautifulsoup4/">Beautiful Soup</a> or frameworks like <a href="https://scrapy.org/">Scrapy</a> are frequently used for these purposes.</p>
+<section id="the-data-pipeline" class="level2">
+<h2 class="anchored" data-anchor-id="the-data-pipeline">The Data Pipeline</h2>
+<p>Working with open data rarely means downloading a file and being done. School of Data, the data literacy network started by the Open Knowledge Foundation, describes this work from beginning to end as the <strong>Data Pipeline</strong>, a sequence of seven steps <span class="citation" data-cites="schoolofdataMethodologyDataPipeline">(<a href="#ref-schoolofdataMethodologyDataPipeline" role="doc-biblioref">School of Data, 2021</a>)</span>. School of Data presents it as a work in progress rather than a fixed method, and in practice you will often go back and forth between steps. This page goes through each step with typical techniques and tools, before you practise verifying and cleaning data in <a href="../exercises/ex-07.html">Exercise 7</a>.</p>
+<div class="cell" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class="figure"><p></p>
+<div>
+<pre class="mermaid mermaid-js">flowchart LR
+  A[Define] --&gt; B[Find] --&gt; C[Get] --&gt; D[Verify] --&gt; E[Clean] --&gt; F[Analyse] --&gt; G[Present]
+  style D stroke-width:3px
+  style E stroke-width:3px
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Other names for the same steps: ETL, ELT and lifecycle models
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-1" class="callout-1-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>The Data Pipeline is one way of describing the work. Depending on the field, you will meet other names and groupings for the same activities:</p>
+<ul>
+<li><strong>ETL (Extract, Transform, Load)</strong>: the classic term in data engineering. Data is <em>extracted</em> from its sources (<em>Get</em>), <em>transformed</em> into a consistent format (<em>Verify</em> and <em>Clean</em>), then <em>loaded</em> into a target system such as a database, data warehouse or portal.</li>
+<li><strong>ELT (Extract, Load, Transform)</strong>: the same steps in a different order. Raw data is loaded into the target system first and transformed there, when needed. This approach has become common with cloud data warehouses and data lakes: the raw data is kept, and the transformations can be changed or rerun later without fetching the data again.</li>
+<li><strong>Data lifecycle models</strong>: research data management and digital curation describe a longer cycle that also includes planning, documentation, preservation and reuse, for example the research data lifecycle used by many universities.</li>
+</ul>
+<p>Whatever the names, the questions stay the same: where does the data come from, what is changed and why, and where does it end up?</p>
+</div>
+</div>
+</div>
+<section id="define" class="level3">
+<h3 class="anchored" data-anchor-id="define">1. Define</h3>
+<p>Every data project starts with a question. Going from a broad theme (for example, air pollution) to a specific question (has bike sharing reduced air pollution in my city?) tells you what data you will need, and whether it is likely to be easy or hard to get.</p>
 </section>
-<section id="api-integration" class="level3">
-<h3 class="anchored" data-anchor-id="api-integration">API Integration</h3>
-<p>API integration involves connecting to external services in order to retrieve structured data, often in real time. This method provides standardised data access and can streamline automated processes. Nevertheless, it requires managing API rate limits, adapting to changes in the API, and integrating data from various systems. For example, <a href="https://metaodi.ch/swissparlpy/">swissparlpy</a> is a Python module that provides convenient access to the <a href="https://ws.parlament.ch/odata.svc/">Swiss Parliament OData service</a>.</p>
+<section id="find" class="level3">
+<h3 class="anchored" data-anchor-id="find">2. Find</h3>
+<p>Datasets are found through portals, catalogues and registries such as opendata.swiss or re3data (see <a href="../sections/platforms.html">Open Data Platforms and Organisations</a>), but also through search engines, by asking people, or through freedom of information requests. Good metadata matters most at this step: a dataset nobody can find will not be reused.</p>
 </section>
-<section id="data-mining" class="level3">
-<h3 class="anchored" data-anchor-id="data-mining">Data Mining</h3>
-<p>Data mining refers to the analysis of large datasets to identify patterns, correlations, and trends. This process can support data-driven decision-making, though it requires significant computational resources and expertise, and may also raise privacy concerns. Software such as <a href="https://altair.com/altair-rapidminer">RapidMiner</a> and <a href="https://www.cs.waikato.ac.nz/~ml/weka/">WEKA</a> is commonly used in this field.</p>
+<section id="get" class="level3">
+<h3 class="anchored" data-anchor-id="get">3. Get</h3>
+<p>There are three main ways to obtain data:</p>
+<ul>
+<li><strong>Download</strong> a file (CSV, JSON, XML…). This is the simplest, but large files quickly become cumbersome.</li>
+<li><strong>Call an API</strong> to retrieve exactly the records you need, often in real time. For example, <a href="https://metaodi.ch/swissparlpy/">swissparlpy</a> is a Python module that gives access to the <a href="https://ws.parlament.ch/odata.svc/">Swiss Parliament OData service</a>. APIs come with rate limits and can change over time.</li>
+<li><strong>Scrape</strong> a website when no download or API exists, using libraries such as <a href="https://pypi.org/project/beautifulsoup4/">Beautiful Soup</a> or frameworks like <a href="https://scrapy.org/">Scrapy</a>. Scraping breaks whenever the website changes and raises legal and ethical questions: check the terms of use and <code>robots.txt</code> first.</li>
+</ul>
 </section>
-<section id="data-wranglingmunging" class="level3">
-<h3 class="anchored" data-anchor-id="data-wranglingmunging">Data Wrangling/Munging</h3>
-<p>Data wrangling (or data munging) is the process of cleaning, transforming, and organising raw data into a structured format that is suitable for analysis. Although this process can be time-consuming and technically challenging, it is essential for improving data quality. Python’s <a href="https://pandas.pydata.org/">pandas</a> library is a widely used tool in this area.</p>
+<section id="verify-exercise-7-part-b" class="level3">
+<h3 class="anchored" data-anchor-id="verify-exercise-7-part-b">4. Verify · <em>Exercise 7, Part B</em></h3>
+<p>Having the data does not mean it is the data you need. Check its metadata, how it was collected, who produced it and whether the source is credible, and look for values that cannot be right. As School of Data puts it, “all data is bad, we just need to find out how bad it is” <span class="citation" data-cites="schoolofdataMethodologyDataPipeline">(<a href="#ref-schoolofdataMethodologyDataPipeline" role="doc-biblioref">School of Data, 2021</a>)</span>. The <a href="../sections/assessment.html">Assessment, Data Quality, and Best Practices</a> section presents frameworks for this step.</p>
 </section>
-<section id="data-integration" class="level3">
-<h3 class="anchored" data-anchor-id="data-integration">Data Integration</h3>
-<p>Data integration involves combining data from different sources to create a unified dataset. This technique helps provide a comprehensive view for analysis but may involve challenges such as reconciling differing formats and schemas, and ensuring consistent data quality.</p>
+<section id="clean-exercise-7-parts-a-to-c" class="level3">
+<h3 class="anchored" data-anchor-id="clean-exercise-7-parts-a-to-c">5. Clean · <em>Exercise 7, Parts A to C</em></h3>
+<p>Data wrangling (or munging) turns raw data into a consistent, machine-readable format. Typical problems include the same value spelled in different ways, several values in one cell, mixed date formats and duplicated rows. Cleaning is part of <strong>data quality management</strong>: making sure data is accurate, complete and consistent.</p>
+<p>When data from several sources is combined, the same thing is often named differently. <strong>Reconciliation</strong> matches local values (such as a person’s name) to an authority file and stores its persistent identifier, so your data becomes linked to other datasets.</p>
+<ul>
+<li><a href="https://openrefine.org/">OpenRefine</a> is an open source tool for cleaning, transforming and reconciling messy data through a graphical interface. It runs locally in your browser, keeps a full history of every change, and supports CSV, TSV, JSON, XML and more. It was first released in 2010 as Freebase Gridworks, then renamed Google Refine.</li>
+<li><a href="https://pandas.pydata.org/">pandas</a> is a Python library that does the same in code. It takes more effort to learn, but scripts can be rerun and shared, which makes the cleaning reproducible.</li>
+</ul>
 </section>
-<section id="stream-processing" class="level3">
-<h3 class="anchored" data-anchor-id="stream-processing">Stream Processing</h3>
-<p>Stream processing refers to analysing data in real time as it is generated. This technique is especially useful for handling time-sensitive data and high volumes of information. Tools such as <a href="https://kafka.apache.org/">Apache Kafka</a> and <a href="https://flink.apache.org/">Apache Flink</a> are commonly used to manage data flows and enable real-time analytics.</p>
+<section id="analyse" class="level3">
+<h3 class="anchored" data-anchor-id="analyse">6. Analyse</h3>
+<p>This is where you look for answers to the question you defined at the start, with spreadsheets, programming languages, visualisations or statistical software. Data mining looks for patterns, correlations and trends in large datasets; it requires computational resources and expertise, and it may raise privacy concerns. Tools such as <a href="https://altair.com/altair-rapidminer">RapidMiner</a> and <a href="https://ml.cms.waikato.ac.nz/weka/">WEKA</a> offer graphical interfaces for common methods such as clustering and classification.</p>
 </section>
-<section id="data-quality-management" class="level3">
-<h3 class="anchored" data-anchor-id="data-quality-management">Data Quality Management</h3>
-<p>Data quality management is the process of ensuring that data is accurate, complete, and consistent. High-quality data is critical for reliable analysis, although maintaining such quality requires ongoing monitoring and may be resource-intensive.</p>
-</section>
-<section id="extract-transform-load-etl" class="level3">
-<h3 class="anchored" data-anchor-id="extract-transform-load-etl">Extract, Transform, Load (ETL)</h3>
-<p>ETL stands for Extract, Transform, Load and describes the process of extracting data from various sources, transforming it into a standard format, and loading it into a target system for analysis. This approach supports data consolidation but also poses challenges in maintaining transformation accuracy and managing diverse data sources.</p>
+<section id="present" class="level3">
+<h3 class="anchored" data-anchor-id="present">7. Present</h3>
+<p>Finally, results have to be communicated. Presenting data means thinking about your audience, the question you set out to answer and the medium that best conveys your message, whether a chart, a map, an article or an interactive application. Working with designers and storytellers can help.</p>
 </section>
 </section>
-<section id="softwaretools" class="level2">
-<h2 class="anchored" data-anchor-id="softwaretools">Software/Tools</h2>
-<p>Below is a summary table that presents some key software tools, outlining their main functions and providing examples of typical deployments or customers.</p>
+<section id="publishing-open-data-portal-software" class="level2">
+<h2 class="anchored" data-anchor-id="publishing-open-data-portal-software">Publishing Open Data: Portal Software</h2>
+<p>The Data Pipeline describes the work of someone <em>reusing</em> data. On the other side, publishers rely on dedicated software to run open data portals, manage datasets and their metadata, and provide access via APIs.</p>
 <table class="caption-top table">
-<colgroup>
-<col style="width: 8%">
-<col style="width: 41%">
-<col style="width: 49%">
-</colgroup>
 <thead>
 <tr class="header">
-<th><strong>Tool</strong></th>
-<th><strong>Purpose &amp; Function</strong></th>
-<th><strong>Example Deployments/Customers</strong></th>
+<th><strong>Software</strong></th>
+<th><strong>What it does</strong></th>
+<th><strong>Used by</strong></th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td><strong>CKAN</strong></td>
-<td>Data management system for building and maintaining data hubs and portals.</td>
-<td>Used in government open data portals such as data.gov.uk, data.gov, and various international bodies.</td>
+<td><a href="https://ckan.org/">CKAN</a></td>
+<td>Open source data management system by the Open Knowledge Foundation, with a full API for publishing and discovering datasets (<a href="https://github.com/ckan/ckan">GitHub</a>).</td>
+<td>Government portals such as <a href="https://data.gov.uk/">data.gov.uk</a> and <a href="https://www.data.gov/">data.gov</a></td>
 </tr>
 <tr class="even">
-<td><strong>Piveau</strong></td>
-<td>Platform for metadata management, data harmonisation, and linked data.</td>
-<td>Deployed in several European open data initiatives.</td>
+<td><a href="https://www.piveau.de/">Piveau</a></td>
+<td>Metadata management and harmonisation based on Linked Data: stores metadata as RDF, exports DCAT(-AP) and checks quality with SHACL <span class="citation" data-cites="kirsteinPiveauLargeScaleOpen2020">(<a href="#ref-kirsteinPiveauLargeScaleOpen2020" role="doc-biblioref">Kirstein et al., 2020</a>)</span>.</td>
+<td>Several European open data initiatives</td>
 </tr>
 <tr class="odd">
-<td><strong>EntryScape</strong></td>
-<td>Enables semantic integration and linked data for complex datasets.</td>
-<td>Mainly adopted by Swedish public organisations.</td>
+<td><a href="https://entryscape.com/">EntryScape</a></td>
+<td>Information management with semantic integration and Linked Data <span class="citation" data-cites="ebnerInformationModelManaging2014">(<a href="#ref-ebnerInformationModelManaging2014" role="doc-biblioref">Ebner &amp; Palmér, 2014</a>)</span>.</td>
+<td>Swedish public bodies such as Skatteverket and Riksarkivet</td>
 </tr>
 <tr class="even">
-<td><strong>uData</strong></td>
-<td>Facilitates the publication and management of open datasets.</td>
-<td>Employed by municipalities and local governments for open data portals.</td>
-</tr>
-<tr class="odd">
-<td><strong>OpenRefine</strong></td>
-<td>Tool for cleaning, transforming, and reconciling messy data.</td>
-<td>Widely used in academic research, journalism, and by data professionals.</td>
-</tr>
-<tr class="even">
-<td><strong>LOMAS</strong></td>
-<td>Allows secure processing of sensitive data with Differential Privacy.</td>
-<td>Piloted within the Swiss public sector to enable secondary data usage while preserving privacy.</td>
+<td><a href="https://udata.readthedocs.io/">uData</a></td>
+<td>Open data platform with a user-friendly interface for publishers and users (<a href="https://github.com/opendatateam/udata">GitHub</a>).</td>
+<td><a href="https://www.data.gouv.fr/">data.gouv.fr</a> and local governments</td>
 </tr>
 </tbody>
 </table>
-<section id="ckan" class="level3">
-<h3 class="anchored" data-anchor-id="ckan">CKAN</h3>
-<p><a href="https://ckan.org/">CKAN</a> is an open source data management system developed by the Open Knowledge Foundation. It is designed to support the creation and maintenance of data hubs and portals, offering a standardised platform for publishing and accessing datasets. CKAN employs a PostgreSQL database, a Solr index, and a comprehensive API to facilitate data discovery and integration (see its <a href="https://github.com/ckan/ckan">GitHub repository</a> for more technical information). It has been deployed widely in national and local government open data portals (for example, <a href="https://data.gov.uk/">data.gov.uk</a> and <a href="https://www.data.gov/">data.gov</a>), as well as by various international organisations</p>
-</section>
-<section id="piveau" class="level3">
-<h3 class="anchored" data-anchor-id="piveau">Piveau</h3>
-<p><a href="https://www.piveau.de/">Piveau</a> is an open source platform for open data management, with a focus on metadata management, data harmonisation, and linked data <span class="citation" data-cites="kirsteinPiveauLargeScaleOpen2020">(<a href="#ref-kirsteinPiveauLargeScaleOpen2020" role="doc-biblioref">Kirstein et al., 2020</a>)</span>. It supports a wide range of formats and protocols (OAI-PMH, RDF, CKAN, SPARQL, Socrata, etc.) and exports to DCAT(-AP). Metadata is stored as RDF in a triplestore, quality assessments are generated via SHACL validations, and search is powered by Elasticsearch. The platform runs in Docker/Kubernetes, with backends in Java/Kotlin (Vert.x) and frontends in Vue.js. Its code is available on <a href="https://gitlab.com/piveau/">GitLab</a>. Below is an overview of its architecture.</p>
-<p><img src="https://doc.piveau.io/img/overview.png" class="img-fluid"></p>
-<p><a href="https://doc.piveau.io/general/basic-architecture/" class="uri">https://doc.piveau.io/general/basic-architecture/</a></p>
-</section>
-<section id="entryscape" class="level3">
-<h3 class="anchored" data-anchor-id="entryscape">EntryScape</h3>
-<p>EntryScape is an information management platform developed by Metasolutions to handle complex datasets through semantic integration and linked data principles <span class="citation" data-cites="ebnerInformationModelManaging2014">(<a href="#ref-ebnerInformationModelManaging2014" role="doc-biblioref">Ebner &amp; Palmér, 2014</a>)</span>. It facilitates the organisation and enrichment of heterogeneous data sources, making it easier to create interoperable and semantically rich datasets.</p>
-<p>Its customers include a broad range of public organisations such as municipalities, regional authorities, and national agencies. For example, in Sweden, EntryScape is used by national agencies like Skatteverket or Riksarkivet. Further information is available on the <a href="https://entryscape.com/">EntryScape website</a> and via its repository on <a href="https://bitbucket.org/metasolutions/">Bitbucket</a>.</p>
-</section>
-<section id="udata" class="level3">
-<h3 class="anchored" data-anchor-id="udata">uData</h3>
-<p><a href="https://udata.readthedocs.io/">uData</a> is an open data management platform developed by the Open Data Team. It aims to simplify the publication and management of data, offering a user-friendly interface that makes it accessible for both data providers and users. uData is often employed by municipalities and local governments to publish open data portals, and its modular architecture allows for easy integration with existing IT infrastructures. The source code is available on its <a href="https://github.com/opendatateam/udata">GitHub repository</a>.</p>
-</section>
-<section id="openrefine" class="level3">
-<h3 class="anchored" data-anchor-id="openrefine">OpenRefine</h3>
-<p><a href="https://openrefine.org/">OpenRefine</a> is an open source tool for data cleaning and transformation. Initially released in 2010 (originally as Freebase Gridworks, later renamed Google Refine), it operates as a local web application designed to help users clean messy data, standardise formats, and reconcile datasets. It supports various data formats (including CSV, TSV, JSON, and XML) and allows for advanced data manipulation using scripting languages such as GREL and Jython. For more details, see the <a href="https://github.com/OpenRefine/OpenRefine">GitHub repository</a>.</p>
-</section>
-<section id="lomas" class="level3">
-<h3 class="anchored" data-anchor-id="lomas">LOMAS</h3>
-<p><a href="https://dscc-admin-ch.github.io/lomas-docs">LOMAS</a> is an open source platform developed by the Data Science Competence Center (DSCC) of the Swiss Federal Statistical Office. It enables authorised researchers and analysts to run algorithms on sensitive datasets without direct data access: users submit their code, the platform executes it in a secure environment, and returns results protected by Differential Privacy (introducing controlled noise to prevent re-identification) <span class="citation" data-cites="aymonLomasPlatformConfidential2024">(see <a href="#ref-aymonLomasPlatformConfidential2024" role="doc-biblioref">Aymon et al., 2024</a>)</span>.</p>
-</section>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Publishing sensitive data: LOMAS
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Not all data can be published openly. <a href="https://dscc-admin-ch.github.io/lomas/">LOMAS</a>, developed by the Data Science Competence Center of the Swiss Federal Statistical Office, lets authorised researchers run their code on sensitive datasets without ever seeing the data itself. Results are protected by Differential Privacy, which adds controlled noise to prevent re-identification <span class="citation" data-cites="aymonLomasPlatformConfidential2024">(<a href="#ref-aymonLomasPlatformConfidential2024" role="doc-biblioref">Aymon et al., 2024</a>)</span>.</p>
+</div>
+</div>
 </section>
 <section id="references" class="level2">
 
@@ -666,6 +675,9 @@ Ebner, H., &amp; Palmér, M. (2014). An information model for managing resources
 </div>
 <div id="ref-kirsteinPiveauLargeScaleOpen2020" class="csl-entry" role="listitem">
 Kirstein, F., Stefanidis, K., Dittwald, B., Dutkowski, S., Urbanek, S., &amp; Hauswirth, M. (2020). Piveau: <span>A Large-Scale Open Data Management Platform Based</span> on <span>Semantic Web Technologies</span>. In A. Harth, S. Kirrane, A.-C. Ngonga Ngomo, H. Paulheim, A. Rula, A. L. Gentile, P. Haase, &amp; M. Cochez (Eds.), <em>The <span>Semantic Web</span></em> (Vol. 12123, pp. 648–664). Springer International Publishing. <a href="https://doi.org/10.1007/978-3-030-49461-2_38">https://doi.org/10.1007/978-3-030-49461-2_38</a>
+</div>
+<div id="ref-schoolofdataMethodologyDataPipeline" class="csl-entry" role="listitem">
+School of Data. (2021). <em>Methodology: <span>The Data Pipeline</span></em>. School of Data. <a href="https://web.archive.org/web/20210305220846/https://schoolofdata.org/methodology/">https://web.archive.org/web/20210305220846/https://schoolofdata.org/methodology/</a>
 </div>
 </div></section><section class="quarto-appendix-contents" id="quarto-reuse"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div class="quarto-appendix-contents"><div><a rel="license" href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a></div></div></section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

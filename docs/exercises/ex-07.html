@@ -383,8 +383,8 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#open-refine" id="toc-open-refine" class="nav-link active" data-scroll-target="#open-refine">Open Refine</a>
   <ul>
   <li><a href="#a.-getting-started" id="toc-a.-getting-started" class="nav-link" data-scroll-target="#a.-getting-started">A. Getting started</a></li>
-  <li><a href="#b.-basic-cleaning-faceting-with-the-powerhouse-museum-dataset" id="toc-b.-basic-cleaning-faceting-with-the-powerhouse-museum-dataset" class="nav-link" data-scroll-target="#b.-basic-cleaning-faceting-with-the-powerhouse-museum-dataset">B. Basic Cleaning &amp; Faceting with the Powerhouse Museum Dataset</a></li>
-  <li><a href="#c.-manuscript-reconciliation-with-biblissima" id="toc-c.-manuscript-reconciliation-with-biblissima" class="nav-link" data-scroll-target="#c.-manuscript-reconciliation-with-biblissima">C. Manuscript Reconciliation with Biblissima</a></li>
+  <li><a href="#b.-cleaning-the-powerhouse-museum-collection" id="toc-b.-cleaning-the-powerhouse-museum-collection" class="nav-link" data-scroll-target="#b.-cleaning-the-powerhouse-museum-collection">B. Cleaning the Powerhouse Museum Collection</a></li>
+  <li><a href="#c.-reconciling-names-with-biblissima" id="toc-c.-reconciling-names-with-biblissima" class="nav-link" data-scroll-target="#c.-reconciling-names-with-biblissima">C. Reconciling Names with Biblissima</a></li>
   </ul></li>
   <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references">References</a></li>
   </ul>
@@ -430,7 +430,7 @@ ul.task-list li input[type="checkbox"] {
     <div>
     <div class="quarto-title-meta-heading">Modified</div>
     <div class="quarto-title-meta-contents">
-      <p class="date-modified">March 4, 2026</p>
+      <p class="date-modified">November 9, 2026</p>
     </div>
   </div>
     
@@ -443,16 +443,26 @@ ul.task-list li input[type="checkbox"] {
 
 <section id="open-refine" class="level2">
 <h2 class="anchored" data-anchor-id="open-refine">Open Refine</h2>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Instructions
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>In this exercise you clean a museum collection export with OpenRefine (Parts A and B), then link a list of names to an authority file (Part C). Work alone or in pairs.</p>
+</div>
+</div>
 <section id="a.-getting-started" class="level3">
 <h3 class="anchored" data-anchor-id="a.-getting-started">A. Getting started</h3>
 <ol type="1">
-<li>Install the software (<a href="https://openrefine.org/docs" class="uri">https://openrefine.org/docs</a>)</li>
-<li>Run it locally (usually accessible at <a href="http://127.0.0.1:3333/" class="uri">http://127.0.0.1:3333/</a>)</li>
-<li>Have a look at the different pages and functionalities</li>
-<li>Create a new project by importing any supported files</li>
+<li>Install OpenRefine (<a href="https://openrefine.org/download" class="uri">https://openrefine.org/download</a>) and start it. It opens in your browser, usually at <a href="http://127.0.0.1:3333/" class="uri">http://127.0.0.1:3333/</a>.</li>
 </ol>
 <div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -461,47 +471,39 @@ ul.task-list li input[type="checkbox"] {
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-1" class="callout-1-contents callout-collapse collapse">
+<div id="callout-2" class="callout-2-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <ul>
-<li>OpenRefine runs in your browser but is a local application — no data leaves your machine.</li>
-<li>Try importing a small CSV or Excel file you already have to get familiar with the interface before moving on.</li>
+<li>OpenRefine runs in your browser but is a local application: no data leaves your machine.</li>
+<li>Every action is recorded in the <strong>Undo / Redo</strong> tab on the left. If something goes wrong, click an earlier step to go back to it.</li>
 </ul>
 </div>
 </div>
 </div>
 </section>
-<section id="b.-basic-cleaning-faceting-with-the-powerhouse-museum-dataset" class="level3">
-<h3 class="anchored" data-anchor-id="b.-basic-cleaning-faceting-with-the-powerhouse-museum-dataset">B. Basic Cleaning &amp; Faceting with the Powerhouse Museum Dataset</h3>
-<ol start="5" type="1">
-<li><p>Create a new project by importing the Powerhouse Museum TSV file. Instead of downloading the file first, use the <strong>“Get data from Web Address / URL”</strong> option in the import screen and paste this link: <a href="https://zenodo.org/records/17047254/files/phm_collection_adapted.tsv" class="uri">https://zenodo.org/records/17047254/files/phm_collection_adapted.tsv</a>. Remember to select “Tab-separated values”.</p></li>
-<li><p><strong>Explore with Facets</strong>:</p>
+<section id="b.-cleaning-the-powerhouse-museum-collection" class="level3">
+<h3 class="anchored" data-anchor-id="b.-cleaning-the-powerhouse-museum-collection">B. Cleaning the Powerhouse Museum Collection</h3>
+<p>The Powerhouse Museum (Sydney) published an export of its collection: about 75,000 objects, with categories entered by many different people over many years.</p>
+<ol start="2" type="1">
+<li><p><strong>Import</strong>: Create a new project with <strong>Get data from Web Address (URLs)</strong> and paste <a href="https://zenodo.org/records/17047254/files/phm_collection_adapted.tsv" class="uri">https://zenodo.org/records/17047254/files/phm_collection_adapted.tsv</a>. Make sure “Tab-separated values” is selected, then create the project.</p></li>
+<li><p><strong>Split multi-valued cells</strong>: The <code>Categories</code> column holds several values separated by a pipe (<code>|</code>). Use <strong>Edit cells &gt; Split multi-valued cells</strong> with <code>|</code> as the separator.</p></li>
+<li><p><strong>Inspect with a facet</strong>: On <code>Categories</code>, choose <strong>Facet &gt; Text facet</strong>. How many distinct categories are there? Sort the facet by name and look for values that differ only in capitalisation or spacing.</p></li>
+<li><p><strong>Cluster and merge</strong>: Click <strong>Cluster</strong> in the facet panel.</p>
 <ul>
-<li>Click the dropdown arrow in the <code>Categories</code> column header and select <strong>Facet &gt; Text filter</strong>.</li>
-<li>Search “Spacesuits” to filter the view</li>
+<li>With the default method (<em>key collision / fingerprint</em>), review the proposed clusters, tick <strong>Merge?</strong> for the correct ones and click <strong>Merge selected &amp; re-cluster</strong>.</li>
+<li>Switch the keying function to <strong>ngram-fingerprint</strong> and repeat. Which new variants does it catch?</li>
+<li>How many distinct categories are left?</li>
 </ul></li>
-<li><p><strong>Test the Undo Stack</strong>:</p>
+<li><p><strong>Extract a year</strong>: <code>Production Date</code> mixes single years (<code>1984</code>) and ranges (<code>1950 - 1960</code>).</p>
 <ul>
-<li>Make a temporary change: Go to the <code>Object Title</code> column &gt; <strong>Edit cells &gt; Transform</strong> and type <code>value.toUppercase()</code>. Click OK.</li>
-<li>Look at the <strong>Undo / Redo</strong> tab on the left. Click the previous step in the list to instantly revert the change.</li>
-<li><em>Goal:</em> Confirm that every action is recorded and reversible.</li>
+<li>On <code>Production Date</code>, choose <strong>Edit column &gt; Add column based on this column</strong>, name it <code>Year</code> and use the GREL expression <code>value.find(/\d{4}/)[0]</code>.</li>
+<li>Convert it with <strong>Edit cells &gt; Common transforms &gt; To number</strong>, then open <strong>Facet &gt; Numeric facet</strong> on <code>Year</code>.</li>
+<li>Look at the histogram: which years cannot be right? What would you do with them?</li>
 </ul></li>
-<li><p><strong>Multi-valued cells</strong>: The <code>categories</code> column contains multiple values separated by a pipe character (<code>|</code>).</p>
-<ul>
-<li>Use <em>Edit cells &gt; Split multi-valued cells</em> to separate them (enter <code>|</code> as the separator).</li>
-<li>Count how many objects have more than 3 categories (hint: use <em>Facet &gt; Custom facets &gt; Facet by length</em> on the split column).</li>
-<li>Once analysed, rejoin the cells using <em>Edit cells &gt; Join multi-valued cells</em>.</li>
-</ul></li>
-<li><p><strong>Text Facet &amp; Regular Expressions</strong>: The <code>Provenance (Production)</code> column contains structured strings separated by pipes (e.g., <code>Maker: ...; ...; ...|</code>).</p>
-<ul>
-<li>Create a <em>Text facet</em> on the <code>Provenance (Production)</code> column to observe the variations.</li>
-<li>Notice that many entries start with specific roles like “Maker:” or “Designer:”.</li>
-<li>Use <em>Edit cells &gt; Transform</em> with a GREL regex to extract just the role. Try the expression: <code>value.match(/^(Maker|Designer|User):/)[0]</code>.</li>
-<li>Alternatively, use <em>Edit column &gt; Add column based on this column</em> to create a new “Role” column extracting the first word before the colon.</li>
-</ul></li>
+<li><p><strong>Export</strong>: Rejoin the categories with <strong>Edit cells &gt; Join multi-valued cells</strong> (separator <code>|</code>), then <strong>Export &gt; Comma-separated value</strong>.</p></li>
 </ol>
 <div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-3-contents" aria-controls="callout-3" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -510,57 +512,27 @@ ul.task-list li input[type="checkbox"] {
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-2" class="callout-2-contents callout-collapse collapse">
+<div id="callout-3" class="callout-3-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <ul>
-<li><strong>For Step 5</strong>: Importing directly from URL saves disk space.</li>
-<li><strong>For Step 6</strong>: Facets and filters are the most powerful tool in OpenRefine. They allow you to filter data and see errors (like typos or inconsistent capitalization) instantly.</li>
-<li><strong>For Step 8</strong>: After splitting, OpenRefine creates multiple rows for a single record. Use the “Record” mode (top left) to count categories per original object if needed.</li>
-<li><strong>For Step 9</strong>: Regular Expressions (regex) are powerful for extracting patterns. <code>^</code> matches the start of the string, and <code>(...)</code> captures the group. If the pattern isn’t found, the result will be <code>null</code>.</li>
+<li><strong>Step 3</strong>: After splitting, an object takes up several rows. Switch between <strong>rows</strong> and <strong>records</strong> (top left) to count either categories or objects.</li>
+<li><strong>Step 5</strong>: Fingerprint ignores case and punctuation, so it merges <code>Clothing and Dress</code> with <code>Clothing and dress</code>. Variants such as <code>Transport-Air</code> and <code>Transport - Air</code> can slip through, because removing the hyphen glues the words together in one case but not in the other. ngram-fingerprint also ignores spaces, so it catches these. Always check a cluster before merging it: similar strings are not always the same thing.</li>
+<li><strong>Step 6</strong>: <code>find</code> returns every match of the regular expression as a list, and <code>[0]</code> keeps the first one. <code>\d{4}</code> means “four digits in a row”. Empty cells simply stay empty.</li>
 </ul>
 </div>
 </div>
 </div>
 </section>
-<section id="c.-manuscript-reconciliation-with-biblissima" class="level3">
-<h3 class="anchored" data-anchor-id="c.-manuscript-reconciliation-with-biblissima">C. Manuscript Reconciliation with Biblissima</h3>
-<ol start="10" type="1">
-<li><strong>Import and Inspect</strong>:
-<ul>
-<li>Create a new project by importing the CSV from: <a href="https://raw.githubusercontent.com/emmamorlock/workshop/refs/heads/main/exercices/handouts/biblissima.csv" class="uri">https://raw.githubusercontent.com/emmamorlock/workshop/refs/heads/main/exercices/handouts/biblissima.csv</a></li>
-<li>Observe the columns: <code>----</code> (Name), <code>coord</code>, <code>Type</code>, <code>YearBirth</code>, <code>YearDeath</code>.</li>
-<li><em>Note:</em> There is no explicit “Author” or “Repository” column. The <code>Type</code> column identifies if a row is a person, a place, a descriptor, or a shelfmark.</li>
-</ul></li>
-<li><strong>Filter Non-Person Entities</strong>:
-<ul>
-<li>The dataset contains mixed types. We want to focus on cleaning and reconciling <strong>persons</strong>.</li>
-<li>Click the <code>Type</code> column &gt; <strong>Facet &gt; Text facet</strong>.</li>
-<li>In the left panel, uncheck <code>descriptor</code>, <code>place</code>, and <code>shelfmark</code>. Only <code>person</code> should remain checked.</li>
-<li><em>Result:</em> The grid now shows only rows representing people.</li>
-</ul></li>
-<li><strong>Clean Name Variations</strong>:
-<ul>
-<li>Look at the <code>----</code> (Name) column. Notice inconsistencies like ” Petrarch” (leading spaces) or “Charles I” (multiple spaces).</li>
-<li>Apply <strong>Edit cells &gt; Common transforms &gt; Trim leading and trailing whitespace</strong>.</li>
-<li>Apply <strong>Edit cells &gt; Common transforms &gt; To titlecase</strong> to standardize capitalization.</li>
-<li><em>Optional:</em> Use <em>Edit cells &gt; Common transforms &gt; Collapse consecutive whitespace</em> if available, or use Transform with <code>value.replace(/\s+/, " ")</code>.</li>
-</ul></li>
-<li><strong>Reconcile with Biblissima</strong>:
-<ul>
-<li>Now that names are cleaner, connect them to the official Biblissima authority file.</li>
-<li>Click the <code>----</code> (Name) column &gt; <strong>Reconcile &gt; Start reconciling…</strong></li>
-<li>If Biblissima is not in the list, click <strong>Add standard service…</strong> and enter: <code>https://data.biblissima.fr/reconcile/en/api</code></li>
-<li>Select the <strong>Biblissima</strong> service, choose the type <strong>Human</strong> and add relevant properties to help in the reconciliation.</li>
-<li>Click <strong>Start Reconciling</strong>.</li>
-</ul></li>
-<li><strong>Extract Reconciled Data</strong>:
-<ul>
-<li>Use <strong>Reconcile &gt; Add column with URLs of match entites…</strong> to extract sthe <strong>Biblissima URI</strong></li>
-<li>This creates a persistent link between your local messy data and the authoritative record.</li>
-</ul></li>
+<section id="c.-reconciling-names-with-biblissima" class="level3">
+<h3 class="anchored" data-anchor-id="c.-reconciling-names-with-biblissima">C. Reconciling Names with Biblissima</h3>
+<p>Biblissima is an authority file for medieval and Renaissance manuscripts and their people, places and works. This small file (fewer than 20 rows) lists names related to manuscripts.</p>
+<ol start="8" type="1">
+<li><p><strong>Import</strong>: Create a new project from <a href="https://raw.githubusercontent.com/emmamorlock/workshop/refs/heads/main/exercices/handouts/biblissima.csv" class="uri">https://raw.githubusercontent.com/emmamorlock/workshop/refs/heads/main/exercices/handouts/biblissima.csv</a>. The first column (<code>----</code>) holds names; <code>Type</code> tells you whether a row is a person, a place, a descriptor or a shelfmark.</p></li>
+<li><p><strong>Keep persons and clean names</strong>: Use a <strong>Text facet</strong> on <code>Type</code> to keep only <code>person</code>. On the name column, apply <strong>Edit cells &gt; Common transforms &gt; Trim leading and trailing whitespace</strong> and <strong>Collapse consecutive whitespace</strong>.</p></li>
+<li><p><strong>Reconcile</strong>: On the name column, choose <strong>Reconcile &gt; Start reconciling…</strong>, then <strong>Add standard service…</strong> with <code>https://data.biblissima.fr/reconcile/en/api</code>. Choose the type <strong>Human</strong> and start reconciling. Check the candidates, then use <strong>Reconcile &gt; Add column with URLs of matched entities</strong> to keep the Biblissima URIs.</p></li>
 </ol>
 <div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-3-contents" aria-controls="callout-3" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-4-contents" aria-controls="callout-4" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -569,13 +541,12 @@ ul.task-list li input[type="checkbox"] {
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-3" class="callout-3-contents callout-collapse collapse">
+<div id="callout-4" class="callout-4-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <ul>
-<li><strong>For Step 11</strong>: Faceting allows you to temporarily hide rows you don’t need. If you want to permanently delete non-person rows, you can use <em>Edit rows &gt; Remove all matching rows</em> while the facet is active.</li>
-<li><strong>For Step 12</strong>: Always trim whitespace <em>before</em> reconciling. ” Charles” and “Charles” are treated as different strings by the reconciliation service, reducing your match rate.</li>
-<li><strong>For Step 13</strong>: Reconciliation is not just matching; it disambiguates. “Charles I” could be the King of Portugal or England. The service provides candidates so you can choose the correct historical figure based on the context (dates).</li>
-<li><strong>For Step 14</strong>: The extracted URI (e.g., <code>http://data.biblissima.fr/...</code>) is a stable link you can use to fetch more data or link to other datasets (Linked Open Data).</li>
+<li>Trim whitespace <em>before</em> reconciling: <code>" Charles"</code> and <code>"Charles"</code> are different strings for the service, which lowers the match rate.</li>
+<li>Reconciliation disambiguates: “Charles I” could be several historical figures. Use <code>YearBirth</code> and <code>YearDeath</code> to choose the right candidate.</li>
+<li>The resulting URIs are persistent identifiers: your local list is now linked to an authority file (see <a href="../exercises/ex-03.html">Exercise 3</a>).</li>
 </ul>
 </div>
 </div>
